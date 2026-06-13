@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <span class="brand"><span class="dot"></span>hoc voi hanh</span>
+      <a class="back-link" href="index.html">← Tất cả bài</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <h1 id="title">Đang tải…</h1>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn" id="toggle-en" aria-pressed="false">
+        <span class="ic" aria-hidden="true">👁</span><span id="toggle-label">Ẩn nghĩa</span>
+      </button>
+    </div>
+
+    <section class="story" id="story"></section>
+  </main>
+
+  <!-- Audio player tổng -->
+  <div class="player-bar">
+    <div class="wrap">
+      <span class="label">Cả bài</span>
+      <audio id="full-audio" controls preload="none"></audio>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const lessonId = params.get('id') || 'lesson1';
+
+    const $title  = document.getElementById('title');
+    const $story  = document.getElementById('story');
+    const $full   = document.getElementById('full-audio');
+    const $toggle = document.getElementById('toggle-en');
+    const $tlabel = document.getElementById('toggle-label');
+
+    // Một đối tượng Audio dùng chung cho word/sentence -> tránh phát chồng
+    let current = null;
+    let currentEl = null;
+    function play(src, el) {
+      if (current) { current.pause(); }
+      if (currentEl) { currentEl.classList.remove('playing'); }
+      current = new Audio(src);
+      currentEl = el || null;
+      if (currentEl) currentEl.classList.add('playing');
+      current.addEventListener('ended', function () {
+        if (currentEl) currentEl.classList.remove('playing');
+      });
+      current.play().catch(function (e) {
+        if (currentEl) currentEl.classList.remove('playing');
+        console.warn('Không phát được audio:', src, e.message);
+      });
+    }
+
+    function el(tag, cls, txt) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (txt != null) n.textContent = txt;
+      return n;
+    }
+
+    function render(lesson) {
+      document.title = (lesson.title || lessonId) + ' — hoc voi hanh';
+      $title.textContent = lesson.title || lessonId;
+
+      if (lesson.fullAudio) {
+        $full.src = lesson.fullAudio;
+      } else {
+        $full.closest('.player-bar').style.display = 'none';
+      }
+
+      $story.innerHTML = '';
+      (lesson.sentences || []).forEach(function (s) {
+        const sentence = el('div', 'sentence');
+        const row = el('div', 'sentence-row');
+
+        // nút phát cả câu
+        const playBtn = el('button', 'play-sentence');
+        playBtn.setAttribute('aria-label', 'Phát cả câu');
+        playBtn.innerHTML = '▶';
+        if (s.audio) {
+          playBtn.addEventListener('click', function () { play(s.audio, null); });
+        } else {
+          playBtn.disabled = true;
+        }
+
+        // các chip cụm từ
+        const phrases = el('div', 'phrases');
+        (s.phrases || []).forEach(function (p) {
+          const chip = el('button', 'phrase');
+          chip.setAttribute('aria-label', p.vi + (p.en ? ' — ' + p.en : ''));
+          chip.appendChild(el('span', 'vi', p.vi));
+          if (p.en) chip.appendChild(el('span', 'en', p.en));
+          if (p.audio) {
+            chip.addEventListener('click', function () { play(p.audio, chip); });
+          }
+          phrases.appendChild(chip);
+        });
+
+        row.appendChild(playBtn);
+        row.appendChild(phrases);
+        sentence.appendChild(row);
+
+        if (s.translation) {
+          sentence.appendChild(el('div', 'sentence-translation', s.translation));
+        }
+        $story.appendChild(sentence);
+      });
+    }
+
+    // Toggle ẩn/hiện nghĩa toàn trang
+    $toggle.addEventListener('click', function () {
+      const hidden = document.body.classList.toggle('hide-en');
+      $toggle.setAttribute('aria-pressed', String(hidden));
+      $tlabel.textContent = hidden ? 'Hiện nghĩa' : 'Ẩn nghĩa';
+    });
+
+    (async function () {
+      try {
+        const res = await fetch('lessons/' + lessonId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        render(data);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Không tải được bài học';
+        $story.innerHTML = '<p class="note">Không tìm thấy <code>lessons/' + lessonId + '.json</code>. Kiểm tra tên file, hoặc chạy qua web server / GitHub Pages thay vì mở trực tiếp file.</p>';
+      }
+    })();
+  </script>
+</body>
+</html>

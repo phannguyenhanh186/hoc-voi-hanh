@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hoc voi hanh — Học tiếng Việt qua truyện</title>
+  <meta name="description" content="Đọc truyện tiếng Việt theo cụm từ, nghe audio thật, ẩn/hiện nghĩa tiếng Anh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <span class="brand"><span class="dot"></span>hoc voi hanh</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Học tiếng Việt <em>qua truyện</em>.</h1>
+      <p>Bấm vào từng cụm từ để nghe và xem nghĩa. Nghe lại cả câu hoặc cả bài bất cứ lúc nào.</p>
+    </section>
+
+    <p class="section-label">Bài học</p>
+    <div class="cards" id="cards">
+      <p class="note">Đang tải danh sách bài học…</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">hoc voi hanh · học đi đôi với hành</div>
+  </footer>
+
+  <script>
+    (async function () {
+      const cards = document.getElementById('cards');
+      try {
+        const res = await fetch('lessons/manifest.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const lessons = await res.json();
+
+        if (!Array.isArray(lessons) || lessons.length === 0) {
+          cards.innerHTML = '<p class="note">Chưa có bài học nào. Thêm bài vào <code>lessons/manifest.json</code>.</p>';
+          return;
+        }
+
+        cards.innerHTML = '';
+        lessons.forEach(function (l) {
+          const a = document.createElement('a');
+          a.className = 'card';
+          a.href = 'lesson.html?id=' + encodeURIComponent(l.id);
+          a.innerHTML =
+            '<h3></h3><p></p><div class="go">Vào bài →</div>';
+          a.querySelector('h3').textContent = l.title || l.id;
+          a.querySelector('p').textContent = l.description || '';
+          cards.appendChild(a);
+        });
+      } catch (err) {
+        console.error(err);
+        cards.innerHTML = '<p class="note">Không tải được danh sách bài học. Nếu đang mở bằng cách nháy đúp file, hãy chạy qua một web server (xem README) hoặc deploy lên GitHub Pages.</p>';
+      }
+    })();
+  </script>
+</body>
+</html>
