@@ -1,0 +1,202 @@
+{
+  "_guide": {
+    "doc": "JSON khong ho tro comment that su, nen huong dan o key '_guide'. App bo qua moi key bat dau bang '_'. Tao bai moi co the xoa key nay.",
+    "cau_truc": {
+      "id": "ma bai, trung ten thu muc audio: audio/<id>/",
+      "title": "tieu de trang bai hoc",
+      "description": "mo ta ngan tren the trang chu",
+      "fullAudio": "MP3 doc ca bai (nut Play All)",
+      "sentences[]": {
+        "translation": "nghia ca cau",
+        "audio": "MP3 ca cau",
+        "phrases[]": {
+          "vi": "tu tieng Viet co dau",
+          "en": "nghia tieng Anh",
+          "audio": "MP3 doc rieng tu"
+        }
+      }
+    },
+    "quy_uoc_ten_audio": "word_01.mp3, word_02.mp3 ... tang dan theo thu tu xuat hien tren CA BAI (khong reset moi cau). sentence_01.mp3 ... theo so cau. full.mp3 cho ca bai. Cum 2 am tiet la 1 tu (Viet Nam, sinh vien, dai hoc, Sai Gon) dung CHUNG 1 file."
+  },
+  "id": "lesson1",
+  "title": "Chào, mình là Mai",
+  "description": "Bài nhập môn: Mai tự giới thiệu — tên, quốc tịch, nghề và sở thích.",
+  "fullAudio": "audio/lesson1/full.mp3",
+  "sentences": [
+    {
+      "translation": "Hello.",
+      "audio": "audio/lesson1/sentence_01.mp3",
+      "phrases": [
+        {
+          "vi": "Chào",
+          "en": "Hello",
+          "audio": "audio/lesson1/word_01.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you (friend)",
+          "audio": "audio/lesson1/word_02.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "My name is Mai.",
+      "audio": "audio/lesson1/sentence_02.mp3",
+      "phrases": [
+        {
+          "vi": "Tên",
+          "en": "name",
+          "audio": "audio/lesson1/word_03.mp3"
+        },
+        {
+          "vi": "mình",
+          "en": "my / I",
+          "audio": "audio/lesson1/word_04.mp3"
+        },
+        {
+          "vi": "là",
+          "en": "is",
+          "audio": "audio/lesson1/word_05.mp3"
+        },
+        {
+          "vi": "Mai",
+          "en": "Mai",
+          "audio": "audio/lesson1/word_06.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I'm Vietnamese, and I'm a student.",
+      "audio": "audio/lesson1/sentence_03.mp3",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/lesson1/word_07.mp3"
+        },
+        {
+          "vi": "là",
+          "en": "am",
+          "audio": "audio/lesson1/word_08.mp3"
+        },
+        {
+          "vi": "người",
+          "en": "person",
+          "audio": "audio/lesson1/word_09.mp3"
+        },
+        {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "audio": "audio/lesson1/word_10.mp3"
+        },
+        {
+          "vi": "và",
+          "en": "and",
+          "audio": "audio/lesson1/word_11.mp3"
+        },
+        {
+          "vi": "mình",
+          "en": "I",
+          "audio": "audio/lesson1/word_12.mp3"
+        },
+        {
+          "vi": "là",
+          "en": "am",
+          "audio": "audio/lesson1/word_13.mp3"
+        },
+        {
+          "vi": "sinh viên",
+          "en": "student",
+          "audio": "audio/lesson1/word_14.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I study at Saigon University.",
+      "audio": "audio/lesson1/sentence_04.mp3",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/lesson1/word_15.mp3"
+        },
+        {
+          "vi": "học",
+          "en": "study",
+          "audio": "audio/lesson1/word_16.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/lesson1/word_17.mp3"
+        },
+        {
+          "vi": "trường",
+          "en": "school",
+          "audio": "audio/lesson1/word_18.mp3"
+        },
+        {
+          "vi": "đại học",
+          "en": "university",
+          "audio": "audio/lesson1/word_19.mp3"
+        },
+        {
+          "vi": "Sài Gòn",
+          "en": "Saigon",
+          "audio": "audio/lesson1/word_20.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I like eating phở and reading books when I'm free.",
+      "audio": "audio/lesson1/sentence_05.mp3",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/lesson1/word_21.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/lesson1/word_22.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/lesson1/word_23.mp3"
+        },
+        {
+          "vi": "phở",
+          "en": "phở",
+          "audio": "audio/lesson1/word_24.mp3"
+        },
+        {
+          "vi": "và",
+          "en": "and",
+          "audio": "audio/lesson1/word_25.mp3"
+        },
+        {
+          "vi": "đọc",
+          "en": "read",
+          "audio": "audio/lesson1/word_26.mp3"
+        },
+        {
+          "vi": "sách",
+          "en": "book(s)",
+          "audio": "audio/lesson1/word_27.mp3"
+        },
+        {
+          "vi": "khi",
+          "en": "when",
+          "audio": "audio/lesson1/word_28.mp3"
+        },
+        {
+          "vi": "rảnh",
+          "en": "free",
+          "audio": "audio/lesson1/word_29.mp3"
+        }
+      ]
+    }
+  ]
+}
