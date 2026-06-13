@@ -1,0 +1,113 @@
+{
+  "_huong_dan": {
+    "ghi_chu": "Đây là file dữ liệu bài học. Bạn có thể chỉnh sửa trực tiếp mà không cần biết lập trình.",
+    "cach_them_cau": "Sao chép một object trong mảng 'sentences', thay nội dung, thêm vào cuối mảng (trước dấu ]).",
+    "cach_them_chunk": "Mỗi chunk là một cụm từ. 'word' = tiếng Việt, 'meaning' = nghĩa tiếng Anh.",
+    "cach_thay_audio": "Thay đường dẫn 'audio_file' thành tên file MP3/WAV của bạn trong thư mục audio/. Ví dụ: 'audio/lesson2.mp3'",
+    "luu_y": "Nếu không có file audio, website sẽ tự dùng giọng đọc máy (TTS) thay thế."
+  },
+
+  "title": "Bài 1: Xin chào! Tôi tên là gì?",
+  "description": "Học cách tự giới thiệu bản thân bằng tiếng Việt — tên, quốc tịch, nghề nghiệp.",
+  "level": "Sơ cấp (A1)",
+  "audio_file": "audio/lesson1.mp3",
+
+  "sentences": [
+    {
+      "vietnamese": "Xin chào! Tôi tên là Minh.",
+      "english": "Hello! My name is Minh.",
+      "chunks": [
+        { "word": "Xin chào",   "meaning": "Hello" },
+        { "word": "Tôi",        "meaning": "I / me" },
+        { "word": "tên là",     "meaning": "name is" },
+        { "word": "Minh",       "meaning": "(a Vietnamese name)" }
+      ]
+    },
+    {
+      "vietnamese": "Tôi là người Việt Nam.",
+      "english": "I am Vietnamese.",
+      "chunks": [
+        { "word": "Tôi là",     "meaning": "I am" },
+        { "word": "người",      "meaning": "person / people" },
+        { "word": "Việt Nam",   "meaning": "Vietnam" }
+      ]
+    },
+    {
+      "vietnamese": "Tôi là giáo viên.",
+      "english": "I am a teacher.",
+      "chunks": [
+        { "word": "Tôi là",     "meaning": "I am" },
+        { "word": "giáo viên",  "meaning": "teacher" }
+      ]
+    },
+    {
+      "vietnamese": "Bạn tên là gì?",
+      "english": "What is your name?",
+      "chunks": [
+        { "word": "Bạn",        "meaning": "you / friend" },
+        { "word": "tên là",     "meaning": "name is" },
+        { "word": "gì",         "meaning": "what" }
+      ]
+    },
+    {
+      "vietnamese": "Tôi tên là Anna. Tôi là người Mỹ.",
+      "english": "My name is Anna. I am American.",
+      "chunks": [
+        { "word": "Tôi tên là", "meaning": "My name is" },
+        { "word": "Anna",       "meaning": "(name)" },
+        { "word": "Tôi là",     "meaning": "I am" },
+        { "word": "người Mỹ",   "meaning": "American (person)" }
+      ]
+    },
+    {
+      "vietnamese": "Rất vui được gặp bạn!",
+      "english": "Nice to meet you!",
+      "chunks": [
+        { "word": "Rất vui",        "meaning": "very happy / pleased" },
+        { "word": "được gặp",       "meaning": "to meet" },
+        { "word": "bạn",            "meaning": "you" }
+      ]
+    },
+    {
+      "vietnamese": "Tôi cũng rất vui được gặp bạn.",
+      "english": "I am also very pleased to meet you.",
+      "chunks": [
+        { "word": "Tôi cũng",       "meaning": "I also" },
+        { "word": "rất vui",        "meaning": "very happy" },
+        { "word": "được gặp",       "meaning": "to meet" },
+        { "word": "bạn",            "meaning": "you" }
+      ]
+    },
+    {
+      "vietnamese": "Bạn học tiếng Việt bao lâu rồi?",
+      "english": "How long have you been studying Vietnamese?",
+      "chunks": [
+        { "word": "Bạn",            "meaning": "you" },
+        { "word": "học",            "meaning": "study / learn" },
+        { "word": "tiếng Việt",     "meaning": "Vietnamese (language)" },
+        { "word": "bao lâu",        "meaning": "how long" },
+        { "word": "rồi",            "meaning": "(completion marker)" }
+      ]
+    },
+    {
+      "vietnamese": "Tôi mới học được ba tháng.",
+      "english": "I have only been studying for three months.",
+      "chunks": [
+        { "word": "Tôi",            "meaning": "I" },
+        { "word": "mới",            "meaning": "just / only recently" },
+        { "word": "học được",       "meaning": "have been studying" },
+        { "word": "ba tháng",       "meaning": "three months" }
+      ]
+    },
+    {
+      "vietnamese": "Tiếng Việt khó nhưng rất thú vị!",
+      "english": "Vietnamese is difficult but very interesting!",
+      "chunks": [
+        { "word": "Tiếng Việt",     "meaning": "Vietnamese language" },
+        { "word": "khó",            "meaning": "difficult / hard" },
+        { "word": "nhưng",          "meaning": "but" },
+        { "word": "rất thú vị",     "meaning": "very interesting" }
+      ]
+    }
+  ]
+}
