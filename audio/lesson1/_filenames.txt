@@ -1,0 +1,47 @@
+# File audio can cho lesson1 (dat vao thu muc nay)
+
+full.mp3  ->  doc TOAN BO bai
+
+# Cau 1: Chào bạn
+sentence_01.mp3  ->  ca cau
+word_01.mp3  ->  "Chào"
+word_02.mp3  ->  "bạn"
+
+# Cau 2: Tên mình là Mai
+sentence_02.mp3  ->  ca cau
+word_03.mp3  ->  "Tên"
+word_04.mp3  ->  "mình"
+word_05.mp3  ->  "là"
+word_06.mp3  ->  "Mai"
+
+# Cau 3: Mình là người Việt Nam và mình là sinh viên
+sentence_03.mp3  ->  ca cau
+word_07.mp3  ->  "Mình"
+word_08.mp3  ->  "là"
+word_09.mp3  ->  "người"
+word_10.mp3  ->  "Việt Nam"
+word_11.mp3  ->  "và"
+word_12.mp3  ->  "mình"
+word_13.mp3  ->  "là"
+word_14.mp3  ->  "sinh viên"
+
+# Cau 4: Mình học ở trường đại học Sài Gòn
+sentence_04.mp3  ->  ca cau
+word_15.mp3  ->  "Mình"
+word_16.mp3  ->  "học"
+word_17.mp3  ->  "ở"
+word_18.mp3  ->  "trường"
+word_19.mp3  ->  "đại học"
+word_20.mp3  ->  "Sài Gòn"
+
+# Cau 5: Mình thích ăn phở và đọc sách khi rảnh
+sentence_05.mp3  ->  ca cau
+word_21.mp3  ->  "Mình"
+word_22.mp3  ->  "thích"
+word_23.mp3  ->  "ăn"
+word_24.mp3  ->  "phở"
+word_25.mp3  ->  "và"
+word_26.mp3  ->  "đọc"
+word_27.mp3  ->  "sách"
+word_28.mp3  ->  "khi"
+word_29.mp3  ->  "rảnh"
