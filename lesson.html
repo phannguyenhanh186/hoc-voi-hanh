@@ -12,8 +12,15 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <span class="brand"><span class="dot"></span>hoc voi hanh</span>
-      <a class="back-link" href="index.html">← Tất cả bài</a>
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="levels">
+          <a class="level" href="index.html">all levels</a>
+          <a class="level" href="index.html?level=mam">mầm</a>
+          <a class="level" href="index.html?level=choi">chồi</a>
+          <a class="level" href="index.html?level=la">lá</a>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -23,9 +30,7 @@
     </div>
 
     <div class="toolbar">
-      <button class="btn" id="toggle-en" aria-pressed="false">
-        <span class="ic" aria-hidden="true">👁</span><span id="toggle-label">Ẩn nghĩa</span>
-      </button>
+      <button class="btn-english" id="toggle-en" aria-pressed="false">English</button>
     </div>
 
     <section class="story" id="story"></section>
@@ -47,7 +52,6 @@
     const $story  = document.getElementById('story');
     const $full   = document.getElementById('full-audio');
     const $toggle = document.getElementById('toggle-en');
-    const $tlabel = document.getElementById('toggle-label');
 
     // Một đối tượng Audio dùng chung cho word/sentence -> tránh phát chồng
     let current = null;
@@ -128,7 +132,6 @@
     $toggle.addEventListener('click', function () {
       const hidden = document.body.classList.toggle('hide-en');
       $toggle.setAttribute('aria-pressed', String(hidden));
-      $tlabel.textContent = hidden ? 'Hiện nghĩa' : 'Ẩn nghĩa';
     });
 
     (async function () {
