@@ -6,26 +6,26 @@
   "id": "lesson2",
   "title": "Một ngày thường",
   "description": "Nam và Hương hỏi thăm nhau và kể về bữa ăn, công việc, thói quen trong ngày.",
-  "fullAudio": "audio/lesson2/full.m4a",
+  "fullAudio": "audio/lesson2/{voice}/full.m4a",
   "sentences": [
     {
       "translation": "Hello Nam. How are you?",
-      "audio": "audio/lesson2/sentence_01.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_01.m4a",
       "phrases": [
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/lesson2/word_01.m4a"
+          "audio": "audio/lesson2/{voice}/word_01.m4a"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/word_02.m4a"
+          "audio": "audio/lesson2/{voice}/word_02.m4a"
         },
         {
           "vi": "Nam",
           "en": "Nam",
-          "audio": "audio/lesson2/word_03.m4a"
+          "audio": "audio/lesson2/{voice}/word_03.m4a"
         },
         {
           "br": true
@@ -33,33 +33,33 @@
         {
           "vi": "Anh",
           "en": "you",
-          "audio": "audio/lesson2/word_04.m4a"
+          "audio": "audio/lesson2/{voice}/word_04.m4a"
         },
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/lesson2/word_05.m4a"
+          "audio": "audio/lesson2/{voice}/word_05.m4a"
         },
         {
           "vi": "không",
           "en": "(or not)",
-          "audio": "audio/lesson2/word_06.m4a"
+          "audio": "audio/lesson2/{voice}/word_06.m4a"
         }
       ]
     },
     {
       "translation": "Hello Hương. I'm well. And you?",
-      "audio": "audio/lesson2/sentence_02.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_02.m4a",
       "phrases": [
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/lesson2/word_07.m4a"
+          "audio": "audio/lesson2/{voice}/word_07.m4a"
         },
         {
           "vi": "Hương",
           "en": "Hương",
-          "audio": "audio/lesson2/word_08.m4a"
+          "audio": "audio/lesson2/{voice}/word_08.m4a"
         },
         {
           "br": true
@@ -67,12 +67,12 @@
         {
           "vi": "Anh",
           "en": "I",
-          "audio": "audio/lesson2/word_09.m4a"
+          "audio": "audio/lesson2/{voice}/word_09.m4a"
         },
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/lesson2/word_10.m4a"
+          "audio": "audio/lesson2/{voice}/word_10.m4a"
         },
         {
           "br": true
@@ -80,28 +80,28 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/word_11.m4a"
+          "audio": "audio/lesson2/{voice}/word_11.m4a"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/word_12.m4a"
+          "audio": "audio/lesson2/{voice}/word_12.m4a"
         }
       ]
     },
     {
       "translation": "I'm well. What did you do this morning?",
-      "audio": "audio/lesson2/sentence_03.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_03.m4a",
       "phrases": [
         {
           "vi": "Em",
           "en": "I",
-          "audio": "audio/lesson2/word_13.m4a"
+          "audio": "audio/lesson2/{voice}/word_13.m4a"
         },
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/lesson2/word_14.m4a"
+          "audio": "audio/lesson2/{voice}/word_14.m4a"
         },
         {
           "br": true
@@ -109,58 +109,58 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/word_15.m4a"
+          "audio": "audio/lesson2/{voice}/word_15.m4a"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/word_16.m4a"
+          "audio": "audio/lesson2/{voice}/word_16.m4a"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/word_17.m4a"
+          "audio": "audio/lesson2/{voice}/word_17.m4a"
         },
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/lesson2/word_18.m4a"
+          "audio": "audio/lesson2/{voice}/word_18.m4a"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/word_19.m4a"
+          "audio": "audio/lesson2/{voice}/word_19.m4a"
         }
       ]
     },
     {
       "translation": "This morning I went to work. And you?",
-      "audio": "audio/lesson2/sentence_04.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_04.m4a",
       "phrases": [
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/word_20.m4a"
+          "audio": "audio/lesson2/{voice}/word_20.m4a"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/word_21.m4a"
+          "audio": "audio/lesson2/{voice}/word_21.m4a"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/word_22.m4a"
+          "audio": "audio/lesson2/{voice}/word_22.m4a"
         },
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/lesson2/word_23.m4a"
+          "audio": "audio/lesson2/{voice}/word_23.m4a"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/lesson2/word_24.m4a"
+          "audio": "audio/lesson2/{voice}/word_24.m4a"
         },
         {
           "br": true
@@ -168,58 +168,58 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/word_25.m4a"
+          "audio": "audio/lesson2/{voice}/word_25.m4a"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/word_26.m4a"
+          "audio": "audio/lesson2/{voice}/word_26.m4a"
         }
       ]
     },
     {
       "translation": "This morning I ate bún bò then went to work. What did you eat this morning?",
-      "audio": "audio/lesson2/sentence_05.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_05.m4a",
       "phrases": [
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/word_27.m4a"
+          "audio": "audio/lesson2/{voice}/word_27.m4a"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/word_28.m4a"
+          "audio": "audio/lesson2/{voice}/word_28.m4a"
         },
         {
           "vi": "em",
           "en": "I",
-          "audio": "audio/lesson2/word_29.m4a"
+          "audio": "audio/lesson2/{voice}/word_29.m4a"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_30.m4a"
+          "audio": "audio/lesson2/{voice}/word_30.m4a"
         },
         {
           "vi": "bún bò",
           "en": "beef noodles",
-          "audio": "audio/lesson2/word_31.m4a"
+          "audio": "audio/lesson2/{voice}/word_31.m4a"
         },
         {
           "vi": "rồi",
           "en": "then",
-          "audio": "audio/lesson2/word_32.m4a"
+          "audio": "audio/lesson2/{voice}/word_32.m4a"
         },
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/lesson2/word_33.m4a"
+          "audio": "audio/lesson2/{voice}/word_33.m4a"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/lesson2/word_34.m4a"
+          "audio": "audio/lesson2/{voice}/word_34.m4a"
         },
         {
           "br": true
@@ -227,58 +227,58 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/word_35.m4a"
+          "audio": "audio/lesson2/{voice}/word_35.m4a"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/word_36.m4a"
+          "audio": "audio/lesson2/{voice}/word_36.m4a"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/word_37.m4a"
+          "audio": "audio/lesson2/{voice}/word_37.m4a"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_38.m4a"
+          "audio": "audio/lesson2/{voice}/word_38.m4a"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/word_39.m4a"
+          "audio": "audio/lesson2/{voice}/word_39.m4a"
         }
       ]
     },
     {
       "translation": "This morning I ate bánh xèo. Yesterday morning I also ate bún bò.",
-      "audio": "audio/lesson2/sentence_06.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_06.m4a",
       "phrases": [
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/word_40.m4a"
+          "audio": "audio/lesson2/{voice}/word_40.m4a"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/word_41.m4a"
+          "audio": "audio/lesson2/{voice}/word_41.m4a"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/word_42.m4a"
+          "audio": "audio/lesson2/{voice}/word_42.m4a"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_43.m4a"
+          "audio": "audio/lesson2/{voice}/word_43.m4a"
         },
         {
           "vi": "bánh xèo",
           "en": "savory pancake",
-          "audio": "audio/lesson2/word_44.m4a"
+          "audio": "audio/lesson2/{voice}/word_44.m4a"
         },
         {
           "br": true
@@ -286,53 +286,53 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/word_45.m4a"
+          "audio": "audio/lesson2/{voice}/word_45.m4a"
         },
         {
           "vi": "qua",
           "en": "past",
-          "audio": "audio/lesson2/word_46.m4a"
+          "audio": "audio/lesson2/{voice}/word_46.m4a"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/word_47.m4a"
+          "audio": "audio/lesson2/{voice}/word_47.m4a"
         },
         {
           "vi": "cũng",
           "en": "also",
-          "audio": "audio/lesson2/word_48.m4a"
+          "audio": "audio/lesson2/{voice}/word_48.m4a"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_49.m4a"
+          "audio": "audio/lesson2/{voice}/word_49.m4a"
         },
         {
           "vi": "bún bò",
           "en": "beef noodles",
-          "audio": "audio/lesson2/word_50.m4a"
+          "audio": "audio/lesson2/{voice}/word_50.m4a"
         }
       ]
     },
     {
       "translation": "Is that so. And what do you usually eat in the evening?",
-      "audio": "audio/lesson2/sentence_07.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_07.m4a",
       "phrases": [
         {
           "vi": "Vậy",
           "en": "so",
-          "audio": "audio/lesson2/word_51.m4a"
+          "audio": "audio/lesson2/{voice}/word_51.m4a"
         },
         {
           "vi": "hả",
           "en": "really?",
-          "audio": "audio/lesson2/word_52.m4a"
+          "audio": "audio/lesson2/{voice}/word_52.m4a"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/word_53.m4a"
+          "audio": "audio/lesson2/{voice}/word_53.m4a"
         },
         {
           "br": true
@@ -340,83 +340,83 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/word_54.m4a"
+          "audio": "audio/lesson2/{voice}/word_54.m4a"
         },
         {
           "vi": "tối",
           "en": "evening",
-          "audio": "audio/lesson2/word_55.m4a"
+          "audio": "audio/lesson2/{voice}/word_55.m4a"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/word_56.m4a"
+          "audio": "audio/lesson2/{voice}/word_56.m4a"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/word_57.m4a"
+          "audio": "audio/lesson2/{voice}/word_57.m4a"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_58.m4a"
+          "audio": "audio/lesson2/{voice}/word_58.m4a"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/word_59.m4a"
+          "audio": "audio/lesson2/{voice}/word_59.m4a"
         }
       ]
     },
     {
       "translation": "In the evening I usually eat rice, soup, vegetables with meat. And you?",
-      "audio": "audio/lesson2/sentence_08.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_08.m4a",
       "phrases": [
         {
           "vi": "Tối",
           "en": "evening",
-          "audio": "audio/lesson2/word_60.m4a"
+          "audio": "audio/lesson2/{voice}/word_60.m4a"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/word_61.m4a"
+          "audio": "audio/lesson2/{voice}/word_61.m4a"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/word_62.m4a"
+          "audio": "audio/lesson2/{voice}/word_62.m4a"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_63.m4a"
+          "audio": "audio/lesson2/{voice}/word_63.m4a"
         },
         {
           "vi": "cơm",
           "en": "rice",
-          "audio": "audio/lesson2/word_64.m4a"
+          "audio": "audio/lesson2/{voice}/word_64.m4a"
         },
         {
           "vi": "canh",
           "en": "soup",
-          "audio": "audio/lesson2/word_65.m4a"
+          "audio": "audio/lesson2/{voice}/word_65.m4a"
         },
         {
           "vi": "rau",
           "en": "vegetables",
-          "audio": "audio/lesson2/word_66.m4a"
+          "audio": "audio/lesson2/{voice}/word_66.m4a"
         },
         {
           "vi": "với",
           "en": "with",
-          "audio": "audio/lesson2/word_67.m4a"
+          "audio": "audio/lesson2/{voice}/word_67.m4a"
         },
         {
           "vi": "thịt",
           "en": "meat",
-          "audio": "audio/lesson2/word_68.m4a"
+          "audio": "audio/lesson2/{voice}/word_68.m4a"
         },
         {
           "br": true
@@ -424,58 +424,58 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/word_69.m4a"
+          "audio": "audio/lesson2/{voice}/word_69.m4a"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/word_70.m4a"
+          "audio": "audio/lesson2/{voice}/word_70.m4a"
         }
       ]
     },
     {
       "translation": "I also usually eat rice, vegetables with meat. What do you usually do after eating?",
-      "audio": "audio/lesson2/sentence_09.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_09.m4a",
       "phrases": [
         {
           "vi": "Em",
           "en": "I",
-          "audio": "audio/lesson2/word_71.m4a"
+          "audio": "audio/lesson2/{voice}/word_71.m4a"
         },
         {
           "vi": "cũng",
           "en": "also",
-          "audio": "audio/lesson2/word_72.m4a"
+          "audio": "audio/lesson2/{voice}/word_72.m4a"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/word_73.m4a"
+          "audio": "audio/lesson2/{voice}/word_73.m4a"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_74.m4a"
+          "audio": "audio/lesson2/{voice}/word_74.m4a"
         },
         {
           "vi": "cơm",
           "en": "rice",
-          "audio": "audio/lesson2/word_75.m4a"
+          "audio": "audio/lesson2/{voice}/word_75.m4a"
         },
         {
           "vi": "rau",
           "en": "vegetables",
-          "audio": "audio/lesson2/word_76.m4a"
+          "audio": "audio/lesson2/{voice}/word_76.m4a"
         },
         {
           "vi": "với",
           "en": "with",
-          "audio": "audio/lesson2/word_77.m4a"
+          "audio": "audio/lesson2/{voice}/word_77.m4a"
         },
         {
           "vi": "thịt",
           "en": "meat",
-          "audio": "audio/lesson2/word_78.m4a"
+          "audio": "audio/lesson2/{voice}/word_78.m4a"
         },
         {
           "br": true
@@ -483,83 +483,83 @@
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_79.m4a"
+          "audio": "audio/lesson2/{voice}/word_79.m4a"
         },
         {
           "vi": "xong",
           "en": "finish",
-          "audio": "audio/lesson2/word_80.m4a"
+          "audio": "audio/lesson2/{voice}/word_80.m4a"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/word_81.m4a"
+          "audio": "audio/lesson2/{voice}/word_81.m4a"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/word_82.m4a"
+          "audio": "audio/lesson2/{voice}/word_82.m4a"
         },
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/lesson2/word_83.m4a"
+          "audio": "audio/lesson2/{voice}/word_83.m4a"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/word_84.m4a"
+          "audio": "audio/lesson2/{voice}/word_84.m4a"
         }
       ]
     },
     {
       "translation": "After eating I usually wash the dishes and watch a movie. And you?",
-      "audio": "audio/lesson2/sentence_10.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_10.m4a",
       "phrases": [
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_85.m4a"
+          "audio": "audio/lesson2/{voice}/word_85.m4a"
         },
         {
           "vi": "xong",
           "en": "finish",
-          "audio": "audio/lesson2/word_86.m4a"
+          "audio": "audio/lesson2/{voice}/word_86.m4a"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/word_87.m4a"
+          "audio": "audio/lesson2/{voice}/word_87.m4a"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/word_88.m4a"
+          "audio": "audio/lesson2/{voice}/word_88.m4a"
         },
         {
           "vi": "rửa",
           "en": "wash",
-          "audio": "audio/lesson2/word_89.m4a"
+          "audio": "audio/lesson2/{voice}/word_89.m4a"
         },
         {
           "vi": "chén",
           "en": "dishes",
-          "audio": "audio/lesson2/word_90.m4a"
+          "audio": "audio/lesson2/{voice}/word_90.m4a"
         },
         {
           "vi": "và",
           "en": "and",
-          "audio": "audio/lesson2/word_91.m4a"
+          "audio": "audio/lesson2/{voice}/word_91.m4a"
         },
         {
           "vi": "xem",
           "en": "watch",
-          "audio": "audio/lesson2/word_92.m4a"
+          "audio": "audio/lesson2/{voice}/word_92.m4a"
         },
         {
           "vi": "phim",
           "en": "movie",
-          "audio": "audio/lesson2/word_93.m4a"
+          "audio": "audio/lesson2/{voice}/word_93.m4a"
         },
         {
           "br": true
@@ -567,63 +567,63 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/word_94.m4a"
+          "audio": "audio/lesson2/{voice}/word_94.m4a"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/word_95.m4a"
+          "audio": "audio/lesson2/{voice}/word_95.m4a"
         }
       ]
     },
     {
       "translation": "After eating I usually study English then go to sleep.",
-      "audio": "audio/lesson2/sentence_11.m4a",
+      "audio": "audio/lesson2/{voice}/sentence_11.m4a",
       "phrases": [
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/lesson2/word_96.m4a"
+          "audio": "audio/lesson2/{voice}/word_96.m4a"
         },
         {
           "vi": "xong",
           "en": "finish",
-          "audio": "audio/lesson2/word_97.m4a"
+          "audio": "audio/lesson2/{voice}/word_97.m4a"
         },
         {
           "vi": "em",
           "en": "I",
-          "audio": "audio/lesson2/word_98.m4a"
+          "audio": "audio/lesson2/{voice}/word_98.m4a"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/word_99.m4a"
+          "audio": "audio/lesson2/{voice}/word_99.m4a"
         },
         {
           "vi": "học",
           "en": "study",
-          "audio": "audio/lesson2/word_100.m4a"
+          "audio": "audio/lesson2/{voice}/word_100.m4a"
         },
         {
           "vi": "tiếng Anh",
           "en": "English",
-          "audio": "audio/lesson2/word_101.m4a"
+          "audio": "audio/lesson2/{voice}/word_101.m4a"
         },
         {
           "vi": "rồi",
           "en": "then",
-          "audio": "audio/lesson2/word_102.m4a"
+          "audio": "audio/lesson2/{voice}/word_102.m4a"
         },
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/lesson2/word_103.m4a"
+          "audio": "audio/lesson2/{voice}/word_103.m4a"
         },
         {
           "vi": "ngủ",
           "en": "sleep",
-          "audio": "audio/lesson2/word_104.m4a"
+          "audio": "audio/lesson2/{voice}/word_104.m4a"
         }
       ]
     }
