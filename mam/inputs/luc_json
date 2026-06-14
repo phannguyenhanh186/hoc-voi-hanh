@@ -1,0 +1,56 @@
+{
+  "id": "luc",
+  "title": "lúc",
+  "terms": [
+    "lúc"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"lúc\" (at [a point in time]). Used before a specific time to indicate \"at\" that time."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "lúc + [time]  —  at [time]"
+        },
+        {
+          "type": "text",
+          "text": "Lúc mấy giờ?  —  At what time?"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Bạn đi học lúc mấy giờ?",
+          "en": "What time do you go to school?"
+        },
+        {
+          "type": "example",
+          "vi": "Mình ăn cơm lúc 7 giờ tối.",
+          "en": "I eat dinner at 7pm."
+        },
+        {
+          "type": "example",
+          "vi": "Mình dậy lúc 6 giờ sáng.",
+          "en": "I wake up at 6am."
+        },
+        {
+          "type": "example",
+          "vi": "Anh ấy về nhà lúc mấy giờ?",
+          "en": "What time does he come home?"
+        }
+      ]
+    }
+  ]
+}
