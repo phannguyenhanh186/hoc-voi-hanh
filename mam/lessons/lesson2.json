@@ -7,6 +7,24 @@
   "id": "lesson2",
   "title": "Một ngày thường",
   "description": "Nam và Hương hỏi thăm nhau và kể về bữa ăn, công việc, thói quen trong ngày.",
+  "inputs": [
+    {
+      "id": "khoe_khong",
+      "title": "Khoẻ không?"
+    },
+    {
+      "id": "thuong",
+      "title": "Thường"
+    },
+    {
+      "id": "cung",
+      "title": "Cũng"
+    },
+    {
+      "id": "xong",
+      "title": "Xong"
+    }
+  ],
   "vocab": "lesson2",
   "fullAudio": "audio/lesson2/{voice}/full.m4a",
   "sentences": [
