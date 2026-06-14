@@ -1,0 +1,34 @@
+{
+  "id": "voi",
+  "title": "Với",
+  "terms": ["với"],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        { "type": "text", "text": "Used to indicate accompaniment — doing something together with someone." }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        { "type": "text", "text": "[Verb / Activity] + với + [person]" }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        { "type": "example", "vi": "Mình thường đi chơi với bạn bè.", "en": "I usually hang out with friends." },
+        { "type": "example", "vi": "Bạn có muốn đi ăn với mình không?", "en": "Do you want to go eat with me?" },
+        { "type": "example", "vi": "Anh ấy đi du lịch với gia đình.", "en": "He travels with his family." },
+        { "type": "example", "vi": "Em nấu ăn với chị.", "en": "I cook with you (chị)." }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        { "type": "text", "text": "\"với\" can also mean \"and\" when listing things together (similar to \"và\"), e.g., \"cà phê với sữa\" – coffee with milk." }
+      ]
+    }
+  ]
+}
