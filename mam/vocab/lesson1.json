@@ -3,7 +3,7 @@
   "title": "Từ vựng",
   "sections": [
     {
-      "label": "Tên nước",
+      "label": "Tên nước (Countries)",
       "items": [
         {
           "vi": "Anh",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "label": "Nghề",
+      "label": "Nghề (Jobs)",
       "items": [
         {
           "vi": "giáo viên",
@@ -165,7 +165,7 @@
       ]
     },
     {
-      "label": "Chỗ làm",
+      "label": "Chỗ làm (Workplaces)",
       "items": [
         {
           "vi": "văn phòng",
