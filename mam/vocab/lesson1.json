@@ -1,0 +1,229 @@
+{
+  "id": "lesson1",
+  "title": "Từ vựng",
+  "sections": [
+    {
+      "label": "Tên nước",
+      "items": [
+        {
+          "vi": "Anh",
+          "en": "the UK"
+        },
+        {
+          "vi": "Mỹ",
+          "en": "the US"
+        },
+        {
+          "vi": "Đức",
+          "en": "Germany"
+        },
+        {
+          "vi": "Pháp",
+          "en": "France"
+        },
+        {
+          "vi": "Ca-na-đa",
+          "en": "Canada"
+        },
+        {
+          "vi": "Tây Ban Nha",
+          "en": "Spain"
+        },
+        {
+          "vi": "Bồ Đào Nha",
+          "en": "Portugal"
+        },
+        {
+          "vi": "Thuỵ Sĩ",
+          "en": "Switzerland"
+        },
+        {
+          "vi": "Nga",
+          "en": "Russia"
+        },
+        {
+          "vi": "Úc",
+          "en": "Australia"
+        },
+        {
+          "vi": "Ấn / Ấn Độ",
+          "en": "India"
+        },
+        {
+          "vi": "Hàn / Hàn Quốc",
+          "en": "Korea"
+        },
+        {
+          "vi": "Nhật / Nhật Bản",
+          "en": "Japan"
+        },
+        {
+          "vi": "Đài / Đài Loan",
+          "en": "Taiwan"
+        },
+        {
+          "vi": "Trung / Trung Quốc",
+          "en": "China"
+        },
+        {
+          "vi": "Thái / Thái Lan",
+          "en": "Thailand"
+        },
+        {
+          "vi": "Sing / Sing-ga-po",
+          "en": "Singapore"
+        },
+        {
+          "vi": "Việt / Việt Nam",
+          "en": "Vietnam"
+        }
+      ]
+    },
+    {
+      "label": "Nghề",
+      "items": [
+        {
+          "vi": "giáo viên",
+          "en": "teacher"
+        },
+        {
+          "vi": "bác sĩ",
+          "en": "doctor"
+        },
+        {
+          "vi": "y tá",
+          "en": "nurse"
+        },
+        {
+          "vi": "kỹ sư",
+          "en": "engineer"
+        },
+        {
+          "vi": "quản lý",
+          "en": "manager"
+        },
+        {
+          "vi": "giám đốc",
+          "en": "CEO / director"
+        },
+        {
+          "vi": "thiết kế",
+          "en": "designer"
+        },
+        {
+          "vi": "kinh doanh",
+          "en": "business staff"
+        },
+        {
+          "vi": "lễ tân",
+          "en": "receptionist"
+        },
+        {
+          "vi": "tư vấn",
+          "en": "consultant"
+        },
+        {
+          "vi": "ca sĩ",
+          "en": "singer"
+        },
+        {
+          "vi": "diễn viên",
+          "en": "actor / actress"
+        },
+        {
+          "vi": "em-xi (MC)",
+          "en": "MC / host"
+        },
+        {
+          "vi": "bảo vệ",
+          "en": "security staff"
+        },
+        {
+          "vi": "cảnh sát",
+          "en": "police officer"
+        },
+        {
+          "vi": "đầu bếp",
+          "en": "chef"
+        },
+        {
+          "vi": "phục vụ",
+          "en": "waiter / waitress"
+        },
+        {
+          "vi": "tự do",
+          "en": "freelancer"
+        },
+        {
+          "vi": "học sinh",
+          "en": "student"
+        },
+        {
+          "vi": "sinh viên",
+          "en": "college student"
+        }
+      ]
+    },
+    {
+      "label": "Chỗ làm",
+      "items": [
+        {
+          "vi": "văn phòng",
+          "en": "office"
+        },
+        {
+          "vi": "nhà",
+          "en": "house / home"
+        },
+        {
+          "vi": "nhà hàng",
+          "en": "restaurant"
+        },
+        {
+          "vi": "quán cà phê",
+          "en": "cafe"
+        },
+        {
+          "vi": "quán ăn",
+          "en": "eatery"
+        },
+        {
+          "vi": "trường",
+          "en": "school"
+        },
+        {
+          "vi": "trường đại học",
+          "en": "university"
+        },
+        {
+          "vi": "nhà máy",
+          "en": "factory"
+        },
+        {
+          "vi": "bệnh viện",
+          "en": "hospital"
+        },
+        {
+          "vi": "siêu thị",
+          "en": "supermarket"
+        },
+        {
+          "vi": "chợ",
+          "en": "market"
+        },
+        {
+          "vi": "cửa hàng",
+          "en": "store"
+        },
+        {
+          "vi": "cửa hàng quần áo",
+          "en": "clothing store"
+        },
+        {
+          "vi": "cửa hàng tiện lợi",
+          "en": "convenience store"
+        }
+      ]
+    }
+  ]
+}
