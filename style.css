@@ -1,0 +1,255 @@
+/* ============================================================
+   hoc voi hanh — stylesheet (theo prototype)
+   bg #F8F8F8 · purple #C0BFF9 · yellow #FFDC9A
+   Font: Be Vietnam Pro (đủ dấu tiếng Việt)
+   ============================================================ */
+
+:root {
+  --bg:            #F8F8F8;
+  --surface:       #FFFFFF;
+  --primary:       #C0BFF9;  /* tím nhạt: header bar, khung hover */
+  --primary-border:#9F9DF2;  /* viền tím đậm hơn */
+  --accent:        #6F6CE0;  /* tím đậm: nút play, link, active */
+  --accent-deep:   #514FC4;
+  --yellow:        #FFDC9A;  /* nút English */
+  --yellow-border: #EFC97C;
+  --ink:           #23223B;
+  --muted:         #7A7790;
+  --line:          #E7E7EF;
+  --stroke:        #1B1B28;  /* viền đen cho mọi khung bo góc */
+  --tint:          #F2F1FD;  /* nền nhạt khi hover/active */
+  --radius:        16px;
+  --maxw:          760px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-decoration: none; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 18px; }
+
+/* ---------- Header pill ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  padding: 14px 0;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  background: var(--primary);
+  border: 1.5px solid var(--stroke);
+  border-radius: 999px;
+  padding: 10px 22px;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: .2px;
+  color: var(--accent-deep);
+}
+.levels { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.level {
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--ink);
+  padding: 2px 2px;
+  white-space: nowrap;
+}
+.level:hover { color: var(--accent-deep); }
+.level.active { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- Homepage ---------- */
+.hero { padding: 30px 0 6px; }
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 2.7rem);
+  line-height: 1.12;
+  margin: 0 0 10px;
+  letter-spacing: -.5px;
+}
+.hero p { color: var(--muted); margin: 0; max-width: 46ch; }
+
+.section-label {
+  font-size: .78rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin: 30px 0 14px;
+}
+.cards { display: grid; gap: 14px; padding-bottom: 56px; }
+.card {
+  display: block;
+  background: var(--surface);
+  border: 1.5px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px 20px;
+  position: relative;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card::before {
+  content: ""; position: absolute; left: 0; top: 16px; bottom: 16px;
+  width: 4px; border-radius: 4px; background: var(--primary);
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--primary-border);
+  box-shadow: 0 8px 24px rgba(81,79,196,.10);
+  outline: none;
+}
+.card .badge {
+  display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em;
+  background: var(--yellow); border: 1px solid var(--stroke);
+  color: #6b4e1f; border-radius: 999px; padding: 2px 10px; margin-bottom: 8px;
+}
+.card h3 { margin: 0 0 4px; font-size: 1.12rem; }
+.card p { margin: 0; color: var(--muted); font-size: .96rem; }
+.card .go { margin-top: 10px; font-weight: 600; color: var(--accent-deep); font-size: .92rem; }
+
+/* ---------- Lesson page ---------- */
+.lesson-head { padding: 26px 0 6px; }
+.lesson-head h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0 0 4px; letter-spacing: -.3px; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 16px; }
+
+.btn-english {
+  font: inherit; font-weight: 600; font-size: .85rem; cursor: pointer;
+  background: var(--yellow);
+  border: 1.5px solid var(--stroke);
+  color: #6b4e1f;
+  border-radius: 999px; padding: 7px 18px;
+  white-space: nowrap;
+  white-space: nowrap;
+  transition: background .12s, color .12s, border-color .12s;
+}
+.btn-english:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* khi nghĩa đang ẩn -> nút ở trạng thái "off" */
+.btn-english[aria-pressed="true"] {
+  background: transparent; border-color: var(--line); color: var(--muted);
+}
+
+/* ---------- Story ---------- */
+.story { padding: 6px 0 96px; }
+.sentence {
+  background: var(--surface);
+  border: 1.5px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+.sentence:last-child { margin-bottom: 0; }
+.sentence-row { display: flex; align-items: flex-start; gap: 12px; }
+
+.play-sentence {
+  flex: none; margin-top: 2px;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid var(--stroke); background: var(--accent); color: #fff;
+  cursor: pointer; font-size: .8rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .12s, transform .08s;
+}
+.play-sentence:hover { background: var(--accent-deep); }
+.play-sentence:active { transform: scale(.94); }
+.play-sentence:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.phrases { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.phrases .linebreak { flex-basis: 100%; height: 0; }
+
+/* word chip — khung ẩn, hiện khi rê chuột */
+.phrase {
+  font: inherit; cursor: pointer; text-align: left;
+  background: transparent;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  padding: 4px 6px 5px;
+  display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; flex: none;
+  transition: background .12s, border-color .12s, transform .08s;
+}
+.phrase:hover { border-color: var(--stroke); background: var(--primary); }
+.phrase:active { transform: scale(.97); }
+.phrase:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.phrase.playing { border-color: var(--stroke); background: var(--primary); }
+/* hover/đang phát: ẩn nghĩa Anh của TỪ ĐÓ -> khung thu lại ôm sát chữ Việt */
+.phrase:hover .en, .phrase.playing .en { max-height: 0; opacity: 0; margin: 0; }
+.phrase .vi { font-size: 1.16rem; font-weight: 600; color: var(--ink); line-height: 1.3; white-space: nowrap; }
+.phrase .en {
+  font-size: .8rem; color: var(--muted); line-height: 1.25;
+  white-space: nowrap;                  /* nghĩa Anh nằm 1 dòng, ô tự nới rộng */
+  max-height: 1.6em; overflow: hidden;
+  transition: max-height .18s ease, opacity .18s ease, margin .18s ease;
+}
+.hide-en .phrase .en { max-height: 0; opacity: 0; margin: 0; }
+/* khi tắt nghĩa: khung thu lại, các từ sát vào nhau */
+.hide-en .phrases { gap: 2px 5px; }
+.hide-en .phrase { padding: 3px 3px; }
+
+.sentence-translation { margin: 10px 0 2px 48px; font-size: .9rem; color: var(--muted); font-style: italic; }
+.hide-en .sentence-translation { display: none; }
+
+/* ---------- Sticky full-audio player ---------- */
+.player-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+  background: rgba(248,248,248,.94); backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+}
+.player-bar .wrap { display: flex; align-items: center; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+.player-bar .label { font-size: .85rem; color: var(--muted); flex: none; }
+.player-bar audio { flex: 1; height: 38px; width: 100%; }
+
+/* ---------- Misc ---------- */
+.note { margin: 14px 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--muted); font-size: .9rem; }
+.footer { padding: 22px 0 36px; color: var(--muted); font-size: .85rem; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (min-width: 560px) { .cards { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Toolbar nút điều hướng (sang core inputs) ---------- */
+.toolbar-right { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-input {
+  font: inherit; font-weight: 600; font-size: .85rem;
+  background: var(--yellow); border: 1.5px solid var(--stroke); color: #6b4e1f;
+  border-radius: 999px; padding: 7px 16px; white-space: nowrap;
+  display: inline-flex; align-items: center;
+}
+.btn-input:hover { filter: brightness(.97); }
+.btn-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Core inputs page ---------- */
+.input-sections { padding: 6px 0 60px; }
+.input-card {
+  background: var(--surface);
+  border: 1.5px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 18px 20px 20px;
+  margin-bottom: 16px;
+}
+.badge-label {
+  display: inline-block; font-weight: 700; font-size: .95rem; color: var(--ink);
+  background: var(--primary); border: 1.5px solid var(--stroke);
+  border-radius: 12px; padding: 6px 16px; margin-bottom: 14px;
+}
+.input-card p { margin: 0 0 12px; }
+.input-card p:last-child { margin-bottom: 0; }
+
+.tbl { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.tbl th { text-align: left; font-weight: 700; font-size: 1rem; padding: 10px 6px; border-bottom: 1.5px solid var(--stroke); }
+.tbl td { padding: 12px 6px; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+.tbl tr:last-child td { border-bottom: none; }
+.tbl .term { font-weight: 700; }
+.tbl .gloss { color: var(--muted); font-weight: 400; }
+
+.example { padding: 12px 0; border-bottom: 1px dashed var(--line); }
+.example:first-of-type { padding-top: 2px; }
+.example:last-child { border-bottom: none; padding-bottom: 0; }
+.ex-context { font-size: .85rem; font-weight: 600; color: var(--accent-deep); margin-bottom: 3px; }
+.ex-vi { font-size: 1.12rem; font-weight: 600; line-height: 1.4; }
+.ex-en { color: var(--muted); font-style: italic; font-size: .95rem; }
