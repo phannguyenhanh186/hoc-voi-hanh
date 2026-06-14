@@ -13,6 +13,10 @@
     {
       "id": "pronouns",
       "title": "Which pronouns to use?"
+    },
+    {
+      "id": "con",
+      "title": "Còn"
     }
   ],
   "fullAudio": "audio/lesson1/{voice}/full.m4a",
