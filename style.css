@@ -253,3 +253,5 @@ a { color: var(--accent-deep); text-decoration: none; }
 .ex-context { font-size: .85rem; font-weight: 600; color: var(--accent-deep); margin-bottom: 3px; }
 .ex-vi { font-size: 1.12rem; font-weight: 600; line-height: 1.4; }
 .ex-en { color: var(--muted); font-style: italic; font-size: .95rem; }
+
+.back-row { padding: 4px 0 64px; }
