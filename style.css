@@ -171,7 +171,7 @@ a { color: var(--accent-deep); text-decoration: none; }
   border: 1.5px solid transparent;
   border-radius: 10px;
   padding: 4px 6px 5px;
-  display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px;
+  display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; flex: none;
   transition: background .12s, border-color .12s, transform .08s;
 }
 .phrase:hover { border-color: var(--stroke); background: var(--primary); }
@@ -183,16 +183,12 @@ a { color: var(--accent-deep); text-decoration: none; }
 .phrase .vi { font-size: 1.16rem; font-weight: 600; color: var(--ink); line-height: 1.3; white-space: nowrap; }
 .phrase .en {
   font-size: .8rem; color: var(--muted); line-height: 1.25;
-  width: 0; min-width: 100%;            /* không nới rộng ô; nghĩa Anh tự xuống dòng */
-  white-space: normal; overflow-wrap: anywhere;
-  max-height: 3.2em; overflow: hidden;
+  white-space: nowrap;                  /* nghĩa Anh nằm 1 dòng, ô tự nới rộng */
+  max-height: 1.6em; overflow: hidden;
   transition: max-height .18s ease, opacity .18s ease, margin .18s ease;
 }
 .hide-en .phrase .en { max-height: 0; opacity: 0; margin: 0; }
 /* khi tắt nghĩa: khung thu lại, các từ sát vào nhau */
-.hide-en .phrases { gap: 1px 2px; }
-.hide-en .phrase { padding: 4px 7px; }
-/* khi ẩn nghĩa: các từ xích lại gần như đọc câu bình thường */
 .hide-en .phrases { gap: 2px 5px; }
 .hide-en .phrase { padding: 3px 3px; }
 
