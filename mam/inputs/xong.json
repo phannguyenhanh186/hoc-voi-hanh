@@ -1,0 +1,44 @@
+{
+  "id": "xong",
+  "title": "Xong",
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"xong\" means \"finished / done\" — it indicates an action has been completed before moving on to the next one. It is placed right after the verb (or verb phrase); the next clause describes what happens after."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Ăn cơm xong em rửa chén.",
+          "en": "After finishing eating, I'll wash the dishes."
+        },
+        {
+          "type": "example",
+          "vi": "Về nhà xong anh làm gì?",
+          "en": "After getting home, what do you do?"
+        },
+        {
+          "type": "example",
+          "vi": "Chị lau nhà xong chị giặt đồ.",
+          "en": "After finishing cleaning the house, I'll do the laundry."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Action 1] + xong + [Action 2]  =  \"after finishing [Action 1], [Action 2]\""
+        }
+      ]
+    }
+  ]
+}
