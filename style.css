@@ -282,3 +282,16 @@ h1,
 
 /* các từ trong hội thoại + nghĩa: dùng Nunito (body) */
 .phrase .vi, .phrase .en, .sentence-translation { font-family: var(--font-body); }
+
+/* ---------- Thanh menu: nhóm phải + dropdown chọn giọng ---------- */
+.nav-right { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.voice-select {
+  font: inherit; font-family: var(--font-display); font-weight: 600; font-size: .85rem;
+  color: var(--ink); background: var(--surface);
+  border: 1.5px solid var(--stroke); border-radius: 999px;
+  padding: 5px 30px 5px 14px; cursor: pointer; line-height: 1.2;
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231B1B28' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat: no-repeat; background-position: right 11px center;
+}
+.voice-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
