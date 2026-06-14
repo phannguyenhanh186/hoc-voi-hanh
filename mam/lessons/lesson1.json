@@ -6,7 +6,7 @@
     "audio_tu": "Audio TUNG TU dung chung: audio/words/<voice>/<tu>.mp3 (ten = chinh tu do, co dau, .mp3). Tu lap lai dung chung 1 file."
   },
   "id": "lesson1",
-  "title": "Làm quen",
+  "title": "Làm Quen",
   "description": "Hội thoại: Vân và Thơ làm quen — tên, quốc tịch, nghề nghiệp.",
   "vocab": "lesson1",
   "inputs": [
