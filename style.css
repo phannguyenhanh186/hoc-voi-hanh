@@ -159,7 +159,7 @@ a { color: var(--accent-deep); text-decoration: none; }
 .play-sentence:active { transform: scale(.94); }
 .play-sentence:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-.phrases { display: flex; flex-wrap: wrap; gap: 4px 3px; }
+.phrases { display: flex; flex-wrap: wrap; gap: 4px 8px; }
 .phrases .linebreak { flex-basis: 100%; height: 0; }
 
 /* word chip — khung ẩn, hiện khi rê chuột */
@@ -168,7 +168,7 @@ a { color: var(--accent-deep); text-decoration: none; }
   background: transparent;
   border: 1.5px solid transparent;
   border-radius: 10px;
-  padding: 4px 6px 5px;
+  padding: 4px 3px 5px;
   display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px;
   transition: background .12s, border-color .12s, transform .08s;
 }
@@ -186,8 +186,8 @@ a { color: var(--accent-deep); text-decoration: none; }
 }
 .hide-en .phrase .en { max-height: 0; opacity: 0; margin: 0; }
 /* khi ẩn nghĩa: các từ xích lại gần như đọc câu bình thường */
-.hide-en .phrases { gap: 2px 2px; }
-.hide-en .phrase { padding: 3px 6px; }
+.hide-en .phrases { gap: 2px 5px; }
+.hide-en .phrase { padding: 3px 3px; }
 
 .sentence-translation { margin: 10px 0 2px 48px; font-size: .9rem; color: var(--muted); font-style: italic; }
 .hide-en .sentence-translation { display: none; }
