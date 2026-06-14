@@ -82,13 +82,36 @@
         shown.forEach(function (l) {
           const a = document.createElement('a');
           a.className = 'card';
-          a.href = 'lesson.html?id=' + encodeURIComponent(l.id);
-          a.innerHTML = '<div class="badge"></div><h3></h3><p></p><div class="go">Vào bài →</div>';
-          const badge = a.querySelector('.badge');
-          if (l.level && LEVELS[l.level]) { badge.textContent = LEVELS[l.level]; }
-          else { badge.remove(); }
-          a.querySelector('h3').textContent = l.title || l.id;
-          a.querySelector('p').textContent = l.description || '';
+          a.href = 'lesson.html?id=' + encodeURIComponent(l.id) + (l.level ? '&level=' + encodeURIComponent(l.level) : '');
+
+          const head = document.createElement('div');
+          head.className = 'card-head';
+          const h3 = document.createElement('h3');
+          h3.textContent = 'Bài ' + (l.num || '') + ': ' + (l.title || l.id);
+          if (l.titleEn) {
+            const en = document.createElement('span');
+            en.className = 'title-en';
+            en.textContent = ' (' + l.titleEn + ')';
+            h3.appendChild(en);
+          }
+          head.appendChild(h3);
+          if (l.level && LEVELS[l.level]) {
+            const badge = document.createElement('span');
+            badge.className = 'badge';
+            badge.textContent = 'lớp ' + LEVELS[l.level];
+            head.appendChild(badge);
+          }
+          a.appendChild(head);
+
+          const p = document.createElement('p');
+          p.textContent = l.description || '';
+          a.appendChild(p);
+
+          const go = document.createElement('div');
+          go.className = 'go';
+          go.textContent = 'Vào học →';
+          a.appendChild(go);
+
           cards.appendChild(a);
         });
       } catch (err) {
