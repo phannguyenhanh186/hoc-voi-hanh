@@ -1,0 +1,21 @@
+{
+  "id": "vay_ha",
+  "title": "Vậy hả",
+  "terms": ["vậy hả"],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        { "type": "text", "text": "\"vậy hả\" means \"really? / is that so?\" — used to express surprise, mild disbelief, or to acknowledge new information casually. It is placed at the end of a sentence, often as a short reaction on its own." },
+        { "type": "text", "text": "You can add the second person's pronoun after it to soften the reaction and keep it polite / respectful toward the listener." }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        { "type": "example", "context": "to an older male", "vi": "Anh là người Mỹ. – Vậy hả anh?", "en": "I'm American. – Oh really?" },
+        { "type": "example", "context": "to an older female", "vi": "Hôm nay cô ấy không đi làm. – Vậy hả chị?", "en": "She's not going to work today. – Really?" }
+      ]
+    }
+  ]
+}
