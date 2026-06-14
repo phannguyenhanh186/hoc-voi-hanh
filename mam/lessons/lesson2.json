@@ -15,17 +15,17 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/lesson2/{voice}/word_01.m4a"
+          "audio": "audio/lesson2/{voice}/word_01.mp3"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_02.m4a"
+          "audio": "audio/lesson2/{voice}/word_02.mp3"
         },
         {
           "vi": "Nam",
           "en": "Nam",
-          "audio": "audio/lesson2/{voice}/word_03.m4a"
+          "audio": "audio/lesson2/{voice}/word_03.mp3"
         },
         {
           "br": true
@@ -33,17 +33,17 @@
         {
           "vi": "Anh",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_04.m4a"
+          "audio": "audio/lesson2/{voice}/word_04.mp3"
         },
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/lesson2/{voice}/word_05.m4a"
+          "audio": "audio/lesson2/{voice}/word_05.mp3"
         },
         {
           "vi": "không",
           "en": "(or not)",
-          "audio": "audio/lesson2/{voice}/word_06.m4a"
+          "audio": "audio/lesson2/{voice}/word_06.mp3"
         }
       ]
     },
@@ -54,12 +54,12 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/lesson2/{voice}/word_07.m4a"
+          "audio": "audio/lesson2/{voice}/word_07.mp3"
         },
         {
           "vi": "Hương",
           "en": "Hương",
-          "audio": "audio/lesson2/{voice}/word_08.m4a"
+          "audio": "audio/lesson2/{voice}/word_08.mp3"
         },
         {
           "br": true
@@ -67,12 +67,12 @@
         {
           "vi": "Anh",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_09.m4a"
+          "audio": "audio/lesson2/{voice}/word_09.mp3"
         },
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/lesson2/{voice}/word_10.m4a"
+          "audio": "audio/lesson2/{voice}/word_10.mp3"
         },
         {
           "br": true
@@ -80,12 +80,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/{voice}/word_11.m4a"
+          "audio": "audio/lesson2/{voice}/word_11.mp3"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_12.m4a"
+          "audio": "audio/lesson2/{voice}/word_12.mp3"
         }
       ]
     },
@@ -96,12 +96,12 @@
         {
           "vi": "Em",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_13.m4a"
+          "audio": "audio/lesson2/{voice}/word_13.mp3"
         },
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/lesson2/{voice}/word_14.m4a"
+          "audio": "audio/lesson2/{voice}/word_14.mp3"
         },
         {
           "br": true
@@ -109,27 +109,27 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/{voice}/word_15.m4a"
+          "audio": "audio/lesson2/{voice}/word_15.mp3"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/{voice}/word_16.m4a"
+          "audio": "audio/lesson2/{voice}/word_16.mp3"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_17.m4a"
+          "audio": "audio/lesson2/{voice}/word_17.mp3"
         },
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/lesson2/{voice}/word_18.m4a"
+          "audio": "audio/lesson2/{voice}/word_18.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/{voice}/word_19.m4a"
+          "audio": "audio/lesson2/{voice}/word_19.mp3"
         }
       ]
     },
@@ -140,27 +140,27 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/{voice}/word_20.m4a"
+          "audio": "audio/lesson2/{voice}/word_20.mp3"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/{voice}/word_21.m4a"
+          "audio": "audio/lesson2/{voice}/word_21.mp3"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_22.m4a"
+          "audio": "audio/lesson2/{voice}/word_22.mp3"
         },
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/lesson2/{voice}/word_23.m4a"
+          "audio": "audio/lesson2/{voice}/word_23.mp3"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/lesson2/{voice}/word_24.m4a"
+          "audio": "audio/lesson2/{voice}/word_24.mp3"
         },
         {
           "br": true
@@ -168,12 +168,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/{voice}/word_25.m4a"
+          "audio": "audio/lesson2/{voice}/word_25.mp3"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_26.m4a"
+          "audio": "audio/lesson2/{voice}/word_26.mp3"
         }
       ]
     },
@@ -184,42 +184,42 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/{voice}/word_27.m4a"
+          "audio": "audio/lesson2/{voice}/word_27.mp3"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/{voice}/word_28.m4a"
+          "audio": "audio/lesson2/{voice}/word_28.mp3"
         },
         {
           "vi": "em",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_29.m4a"
+          "audio": "audio/lesson2/{voice}/word_29.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_30.m4a"
+          "audio": "audio/lesson2/{voice}/word_30.mp3"
         },
         {
           "vi": "bún bò",
           "en": "beef noodles",
-          "audio": "audio/lesson2/{voice}/word_31.m4a"
+          "audio": "audio/lesson2/{voice}/word_31.mp3"
         },
         {
           "vi": "rồi",
           "en": "then",
-          "audio": "audio/lesson2/{voice}/word_32.m4a"
+          "audio": "audio/lesson2/{voice}/word_32.mp3"
         },
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/lesson2/{voice}/word_33.m4a"
+          "audio": "audio/lesson2/{voice}/word_33.mp3"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/lesson2/{voice}/word_34.m4a"
+          "audio": "audio/lesson2/{voice}/word_34.mp3"
         },
         {
           "br": true
@@ -227,27 +227,27 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/{voice}/word_35.m4a"
+          "audio": "audio/lesson2/{voice}/word_35.mp3"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/{voice}/word_36.m4a"
+          "audio": "audio/lesson2/{voice}/word_36.mp3"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_37.m4a"
+          "audio": "audio/lesson2/{voice}/word_37.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_38.m4a"
+          "audio": "audio/lesson2/{voice}/word_38.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/{voice}/word_39.m4a"
+          "audio": "audio/lesson2/{voice}/word_39.mp3"
         }
       ]
     },
@@ -258,27 +258,27 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/{voice}/word_40.m4a"
+          "audio": "audio/lesson2/{voice}/word_40.mp3"
         },
         {
           "vi": "nay",
           "en": "this",
-          "audio": "audio/lesson2/{voice}/word_41.m4a"
+          "audio": "audio/lesson2/{voice}/word_41.mp3"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_42.m4a"
+          "audio": "audio/lesson2/{voice}/word_42.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_43.m4a"
+          "audio": "audio/lesson2/{voice}/word_43.mp3"
         },
         {
           "vi": "bánh xèo",
           "en": "savory pancake",
-          "audio": "audio/lesson2/{voice}/word_44.m4a"
+          "audio": "audio/lesson2/{voice}/word_44.mp3"
         },
         {
           "br": true
@@ -286,32 +286,32 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/lesson2/{voice}/word_45.m4a"
+          "audio": "audio/lesson2/{voice}/word_45.mp3"
         },
         {
           "vi": "qua",
           "en": "past",
-          "audio": "audio/lesson2/{voice}/word_46.m4a"
+          "audio": "audio/lesson2/{voice}/word_46.mp3"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_47.m4a"
+          "audio": "audio/lesson2/{voice}/word_47.mp3"
         },
         {
           "vi": "cũng",
           "en": "also",
-          "audio": "audio/lesson2/{voice}/word_48.m4a"
+          "audio": "audio/lesson2/{voice}/word_48.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_49.m4a"
+          "audio": "audio/lesson2/{voice}/word_49.mp3"
         },
         {
           "vi": "bún bò",
           "en": "beef noodles",
-          "audio": "audio/lesson2/{voice}/word_50.m4a"
+          "audio": "audio/lesson2/{voice}/word_50.mp3"
         }
       ]
     },
@@ -322,17 +322,17 @@
         {
           "vi": "Vậy",
           "en": "so",
-          "audio": "audio/lesson2/{voice}/word_51.m4a"
+          "audio": "audio/lesson2/{voice}/word_51.mp3"
         },
         {
           "vi": "hả",
           "en": "really?",
-          "audio": "audio/lesson2/{voice}/word_52.m4a"
+          "audio": "audio/lesson2/{voice}/word_52.mp3"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_53.m4a"
+          "audio": "audio/lesson2/{voice}/word_53.mp3"
         },
         {
           "br": true
@@ -340,32 +340,32 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/{voice}/word_54.m4a"
+          "audio": "audio/lesson2/{voice}/word_54.mp3"
         },
         {
           "vi": "tối",
           "en": "evening",
-          "audio": "audio/lesson2/{voice}/word_55.m4a"
+          "audio": "audio/lesson2/{voice}/word_55.mp3"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_56.m4a"
+          "audio": "audio/lesson2/{voice}/word_56.mp3"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/{voice}/word_57.m4a"
+          "audio": "audio/lesson2/{voice}/word_57.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_58.m4a"
+          "audio": "audio/lesson2/{voice}/word_58.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/{voice}/word_59.m4a"
+          "audio": "audio/lesson2/{voice}/word_59.mp3"
         }
       ]
     },
@@ -376,47 +376,47 @@
         {
           "vi": "Tối",
           "en": "evening",
-          "audio": "audio/lesson2/{voice}/word_60.m4a"
+          "audio": "audio/lesson2/{voice}/word_60.mp3"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_61.m4a"
+          "audio": "audio/lesson2/{voice}/word_61.mp3"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/{voice}/word_62.m4a"
+          "audio": "audio/lesson2/{voice}/word_62.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_63.m4a"
+          "audio": "audio/lesson2/{voice}/word_63.mp3"
         },
         {
           "vi": "cơm",
           "en": "rice",
-          "audio": "audio/lesson2/{voice}/word_64.m4a"
+          "audio": "audio/lesson2/{voice}/word_64.mp3"
         },
         {
           "vi": "canh",
           "en": "soup",
-          "audio": "audio/lesson2/{voice}/word_65.m4a"
+          "audio": "audio/lesson2/{voice}/word_65.mp3"
         },
         {
           "vi": "rau",
           "en": "vegetables",
-          "audio": "audio/lesson2/{voice}/word_66.m4a"
+          "audio": "audio/lesson2/{voice}/word_66.mp3"
         },
         {
           "vi": "với",
           "en": "with",
-          "audio": "audio/lesson2/{voice}/word_67.m4a"
+          "audio": "audio/lesson2/{voice}/word_67.mp3"
         },
         {
           "vi": "thịt",
           "en": "meat",
-          "audio": "audio/lesson2/{voice}/word_68.m4a"
+          "audio": "audio/lesson2/{voice}/word_68.mp3"
         },
         {
           "br": true
@@ -424,12 +424,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/{voice}/word_69.m4a"
+          "audio": "audio/lesson2/{voice}/word_69.mp3"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_70.m4a"
+          "audio": "audio/lesson2/{voice}/word_70.mp3"
         }
       ]
     },
@@ -440,42 +440,42 @@
         {
           "vi": "Em",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_71.m4a"
+          "audio": "audio/lesson2/{voice}/word_71.mp3"
         },
         {
           "vi": "cũng",
           "en": "also",
-          "audio": "audio/lesson2/{voice}/word_72.m4a"
+          "audio": "audio/lesson2/{voice}/word_72.mp3"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/{voice}/word_73.m4a"
+          "audio": "audio/lesson2/{voice}/word_73.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_74.m4a"
+          "audio": "audio/lesson2/{voice}/word_74.mp3"
         },
         {
           "vi": "cơm",
           "en": "rice",
-          "audio": "audio/lesson2/{voice}/word_75.m4a"
+          "audio": "audio/lesson2/{voice}/word_75.mp3"
         },
         {
           "vi": "rau",
           "en": "vegetables",
-          "audio": "audio/lesson2/{voice}/word_76.m4a"
+          "audio": "audio/lesson2/{voice}/word_76.mp3"
         },
         {
           "vi": "với",
           "en": "with",
-          "audio": "audio/lesson2/{voice}/word_77.m4a"
+          "audio": "audio/lesson2/{voice}/word_77.mp3"
         },
         {
           "vi": "thịt",
           "en": "meat",
-          "audio": "audio/lesson2/{voice}/word_78.m4a"
+          "audio": "audio/lesson2/{voice}/word_78.mp3"
         },
         {
           "br": true
@@ -483,32 +483,32 @@
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_79.m4a"
+          "audio": "audio/lesson2/{voice}/word_79.mp3"
         },
         {
           "vi": "xong",
           "en": "finish",
-          "audio": "audio/lesson2/{voice}/word_80.m4a"
+          "audio": "audio/lesson2/{voice}/word_80.mp3"
         },
         {
           "vi": "anh",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_81.m4a"
+          "audio": "audio/lesson2/{voice}/word_81.mp3"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/{voice}/word_82.m4a"
+          "audio": "audio/lesson2/{voice}/word_82.mp3"
         },
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/lesson2/{voice}/word_83.m4a"
+          "audio": "audio/lesson2/{voice}/word_83.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson2/{voice}/word_84.m4a"
+          "audio": "audio/lesson2/{voice}/word_84.mp3"
         }
       ]
     },
@@ -519,47 +519,47 @@
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_85.m4a"
+          "audio": "audio/lesson2/{voice}/word_85.mp3"
         },
         {
           "vi": "xong",
           "en": "finish",
-          "audio": "audio/lesson2/{voice}/word_86.m4a"
+          "audio": "audio/lesson2/{voice}/word_86.mp3"
         },
         {
           "vi": "anh",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_87.m4a"
+          "audio": "audio/lesson2/{voice}/word_87.mp3"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/{voice}/word_88.m4a"
+          "audio": "audio/lesson2/{voice}/word_88.mp3"
         },
         {
           "vi": "rửa",
           "en": "wash",
-          "audio": "audio/lesson2/{voice}/word_89.m4a"
+          "audio": "audio/lesson2/{voice}/word_89.mp3"
         },
         {
           "vi": "chén",
           "en": "dishes",
-          "audio": "audio/lesson2/{voice}/word_90.m4a"
+          "audio": "audio/lesson2/{voice}/word_90.mp3"
         },
         {
           "vi": "và",
           "en": "and",
-          "audio": "audio/lesson2/{voice}/word_91.m4a"
+          "audio": "audio/lesson2/{voice}/word_91.mp3"
         },
         {
           "vi": "xem",
           "en": "watch",
-          "audio": "audio/lesson2/{voice}/word_92.m4a"
+          "audio": "audio/lesson2/{voice}/word_92.mp3"
         },
         {
           "vi": "phim",
           "en": "movie",
-          "audio": "audio/lesson2/{voice}/word_93.m4a"
+          "audio": "audio/lesson2/{voice}/word_93.mp3"
         },
         {
           "br": true
@@ -567,12 +567,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson2/{voice}/word_94.m4a"
+          "audio": "audio/lesson2/{voice}/word_94.mp3"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson2/{voice}/word_95.m4a"
+          "audio": "audio/lesson2/{voice}/word_95.mp3"
         }
       ]
     },
@@ -583,22 +583,22 @@
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/lesson2/{voice}/word_96.m4a"
+          "audio": "audio/lesson2/{voice}/word_96.mp3"
         },
         {
           "vi": "xong",
           "en": "finish",
-          "audio": "audio/lesson2/{voice}/word_97.m4a"
+          "audio": "audio/lesson2/{voice}/word_97.mp3"
         },
         {
           "vi": "em",
           "en": "I",
-          "audio": "audio/lesson2/{voice}/word_98.m4a"
+          "audio": "audio/lesson2/{voice}/word_98.mp3"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/lesson2/{voice}/word_99.m4a"
+          "audio": "audio/lesson2/{voice}/word_99.mp3"
         },
         {
           "vi": "học",
