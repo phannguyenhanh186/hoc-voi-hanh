@@ -1,0 +1,14 @@
+[
+  {
+    "id": "lesson1",
+    "title": "Làm quen",
+    "description": "Hội thoại: Vân và Thơ làm quen — tên, quốc tịch, nghề nghiệp.",
+    "level": "mam"
+  },
+  {
+    "id": "lesson2",
+    "title": "Một ngày thường",
+    "description": "Nam và Hương hỏi thăm nhau và kể về bữa ăn, công việc, thói quen trong ngày.",
+    "level": "mam"
+  }
+]
