@@ -102,6 +102,7 @@
         // các chip cụm từ
         const phrases = el('div', 'phrases');
         (s.phrases || []).forEach(function (p) {
+          if (p.br) { phrases.appendChild(el('span', 'linebreak')); return; }
           const chip = el('button', 'phrase');
           chip.setAttribute('aria-label', p.vi + (p.en ? ' — ' + p.en : ''));
           chip.appendChild(el('span', 'vi', p.vi));
