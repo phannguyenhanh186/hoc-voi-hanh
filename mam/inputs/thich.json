@@ -1,0 +1,98 @@
+{
+  "id": "thich",
+  "title": "thích / không thích",
+  "terms": [
+    "thích"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Used to express preference for activities, food, drinks, etc."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Subject] + thích + [activity / food / drink]"
+        },
+        {
+          "type": "text",
+          "text": "[Subject] + không thích + [activity / food / drink]"
+        },
+        {
+          "type": "text",
+          "text": "[Subject] + rất thích + [activity / food / drink]  —  really like"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Mình thích nghe nhạc.",
+          "en": "I like listening to music."
+        },
+        {
+          "type": "example",
+          "vi": "Mình rất thích phở.",
+          "en": "I really like phở."
+        },
+        {
+          "type": "example",
+          "vi": "Mình không thích cà phê đen.",
+          "en": "I don't like black coffee."
+        },
+        {
+          "type": "example",
+          "vi": "Bạn thích uống gì?",
+          "en": "What do you like to drink?"
+        },
+        {
+          "type": "example",
+          "vi": "Bạn có thích nấu ăn không?",
+          "en": "Do you like cooking?"
+        }
+      ]
+    },
+    {
+      "label": "With food & drinks",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "For food/drinks specifically, you can add \"ăn\" or \"uống\" before the noun for clarity:"
+        },
+        {
+          "type": "example",
+          "vi": "Mình thích ăn bánh xèo.",
+          "en": "I like eating crispy pancakes."
+        },
+        {
+          "type": "example",
+          "vi": "Mình không thích uống nước ngọt.",
+          "en": "I don't like drinking soft drinks."
+        }
+      ]
+    },
+    {
+      "label": "Yes/no question",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To ask a yes/no question, add \"có\" before \"thích\" and \"không\" at the end:"
+        },
+        {
+          "type": "example",
+          "vi": "Bạn có thích đi du lịch không?",
+          "en": "Do you like traveling?"
+        }
+      ]
+    }
+  ]
+}
