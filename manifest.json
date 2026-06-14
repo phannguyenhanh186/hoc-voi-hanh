@@ -10,5 +10,11 @@
     "title": "Một ngày thường",
     "description": "Nam và Hương hỏi thăm nhau và kể về bữa ăn, công việc, thói quen trong ngày.",
     "level": "mam"
+  },
+  {
+    "id": "lesson3",
+    "title": "Sở thích & thói quen",
+    "description": "A và B trò chuyện về cuối tuần, món ăn, thức uống yêu thích và thói quen buổi tối.",
+    "level": "mam"
   }
 ]
