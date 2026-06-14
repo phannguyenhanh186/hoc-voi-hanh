@@ -1,47 +1,87 @@
-# File audio can cho lesson1 (dat vao thu muc nay)
+# File audio can cho lesson1 (.m4a) — dat vao thu muc nay
 
-full.mp3  ->  doc TOAN BO bai
+full.m4a  ->  doc TOAN BO bai
 
-# Cau 1: Chào bạn
-sentence_01.mp3  ->  ca cau
-word_01.mp3  ->  "Chào"
-word_02.mp3  ->  "bạn"
+# Cau 1: Chào em Em tên là gì
+sentence_01.m4a  ->  ca cau
+word_01.m4a  ->  "Chào"
+word_02.m4a  ->  "em"
+word_03.m4a  ->  "Em"
+word_04.m4a  ->  "tên"
+word_05.m4a  ->  "là"
+word_06.m4a  ->  "gì"
 
-# Cau 2: Tên mình là Mai
-sentence_02.mp3  ->  ca cau
-word_03.mp3  ->  "Tên"
-word_04.mp3  ->  "mình"
-word_05.mp3  ->  "là"
-word_06.mp3  ->  "Mai"
+# Cau 2: Chào chị Em tên là Vân Còn chị
+sentence_02.m4a  ->  ca cau
+word_07.m4a  ->  "Chào"
+word_08.m4a  ->  "chị"
+word_09.m4a  ->  "Em"
+word_10.m4a  ->  "tên"
+word_11.m4a  ->  "là"
+word_12.m4a  ->  "Vân"
+word_13.m4a  ->  "Còn"
+word_14.m4a  ->  "chị"
 
-# Cau 3: Mình là người Việt Nam và mình là sinh viên
-sentence_03.mp3  ->  ca cau
-word_07.mp3  ->  "Mình"
-word_08.mp3  ->  "là"
-word_09.mp3  ->  "người"
-word_10.mp3  ->  "Việt Nam"
-word_11.mp3  ->  "và"
-word_12.mp3  ->  "mình"
-word_13.mp3  ->  "là"
-word_14.mp3  ->  "sinh viên"
+# Cau 3: Chị tên là Thơ Em là người Việt đúng không
+sentence_03.m4a  ->  ca cau
+word_15.m4a  ->  "Chị"
+word_16.m4a  ->  "tên"
+word_17.m4a  ->  "là"
+word_18.m4a  ->  "Thơ"
+word_19.m4a  ->  "Em"
+word_20.m4a  ->  "là"
+word_21.m4a  ->  "người"
+word_22.m4a  ->  "Việt"
+word_23.m4a  ->  "đúng"
+word_24.m4a  ->  "không"
 
-# Cau 4: Mình học ở trường đại học Sài Gòn
-sentence_04.mp3  ->  ca cau
-word_15.mp3  ->  "Mình"
-word_16.mp3  ->  "học"
-word_17.mp3  ->  "ở"
-word_18.mp3  ->  "trường"
-word_19.mp3  ->  "đại học"
-word_20.mp3  ->  "Sài Gòn"
+# Cau 4: Không Em là người Trung Còn chị Chị là người Việt đúng không
+sentence_04.m4a  ->  ca cau
+word_25.m4a  ->  "Không"
+word_26.m4a  ->  "Em"
+word_27.m4a  ->  "là"
+word_28.m4a  ->  "người"
+word_29.m4a  ->  "Trung"
+word_30.m4a  ->  "Còn"
+word_31.m4a  ->  "chị"
+word_32.m4a  ->  "Chị"
+word_33.m4a  ->  "là"
+word_34.m4a  ->  "người"
+word_35.m4a  ->  "Việt"
+word_36.m4a  ->  "đúng"
+word_37.m4a  ->  "không"
 
-# Cau 5: Mình thích ăn phở và đọc sách khi rảnh
-sentence_05.mp3  ->  ca cau
-word_21.mp3  ->  "Mình"
-word_22.mp3  ->  "thích"
-word_23.mp3  ->  "ăn"
-word_24.mp3  ->  "phở"
-word_25.mp3  ->  "và"
-word_26.mp3  ->  "đọc"
-word_27.mp3  ->  "sách"
-word_28.mp3  ->  "khi"
-word_29.mp3  ->  "rảnh"
+# Cau 5: Đúng Chị là người Việt Em làm nghề gì
+sentence_05.m4a  ->  ca cau
+word_38.m4a  ->  "Đúng"
+word_39.m4a  ->  "Chị"
+word_40.m4a  ->  "là"
+word_41.m4a  ->  "người"
+word_42.m4a  ->  "Việt"
+word_43.m4a  ->  "Em"
+word_44.m4a  ->  "làm"
+word_45.m4a  ->  "nghề"
+word_46.m4a  ->  "gì"
+
+# Cau 6: Em làm phục vụ ở quán cà phê Còn chị
+sentence_06.m4a  ->  ca cau
+word_47.m4a  ->  "Em"
+word_48.m4a  ->  "làm"
+word_49.m4a  ->  "phục vụ"
+word_50.m4a  ->  "ở"
+word_51.m4a  ->  "quán"
+word_52.m4a  ->  "cà phê"
+word_53.m4a  ->  "Còn"
+word_54.m4a  ->  "chị"
+
+# Cau 7: Chị làm giáo viên Chị làm ở trường đại học Sài Gòn
+sentence_07.m4a  ->  ca cau
+word_55.m4a  ->  "Chị"
+word_56.m4a  ->  "làm"
+word_57.m4a  ->  "giáo viên"
+word_58.m4a  ->  "Chị"
+word_59.m4a  ->  "làm"
+word_60.m4a  ->  "ở"
+word_61.m4a  ->  "trường"
+word_62.m4a  ->  "đại học"
+word_63.m4a  ->  "Sài Gòn"
