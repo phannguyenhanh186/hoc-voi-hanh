@@ -246,9 +246,9 @@
       "audio": "audio/lesson1/{voice}/sentence_05.m4a",
       "phrases": [
         {
-          "vi": "Đúng",
-          "en": "Yes / Correct",
-          "audio": "audio/words/{voice}/dung.mp3"
+          "vi": "Đúng rồi",
+          "en": "That's right",
+          "audio": "audio/words/{voice}/dung_roi.mp3"
         },
         {
           "br": true
