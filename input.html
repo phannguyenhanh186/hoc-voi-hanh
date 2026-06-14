@@ -69,9 +69,24 @@
       return td;
     }
 
+    // bôi đậm từ đang được định nghĩa
+    var TERMS = [];
+    function esc(s) { return s.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
+    function boldEl(tag, cls, text) {
+      var n = el(tag, cls);
+      var html = esc(text);
+      TERMS.forEach(function (t) {
+        if (!t) return;
+        var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        html = html.replace(re, '<strong>$1</strong>');
+      });
+      n.innerHTML = html;
+      return n;
+    }
+
     function renderBlock(b) {
       if (b.type === 'text') {
-        return el('p', null, b.text);
+        return boldEl('p', null, b.text);
       }
       if (b.type === 'table') {
         const t = el('table', 'tbl');
@@ -90,7 +105,7 @@
       if (b.type === 'example') {
         const d = el('div', 'example');
         if (b.context) d.appendChild(el('div', 'ex-context', b.context));
-        if (b.vi) d.appendChild(el('div', 'ex-vi', b.vi));
+        if (b.vi) d.appendChild(boldEl('div', 'ex-vi', b.vi));
         if (b.en) d.appendChild(el('div', 'ex-en', b.en));
         return d;
       }
@@ -98,6 +113,7 @@
     }
 
     function render(data) {
+      TERMS = data.terms || [];
       document.title = (data.title || 'Core inputs') + ' — hoc voi hanh';
       $title.textContent = data.title || 'Core inputs';
       $sections.innerHTML = '';
