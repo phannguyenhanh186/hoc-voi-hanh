@@ -139,6 +139,7 @@
       }
       var ls = document.getElementById("level-select");
       if (ls) {
+        ls.value = new URLSearchParams(location.search).get("level") || "";
         ls.addEventListener("change", function () {
           location.href = ls.value ? ("index.html?level=" + encodeURIComponent(ls.value)) : "index.html";
         });
