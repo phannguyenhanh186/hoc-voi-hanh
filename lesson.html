@@ -105,7 +105,7 @@
         a.className = 'btn-input';
         const lvl = inp.level || lessonLevel;
         a.href = 'input.html?id=' + encodeURIComponent(inp.id) + (lvl ? '&level=' + encodeURIComponent(lvl) : '');
-        a.textContent = 'grammar point';
+        a.textContent = inp.title || 'grammar point';
         nav.appendChild(a);
       });
       if (lesson.vocab) {
