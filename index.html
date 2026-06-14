@@ -15,11 +15,17 @@
     <div class="wrap">
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
-        <div class="levels" id="levels">
-          <a class="level" data-level="" href="index.html">all levels</a>
-          <a class="level" data-level="mam" href="index.html?level=mam">mầm</a>
-          <a class="level" data-level="choi" href="index.html?level=choi">chồi</a>
-          <a class="level" data-level="la" href="index.html?level=la">lá</a>
+        <div class="nav-right">
+          <div class="levels" id="levels">
+            <a class="level" data-level="" href="index.html">all levels</a>
+            <a class="level" data-level="mam" href="index.html?level=mam">mầm</a>
+            <a class="level" data-level="choi" href="index.html?level=choi">chồi</a>
+            <a class="level" data-level="la" href="index.html?level=la">lá</a>
+          </div>
+          <select class="voice-select" id="voice-select" aria-label="Chọn giọng">
+            <option value="nam">Miền Nam</option>
+            <option value="bac">Miền Bắc</option>
+          </select>
         </div>
       </nav>
     </div>
@@ -84,6 +90,19 @@
       } catch (err) {
         console.error(err);
         cards.innerHTML = '<p class="note">Không tải được danh sách bài học. Nếu đang mở bằng cách nháy đúp file, hãy chạy qua web server (xem README) hoặc deploy lên GitHub Pages.</p>';
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      var v = "nam";
+      try { v = localStorage.getItem("voice") || "nam"; } catch (e) {}
+      var sel = document.getElementById("voice-select");
+      if (sel) {
+        sel.value = v;
+        sel.addEventListener("change", function () {
+          try { localStorage.setItem("voice", sel.value); } catch (e) {}
+        });
       }
     })();
   </script>
