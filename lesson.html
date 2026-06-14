@@ -97,7 +97,7 @@
       document.title = (lesson.title || lessonId) + ' — hoc voi hanh';
       $title.textContent = lesson.title || lessonId;
 
-      // nút điều hướng sang trang core inputs
+      // nút điều hướng: grammar point + vocabulary
       const nav = document.getElementById('inputs-nav');
       nav.innerHTML = '';
       (lesson.inputs || []).forEach(function (inp) {
@@ -105,9 +105,16 @@
         a.className = 'btn-input';
         const lvl = inp.level || lessonLevel;
         a.href = 'input.html?id=' + encodeURIComponent(inp.id) + (lvl ? '&level=' + encodeURIComponent(lvl) : '');
-        a.textContent = 'new input →';
+        a.textContent = 'grammar point';
         nav.appendChild(a);
       });
+      if (lesson.vocab) {
+        const a = document.createElement('a');
+        a.className = 'btn-input';
+        a.href = 'vocab.html?id=' + encodeURIComponent(lesson.vocab) + (lessonLevel ? '&level=' + encodeURIComponent(lessonLevel) : '');
+        a.textContent = 'vocabulary';
+        nav.appendChild(a);
+      }
 
       if (lesson.fullAudio) {
         $full.src = resolveAudio(lesson.fullAudio);
@@ -175,6 +182,7 @@
     // dropdown cấp độ -> về trang chủ đã lọc
     const $level = document.getElementById('level-select');
     if ($level) {
+      if (lessonLevel) $level.value = lessonLevel;
       $level.addEventListener('change', function () {
         location.href = $level.value ? ('index.html?level=' + encodeURIComponent($level.value)) : 'index.html';
       });
