@@ -180,33 +180,32 @@ a { color: var(--accent-deep); text-decoration: none; }
 .phrases { display: flex; flex-wrap: wrap; gap: 4px 6px; }
 .phrases .linebreak { flex-basis: 100%; height: 0; }
 
-/* word chip — khung ẩn, hiện khi rê chuột */
+/* word chip — khung CHỈ bọc chữ Việt; nghĩa Anh nằm ngoài (bên dưới) */
 .phrase {
   font: inherit; cursor: pointer; text-align: left;
-  background: transparent;
-  border: 1.5px solid transparent;
-  border-radius: 10px;
-  padding: 4px 6px 5px;
+  background: transparent; border: none; padding: 0;
   display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; flex: none;
-  transition: background .12s, border-color .12s, transform .08s;
 }
-.phrase:hover { border-color: var(--stroke); background: var(--primary); }
 .phrase:active { transform: scale(.97); }
 .phrase:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.phrase.playing { border-color: var(--stroke); background: var(--primary); }
-/* hover/đang phát: ẩn nghĩa Anh của TỪ ĐÓ -> khung thu lại ôm sát chữ Việt */
-.phrase:hover .en, .phrase.playing .en { max-height: 0; opacity: 0; margin: 0; }
-.phrase .vi { font-size: 1.16rem; font-weight: 600; color: var(--ink); line-height: 1.3; white-space: nowrap; }
+.phrase .vi {
+  font-size: 1.16rem; font-weight: 600; color: var(--ink); line-height: 1.3; white-space: nowrap;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  padding: 3px 8px;
+  transition: background .12s, border-color .12s;
+}
+/* khung tím viền đen chỉ ôm chữ Việt khi rê chuột / đang phát */
+.phrase:hover .vi, .phrase.playing .vi { border-color: var(--stroke); background: var(--primary); }
 .phrase .en {
   font-size: .8rem; color: var(--muted); line-height: 1.25;
-  white-space: nowrap;                  /* nghĩa Anh nằm 1 dòng, ô tự nới rộng */
+  white-space: nowrap; padding: 0 8px;
   max-height: 1.6em; overflow: hidden;
   transition: max-height .18s ease, opacity .18s ease, margin .18s ease;
 }
 .hide-en .phrase .en { max-height: 0; opacity: 0; margin: 0; }
-/* khi tắt nghĩa: khung thu lại, các từ sát vào nhau */
+/* khi tắt nghĩa: các từ xích sát vào nhau (khung chữ Việt giữ nguyên) */
 .hide-en .phrases { gap: 2px 5px; }
-.hide-en .phrase { padding: 3px 3px; }
 
 .sentence-translation { margin: 10px 0 2px 48px; font-size: .9rem; color: var(--muted); font-style: italic; }
 .hide-en .sentence-translation { display: none; }
