@@ -1,6 +1,10 @@
 {
   "id": "khoe_khong",
   "title": "Khoẻ không?",
+  "terms": [
+    "khoẻ",
+    "không"
+  ],
   "sections": [
     {
       "label": "Explanation",
