@@ -1,0 +1,52 @@
+{
+  "id": "compare_age",
+  "title": "Comparing ages",
+  "terms": [
+    "lớn hơn",
+    "nhỏ hơn"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A > B (older): [A] lớn hơn [B].  —  A is older than B."
+        },
+        {
+          "type": "text",
+          "text": "A < B (younger): [A] nhỏ hơn [B].  —  A is younger than B."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Anh lớn hơn em.",
+          "en": "I (anh) am older than you (em)."
+        },
+        {
+          "type": "example",
+          "vi": "Em nhỏ hơn anh 3 tuổi.",
+          "en": "I'm 3 years younger than you (by 3 years)."
+        },
+        {
+          "type": "example",
+          "vi": "Chị ấy lớn hơn mình.",
+          "en": "She is older than me."
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To add a specific difference: [A] + lớn hơn / nhỏ hơn + [B] + [x] tuổi  —  \"A is [x] years older / younger than B.\""
+        }
+      ]
+    }
+  ]
+}

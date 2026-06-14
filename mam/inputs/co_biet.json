@@ -1,0 +1,38 @@
+{
+  "id": "co_biet",
+  "title": "Có biết...?",
+  "terms": [
+    "có biết"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Anh/Chị/Em] có biết... [không]?"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Anh có biết hôm nay là ngày bao nhiêu không?",
+          "en": "Do you (anh) know what today's date is?"
+        },
+        {
+          "type": "example",
+          "vi": "Chị có biết quán đó không?",
+          "en": "Do you (chị) know that restaurant?"
+        },
+        {
+          "type": "example",
+          "vi": "Em có biết chị ấy không?",
+          "en": "Do you (em) know her?"
+        }
+      ]
+    }
+  ]
+}

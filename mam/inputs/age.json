@@ -1,0 +1,49 @@
+{
+  "id": "age",
+  "title": "Asking and saying age",
+  "terms": [
+    "bao nhiêu",
+    "tuổi"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Question: [Pronoun] bao nhiêu tuổi?  —  How old are you / is [pronoun]?"
+        },
+        {
+          "type": "text",
+          "text": "Answer: [Pronoun] [x] tuổi.  —  [Pronoun] is [x] years old."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Em bao nhiêu tuổi?",
+          "en": "How old are you (em)?"
+        },
+        {
+          "type": "example",
+          "vi": "Em 25 tuổi.",
+          "en": "I'm 25 years old.",
+          "context": "→"
+        },
+        {
+          "type": "example",
+          "vi": "Anh ấy bao nhiêu tuổi?",
+          "en": "How old is he?"
+        },
+        {
+          "type": "example",
+          "vi": "Anh ấy 30 tuổi.",
+          "en": "He is 30 years old."
+        }
+      ]
+    }
+  ]
+}

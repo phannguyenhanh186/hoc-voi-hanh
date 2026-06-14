@@ -1,0 +1,55 @@
+{
+  "id": "dates",
+  "title": "Asking and telling dates",
+  "terms": [
+    "thứ",
+    "ngày",
+    "tháng",
+    "năm"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Thứ [x], ngày [x] tháng [x] năm [x]"
+        },
+        {
+          "type": "text",
+          "text": "\"Thứ\" = day of the week (Thứ Hai = Monday, Thứ Ba = Tuesday, … Thứ Bảy = Saturday, Chủ Nhật = Sunday)."
+        },
+        {
+          "type": "text",
+          "text": "\"ngày\" = day (of the month), \"tháng\" = month, \"năm\" = year."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Hôm nay là ngày bao nhiêu?",
+          "en": "What's today's date?"
+        },
+        {
+          "type": "example",
+          "vi": "Hôm nay là ngày 15 tháng 6.",
+          "en": "Today is June 15th.",
+          "context": "→"
+        },
+        {
+          "type": "example",
+          "vi": "Hôm qua là thứ mấy, ngày bao nhiêu?",
+          "en": "What day (of the week) and date was yesterday?"
+        },
+        {
+          "type": "example",
+          "vi": "Hôm qua là thứ Hai ngày 28.",
+          "en": "Yesterday was Monday, the 28th."
+        }
+      ]
+    }
+  ]
+}
