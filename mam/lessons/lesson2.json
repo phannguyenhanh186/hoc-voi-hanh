@@ -294,9 +294,9 @@
           "audio": "audio/words/{voice}/an.mp3"
         },
         {
-          "vi": "bánh xèo",
-          "en": "savory pancake",
-          "audio": "audio/words/{voice}/banh_xeo.mp3"
+          "vi": "bún đậu",
+          "en": "bún đậu",
+          "audio": "audio/words/{voice}/bun_dau.mp3"
         },
         {
           "br": true
