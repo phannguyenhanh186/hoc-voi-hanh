@@ -3,7 +3,7 @@
   "title": "Từ vựng",
   "sections": [
     {
-      "label": "Công việc",
+      "label": "Công việc (Activities)",
       "items": [
         {
           "vi": "làm việc",
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "label": "Thời gian",
+      "label": "Thời gian (Time)",
       "items": [
         {
           "vi": "sáng",
