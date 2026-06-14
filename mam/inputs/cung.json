@@ -1,0 +1,44 @@
+{
+  "id": "cung",
+  "title": "Cũng",
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"cũng\" means \"also / too\" — placed before the verb or adjective to show similarity with a previous statement."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Em khoẻ. Còn chị? – Chị cũng khoẻ.",
+          "en": "I'm fine. And you? – I'm also fine."
+        },
+        {
+          "type": "example",
+          "vi": "Tôi thích cà phê. Anh ấy cũng thích cà phê.",
+          "en": "I like coffee. He likes coffee too."
+        },
+        {
+          "type": "example",
+          "vi": "Em là sinh viên, anh cũng là sinh viên.",
+          "en": "I'm a student, you're also a student."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Subject] + cũng + [verb / adjective]"
+        }
+      ]
+    }
+  ]
+}
