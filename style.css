@@ -117,9 +117,9 @@ a { color: var(--accent-deep); text-decoration: none; }
 
 /* ---------- Lesson page ---------- */
 .lesson-head { padding: 26px 0 6px; }
-.lesson-head h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0 0 16px; letter-spacing: -.3px; }
+.lesson-head h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0 0 10px; letter-spacing: -.3px; }
 
-.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 4px 0 18px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 16px; }
 
 .btn-english {
   font: inherit; font-weight: 600; font-size: .85rem; cursor: pointer;
@@ -183,6 +183,9 @@ a { color: var(--accent-deep); text-decoration: none; }
   transition: max-height .18s ease, opacity .18s ease, margin .18s ease;
 }
 .hide-en .phrase .en { max-height: 0; opacity: 0; margin: 0; }
+/* khi ẩn nghĩa: các từ xích lại gần như đọc câu bình thường */
+.hide-en .phrases { gap: 2px 2px; }
+.hide-en .phrase { padding: 3px 6px; }
 
 .sentence-translation { margin: 10px 0 2px 48px; font-size: .9rem; color: var(--muted); font-style: italic; }
 .hide-en .sentence-translation { display: none; }
