@@ -31,6 +31,7 @@
 
     <div class="toolbar">
       <button class="btn-english" id="toggle-en" aria-pressed="false">English</button>
+      <div class="toolbar-right" id="inputs-nav"></div>
     </div>
 
     <section class="story" id="story"></section>
@@ -47,6 +48,7 @@
   <script>
     const params = new URLSearchParams(location.search);
     const lessonId = params.get('id') || 'lesson1';
+    let lessonLevel = params.get('level') || '';  // cấp độ (mam/choi/la), resolve từ manifest
 
     const $title  = document.getElementById('title');
     const $story  = document.getElementById('story');
@@ -81,6 +83,18 @@
     function render(lesson) {
       document.title = (lesson.title || lessonId) + ' — hoc voi hanh';
       $title.textContent = lesson.title || lessonId;
+
+      // nút điều hướng sang trang core inputs
+      const nav = document.getElementById('inputs-nav');
+      nav.innerHTML = '';
+      (lesson.inputs || []).forEach(function (inp) {
+        const a = document.createElement('a');
+        a.className = 'btn-input';
+        const lvl = inp.level || lessonLevel;
+        a.href = 'input.html?id=' + encodeURIComponent(inp.id) + (lvl ? '&level=' + encodeURIComponent(lvl) : '');
+        a.textContent = (inp.title || 'new inputs') + ' →';
+        nav.appendChild(a);
+      });
 
       if (lesson.fullAudio) {
         $full.src = lesson.fullAudio;
@@ -136,14 +150,29 @@
 
     (async function () {
       try {
-        const res = await fetch('lessons/' + lessonId + '.json', { cache: 'no-cache' });
+        // nếu chưa biết level, tra trong manifest theo id
+        if (!lessonLevel) {
+          try {
+            const m = await fetch('manifest.json', { cache: 'no-cache' });
+            if (m.ok) {
+              const list = await m.json();
+              const entry = (Array.isArray(list) ? list : []).find(function (l) { return l.id === lessonId; });
+              if (entry && entry.level) lessonLevel = entry.level;
+            }
+          } catch (e) { /* bỏ qua, dùng fallback bên dưới */ }
+        }
+
+        const path = lessonLevel
+          ? lessonLevel + '/lessons/' + lessonId + '.json'
+          : 'lessons/' + lessonId + '.json';   // fallback nếu không có level
+        const res = await fetch(path, { cache: 'no-cache' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
         render(data);
       } catch (err) {
         console.error(err);
         $title.textContent = 'Không tải được bài học';
-        $story.innerHTML = '<p class="note">Không tìm thấy <code>lessons/' + lessonId + '.json</code>. Kiểm tra tên file, hoặc chạy qua web server / GitHub Pages thay vì mở trực tiếp file.</p>';
+        $story.innerHTML = '<p class="note">Không tìm thấy file bài học. Kiểm tra <code>level</code> trong manifest.json và đường dẫn <code>&lt;level&gt;/lessons/' + lessonId + '.json</code>.</p>';
       }
     })();
   </script>
