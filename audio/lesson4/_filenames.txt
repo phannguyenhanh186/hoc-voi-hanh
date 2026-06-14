@@ -1,0 +1,17 @@
+# Audio CAU cho lesson4 (.m4a). 2 ban: audio/lesson4/nam/ va bac/
+# (Tu le o audio/words/)
+
+full.m4a  ->  ca bai
+sentence_01.m4a  ->  Chào Việt em khoẻ không
+sentence_02.m4a  ->  Chào chị Hồng em khoẻ / Còn chị / Chị khoẻ không
+sentence_03.m4a  ->  Chị bình thường / Em ăn sáng chưa
+sentence_04.m4a  ->  Em ăn rồi / Chị ăn chưa
+sentence_05.m4a  ->  Chị chưa / Lát chị ăn
+sentence_06.m4a  ->  Chị thường ăn sáng lúc mấy giờ
+sentence_07.m4a  ->  Chị thường ăn lúc 9 giờ sáng / Tập thể dục xong chị ăn sáng / Bây giờ là mấy giờ vậy
+sentence_08.m4a  ->  Bây giờ là 8 rưỡi rồi / Lát nữa chị có ngủ trưa không
+sentence_09.m4a  ->  Chị không / Chị không thường ngủ trưa / Còn em
+sentence_10.m4a  ->  Em thường ngủ trưa 30 phút / Ăn trưa xong em ngủ
+sentence_11.m4a  ->  Tối nay em làm gì
+sentence_12.m4a  ->  Tối nay em đi ăn với bạn lúc 7 giờ / Làm việc xong em đi ăn / Còn chị
+sentence_13.m4a  ->  Tối nay chị ở nhà / Chị thích nấu ăn hơn đi ăn ở quán
