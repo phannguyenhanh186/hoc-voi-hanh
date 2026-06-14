@@ -2,7 +2,6 @@
 # Tu lap lai dung chung 1 file.
 
 anh.mp3  ->  "anh"
-banh_xeo.mp3  ->  "bánh xèo"
 bun_bo.mp3  ->  "bún bò"
 bun_dau.mp3  ->  "bún đậu"
 ban.mp3  ->  "bạn"
