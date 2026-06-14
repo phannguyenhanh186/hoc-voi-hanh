@@ -14,11 +14,17 @@
     <div class="wrap">
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
-        <div class="levels">
-          <a class="level" href="index.html">all levels</a>
-          <a class="level" href="index.html?level=mam">mầm</a>
-          <a class="level" href="index.html?level=choi">chồi</a>
-          <a class="level" href="index.html?level=la">lá</a>
+        <div class="nav-right">
+          <div class="levels">
+            <a class="level" href="index.html">all levels</a>
+            <a class="level" href="index.html?level=mam">mầm</a>
+            <a class="level" href="index.html?level=choi">chồi</a>
+            <a class="level" href="index.html?level=la">lá</a>
+          </div>
+          <select class="voice-select" id="voice-select" aria-label="Chọn giọng">
+            <option value="nam">Miền Nam</option>
+            <option value="bac">Miền Bắc</option>
+          </select>
         </div>
       </nav>
     </div>
@@ -117,6 +123,19 @@
         console.error(err);
         $title.textContent = 'Không tải được trang';
         $sections.innerHTML = '<p class="note">Không tìm thấy <code>' + path + '</code>.</p>';
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      var v = "nam";
+      try { v = localStorage.getItem("voice") || "nam"; } catch (e) {}
+      var sel = document.getElementById("voice-select");
+      if (sel) {
+        sel.value = v;
+        sel.addEventListener("change", function () {
+          try { localStorage.setItem("voice", sel.value); } catch (e) {}
+        });
       }
     })();
   </script>
