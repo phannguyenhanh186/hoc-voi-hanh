@@ -117,7 +117,7 @@ a { color: var(--accent-deep); text-decoration: none; }
 
 /* ---------- Lesson page ---------- */
 .lesson-head { padding: 26px 0 6px; }
-.lesson-head h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0 0 10px; letter-spacing: -.3px; }
+.lesson-head h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0 0 4px; letter-spacing: -.3px; }
 
 .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 16px; }
 
@@ -188,6 +188,9 @@ a { color: var(--accent-deep); text-decoration: none; }
   transition: max-height .18s ease, opacity .18s ease, margin .18s ease;
 }
 .hide-en .phrase .en { max-height: 0; opacity: 0; margin: 0; }
+/* khi tắt nghĩa: khung thu lại, các từ sát vào nhau */
+.hide-en .phrases { gap: 1px 2px; }
+.hide-en .phrase { padding: 4px 7px; }
 /* khi ẩn nghĩa: các từ xích lại gần như đọc câu bình thường */
 .hide-en .phrases { gap: 2px 5px; }
 .hide-en .phrase { padding: 3px 3px; }
