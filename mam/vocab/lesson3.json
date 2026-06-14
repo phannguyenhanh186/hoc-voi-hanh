@@ -3,7 +3,7 @@
   "title": "Từ vựng",
   "sections": [
     {
-      "label": "Hoạt động",
+      "label": "Hoạt động (Activities)",
       "items": [
         {
           "vi": "đi chơi",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "label": "Đồ ăn",
+      "label": "Đồ ăn (Food)",
       "items": [
         {
           "vi": "cơm",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "label": "Đồ uống",
+      "label": "Đồ uống (Drinks)",
       "items": [
         {
           "vi": "cà phê",
