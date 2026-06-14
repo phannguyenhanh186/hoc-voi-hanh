@@ -280,3 +280,6 @@ h1,
 .badge-label {
   font-family: var(--font-display);
 }
+
+/* các từ trong hội thoại + nghĩa: dùng Nunito (body) */
+.phrase .vi, .phrase .en, .sentence-translation { font-family: var(--font-body); }
