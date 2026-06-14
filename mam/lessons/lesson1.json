@@ -22,12 +22,12 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/lesson1/{voice}/word_01.m4a"
+          "audio": "audio/lesson1/{voice}/word_01.mp3"
         },
         {
           "vi": "em",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_02.m4a"
+          "audio": "audio/lesson1/{voice}/word_02.mp3"
         },
         {
           "br": true
@@ -35,22 +35,22 @@
         {
           "vi": "Em",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_03.m4a"
+          "audio": "audio/lesson1/{voice}/word_03.mp3"
         },
         {
           "vi": "tên",
           "en": "name",
-          "audio": "audio/lesson1/{voice}/word_04.m4a"
+          "audio": "audio/lesson1/{voice}/word_04.mp3"
         },
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/lesson1/{voice}/word_05.m4a"
+          "audio": "audio/lesson1/{voice}/word_05.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson1/{voice}/word_06.m4a"
+          "audio": "audio/lesson1/{voice}/word_06.mp3"
         }
       ]
     },
@@ -61,12 +61,12 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/lesson1/{voice}/word_07.m4a"
+          "audio": "audio/lesson1/{voice}/word_07.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_08.m4a"
+          "audio": "audio/lesson1/{voice}/word_08.mp3"
         },
         {
           "br": true
@@ -74,22 +74,22 @@
         {
           "vi": "Em",
           "en": "I",
-          "audio": "audio/lesson1/{voice}/word_09.m4a"
+          "audio": "audio/lesson1/{voice}/word_09.mp3"
         },
         {
           "vi": "tên",
           "en": "name",
-          "audio": "audio/lesson1/{voice}/word_10.m4a"
+          "audio": "audio/lesson1/{voice}/word_10.mp3"
         },
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/lesson1/{voice}/word_11.m4a"
+          "audio": "audio/lesson1/{voice}/word_11.mp3"
         },
         {
           "vi": "Vân",
           "en": "Vân",
-          "audio": "audio/lesson1/{voice}/word_12.m4a"
+          "audio": "audio/lesson1/{voice}/word_12.mp3"
         },
         {
           "br": true
@@ -97,12 +97,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson1/{voice}/word_13.m4a"
+          "audio": "audio/lesson1/{voice}/word_13.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_14.m4a"
+          "audio": "audio/lesson1/{voice}/word_14.mp3"
         }
       ]
     },
@@ -113,22 +113,22 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/lesson1/{voice}/word_15.m4a"
+          "audio": "audio/lesson1/{voice}/word_15.mp3"
         },
         {
           "vi": "tên",
           "en": "name",
-          "audio": "audio/lesson1/{voice}/word_16.m4a"
+          "audio": "audio/lesson1/{voice}/word_16.mp3"
         },
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/lesson1/{voice}/word_17.m4a"
+          "audio": "audio/lesson1/{voice}/word_17.mp3"
         },
         {
           "vi": "Thơ",
           "en": "Thơ",
-          "audio": "audio/lesson1/{voice}/word_18.m4a"
+          "audio": "audio/lesson1/{voice}/word_18.mp3"
         },
         {
           "br": true
@@ -136,27 +136,27 @@
         {
           "vi": "Em",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_19.m4a"
+          "audio": "audio/lesson1/{voice}/word_19.mp3"
         },
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/lesson1/{voice}/word_20.m4a"
+          "audio": "audio/lesson1/{voice}/word_20.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/lesson1/{voice}/word_21.m4a"
+          "audio": "audio/lesson1/{voice}/word_21.mp3"
         },
         {
           "vi": "Việt",
           "en": "Vietnamese",
-          "audio": "audio/lesson1/{voice}/word_22.m4a"
+          "audio": "audio/lesson1/{voice}/word_22.mp3"
         },
         {
           "vi": "đúng không",
           "en": "right?",
-          "audio": "audio/lesson1/{voice}/word_23.m4a"
+          "audio": "audio/lesson1/{voice}/word_23.mp3"
         }
       ]
     },
@@ -167,7 +167,7 @@
         {
           "vi": "Không",
           "en": "No",
-          "audio": "audio/lesson1/{voice}/word_24.m4a"
+          "audio": "audio/lesson1/{voice}/word_24.mp3"
         },
         {
           "br": true
@@ -175,22 +175,22 @@
         {
           "vi": "Em",
           "en": "I",
-          "audio": "audio/lesson1/{voice}/word_25.m4a"
+          "audio": "audio/lesson1/{voice}/word_25.mp3"
         },
         {
           "vi": "là",
           "en": "am",
-          "audio": "audio/lesson1/{voice}/word_26.m4a"
+          "audio": "audio/lesson1/{voice}/word_26.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/lesson1/{voice}/word_27.m4a"
+          "audio": "audio/lesson1/{voice}/word_27.mp3"
         },
         {
           "vi": "Trung",
           "en": "Chinese",
-          "audio": "audio/lesson1/{voice}/word_28.m4a"
+          "audio": "audio/lesson1/{voice}/word_28.mp3"
         },
         {
           "br": true
@@ -198,12 +198,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson1/{voice}/word_29.m4a"
+          "audio": "audio/lesson1/{voice}/word_29.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_30.m4a"
+          "audio": "audio/lesson1/{voice}/word_30.mp3"
         },
         {
           "br": true
@@ -211,27 +211,27 @@
         {
           "vi": "Chị",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_31.m4a"
+          "audio": "audio/lesson1/{voice}/word_31.mp3"
         },
         {
           "vi": "là",
           "en": "are",
-          "audio": "audio/lesson1/{voice}/word_32.m4a"
+          "audio": "audio/lesson1/{voice}/word_32.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/lesson1/{voice}/word_33.m4a"
+          "audio": "audio/lesson1/{voice}/word_33.mp3"
         },
         {
           "vi": "Việt",
           "en": "Vietnamese",
-          "audio": "audio/lesson1/{voice}/word_34.m4a"
+          "audio": "audio/lesson1/{voice}/word_34.mp3"
         },
         {
           "vi": "đúng không",
           "en": "right?",
-          "audio": "audio/lesson1/{voice}/word_35.m4a"
+          "audio": "audio/lesson1/{voice}/word_35.mp3"
         }
       ]
     },
@@ -242,7 +242,7 @@
         {
           "vi": "Đúng",
           "en": "Yes / Correct",
-          "audio": "audio/lesson1/{voice}/word_36.m4a"
+          "audio": "audio/lesson1/{voice}/word_36.mp3"
         },
         {
           "br": true
@@ -250,22 +250,22 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/lesson1/{voice}/word_37.m4a"
+          "audio": "audio/lesson1/{voice}/word_37.mp3"
         },
         {
           "vi": "là",
           "en": "am",
-          "audio": "audio/lesson1/{voice}/word_38.m4a"
+          "audio": "audio/lesson1/{voice}/word_38.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/lesson1/{voice}/word_39.m4a"
+          "audio": "audio/lesson1/{voice}/word_39.mp3"
         },
         {
           "vi": "Việt",
           "en": "Vietnamese",
-          "audio": "audio/lesson1/{voice}/word_40.m4a"
+          "audio": "audio/lesson1/{voice}/word_40.mp3"
         },
         {
           "br": true
@@ -273,22 +273,22 @@
         {
           "vi": "Em",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_41.m4a"
+          "audio": "audio/lesson1/{voice}/word_41.mp3"
         },
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/lesson1/{voice}/word_42.m4a"
+          "audio": "audio/lesson1/{voice}/word_42.mp3"
         },
         {
           "vi": "nghề",
           "en": "job",
-          "audio": "audio/lesson1/{voice}/word_43.m4a"
+          "audio": "audio/lesson1/{voice}/word_43.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/lesson1/{voice}/word_44.m4a"
+          "audio": "audio/lesson1/{voice}/word_44.mp3"
         }
       ]
     },
@@ -299,32 +299,32 @@
         {
           "vi": "Em",
           "en": "I",
-          "audio": "audio/lesson1/{voice}/word_45.m4a"
+          "audio": "audio/lesson1/{voice}/word_45.mp3"
         },
         {
           "vi": "làm",
           "en": "work as",
-          "audio": "audio/lesson1/{voice}/word_46.m4a"
+          "audio": "audio/lesson1/{voice}/word_46.mp3"
         },
         {
           "vi": "phục vụ",
           "en": "server",
-          "audio": "audio/lesson1/{voice}/word_47.m4a"
+          "audio": "audio/lesson1/{voice}/word_47.mp3"
         },
         {
           "vi": "ở",
           "en": "at",
-          "audio": "audio/lesson1/{voice}/word_48.m4a"
+          "audio": "audio/lesson1/{voice}/word_48.mp3"
         },
         {
           "vi": "quán",
           "en": "shop",
-          "audio": "audio/lesson1/{voice}/word_49.m4a"
+          "audio": "audio/lesson1/{voice}/word_49.mp3"
         },
         {
           "vi": "cà phê",
           "en": "coffee",
-          "audio": "audio/lesson1/{voice}/word_50.m4a"
+          "audio": "audio/lesson1/{voice}/word_50.mp3"
         },
         {
           "br": true
@@ -332,12 +332,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/lesson1/{voice}/word_51.m4a"
+          "audio": "audio/lesson1/{voice}/word_51.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/lesson1/{voice}/word_52.m4a"
+          "audio": "audio/lesson1/{voice}/word_52.mp3"
         }
       ]
     },
@@ -348,17 +348,17 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/lesson1/{voice}/word_53.m4a"
+          "audio": "audio/lesson1/{voice}/word_53.mp3"
         },
         {
           "vi": "làm",
           "en": "work as",
-          "audio": "audio/lesson1/{voice}/word_54.m4a"
+          "audio": "audio/lesson1/{voice}/word_54.mp3"
         },
         {
           "vi": "giáo viên",
           "en": "teacher",
-          "audio": "audio/lesson1/{voice}/word_55.m4a"
+          "audio": "audio/lesson1/{voice}/word_55.mp3"
         },
         {
           "br": true
@@ -366,32 +366,32 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/lesson1/{voice}/word_56.m4a"
+          "audio": "audio/lesson1/{voice}/word_56.mp3"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/lesson1/{voice}/word_57.m4a"
+          "audio": "audio/lesson1/{voice}/word_57.mp3"
         },
         {
           "vi": "ở",
           "en": "at",
-          "audio": "audio/lesson1/{voice}/word_58.m4a"
+          "audio": "audio/lesson1/{voice}/word_58.mp3"
         },
         {
           "vi": "trường",
           "en": "school",
-          "audio": "audio/lesson1/{voice}/word_59.m4a"
+          "audio": "audio/lesson1/{voice}/word_59.mp3"
         },
         {
           "vi": "đại học",
           "en": "university",
-          "audio": "audio/lesson1/{voice}/word_60.m4a"
+          "audio": "audio/lesson1/{voice}/word_60.mp3"
         },
         {
           "vi": "Sài Gòn",
           "en": "Saigon",
-          "audio": "audio/lesson1/{voice}/word_61.m4a"
+          "audio": "audio/lesson1/{voice}/word_61.mp3"
         }
       ]
     }
