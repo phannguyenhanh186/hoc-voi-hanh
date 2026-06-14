@@ -1,56 +1,31 @@
 {
-  "_guide": {
-    "doc": "JSON khong ho tro comment that su, nen huong dan o key '_guide'. App bo qua moi key bat dau bang '_'. Tao bai moi co the xoa key nay.",
-    "cau_truc": {
-      "id": "ma bai, trung ten thu muc audio: audio/<id>/",
-      "title": "tieu de trang bai hoc",
-      "description": "mo ta ngan tren the trang chu",
-      "fullAudio": "MP3 doc ca bai (nut Play All)",
-      "sentences[]": {
-        "translation": "nghia ca cau",
-        "audio": "MP3 ca cau",
-        "phrases[]": {
-          "vi": "tu tieng Viet co dau",
-          "en": "nghia tieng Anh",
-          "audio": "MP3 doc rieng tu"
-        }
-      }
-    },
-    "quy_uoc_ten_audio": "word_01.mp3, word_02.mp3 ... tang dan theo thu tu xuat hien tren CA BAI (khong reset moi cau). sentence_01.mp3 ... theo so cau. full.mp3 cho ca bai. Cum 2 am tiet la 1 tu (Viet Nam, sinh vien, dai hoc, Sai Gon) dung CHUNG 1 file."
-  },
   "id": "lesson1",
-  "title": "Chào, mình là Mai",
-  "description": "Bài nhập môn: Mai tự giới thiệu — tên, quốc tịch, nghề và sở thích.",
+  "title": "Làm quen: Thơ và Vân",
+  "description": "Hội thoại làm quen — hỏi tên, quốc tịch và nghề nghiệp.",
   "fullAudio": "audio/lesson1/full.m4a",
   "sentences": [
     {
-      "translation": "Hello.",
+      "translation": "Hi. What's your name?",
       "audio": "audio/lesson1/sentence_01.m4a",
       "phrases": [
         {
           "vi": "Chào",
-          "en": "Hello",
+          "en": "Hi",
           "audio": "audio/lesson1/word_01.m4a"
         },
         {
-          "vi": "bạn",
-          "en": "you (friend)",
+          "vi": "em",
+          "en": "you (younger)",
           "audio": "audio/lesson1/word_02.m4a"
-        }
-      ]
-    },
-    {
-      "translation": "My name is Mai.",
-      "audio": "audio/lesson1/sentence_02.m4a",
-      "phrases": [
+        },
         {
-          "vi": "Tên",
-          "en": "name",
+          "vi": "Em",
+          "en": "you (younger)",
           "audio": "audio/lesson1/word_03.m4a"
         },
         {
-          "vi": "mình",
-          "en": "my / I",
+          "vi": "tên",
+          "en": "name",
           "audio": "audio/lesson1/word_04.m4a"
         },
         {
@@ -59,142 +34,330 @@
           "audio": "audio/lesson1/word_05.m4a"
         },
         {
-          "vi": "Mai",
-          "en": "Mai",
+          "vi": "gì",
+          "en": "what",
           "audio": "audio/lesson1/word_06.m4a"
         }
       ]
     },
     {
-      "translation": "I'm Vietnamese, and I'm a student.",
-      "audio": "audio/lesson1/sentence_03.m4a",
+      "translation": "Hi. My name is Vân. And you?",
+      "audio": "audio/lesson1/sentence_02.m4a",
       "phrases": [
         {
-          "vi": "Mình",
-          "en": "I",
+          "vi": "Chào",
+          "en": "Hi",
           "audio": "audio/lesson1/word_07.m4a"
         },
         {
-          "vi": "là",
-          "en": "am",
+          "vi": "chị",
+          "en": "you (older)",
           "audio": "audio/lesson1/word_08.m4a"
         },
         {
-          "vi": "người",
-          "en": "person",
+          "vi": "Em",
+          "en": "I",
           "audio": "audio/lesson1/word_09.m4a"
         },
         {
-          "vi": "Việt Nam",
-          "en": "Vietnam",
+          "vi": "tên",
+          "en": "name",
           "audio": "audio/lesson1/word_10.m4a"
         },
         {
-          "vi": "và",
-          "en": "and",
+          "vi": "là",
+          "en": "is",
           "audio": "audio/lesson1/word_11.m4a"
         },
         {
-          "vi": "mình",
-          "en": "I",
+          "vi": "Vân",
+          "en": "Vân",
           "audio": "audio/lesson1/word_12.m4a"
         },
         {
-          "vi": "là",
-          "en": "am",
+          "vi": "Còn",
+          "en": "And what about",
           "audio": "audio/lesson1/word_13.m4a"
         },
         {
-          "vi": "sinh viên",
-          "en": "student",
+          "vi": "chị",
+          "en": "you (older)",
           "audio": "audio/lesson1/word_14.m4a"
         }
       ]
     },
     {
-      "translation": "I study at Saigon University.",
-      "audio": "audio/lesson1/sentence_04.m4a",
+      "translation": "My name is Thơ. You're Vietnamese, right?",
+      "audio": "audio/lesson1/sentence_03.m4a",
       "phrases": [
         {
-          "vi": "Mình",
+          "vi": "Chị",
           "en": "I",
           "audio": "audio/lesson1/word_15.m4a"
         },
         {
-          "vi": "học",
-          "en": "study",
+          "vi": "tên",
+          "en": "name",
           "audio": "audio/lesson1/word_16.m4a"
         },
         {
-          "vi": "ở",
-          "en": "at",
+          "vi": "là",
+          "en": "is",
           "audio": "audio/lesson1/word_17.m4a"
         },
         {
-          "vi": "trường",
-          "en": "school",
+          "vi": "Thơ",
+          "en": "Thơ",
           "audio": "audio/lesson1/word_18.m4a"
         },
         {
-          "vi": "đại học",
-          "en": "university",
+          "vi": "Em",
+          "en": "you (younger)",
           "audio": "audio/lesson1/word_19.m4a"
         },
         {
-          "vi": "Sài Gòn",
-          "en": "Saigon",
+          "vi": "là",
+          "en": "are",
           "audio": "audio/lesson1/word_20.m4a"
+        },
+        {
+          "vi": "người",
+          "en": "person",
+          "audio": "audio/lesson1/word_21.m4a"
+        },
+        {
+          "vi": "Việt",
+          "en": "Vietnamese",
+          "audio": "audio/lesson1/word_22.m4a"
+        },
+        {
+          "vi": "đúng",
+          "en": "right",
+          "audio": "audio/lesson1/word_23.m4a"
+        },
+        {
+          "vi": "không",
+          "en": "(right?)",
+          "audio": "audio/lesson1/word_24.m4a"
         }
       ]
     },
     {
-      "translation": "I like eating phở and reading books when I'm free.",
-      "audio": "audio/lesson1/sentence_05.m4a",
+      "translation": "No. I'm Chinese. And you? You're Vietnamese, right?",
+      "audio": "audio/lesson1/sentence_04.m4a",
       "phrases": [
         {
-          "vi": "Mình",
-          "en": "I",
-          "audio": "audio/lesson1/word_21.m4a"
-        },
-        {
-          "vi": "thích",
-          "en": "like",
-          "audio": "audio/lesson1/word_22.m4a"
-        },
-        {
-          "vi": "ăn",
-          "en": "eat",
-          "audio": "audio/lesson1/word_23.m4a"
-        },
-        {
-          "vi": "phở",
-          "en": "phở",
-          "audio": "audio/lesson1/word_24.m4a"
-        },
-        {
-          "vi": "và",
-          "en": "and",
+          "vi": "Không",
+          "en": "No",
           "audio": "audio/lesson1/word_25.m4a"
         },
         {
-          "vi": "đọc",
-          "en": "read",
+          "vi": "Em",
+          "en": "I",
           "audio": "audio/lesson1/word_26.m4a"
         },
         {
-          "vi": "sách",
-          "en": "book(s)",
+          "vi": "là",
+          "en": "am",
           "audio": "audio/lesson1/word_27.m4a"
         },
         {
-          "vi": "khi",
-          "en": "when",
+          "vi": "người",
+          "en": "person",
           "audio": "audio/lesson1/word_28.m4a"
         },
         {
-          "vi": "rảnh",
-          "en": "free",
+          "vi": "Trung",
+          "en": "Chinese",
           "audio": "audio/lesson1/word_29.m4a"
+        },
+        {
+          "vi": "Còn",
+          "en": "And what about",
+          "audio": "audio/lesson1/word_30.m4a"
+        },
+        {
+          "vi": "chị",
+          "en": "you (older)",
+          "audio": "audio/lesson1/word_31.m4a"
+        },
+        {
+          "vi": "Chị",
+          "en": "you (older)",
+          "audio": "audio/lesson1/word_32.m4a"
+        },
+        {
+          "vi": "là",
+          "en": "are",
+          "audio": "audio/lesson1/word_33.m4a"
+        },
+        {
+          "vi": "người",
+          "en": "person",
+          "audio": "audio/lesson1/word_34.m4a"
+        },
+        {
+          "vi": "Việt",
+          "en": "Vietnamese",
+          "audio": "audio/lesson1/word_35.m4a"
+        },
+        {
+          "vi": "đúng",
+          "en": "right",
+          "audio": "audio/lesson1/word_36.m4a"
+        },
+        {
+          "vi": "không",
+          "en": "(right?)",
+          "audio": "audio/lesson1/word_37.m4a"
+        }
+      ]
+    },
+    {
+      "translation": "Right. I'm Vietnamese. What do you do?",
+      "audio": "audio/lesson1/sentence_05.m4a",
+      "phrases": [
+        {
+          "vi": "Đúng",
+          "en": "Right",
+          "audio": "audio/lesson1/word_38.m4a"
+        },
+        {
+          "vi": "Chị",
+          "en": "I",
+          "audio": "audio/lesson1/word_39.m4a"
+        },
+        {
+          "vi": "là",
+          "en": "am",
+          "audio": "audio/lesson1/word_40.m4a"
+        },
+        {
+          "vi": "người",
+          "en": "person",
+          "audio": "audio/lesson1/word_41.m4a"
+        },
+        {
+          "vi": "Việt",
+          "en": "Vietnamese",
+          "audio": "audio/lesson1/word_42.m4a"
+        },
+        {
+          "vi": "Em",
+          "en": "you (younger)",
+          "audio": "audio/lesson1/word_43.m4a"
+        },
+        {
+          "vi": "làm",
+          "en": "do",
+          "audio": "audio/lesson1/word_44.m4a"
+        },
+        {
+          "vi": "nghề",
+          "en": "job",
+          "audio": "audio/lesson1/word_45.m4a"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/lesson1/word_46.m4a"
+        }
+      ]
+    },
+    {
+      "translation": "I work as a waiter at a coffee shop. And you?",
+      "audio": "audio/lesson1/sentence_06.m4a",
+      "phrases": [
+        {
+          "vi": "Em",
+          "en": "I",
+          "audio": "audio/lesson1/word_47.m4a"
+        },
+        {
+          "vi": "làm",
+          "en": "work as",
+          "audio": "audio/lesson1/word_48.m4a"
+        },
+        {
+          "vi": "phục vụ",
+          "en": "waiter",
+          "audio": "audio/lesson1/word_49.m4a"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/lesson1/word_50.m4a"
+        },
+        {
+          "vi": "quán",
+          "en": "shop",
+          "audio": "audio/lesson1/word_51.m4a"
+        },
+        {
+          "vi": "cà phê",
+          "en": "coffee",
+          "audio": "audio/lesson1/word_52.m4a"
+        },
+        {
+          "vi": "Còn",
+          "en": "And what about",
+          "audio": "audio/lesson1/word_53.m4a"
+        },
+        {
+          "vi": "chị",
+          "en": "you (older)",
+          "audio": "audio/lesson1/word_54.m4a"
+        }
+      ]
+    },
+    {
+      "translation": "I'm a teacher. I work at Saigon University.",
+      "audio": "audio/lesson1/sentence_07.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "I",
+          "audio": "audio/lesson1/word_55.m4a"
+        },
+        {
+          "vi": "làm",
+          "en": "work as",
+          "audio": "audio/lesson1/word_56.m4a"
+        },
+        {
+          "vi": "giáo viên",
+          "en": "teacher",
+          "audio": "audio/lesson1/word_57.m4a"
+        },
+        {
+          "vi": "Chị",
+          "en": "I",
+          "audio": "audio/lesson1/word_58.m4a"
+        },
+        {
+          "vi": "làm",
+          "en": "work",
+          "audio": "audio/lesson1/word_59.m4a"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/lesson1/word_60.m4a"
+        },
+        {
+          "vi": "trường",
+          "en": "school",
+          "audio": "audio/lesson1/word_61.m4a"
+        },
+        {
+          "vi": "đại học",
+          "en": "university",
+          "audio": "audio/lesson1/word_62.m4a"
+        },
+        {
+          "vi": "Sài Gòn",
+          "en": "Saigon",
+          "audio": "audio/lesson1/word_63.m4a"
         }
       ]
     }
