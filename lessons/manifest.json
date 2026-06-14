@@ -1,8 +1,8 @@
 [
   {
     "id": "lesson1",
-    "title": "Làm quen: Thơ và Vân",
-    "description": "Hội thoại làm quen — hỏi tên, quốc tịch và nghề nghiệp.",
+    "title": "Làm quen",
+    "description": "Hội thoại: Vân và Thơ làm quen — tên, quốc tịch, nghề nghiệp.",
     "file": "lessons/lesson1.json"
   }
 ]
