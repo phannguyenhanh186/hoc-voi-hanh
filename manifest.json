@@ -1,20 +1,26 @@
 [
   {
     "id": "lesson1",
-    "title": "Làm quen",
-    "description": "Hội thoại: Vân và Thơ làm quen — tên, quốc tịch, nghề nghiệp.",
-    "level": "mam"
+    "num": 1,
+    "title": "Làm Quen",
+    "titleEn": "Get to know",
+    "level": "mam",
+    "description": "Vân and Thơ are exchanging information about their names, nationalities, and jobs."
   },
   {
     "id": "lesson2",
-    "title": "Một ngày thường",
-    "description": "Nam và Hương hỏi thăm nhau và kể về bữa ăn, công việc, thói quen trong ngày.",
-    "level": "mam"
+    "num": 2,
+    "title": "Thói Quen",
+    "titleEn": "Habits",
+    "level": "mam",
+    "description": "Nam and Hương are asking each other about their daily routines, jobs, and habits."
   },
   {
     "id": "lesson3",
-    "title": "Sở thích & thói quen",
-    "description": "A và B trò chuyện về cuối tuần, món ăn, thức uống yêu thích và thói quen buổi tối.",
-    "level": "mam"
+    "num": 3,
+    "title": "Sở thích",
+    "titleEn": "Hobbies",
+    "level": "mam",
+    "description": "Two friends are discussing their weekends, habits, and preferences."
   }
 ]
