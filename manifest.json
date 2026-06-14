@@ -22,5 +22,13 @@
     "titleEn": "Hobbies",
     "level": "mam",
     "description": "Two friends are discussing their weekends, habits, and preferences."
+  },
+  {
+    "id": "lesson4",
+    "num": 4,
+    "title": "Giờ và Phút",
+    "titleEn": "Hour and Minute",
+    "level": "mam",
+    "description": "Việt and Hồng are asking about their near-future plans."
   }
 ]
