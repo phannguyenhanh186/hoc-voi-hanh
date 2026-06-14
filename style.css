@@ -159,7 +159,7 @@ a { color: var(--accent-deep); text-decoration: none; }
 .play-sentence:active { transform: scale(.94); }
 .play-sentence:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-.phrases { display: flex; flex-wrap: wrap; gap: 4px 8px; }
+.phrases { display: flex; flex-wrap: wrap; gap: 4px 6px; }
 .phrases .linebreak { flex-basis: 100%; height: 0; }
 
 /* word chip — khung ẩn, hiện khi rê chuột */
@@ -168,7 +168,7 @@ a { color: var(--accent-deep); text-decoration: none; }
   background: transparent;
   border: 1.5px solid transparent;
   border-radius: 10px;
-  padding: 4px 3px 5px;
+  padding: 4px 6px 5px;
   display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px;
   transition: background .12s, border-color .12s, transform .08s;
 }
@@ -176,6 +176,8 @@ a { color: var(--accent-deep); text-decoration: none; }
 .phrase:active { transform: scale(.97); }
 .phrase:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .phrase.playing { border-color: var(--stroke); background: var(--primary); }
+/* hover/đang phát: ẩn nghĩa Anh của TỪ ĐÓ -> khung thu lại ôm sát chữ Việt */
+.phrase:hover .en, .phrase.playing .en { max-height: 0; opacity: 0; margin: 0; }
 .phrase .vi { font-size: 1.16rem; font-weight: 600; color: var(--ink); line-height: 1.3; white-space: nowrap; }
 .phrase .en {
   font-size: .8rem; color: var(--muted); line-height: 1.25;
