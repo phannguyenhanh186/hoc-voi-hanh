@@ -1,0 +1,38 @@
+{
+  "_guide": {
+    "doc": "Trang 'core input' giai thich ngu phap/tu vung. App bo qua key '_'. Co the xoa.",
+    "cau_truc": {
+      "id": "ma trang, dung trong input.html?id=<id>",
+      "title": "tieu de trang",
+      "sections[]": {
+        "label": "chu tren badge (vd Explanation, Example)",
+        "blocks[]": "khoi noi dung, co cac type: 'text' (text), 'table' (columns + rows), 'example' (context + vi + en)"
+      }
+    }
+  },
+  "id": "pronouns",
+  "title": "Which pronouns to use?",
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        { "type": "text", "text": "In Vietnamese, pronouns are chosen based on the relationship, age, and social position of the speakers. Unlike English, there is no single word that always means \"I\" or \"you.\"" },
+        { "type": "text", "text": "Vietnamese pronouns usually come in pairs. If one person uses a certain pronoun for themselves, the other person often uses the matching pronoun." },
+        { "type": "table", "columns": ["Speaker", "Listener"], "rows": [
+          ["anh (I)", "em (you)"],
+          ["chị (I)", "em (you)"],
+          ["em (I)", "anh/chị (you)"],
+          ["mình (I)", "bạn (you)"]
+        ] }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        { "type": "example", "context": "Older male → younger person", "vi": "Anh tên là Minh. Em tên là gì?", "en": "My name is Minh. What's your name?" },
+        { "type": "example", "context": "Younger person → older female", "vi": "Em là giáo viên. Chị làm nghề gì?", "en": "I'm a teacher. What do you do?" },
+        { "type": "example", "context": "Between friends or strangers", "vi": "Mình là người Việt. Bạn là người ở đâu?", "en": "I'm Vietnamese. Where are you from?" }
+      ]
+    }
+  ]
+}
