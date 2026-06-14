@@ -23,7 +23,7 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/words/{voice}/chào.mp3"
+          "audio": "audio/words/{voice}/chao.mp3"
         },
         {
           "vi": "em",
@@ -41,17 +41,17 @@
         {
           "vi": "tên",
           "en": "name",
-          "audio": "audio/words/{voice}/tên.mp3"
+          "audio": "audio/words/{voice}/ten.mp3"
         },
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/words/{voice}/là.mp3"
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/words/{voice}/gì.mp3"
+          "audio": "audio/words/{voice}/gi.mp3"
         }
       ]
     },
@@ -62,12 +62,12 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/words/{voice}/chào.mp3"
+          "audio": "audio/words/{voice}/chao.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         },
         {
           "br": true
@@ -80,17 +80,17 @@
         {
           "vi": "tên",
           "en": "name",
-          "audio": "audio/words/{voice}/tên.mp3"
+          "audio": "audio/words/{voice}/ten.mp3"
         },
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/words/{voice}/là.mp3"
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "Vân",
           "en": "Vân",
-          "audio": "audio/words/{voice}/vân.mp3"
+          "audio": "audio/words/{voice}/van.mp3"
         },
         {
           "br": true
@@ -98,12 +98,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         }
       ]
     },
@@ -114,22 +114,22 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         },
         {
           "vi": "tên",
           "en": "name",
-          "audio": "audio/words/{voice}/tên.mp3"
+          "audio": "audio/words/{voice}/ten.mp3"
         },
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/words/{voice}/là.mp3"
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "Thơ",
           "en": "Thơ",
-          "audio": "audio/words/{voice}/thơ.mp3"
+          "audio": "audio/words/{voice}/tho.mp3"
         },
         {
           "br": true
@@ -142,22 +142,22 @@
         {
           "vi": "là",
           "en": "is",
-          "audio": "audio/words/{voice}/là.mp3"
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/words/{voice}/người.mp3"
+          "audio": "audio/words/{voice}/nguoi.mp3"
         },
         {
           "vi": "Việt",
           "en": "Vietnamese",
-          "audio": "audio/words/{voice}/việt.mp3"
+          "audio": "audio/words/{voice}/viet.mp3"
         },
         {
           "vi": "đúng không",
           "en": "right?",
-          "audio": "audio/words/{voice}/đúng_không.mp3"
+          "audio": "audio/words/{voice}/dung_khong.mp3"
         }
       ]
     },
@@ -168,7 +168,7 @@
         {
           "vi": "Không",
           "en": "No",
-          "audio": "audio/words/{voice}/không.mp3"
+          "audio": "audio/words/{voice}/khong.mp3"
         },
         {
           "br": true
@@ -181,12 +181,12 @@
         {
           "vi": "là",
           "en": "am",
-          "audio": "audio/words/{voice}/là.mp3"
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/words/{voice}/người.mp3"
+          "audio": "audio/words/{voice}/nguoi.mp3"
         },
         {
           "vi": "Trung",
@@ -199,12 +199,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         },
         {
           "br": true
@@ -212,27 +212,27 @@
         {
           "vi": "Chị",
           "en": "you",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         },
         {
           "vi": "là",
           "en": "are",
-          "audio": "audio/words/{voice}/là.mp3"
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/words/{voice}/người.mp3"
+          "audio": "audio/words/{voice}/nguoi.mp3"
         },
         {
           "vi": "Việt",
           "en": "Vietnamese",
-          "audio": "audio/words/{voice}/việt.mp3"
+          "audio": "audio/words/{voice}/viet.mp3"
         },
         {
           "vi": "đúng không",
           "en": "right?",
-          "audio": "audio/words/{voice}/đúng_không.mp3"
+          "audio": "audio/words/{voice}/dung_khong.mp3"
         }
       ]
     },
@@ -243,7 +243,7 @@
         {
           "vi": "Đúng",
           "en": "Yes / Correct",
-          "audio": "audio/words/{voice}/đúng.mp3"
+          "audio": "audio/words/{voice}/dung.mp3"
         },
         {
           "br": true
@@ -251,22 +251,22 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         },
         {
           "vi": "là",
           "en": "am",
-          "audio": "audio/words/{voice}/là.mp3"
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "người",
           "en": "person",
-          "audio": "audio/words/{voice}/người.mp3"
+          "audio": "audio/words/{voice}/nguoi.mp3"
         },
         {
           "vi": "Việt",
           "en": "Vietnamese",
-          "audio": "audio/words/{voice}/việt.mp3"
+          "audio": "audio/words/{voice}/viet.mp3"
         },
         {
           "br": true
@@ -279,17 +279,17 @@
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "vi": "nghề",
           "en": "job",
-          "audio": "audio/words/{voice}/nghề.mp3"
+          "audio": "audio/words/{voice}/nghe.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/words/{voice}/gì.mp3"
+          "audio": "audio/words/{voice}/gi.mp3"
         }
       ]
     },
@@ -305,27 +305,27 @@
         {
           "vi": "làm",
           "en": "work as",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "vi": "phục vụ",
           "en": "server",
-          "audio": "audio/words/{voice}/phục_vụ.mp3"
+          "audio": "audio/words/{voice}/phuc_vu.mp3"
         },
         {
           "vi": "ở",
           "en": "at",
-          "audio": "audio/words/{voice}/ở.mp3"
+          "audio": "audio/words/{voice}/o.mp3"
         },
         {
           "vi": "quán",
           "en": "shop",
-          "audio": "audio/words/{voice}/quán.mp3"
+          "audio": "audio/words/{voice}/quan.mp3"
         },
         {
           "vi": "cà phê",
           "en": "coffee",
-          "audio": "audio/words/{voice}/cà_phê.mp3"
+          "audio": "audio/words/{voice}/ca_phe.mp3"
         },
         {
           "br": true
@@ -333,12 +333,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "chị",
           "en": "you",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         }
       ]
     },
@@ -349,17 +349,17 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         },
         {
           "vi": "làm",
           "en": "work as",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "vi": "giáo viên",
           "en": "teacher",
-          "audio": "audio/words/{voice}/giáo_viên.mp3"
+          "audio": "audio/words/{voice}/giao_vien.mp3"
         },
         {
           "br": true
@@ -367,32 +367,32 @@
         {
           "vi": "Chị",
           "en": "I",
-          "audio": "audio/words/{voice}/chị.mp3"
+          "audio": "audio/words/{voice}/chi.mp3"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "vi": "ở",
           "en": "at",
-          "audio": "audio/words/{voice}/ở.mp3"
+          "audio": "audio/words/{voice}/o.mp3"
         },
         {
           "vi": "trường",
           "en": "school",
-          "audio": "audio/words/{voice}/trường.mp3"
+          "audio": "audio/words/{voice}/truong.mp3"
         },
         {
           "vi": "đại học",
           "en": "university",
-          "audio": "audio/words/{voice}/đại_học.mp3"
+          "audio": "audio/words/{voice}/dai_hoc.mp3"
         },
         {
           "vi": "Sài Gòn",
           "en": "Saigon",
-          "audio": "audio/words/{voice}/sài_gòn.mp3"
+          "audio": "audio/words/{voice}/sai_gon.mp3"
         }
       ]
     }
