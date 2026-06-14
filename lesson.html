@@ -92,7 +92,7 @@
         a.className = 'btn-input';
         const lvl = inp.level || lessonLevel;
         a.href = 'input.html?id=' + encodeURIComponent(inp.id) + (lvl ? '&level=' + encodeURIComponent(lvl) : '');
-        a.textContent = (inp.title || 'new inputs') + ' →';
+        a.textContent = 'new input →';
         nav.appendChild(a);
       });
 
