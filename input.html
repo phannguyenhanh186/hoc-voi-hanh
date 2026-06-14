@@ -29,10 +29,15 @@
       <h1 id="title">Đang tải…</h1>
     </div>
     <section id="sections" class="input-sections"></section>
-    <div class="footer" id="back-row"></div>
+    <div class="back-row">
+      <button type="button" class="btn-input" id="back-btn">← back</button>
+    </div>
   </main>
 
   <script>
+    document.getElementById('back-btn').addEventListener('click', function () {
+      if (history.length > 1) history.back(); else location.href = 'index.html';
+    });
     const inputId = new URLSearchParams(location.search).get('id') || 'pronouns';
     const $title = document.getElementById('title');
     const $sections = document.getElementById('sections');
