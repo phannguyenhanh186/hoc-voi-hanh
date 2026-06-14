@@ -1,0 +1,802 @@
+{
+  "_guide": {
+    "doc": "App bo qua key '_'. Chen {\"br\":true} de xuong dong.",
+    "audio_tu": "Tu dung chung: audio/words/<voice>/<tu>.mp3 (khong dau)."
+  },
+  "id": "lesson3",
+  "title": "Sở thích & thói quen",
+  "description": "A và B trò chuyện về cuối tuần, món ăn, thức uống yêu thích và thói quen buổi tối.",
+  "inputs": [
+    {
+      "id": "thich",
+      "title": "thích / không thích"
+    },
+    {
+      "id": "chua_roi",
+      "title": "chưa? / rồi"
+    },
+    {
+      "id": "roi",
+      "title": "rồi"
+    }
+  ],
+  "fullAudio": "audio/lesson3/{voice}/full.m4a",
+  "sentences": [
+    {
+      "translation": "How are you?",
+      "audio": "audio/lesson3/{voice}/sentence_01.m4a",
+      "phrases": [
+        {
+          "vi": "Bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "khoẻ",
+          "en": "well",
+          "audio": "audio/words/{voice}/khoe.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "(or not)",
+          "audio": "audio/words/{voice}/khong.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I'm well. And you?",
+      "audio": "audio/lesson3/{voice}/sentence_02.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "khoẻ",
+          "en": "well",
+          "audio": "audio/words/{voice}/khoe.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Còn",
+          "en": "And",
+          "audio": "audio/words/{voice}/con.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I'm also well. What do you usually do on weekends?",
+      "audio": "audio/lesson3/{voice}/sentence_03.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "cũng",
+          "en": "also",
+          "audio": "audio/words/{voice}/cung.mp3"
+        },
+        {
+          "vi": "khoẻ",
+          "en": "well",
+          "audio": "audio/words/{voice}/khoe.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Cuối tuần",
+          "en": "weekend",
+          "audio": "audio/words/{voice}/cuoi_tuan.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "thường",
+          "en": "usually",
+          "audio": "audio/words/{voice}/thuong.mp3"
+        },
+        {
+          "vi": "làm",
+          "en": "do",
+          "audio": "audio/words/{voice}/lam.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I usually hang out with friends. And you?",
+      "audio": "audio/lesson3/{voice}/sentence_04.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "thường",
+          "en": "usually",
+          "audio": "audio/words/{voice}/thuong.mp3"
+        },
+        {
+          "vi": "đi chơi",
+          "en": "hang out",
+          "audio": "audio/words/{voice}/di_choi.mp3"
+        },
+        {
+          "vi": "với",
+          "en": "with",
+          "audio": "audio/words/{voice}/voi.mp3"
+        },
+        {
+          "vi": "bạn bè",
+          "en": "friends",
+          "audio": "audio/words/{voice}/ban_be.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Còn",
+          "en": "And",
+          "audio": "audio/words/{voice}/con.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I usually stay home and cook. Do you like cooking?",
+      "audio": "audio/lesson3/{voice}/sentence_05.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "thường",
+          "en": "usually",
+          "audio": "audio/words/{voice}/thuong.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "nhà",
+          "en": "home",
+          "audio": "audio/words/{voice}/nha.mp3"
+        },
+        {
+          "vi": "nấu ăn",
+          "en": "cook",
+          "audio": "audio/words/{voice}/nau_an.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "có",
+          "en": "(do)",
+          "audio": "audio/words/{voice}/co.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "nấu ăn",
+          "en": "cook",
+          "audio": "audio/words/{voice}/nau_an.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "(or not)",
+          "audio": "audio/words/{voice}/khong.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I don't like cooking, but I really like eating out. What do you like to eat?",
+      "audio": "audio/lesson3/{voice}/sentence_06.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "not",
+          "audio": "audio/words/{voice}/khong.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "nấu ăn",
+          "en": "cook",
+          "audio": "audio/words/{voice}/nau_an.mp3"
+        },
+        {
+          "vi": "nhưng",
+          "en": "but",
+          "audio": "audio/words/{voice}/nhung.mp3"
+        },
+        {
+          "vi": "mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "rất",
+          "en": "really",
+          "audio": "audio/words/{voice}/rat.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "đi ăn ngoài",
+          "en": "eat out",
+          "audio": "audio/words/{voice}/di_an_ngoai.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I like eating phở. And you?",
+      "audio": "audio/lesson3/{voice}/sentence_07.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "phở",
+          "en": "phở",
+          "audio": "audio/words/{voice}/pho.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Còn",
+          "en": "And",
+          "audio": "audio/words/{voice}/con.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I like eating bún đậu. I don't like eating instant noodles.",
+      "audio": "audio/lesson3/{voice}/sentence_08.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "bún đậu",
+          "en": "bún đậu",
+          "audio": "audio/words/{voice}/bun_dau.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "not",
+          "audio": "audio/words/{voice}/khong.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "mì tôm",
+          "en": "instant noodles",
+          "audio": "audio/words/{voice}/mi_tom.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Really? I really like instant noodles.",
+      "audio": "audio/lesson3/{voice}/sentence_09.m4a",
+      "phrases": [
+        {
+          "vi": "Vậy hả",
+          "en": "really?",
+          "audio": "audio/words/{voice}/vay_ha.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "rất",
+          "en": "really",
+          "audio": "audio/words/{voice}/rat.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "mì tôm",
+          "en": "instant noodles",
+          "audio": "audio/words/{voice}/mi_tom.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "What do you like to drink?",
+      "audio": "audio/lesson3/{voice}/sentence_10.m4a",
+      "phrases": [
+        {
+          "vi": "Bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "uống",
+          "en": "drink",
+          "audio": "audio/words/{voice}/uong.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I like drinking black coffee. I don't drink soft drinks.",
+      "audio": "audio/lesson3/{voice}/sentence_11.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "uống",
+          "en": "drink",
+          "audio": "audio/words/{voice}/uong.mp3"
+        },
+        {
+          "vi": "cà phê",
+          "en": "coffee",
+          "audio": "audio/words/{voice}/ca_phe.mp3"
+        },
+        {
+          "vi": "đen",
+          "en": "black",
+          "audio": "audio/words/{voice}/den.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "not",
+          "audio": "audio/words/{voice}/khong.mp3"
+        },
+        {
+          "vi": "uống",
+          "en": "drink",
+          "audio": "audio/words/{voice}/uong.mp3"
+        },
+        {
+          "vi": "nước ngọt",
+          "en": "soft drink",
+          "audio": "audio/words/{voice}/nuoc_ngot.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I also like coffee, but I prefer milk coffee.",
+      "audio": "audio/lesson3/{voice}/sentence_12.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "cũng",
+          "en": "also",
+          "audio": "audio/words/{voice}/cung.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "cà phê",
+          "en": "coffee",
+          "audio": "audio/words/{voice}/ca_phe.mp3"
+        },
+        {
+          "vi": "nhưng",
+          "en": "but",
+          "audio": "audio/words/{voice}/nhung.mp3"
+        },
+        {
+          "vi": "mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "cà phê",
+          "en": "coffee",
+          "audio": "audio/words/{voice}/ca_phe.mp3"
+        },
+        {
+          "vi": "sữa",
+          "en": "milk",
+          "audio": "audio/words/{voice}/sua.mp3"
+        },
+        {
+          "vi": "hơn",
+          "en": "more",
+          "audio": "audio/words/{voice}/hon.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Is that so. What do you do tonight after eating?",
+      "audio": "audio/lesson3/{voice}/sentence_13.m4a",
+      "phrases": [
+        {
+          "vi": "Vậy hả",
+          "en": "is that so",
+          "audio": "audio/words/{voice}/vay_ha.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Tối",
+          "en": "evening",
+          "audio": "audio/words/{voice}/toi.mp3"
+        },
+        {
+          "vi": "nay",
+          "en": "this",
+          "audio": "audio/words/{voice}/nay.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "cơm",
+          "en": "rice",
+          "audio": "audio/words/{voice}/com.mp3"
+        },
+        {
+          "vi": "xong",
+          "en": "finish",
+          "audio": "audio/words/{voice}/xong.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "làm",
+          "en": "do",
+          "audio": "audio/words/{voice}/lam.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "After eating I listen to music, then go to sleep. And you?",
+      "audio": "audio/lesson3/{voice}/sentence_14.m4a",
+      "phrases": [
+        {
+          "vi": "Ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "cơm",
+          "en": "rice",
+          "audio": "audio/words/{voice}/com.mp3"
+        },
+        {
+          "vi": "xong",
+          "en": "finish",
+          "audio": "audio/words/{voice}/xong.mp3"
+        },
+        {
+          "vi": "mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "nghe nhạc",
+          "en": "listen to music",
+          "audio": "audio/words/{voice}/nghe_nhac.mp3"
+        },
+        {
+          "vi": "rồi",
+          "en": "then",
+          "audio": "audio/words/{voice}/roi.mp3"
+        },
+        {
+          "vi": "đi ngủ",
+          "en": "go to sleep",
+          "audio": "audio/words/{voice}/di_ngu.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Còn",
+          "en": "And",
+          "audio": "audio/words/{voice}/con.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "After getting home I watch a movie. Oh, have you eaten yet?",
+      "audio": "audio/lesson3/{voice}/sentence_15.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "về nhà",
+          "en": "go home",
+          "audio": "audio/words/{voice}/ve_nha.mp3"
+        },
+        {
+          "vi": "xong",
+          "en": "finish",
+          "audio": "audio/words/{voice}/xong.mp3"
+        },
+        {
+          "vi": "mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "xem phim",
+          "en": "watch a movie",
+          "audio": "audio/words/{voice}/xem_phim.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "À",
+          "en": "oh",
+          "audio": "audio/words/{voice}/a.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "cơm",
+          "en": "rice",
+          "audio": "audio/words/{voice}/com.mp3"
+        },
+        {
+          "vi": "chưa",
+          "en": "yet?",
+          "audio": "audio/words/{voice}/chua.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Yes, I already ate. Have you eaten yet?",
+      "audio": "audio/lesson3/{voice}/sentence_16.m4a",
+      "phrases": [
+        {
+          "vi": "Rồi",
+          "en": "already",
+          "audio": "audio/words/{voice}/roi.mp3"
+        },
+        {
+          "vi": "mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "rồi",
+          "en": "already",
+          "audio": "audio/words/{voice}/roi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Bạn",
+          "en": "you",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "chưa",
+          "en": "yet?",
+          "audio": "audio/words/{voice}/chua.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I already ate too.",
+      "audio": "audio/lesson3/{voice}/sentence_17.m4a",
+      "phrases": [
+        {
+          "vi": "Mình",
+          "en": "I",
+          "audio": "audio/words/{voice}/minh.mp3"
+        },
+        {
+          "vi": "cũng",
+          "en": "also",
+          "audio": "audio/words/{voice}/cung.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "rồi",
+          "en": "already",
+          "audio": "audio/words/{voice}/roi.mp3"
+        }
+      ]
+    }
+  ]
+}
