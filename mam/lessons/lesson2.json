@@ -16,7 +16,7 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/words/{voice}/chào.mp3"
+          "audio": "audio/words/{voice}/chao.mp3"
         },
         {
           "vi": "anh",
@@ -39,12 +39,12 @@
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/words/{voice}/khoẻ.mp3"
+          "audio": "audio/words/{voice}/khoe.mp3"
         },
         {
           "vi": "không",
           "en": "(or not)",
-          "audio": "audio/words/{voice}/không.mp3"
+          "audio": "audio/words/{voice}/khong.mp3"
         }
       ]
     },
@@ -55,12 +55,12 @@
         {
           "vi": "Chào",
           "en": "Hello",
-          "audio": "audio/words/{voice}/chào.mp3"
+          "audio": "audio/words/{voice}/chao.mp3"
         },
         {
           "vi": "Hương",
           "en": "Hương",
-          "audio": "audio/words/{voice}/hương.mp3"
+          "audio": "audio/words/{voice}/huong.mp3"
         },
         {
           "br": true
@@ -73,7 +73,7 @@
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/words/{voice}/khoẻ.mp3"
+          "audio": "audio/words/{voice}/khoe.mp3"
         },
         {
           "br": true
@@ -81,7 +81,7 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "em",
@@ -102,7 +102,7 @@
         {
           "vi": "khoẻ",
           "en": "well",
-          "audio": "audio/words/{voice}/khoẻ.mp3"
+          "audio": "audio/words/{voice}/khoe.mp3"
         },
         {
           "br": true
@@ -110,7 +110,7 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/words/{voice}/sáng.mp3"
+          "audio": "audio/words/{voice}/sang.mp3"
         },
         {
           "vi": "nay",
@@ -125,12 +125,12 @@
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/words/{voice}/gì.mp3"
+          "audio": "audio/words/{voice}/gi.mp3"
         }
       ]
     },
@@ -141,7 +141,7 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/words/{voice}/sáng.mp3"
+          "audio": "audio/words/{voice}/sang.mp3"
         },
         {
           "vi": "nay",
@@ -156,12 +156,12 @@
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/words/{voice}/đi.mp3"
+          "audio": "audio/words/{voice}/di.mp3"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "br": true
@@ -169,7 +169,7 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "em",
@@ -185,7 +185,7 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/words/{voice}/sáng.mp3"
+          "audio": "audio/words/{voice}/sang.mp3"
         },
         {
           "vi": "nay",
@@ -200,27 +200,27 @@
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "bún bò",
           "en": "beef noodles",
-          "audio": "audio/words/{voice}/bún_bò.mp3"
+          "audio": "audio/words/{voice}/bun_bo.mp3"
         },
         {
           "vi": "rồi",
           "en": "then",
-          "audio": "audio/words/{voice}/rồi.mp3"
+          "audio": "audio/words/{voice}/roi.mp3"
         },
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/words/{voice}/đi.mp3"
+          "audio": "audio/words/{voice}/di.mp3"
         },
         {
           "vi": "làm",
           "en": "work",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "br": true
@@ -228,7 +228,7 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/words/{voice}/sáng.mp3"
+          "audio": "audio/words/{voice}/sang.mp3"
         },
         {
           "vi": "nay",
@@ -243,12 +243,12 @@
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/words/{voice}/gì.mp3"
+          "audio": "audio/words/{voice}/gi.mp3"
         }
       ]
     },
@@ -259,7 +259,7 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/words/{voice}/sáng.mp3"
+          "audio": "audio/words/{voice}/sang.mp3"
         },
         {
           "vi": "nay",
@@ -274,12 +274,12 @@
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "bánh xèo",
           "en": "savory pancake",
-          "audio": "audio/words/{voice}/bánh_xèo.mp3"
+          "audio": "audio/words/{voice}/banh_xeo.mp3"
         },
         {
           "br": true
@@ -287,7 +287,7 @@
         {
           "vi": "Sáng",
           "en": "morning",
-          "audio": "audio/words/{voice}/sáng.mp3"
+          "audio": "audio/words/{voice}/sang.mp3"
         },
         {
           "vi": "qua",
@@ -302,17 +302,17 @@
         {
           "vi": "cũng",
           "en": "also",
-          "audio": "audio/words/{voice}/cũng.mp3"
+          "audio": "audio/words/{voice}/cung.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "bún bò",
           "en": "beef noodles",
-          "audio": "audio/words/{voice}/bún_bò.mp3"
+          "audio": "audio/words/{voice}/bun_bo.mp3"
         }
       ]
     },
@@ -323,12 +323,12 @@
         {
           "vi": "Vậy",
           "en": "so",
-          "audio": "audio/words/{voice}/vậy.mp3"
+          "audio": "audio/words/{voice}/vay.mp3"
         },
         {
           "vi": "hả",
           "en": "really?",
-          "audio": "audio/words/{voice}/hả.mp3"
+          "audio": "audio/words/{voice}/ha.mp3"
         },
         {
           "vi": "anh",
@@ -341,12 +341,12 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "tối",
           "en": "evening",
-          "audio": "audio/words/{voice}/tối.mp3"
+          "audio": "audio/words/{voice}/toi.mp3"
         },
         {
           "vi": "anh",
@@ -356,17 +356,17 @@
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/words/{voice}/thường.mp3"
+          "audio": "audio/words/{voice}/thuong.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/words/{voice}/gì.mp3"
+          "audio": "audio/words/{voice}/gi.mp3"
         }
       ]
     },
@@ -377,7 +377,7 @@
         {
           "vi": "Tối",
           "en": "evening",
-          "audio": "audio/words/{voice}/tối.mp3"
+          "audio": "audio/words/{voice}/toi.mp3"
         },
         {
           "vi": "anh",
@@ -387,17 +387,17 @@
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/words/{voice}/thường.mp3"
+          "audio": "audio/words/{voice}/thuong.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "cơm",
           "en": "rice",
-          "audio": "audio/words/{voice}/cơm.mp3"
+          "audio": "audio/words/{voice}/com.mp3"
         },
         {
           "vi": "canh",
@@ -412,12 +412,12 @@
         {
           "vi": "với",
           "en": "with",
-          "audio": "audio/words/{voice}/với.mp3"
+          "audio": "audio/words/{voice}/voi.mp3"
         },
         {
           "vi": "thịt",
           "en": "meat",
-          "audio": "audio/words/{voice}/thịt.mp3"
+          "audio": "audio/words/{voice}/thit.mp3"
         },
         {
           "br": true
@@ -425,7 +425,7 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "em",
@@ -446,22 +446,22 @@
         {
           "vi": "cũng",
           "en": "also",
-          "audio": "audio/words/{voice}/cũng.mp3"
+          "audio": "audio/words/{voice}/cung.mp3"
         },
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/words/{voice}/thường.mp3"
+          "audio": "audio/words/{voice}/thuong.mp3"
         },
         {
           "vi": "ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "cơm",
           "en": "rice",
-          "audio": "audio/words/{voice}/cơm.mp3"
+          "audio": "audio/words/{voice}/com.mp3"
         },
         {
           "vi": "rau",
@@ -471,12 +471,12 @@
         {
           "vi": "với",
           "en": "with",
-          "audio": "audio/words/{voice}/với.mp3"
+          "audio": "audio/words/{voice}/voi.mp3"
         },
         {
           "vi": "thịt",
           "en": "meat",
-          "audio": "audio/words/{voice}/thịt.mp3"
+          "audio": "audio/words/{voice}/thit.mp3"
         },
         {
           "br": true
@@ -484,7 +484,7 @@
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "xong",
@@ -499,17 +499,17 @@
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/words/{voice}/thường.mp3"
+          "audio": "audio/words/{voice}/thuong.mp3"
         },
         {
           "vi": "làm",
           "en": "do",
-          "audio": "audio/words/{voice}/làm.mp3"
+          "audio": "audio/words/{voice}/lam.mp3"
         },
         {
           "vi": "gì",
           "en": "what",
-          "audio": "audio/words/{voice}/gì.mp3"
+          "audio": "audio/words/{voice}/gi.mp3"
         }
       ]
     },
@@ -520,7 +520,7 @@
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "xong",
@@ -535,22 +535,22 @@
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/words/{voice}/thường.mp3"
+          "audio": "audio/words/{voice}/thuong.mp3"
         },
         {
           "vi": "rửa",
           "en": "wash",
-          "audio": "audio/words/{voice}/rửa.mp3"
+          "audio": "audio/words/{voice}/rua.mp3"
         },
         {
           "vi": "chén",
           "en": "dishes",
-          "audio": "audio/words/{voice}/chén.mp3"
+          "audio": "audio/words/{voice}/chen.mp3"
         },
         {
           "vi": "và",
           "en": "and",
-          "audio": "audio/words/{voice}/và.mp3"
+          "audio": "audio/words/{voice}/va.mp3"
         },
         {
           "vi": "xem",
@@ -568,7 +568,7 @@
         {
           "vi": "Còn",
           "en": "And",
-          "audio": "audio/words/{voice}/còn.mp3"
+          "audio": "audio/words/{voice}/con.mp3"
         },
         {
           "vi": "em",
@@ -584,7 +584,7 @@
         {
           "vi": "Ăn",
           "en": "eat",
-          "audio": "audio/words/{voice}/ăn.mp3"
+          "audio": "audio/words/{voice}/an.mp3"
         },
         {
           "vi": "xong",
@@ -599,32 +599,32 @@
         {
           "vi": "thường",
           "en": "usually",
-          "audio": "audio/words/{voice}/thường.mp3"
+          "audio": "audio/words/{voice}/thuong.mp3"
         },
         {
           "vi": "học",
           "en": "study",
-          "audio": "audio/words/{voice}/học.mp3"
+          "audio": "audio/words/{voice}/hoc.mp3"
         },
         {
           "vi": "tiếng Anh",
           "en": "English",
-          "audio": "audio/words/{voice}/tiếng_anh.mp3"
+          "audio": "audio/words/{voice}/tieng_anh.mp3"
         },
         {
           "vi": "rồi",
           "en": "then",
-          "audio": "audio/words/{voice}/rồi.mp3"
+          "audio": "audio/words/{voice}/roi.mp3"
         },
         {
           "vi": "đi",
           "en": "go",
-          "audio": "audio/words/{voice}/đi.mp3"
+          "audio": "audio/words/{voice}/di.mp3"
         },
         {
           "vi": "ngủ",
           "en": "sleep",
-          "audio": "audio/words/{voice}/ngủ.mp3"
+          "audio": "audio/words/{voice}/ngu.mp3"
         }
       ]
     }
