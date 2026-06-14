@@ -193,6 +193,7 @@
             }
           } catch (e) { /* bỏ qua, dùng fallback bên dưới */ }
         }
+        if ($level) $level.value = lessonLevel;
 
         const path = lessonLevel
           ? lessonLevel + '/lessons/' + lessonId + '.json'
