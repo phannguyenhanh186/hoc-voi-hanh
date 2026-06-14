@@ -30,5 +30,13 @@
     "titleEn": "Hour and Minute",
     "level": "mam",
     "description": "Việt and Hồng are asking about their near-future plans."
+  },
+  {
+    "id": "lesson5",
+    "num": 5,
+    "title": "Em sinh ngày…",
+    "titleEn": "Date of birth",
+    "level": "mam",
+    "description": "Two people are asking about Mai's and their dates of birth — and one of their birthdays is coming up soon!"
   }
 ]
