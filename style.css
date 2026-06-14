@@ -1,8 +1,22 @@
 /* ============================================================
    hoc voi hanh — stylesheet (theo prototype)
    bg #F8F8F8 · purple #C0BFF9 · yellow #FFDC9A
-   Font: Be Vietnam Pro (đủ dấu tiếng Việt)
+   Font: tự host — đặt file vào fonts/main.<ext> (xem @font-face)
    ============================================================ */
+
+/* Font tự host: bỏ 1 file font vào thư mục fonts/ với tên main.<ext>.
+   Hỗ trợ woff2 / woff / ttf / otf — trình duyệt tự chọn file có sẵn.
+   Font PHẢI đủ dấu tiếng Việt (ă â ê ô ơ ư + thanh). */
+@font-face {
+  font-family: "Main";
+  src: url("fonts/main.woff2") format("woff2"),
+       url("fonts/main.woff")  format("woff"),
+       url("fonts/main.ttf")   format("truetype"),
+       url("fonts/main.otf")   format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --bg:            #F8F8F8;
@@ -28,7 +42,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Main", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
