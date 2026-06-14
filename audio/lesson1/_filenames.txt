@@ -1,9 +1,9 @@
-# File audio can cho lesson1 (.m4a) — dat vao thu muc nay
+# File audio can cho lesson1 (.m4a)
 
 full.m4a  ->  doc TOAN BO bai
 
-# Cau 1: Chào em Em tên là gì
-sentence_01.m4a  ->  ca cau
+# Luot 1: Chào em Em tên là gì
+sentence_01.m4a  ->  ca luot
 word_01.m4a  ->  "Chào"
 word_02.m4a  ->  "em"
 word_03.m4a  ->  "Em"
@@ -11,8 +11,8 @@ word_04.m4a  ->  "tên"
 word_05.m4a  ->  "là"
 word_06.m4a  ->  "gì"
 
-# Cau 2: Chào chị Em tên là Vân Còn chị
-sentence_02.m4a  ->  ca cau
+# Luot 2: Chào chị Em tên là Vân Còn chị
+sentence_02.m4a  ->  ca luot
 word_07.m4a  ->  "Chào"
 word_08.m4a  ->  "chị"
 word_09.m4a  ->  "Em"
@@ -22,8 +22,8 @@ word_12.m4a  ->  "Vân"
 word_13.m4a  ->  "Còn"
 word_14.m4a  ->  "chị"
 
-# Cau 3: Chị tên là Thơ Em là người Việt đúng không
-sentence_03.m4a  ->  ca cau
+# Luot 3: Chị tên là Thơ Em là người Việt đúng không
+sentence_03.m4a  ->  ca luot
 word_15.m4a  ->  "Chị"
 word_16.m4a  ->  "tên"
 word_17.m4a  ->  "là"
@@ -32,56 +32,54 @@ word_19.m4a  ->  "Em"
 word_20.m4a  ->  "là"
 word_21.m4a  ->  "người"
 word_22.m4a  ->  "Việt"
-word_23.m4a  ->  "đúng"
-word_24.m4a  ->  "không"
+word_23.m4a  ->  "đúng không"
 
-# Cau 4: Không Em là người Trung Còn chị Chị là người Việt đúng không
-sentence_04.m4a  ->  ca cau
-word_25.m4a  ->  "Không"
-word_26.m4a  ->  "Em"
-word_27.m4a  ->  "là"
-word_28.m4a  ->  "người"
-word_29.m4a  ->  "Trung"
-word_30.m4a  ->  "Còn"
-word_31.m4a  ->  "chị"
-word_32.m4a  ->  "Chị"
-word_33.m4a  ->  "là"
-word_34.m4a  ->  "người"
-word_35.m4a  ->  "Việt"
-word_36.m4a  ->  "đúng"
-word_37.m4a  ->  "không"
+# Luot 4: Không Em là người Trung Còn chị Chị là người Việt đúng không
+sentence_04.m4a  ->  ca luot
+word_24.m4a  ->  "Không"
+word_25.m4a  ->  "Em"
+word_26.m4a  ->  "là"
+word_27.m4a  ->  "người"
+word_28.m4a  ->  "Trung"
+word_29.m4a  ->  "Còn"
+word_30.m4a  ->  "chị"
+word_31.m4a  ->  "Chị"
+word_32.m4a  ->  "là"
+word_33.m4a  ->  "người"
+word_34.m4a  ->  "Việt"
+word_35.m4a  ->  "đúng không"
 
-# Cau 5: Đúng Chị là người Việt Em làm nghề gì
-sentence_05.m4a  ->  ca cau
-word_38.m4a  ->  "Đúng"
-word_39.m4a  ->  "Chị"
-word_40.m4a  ->  "là"
-word_41.m4a  ->  "người"
-word_42.m4a  ->  "Việt"
-word_43.m4a  ->  "Em"
-word_44.m4a  ->  "làm"
-word_45.m4a  ->  "nghề"
-word_46.m4a  ->  "gì"
+# Luot 5: Đúng Chị là người Việt Em làm nghề gì
+sentence_05.m4a  ->  ca luot
+word_36.m4a  ->  "Đúng"
+word_37.m4a  ->  "Chị"
+word_38.m4a  ->  "là"
+word_39.m4a  ->  "người"
+word_40.m4a  ->  "Việt"
+word_41.m4a  ->  "Em"
+word_42.m4a  ->  "làm"
+word_43.m4a  ->  "nghề"
+word_44.m4a  ->  "gì"
 
-# Cau 6: Em làm phục vụ ở quán cà phê Còn chị
-sentence_06.m4a  ->  ca cau
-word_47.m4a  ->  "Em"
-word_48.m4a  ->  "làm"
-word_49.m4a  ->  "phục vụ"
-word_50.m4a  ->  "ở"
-word_51.m4a  ->  "quán"
-word_52.m4a  ->  "cà phê"
-word_53.m4a  ->  "Còn"
-word_54.m4a  ->  "chị"
+# Luot 6: Em làm phục vụ ở quán cà phê Còn chị
+sentence_06.m4a  ->  ca luot
+word_45.m4a  ->  "Em"
+word_46.m4a  ->  "làm"
+word_47.m4a  ->  "phục vụ"
+word_48.m4a  ->  "ở"
+word_49.m4a  ->  "quán"
+word_50.m4a  ->  "cà phê"
+word_51.m4a  ->  "Còn"
+word_52.m4a  ->  "chị"
 
-# Cau 7: Chị làm giáo viên Chị làm ở trường đại học Sài Gòn
-sentence_07.m4a  ->  ca cau
-word_55.m4a  ->  "Chị"
-word_56.m4a  ->  "làm"
-word_57.m4a  ->  "giáo viên"
-word_58.m4a  ->  "Chị"
-word_59.m4a  ->  "làm"
-word_60.m4a  ->  "ở"
-word_61.m4a  ->  "trường"
-word_62.m4a  ->  "đại học"
-word_63.m4a  ->  "Sài Gòn"
+# Luot 7: Chị làm giáo viên Chị làm ở trường đại học Sài Gòn
+sentence_07.m4a  ->  ca luot
+word_53.m4a  ->  "Chị"
+word_54.m4a  ->  "làm"
+word_55.m4a  ->  "giáo viên"
+word_56.m4a  ->  "Chị"
+word_57.m4a  ->  "làm"
+word_58.m4a  ->  "ở"
+word_59.m4a  ->  "trường"
+word_60.m4a  ->  "đại học"
+word_61.m4a  ->  "Sài Gòn"
