@@ -1,0 +1,116 @@
+{
+  "id": "lesson4",
+  "title": "Từ vựng",
+  "sections": [
+    {
+      "label": "Số đếm (Numbers 0–20)",
+      "items": [
+        {
+          "vi": "không",
+          "en": "0"
+        },
+        {
+          "vi": "một",
+          "en": "1"
+        },
+        {
+          "vi": "hai",
+          "en": "2"
+        },
+        {
+          "vi": "ba",
+          "en": "3"
+        },
+        {
+          "vi": "bốn",
+          "en": "4"
+        },
+        {
+          "vi": "năm",
+          "en": "5"
+        },
+        {
+          "vi": "sáu",
+          "en": "6"
+        },
+        {
+          "vi": "bảy",
+          "en": "7"
+        },
+        {
+          "vi": "tám",
+          "en": "8"
+        },
+        {
+          "vi": "chín",
+          "en": "9"
+        },
+        {
+          "vi": "mười",
+          "en": "10"
+        },
+        {
+          "vi": "mười một",
+          "en": "11"
+        },
+        {
+          "vi": "mười hai",
+          "en": "12"
+        },
+        {
+          "vi": "mười ba",
+          "en": "13"
+        },
+        {
+          "vi": "mười bốn",
+          "en": "14"
+        },
+        {
+          "vi": "mười lăm",
+          "en": "15"
+        },
+        {
+          "vi": "mười sáu",
+          "en": "16"
+        },
+        {
+          "vi": "mười bảy",
+          "en": "17"
+        },
+        {
+          "vi": "mười tám",
+          "en": "18"
+        },
+        {
+          "vi": "mười chín",
+          "en": "19"
+        },
+        {
+          "vi": "hai mươi",
+          "en": "20"
+        }
+      ]
+    },
+    {
+      "label": "Từ chỉ thời gian (Time words)",
+      "items": [
+        {
+          "vi": "Giờ",
+          "en": "Hour / O'clock"
+        },
+        {
+          "vi": "Phút",
+          "en": "Minute"
+        },
+        {
+          "vi": "Bây giờ",
+          "en": "Now"
+        },
+        {
+          "vi": "Lát",
+          "en": "Later"
+        }
+      ]
+    }
+  ]
+}
