@@ -354,11 +354,6 @@
           "vi": "giờ",
           "en": "o'clock",
           "audio": "audio/words/{voice}/gio.mp3"
-        },
-        {
-          "vi": "vậy",
-          "en": "(particle)",
-          "audio": "audio/words/{voice}/vay.mp3"
         }
       ]
     },
