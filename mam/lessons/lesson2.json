@@ -173,14 +173,9 @@
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
-          "vi": "đi",
-          "en": "go",
-          "audio": "audio/words/{voice}/di.mp3"
-        },
-        {
-          "vi": "làm",
-          "en": "work",
-          "audio": "audio/words/{voice}/lam.mp3"
+          "vi": "đi làm",
+          "en": "go to work",
+          "audio": "audio/words/{voice}/di_lam.mp3"
         },
         {
           "br": true
@@ -232,14 +227,9 @@
           "audio": "audio/words/{voice}/roi.mp3"
         },
         {
-          "vi": "đi",
-          "en": "go",
-          "audio": "audio/words/{voice}/di.mp3"
-        },
-        {
-          "vi": "làm",
-          "en": "work",
-          "audio": "audio/words/{voice}/lam.mp3"
+          "vi": "đi làm",
+          "en": "go to work",
+          "audio": "audio/words/{voice}/di_lam.mp3"
         },
         {
           "br": true
@@ -340,14 +330,9 @@
       "audio": "audio/lesson2/{voice}/sentence_07.m4a",
       "phrases": [
         {
-          "vi": "Vậy",
-          "en": "so",
-          "audio": "audio/words/{voice}/vay.mp3"
-        },
-        {
-          "vi": "hả",
-          "en": "really?",
-          "audio": "audio/words/{voice}/ha.mp3"
+          "vi": "Vậy hả",
+          "en": "is that so?",
+          "audio": "audio/words/{voice}/vay_ha.mp3"
         },
         {
           "vi": "anh",
@@ -557,14 +542,9 @@
           "audio": "audio/words/{voice}/thuong.mp3"
         },
         {
-          "vi": "rửa",
-          "en": "wash",
-          "audio": "audio/words/{voice}/rua.mp3"
-        },
-        {
-          "vi": "chén",
-          "en": "dishes",
-          "audio": "audio/words/{voice}/chen.mp3"
+          "vi": "rửa chén",
+          "en": "wash the dishes",
+          "audio": "audio/words/{voice}/rua_chen.mp3"
         },
         {
           "vi": "và",
@@ -572,14 +552,9 @@
           "audio": "audio/words/{voice}/va.mp3"
         },
         {
-          "vi": "xem",
-          "en": "watch",
-          "audio": "audio/words/{voice}/xem.mp3"
-        },
-        {
-          "vi": "phim",
-          "en": "movie",
-          "audio": "audio/words/{voice}/phim.mp3"
+          "vi": "xem phim",
+          "en": "watch a movie",
+          "audio": "audio/words/{voice}/xem_phim.mp3"
         },
         {
           "br": true
@@ -636,14 +611,9 @@
           "audio": "audio/words/{voice}/roi.mp3"
         },
         {
-          "vi": "đi",
-          "en": "go",
-          "audio": "audio/words/{voice}/di.mp3"
-        },
-        {
-          "vi": "ngủ",
-          "en": "sleep",
-          "audio": "audio/words/{voice}/ngu.mp3"
+          "vi": "đi ngủ",
+          "en": "go to sleep",
+          "audio": "audio/words/{voice}/di_ngu.mp3"
         }
       ]
     }
