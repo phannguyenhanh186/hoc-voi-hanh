@@ -703,11 +703,6 @@
           "br": true
         },
         {
-          "vi": "À",
-          "en": "oh",
-          "audio": "audio/words/{voice}/a.mp3"
-        },
-        {
           "vi": "bạn",
           "en": "you",
           "audio": "audio/words/{voice}/ban.mp3"
