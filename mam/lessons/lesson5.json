@@ -37,7 +37,7 @@
       "phrases": [
         {
           "vi": "Anh",
-          "en": "you (anh)",
+          "en": "older brother",
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
@@ -52,7 +52,7 @@
         },
         {
           "vi": "chị",
-          "en": "Ms.",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -165,7 +165,7 @@
         },
         {
           "vi": "anh",
-          "en": "than you (anh)",
+          "en": "older brother",
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
@@ -183,7 +183,7 @@
         },
         {
           "vi": "Em",
-          "en": "you (em)",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -204,7 +204,7 @@
       "phrases": [
         {
           "vi": "Em",
-          "en": "I (em)",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -222,7 +222,7 @@
         },
         {
           "vi": "Anh",
-          "en": "I (anh)",
+          "en": "older brother",
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
@@ -237,7 +237,7 @@
         },
         {
           "vi": "em",
-          "en": "than you (em)",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -258,7 +258,7 @@
       "phrases": [
         {
           "vi": "Em",
-          "en": "you (em)",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -284,7 +284,7 @@
       "phrases": [
         {
           "vi": "Em",
-          "en": "I (em)",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -410,7 +410,7 @@
         },
         {
           "vi": "em",
-          "en": "your (em)",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -444,7 +444,7 @@
         },
         {
           "vi": "anh",
-          "en": "(to) you (anh)",
+          "en": "older brother",
           "audio": "audio/words/{voice}/anh.mp3"
         }
       ]
