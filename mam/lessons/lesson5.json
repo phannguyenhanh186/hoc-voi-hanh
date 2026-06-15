@@ -41,9 +41,14 @@
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
-          "vi": "có biết",
-          "en": "(do you) know",
-          "audio": "audio/words/{voice}/co_biet.mp3"
+          "vi": "có",
+          "en": "(do)",
+          "audio": "audio/words/{voice}/co.mp3"
+        },
+        {
+          "vi": "biết",
+          "en": "know",
+          "audio": "audio/words/{voice}/biet.mp3"
         },
         {
           "vi": "chị",
@@ -56,9 +61,14 @@
           "audio": "audio/words/{voice}/mai.mp3"
         },
         {
-          "vi": "sinh ngày",
-          "en": "born on",
-          "audio": "audio/words/{voice}/sinh_ngay.mp3"
+          "vi": "sinh",
+          "en": "born",
+          "audio": "audio/words/{voice}/sinh.mp3"
+        },
+        {
+          "vi": "ngày",
+          "en": "day",
+          "audio": "audio/words/{voice}/ngay.mp3"
         },
         {
           "vi": "mấy",
@@ -144,9 +154,14 @@
           "audio": "audio/words/{voice}/chi_ay.mp3"
         },
         {
-          "vi": "nhỏ hơn",
-          "en": "younger than",
-          "audio": "audio/words/{voice}/nho_hon.mp3"
+          "vi": "nhỏ",
+          "en": "younger",
+          "audio": "audio/words/{voice}/nho.mp3"
+        },
+        {
+          "vi": "hơn",
+          "en": "than",
+          "audio": "audio/words/{voice}/hon.mp3"
         },
         {
           "vi": "anh",
@@ -211,9 +226,14 @@
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
-          "vi": "lớn hơn",
-          "en": "older than",
-          "audio": "audio/words/{voice}/lon_hon.mp3"
+          "vi": "lớn",
+          "en": "older",
+          "audio": "audio/words/{voice}/lon.mp3"
+        },
+        {
+          "vi": "hơn",
+          "en": "than",
+          "audio": "audio/words/{voice}/hon.mp3"
         },
         {
           "vi": "em",
@@ -242,9 +262,14 @@
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
-          "vi": "sinh ngày",
-          "en": "born on",
-          "audio": "audio/words/{voice}/sinh_ngay.mp3"
+          "vi": "sinh",
+          "en": "born",
+          "audio": "audio/words/{voice}/sinh.mp3"
+        },
+        {
+          "vi": "ngày",
+          "en": "day",
+          "audio": "audio/words/{voice}/ngay.mp3"
         },
         {
           "vi": "mấy",
@@ -263,9 +288,14 @@
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
-          "vi": "sinh ngày",
-          "en": "born on",
-          "audio": "audio/words/{voice}/sinh_ngay.mp3"
+          "vi": "sinh",
+          "en": "born",
+          "audio": "audio/words/{voice}/sinh.mp3"
+        },
+        {
+          "vi": "ngày",
+          "en": "day",
+          "audio": "audio/words/{voice}/ngay.mp3"
         },
         {
           "vi": "mười lăm",
