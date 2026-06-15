@@ -1,0 +1,47 @@
+{
+  "id": "ruoi_so",
+  "title": "rưỡi (số)",
+  "terms": [
+    "rưỡi"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Beyond time (7 giờ rưỡi = 7:30), \"rưỡi\" also means \"and a half\" with large numbers / money — half of the next unit."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Một trăm rưỡi",
+          "en": "150 (100 + 50)"
+        },
+        {
+          "type": "example",
+          "vi": "Hai ngàn rưỡi",
+          "en": "2,500 (2000 + 500)"
+        },
+        {
+          "type": "example",
+          "vi": "Một triệu rưỡi",
+          "en": "1,500,000"
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"rưỡi\" = half of the unit just mentioned (100 → +50, 1,000 → +500, etc.)"
+        }
+      ]
+    }
+  ]
+}
