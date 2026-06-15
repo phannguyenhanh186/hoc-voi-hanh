@@ -23,13 +23,8 @@
       "blocks": [
         {
           "type": "example",
-          "vi": "Anh sinh ngày bao nhiêu?",
-          "en": "What is your date of birth?"
-        },
-        {
-          "type": "example",
-          "vi": "Em sinh ngày 20 tháng 8 năm 1998.",
-          "en": "My date of birth is August 20th, 1998."
+          "vi": "Anh sinh ngày bao nhiêu? → Em sinh ngày 20 tháng 8 năm 1998.",
+          "en": "What is your date of birth? → My date of birth is August 20th, 1998."
         }
       ]
     }
