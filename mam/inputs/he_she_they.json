@@ -1,0 +1,86 @@
+{
+  "id": "he_she_they",
+  "title": "he / she / they",
+  "terms": [
+    "ấy"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Used to refer to a third person (not directly addressed), formed by adding \"ấy\" after a pronoun."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Pronoun] + ấy"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Anh ấy",
+          "en": "He / him (an older male, third person)"
+        },
+        {
+          "type": "example",
+          "vi": "Chị ấy",
+          "en": "She / her (an older female, third person)"
+        },
+        {
+          "type": "example",
+          "vi": "Bạn ấy",
+          "en": "He / She / They (a friend or peer, any gender)"
+        },
+        {
+          "type": "example",
+          "vi": "Em ấy",
+          "en": "He / She / They (a younger person, any gender)"
+        }
+      ]
+    },
+    {
+      "label": "In sentences",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Anh ấy bao nhiêu tuổi?",
+          "en": "How old is he?"
+        },
+        {
+          "type": "example",
+          "vi": "Chị ấy thích uống trà.",
+          "en": "She likes drinking tea."
+        },
+        {
+          "type": "example",
+          "vi": "Bạn ấy sinh ngày 20 tháng 8.",
+          "en": "They (he/she) were born on August 20th."
+        },
+        {
+          "type": "example",
+          "vi": "Hình như em ấy không biết.",
+          "en": "It seems like they (he/she) doesn't know."
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"ấy\" can be added to most pronouns (cô ấy, chú ấy, ông ấy, bà ấy…) to refer to that person in the third person."
+        }
+      ]
+    }
+  ]
+}
