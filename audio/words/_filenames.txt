@@ -1,5 +1,6 @@
 # TU dung chung moi bai (.mp3, KHONG DAU). 2 ban: audio/words/nam/ va audio/words/bac/
 # Tu lap lai dung chung 1 file.
+# OVERRIDE: 'tư' -> t4.mp3 (tranh trung 'từ')
 
 anh.mp3  ->  "anh"
 ba_lam.mp3  ->  "ba lăm"
@@ -95,7 +96,7 @@ truong.mp3  ->  "trường"
 tuoi.mp3  ->  "tuổi"
 tam.mp3  ->  "tám"
 ten.mp3  ->  "tên"
-tu.mp3  ->  "tư"
+t4.mp3  ->  "tư"
 tap_the_duc.mp3  ->  "tập thể dục"
 toi.mp3  ->  "tối"
 uong.mp3  ->  "uống"
