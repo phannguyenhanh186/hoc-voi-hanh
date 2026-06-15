@@ -1,0 +1,573 @@
+{
+  "id": "lesson6",
+  "title": "Cho em…",
+  "description": "Two friends are trying to order food and drinks in a Vietnamese eatery.",
+  "inputs": [
+    {
+      "id": "muon",
+      "title": "muốn"
+    },
+    {
+      "id": "cho",
+      "title": "Cho..."
+    },
+    {
+      "id": "prices",
+      "title": "Prices"
+    },
+    {
+      "id": "cua",
+      "title": "của..."
+    },
+    {
+      "id": "gi_nua",
+      "title": "gì nữa"
+    },
+    {
+      "id": "da",
+      "title": "Dạ"
+    },
+    {
+      "id": "mot_chut",
+      "title": "một chút"
+    }
+  ],
+  "vocab": "lesson6",
+  "fullAudio": "audio/lesson6/{voice}/full.m4a",
+  "sentences": [
+    {
+      "translation": "Hello. What would you like to have?",
+      "audio": "audio/lesson6/{voice}/sentence_01.m4a",
+      "phrases": [
+        {
+          "vi": "Chào",
+          "en": "hello",
+          "audio": "audio/words/{voice}/chao.mp3"
+        },
+        {
+          "vi": "anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "muốn",
+          "en": "want",
+          "audio": "audio/words/{voice}/muon.mp3"
+        },
+        {
+          "vi": "dùng",
+          "en": "have",
+          "audio": "audio/words/{voice}/dung.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I'll have one black coffee with less sugar. What would you like to drink, Hương?",
+      "audio": "audio/lesson6/{voice}/sentence_02.m4a",
+      "phrases": [
+        {
+          "vi": "Cho",
+          "en": "give",
+          "audio": "audio/words/{voice}/cho.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "một",
+          "en": "one",
+          "audio": "audio/words/{voice}/mot.mp3"
+        },
+        {
+          "vi": "cà phê",
+          "en": "coffee",
+          "audio": "audio/words/{voice}/ca_phe.mp3"
+        },
+        {
+          "vi": "đen",
+          "en": "black",
+          "audio": "audio/words/{voice}/den.mp3"
+        },
+        {
+          "vi": "ít",
+          "en": "less",
+          "audio": "audio/words/{voice}/it.mp3"
+        },
+        {
+          "vi": "đường",
+          "en": "sugar",
+          "audio": "audio/words/{voice}/duong.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "Hương",
+          "en": "Hương",
+          "audio": "audio/words/{voice}/huong.mp3"
+        },
+        {
+          "vi": "muốn",
+          "en": "want",
+          "audio": "audio/words/{voice}/muon.mp3"
+        },
+        {
+          "vi": "uống",
+          "en": "drink",
+          "audio": "audio/words/{voice}/uong.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I'll have one green tea with a bit more ice.",
+      "audio": "audio/lesson6/{voice}/sentence_03.m4a",
+      "phrases": [
+        {
+          "vi": "Cho",
+          "en": "give",
+          "audio": "audio/words/{voice}/cho.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "một",
+          "en": "one",
+          "audio": "audio/words/{voice}/mot.mp3"
+        },
+        {
+          "vi": "trà xanh",
+          "en": "green tea",
+          "audio": "audio/words/{voice}/tra_xanh.mp3"
+        },
+        {
+          "vi": "nhiều",
+          "en": "more",
+          "audio": "audio/words/{voice}/nhieu.mp3"
+        },
+        {
+          "vi": "đá",
+          "en": "ice",
+          "audio": "audio/words/{voice}/dda.mp3"
+        },
+        {
+          "vi": "một chút",
+          "en": "a bit",
+          "audio": "audio/words/{voice}/mot_chut.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Okay. Would you like anything else?",
+      "audio": "audio/lesson6/{voice}/sentence_04.m4a",
+      "phrases": [
+        {
+          "vi": "Dạ",
+          "en": "(polite)",
+          "audio": "audio/words/{voice}/da.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "muốn",
+          "en": "want",
+          "audio": "audio/words/{voice}/muon.mp3"
+        },
+        {
+          "vi": "dùng",
+          "en": "have",
+          "audio": "audio/words/{voice}/dung.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        },
+        {
+          "vi": "nữa",
+          "en": "else",
+          "audio": "audio/words/{voice}/nua.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "? (question)",
+          "audio": "audio/words/{voice}/khong.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "No, thank you. How much is mine?",
+      "audio": "audio/lesson6/{voice}/sentence_05.m4a",
+      "phrases": [
+        {
+          "vi": "Dạ",
+          "en": "(polite)",
+          "audio": "audio/words/{voice}/da.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "no",
+          "audio": "audio/words/{voice}/khong.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Của",
+          "en": "of",
+          "audio": "audio/words/{voice}/cua.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "bao nhiêu",
+          "en": "how much",
+          "audio": "audio/words/{voice}/bao_nhieu.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "One black coffee with less sugar is 40,000, and one green tea with more milk is 55,000. Your total is 95,000. Will you have it here or take away?",
+      "audio": "audio/lesson6/{voice}/sentence_06.m4a",
+      "phrases": [
+        {
+          "vi": "Dạ",
+          "en": "(polite)",
+          "audio": "audio/words/{voice}/da.mp3"
+        },
+        {
+          "vi": "một",
+          "en": "one",
+          "audio": "audio/words/{voice}/mot.mp3"
+        },
+        {
+          "vi": "cà phê",
+          "en": "coffee",
+          "audio": "audio/words/{voice}/ca_phe.mp3"
+        },
+        {
+          "vi": "đen",
+          "en": "black",
+          "audio": "audio/words/{voice}/den.mp3"
+        },
+        {
+          "vi": "ít",
+          "en": "less",
+          "audio": "audio/words/{voice}/it.mp3"
+        },
+        {
+          "vi": "đường",
+          "en": "sugar",
+          "audio": "audio/words/{voice}/duong.mp3"
+        },
+        {
+          "vi": "bốn mươi",
+          "en": "40",
+          "audio": "audio/words/{voice}/bon_muoi.mp3"
+        },
+        {
+          "vi": "ngàn",
+          "en": "thousand",
+          "audio": "audio/words/{voice}/ngan.mp3"
+        },
+        {
+          "vi": "và",
+          "en": "and",
+          "audio": "audio/words/{voice}/va.mp3"
+        },
+        {
+          "vi": "một",
+          "en": "one",
+          "audio": "audio/words/{voice}/mot.mp3"
+        },
+        {
+          "vi": "trà xanh",
+          "en": "green tea",
+          "audio": "audio/words/{voice}/tra_xanh.mp3"
+        },
+        {
+          "vi": "nhiều",
+          "en": "more",
+          "audio": "audio/words/{voice}/nhieu.mp3"
+        },
+        {
+          "vi": "sữa",
+          "en": "milk",
+          "audio": "audio/words/{voice}/sua.mp3"
+        },
+        {
+          "vi": "năm lăm",
+          "en": "55",
+          "audio": "audio/words/{voice}/nam_lam.mp3"
+        },
+        {
+          "vi": "ngàn",
+          "en": "thousand",
+          "audio": "audio/words/{voice}/ngan.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Của",
+          "en": "of",
+          "audio": "audio/words/{voice}/cua.mp3"
+        },
+        {
+          "vi": "anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "tổng",
+          "en": "total",
+          "audio": "audio/words/{voice}/tong.mp3"
+        },
+        {
+          "vi": "là",
+          "en": "is",
+          "audio": "audio/words/{voice}/la.mp3"
+        },
+        {
+          "vi": "chín lăm",
+          "en": "95",
+          "audio": "audio/words/{voice}/chin_lam.mp3"
+        },
+        {
+          "vi": "ngàn",
+          "en": "thousand",
+          "audio": "audio/words/{voice}/ngan.mp3"
+        },
+        {
+          "vi": "ạ",
+          "en": "(polite)",
+          "audio": "audio/words/{voice}/a.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "dùng",
+          "en": "have",
+          "audio": "audio/words/{voice}/dung.mp3"
+        },
+        {
+          "vi": "ở đây",
+          "en": "here",
+          "audio": "audio/words/{voice}/o_day.mp3"
+        },
+        {
+          "vi": "hay",
+          "en": "or",
+          "audio": "audio/words/{voice}/hay.mp3"
+        },
+        {
+          "vi": "mang về",
+          "en": "take away",
+          "audio": "audio/words/{voice}/mang_ve.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Here, please.",
+      "audio": "audio/lesson6/{voice}/sentence_07.m4a",
+      "phrases": [
+        {
+          "vi": "Dạ",
+          "en": "(polite)",
+          "audio": "audio/words/{voice}/da.mp3"
+        },
+        {
+          "vi": "ở đây",
+          "en": "here",
+          "audio": "audio/words/{voice}/o_day.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Will you pay by cash or card?",
+      "audio": "audio/lesson6/{voice}/sentence_08.m4a",
+      "phrases": [
+        {
+          "vi": "Dạ",
+          "en": "(polite)",
+          "audio": "audio/words/{voice}/da.mp3"
+        },
+        {
+          "vi": "anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "trả",
+          "en": "pay",
+          "audio": "audio/words/{voice}/tra.mp3"
+        },
+        {
+          "vi": "tiền mặt",
+          "en": "cash",
+          "audio": "audio/words/{voice}/tien_mat.mp3"
+        },
+        {
+          "vi": "hay",
+          "en": "or",
+          "audio": "audio/words/{voice}/hay.mp3"
+        },
+        {
+          "vi": "thẻ",
+          "en": "card",
+          "audio": "audio/words/{voice}/the.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I'll pay by card.",
+      "audio": "audio/lesson6/{voice}/sentence_09.m4a",
+      "phrases": [
+        {
+          "vi": "Cho",
+          "en": "give",
+          "audio": "audio/words/{voice}/cho.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "trả",
+          "en": "pay",
+          "audio": "audio/words/{voice}/tra.mp3"
+        },
+        {
+          "vi": "thẻ",
+          "en": "card",
+          "audio": "audio/words/{voice}/the.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Okay. Thank you. Enjoy your meal.",
+      "audio": "audio/lesson6/{voice}/sentence_10.m4a",
+      "phrases": [
+        {
+          "vi": "Dạ",
+          "en": "(polite)",
+          "audio": "audio/words/{voice}/da.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Cám ơn",
+          "en": "thanks",
+          "audio": "audio/words/{voice}/cam_on.mp3"
+        },
+        {
+          "vi": "anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chúc",
+          "en": "wish",
+          "audio": "audio/words/{voice}/chuc.mp3"
+        },
+        {
+          "vi": "anh",
+          "en": "older brother",
+          "audio": "audio/words/{voice}/anh.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "ngon miệng",
+          "en": "enjoy your meal",
+          "audio": "audio/words/{voice}/ngon_mieng.mp3"
+        }
+      ]
+    }
+  ]
+}
