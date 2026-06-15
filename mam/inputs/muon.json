@@ -1,0 +1,38 @@
+{
+  "id": "muon",
+  "title": "muốn",
+  "terms": [
+    "muốn"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Subject] + muốn + [verb/noun]"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Anh chị muốn dùng gì?",
+          "en": "What would you (anh/chị) like to have? (polite, used by staff)"
+        },
+        {
+          "type": "example",
+          "vi": "Em muốn uống cà phê.",
+          "en": "I want to drink coffee."
+        },
+        {
+          "type": "example",
+          "vi": "Bạn muốn ăn gì?",
+          "en": "What do you want to eat?"
+        }
+      ]
+    }
+  ]
+}
