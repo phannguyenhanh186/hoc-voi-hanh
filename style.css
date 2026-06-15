@@ -207,7 +207,7 @@ a { color: var(--accent-deep); text-decoration: none; }
   max-height: 1.6em; overflow: hidden;
   transition: max-height .18s ease, opacity .18s ease, margin .18s ease;
 }
-.hide-en .phrase .en { max-height: 0; opacity: 0; margin: 0; }
+.hide-en .phrase .en { display: none; }
 /* khi tắt nghĩa: các từ xích sát vào nhau (khung chữ Việt giữ nguyên) */
 .hide-en .phrases { gap: 2px 5px; }
 
