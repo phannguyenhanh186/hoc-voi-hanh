@@ -104,7 +104,8 @@ a { color: var(--accent-deep); text-decoration: none; }
 }
 .cards { display: grid; gap: 14px; padding-bottom: 56px; }
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--surface);
   border: 1.5px solid var(--stroke);
   border-radius: var(--radius);
@@ -127,7 +128,7 @@ a { color: var(--accent-deep); text-decoration: none; }
 .card h3 { margin: 0; font-size: 1.12rem; line-height: 1.3; }
 .title-en { font-weight: 400; color: var(--muted); font-size: .9rem; font-family: var(--font-body); }
 .card p { margin: 0; color: var(--muted); font-size: .96rem; }
-.card .go { margin-top: 10px; font-weight: 600; color: var(--accent-deep); font-size: .92rem; }
+.card .go { margin-top: auto; padding-top: 14px; font-weight: 600; color: var(--accent-deep); font-size: .92rem; }
 
 /* ---------- Lesson page ---------- */
 .lesson-head { padding: 26px 0 6px; }
