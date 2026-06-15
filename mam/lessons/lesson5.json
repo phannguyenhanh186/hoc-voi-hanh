@@ -9,15 +9,15 @@
     },
     {
       "id": "dob",
-      "title": "Date of birth"
+      "title": "DOB"
     },
     {
       "id": "age",
-      "title": "Age"
+      "title": "Tuổi"
     },
     {
       "id": "compare_age",
-      "title": "lớn / nhỏ hơn"
+      "title": "Lớn/Nhỏ hơn"
     },
     {
       "id": "co_biet",
@@ -25,7 +25,7 @@
     },
     {
       "id": "he_she_they",
-      "title": "he / she / they"
+      "title": "He/She"
     }
   ],
   "vocab": "lesson5",
