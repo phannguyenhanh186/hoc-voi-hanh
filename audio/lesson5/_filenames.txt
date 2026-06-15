@@ -2,13 +2,13 @@
 # (Tu le o audio/words/)
 
 full.m4a  ->  ca bai
-sentence_01.m4a  ->  Anh có biết chị Mai sinh ngày nào không
+sentence_01.m4a  ->  Anh có biết chị Mai sinh ngày mấy không
 sentence_02.m4a  ->  Hình như ngày ba mốt tháng tư / Chị ấy ba lăm tuổi đúng không
-sentence_03.m4a  ->  Đúng rồi / Chị ấy nhỏ hơn anh hai tuổi / Em bao nhiêu tuổi
+sentence_03.m4a  ->  Đúng rồi / Chị ấy nhỏ hơn anh hai tuổi / Em mấy tuổi
 sentence_04.m4a  ->  Em hai lăm tuổi / Anh lớn hơn em mười hai tuổi
-sentence_05.m4a  ->  Em sinh ngày nào
+sentence_05.m4a  ->  Em sinh ngày mấy
 sentence_06.m4a  ->  Em sinh ngày mười lăm tháng mười một
-sentence_07.m4a  ->  Hôm nay là ngày bao nhiêu
+sentence_07.m4a  ->  Hôm nay là ngày mấy
 sentence_08.m4a  ->  Hôm nay là thứ tư ngày mười bốn tháng mười một
 sentence_09.m4a  ->  Vậy hả / Ngày mai là sinh nhật em rồi / Chúc mừng sinh nhật
 sentence_10.m4a  ->  Cám ơn anh
