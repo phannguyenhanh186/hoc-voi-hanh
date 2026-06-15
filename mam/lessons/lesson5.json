@@ -61,9 +61,9 @@
           "audio": "audio/words/{voice}/sinh_ngay.mp3"
         },
         {
-          "vi": "nào",
+          "vi": "mấy",
           "en": "which",
-          "audio": "audio/words/{voice}/nao.mp3"
+          "audio": "audio/words/{voice}/may.mp3"
         },
         {
           "vi": "không",
@@ -172,9 +172,9 @@
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
-          "vi": "bao nhiêu",
+          "vi": "mấy",
           "en": "how many",
-          "audio": "audio/words/{voice}/bao_nhieu.mp3"
+          "audio": "audio/words/{voice}/may.mp3"
         },
         {
           "vi": "tuổi",
@@ -247,9 +247,9 @@
           "audio": "audio/words/{voice}/sinh_ngay.mp3"
         },
         {
-          "vi": "nào",
+          "vi": "mấy",
           "en": "which",
-          "audio": "audio/words/{voice}/nao.mp3"
+          "audio": "audio/words/{voice}/may.mp3"
         }
       ]
     },
@@ -304,9 +304,9 @@
           "audio": "audio/words/{voice}/ngay.mp3"
         },
         {
-          "vi": "bao nhiêu",
+          "vi": "mấy",
           "en": "how many",
-          "audio": "audio/words/{voice}/bao_nhieu.mp3"
+          "audio": "audio/words/{voice}/may.mp3"
         }
       ]
     },
