@@ -1,14 +1,15 @@
-# Audio CAU cho lesson5 (.m4a). 2 ban: audio/lesson5/nam/ va bac/
+# Audio CAU cho lesson7 (.m4a). 2 ban: audio/lesson7/nam/ va bac/
 # (Tu le o audio/words/)
 
 full.m4a  ->  ca bai
-sentence_01.m4a  ->  Anh có biết chị Mai sinh ngày nào không
-sentence_02.m4a  ->  Hình như ngày ba mốt tháng tư / Chị ấy ba lăm tuổi đúng không
-sentence_03.m4a  ->  Đúng rồi / Chị ấy nhỏ hơn anh hai tuổi / Em bao nhiêu tuổi
-sentence_04.m4a  ->  Em hai lăm tuổi / Anh lớn hơn em mười hai tuổi
-sentence_05.m4a  ->  Em sinh ngày nào
-sentence_06.m4a  ->  Em sinh ngày mười lăm tháng mười một
-sentence_07.m4a  ->  Hôm nay là ngày bao nhiêu
-sentence_08.m4a  ->  Hôm nay là thứ tư ngày mười bốn tháng mười một
-sentence_09.m4a  ->  Vậy hả / Mai là sinh nhật em rồi / Chúc mừng sinh nhật
-sentence_10.m4a  ->  Cám ơn anh
+sentence_01.m4a  ->  Áo của em đẹp quá / Em mua ở đâu
+sentence_02.m4a  ->  Em mua ở siêu thị / Em mua chủ nhật tuần trước
+sentence_03.m4a  ->  Em mua bao nhiêu tiền
+sentence_04.m4a  ->  Cái áo này em mua hai trăm ngàn / Hơi mắc
+sentence_05.m4a  ->  Không mắc / Chị mới mua một cái áo ba trăm rưỡi / Mắc quá
+sentence_06.m4a  ->  Vậy hả / Chị mua cái áo đó ở đâu
+sentence_07.m4a  ->  Chị mua ở Hàn / Chị mới đi Hàn tháng trước
+sentence_08.m4a  ->  Em cũng thích du lịch Hàn / Chị ở Hàn bao lâu
+sentence_09.m4a  ->  Chị ở đó ba ngày / Sau đó chị du lịch Thái ba ngày nữa
+sentence_10.m4a  ->  Vậy hả / Tháng mười một em cũng đi Thái / Hình như quần áo ở Thái rất rẻ
+sentence_11.m4a  ->  Đúng rồi / Quần áo ở đó cũng rất đẹp
