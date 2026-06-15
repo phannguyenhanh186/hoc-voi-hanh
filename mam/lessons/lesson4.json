@@ -50,7 +50,7 @@
         },
         {
           "vi": "em",
-          "en": "you",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -76,7 +76,7 @@
         },
         {
           "vi": "chị",
-          "en": "(to older sister)",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -86,7 +86,7 @@
         },
         {
           "vi": "em",
-          "en": "I",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -104,7 +104,7 @@
         },
         {
           "vi": "chị",
-          "en": "you",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -112,7 +112,7 @@
         },
         {
           "vi": "Chị",
-          "en": "you",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -133,7 +133,7 @@
       "phrases": [
         {
           "vi": "Chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -146,7 +146,7 @@
         },
         {
           "vi": "Em",
-          "en": "you",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -167,7 +167,7 @@
       "phrases": [
         {
           "vi": "Em",
-          "en": "I",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -185,7 +185,7 @@
         },
         {
           "vi": "Chị",
-          "en": "you",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -206,7 +206,7 @@
       "phrases": [
         {
           "vi": "Chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -224,7 +224,7 @@
         },
         {
           "vi": "chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -240,7 +240,7 @@
       "phrases": [
         {
           "vi": "Chị",
-          "en": "you",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -276,7 +276,7 @@
       "phrases": [
         {
           "vi": "Chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -324,7 +324,7 @@
         },
         {
           "vi": "chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -396,7 +396,7 @@
         },
         {
           "vi": "chị",
-          "en": "you",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -422,7 +422,7 @@
       "phrases": [
         {
           "vi": "Chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -435,7 +435,7 @@
         },
         {
           "vi": "Chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -463,7 +463,7 @@
         },
         {
           "vi": "em",
-          "en": "you",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         }
       ]
@@ -474,7 +474,7 @@
       "phrases": [
         {
           "vi": "Em",
-          "en": "I",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -512,7 +512,7 @@
         },
         {
           "vi": "em",
-          "en": "I",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -538,7 +538,7 @@
         },
         {
           "vi": "em",
-          "en": "you",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -569,7 +569,7 @@
         },
         {
           "vi": "em",
-          "en": "I",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -617,7 +617,7 @@
         },
         {
           "vi": "em",
-          "en": "I",
+          "en": "younger sibling",
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
@@ -635,7 +635,7 @@
         },
         {
           "vi": "chị",
-          "en": "you",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         }
       ]
@@ -656,7 +656,7 @@
         },
         {
           "vi": "chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
@@ -674,7 +674,7 @@
         },
         {
           "vi": "Chị",
-          "en": "I",
+          "en": "older sister",
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
