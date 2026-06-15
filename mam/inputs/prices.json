@@ -1,0 +1,48 @@
+{
+  "id": "prices",
+  "title": "Prices",
+  "terms": [
+    "bao nhiêu",
+    "ngàn"
+  ],
+  "sections": [
+    {
+      "label": "Asking",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Noun] + bao nhiêu (+ tiền)?"
+        },
+        {
+          "type": "example",
+          "vi": "Cà phê đen bao nhiêu tiền?",
+          "en": "How much is the black coffee?"
+        },
+        {
+          "type": "example",
+          "vi": "Của em bao nhiêu?",
+          "en": "How much is mine / my order?"
+        }
+      ]
+    },
+    {
+      "label": "Telling",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Noun] + [x] ngàn (đồng)"
+        },
+        {
+          "type": "example",
+          "vi": "Cà phê đen bốn mươi ngàn.",
+          "en": "Black coffee is 40,000 (dong)."
+        },
+        {
+          "type": "example",
+          "vi": "Tổng là chín lăm ngàn.",
+          "en": "The total is 95,000."
+        }
+      ]
+    }
+  ]
+}
