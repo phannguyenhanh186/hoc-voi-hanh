@@ -10,5 +10,5 @@ sentence_05.m4a  ->  Em sinh ngày nào
 sentence_06.m4a  ->  Em sinh ngày mười lăm tháng mười một
 sentence_07.m4a  ->  Hôm nay là ngày bao nhiêu
 sentence_08.m4a  ->  Hôm nay là thứ tư ngày mười bốn tháng mười một
-sentence_09.m4a  ->  Vậy hả / Mai là sinh nhật em rồi / Chúc mừng sinh nhật
+sentence_09.m4a  ->  Vậy hả / Ngày mai là sinh nhật em rồi / Chúc mừng sinh nhật
 sentence_10.m4a  ->  Cám ơn anh
