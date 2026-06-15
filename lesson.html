@@ -216,6 +216,18 @@
         $story.innerHTML = '<p class="note">Không tìm thấy file bài học. Kiểm tra <code>level</code> trong manifest.json và đường dẫn <code>&lt;level&gt;/lessons/' + lessonId + '.json</code>.</p>';
       }
     })();
+
+    // đồng bộ chiều cao header -> toolbar dính ngay dưới header
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() {
+        document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px');
+      }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
   </script>
 </body>
 </html>
