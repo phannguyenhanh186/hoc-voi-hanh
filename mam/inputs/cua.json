@@ -1,0 +1,38 @@
+{
+  "id": "cua",
+  "title": "của...",
+  "terms": [
+    "của"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "của em/anh/chị/bạn/mình (mine / my order) — used to indicate ownership or to specify whose order/item is being referred to."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Của em bao nhiêu?",
+          "en": "How much is mine?"
+        },
+        {
+          "type": "example",
+          "vi": "Của anh chị tổng là chín lăm ngàn.",
+          "en": "Your total is 95,000."
+        },
+        {
+          "type": "example",
+          "vi": "Đây là của mình.",
+          "en": "This is mine."
+        }
+      ]
+    }
+  ]
+}
