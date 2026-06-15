@@ -1,8 +1,11 @@
 {
-  "id": "dob",
-  "title": "DOB",
+  "id": "dates",
+  "title": "Dates",
   "terms": [
-    "sinh ngày"
+    "thứ",
+    "ngày",
+    "tháng",
+    "năm"
   ],
   "sections": [
     {
@@ -10,11 +13,15 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Question: [Anh/Chị/Em] sinh ngày bao nhiêu?  —  What is your date of birth?"
+          "text": "Thứ [x], ngày [x] tháng [x] năm [x]"
         },
         {
           "type": "text",
-          "text": "Answer: [Em/Anh/Chị] sinh ngày [x] tháng [x] năm [x].  —  My date of birth is [date / month / year]."
+          "text": "\"Thứ\" = day of the week (Thứ Hai = Monday, Thứ Ba = Tuesday, … Thứ Bảy = Saturday, Chủ Nhật = Sunday)."
+        },
+        {
+          "type": "text",
+          "text": "\"ngày\" = day (of the month), \"tháng\" = month, \"năm\" = year."
         }
       ]
     },
@@ -23,8 +30,13 @@
       "blocks": [
         {
           "type": "example",
-          "vi": "Anh sinh ngày bao nhiêu? → Em sinh ngày 20 tháng 8 năm 1998.",
-          "en": "What is your date of birth? → My date of birth is August 20th, 1998."
+          "vi": "Hôm nay là ngày mấy? → Hôm nay là ngày 15 tháng 6.",
+          "en": "What's today's date? → Today is June 15th."
+        },
+        {
+          "type": "example",
+          "vi": "Hôm qua là thứ mấy, ngày mấy? → Hôm qua là thứ Hai ngày 28.",
+          "en": "What day and date was yesterday? → Yesterday was Monday, the 28th."
         }
       ]
     }
