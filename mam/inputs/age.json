@@ -24,24 +24,13 @@
       "blocks": [
         {
           "type": "example",
-          "vi": "Em bao nhiêu tuổi?",
-          "en": "How old are you (em)?"
+          "vi": "Em bao nhiêu tuổi? → Em 25 tuổi.",
+          "en": "How old are you (em)? → I'm 25 years old."
         },
         {
           "type": "example",
-          "vi": "Em 25 tuổi.",
-          "en": "I'm 25 years old.",
-          "context": "→"
-        },
-        {
-          "type": "example",
-          "vi": "Anh ấy bao nhiêu tuổi?",
-          "en": "How old is he?"
-        },
-        {
-          "type": "example",
-          "vi": "Anh ấy 30 tuổi.",
-          "en": "He is 30 years old."
+          "vi": "Anh ấy bao nhiêu tuổi? → Anh ấy 30 tuổi.",
+          "en": "How old is he? → He is 30 years old."
         }
       ]
     }
