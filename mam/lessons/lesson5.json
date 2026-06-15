@@ -5,7 +5,7 @@
   "inputs": [
     {
       "id": "dates",
-      "title": "Asking and telling dates"
+      "title": "Dates"
     },
     {
       "id": "dob",
@@ -13,11 +13,11 @@
     },
     {
       "id": "age",
-      "title": "Asking and saying age"
+      "title": "Age"
     },
     {
       "id": "compare_age",
-      "title": "Comparing ages"
+      "title": "lớn / nhỏ hơn"
     },
     {
       "id": "co_biet",
