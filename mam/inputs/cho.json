@@ -12,7 +12,7 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Cho mình/em/anh/chị [x] [drink/food] — used to order or request something, literally \"give [pronoun] [item].\""
+          "text": "Cho mình / em / anh / chị is used to order or request something, literally \"give [pronoun] [item].\""
         }
       ]
     },
@@ -42,24 +42,6 @@
           "type": "example",
           "vi": "Cho chị một trà xanh.",
           "en": "I'll have one green tea."
-        }
-      ]
-    },
-    {
-      "label": "Note",
-      "blocks": [
-        {
-          "type": "text",
-          "text": "ít / nhiều + đường / đá / sữa:  \"ít\" = less/little, \"nhiều\" = more/much."
-        },
-        {
-          "type": "text",
-          "text": "ít đường = less sugar · nhiều đá = more ice · ít sữa = less milk."
-        },
-        {
-          "type": "example",
-          "vi": "Cho em một cà phê đen ít đường.",
-          "en": "I'll have one black coffee with less sugar."
         }
       ]
     }
