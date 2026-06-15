@@ -46,5 +46,13 @@
     "titleEn": "Ordering food & drinks",
     "level": "mam",
     "description": "Two friends are trying to order food and drinks in a Vietnamese eatery."
+  },
+  {
+    "id": "lesson7",
+    "num": 7,
+    "title": "Áo này đẹp quá",
+    "titleEn": "Shopping",
+    "level": "mam",
+    "description": "Two friends chat about clothes they just bought and their recent trips to Korea and Thailand."
   }
 ]
