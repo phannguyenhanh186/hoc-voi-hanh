@@ -1,0 +1,47 @@
+{
+  "id": "bao_lau",
+  "title": "bao lâu",
+  "terms": [
+    "bao lâu"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Asks about duration of time."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Subject] + [verb] + bao lâu?"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Bạn học tiếng Việt bao lâu rồi?",
+          "en": "How long have you been studying Vietnamese?"
+        },
+        {
+          "type": "example",
+          "vi": "Chị ấy du lịch Việt Nam bao lâu?",
+          "en": "How long is she traveling in Vietnam?"
+        },
+        {
+          "type": "example",
+          "vi": "Bạn ngủ bao lâu?",
+          "en": "How long do you sleep?"
+        }
+      ]
+    }
+  ]
+}
