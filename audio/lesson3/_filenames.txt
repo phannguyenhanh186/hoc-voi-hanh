@@ -1,21 +1,21 @@
-# Audio CAU cho lesson3 (.m4a). 2 ban: audio/lesson3/nam/ va audio/lesson3/bac/
-# (Tu rieng le o audio/words/ - xem audio/words/_filenames.txt)
+# Audio CAU cho lesson3 (.m4a). 2 ban: audio/lesson3/nam/ va bac/
+# (Tu le o audio/words/)
 
 full.m4a  ->  ca bai
 sentence_01.m4a  ->  Bạn khoẻ không
-sentence_02.m4a  ->  Mình khoẻ Còn bạn
-sentence_03.m4a  ->  Mình cũng khoẻ Cuối tuần bạn thường làm gì
-sentence_04.m4a  ->  Mình thường đi chơi với bạn bè Còn bạn
-sentence_05.m4a  ->  Mình thường ở nhà nấu ăn Bạn có thích nấu ăn không
-sentence_06.m4a  ->  Mình không thích nấu ăn nhưng mình rất thích đi ăn ngoài Bạn thích ăn gì
-sentence_07.m4a  ->  Mình thích ăn phở Còn bạn
-sentence_08.m4a  ->  Mình thích ăn bún đậu Mình không thích ăn mì tôm
-sentence_09.m4a  ->  Vậy hả Mình rất thích mì tôm
+sentence_02.m4a  ->  Mình khoẻ / Còn bạn
+sentence_03.m4a  ->  Mình cũng khoẻ / Cuối tuần bạn thường làm gì
+sentence_04.m4a  ->  Mình thường đi chơi với bạn bè / Còn bạn
+sentence_05.m4a  ->  Mình thường ở nhà nấu ăn / Bạn có thích nấu ăn không
+sentence_06.m4a  ->  Mình không thích nấu ăn nhưng mình rất thích đi ăn / Bạn thích ăn gì
+sentence_07.m4a  ->  Mình thích ăn phở / Còn bạn
+sentence_08.m4a  ->  Mình thích ăn bún đậu / Mình không thích ăn mì tôm
+sentence_09.m4a  ->  Vậy hả / Mình rất thích mì tôm
 sentence_10.m4a  ->  Bạn thích uống gì
-sentence_11.m4a  ->  Mình thích uống cà phê đen Mình không uống nước ngọt
+sentence_11.m4a  ->  Mình thích uống cà phê đen / Mình không uống nước ngọt
 sentence_12.m4a  ->  Mình cũng thích cà phê nhưng mình thích cà phê sữa hơn
-sentence_13.m4a  ->  Vậy hả Tối nay ăn cơm xong bạn làm gì
-sentence_14.m4a  ->  Ăn cơm xong mình nghe nhạc rồi đi ngủ Còn bạn
-sentence_15.m4a  ->  Mình về nhà xong mình xem phim À bạn ăn cơm chưa
-sentence_16.m4a  ->  Rồi mình ăn rồi Bạn ăn chưa
+sentence_13.m4a  ->  Vậy hả / Tối nay ăn cơm xong bạn làm gì
+sentence_14.m4a  ->  Ăn cơm xong mình nghe nhạc rồi đi ngủ / Còn bạn
+sentence_15.m4a  ->  Mình về nhà xong mình xem phim / À bạn ăn cơm chưa
+sentence_16.m4a  ->  Rồi mình ăn rồi / Bạn ăn chưa
 sentence_17.m4a  ->  Mình cũng ăn rồi
