@@ -30,12 +30,12 @@
       "blocks": [
         {
           "type": "example",
-          "vi": "Hôm nay là ngày bao nhiêu? → Hôm nay là ngày 15 tháng 6.",
+          "vi": "Hôm nay là ngày mấy? → Hôm nay là ngày 15 tháng 6.",
           "en": "What's today's date? → Today is June 15th."
         },
         {
           "type": "example",
-          "vi": "Hôm qua là thứ mấy, ngày bao nhiêu? → Hôm qua là thứ Hai ngày 28.",
+          "vi": "Hôm qua là thứ mấy, ngày mấy? → Hôm qua là thứ Hai ngày 28.",
           "en": "What day and date was yesterday? → Yesterday was Monday, the 28th."
         }
       ]
