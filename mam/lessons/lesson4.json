@@ -138,7 +138,7 @@
         },
         {
           "vi": "bình thường",
-          "en": "so-so",
+          "en": "normal",
           "audio": "audio/words/{voice}/binh_thuong.mp3"
         },
         {
@@ -390,9 +390,9 @@
           "br": true
         },
         {
-          "vi": "Lát nữa",
+          "vi": "Lát",
           "en": "in a bit",
-          "audio": "audio/words/{voice}/lat_nua.mp3"
+          "audio": "audio/words/{voice}/lat.mp3"
         },
         {
           "vi": "chị",
@@ -516,9 +516,9 @@
           "audio": "audio/words/{voice}/em.mp3"
         },
         {
-          "vi": "ngủ",
-          "en": "sleep",
-          "audio": "audio/words/{voice}/ngu.mp3"
+          "vi": "đi ngủ",
+          "en": "go to sleep",
+          "audio": "audio/words/{voice}/di_ngu.mp3"
         }
       ]
     },
