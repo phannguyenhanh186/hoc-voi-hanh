@@ -141,7 +141,7 @@
         },
         {
           "vi": "nhỏ hơn",
-          "en": "younger",
+          "en": "younger than",
           "audio": "audio/words/{voice}/nho_hon.mp3"
         },
         {
@@ -208,7 +208,7 @@
         },
         {
           "vi": "lớn hơn",
-          "en": "older",
+          "en": "older than",
           "audio": "audio/words/{voice}/lon_hon.mp3"
         },
         {
@@ -301,7 +301,7 @@
         },
         {
           "vi": "bao nhiêu",
-          "en": "what",
+          "en": "how many",
           "audio": "audio/words/{voice}/bao_nhieu.mp3"
         }
       ]
@@ -360,9 +360,9 @@
           "br": true
         },
         {
-          "vi": "Mai",
+          "vi": "Ngày mai",
           "en": "tomorrow",
-          "audio": "audio/words/{voice}/mai.mp3"
+          "audio": "audio/words/{voice}/ngay_mai.mp3"
         },
         {
           "vi": "là",
@@ -405,7 +405,7 @@
       "phrases": [
         {
           "vi": "Cám ơn",
-          "en": "Thank you",
+          "en": "thanks",
           "audio": "audio/words/{voice}/cam_on.mp3"
         },
         {
