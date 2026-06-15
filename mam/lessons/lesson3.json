@@ -270,9 +270,9 @@
           "audio": "audio/words/{voice}/thich.mp3"
         },
         {
-          "vi": "đi ăn ngoài",
+          "vi": "đi ăn",
           "en": "eat out",
-          "audio": "audio/words/{voice}/di_an_ngoai.mp3"
+          "audio": "audio/words/{voice}/di_an.mp3"
         },
         {
           "br": true
