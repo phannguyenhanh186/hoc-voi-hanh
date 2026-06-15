@@ -16,6 +16,6 @@ sentence_11.m4a  ->  Mình thích uống cà phê đen / Mình không uống nư
 sentence_12.m4a  ->  Mình cũng thích cà phê nhưng mình thích cà phê sữa hơn
 sentence_13.m4a  ->  Vậy hả / Tối nay ăn cơm xong bạn làm gì
 sentence_14.m4a  ->  Ăn cơm xong mình nghe nhạc rồi đi ngủ / Còn bạn
-sentence_15.m4a  ->  Mình về nhà xong mình xem phim / À bạn ăn cơm chưa
+sentence_15.m4a  ->  Mình về nhà xong mình xem phim / bạn ăn cơm chưa
 sentence_16.m4a  ->  Rồi mình ăn rồi / Bạn ăn chưa
 sentence_17.m4a  ->  Mình cũng ăn rồi
