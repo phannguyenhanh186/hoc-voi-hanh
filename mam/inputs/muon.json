@@ -6,6 +6,15 @@
   ],
   "sections": [
     {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"muốn\" means exactly like \"want\" in English — it expresses desire / wanting."
+        }
+      ]
+    },
+    {
       "label": "Structure",
       "blocks": [
         {
