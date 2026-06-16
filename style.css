@@ -213,6 +213,18 @@ a { color: var(--accent-deep); text-decoration: none; }
 
 .sentence-translation { margin: 10px 0 2px 48px; font-size: .9rem; color: var(--muted); font-style: italic; }
 .hide-en .sentence-translation { display: none; }
+.scene-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 22px 0 14px; color: var(--accent-deep);
+}
+.scene-divider::before, .scene-divider::after {
+  content: ""; flex: 1; height: 1.5px; background: var(--stroke); opacity: .35;
+}
+.scene-label {
+  font-family: var(--font-display); font-weight: 700; font-size: .9rem;
+  background: var(--primary); border: 1.5px solid var(--stroke);
+  border-radius: 999px; padding: 5px 16px; white-space: nowrap;
+}
 
 /* ---------- Sticky full-audio player ---------- */
 .player-bar {
