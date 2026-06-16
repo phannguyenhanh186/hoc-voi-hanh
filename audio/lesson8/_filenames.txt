@@ -1,14 +1,19 @@
-# Audio CAU cho lesson5 (.m4a). 2 ban: audio/lesson5/nam/ va bac/
-# (Tu le o audio/words/)
+# Audio CAU cho lesson8 (.m4a). 2 ban: audio/lesson8/nam/ va bac/
+# (Tu le o audio/words/) — cac canh */* khong co audio
 
 full.m4a  ->  ca bai
-sentence_01.m4a  ->  Anh có biết chị Mai sinh ngày nào không
-sentence_02.m4a  ->  Hình như ngày ba mốt tháng tư / Chị ấy ba lăm tuổi đúng không
-sentence_03.m4a  ->  Đúng rồi / Chị ấy nhỏ hơn anh hai tuổi / Em bao nhiêu tuổi
-sentence_04.m4a  ->  Em hai lăm tuổi / Anh lớn hơn em mười hai tuổi
-sentence_05.m4a  ->  Em sinh ngày nào
-sentence_06.m4a  ->  Em sinh ngày mười lăm tháng mười một
-sentence_07.m4a  ->  Hôm nay là ngày bao nhiêu
-sentence_08.m4a  ->  Hôm nay là thứ tư ngày mười bốn tháng mười một
-sentence_09.m4a  ->  Vậy hả / Mai là sinh nhật em rồi / Chúc mừng sinh nhật
-sentence_10.m4a  ->  Cám ơn anh
+sentence_01.m4a  ->  Chị ơi xoài ở đâu ạ
+sentence_02.m4a  ->  Dạ xoài ở quầy trái cây / Anh đi thẳng rồi rẽ trái là tới
+sentence_03.m4a  ->  Dạ cám ơn chị / Còn sữa ở đâu ạ
+sentence_04.m4a  ->  Anh muốn kiếm sữa hãng nào ạ
+sentence_05.m4a  ->  Vinamilk ạ
+sentence_06.m4a  ->  Quầy sữa nằm ở ngay lối vào ạ / Anh rẽ phải rồi rẽ trái là tới
+sentence_07.m4a  ->  Chị ơi có áo size lớn hơn không
+sentence_08.m4a  ->  Anh chờ một chút / Xin lỗi anh size đó hết rồi
+sentence_09.m4a  ->  Còn áo này thì sao chị
+sentence_10.m4a  ->  Dạ có / Đây ạ
+sentence_11.m4a  ->  Cám ơn chị
+sentence_12.m4a  ->  Cho em tính tiền ạ
+sentence_13.m4a  ->  Của anh ba trăm bốn lăm ngàn / Anh muốn trả tiền mặt hay thẻ
+sentence_14.m4a  ->  Cho em trả thẻ ạ
+sentence_15.m4a  ->  Dạ đây là hoá đơn của anh / Cám ơn anh
