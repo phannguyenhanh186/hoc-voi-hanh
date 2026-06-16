@@ -225,6 +225,8 @@ a { color: var(--accent-deep); text-decoration: none; }
   background: var(--primary); border: 1.5px solid var(--stroke);
   border-radius: 999px; padding: 5px 16px; white-space: nowrap;
 }
+.scene-en { font-family: var(--font-body); font-weight: 400; opacity: .8; }
+.hide-en .scene-en { display: none; }
 
 /* ---------- Sticky full-audio player ---------- */
 .player-bar {
