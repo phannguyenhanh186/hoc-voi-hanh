@@ -127,6 +127,13 @@
 
       $story.innerHTML = '';
       (lesson.sentences || []).forEach(function (s) {
+        // vách ngăn cảnh (đổi quầy) — không audio, không dịch
+        if (s.scene) {
+          const sc = el('div', 'scene-divider');
+          sc.appendChild(el('span', 'scene-label', s.scene));
+          $story.appendChild(sc);
+          return;
+        }
         const sentence = el('div', 'sentence');
         const row = el('div', 'sentence-row');
 
