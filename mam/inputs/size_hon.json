@@ -1,0 +1,69 @@
+{
+  "id": "size_hon",
+  "title": "có size lớn/nhỏ hơn không?",
+  "terms": [
+    "size",
+    "lớn hơn",
+    "nhỏ hơn"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Used to ask if a different (bigger or smaller) size is available."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Có size + lớn hơn / nhỏ hơn + không?"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Chị ơi, có size lớn hơn không?",
+          "en": "Excuse me, is there a bigger size?"
+        },
+        {
+          "type": "example",
+          "vi": "Có size nhỏ hơn không?",
+          "en": "Is there a smaller size?"
+        },
+        {
+          "type": "example",
+          "vi": "Áo này có size lớn hơn không?",
+          "en": "Does this shirt have a bigger size?"
+        }
+      ]
+    },
+    {
+      "label": "Possible answers",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Dạ có.",
+          "en": "Yes, there is."
+        },
+        {
+          "type": "example",
+          "vi": "Dạ không.",
+          "en": "No, there isn't."
+        },
+        {
+          "type": "example",
+          "vi": "Dạ hết rồi.",
+          "en": "Sorry, it's sold out (no more of that size)."
+        }
+      ]
+    }
+  ]
+}
