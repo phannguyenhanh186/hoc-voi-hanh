@@ -280,7 +280,8 @@
       ]
     },
     {
-      "scene": "Ở quầy quần áo"
+      "scene": "Ở quầy quần áo",
+      "sceneEn": "At the clothing counter"
     },
     {
       "translation": "Excuse me, is there a bigger size for this shirt?",
@@ -449,7 +450,8 @@
       ]
     },
     {
-      "scene": "Ở quầy tính tiền"
+      "scene": "Ở quầy tính tiền",
+      "sceneEn": "At the checkout"
     },
     {
       "translation": "I'd like to pay, please.",
