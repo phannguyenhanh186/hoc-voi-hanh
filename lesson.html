@@ -67,21 +67,24 @@
     function resolveAudio(path) { return (path || '').replace('{voice}', voice); }
     let loadedLesson = null;
 
-    // Một đối tượng Audio dùng chung cho word/sentence -> tránh phát chồng
-    let current = null;
+    // Một đối tượng Audio dùng chung (Safari ổn định hơn so với tạo mới mỗi lần)
+    let player = new Audio();
+    player.preload = 'auto';
     let currentEl = null;
+    player.addEventListener('ended', function () {
+      if (currentEl) currentEl.classList.remove('playing');
+    });
     function play(src, el) {
-      if (current) { current.pause(); }
-      if (currentEl) { currentEl.classList.remove('playing'); }
-      current = new Audio(src);
+      if (currentEl) currentEl.classList.remove('playing');
       currentEl = el || null;
       if (currentEl) currentEl.classList.add('playing');
-      current.addEventListener('ended', function () {
+      try { player.pause(); } catch (e) {}
+      player.src = src;
+      try { player.currentTime = 0; } catch (e) {}
+      const pr = player.play();
+      if (pr && pr.catch) pr.catch(function (e) {
         if (currentEl) currentEl.classList.remove('playing');
-      });
-      current.play().catch(function (e) {
-        if (currentEl) currentEl.classList.remove('playing');
-        console.warn('Không phát được audio:', src, e.message);
+        console.warn('Không phát được audio:', src, e && e.message);
       });
     }
 
