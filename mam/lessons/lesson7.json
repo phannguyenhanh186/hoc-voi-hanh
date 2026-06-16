@@ -1,15 +1,11 @@
 {
   "id": "lesson7",
-  "title": "Áo của em…",
+  "title": "Mua sắm",
   "description": "Two friends chat about clothes they just bought and their recent trips to Korea and Thailand.",
   "inputs": [
     {
       "id": "qua_rat_hoi",
       "title": "quá / rất / hơi"
-    },
-    {
-      "id": "truoc",
-      "title": "...trước"
     },
     {
       "id": "ruoi_so",
