@@ -1,0 +1,53 @@
+{
+  "id": "het_roi",
+  "title": "hết rồi",
+  "terms": [
+    "hết rồi",
+    "hết"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"hết\" = to run out / used up / finished; \"rồi\" (already) confirms the completed state — together \"it's (already) out of stock / finished.\""
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Noun] + hết rồi"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Size đó hết rồi.",
+          "en": "That size is sold out already."
+        },
+        {
+          "type": "example",
+          "vi": "Cà phê hết rồi.",
+          "en": "The coffee is all gone / out."
+        },
+        {
+          "type": "example",
+          "vi": "Bánh mì hết rồi.",
+          "en": "The bread is sold out."
+        },
+        {
+          "type": "example",
+          "vi": "Tiền của mình hết rồi.",
+          "en": "My money is all gone."
+        }
+      ]
+    }
+  ]
+}
