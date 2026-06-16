@@ -30,6 +30,35 @@
           "en": "heavy ⟷ light"
         }
       ]
+    },
+    {
+      "label": "Thời gian (Time)",
+      "items": [
+        {
+          "vi": "tuần trước",
+          "en": "last week"
+        },
+        {
+          "vi": "tháng trước",
+          "en": "last month"
+        },
+        {
+          "vi": "năm trước",
+          "en": "last year"
+        },
+        {
+          "vi": "tuần sau",
+          "en": "next week"
+        },
+        {
+          "vi": "tháng sau",
+          "en": "next month"
+        },
+        {
+          "vi": "năm sau",
+          "en": "next year"
+        }
+      ]
     }
   ]
 }
