@@ -130,7 +130,9 @@
         // vách ngăn cảnh (đổi quầy) — không audio, không dịch
         if (s.scene) {
           const sc = el('div', 'scene-divider');
-          sc.appendChild(el('span', 'scene-label', s.scene));
+          const lab = el('span', 'scene-label', s.scene);
+          if (s.sceneEn) lab.appendChild(el('span', 'scene-en', ' (' + s.sceneEn + ')'));
+          sc.appendChild(lab);
           $story.appendChild(sc);
           return;
         }
