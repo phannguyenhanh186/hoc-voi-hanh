@@ -7,7 +7,7 @@ sentence_02.m4a  ->  Cho em một cà phê đen ít đường / Chị Hương mu
 sentence_03.m4a  ->  Cho chị một trà xanh nhiều đá một chút
 sentence_04.m4a  ->  Dạ / Anh chị muốn dùng gì nữa không
 sentence_05.m4a  ->  Dạ không / Của em bao nhiêu
-sentence_06.m4a  ->  Dạ một cà phê đen ít đường bốn mươi ngàn và một trà xanh nhiều sữa năm lăm ngàn / Của anh chị tổng là chín lăm ngàn ạ / Anh chị dùng ở đây hay mang về
+sentence_06.m4a  ->  Dạ một cà phê đen ít đường bốn mươi ngàn và một trà xanh nhiều sữa năm lăm ngàn / Của anh chị chín lăm ngàn ạ / Anh chị dùng ở đây hay mang về
 sentence_07.m4a  ->  Dạ ở đây
 sentence_08.m4a  ->  Dạ anh chị trả tiền mặt hay thẻ
 sentence_09.m4a  ->  Cho em trả thẻ
