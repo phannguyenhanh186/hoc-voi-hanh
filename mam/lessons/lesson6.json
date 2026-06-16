@@ -375,16 +375,6 @@
           "audio": "audio/words/{voice}/chi.mp3"
         },
         {
-          "vi": "tổng",
-          "en": "total",
-          "audio": "audio/words/{voice}/tong.mp3"
-        },
-        {
-          "vi": "là",
-          "en": "is",
-          "audio": "audio/words/{voice}/la.mp3"
-        },
-        {
           "vi": "chín lăm",
           "en": "95",
           "audio": "audio/words/{voice}/chin_lam.mp3"
