@@ -54,5 +54,13 @@
     "titleEn": "Shopping",
     "level": "mam",
     "description": "Two friends chat about clothes they just bought and their recent trips to Korea and Thailand."
+  },
+  {
+    "id": "lesson8",
+    "num": 8,
+    "title": "Đi siêu thị",
+    "titleEn": "At the supermarket",
+    "level": "mam",
+    "description": "A man is doing groceries in a supermarket and he's having trouble finding certain things."
   }
 ]
