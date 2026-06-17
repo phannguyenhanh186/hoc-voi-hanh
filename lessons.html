@@ -15,7 +15,7 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" href="how.html">← chọn cấp độ</a>
+          <a class="back-link" href="how.html">← choose level</a>
         </div>
       </nav>
     </div>
@@ -23,7 +23,7 @@
 
   <main class="wrap">
     <div class="lesson-head"><h1 id="title">Bài học</h1></div>
-    <div class="cards" id="cards"><p class="note">Đang tải…</p></div>
+    <div class="cards" id="cards"><p class="note">Loading…</p></div>
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
@@ -39,7 +39,7 @@
         let lessons = await (await fetch('manifest.json', { cache: 'no-cache' })).json();
         if (!Array.isArray(lessons)) lessons = [];
         const shown = lessons.filter(l => l.level === activeLevel);
-        if (!shown.length) { cards.innerHTML = '<p class="note">Chưa có bài học nào ở cấp độ này.</p>'; return; }
+        if (!shown.length) { cards.innerHTML = '<p class="note">No lessons yet at this level.</p>'; return; }
         cards.innerHTML = '';
         shown.forEach(l => {
           const a = document.createElement('a'); a.className = 'card';
@@ -51,10 +51,10 @@
           if (l.level && LEVELS[l.level]) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = 'lớp ' + LEVELS[l.level]; head.appendChild(b); }
           a.appendChild(head);
           const p = document.createElement('p'); p.textContent = l.description || ''; a.appendChild(p);
-          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Vào học →'; a.appendChild(go);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Start learning →'; a.appendChild(go);
           cards.appendChild(a);
         });
-      } catch (e) { cards.innerHTML = '<p class="note">Không tải được danh sách bài học.</p>'; }
+      } catch (e) { cards.innerHTML = '<p class="note">Couldn't load the lesson list.</p>'; }
     })();
   </script>
 </body>
