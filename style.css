@@ -115,7 +115,8 @@ a { color: var(--accent-deep); text-decoration: none; }
 }
 .card:hover, .card:focus-visible {
   border-color: var(--stroke);
-  box-shadow: 0 4px 10px rgba(0,0,0,.22);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 0 var(--stroke);
   outline: none;
 }
 .card .badge {
