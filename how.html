@@ -15,7 +15,7 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" href="index.html">← trang chủ</a>
+          <a class="back-link" href="index.html">← home</a>
         </div>
       </nav>
     </div>
@@ -24,18 +24,18 @@
   <main class="wrap">
     <!-- Bước 1: chọn giọng -->
     <section id="step-accent">
-      <div class="lesson-head"><h1>Bạn muốn học giọng nào?</h1></div>
-      <p class="note">Chọn giọng vùng miền — bạn có thể đổi lại sau.</p>
+      <div class="lesson-head"><h1>Which accent would you like to learn?</h1></div>
+      <p class="note">Pick a regional accent — you can change it later.</p>
       <div class="cards">
         <a class="card accent-card" data-voice="nam" href="#">
-          <div class="card-head"><h3>🌴 Miền Nam</h3></div>
-          <p>Giọng Sài Gòn — phổ biến ở miền Nam Việt Nam.</p>
-          <div class="go">Chọn giọng này →</div>
+          <div class="card-head"><h3>🌴 Southern (Miền Nam)</h3></div>
+          <p>Saigon accent — spoken across southern Vietnam.</p>
+          <div class="go">Choose this accent →</div>
         </a>
         <a class="card accent-card" data-voice="bac" href="#">
-          <div class="card-head"><h3>🏯 Miền Bắc</h3></div>
-          <p>Giọng Hà Nội — phổ biến ở miền Bắc Việt Nam.</p>
-          <div class="go">Chọn giọng này →</div>
+          <div class="card-head"><h3>🏯 Northern (Miền Bắc)</h3></div>
+          <p>Hanoi accent — spoken across northern Vietnam.</p>
+          <div class="go">Choose this accent →</div>
         </a>
       </div>
     </section>
@@ -49,7 +49,7 @@
         <p>The more hours you accumulate, the more fluent and complex your speech becomes, gradually moving you closer to sounding like a native speaker.</p>
         <p style="margin-bottom:0">Here's what to focus on at each stage of the journey:</p>
       </div>
-      <p class="note" style="margin-top:14px">Giọng đang chọn: <strong id="accent-name"></strong> · <a href="#" id="change-accent">đổi giọng</a></p>
+      <p class="note" style="margin-top:14px">Accent: <strong id="accent-name"></strong> · <a href="#" id="change-accent">change accent</a></p>
       <div class="cards" id="level-cards"></div>
     </section>
   </main>
@@ -57,7 +57,7 @@
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
 
   <script>
-    const ACCENTS = { nam: 'Miền Nam', bac: 'Miền Bắc' };
+    const ACCENTS = { nam: 'Southern (Miền Nam)', bac: 'Northern (Miền Bắc)' };
     const LEVELS = [
       { id: 'mam', name: 'Lớp mầm', en: 'Level 1', hours: '0', words: '0', learn: ['Stories with very simple sentences (5–8 words)', 'Limited vocabulary and phrases', 'Basic sentence structures', 'Slow, clear audio'] },
       { id: 'choi', name: 'Lớp chồi', en: 'Level 2', hours: '60', words: '300', learn: ['Longer sentences', 'Common grammar patterns', 'Expanded vocabulary'] },
@@ -91,7 +91,7 @@
         if (ready) a.href = 'lessons.html?level=' + lv.id;
         const head = document.createElement('div'); head.className = 'card-head';
         const h3 = document.createElement('h3'); h3.innerHTML = lv.name + ' <span class="title-en">(' + lv.en + ')</span>'; head.appendChild(h3);
-        const badge = document.createElement('span'); badge.className = 'badge'; badge.textContent = ready ? 'có bài' : 'sắp ra mắt'; head.appendChild(badge);
+        const badge = document.createElement('span'); badge.className = 'badge'; badge.textContent = ready ? 'available' : 'coming soon'; head.appendChild(badge);
         a.appendChild(head);
 
         const stats = document.createElement('div'); stats.className = 'level-stats';
@@ -103,7 +103,7 @@
         lv.learn.forEach(x => { const li = document.createElement('li'); li.textContent = x; ul.appendChild(li); });
         a.appendChild(ul);
 
-        const go = document.createElement('div'); go.className = 'go'; go.textContent = ready ? 'Vào học →' : 'Đang phát triển'; a.appendChild(go);
+        const go = document.createElement('div'); go.className = 'go'; go.textContent = ready ? 'Start learning →' : 'In development'; a.appendChild(go);
         wrap.appendChild(a);
       });
     }
