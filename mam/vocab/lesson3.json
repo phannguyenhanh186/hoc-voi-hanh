@@ -1,0 +1,145 @@
+{
+  "id": "lesson3",
+  "title": "Từ vựng",
+  "sections": [
+    {
+      "label": "Hoạt động (Activities)",
+      "items": [
+        {
+          "vi": "đi chơi",
+          "en": "hang out"
+        },
+        {
+          "vi": "đi ăn",
+          "en": "eat out"
+        },
+        {
+          "vi": "nấu ăn",
+          "en": "cook"
+        },
+        {
+          "vi": "xem phim",
+          "en": "watch movies"
+        },
+        {
+          "vi": "đọc sách",
+          "en": "read books"
+        },
+        {
+          "vi": "nghe nhạc",
+          "en": "listen to music"
+        },
+        {
+          "vi": "chơi game",
+          "en": "play games"
+        },
+        {
+          "vi": "du lịch",
+          "en": "travel"
+        },
+        {
+          "vi": "chơi thể thao",
+          "en": "play sports"
+        }
+      ]
+    },
+    {
+      "label": "Đồ ăn (Food)",
+      "items": [
+        {
+          "vi": "cơm",
+          "en": "rice"
+        },
+        {
+          "vi": "phở",
+          "en": "pho"
+        },
+        {
+          "vi": "bún",
+          "en": "rice noodles"
+        },
+        {
+          "vi": "mì tôm",
+          "en": "instant noodles"
+        },
+        {
+          "vi": "bánh xèo",
+          "en": "crispy Vietnamese pancake"
+        },
+        {
+          "vi": "gà",
+          "en": "chicken"
+        },
+        {
+          "vi": "bò",
+          "en": "beef"
+        },
+        {
+          "vi": "cá",
+          "en": "fish"
+        },
+        {
+          "vi": "rau",
+          "en": "vegetables"
+        },
+        {
+          "vi": "canh",
+          "en": "soup"
+        },
+        {
+          "vi": "nước mắm",
+          "en": "fish sauce"
+        }
+      ]
+    },
+    {
+      "label": "Đồ uống (Drinks)",
+      "items": [
+        {
+          "vi": "cà phê",
+          "en": "coffee"
+        },
+        {
+          "vi": "cà phê đen",
+          "en": "black coffee"
+        },
+        {
+          "vi": "cà phê sữa",
+          "en": "milk coffee"
+        },
+        {
+          "vi": "bạc sỉu",
+          "en": "coffee with fresh milk"
+        },
+        {
+          "vi": "sữa",
+          "en": "milk"
+        },
+        {
+          "vi": "trà",
+          "en": "tea"
+        },
+        {
+          "vi": "trà xanh",
+          "en": "green tea"
+        },
+        {
+          "vi": "nước",
+          "en": "water"
+        },
+        {
+          "vi": "nước ép",
+          "en": "juice"
+        },
+        {
+          "vi": "nước cam / nước ép cam",
+          "en": "orange juice"
+        },
+        {
+          "vi": "nước ngọt",
+          "en": "soft drink (in general)"
+        }
+      ]
+    }
+  ]
+}

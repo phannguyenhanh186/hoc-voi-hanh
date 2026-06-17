@@ -1,0 +1,70 @@
+{
+  "id": "roi",
+  "title": "rồi",
+  "terms": [
+    "rồi"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Has two common meanings depending on context."
+        }
+      ]
+    },
+    {
+      "label": "Meaning 1: then",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Sequencing actions (similar to \"xong\").  Structure: [Action 1], rồi + [Action 2]"
+        },
+        {
+          "type": "example",
+          "vi": "Ăn cơm xong, rồi mình nghe nhạc.",
+          "en": "After eating, then I listen to music."
+        },
+        {
+          "type": "example",
+          "vi": "Mình đi chợ, rồi mình về nhà.",
+          "en": "I go to the market, then I go home."
+        }
+      ]
+    },
+    {
+      "label": "Meaning 2: already",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A completed action.  Structure: [Subject] + [verb] + rồi"
+        },
+        {
+          "type": "example",
+          "vi": "Mình ăn rồi.",
+          "en": "I already ate."
+        },
+        {
+          "type": "example",
+          "vi": "Anh ấy đi rồi.",
+          "en": "He already left."
+        },
+        {
+          "type": "example",
+          "vi": "Bạn ăn cơm chưa? – Ăn rồi.",
+          "en": "Have you eaten yet? – Already ate."
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"rồi\" at the end of a sentence often pairs with \"…chưa?\" (yet?) to ask whether something has happened."
+        }
+      ]
+    }
+  ]
+}

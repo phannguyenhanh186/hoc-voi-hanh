@@ -1,0 +1,713 @@
+{
+  "_guide": {
+    "doc": "App bo qua key '_'. {\"br\":true} de xuong dong."
+  },
+  "id": "lesson4",
+  "title": "Giờ và Phút",
+  "description": "Việt and Hồng are asking about their near-future plans.",
+  "inputs": [
+    {
+      "id": "lat",
+      "title": "lát / lát nữa"
+    },
+    {
+      "id": "luc",
+      "title": "lúc"
+    },
+    {
+      "id": "may_gio",
+      "title": "bây giờ là..."
+    },
+    {
+      "id": "ruoi",
+      "title": "rưỡi"
+    },
+    {
+      "id": "duration",
+      "title": "Duration"
+    },
+    {
+      "id": "thich_hon",
+      "title": "thích … hơn"
+    }
+  ],
+  "vocab": "lesson4",
+  "fullAudio": "audio/lesson4/{voice}/full.m4a",
+  "sentences": [
+    {
+      "translation": "Hi Việt, how are you?",
+      "audio": "audio/lesson4/{voice}/sentence_01.m4a",
+      "phrases": [
+        {
+          "vi": "Chào",
+          "en": "Hello",
+          "audio": "audio/words/{voice}/chao.mp3"
+        },
+        {
+          "vi": "Việt",
+          "en": "Việt",
+          "audio": "audio/words/{voice}/viet.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "khoẻ",
+          "en": "well",
+          "audio": "audio/words/{voice}/khoe.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "(or not)",
+          "audio": "audio/words/{voice}/khong.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Hi Ms. Hồng, I'm well. And you? Are you well?",
+      "audio": "audio/lesson4/{voice}/sentence_02.m4a",
+      "phrases": [
+        {
+          "vi": "Chào",
+          "en": "Hello",
+          "audio": "audio/words/{voice}/chao.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "Hồng",
+          "en": "Hồng",
+          "audio": "audio/words/{voice}/hong.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "khoẻ",
+          "en": "well",
+          "audio": "audio/words/{voice}/khoe.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Còn",
+          "en": "And",
+          "audio": "audio/words/{voice}/con.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "khoẻ",
+          "en": "well",
+          "audio": "audio/words/{voice}/khoe.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "(or not)",
+          "audio": "audio/words/{voice}/khong.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I'm okay. Have you had breakfast yet?",
+      "audio": "audio/lesson4/{voice}/sentence_03.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "bình thường",
+          "en": "normal",
+          "audio": "audio/words/{voice}/binh_thuong.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "ăn sáng",
+          "en": "eat breakfast",
+          "audio": "audio/words/{voice}/an_sang.mp3"
+        },
+        {
+          "vi": "chưa",
+          "en": "yet?",
+          "audio": "audio/words/{voice}/chua.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I already ate. Have you eaten yet?",
+      "audio": "audio/lesson4/{voice}/sentence_04.m4a",
+      "phrases": [
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "rồi",
+          "en": "already",
+          "audio": "audio/words/{voice}/roi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "chưa",
+          "en": "yet?",
+          "audio": "audio/words/{voice}/chua.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Not yet. I'll eat in a bit.",
+      "audio": "audio/lesson4/{voice}/sentence_05.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "chưa",
+          "en": "not yet",
+          "audio": "audio/words/{voice}/chua.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Lát",
+          "en": "later",
+          "audio": "audio/words/{voice}/lat.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "What time do you usually have breakfast?",
+      "audio": "audio/lesson4/{voice}/sentence_06.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "thường",
+          "en": "usually",
+          "audio": "audio/words/{voice}/thuong.mp3"
+        },
+        {
+          "vi": "ăn sáng",
+          "en": "eat breakfast",
+          "audio": "audio/words/{voice}/an_sang.mp3"
+        },
+        {
+          "vi": "lúc",
+          "en": "at",
+          "audio": "audio/words/{voice}/luc.mp3"
+        },
+        {
+          "vi": "mấy",
+          "en": "what",
+          "audio": "audio/words/{voice}/may.mp3"
+        },
+        {
+          "vi": "giờ",
+          "en": "o'clock",
+          "audio": "audio/words/{voice}/gio.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I usually eat at 9am. After exercising I have breakfast. What time is it now?",
+      "audio": "audio/lesson4/{voice}/sentence_07.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "thường",
+          "en": "usually",
+          "audio": "audio/words/{voice}/thuong.mp3"
+        },
+        {
+          "vi": "ăn",
+          "en": "eat",
+          "audio": "audio/words/{voice}/an.mp3"
+        },
+        {
+          "vi": "lúc",
+          "en": "at",
+          "audio": "audio/words/{voice}/luc.mp3"
+        },
+        {
+          "vi": "chín",
+          "en": "nine",
+          "audio": "audio/words/{voice}/chin.mp3"
+        },
+        {
+          "vi": "giờ",
+          "en": "o'clock",
+          "audio": "audio/words/{voice}/gio.mp3"
+        },
+        {
+          "vi": "sáng",
+          "en": "morning",
+          "audio": "audio/words/{voice}/sang.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Tập thể dục",
+          "en": "exercise",
+          "audio": "audio/words/{voice}/tap_the_duc.mp3"
+        },
+        {
+          "vi": "xong",
+          "en": "finish",
+          "audio": "audio/words/{voice}/xong.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "ăn sáng",
+          "en": "eat breakfast",
+          "audio": "audio/words/{voice}/an_sang.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Bây giờ",
+          "en": "now",
+          "audio": "audio/words/{voice}/bay_gio.mp3"
+        },
+        {
+          "vi": "là",
+          "en": "is",
+          "audio": "audio/words/{voice}/la.mp3"
+        },
+        {
+          "vi": "mấy",
+          "en": "what",
+          "audio": "audio/words/{voice}/may.mp3"
+        },
+        {
+          "vi": "giờ",
+          "en": "o'clock",
+          "audio": "audio/words/{voice}/gio.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "It's 8:30 now. Will you take a nap later?",
+      "audio": "audio/lesson4/{voice}/sentence_08.m4a",
+      "phrases": [
+        {
+          "vi": "Bây giờ",
+          "en": "now",
+          "audio": "audio/words/{voice}/bay_gio.mp3"
+        },
+        {
+          "vi": "là",
+          "en": "is",
+          "audio": "audio/words/{voice}/la.mp3"
+        },
+        {
+          "vi": "tám",
+          "en": "eight",
+          "audio": "audio/words/{voice}/tam.mp3"
+        },
+        {
+          "vi": "rưỡi",
+          "en": "half",
+          "audio": "audio/words/{voice}/ruoi.mp3"
+        },
+        {
+          "vi": "rồi",
+          "en": "already",
+          "audio": "audio/words/{voice}/roi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Lát",
+          "en": "in a bit",
+          "audio": "audio/words/{voice}/lat.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "có",
+          "en": "(do)",
+          "audio": "audio/words/{voice}/co.mp3"
+        },
+        {
+          "vi": "ngủ trưa",
+          "en": "take a nap",
+          "audio": "audio/words/{voice}/ngu_trua.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "(or not)",
+          "audio": "audio/words/{voice}/khong.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "No. I don't usually nap. And you?",
+      "audio": "audio/lesson4/{voice}/sentence_09.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "no",
+          "audio": "audio/words/{voice}/khong.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "không",
+          "en": "not",
+          "audio": "audio/words/{voice}/khong.mp3"
+        },
+        {
+          "vi": "thường",
+          "en": "usually",
+          "audio": "audio/words/{voice}/thuong.mp3"
+        },
+        {
+          "vi": "ngủ trưa",
+          "en": "take a nap",
+          "audio": "audio/words/{voice}/ngu_trua.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Còn",
+          "en": "And",
+          "audio": "audio/words/{voice}/con.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I usually nap for 30 minutes. After lunch I sleep.",
+      "audio": "audio/lesson4/{voice}/sentence_10.m4a",
+      "phrases": [
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "thường",
+          "en": "usually",
+          "audio": "audio/words/{voice}/thuong.mp3"
+        },
+        {
+          "vi": "ngủ trưa",
+          "en": "take a nap",
+          "audio": "audio/words/{voice}/ngu_trua.mp3"
+        },
+        {
+          "vi": "ba mươi",
+          "en": "thirty",
+          "audio": "audio/words/{voice}/ba_muoi.mp3"
+        },
+        {
+          "vi": "phút",
+          "en": "minutes",
+          "audio": "audio/words/{voice}/phut.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Ăn trưa",
+          "en": "eat lunch",
+          "audio": "audio/words/{voice}/an_trua.mp3"
+        },
+        {
+          "vi": "xong",
+          "en": "finish",
+          "audio": "audio/words/{voice}/xong.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "đi ngủ",
+          "en": "go to sleep",
+          "audio": "audio/words/{voice}/di_ngu.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "What are you doing tonight?",
+      "audio": "audio/lesson4/{voice}/sentence_11.m4a",
+      "phrases": [
+        {
+          "vi": "Tối",
+          "en": "evening",
+          "audio": "audio/words/{voice}/toi.mp3"
+        },
+        {
+          "vi": "nay",
+          "en": "this",
+          "audio": "audio/words/{voice}/nay.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "làm",
+          "en": "do",
+          "audio": "audio/words/{voice}/lam.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Tonight I'm eating out with a friend at 7. After work I go eat. And you?",
+      "audio": "audio/lesson4/{voice}/sentence_12.m4a",
+      "phrases": [
+        {
+          "vi": "Tối",
+          "en": "evening",
+          "audio": "audio/words/{voice}/toi.mp3"
+        },
+        {
+          "vi": "nay",
+          "en": "this",
+          "audio": "audio/words/{voice}/nay.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "đi ăn",
+          "en": "eat out",
+          "audio": "audio/words/{voice}/di_an.mp3"
+        },
+        {
+          "vi": "với",
+          "en": "with",
+          "audio": "audio/words/{voice}/voi.mp3"
+        },
+        {
+          "vi": "bạn",
+          "en": "friend",
+          "audio": "audio/words/{voice}/ban.mp3"
+        },
+        {
+          "vi": "lúc",
+          "en": "at",
+          "audio": "audio/words/{voice}/luc.mp3"
+        },
+        {
+          "vi": "bảy",
+          "en": "seven",
+          "audio": "audio/words/{voice}/bay.mp3"
+        },
+        {
+          "vi": "giờ",
+          "en": "o'clock",
+          "audio": "audio/words/{voice}/gio.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Làm việc",
+          "en": "work",
+          "audio": "audio/words/{voice}/lam_viec.mp3"
+        },
+        {
+          "vi": "xong",
+          "en": "finish",
+          "audio": "audio/words/{voice}/xong.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "đi ăn",
+          "en": "eat out",
+          "audio": "audio/words/{voice}/di_an.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Còn",
+          "en": "And",
+          "audio": "audio/words/{voice}/con.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Tonight I'm at home. I prefer cooking over eating out at a restaurant.",
+      "audio": "audio/lesson4/{voice}/sentence_13.m4a",
+      "phrases": [
+        {
+          "vi": "Tối",
+          "en": "evening",
+          "audio": "audio/words/{voice}/toi.mp3"
+        },
+        {
+          "vi": "nay",
+          "en": "this",
+          "audio": "audio/words/{voice}/nay.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "nhà",
+          "en": "home",
+          "audio": "audio/words/{voice}/nha.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "nấu ăn",
+          "en": "cook",
+          "audio": "audio/words/{voice}/nau_an.mp3"
+        },
+        {
+          "vi": "hơn",
+          "en": "more",
+          "audio": "audio/words/{voice}/hon.mp3"
+        },
+        {
+          "vi": "đi ăn",
+          "en": "eat out",
+          "audio": "audio/words/{voice}/di_an.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "quán",
+          "en": "restaurant",
+          "audio": "audio/words/{voice}/quan.mp3"
+        }
+      ]
+    }
+  ]
+}

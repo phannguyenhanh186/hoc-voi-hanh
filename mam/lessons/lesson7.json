@@ -1,0 +1,637 @@
+{
+  "id": "lesson7",
+  "title": "Mua sắm",
+  "description": "Two friends chat about clothes they just bought and their recent trips to Korea and Thailand.",
+  "inputs": [
+    {
+      "id": "qua_rat_hoi",
+      "title": "quá / rất / hơi"
+    },
+    {
+      "id": "ruoi_so",
+      "title": "rưỡi (số)"
+    },
+    {
+      "id": "o_dau",
+      "title": "ở đâu"
+    },
+    {
+      "id": "bao_lau",
+      "title": "bao lâu"
+    },
+    {
+      "id": "di",
+      "title": "đi"
+    },
+    {
+      "id": "moi",
+      "title": "mới"
+    }
+  ],
+  "vocab": "lesson7",
+  "fullAudio": "audio/lesson7/{voice}/full.m4a",
+  "sentences": [
+    {
+      "translation": "Your shirt is so beautiful. Where did you buy it?",
+      "audio": "audio/lesson7/{voice}/sentence_01.m4a",
+      "phrases": [
+        {
+          "vi": "Áo",
+          "en": "shirt",
+          "audio": "audio/words/{voice}/ao.mp3"
+        },
+        {
+          "vi": "của",
+          "en": "of",
+          "audio": "audio/words/{voice}/cua.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "đẹp",
+          "en": "beautiful",
+          "audio": "audio/words/{voice}/dep.mp3"
+        },
+        {
+          "vi": "quá",
+          "en": "so",
+          "audio": "audio/words/{voice}/qua2.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "ở đâu",
+          "en": "where",
+          "audio": "audio/words/{voice}/o_dau.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I bought it at the supermarket. I bought it last Sunday.",
+      "audio": "audio/lesson7/{voice}/sentence_02.m4a",
+      "phrases": [
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "siêu thị",
+          "en": "supermarket",
+          "audio": "audio/words/{voice}/sieu_thi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "chủ nhật",
+          "en": "Sunday",
+          "audio": "audio/words/{voice}/chu_nhat.mp3"
+        },
+        {
+          "vi": "tuần",
+          "en": "week",
+          "audio": "audio/words/{voice}/tuan.mp3"
+        },
+        {
+          "vi": "trước",
+          "en": "last/ago",
+          "audio": "audio/words/{voice}/truoc.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "How much did you buy it for?",
+      "audio": "audio/lesson7/{voice}/sentence_03.m4a",
+      "phrases": [
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "bao nhiêu",
+          "en": "how much",
+          "audio": "audio/words/{voice}/bao_nhieu.mp3"
+        },
+        {
+          "vi": "tiền",
+          "en": "money",
+          "audio": "audio/words/{voice}/tien.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I bought this shirt for 200,000. A bit expensive.",
+      "audio": "audio/lesson7/{voice}/sentence_04.m4a",
+      "phrases": [
+        {
+          "vi": "Cái",
+          "en": "(classifier)",
+          "audio": "audio/words/{voice}/cai.mp3"
+        },
+        {
+          "vi": "áo",
+          "en": "shirt",
+          "audio": "audio/words/{voice}/ao.mp3"
+        },
+        {
+          "vi": "này",
+          "en": "this",
+          "audio": "audio/words/{voice}/nay2.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "hai trăm",
+          "en": "200",
+          "audio": "audio/words/{voice}/hai_tram.mp3"
+        },
+        {
+          "vi": "ngàn",
+          "en": "thousand",
+          "audio": "audio/words/{voice}/ngan.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Hơi",
+          "en": "a bit",
+          "audio": "audio/words/{voice}/hoi.mp3"
+        },
+        {
+          "vi": "mắc",
+          "en": "expensive",
+          "audio": "audio/words/{voice}/mac.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Not expensive. I just bought a shirt for 350,000. So expensive.",
+      "audio": "audio/lesson7/{voice}/sentence_05.m4a",
+      "phrases": [
+        {
+          "vi": "Không",
+          "en": "not",
+          "audio": "audio/words/{voice}/khong.mp3"
+        },
+        {
+          "vi": "mắc",
+          "en": "expensive",
+          "audio": "audio/words/{voice}/mac.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "mới",
+          "en": "just",
+          "audio": "audio/words/{voice}/moi.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "một",
+          "en": "one",
+          "audio": "audio/words/{voice}/mot.mp3"
+        },
+        {
+          "vi": "cái",
+          "en": "(classifier)",
+          "audio": "audio/words/{voice}/cai.mp3"
+        },
+        {
+          "vi": "áo",
+          "en": "shirt",
+          "audio": "audio/words/{voice}/ao.mp3"
+        },
+        {
+          "vi": "ba trăm",
+          "en": "300",
+          "audio": "audio/words/{voice}/ba_tram.mp3"
+        },
+        {
+          "vi": "rưỡi",
+          "en": "half",
+          "audio": "audio/words/{voice}/ruoi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Mắc",
+          "en": "expensive",
+          "audio": "audio/words/{voice}/mac.mp3"
+        },
+        {
+          "vi": "quá",
+          "en": "so",
+          "audio": "audio/words/{voice}/qua2.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Really? Where did you buy that shirt?",
+      "audio": "audio/lesson7/{voice}/sentence_06.m4a",
+      "phrases": [
+        {
+          "vi": "Vậy hả",
+          "en": "really?",
+          "audio": "audio/words/{voice}/vay_ha.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "cái",
+          "en": "(classifier)",
+          "audio": "audio/words/{voice}/cai.mp3"
+        },
+        {
+          "vi": "áo",
+          "en": "shirt",
+          "audio": "audio/words/{voice}/ao.mp3"
+        },
+        {
+          "vi": "đó",
+          "en": "that",
+          "audio": "audio/words/{voice}/do.mp3"
+        },
+        {
+          "vi": "ở đâu",
+          "en": "where",
+          "audio": "audio/words/{voice}/o_dau.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I bought it in Korea. I just went to Korea last month.",
+      "audio": "audio/lesson7/{voice}/sentence_07.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "mua",
+          "en": "buy",
+          "audio": "audio/words/{voice}/mua.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "Hàn",
+          "en": "Korea",
+          "audio": "audio/words/{voice}/han.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "mới",
+          "en": "just",
+          "audio": "audio/words/{voice}/moi.mp3"
+        },
+        {
+          "vi": "đi",
+          "en": "go",
+          "audio": "audio/words/{voice}/di.mp3"
+        },
+        {
+          "vi": "Hàn",
+          "en": "Korea",
+          "audio": "audio/words/{voice}/han.mp3"
+        },
+        {
+          "vi": "tháng",
+          "en": "month",
+          "audio": "audio/words/{voice}/thang.mp3"
+        },
+        {
+          "vi": "trước",
+          "en": "last/ago",
+          "audio": "audio/words/{voice}/truoc.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I also like traveling to Korea. How long were you in Korea?",
+      "audio": "audio/lesson7/{voice}/sentence_08.m4a",
+      "phrases": [
+        {
+          "vi": "Em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "cũng",
+          "en": "also",
+          "audio": "audio/words/{voice}/cung.mp3"
+        },
+        {
+          "vi": "thích",
+          "en": "like",
+          "audio": "audio/words/{voice}/thich.mp3"
+        },
+        {
+          "vi": "du lịch",
+          "en": "travel",
+          "audio": "audio/words/{voice}/du_lich.mp3"
+        },
+        {
+          "vi": "Hàn",
+          "en": "Korea",
+          "audio": "audio/words/{voice}/han.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "stay",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "Hàn",
+          "en": "Korea",
+          "audio": "audio/words/{voice}/han.mp3"
+        },
+        {
+          "vi": "bao lâu",
+          "en": "how long",
+          "audio": "audio/words/{voice}/bao_lau.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "I stayed there for 3 days. After that I traveled in Thailand for 3 more days.",
+      "audio": "audio/lesson7/{voice}/sentence_09.m4a",
+      "phrases": [
+        {
+          "vi": "Chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "stay",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "đó",
+          "en": "there",
+          "audio": "audio/words/{voice}/do.mp3"
+        },
+        {
+          "vi": "ba",
+          "en": "3",
+          "audio": "audio/words/{voice}/ba.mp3"
+        },
+        {
+          "vi": "ngày",
+          "en": "day",
+          "audio": "audio/words/{voice}/ngay.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Sau đó",
+          "en": "after that",
+          "audio": "audio/words/{voice}/sau_do.mp3"
+        },
+        {
+          "vi": "chị",
+          "en": "older sister",
+          "audio": "audio/words/{voice}/chi.mp3"
+        },
+        {
+          "vi": "du lịch",
+          "en": "travel",
+          "audio": "audio/words/{voice}/du_lich.mp3"
+        },
+        {
+          "vi": "Thái",
+          "en": "Thailand",
+          "audio": "audio/words/{voice}/thai.mp3"
+        },
+        {
+          "vi": "ba",
+          "en": "3",
+          "audio": "audio/words/{voice}/ba.mp3"
+        },
+        {
+          "vi": "ngày",
+          "en": "day",
+          "audio": "audio/words/{voice}/ngay.mp3"
+        },
+        {
+          "vi": "nữa",
+          "en": "more",
+          "audio": "audio/words/{voice}/nua.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "Really. In November I'm also going to Thailand. Clothes in Thailand seem very cheap.",
+      "audio": "audio/lesson7/{voice}/sentence_10.m4a",
+      "phrases": [
+        {
+          "vi": "Vậy hả",
+          "en": "really?",
+          "audio": "audio/words/{voice}/vay_ha.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Tháng",
+          "en": "month",
+          "audio": "audio/words/{voice}/thang.mp3"
+        },
+        {
+          "vi": "mười một",
+          "en": "11",
+          "audio": "audio/words/{voice}/muoi_mot.mp3"
+        },
+        {
+          "vi": "em",
+          "en": "younger sibling",
+          "audio": "audio/words/{voice}/em.mp3"
+        },
+        {
+          "vi": "cũng",
+          "en": "also",
+          "audio": "audio/words/{voice}/cung.mp3"
+        },
+        {
+          "vi": "đi",
+          "en": "go",
+          "audio": "audio/words/{voice}/di.mp3"
+        },
+        {
+          "vi": "Thái",
+          "en": "Thailand",
+          "audio": "audio/words/{voice}/thai.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Hình như",
+          "en": "seems like",
+          "audio": "audio/words/{voice}/hinh_nhu.mp3"
+        },
+        {
+          "vi": "quần áo",
+          "en": "clothes",
+          "audio": "audio/words/{voice}/quan_ao.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "Thái",
+          "en": "Thailand",
+          "audio": "audio/words/{voice}/thai.mp3"
+        },
+        {
+          "vi": "rất",
+          "en": "very",
+          "audio": "audio/words/{voice}/rat.mp3"
+        },
+        {
+          "vi": "rẻ",
+          "en": "cheap",
+          "audio": "audio/words/{voice}/re.mp3"
+        }
+      ]
+    },
+    {
+      "translation": "That's right. Clothes there are also very beautiful.",
+      "audio": "audio/lesson7/{voice}/sentence_11.m4a",
+      "phrases": [
+        {
+          "vi": "Đúng rồi",
+          "en": "that's right",
+          "audio": "audio/words/{voice}/dung_roi.mp3"
+        },
+        {
+          "br": true
+        },
+        {
+          "vi": "Quần áo",
+          "en": "clothes",
+          "audio": "audio/words/{voice}/quan_ao.mp3"
+        },
+        {
+          "vi": "ở",
+          "en": "at",
+          "audio": "audio/words/{voice}/o.mp3"
+        },
+        {
+          "vi": "đó",
+          "en": "there",
+          "audio": "audio/words/{voice}/do.mp3"
+        },
+        {
+          "vi": "cũng",
+          "en": "also",
+          "audio": "audio/words/{voice}/cung.mp3"
+        },
+        {
+          "vi": "rất",
+          "en": "very",
+          "audio": "audio/words/{voice}/rat.mp3"
+        },
+        {
+          "vi": "đẹp",
+          "en": "beautiful",
+          "audio": "audio/words/{voice}/dep.mp3"
+        }
+      ]
+    }
+  ]
+}

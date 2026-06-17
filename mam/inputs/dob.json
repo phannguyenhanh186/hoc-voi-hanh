@@ -1,0 +1,32 @@
+{
+  "id": "dob",
+  "title": "DOB",
+  "terms": [
+    "sinh ngày"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Question: [Anh/Chị/Em] sinh ngày mấy?  —  What is your date of birth?"
+        },
+        {
+          "type": "text",
+          "text": "Answer: [Em/Anh/Chị] sinh ngày [x] tháng [x] năm [x].  —  My date of birth is [date / month / year]."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Anh sinh ngày mấy? → Em sinh ngày 20 tháng 8 năm 1998.",
+          "en": "What is your date of birth? → My date of birth is August 20th, 1998."
+        }
+      ]
+    }
+  ]
+}
