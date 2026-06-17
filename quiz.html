@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luyện tập — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .quiz-top { display: flex; align-items: center; gap: 12px; padding: 18px 0 6px; }
+    .quiz-top .back { font-weight: 600; color: var(--accent-deep); text-decoration: none; flex: none; }
+    .progress { flex: 1; height: 12px; background: #ECEBFB; border: 1.5px solid var(--stroke); border-radius: 999px; overflow: hidden; }
+    .progress > i { display: block; height: 100%; width: 0; background: #B6E3B0; transition: width .25s ease; }
+    .quiz-score { font-weight: 700; font-family: var(--font-display); flex: none; }
+
+    .q-card { background: var(--surface); border: 1.5px solid var(--stroke); border-radius: var(--radius); padding: 20px; margin-top: 14px; }
+    .q-kind { font-size: .78rem; font-weight: 700; letter-spacing: .04em; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+    .q-prompt { font-size: 1.5rem; font-family: var(--font-display); margin: 2px 0 4px; }
+    .q-sub { color: var(--muted); margin-bottom: 14px; }
+
+    .options { display: grid; gap: 10px; }
+    @media (min-width: 480px) { .options.two { grid-template-columns: 1fr 1fr; } }
+    .opt { text-align: left; background: var(--surface); border: 1.5px solid var(--stroke); border-radius: 14px; padding: 13px 15px; font-size: 1.05rem; cursor: pointer; font-family: var(--font-body); transition: transform .1s ease, background .15s; }
+    .opt:hover { background: #F3F2FF; }
+    .opt:active { transform: scale(.98); }
+    .opt.correct { background: #B6E3B0; border-color: var(--stroke); }
+    .opt.wrong { background: #F7C5C5; border-color: var(--stroke); }
+    .opt:disabled { cursor: default; }
+
+    .tiles, .answer-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .answer-row { min-height: 52px; border: 1.5px dashed var(--stroke); border-radius: 14px; padding: 10px; margin-bottom: 12px; background: #FAFAFF; }
+    .tile { background: var(--primary); border: 1.5px solid var(--stroke); border-radius: 12px; padding: 9px 13px; font-size: 1.05rem; cursor: pointer; font-family: var(--font-body); }
+    .tile:active { transform: scale(.97); }
+    .tile.used { opacity: .35; pointer-events: none; }
+
+    .match-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .match-col { display: grid; gap: 10px; }
+    .mtile { background: var(--surface); border: 1.5px solid var(--stroke); border-radius: 12px; padding: 12px; cursor: pointer; font-size: 1.02rem; }
+    .mtile.sel { background: var(--primary); }
+    .mtile.done { background: #B6E3B0; pointer-events: none; opacity: .7; }
+    .mtile.bad { background: #F7C5C5; }
+
+    .mic-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; border: 1.5px solid var(--stroke); border-radius: 999px; padding: 13px 22px; font-size: 1.05rem; font-weight: 700; cursor: pointer; font-family: var(--font-display); }
+    .mic-btn.rec { background: #E5484D; }
+    .heard { margin-top: 12px; color: var(--muted); }
+
+    .q-actions { display: flex; gap: 10px; align-items: center; margin-top: 16px; }
+    .btn-primary { background: var(--accent-deep); color: #fff; border: 1.5px solid var(--stroke); border-radius: 999px; padding: 11px 22px; font-weight: 700; cursor: pointer; font-family: var(--font-display); font-size: 1rem; }
+    .btn-ghost { background: transparent; border: none; color: var(--muted); cursor: pointer; font-weight: 600; }
+    .feedback { font-weight: 700; }
+    .feedback.ok { color: #2F8F4E; }
+    .feedback.no { color: #C23B3B; }
+
+    .speak-btn { background: var(--surface); border: 1.5px solid var(--stroke); border-radius: 10px; width: 40px; height: 40px; cursor: pointer; font-size: 1.05rem; flex: none; }
+
+    .end-card { text-align: center; padding: 34px 20px; }
+    .end-score { font-size: 3rem; font-family: var(--font-display); margin: 6px 0; }
+    .note-warn { background: #FFF6E5; border: 1.5px solid var(--stroke); border-radius: 12px; padding: 10px 13px; color: #6b4e1f; font-size: .9rem; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="level-select" id="back-lesson" style="text-decoration:none;display:inline-flex;align-items:center" href="#">← bài học</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="quiz-top">
+      <div class="progress"><i id="bar"></i></div>
+      <span class="quiz-score" id="score">0</span>
+    </div>
+    <h1 id="qtitle" style="font-size:1.3rem;margin:6px 0 0">Luyện tập</h1>
+    <div id="stage"></div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const lessonId = params.get('id');
+    let level = params.get('level') || 'mam';
+    const stage = document.getElementById('stage');
+    const bar = document.getElementById('bar');
+    const scoreEl = document.getElementById('score');
+    document.getElementById('back-lesson').href = 'lesson.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level);
+
+    // ---------- helpers ----------
+    const norm = s => (s || '').toLowerCase().normalize('NFC').replace(/[.,!?…"']/g, '').replace(/\s+/g, ' ').trim();
+    const stripD = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+    function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+    function sample(a, n) { return shuffle(a).slice(0, n); }
+    const cleanGloss = en => en && !/^\(/.test(en) && !/\?/.test(en) && !/^…/.test(en);
+
+    // ---------- speech ----------
+    function speak(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'vi-VN';
+      const v = (window.speechSynthesis.getVoices() || []).find(x => /vi/i.test(x.lang));
+      if (v) u.voice = v;
+      u.rate = .9;
+      window.speechSynthesis.speak(u);
+    }
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    // ---------- load ----------
+    (async function () {
+      let vocab = null, lesson = null;
+      try {
+        const lr = await fetch(level + '/lessons/' + lessonId + '.json', { cache: 'no-cache' });
+        lesson = await lr.json();
+        if (lesson.vocab) {
+          const vr = await fetch(level + '/vocab/' + lesson.vocab + '.json', { cache: 'no-cache' });
+          if (vr.ok) vocab = await vr.json();
+        }
+      } catch (e) { stage.innerHTML = '<p class="note-warn">Không tải được dữ liệu bài học.</p>'; return; }
+
+      document.getElementById('qtitle').textContent = 'Luyện tập — ' + (lesson.title || lessonId);
+
+      // pools
+      const pairs = [];   // {vi, en}
+      const seen = new Set();
+      function addPair(vi, en) {
+        if (!vi || !cleanGloss(en)) return;
+        const k = norm(vi) + '|' + norm(en);
+        if (seen.has(k)) return; seen.add(k); pairs.push({ vi: vi, en: en });
+      }
+      (vocab ? vocab.sections : []).forEach(s => (s.items || []).forEach(it => {
+        if (it.vi && it.en && !/⟷/.test(it.vi)) addPair(it.vi, it.en);
+      }));
+      lesson.sentences.forEach(s => (s.phrases || []).forEach(p => { if (p.vi) addPair(p.vi, p.en); }));
+
+      const sentences = lesson.sentences.filter(s => s.phrases).map(s => ({
+        toks: s.phrases.filter(p => p.vi).map(p => p.vi),
+        en: s.translation
+      })).filter(s => s.toks.length >= 3 && s.toks.length <= 8 && s.en);
+
+      // build question set
+      const qs = [];
+      const pool = shuffle(pairs);
+      function distract(correctEn, key) {
+        const others = pairs.filter(p => norm(p[key]) !== norm(correctEn));
+        return sample(others.map(p => p[key]), 3);
+      }
+      // MCQ vi->en  &  en->vi  &  listen
+      pool.slice(0, 4).forEach(p => { if (distract(p.en, 'en').length === 3) qs.push({ t: 'mcq', dir: 'vi2en', p }); });
+      pool.slice(4, 7).forEach(p => { if (distract(p.vi, 'vi').length === 3) qs.push({ t: 'mcq', dir: 'en2vi', p }); });
+      pool.slice(7, 10).forEach(p => { if (distract(p.en, 'en').length === 3) qs.push({ t: 'listen', p }); });
+      // build sentence
+      sample(sentences, Math.min(3, sentences.length)).forEach(s => qs.push({ t: 'build', s }));
+      // match
+      if (pairs.length >= 4) qs.push({ t: 'match', set: sample(pairs, Math.min(5, pairs.length)) });
+      // speak (only if supported)
+      if (SR) sample(sentences.length ? sentences : pairs.map(p => ({ toks: [p.vi], en: p.en })), 2)
+        .forEach(s => qs.push({ t: 'speak', text: s.toks.join(' '), en: s.en }));
+
+      const questions = shuffle(qs).slice(0, 12);
+      let idx = 0, correct = 0;
+      const total = questions.length || 1;
+
+      function setBar() { bar.style.width = (idx / total * 100) + '%'; scoreEl.textContent = correct; }
+
+      function next() { idx++; setBar(); if (idx >= questions.length) end(); else render(questions[idx]); }
+
+      function mark(ok) { if (ok) correct++; scoreEl.textContent = correct; }
+
+      function actions(showNext, fbText, fbOk) {
+        const wrap = document.createElement('div'); wrap.className = 'q-actions';
+        if (fbText) { const f = document.createElement('span'); f.className = 'feedback ' + (fbOk ? 'ok' : 'no'); f.textContent = fbText; wrap.appendChild(f); }
+        const b = document.createElement('button'); b.className = 'btn-primary'; b.textContent = (idx + 1 >= questions.length ? 'Xem kết quả' : 'Tiếp →');
+        b.onclick = next; b.style.marginLeft = 'auto';
+        if (showNext) wrap.appendChild(b);
+        return wrap;
+      }
+
+      function card(kind, promptHtml, subHtml) {
+        stage.innerHTML = '';
+        const c = document.createElement('div'); c.className = 'q-card';
+        const k = document.createElement('div'); k.className = 'q-kind'; k.textContent = kind; c.appendChild(k);
+        if (promptHtml) { const p = document.createElement('div'); p.className = 'q-prompt'; p.innerHTML = promptHtml; c.appendChild(p); }
+        if (subHtml) { const s = document.createElement('div'); s.className = 'q-sub'; s.innerHTML = subHtml; c.appendChild(s); }
+        stage.appendChild(c); return c;
+      }
+
+      function renderMCQ(q) {
+        const ask = q.dir === 'vi2en' ? q.p.vi : q.p.en;
+        const ansKey = q.dir === 'vi2en' ? 'en' : 'vi';
+        const correctAns = q.p[ansKey];
+        const c = card(q.dir === 'vi2en' ? 'Chọn nghĩa tiếng Anh' : 'Chọn từ tiếng Việt', ask,
+          q.dir === 'vi2en' ? 'Nghĩa của từ này là gì?' : 'Từ tiếng Việt nào đúng?');
+        const opts = shuffle([correctAns].concat(distract(correctAns, ansKey)));
+        const box = document.createElement('div'); box.className = 'options two';
+        opts.forEach(o => {
+          const b = document.createElement('button'); b.className = 'opt'; b.textContent = o;
+          b.onclick = () => {
+            box.querySelectorAll('.opt').forEach(x => x.disabled = true);
+            const ok = norm(o) === norm(correctAns);
+            b.classList.add(ok ? 'correct' : 'wrong');
+            if (!ok) box.querySelectorAll('.opt').forEach(x => { if (norm(x.textContent) === norm(correctAns)) x.classList.add('correct'); });
+            mark(ok);
+            c.appendChild(actions(true, ok ? 'Chính xác!' : 'Đáp án: ' + correctAns, ok));
+          };
+          box.appendChild(b);
+        });
+        c.appendChild(box);
+      }
+
+      function renderListen(q) {
+        const c = card('Nghe & chọn', '🔊', 'Bấm loa để nghe rồi chọn nghĩa đúng');
+        const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Nghe lại';
+        play.onclick = () => speak(q.p.vi); c.appendChild(play); speak(q.p.vi);
+        const box = document.createElement('div'); box.className = 'options two'; box.style.marginTop = '14px';
+        shuffle([q.p.en].concat(distract(q.p.en, 'en'))).forEach(o => {
+          const b = document.createElement('button'); b.className = 'opt'; b.textContent = o;
+          b.onclick = () => {
+            box.querySelectorAll('.opt').forEach(x => x.disabled = true);
+            const ok = norm(o) === norm(q.p.en); b.classList.add(ok ? 'correct' : 'wrong');
+            if (!ok) box.querySelectorAll('.opt').forEach(x => { if (norm(x.textContent) === norm(q.p.en)) x.classList.add('correct'); });
+            mark(ok); c.appendChild(actions(true, ok ? 'Chính xác! (' + q.p.vi + ')' : q.p.vi + ' = ' + q.p.en, ok));
+          };
+          box.appendChild(b);
+        });
+        c.appendChild(box);
+      }
+
+      function renderBuild(q) {
+        const c = card('Ghép câu', q.s.en, 'Bấm các từ theo đúng thứ tự');
+        const ansRow = document.createElement('div'); ansRow.className = 'answer-row';
+        const tiles = document.createElement('div'); tiles.className = 'tiles';
+        const chosen = [];
+        const order = shuffle(q.s.toks.map((t, i) => ({ t, i })));
+        order.forEach(o => {
+          const b = document.createElement('button'); b.className = 'tile'; b.textContent = o.t;
+          b.onclick = () => {
+            if (b.classList.contains('used')) return;
+            b.classList.add('used'); chosen.push(o.t);
+            const a = document.createElement('button'); a.className = 'tile'; a.textContent = o.t;
+            a.onclick = () => { a.remove(); b.classList.remove('used'); chosen.splice(chosen.indexOf(o.t), 1); };
+            ansRow.appendChild(a);
+          };
+          tiles.appendChild(b);
+        });
+        c.appendChild(ansRow); c.appendChild(tiles);
+        const check = document.createElement('button'); check.className = 'btn-primary'; check.style.marginTop = '14px'; check.textContent = 'Kiểm tra';
+        check.onclick = () => {
+          const ok = norm(chosen.join(' ')) === norm(q.s.toks.join(' '));
+          check.remove();
+          mark(ok);
+          c.appendChild(actions(true, ok ? 'Chính xác!' : 'Đáp án: ' + q.s.toks.join(' '), ok));
+        };
+        c.appendChild(check);
+      }
+
+      function renderMatch(q) {
+        const c = card('Ghép cặp', 'Ghép từ với nghĩa', 'Bấm một từ tiếng Việt rồi bấm nghĩa tương ứng');
+        const cols = document.createElement('div'); cols.className = 'match-cols';
+        const left = document.createElement('div'); left.className = 'match-col';
+        const right = document.createElement('div'); right.className = 'match-col';
+        let sel = null, done = 0;
+        shuffle(q.set).forEach(p => { const b = document.createElement('button'); b.className = 'mtile'; b.textContent = p.vi; b.dataset.k = norm(p.vi); left.appendChild(b); });
+        shuffle(q.set).forEach(p => { const b = document.createElement('button'); b.className = 'mtile'; b.textContent = p.en; b.dataset.k = norm(p.vi); right.appendChild(b); });
+        function click(b, side) {
+          if (b.classList.contains('done')) return;
+          if (!sel) { sel = b; b.classList.add('sel'); return; }
+          if (sel.parentNode === b.parentNode) { sel.classList.remove('sel'); sel = b; b.classList.add('sel'); return; }
+          if (sel.dataset.k === b.dataset.k) { sel.classList.add('done'); b.classList.add('done'); sel.classList.remove('sel'); sel = null; done++; if (done === q.set.length) { mark(true); c.appendChild(actions(true, 'Hoàn thành!', true)); } }
+          else { const s = sel; b.classList.add('bad'); s.classList.add('bad'); setTimeout(() => { b.classList.remove('bad'); s.classList.remove('bad', 'sel'); }, 500); sel = null; }
+        }
+        left.querySelectorAll('.mtile').forEach(b => b.onclick = () => click(b, 'l'));
+        right.querySelectorAll('.mtile').forEach(b => b.onclick = () => click(b, 'r'));
+        cols.appendChild(left); cols.appendChild(right); c.appendChild(cols);
+      }
+
+      function renderSpeak(q) {
+        const c = card('Luyện nói', q.text, 'Bấm micro và đọc to câu trên (tiếng Việt)');
+        const play = document.createElement('button'); play.className = 'speak-btn'; play.textContent = '🔊'; play.title = 'Nghe mẫu';
+        play.onclick = () => speak(q.text); c.appendChild(play);
+        const mic = document.createElement('button'); mic.className = 'mic-btn'; mic.textContent = '🎤 Bấm để nói'; mic.style.marginLeft = '10px';
+        const heard = document.createElement('div'); heard.className = 'heard';
+        c.appendChild(mic); c.appendChild(heard);
+        let answered = false;
+        mic.onclick = () => {
+          const rec = new SR(); rec.lang = 'vi-VN'; rec.interimResults = false; rec.maxAlternatives = 3;
+          mic.classList.add('rec'); mic.textContent = '● Đang nghe…';
+          rec.onresult = (e) => {
+            const alts = []; for (let i = 0; i < e.results[0].length; i++) alts.push(e.results[0][i].transcript);
+            heard.textContent = 'Bạn nói: "' + alts[0] + '"';
+            const target = norm(q.text), targetD = stripD(target);
+            const ok = alts.some(a => { const n = norm(a); return n === target || stripD(n) === targetD || sim(n, target) >= .7; });
+            if (!answered) { answered = true; mark(ok); c.appendChild(actions(true, ok ? 'Phát âm khớp! 👍' : 'Gần đúng — câu mẫu: ' + q.text, ok)); }
+          };
+          rec.onerror = () => { mic.classList.remove('rec'); mic.textContent = '🎤 Thử lại'; };
+          rec.onend = () => { mic.classList.remove('rec'); if (!answered) mic.textContent = '🎤 Thử lại'; };
+          rec.start();
+        };
+        const skip = document.createElement('div'); const sk = actions(true, '', true); sk.querySelector('.btn-primary').textContent = 'Bỏ qua →'; c.appendChild(sk);
+      }
+      function sim(a, b) { // Dice coefficient on words
+        const A = a.split(' '), B = b.split(' '); let m = 0; const used = [];
+        A.forEach(w => { const j = B.findIndex((x, k) => x === w && !used.includes(k)); if (j > -1) { m++; used.push(j); } });
+        return 2 * m / (A.length + B.length);
+      }
+
+      function render(q) {
+        setBar();
+        if (q.t === 'mcq') renderMCQ(q);
+        else if (q.t === 'listen') renderListen(q);
+        else if (q.t === 'build') renderBuild(q);
+        else if (q.t === 'match') renderMatch(q);
+        else if (q.t === 'speak') renderSpeak(q);
+      }
+
+      function end() {
+        bar.style.width = '100%';
+        const pct = Math.round(correct / total * 100);
+        const key = 'quizbest:' + level + ':' + lessonId;
+        let best = 0; try { best = parseInt(localStorage.getItem(key) || '0', 10); } catch (e) {}
+        if (pct > best) { try { localStorage.setItem(key, String(pct)); } catch (e) {} best = pct; }
+        stage.innerHTML = '';
+        const c = document.createElement('div'); c.className = 'q-card end-card';
+        c.innerHTML = '<div class="q-kind">Kết quả</div><div class="end-score">' + pct + '%</div>' +
+          '<div class="q-sub">Đúng ' + correct + '/' + total + ' câu · Điểm cao nhất: ' + best + '%</div>';
+        const again = document.createElement('button'); again.className = 'btn-primary'; again.textContent = '↻ Làm lại';
+        again.onclick = () => location.reload();
+        const back = document.createElement('a'); back.className = 'btn-ghost'; back.textContent = 'Về bài học';
+        back.href = 'lesson.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level);
+        back.style.marginLeft = '12px';
+        const row = document.createElement('div'); row.style.marginTop = '16px'; row.appendChild(again); row.appendChild(back);
+        c.appendChild(row);
+        if (!SR) c.insertAdjacentHTML('beforeend', '<div class="note-warn">Mẹo: dùng Chrome để có thêm phần Luyện nói (nhận diện giọng nói).</div>');
+        stage.appendChild(c);
+      }
+
+      if (!questions.length) { stage.innerHTML = '<p class="note-warn">Chưa đủ dữ liệu để tạo quiz cho bài này.</p>'; return; }
+      // warm up voices
+      if ('speechSynthesis' in window) window.speechSynthesis.getVoices();
+      render(questions[0]);
+    })();
+  </script>
+</body>
+</html>
