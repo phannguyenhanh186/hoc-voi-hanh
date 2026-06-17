@@ -100,17 +100,16 @@
       document.title = (lesson.title || lessonId) + ' — hoc voi hanh';
       $title.textContent = lesson.title || lessonId;
 
-      // nút điều hướng: grammar point + vocabulary
+      // nút điều hướng: 1 nút "new inputs" gom ngữ pháp + vocabulary + luyện tập
       const nav = document.getElementById('inputs-nav');
       nav.innerHTML = '';
-      (lesson.inputs || []).forEach(function (inp) {
+      if ((lesson.inputs || []).length) {
         const a = document.createElement('a');
         a.className = 'btn-input';
-        const lvl = inp.level || lessonLevel;
-        a.href = 'input.html?id=' + encodeURIComponent(inp.id) + (lvl ? '&level=' + encodeURIComponent(lvl) : '');
-        a.textContent = inp.title || 'grammar point';
+        a.href = 'inputs.html?id=' + encodeURIComponent(lessonId) + (lessonLevel ? '&level=' + encodeURIComponent(lessonLevel) : '');
+        a.textContent = 'new inputs';
         nav.appendChild(a);
-      });
+      }
       if (lesson.vocab) {
         const a = document.createElement('a');
         a.className = 'btn-input btn-vocab';
