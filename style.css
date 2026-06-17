@@ -258,6 +258,7 @@ a { color: var(--accent-deep); text-decoration: none; }
 /* nút grammar trong thanh điều hướng -> xanh; vocabulary giữ vàng */
 #inputs-nav .btn-input { background: #B6E3B0; color: var(--ink); }
 #inputs-nav .btn-vocab { background: var(--yellow); color: #6b4e1f; }
+#inputs-nav .btn-practice { background: var(--accent); color: #fff; }
 
 /* ---------- Core inputs page ---------- */
 .input-sections { padding: 6px 0 60px; }
