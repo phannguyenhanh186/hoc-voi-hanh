@@ -118,6 +118,13 @@
         a.textContent = 'vocabulary';
         nav.appendChild(a);
       }
+      {
+        const a = document.createElement('a');
+        a.className = 'btn-input btn-practice';
+        a.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + (lessonLevel ? '&level=' + encodeURIComponent(lessonLevel) : '');
+        a.textContent = 'luyện tập';
+        nav.appendChild(a);
+      }
 
       if (lesson.fullAudio) {
         $full.src = resolveAudio(lesson.fullAudio);
