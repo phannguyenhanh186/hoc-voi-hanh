@@ -114,9 +114,8 @@ a { color: var(--accent-deep); text-decoration: none; }
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 .card:hover, .card:focus-visible {
-  transform: translateY(-2px);
-  border-color: var(--primary-border);
-  box-shadow: 0 8px 24px rgba(81,79,196,.10);
+  border-color: var(--stroke);
+  box-shadow: 0 4px 10px rgba(0,0,0,.22);
   outline: none;
 }
 .card .badge {
