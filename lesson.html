@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="index.html">← quay lại</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <h1 id="title">Đang tải…</h1>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn-english" id="toggle-en" aria-pressed="false">English</button>
+      <div class="toolbar-right" id="inputs-nav"></div>
+    </div>
+
+    <section class="story" id="story"></section>
+  </main>
+
+  <!-- Audio player tổng -->
+  <div class="player-bar">
+    <div class="wrap">
+      <span class="label">Cả bài</span>
+      <audio id="full-audio" controls preload="none"></audio>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const lessonId = params.get('id') || 'lesson1';
+    let lessonLevel = params.get('level') || '';  // cấp độ (mam/choi/la), resolve từ manifest
+    (function () { const bl = document.getElementById('back-link'); if (bl) bl.href = 'lessons.html?level=' + encodeURIComponent(lessonLevel || 'mam'); })();
+
+    const $title  = document.getElementById('title');
+    const $story  = document.getElementById('story');
+    const $full   = document.getElementById('full-audio');
+    const $toggle = document.getElementById('toggle-en');
+
+    // giọng (miền nam / miền bắc): đường dẫn audio chứa {voice}
+    let voice = 'nam';
+    try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
+    function resolveAudio(path) { return (path || '').replace('{voice}', voice); }
+    let loadedLesson = null;
+
+    // Một đối tượng Audio dùng chung (Safari ổn định hơn so với tạo mới mỗi lần)
+    let player = new Audio();
+    player.preload = 'auto';
+    let currentEl = null;
+    player.addEventListener('ended', function () {
+      if (currentEl) currentEl.classList.remove('playing');
+    });
+    function play(src, el) {
+      if (currentEl) currentEl.classList.remove('playing');
+      currentEl = el || null;
+      if (currentEl) currentEl.classList.add('playing');
+      try { player.pause(); } catch (e) {}
+      player.src = src;
+      try { player.currentTime = 0; } catch (e) {}
+      const pr = player.play();
+      if (pr && pr.catch) pr.catch(function (e) {
+        if (currentEl) currentEl.classList.remove('playing');
+        console.warn('Không phát được audio:', src, e && e.message);
+      });
+    }
+
+    function el(tag, cls, txt) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (txt != null) n.textContent = txt;
+      return n;
+    }
+
+    function render(lesson) {
+      loadedLesson = lesson;
+      document.title = (lesson.title || lessonId) + ' — hoc voi hanh';
+      $title.textContent = lesson.title || lessonId;
+
+      // nút điều hướng: 1 nút "new inputs" gom ngữ pháp + vocabulary + luyện tập
+      const nav = document.getElementById('inputs-nav');
+      nav.innerHTML = '';
+      if ((lesson.inputs || []).length) {
+        const a = document.createElement('a');
+        a.className = 'btn-input';
+        a.href = 'inputs.html?id=' + encodeURIComponent(lessonId) + (lessonLevel ? '&level=' + encodeURIComponent(lessonLevel) : '');
+        a.textContent = 'new inputs';
+        nav.appendChild(a);
+      }
+      if (lesson.vocab) {
+        const a = document.createElement('a');
+        a.className = 'btn-input btn-vocab';
+        a.href = 'vocab.html?id=' + encodeURIComponent(lesson.vocab) + (lessonLevel ? '&level=' + encodeURIComponent(lessonLevel) : '');
+        a.textContent = 'vocabulary';
+        nav.appendChild(a);
+      }
+      {
+        const a = document.createElement('a');
+        a.className = 'btn-input btn-practice';
+        a.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + (lessonLevel ? '&level=' + encodeURIComponent(lessonLevel) : '');
+        a.textContent = 'luyện tập';
+        nav.appendChild(a);
+      }
+
+      if (lesson.fullAudio) {
+        $full.src = resolveAudio(lesson.fullAudio);
+      } else {
+        $full.closest('.player-bar').style.display = 'none';
+      }
+
+      $story.innerHTML = '';
+      (lesson.sentences || []).forEach(function (s) {
+        // vách ngăn cảnh (đổi quầy) — không audio, không dịch
+        if (s.scene) {
+          const sc = el('div', 'scene-divider');
+          const lab = el('span', 'scene-label', s.scene);
+          if (s.sceneEn) lab.appendChild(el('span', 'scene-en', ' (' + s.sceneEn + ')'));
+          sc.appendChild(lab);
+          $story.appendChild(sc);
+          return;
+        }
+        const sentence = el('div', 'sentence');
+        const row = el('div', 'sentence-row');
+
+        // nút phát cả câu
+        const playBtn = el('button', 'play-sentence');
+        playBtn.setAttribute('aria-label', 'Phát cả câu');
+        playBtn.innerHTML = '▶';
+        if (s.audio) {
+          playBtn.addEventListener('click', function () { play(resolveAudio(s.audio), null); });
+        } else {
+          playBtn.disabled = true;
+        }
+
+        // các chip cụm từ
+        const phrases = el('div', 'phrases');
+        (s.phrases || []).forEach(function (p) {
+          if (p.br) { phrases.appendChild(el('span', 'linebreak')); return; }
+          const chip = el('button', 'phrase');
+          chip.setAttribute('aria-label', p.vi + (p.en ? ' — ' + p.en : ''));
+          chip.appendChild(el('span', 'vi', p.vi));
+          if (p.en) chip.appendChild(el('span', 'en', p.en));
+          if (p.audio) {
+            chip.addEventListener('click', function () { play(resolveAudio(p.audio), chip); });
+          }
+          phrases.appendChild(chip);
+        });
+
+        row.appendChild(playBtn);
+        row.appendChild(phrases);
+        sentence.appendChild(row);
+
+        if (s.translation) {
+          sentence.appendChild(el('div', 'sentence-translation', s.translation));
+        }
+        $story.appendChild(sentence);
+      });
+    }
+
+    // Toggle ẩn/hiện nghĩa toàn trang
+    $toggle.addEventListener('click', function () {
+      const hidden = document.body.classList.toggle('hide-en');
+      $toggle.setAttribute('aria-pressed', String(hidden));
+    });
+
+    // dropdown chọn giọng
+    const $voice = document.getElementById('voice-select');
+    if ($voice) {
+      $voice.value = voice;
+      $voice.addEventListener('change', function () {
+        voice = $voice.value;
+        try { localStorage.setItem('voice', voice); } catch (e) {}
+        if (loadedLesson && loadedLesson.fullAudio) $full.src = resolveAudio(loadedLesson.fullAudio);
+      });
+    }
+
+    // dropdown cấp độ -> về trang chủ đã lọc
+    const $level = document.getElementById('level-select');
+    if ($level) {
+      if (lessonLevel) $level.value = lessonLevel;
+      $level.addEventListener('change', function () {
+        location.href = $level.value ? ('index.html?level=' + encodeURIComponent($level.value)) : 'index.html';
+      });
+    }
+
+    (async function () {
+      try {
+        // nếu chưa biết level, tra trong manifest theo id
+        if (!lessonLevel) {
+          try {
+            const m = await fetch('manifest.json', { cache: 'no-cache' });
+            if (m.ok) {
+              const list = await m.json();
+              const entry = (Array.isArray(list) ? list : []).find(function (l) { return l.id === lessonId; });
+              if (entry && entry.level) lessonLevel = entry.level;
+            }
+          } catch (e) { /* bỏ qua, dùng fallback bên dưới */ }
+        }
+        if ($level) $level.value = lessonLevel;
+
+        const path = lessonLevel
+          ? lessonLevel + '/lessons/' + lessonId + '.json'
+          : 'lessons/' + lessonId + '.json';   // fallback nếu không có level
+        const res = await fetch(path, { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        render(data);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Không tải được bài học';
+        $story.innerHTML = '<p class="note">Không tìm thấy file bài học. Kiểm tra <code>level</code> trong manifest.json và đường dẫn <code>&lt;level&gt;/lessons/' + lessonId + '.json</code>.</p>';
+      }
+    })();
+
+    // đồng bộ chiều cao header -> toolbar dính ngay dưới header
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() {
+        document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px');
+      }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+</body>
+</html>

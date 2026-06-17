@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Từ vựng — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="#" onclick="history.back();return false;">← quay lại</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <h1 id="title">Đang tải…</h1>
+    </div>
+    <section id="sections" class="vocab-sections"></section>
+    <div class="back-row">
+      <button type="button" class="btn-input" id="back-btn">← back</button>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('back-btn').addEventListener('click', function () {
+      if (history.length > 1) history.back(); else location.href = 'index.html';
+    });
+
+    var p = new URLSearchParams(location.search);
+    var vocabId = p.get('id') || 'lesson1';
+    var level = p.get('level') || '';
+    var $title = document.getElementById('title');
+    var $sections = document.getElementById('sections');
+
+    function el(tag, cls, txt) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (txt != null) n.textContent = txt;
+      return n;
+    }
+
+    function render(data) {
+      document.title = (data.title || 'Từ vựng') + ' — hoc voi hanh';
+      $title.textContent = data.title || 'Từ vựng';
+      $sections.innerHTML = '';
+      (data.sections || []).forEach(function (s) {
+        var card = el('div', 'vocab-card');
+        if (s.label) card.appendChild(el('div', 'vocab-title', s.label));
+        var list = el('div', 'vocab-list');
+        (s.items || []).forEach(function (it) {
+          var row = el('div', 'vocab-item');
+          row.appendChild(el('span', 'vi', it.vi));
+          row.appendChild(el('span', 'en', it.en));
+          list.appendChild(row);
+        });
+        card.appendChild(list);
+        $sections.appendChild(card);
+      });
+    }
+
+    (function () {
+      var path = level ? (level + '/vocab/' + vocabId + '.json') : ('vocab/' + vocabId + '.json');
+      fetch(path, { cache: 'no-cache' })
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(render)
+        .catch(function (err) {
+          console.error(err);
+          $title.textContent = 'Không tải được từ vựng';
+          $sections.innerHTML = '<p class="note">Không tìm thấy <code>' + path + '</code>.</p>';
+        });
+    })();
+
+    // dropdown đồng bộ
+    (function () {
+      var v = 'nam';
+      try { v = localStorage.getItem('voice') || 'nam'; } catch (e) {}
+      var sel = document.getElementById('voice-select');
+      if (sel) { sel.value = v; sel.addEventListener('change', function () { try { localStorage.setItem('voice', sel.value); } catch (e) {} }); }
+      var ls = document.getElementById('level-select');
+      if (ls) {
+        ls.value = level;
+        ls.addEventListener('change', function () {
+          location.href = ls.value ? ('index.html?level=' + encodeURIComponent(ls.value)) : 'index.html';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
