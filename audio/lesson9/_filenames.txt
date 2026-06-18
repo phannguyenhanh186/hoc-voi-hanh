@@ -1,0 +1,19 @@
+# Audio CAU cho lesson9 (.m4a). 2 ban: audio/lesson9/nam/ va bac/
+# (Tu le o audio/words/)
+
+full.m4a  ->  ca bai
+sentence_01.m4a  ->  Chào anh Phong / Cuối tuần trước anh làm gì
+sentence_02.m4a  ->  Anh đi ăn với bạn / Còn em / Em có đi đâu không
+sentence_03.m4a  ->  Thứ bảy tuần trước em về quê
+sentence_04.m4a  ->  Quê em ở đâu
+sentence_05.m4a  ->  Quê em ở Tây Ninh / Ba và mẹ em là người Tây Ninh
+sentence_06.m4a  ->  Hình như Tây Ninh có núi đúng không
+sentence_07.m4a  ->  Đúng rồi / Tây Ninh có núi Bà Đen rất nổi tiếng
+sentence_08.m4a  ->  Đi từ Sài Gòn tới Tây Ninh mất bao lâu
+sentence_09.m4a  ->  Đi xe máy mất khoảng hai tiếng rưỡi / Ô tô mất khoảng hai tiếng
+sentence_10.m4a  ->  Em thường về quê bằng xe gì
+sentence_11.m4a  ->  Em thường đi xe máy / Tại đi xe máy rẻ hơn / Quê anh ở đâu
+sentence_12.m4a  ->  Quê anh ở Đà Lạt
+sentence_13.m4a  ->  Anh có thường về quê không
+sentence_14.m4a  ->  Không / Anh về quê ba tháng một lần / Còn em / Em có thường về quê không
+sentence_15.m4a  ->  Em có / Em về quê một tới hai lần một tháng
