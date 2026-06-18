@@ -31,7 +31,7 @@
   <script>
     const LEVELS = { mam: 'mầm', choi: 'chồi', la: 'lá' };
     const activeLevel = new URLSearchParams(location.search).get('level') || 'mam';
-    document.getElementById('title').textContent = 'Lớp ' + (LEVELS[activeLevel] || activeLevel);
+    document.getElementById('title').textContent = (LEVELS[activeLevel] || activeLevel);
 
     (async function () {
       const cards = document.getElementById('cards');
@@ -51,7 +51,7 @@
           if (l.level && LEVELS[l.level]) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = 'lớp ' + LEVELS[l.level]; head.appendChild(b); }
           a.appendChild(head);
           const p = document.createElement('p'); p.textContent = l.description || ''; a.appendChild(p);
-          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Start learning →'; a.appendChild(go);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Vào học →'; a.appendChild(go);
           cards.appendChild(a);
         });
       } catch (e) { cards.innerHTML = '<p class="note">Could not load the lesson list.</p>'; }
