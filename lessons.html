@@ -48,7 +48,7 @@
           const h3 = document.createElement('h3'); h3.textContent = 'Bài ' + (l.num || '') + ': ' + (l.title || l.id);
           if (l.titleEn) { const en = document.createElement('span'); en.className = 'title-en'; en.textContent = ' (' + l.titleEn + ')'; h3.appendChild(en); }
           head.appendChild(h3);
-          if (l.level && LEVELS[l.level]) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = 'lớp ' + LEVELS[l.level]; head.appendChild(b); }
+          if (l.level && LEVELS[l.level]) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = LEVELS[l.level]; head.appendChild(b); }
           a.appendChild(head);
           const p = document.createElement('p'); p.textContent = l.description || ''; a.appendChild(p);
           const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Vào học →'; a.appendChild(go);
