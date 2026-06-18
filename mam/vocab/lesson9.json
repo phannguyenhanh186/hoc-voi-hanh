@@ -1,0 +1,72 @@
+{
+  "id": "lesson9",
+  "title": "Từ vựng",
+  "sections": [
+    {
+      "label": "Phương tiện (Transport)",
+      "items": [
+        {
+          "vi": "Xe máy",
+          "en": "motorbike"
+        },
+        {
+          "vi": "Ô tô",
+          "en": "car"
+        },
+        {
+          "vi": "Máy bay",
+          "en": "airplane"
+        },
+        {
+          "vi": "Tàu",
+          "en": "train"
+        },
+        {
+          "vi": "Đi bộ",
+          "en": "walking / on foot"
+        }
+      ]
+    },
+    {
+      "label": "Điểm du lịch (Tourist attractions)",
+      "items": [
+        {
+          "vi": "Núi",
+          "en": "mountain"
+        },
+        {
+          "vi": "Biển",
+          "en": "sea / beach"
+        },
+        {
+          "vi": "Sông",
+          "en": "river"
+        },
+        {
+          "vi": "Đảo",
+          "en": "island"
+        },
+        {
+          "vi": "Phố cổ",
+          "en": "old town"
+        },
+        {
+          "vi": "Phố đi bộ",
+          "en": "walking street"
+        },
+        {
+          "vi": "Công viên",
+          "en": "park"
+        },
+        {
+          "vi": "Chùa",
+          "en": "pagoda / temple"
+        },
+        {
+          "vi": "Nhà thờ",
+          "en": "church"
+        }
+      ]
+    }
+  ]
+}
