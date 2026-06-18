@@ -62,5 +62,13 @@
     "titleEn": "At the supermarket",
     "level": "mam",
     "description": "A man is doing groceries in a supermarket and he's having trouble finding certain things."
+  },
+  {
+    "id": "lesson9",
+    "num": 9,
+    "title": "Về quê",
+    "titleEn": "Hometown",
+    "level": "mam",
+    "description": "Two friends talk about their weekend, their hometowns, and how they travel back home."
   }
 ]
