@@ -115,9 +115,9 @@
     const isBac = voice === 'bac';
     const TONES = isBac ? BAC : NAM;
     document.getElementById('subtitle').textContent = isBac ? '(tiếng miền bắc)' : '(tiếng miền nam)';
-    document.getElementById('tone-note').innerHTML = isBac
-      ? '<span class="sym">≠</span><div><strong>Miền Bắc:</strong> đủ 6 thanh phân biệt rõ — thanh ngã (lên giọng, có tắc thanh hầu) khác hẳn thanh hỏi (xuống rồi lên).</div>'
-      : '<span class="sym">≈</span><div><strong>Miền Nam:</strong> thanh hỏi và thanh ngã phát âm như nhau — học viên thực tế chỉ cần phân biệt 5 thanh.</div>';
+    const noteEl = document.getElementById('tone-note');
+    if (isBac) { noteEl.style.display = 'none'; }
+    else { noteEl.innerHTML = '<span class="sym">≈</span><div><strong>Miền Nam:</strong> thanh hỏi và thanh ngã phát âm như nhau — học viên thực tế chỉ cần phân biệt 5 thanh.</div>'; }
 
     const grid = document.getElementById('grid');
     TONES.forEach(t => {
