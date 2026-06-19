@@ -79,7 +79,7 @@
     <div class="wrap">
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
-        <div class="nav-right"><a class="back-link" id="back-lesson" href="#">← bài học</a></div>
+        <div class="nav-right"><a class="back-link" id="back-lesson" href="#">← lesson</a></div>
       </nav>
     </div>
   </header>
@@ -125,24 +125,24 @@
     const P = { purple: '#C0BFF9', yellow: '#FFDC9A', mint: '#B6E3B0', blue: '#BBD4F5', coral: '#F4B6A8', teal: '#A9DBD0', ink: '#23223B' };
     const SKILLS = [
       { key: 'Reading', games: [
-        { id: 'matching', name: 'Ghép Đôi', desc: 'Match each word to its meaning.', icon: '🔗', c: P.purple },
-        { id: 'gap', name: 'Điền Vào', desc: 'Pick the missing word in a sentence.', icon: '✏️', c: P.yellow },
-        { id: 'reorder', name: 'Xếp Câu', desc: 'Reorder scrambled words into a sentence.', icon: '🧩', c: P.blue },
+        { id: 'matching', name: 'Matching', desc: 'Match each word to its meaning.', icon: '🔗', c: P.purple },
+        { id: 'gap', name: 'Gap Filling', desc: 'Pick the missing word in a sentence.', icon: '✏️', c: P.yellow },
+        { id: 'reorder', name: 'Reorder', desc: 'Reorder scrambled words into a sentence.', icon: '🧩', c: P.blue },
       ] },
       { key: 'Writing', games: [
-        { id: 'build', name: 'Ghép Câu', desc: 'Build a sentence from a word bank.', icon: '🧱', c: P.ink, dark: true },
-        { id: 'diacritics', name: 'Bỏ Dấu', desc: 'Choose the correct tone mark.', icon: '🔤', c: P.mint },
-        { id: 'translate', name: 'Dịch Sang Việt', desc: 'Choose the correct Vietnamese.', icon: '🔄', c: P.coral },
+        { id: 'build', name: 'Sentence Builder', desc: 'Build a sentence from a word bank.', icon: '🧱', c: P.ink, dark: true },
+        { id: 'diacritics', name: 'Tone Marks', desc: 'Choose the correct tone mark.', icon: '🔤', c: P.mint },
+        { id: 'translate', name: 'Translate', desc: 'Choose the correct Vietnamese.', icon: '🔄', c: P.coral },
       ] },
       { key: 'Speaking', games: [
-        { id: 'shadow', name: 'Nói Theo', desc: 'Listen, then repeat the sentence.', icon: '🎙️', c: P.coral },
-        { id: 'readaloud', name: 'Đọc To', desc: 'Read the sentence aloud.', icon: '🗣️', c: P.ink, dark: true },
-        { id: 'answer', name: 'Trả Lời Nhanh', desc: 'Answer aloud using the target word.', icon: '⚡', c: P.blue },
+        { id: 'shadow', name: 'Shadowing', desc: 'Listen, then repeat the sentence.', icon: '🎙️', c: P.coral },
+        { id: 'readaloud', name: 'Read Aloud', desc: 'Read the sentence aloud.', icon: '🗣️', c: P.ink, dark: true },
+        { id: 'answer', name: 'Quick Answer', desc: 'Answer aloud using the target word.', icon: '⚡', c: P.blue },
       ] },
       { key: 'Listening', games: [
-        { id: 'dictation', name: 'Chép Chính Tả', desc: 'Hear it, then type what you heard.', icon: '⌨️', c: P.purple },
-        { id: 'tone', name: 'Bắt Thanh', desc: 'Hear a word, name its tone.', icon: '〰️', c: P.blue },
-        { id: 'listenpick', name: 'Nghe & Chọn', desc: 'Match the audio to its meaning.', icon: '🎧', c: P.coral },
+        { id: 'dictation', name: 'Dictation', desc: 'Hear it, then type what you heard.', icon: '⌨️', c: P.purple },
+        { id: 'tone', name: 'Name the Tone', desc: 'Hear a word, name its tone.', icon: '〰️', c: P.blue },
+        { id: 'listenpick', name: 'Listen & Choose', desc: 'Match the audio to its meaning.', icon: '🎧', c: P.coral },
       ] },
     ];
     const GAME = {}; SKILLS.forEach(s => s.games.forEach(g => { GAME[g.id] = Object.assign({ skill: s.key }, g); }));
@@ -152,7 +152,7 @@
       try {
         lesson = await (await fetch(level + '/lessons/' + lessonId + '.json', { cache: 'no-cache' })).json();
         if (lesson.vocab) { const r = await fetch(level + '/vocab/' + lesson.vocab + '.json', { cache: 'no-cache' }); if (r.ok) vocab = await r.json(); }
-      } catch (e) { stage.innerHTML = '<p class="note-warn">Không tải được dữ liệu bài học.</p>'; return; }
+      } catch (e) { stage.innerHTML = '<p class="note-warn">Could not load lesson data.</p>'; return; }
 
       const pairs = []; const seen = new Set();
       function addPair(vi, en) { if (!vi || !cleanGloss(en)) return; const k = norm(vi) + '|' + norm(en); if (seen.has(k)) return; seen.add(k); pairs.push({ vi: vi, en: en }); }
@@ -216,38 +216,38 @@
         const meta = GAME[tp] || { name: tp, skill: '' };
         document.getElementById('qtitle').textContent = meta.name;
         const questions = gen(tp);
-        if (!questions.length) { stage.innerHTML = '<p class="note-warn">Chưa đủ dữ liệu cho game này ở bài này.</p><p style="margin-top:12px"><a class="btn-ghost" href="quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level) + '">← Practice Library</a></p>'; return; }
+        if (!questions.length) { stage.innerHTML = '<p class="note-warn">Not enough data for this game in this lesson.</p><p style="margin-top:12px"><a class="btn-ghost" href="quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level) + '">← Practice Library</a></p>'; return; }
         topbar.style.display = 'flex';
         let idx = 0, correct = 0; const total = questions.length;
         function setBar() { bar.style.width = (idx / total * 100) + '%'; scoreEl.textContent = correct; }
         function mark(ok) { if (ok) correct++; scoreEl.textContent = correct; }
         function next() { idx++; setBar(); if (idx >= total) end(); else render(questions[idx]); }
-        function actions(fb, ok) { const w = document.createElement('div'); w.className = 'q-actions'; if (fb) { const f = document.createElement('span'); f.className = 'feedback ' + (ok ? 'ok' : 'no'); f.textContent = fb; w.appendChild(f); } const b = document.createElement('button'); b.className = 'btn-primary'; b.style.marginLeft = 'auto'; b.textContent = idx + 1 >= total ? 'Xem kết quả' : 'Tiếp →'; b.onclick = next; w.appendChild(b); return w; }
+        function actions(fb, ok) { const w = document.createElement('div'); w.className = 'q-actions'; if (fb) { const f = document.createElement('span'); f.className = 'feedback ' + (ok ? 'ok' : 'no'); f.textContent = fb; w.appendChild(f); } const b = document.createElement('button'); b.className = 'btn-primary'; b.style.marginLeft = 'auto'; b.textContent = idx + 1 >= total ? 'See results' : 'Next →'; b.onclick = next; w.appendChild(b); return w; }
         function card(kind, prompt, sub) { stage.innerHTML = ''; const c = document.createElement('div'); c.className = 'q-card'; const k = document.createElement('div'); k.className = 'q-kind'; k.textContent = kind; c.appendChild(k); if (prompt) { const p = document.createElement('div'); p.className = 'q-prompt'; p.innerHTML = prompt; c.appendChild(p); } if (sub) { const s = document.createElement('div'); s.className = 'q-sub'; s.innerHTML = sub; c.appendChild(s); } stage.appendChild(c); return c; }
 
         function render(q) { setBar(); ({ match: rMatch, gap: rGap, reorder: rReorder, build: rBuild, diacritics: rTonePick, translateMcq: rTransMcq, dictation: rDict, tone: rTonePick, listenpick: rListen, speak: rSpeak })[q.t](q); }
 
         function mcqBox(c, opts, answer, onDone, revealText) {
           const box = document.createElement('div'); box.className = 'options two';
-          shuffle(opts).forEach(o => { const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = norm(o) === norm(answer); b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (norm(x.textContent) === norm(answer)) x.classList.add('correct'); }); mark(ok); c.appendChild(actions((ok ? 'Chính xác!' : 'Đáp án: ' + answer) + (revealText ? ' — ' + revealText : ''), ok)); }; box.appendChild(b); });
+          shuffle(opts).forEach(o => { const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = norm(o) === norm(answer); b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (norm(x.textContent) === norm(answer)) x.classList.add('correct'); }); mark(ok); c.appendChild(actions((ok ? 'Correct!' : 'Answer: ' + answer) + (revealText ? ' — ' + revealText : ''), ok)); }; box.appendChild(b); });
           c.appendChild(box);
         }
 
         function rMatch(q) {
-          const c = card('Ghép Đôi (Matching)', 'Ghép từ với nghĩa', 'Bấm một ô bên trái rồi ô tương ứng bên phải');
+          const c = card('Matching', 'Match the words', 'Tap a tile on the left, then its match on the right');
           const cols = document.createElement('div'); cols.className = 'match-cols';
           const L = document.createElement('div'); L.className = 'match-col'; const R = document.createElement('div'); R.className = 'match-col';
           let sel = null, done = 0;
           shuffle(q.set).forEach(p => { const b = document.createElement('button'); b.className = 'mtile'; b.textContent = p.vi; b.dataset.k = norm(p.vi); L.appendChild(b); });
           shuffle(q.set).forEach(p => { const b = document.createElement('button'); b.className = 'mtile'; b.textContent = p.en; b.dataset.k = norm(p.vi); R.appendChild(b); });
-          function clk(b) { if (b.classList.contains('done')) return; if (!sel) { sel = b; b.classList.add('sel'); return; } if (sel.parentNode === b.parentNode) { sel.classList.remove('sel'); sel = b; b.classList.add('sel'); return; } if (sel.dataset.k === b.dataset.k) { sel.classList.add('done'); b.classList.add('done'); sel.classList.remove('sel'); sel = null; done++; if (done === q.set.length) { mark(true); c.appendChild(actions('Hoàn thành!', true)); } } else { const s = sel; b.classList.add('bad'); s.classList.add('bad'); setTimeout(() => { b.classList.remove('bad'); s.classList.remove('bad', 'sel'); }, 500); sel = null; } }
+          function clk(b) { if (b.classList.contains('done')) return; if (!sel) { sel = b; b.classList.add('sel'); return; } if (sel.parentNode === b.parentNode) { sel.classList.remove('sel'); sel = b; b.classList.add('sel'); return; } if (sel.dataset.k === b.dataset.k) { sel.classList.add('done'); b.classList.add('done'); sel.classList.remove('sel'); sel = null; done++; if (done === q.set.length) { mark(true); c.appendChild(actions('Done!', true)); } } else { const s = sel; b.classList.add('bad'); s.classList.add('bad'); setTimeout(() => { b.classList.remove('bad'); s.classList.remove('bad', 'sel'); }, 500); sel = null; } }
           L.querySelectorAll('.mtile').forEach(b => b.onclick = () => clk(b)); R.querySelectorAll('.mtile').forEach(b => b.onclick = () => clk(b));
           cols.appendChild(L); cols.appendChild(R); c.appendChild(cols);
         }
 
         function rGap(q) {
           const shown = q.toks.map((t, i) => i === q.bi ? '<u>____</u>' : t).join(' ');
-          const c = card('Điền Vào (Gap)', shown, (q.en ? q.en + '<br>' : '') + 'Chọn từ còn thiếu');
+          const c = card('Gap Filling', shown, (q.en ? q.en + '<br>' : '') + 'Choose the missing word');
           mcqBox(c, q.options, q.toks[q.bi]);
         }
 
@@ -255,80 +255,80 @@
           const ans = document.createElement('div'); ans.className = 'answer-row'; const tiles = document.createElement('div'); tiles.className = 'tiles'; const chosen = [];
           shuffle(tilePool.map((t, i) => ({ t: t, i: i }))).forEach(o => { const b = document.createElement('button'); b.className = 'tile'; b.textContent = o.t; b.onclick = () => { if (b.classList.contains('used')) return; b.classList.add('used'); chosen.push(o.t); const a = document.createElement('button'); a.className = 'tile'; a.textContent = o.t; a.onclick = () => { a.remove(); b.classList.remove('used'); chosen.splice(chosen.indexOf(o.t), 1); }; ans.appendChild(a); }; tiles.appendChild(b); });
           c.appendChild(ans); c.appendChild(tiles);
-          const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Kiểm tra';
-          ck.onclick = () => { const ok = norm(chosen.join(' ')) === norm(correctToks.join(' ')); ck.remove(); mark(ok); c.appendChild(actions(ok ? 'Chính xác!' : 'Đáp án: ' + correctToks.join(' '), ok)); };
+          const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Check';
+          ck.onclick = () => { const ok = norm(chosen.join(' ')) === norm(correctToks.join(' ')); ck.remove(); mark(ok); c.appendChild(actions(ok ? 'Correct!' : 'Answer: ' + correctToks.join(' '), ok)); };
           c.appendChild(ck);
         }
-        function rReorder(q) { const c = card('Xếp Câu (Reorder)', q.en, 'Bấm các từ theo đúng thứ tự'); buildTiles(c, q.toks, q.toks); }
-        function rBuild(q) { const c = card('Ghép Câu (Build)', q.en, 'Chọn và sắp xếp từ — có vài từ thừa'); buildTiles(c, q.toks, q.toks.concat(q.extra)); }
+        function rReorder(q) { const c = card('Reorder', q.en, 'Tap the words in the correct order'); buildTiles(c, q.toks, q.toks); }
+        function rBuild(q) { const c = card('Sentence Builder', q.en, 'Pick and order the words — some are extra'); buildTiles(c, q.toks, q.toks.concat(q.extra)); }
 
-        function rTransMcq(q) { const c = card('Dịch Sang Việt', q.en, 'Câu tiếng Việt nào đúng?'); mcqBox(c, q.options, q.answer); }
+        function rTransMcq(q) { const c = card('Translate', q.en, 'Which Vietnamese sentence is correct?'); mcqBox(c, q.options, q.answer); }
 
         function rTonePick(q) {
           const isAudio = q.t === 'tone';
-          const c = card(isAudio ? 'Bắt Thanh (Tone)' : 'Bỏ Dấu (Tone mark)', isAudio ? '🎧' : stripD(q.w), isAudio ? 'Nghe từ và chọn thanh điệu' : ((q.en ? q.en + '<br>' : '') + 'Từ này mang thanh gì?'));
-          if (isAudio) { const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Nghe lại'; play.onclick = () => speak(q.w); c.appendChild(play); c.appendChild(document.createElement('div')); speak(q.w); }
+          const c = card(isAudio ? 'Name the Tone' : 'Tone Marks', isAudio ? '🎧' : stripD(q.w), isAudio ? 'Listen and choose the tone' : ((q.en ? q.en + '<br>' : '') + 'Which tone does this word have?'));
+          if (isAudio) { const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Replay'; play.onclick = () => speak(q.w); c.appendChild(play); c.appendChild(document.createElement('div')); speak(q.w); }
           const labeled = q.options.map(o => o + ' (' + TONE_GLYPH[o] + ')');
           const box = document.createElement('div'); box.className = 'options two';
-          labeled.forEach(o => { const tone = o.split(' ')[0]; const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = tone === q.answer; b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (x.textContent.split(' ')[0] === q.answer) x.classList.add('correct'); }); mark(ok); c.appendChild(actions((ok ? 'Chính xác!' : 'Đáp án: ' + q.answer) + ' — ' + q.w + (q.en ? ' (' + q.en + ')' : ''), ok)); }; box.appendChild(b); });
+          labeled.forEach(o => { const tone = o.split(' ')[0]; const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = tone === q.answer; b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (x.textContent.split(' ')[0] === q.answer) x.classList.add('correct'); }); mark(ok); c.appendChild(actions((ok ? 'Correct!' : 'Answer: ' + q.answer) + ' — ' + q.w + (q.en ? ' (' + q.en + ')' : ''), ok)); }; box.appendChild(b); });
           c.appendChild(box);
         }
 
         function rDict(q) {
-          const c = card('Chép Chính Tả (Dictation)', '🎧', 'Nghe rồi gõ lại bằng tiếng Việt (không bắt buộc dấu)');
-          const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Nghe lại'; play.onclick = () => speak(q.vi); c.appendChild(play); speak(q.vi);
-          const inp = document.createElement('input'); inp.className = 'txt-in'; inp.style.marginTop = '14px'; inp.placeholder = 'Gõ những gì bạn nghe…'; c.appendChild(inp); inp.focus();
-          const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Kiểm tra';
-          function submit() { const ok = norm(inp.value) === norm(q.vi) || stripD(norm(inp.value)) === stripD(norm(q.vi)); inp.disabled = true; ck.remove(); mark(ok); c.appendChild(actions(ok ? 'Chính xác! (' + q.vi + ')' : 'Đáp án: ' + q.vi, ok)); }
+          const c = card('Dictation', '🎧', 'Listen, then type it in Vietnamese (tone marks optional)');
+          const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Replay'; play.onclick = () => speak(q.vi); c.appendChild(play); speak(q.vi);
+          const inp = document.createElement('input'); inp.className = 'txt-in'; inp.style.marginTop = '14px'; inp.placeholder = 'Type what you hear…'; c.appendChild(inp); inp.focus();
+          const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Check';
+          function submit() { const ok = norm(inp.value) === norm(q.vi) || stripD(norm(inp.value)) === stripD(norm(q.vi)); inp.disabled = true; ck.remove(); mark(ok); c.appendChild(actions(ok ? 'Correct! (' + q.vi + ')' : 'Answer: ' + q.vi, ok)); }
           ck.onclick = submit; inp.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
           c.appendChild(ck);
         }
 
         function rListen(q) {
-          const c = card('Nghe & Chọn (Listen)', '🎧', 'Nghe rồi chọn nghĩa đúng');
-          const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Nghe lại'; play.onclick = () => speak(q.vi); c.appendChild(play); const sp = document.createElement('div'); sp.style.height = '12px'; c.appendChild(sp); speak(q.vi);
+          const c = card('Listen & Choose', '🎧', 'Listen, then choose the correct meaning');
+          const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Replay'; play.onclick = () => speak(q.vi); c.appendChild(play); const sp = document.createElement('div'); sp.style.height = '12px'; c.appendChild(sp); speak(q.vi);
           mcqBox(c, q.options, q.en, null, q.vi);
         }
 
         let stream = null;
         function rSpeak(q) {
-          const titleMap = { shadow: 'Nói Theo (Shadowing)', readaloud: 'Đọc To (Read aloud)', answer: 'Trả Lời Nhanh (Quick answer)' };
+          const titleMap = { shadow: 'Shadowing', readaloud: 'Read Aloud', answer: 'Quick Answer' };
           const promptHtml = q.mode === 'answer' ? q.en : q.vi;
-          const sub = q.mode === 'answer' ? ('Trả lời bằng tiếng Việt, dùng từ: <strong>' + q.target + '</strong>') : (q.en || '');
+          const sub = q.mode === 'answer' ? ('Answer in Vietnamese using: <strong>' + q.target + '</strong>') : (q.en || '');
           const c = card(titleMap[q.mode], promptHtml, sub);
           const row = document.createElement('div'); row.className = 'spk-row';
-          const model = document.createElement('button'); model.className = 'mic-btn ghost'; model.textContent = '🔊 Nghe mẫu'; model.onclick = () => speak(q.vi); row.appendChild(model);
+          const model = document.createElement('button'); model.className = 'mic-btn ghost'; model.textContent = '🔊 Hear model'; model.onclick = () => speak(q.vi); row.appendChild(model);
 
           const heard = document.createElement('div'); heard.className = 'heard';
           if ('MediaRecorder' in window && navigator.mediaDevices) {
-            const recBtn = document.createElement('button'); recBtn.className = 'mic-btn'; recBtn.textContent = '🎙 Thu';
-            const playBtn = document.createElement('button'); playBtn.className = 'mic-btn ghost'; playBtn.textContent = '▶ Nghe lại'; playBtn.disabled = true;
+            const recBtn = document.createElement('button'); recBtn.className = 'mic-btn'; recBtn.textContent = '🎙 Record';
+            const playBtn = document.createElement('button'); playBtn.className = 'mic-btn ghost'; playBtn.textContent = '▶ Play back'; playBtn.disabled = true;
             let rec = null, chunks = [], url = null;
             recBtn.onclick = async () => {
               if (rec && rec.state === 'recording') { rec.stop(); return; }
-              try { if (!stream) stream = await navigator.mediaDevices.getUserMedia({ audio: true }); chunks = []; rec = new MediaRecorder(stream); rec.ondataavailable = e => chunks.push(e.data); rec.onstop = () => { if (url) URL.revokeObjectURL(url); url = URL.createObjectURL(new Blob(chunks)); playBtn.disabled = false; recBtn.textContent = '🎙 Thu lại'; }; rec.start(); recBtn.textContent = '⏹ Dừng'; } catch (e) { heard.textContent = 'Không truy cập được micro.'; }
+              try { if (!stream) stream = await navigator.mediaDevices.getUserMedia({ audio: true }); chunks = []; rec = new MediaRecorder(stream); rec.ondataavailable = e => chunks.push(e.data); rec.onstop = () => { if (url) URL.revokeObjectURL(url); url = URL.createObjectURL(new Blob(chunks)); playBtn.disabled = false; recBtn.textContent = '🎙 Re-record'; }; rec.start(); recBtn.textContent = '⏹ Stop'; } catch (e) { heard.textContent = 'Microphone not available.'; }
             };
             playBtn.onclick = () => { if (url) new Audio(url).play(); };
             row.appendChild(recBtn); row.appendChild(playBtn);
           }
 
           if (SR) {
-            const chk = document.createElement('button'); chk.className = 'mic-btn'; chk.textContent = '✓ Kiểm tra (beta)';
+            const chk = document.createElement('button'); chk.className = 'mic-btn'; chk.textContent = '✓ Check (beta)';
             chk.onclick = () => {
-              const r = new SR(); r.lang = 'vi-VN'; r.interimResults = false; r.maxAlternatives = 1; heard.textContent = '🎤 Đang nghe, hãy nói…';
-              r.onresult = e => { const txt = e.results[0][0].transcript; let ok; if (q.mode === 'answer') ok = stripD(norm(txt)).indexOf(stripD(norm(q.target))) >= 0; else { const a = stripD(norm(txt)).split(' '), b = stripD(norm(q.vi)).split(' '); const hit = b.filter(w => a.indexOf(w) >= 0).length; ok = hit / b.length >= 0.6; } heard.innerHTML = (ok ? '✅ Đúng từ rồi! ' : '🔁 Chưa khớp. ') + 'Nghe được: “' + txt + '”<div class="beta-note">* Chỉ kiểm tra từ ngữ, chưa chấm thanh điệu.</div>'; };
-              r.onerror = () => { heard.textContent = 'Không nghe được, thử lại.'; };
+              const r = new SR(); r.lang = 'vi-VN'; r.interimResults = false; r.maxAlternatives = 1; heard.textContent = '🎤 Listening, speak now…';
+              r.onresult = e => { const txt = e.results[0][0].transcript; let ok; if (q.mode === 'answer') ok = stripD(norm(txt)).indexOf(stripD(norm(q.target))) >= 0; else { const a = stripD(norm(txt)).split(' '), b = stripD(norm(q.vi)).split(' '); const hit = b.filter(w => a.indexOf(w) >= 0).length; ok = hit / b.length >= 0.6; } heard.innerHTML = (ok ? '✅ Words match! ' : '🔁 Not quite. ') + 'Heard: “' + txt + '”<div class="beta-note">* Words only — tones are not graded.</div>'; };
+              r.onerror = () => { heard.textContent = 'Could not hear you, try again.'; };
               try { r.start(); } catch (e) {}
             };
             row.appendChild(chk);
           }
           c.appendChild(row);
-          if (!SR) { const n = document.createElement('div'); n.className = 'beta-note'; n.textContent = 'Trình duyệt này không hỗ trợ kiểm tra giọng nói — hãy tự nghe lại và so với mẫu.'; c.appendChild(n); }
+          if (!SR) { const n = document.createElement('div'); n.className = 'beta-note'; n.textContent = 'This browser does not support the speech check — record and compare with the model yourself.'; c.appendChild(n); }
           c.appendChild(heard);
 
           const act = document.createElement('div'); act.className = 'q-actions';
-          const good = document.createElement('button'); good.className = 'btn-primary'; good.textContent = '👍 Được'; good.onclick = () => { mark(true); next(); };
-          const retry = document.createElement('button'); retry.className = 'btn-ghost'; retry.textContent = (idx + 1 >= total ? 'Bỏ qua → kết quả' : '🔁 Bỏ qua'); retry.onclick = () => next();
+          const good = document.createElement('button'); good.className = 'btn-primary'; good.textContent = '👍 Got it'; good.onclick = () => { mark(true); next(); };
+          const retry = document.createElement('button'); retry.className = 'btn-ghost'; retry.textContent = (idx + 1 >= total ? 'Skip → results' : '🔁 Skip'); retry.onclick = () => next();
           act.appendChild(good); act.appendChild(retry); c.appendChild(act);
         }
 
@@ -340,8 +340,8 @@
           if (pct > best) { try { localStorage.setItem(key, String(pct)); } catch (e) {} best = pct; }
           stage.innerHTML = '';
           const c = document.createElement('div'); c.className = 'q-card end-card';
-          c.innerHTML = '<div class="q-kind">' + meta.name + '</div><div class="end-score">' + pct + '%</div><div class="q-sub">Đúng ' + correct + '/' + total + ' · Cao nhất: ' + best + '%</div>';
-          const again = document.createElement('button'); again.className = 'btn-primary'; again.textContent = '↻ Làm lại'; again.onclick = () => location.reload();
+          c.innerHTML = '<div class="q-kind">' + meta.name + '</div><div class="end-score">' + pct + '%</div><div class="q-sub">Correct ' + correct + '/' + total + ' · Best: ' + best + '%</div>';
+          const again = document.createElement('button'); again.className = 'btn-primary'; again.textContent = '↻ Retry'; again.onclick = () => location.reload();
           const menu = document.createElement('a'); menu.className = 'btn-ghost'; menu.textContent = 'Practice Library'; menu.style.marginLeft = '12px'; menu.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level);
           const row = document.createElement('div'); row.style.marginTop = '16px'; row.appendChild(again); row.appendChild(menu); c.appendChild(row);
           stage.appendChild(c);
