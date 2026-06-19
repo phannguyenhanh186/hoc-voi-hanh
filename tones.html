@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
+    .tap-hint { display: inline-flex; align-items: center; gap: 8px; background: var(--yellow); border: 1.5px solid var(--stroke); border-radius: 999px; padding: 8px 16px; font-weight: 700; font-family: var(--font-display); font-size: .9rem; color: var(--ink); margin-bottom: 18px; }
+
     .tones-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
     @media (min-width: 720px) { .tones-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -18,15 +20,21 @@
     .tone-desc { background: #EFEFE9; border: 1.5px solid var(--stroke); border-radius: 8px; padding: 4px 10px; font-size: .78rem; color: var(--muted); text-align: right; line-height: 1.25; white-space: nowrap; }
 
     .tone-mid { display: flex; align-items: center; gap: 14px; margin: 6px 0 4px; }
-    .tone-letter { font-size: 3.4rem; font-weight: 700; font-family: var(--font-display); line-height: 1; width: 64px; text-align: center; flex: none; }
+    .tone-letter { font-size: 3.4rem; font-weight: 700; font-family: var(--font-display); line-height: 1; width: 70px; text-align: center; flex: none; cursor: pointer; border-radius: 12px; transition: transform .1s ease, background .15s ease; }
+    .tone-letter:hover { background: #F3F2FF; }
+    .tone-letter:active { transform: scale(.94); }
     .contour { flex: 1; height: 84px; max-width: 240px; margin-left: auto; }
     .contour .grid { stroke: #D8D8D8; stroke-width: 1; stroke-dasharray: 3 3; }
     .contour .lbl { fill: #A6A6A6; font-size: 9px; font-family: var(--font-body); }
 
     .tone-rule { border-top: 1px solid #E6E6E6; margin: 6px 0 12px; }
     .tone-ex { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .tone-ex .word { font-size: 1.25rem; font-weight: 700; font-family: var(--font-display); color: var(--ink); }
+    .tone-ex .word { font-size: 1.25rem; font-weight: 700; font-family: var(--font-display); color: var(--ink); cursor: pointer; padding: 2px 6px; border-radius: 8px; border-bottom: 2px dotted var(--muted); transition: background .15s ease; }
+    .tone-ex .word:hover { background: #F3F2FF; }
+    .tone-ex .word:active { transform: scale(.96); }
     .tone-ex .mean { color: var(--ink); }
+    .playing { background: var(--primary) !important; }
+
     .eq-badge { background: #DCEFE4; border: 1.5px solid #1E7A5E; border-radius: 8px; padding: 3px 11px; text-align: center; font-size: .76rem; color: #1E7A5E; line-height: 1.25; font-weight: 700; }
     .eq-badge small { display: block; font-weight: 600; }
 
@@ -48,6 +56,7 @@
 
   <main class="wrap">
     <div class="lesson-head"><h1>Tone map <span class="title-en">(tiếng miền nam)</span></h1></div>
+    <div><span class="tap-hint">🔊 Bấm vào chữ cái hoặc từ để nghe phát âm</span></div>
     <div class="tones-grid" id="grid"></div>
     <div class="tone-note">
       <span class="sym">≈</span>
@@ -58,6 +67,24 @@
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
 
   <script>
+    let voice = 'nam';
+    try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
+
+    const player = new Audio();
+    let lastEl = null;
+    function play(name, el) {
+      if (lastEl) lastEl.classList.remove('playing');
+      lastEl = el; if (el) el.classList.add('playing');
+      try {
+        player.pause();
+        player.src = 'audio/tones/' + voice + '/' + name + '.mp3';
+        player.currentTime = 0;
+        player.play().catch(() => {});
+      } catch (e) {}
+    }
+    player.addEventListener('ended', () => { if (lastEl) lastEl.classList.remove('playing'); });
+    player.addEventListener('error', () => { if (lastEl) lastEl.classList.remove('playing'); });
+
     function contour(type, color) {
       const grid = '<line class="grid" x1="44" y1="16" x2="190" y2="16"/><line class="grid" x1="44" y1="42" x2="190" y2="42"/><line class="grid" x1="44" y1="68" x2="190" y2="68"/>'
         + '<text class="lbl" x="34" y="19">H</text><text class="lbl" x="34" y="45">M</text><text class="lbl" x="34" y="71">L</text>';
@@ -73,12 +100,12 @@
     }
 
     const TONES = [
-      { name: 'Ngang', desc: ['flat', 'mid'], letter: 'a', color: '#6E6E6E', shape: 'flat', word: 'ma', mean: 'ghost' },
-      { name: 'Huyền', desc: ['low', 'falling'], letter: 'à', color: '#2D6CA8', shape: 'fall', word: 'mà', mean: 'but / yet' },
-      { name: 'Hỏi', desc: ['low', 'dipping'], letter: 'ả', color: '#1E7A5E', shape: 'dip', word: 'mả', mean: 'tomb', eq: 'ngã' },
-      { name: 'Ngã', desc: ['dipping'], letter: 'ã', color: '#1E7A5E', shape: 'dipDash', word: 'mã', mean: 'code / horse', eq: 'hỏi' },
-      { name: 'Sắc', desc: ['high', 'rising'], letter: 'á', color: '#C68A1E', shape: 'rise', word: 'má', mean: 'mom / cheek' },
-      { name: 'Nặng', desc: ['low + stop'], letter: 'ạ', color: '#9B3A2C', shape: 'drop', word: 'mạ', mean: 'rice seedling' },
+      { id: 'ngang', name: 'Ngang', desc: ['flat', 'mid'], letter: 'a', color: '#6E6E6E', shape: 'flat', word: 'ma', mean: 'ghost' },
+      { id: 'huyen', name: 'Huyền', desc: ['low', 'falling'], letter: 'à', color: '#2D6CA8', shape: 'fall', word: 'mà', mean: 'but / yet' },
+      { id: 'hoi', name: 'Hỏi', desc: ['low', 'dipping'], letter: 'ả', color: '#1E7A5E', shape: 'dip', word: 'mả', mean: 'tomb', eq: 'ngã' },
+      { id: 'nga', name: 'Ngã', desc: ['dipping'], letter: 'ã', color: '#1E7A5E', shape: 'dipDash', word: 'mã', mean: 'code / horse', eq: 'hỏi' },
+      { id: 'sac', name: 'Sắc', desc: ['high', 'rising'], letter: 'á', color: '#C68A1E', shape: 'rise', word: 'má', mean: 'mom / cheek' },
+      { id: 'nang', name: 'Nặng', desc: ['low + stop'], letter: 'ạ', color: '#9B3A2C', shape: 'drop', word: 'mạ', mean: 'rice seedling' },
     ];
 
     const grid = document.getElementById('grid');
@@ -92,6 +119,10 @@
         + contour(t.shape, t.color) + '</div>'
         + '<div class="tone-rule"></div>'
         + '<div class="tone-ex"><span class="word">' + t.word + '</span><span class="mean">' + t.mean + '</span>' + eq + '</div>';
+      const letterEl = c.querySelector('.tone-letter');
+      const wordEl = c.querySelector('.word');
+      letterEl.addEventListener('click', () => play('a_' + t.id, letterEl));
+      wordEl.addEventListener('click', () => play('ma_' + t.id, wordEl));
       grid.appendChild(c);
     });
   </script>
