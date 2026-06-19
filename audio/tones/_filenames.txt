@@ -1,0 +1,16 @@
+# Audio TONE MAP (.mp3). 2 ban: audio/tones/nam/ va audio/tones/bac/
+# Bam CHU CAI -> file a_*  | Bam TU -> file ma_*
+
+a_ngang.mp3   ->  "a"   (thanh Ngang)
+a_huyen.mp3   ->  "à"   (thanh Huyen)
+a_hoi.mp3     ->  "ả"   (thanh Hoi)
+a_nga.mp3     ->  "ã"   (thanh Nga)
+a_sac.mp3     ->  "á"   (thanh Sac)
+a_nang.mp3    ->  "ạ"   (thanh Nang)
+
+ma_ngang.mp3  ->  "ma"  (ghost)
+ma_huyen.mp3  ->  "mà"  (but / yet)
+ma_hoi.mp3    ->  "mả"  (tomb)
+ma_nga.mp3    ->  "mã"  (code / horse)
+ma_sac.mp3    ->  "má"  (mom / cheek)
+ma_nang.mp3   ->  "mạ"  (rice seedling)
