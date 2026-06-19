@@ -9,6 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
+    .lib-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 18px; }
+    .lib-tab { border: 1.5px solid var(--stroke); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 7px 16px; font-size: .9rem; font-weight: 700; font-family: var(--font-display); cursor: pointer; transition: transform .1s ease, box-shadow .1s ease; }
+    .lib-tab.on { background: var(--ink); color: #fff; box-shadow: 3px 3px 0 0 var(--stroke); }
+    .lib-tab:hover { transform: translate(-2px,-2px); box-shadow: 3px 3px 0 0 var(--stroke); }
+
+    .lib-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 560px) { .lib-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 860px) { .lib-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .gcard { border: 1.5px solid var(--stroke); border-radius: 16px; padding: 16px 17px; min-height: 168px; display: flex; flex-direction: column; text-decoration: none; transition: transform .1s ease, box-shadow .1s ease; }
+    .gcard:hover { transform: translate(-3px,-3px); box-shadow: 6px 6px 0 0 var(--stroke); }
+    .gc-label { font-size: 11px; letter-spacing: .06em; font-weight: 700; margin-bottom: 6px; }
+    .gc-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .gc-name { font-size: 1.2rem; font-weight: 700; font-family: var(--font-display); line-height: 1.15; }
+    .gc-icon { font-size: 1.6rem; flex: none; line-height: 1; }
+    .gc-desc { font-size: .85rem; line-height: 1.45; margin-top: 8px; }
+    .gc-foot { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+    .gc-play { font-size: .85rem; font-weight: 700; text-decoration: underline; }
+    .gc-best { font-size: .75rem; font-weight: 700; opacity: .8; }
+
     .quiz-top { display: flex; align-items: center; gap: 12px; padding: 18px 0 6px; }
     .progress { flex: 1; height: 12px; background: #ECEBFB; border: 1.5px solid var(--stroke); border-radius: 999px; overflow: hidden; }
     .progress > i { display: block; height: 100%; width: 0; background: #B6E3B0; transition: width .25s ease; }
@@ -21,8 +40,8 @@
 
     .options { display: grid; gap: 10px; }
     @media (min-width: 480px) { .options.two { grid-template-columns: 1fr 1fr; } }
-    .opt { text-align: left; background: var(--surface); border: 1.5px solid var(--stroke); border-radius: 14px; padding: 13px 15px; font-size: 1.05rem; cursor: pointer; font-family: var(--font-body); transition: transform .1s ease, background .15s; }
-    .opt:hover { background: #F3F2FF; } .opt:active { transform: scale(.98); }
+    .opt { text-align: left; background: var(--surface); border: 1.5px solid var(--stroke); border-radius: 14px; padding: 13px 15px; font-size: 1.05rem; cursor: pointer; font-family: var(--font-body); transition: transform .1s ease, box-shadow .1s ease, background .15s; }
+    .opt:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 0 var(--stroke); }
     .opt.correct { background: #B6E3B0; } .opt.wrong { background: #F7C5C5; }
 
     .tiles, .answer-row { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -36,17 +55,23 @@
     .mtile.sel { background: var(--primary); } .mtile.done { background: #B6E3B0; pointer-events: none; opacity: .7; } .mtile.bad { background: #F7C5C5; }
 
     .txt-in { width: 100%; box-sizing: border-box; border: 1.5px solid var(--stroke); border-radius: 12px; padding: 13px 15px; font-size: 1.1rem; font-family: var(--font-body); }
-    .mic-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; border: 1.5px solid var(--stroke); border-radius: 999px; padding: 12px 20px; font-size: 1.02rem; font-weight: 700; cursor: pointer; font-family: var(--font-display); }
+    .mic-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; border: 1.5px solid var(--stroke); border-radius: 999px; padding: 11px 18px; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: var(--font-display); transition: transform .1s ease, box-shadow .1s ease; }
+    .mic-btn:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 0 var(--stroke); }
+    .mic-btn.ghost { background: var(--surface); color: var(--ink); }
+    .mic-btn:disabled { opacity: .45; pointer-events: none; }
+    .spk-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .heard { margin-top: 12px; color: var(--muted); font-size: .92rem; }
+    .beta-note { font-size: .8rem; color: var(--muted); margin-top: 6px; }
 
-    .q-actions { display: flex; gap: 10px; align-items: center; margin-top: 16px; }
-    .btn-primary { background: var(--accent-deep); color: #fff; border: 1.5px solid var(--stroke); border-radius: 999px; padding: 11px 22px; font-weight: 700; cursor: pointer; font-family: var(--font-display); font-size: 1rem; }
+    .q-actions { display: flex; gap: 10px; align-items: center; margin-top: 16px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent-deep); color: #fff; border: 1.5px solid var(--stroke); border-radius: 999px; padding: 11px 22px; font-weight: 700; cursor: pointer; font-family: var(--font-display); font-size: 1rem; transition: transform .1s ease, box-shadow .1s ease; }
+    .btn-primary:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 0 var(--stroke); }
     .btn-ghost { background: transparent; border: none; color: var(--muted); cursor: pointer; font-weight: 600; text-decoration: none; }
     .feedback { font-weight: 700; } .feedback.ok { color: #2F8F4E; } .feedback.no { color: #C23B3B; }
 
     .end-card { text-align: center; padding: 34px 20px; }
     .end-score { font-size: 3rem; font-family: var(--font-display); margin: 6px 0; }
     .note-warn { background: #FFF6E5; border: 1.5px solid var(--stroke); border-radius: 12px; padding: 10px 13px; color: #6b4e1f; font-size: .9rem; margin-top: 12px; }
-    .type-emoji { font-size: 1.4rem; }
   </style>
 </head>
 <body>
@@ -54,9 +79,7 @@
     <div class="wrap">
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
-        <div class="nav-right">
-          <a class="back-link" id="back-lesson" style="text-decoration:none;display:inline-flex;align-items:center" href="#">← bài học</a>
-        </div>
+        <div class="nav-right"><a class="back-link" id="back-lesson" href="#">← bài học</a></div>
       </nav>
     </div>
   </header>
@@ -70,7 +93,7 @@
   <script>
     const params = new URLSearchParams(location.search);
     const lessonId = params.get('id');
-    let level = params.get('level') || 'mam';
+    const level = params.get('level') || 'mam';
     const type = params.get('type');
     const stage = document.getElementById('stage');
     const bar = document.getElementById('bar');
@@ -78,20 +101,51 @@
     const topbar = document.getElementById('topbar');
     document.getElementById('back-lesson').href = 'lesson.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level);
 
+    let voice = 'nam'; try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
     const norm = s => (s || '').toLowerCase().normalize('NFC').replace(/[.,!?…"'/]/g, '').replace(/\s+/g, ' ').trim();
-    const stripD = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
-    function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+    const stripD = s => (s || '').normalize('NFD').replace(/[\u0300-\u0323]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+    function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
     function sample(a, n) { return shuffle(a).slice(0, n); }
     const cleanGloss = en => en && !/^\(/.test(en) && !/\?/.test(en) && !/^…/.test(en);
     function speak(t) { if (!('speechSynthesis' in window)) return; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.lang = 'vi-VN'; const v = (speechSynthesis.getVoices() || []).find(x => /vi/i.test(x.lang)); if (v) u.voice = v; u.rate = .9; speechSynthesis.speak(u); }
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-    const TYPES = [
-      { id: 'matching', emoji: '🔗', name: 'Matching', desc: 'Ghép từ với nghĩa của nó.' },
-      { id: 'reorder', emoji: '🧩', name: 'Reorder', desc: 'Sắp xếp các từ thành câu đúng.' },
-      { id: 'dictation', emoji: '🎧', name: 'Dictation', desc: 'Nghe và gõ lại bằng tiếng Việt.' },
-      { id: 'gap', emoji: '✏️', name: 'Gap filling', desc: 'Điền từ còn thiếu trong câu.' },
-      { id: 'translate', emoji: '🔁', name: 'Translating', desc: 'Dịch giữa Việt và Anh.' },
+    const TONE_NAMES = ['Ngang', 'Huyền', 'Sắc', 'Hỏi', 'Ngã', 'Nặng'];
+    const TONE_GLYPH = { Ngang: 'a', Huyền: 'à', Sắc: 'á', Hỏi: 'ả', Ngã: 'ã', Nặng: 'ạ' };
+    function toneOf(syl) {
+      const d = (syl || '').normalize('NFD');
+      if (/\u0301/.test(d)) return 'Sắc';
+      if (/\u0300/.test(d)) return 'Huyền';
+      if (/\u0309/.test(d)) return 'Hỏi';
+      if (/\u0303/.test(d)) return 'Ngã';
+      if (/\u0323/.test(d)) return 'Nặng';
+      return 'Ngang';
+    }
+
+    const P = { purple: '#C0BFF9', yellow: '#FFDC9A', mint: '#B6E3B0', blue: '#BBD4F5', coral: '#F4B6A8', teal: '#A9DBD0', ink: '#23223B' };
+    const SKILLS = [
+      { key: 'Reading', games: [
+        { id: 'matching', name: 'Ghép Đôi', desc: 'Match each word to its meaning.', icon: '🔗', c: P.purple },
+        { id: 'gap', name: 'Điền Vào', desc: 'Pick the missing word in a sentence.', icon: '✏️', c: P.yellow },
+        { id: 'reorder', name: 'Xếp Câu', desc: 'Reorder scrambled words into a sentence.', icon: '🧩', c: P.blue },
+      ] },
+      { key: 'Writing', games: [
+        { id: 'build', name: 'Ghép Câu', desc: 'Build a sentence from a word bank.', icon: '🧱', c: P.ink, dark: true },
+        { id: 'diacritics', name: 'Bỏ Dấu', desc: 'Choose the correct tone mark.', icon: '🔤', c: P.mint },
+        { id: 'translate', name: 'Dịch Sang Việt', desc: 'Choose the correct Vietnamese.', icon: '🔄', c: P.coral },
+      ] },
+      { key: 'Speaking', games: [
+        { id: 'shadow', name: 'Nói Theo', desc: 'Listen, then repeat the sentence.', icon: '🎙️', c: P.coral },
+        { id: 'readaloud', name: 'Đọc To', desc: 'Read the sentence aloud.', icon: '🗣️', c: P.ink, dark: true },
+        { id: 'answer', name: 'Trả Lời Nhanh', desc: 'Answer aloud using the target word.', icon: '⚡', c: P.blue },
+      ] },
+      { key: 'Listening', games: [
+        { id: 'dictation', name: 'Chép Chính Tả', desc: 'Hear it, then type what you heard.', icon: '⌨️', c: P.purple },
+        { id: 'tone', name: 'Bắt Thanh', desc: 'Hear a word, name its tone.', icon: '〰️', c: P.blue },
+        { id: 'listenpick', name: 'Nghe & Chọn', desc: 'Match the audio to its meaning.', icon: '🎧', c: P.coral },
+      ] },
     ];
+    const GAME = {}; SKILLS.forEach(s => s.games.forEach(g => { GAME[g.id] = Object.assign({ skill: s.key }, g); }));
 
     (async function () {
       let lesson, vocab = null;
@@ -101,65 +155,68 @@
       } catch (e) { stage.innerHTML = '<p class="note-warn">Không tải được dữ liệu bài học.</p>'; return; }
 
       const pairs = []; const seen = new Set();
-      function addPair(vi, en) { if (!vi || !cleanGloss(en)) return; const k = norm(vi) + '|' + norm(en); if (seen.has(k)) return; seen.add(k); pairs.push({ vi, en }); }
+      function addPair(vi, en) { if (!vi || !cleanGloss(en)) return; const k = norm(vi) + '|' + norm(en); if (seen.has(k)) return; seen.add(k); pairs.push({ vi: vi, en: en }); }
       (vocab ? vocab.sections : []).forEach(s => (s.items || []).forEach(it => { if (it.vi && it.en && !/⟷/.test(it.vi)) addPair(it.vi, it.en); }));
       lesson.sentences.forEach(s => (s.phrases || []).forEach(p => { if (p.vi) addPair(p.vi, p.en); }));
       const sentences = lesson.sentences.filter(s => s.phrases).map(s => ({ toks: s.phrases.filter(p => p.vi).map(p => p.vi), en: s.translation })).filter(s => s.toks.length >= 3 && s.toks.length <= 9 && s.en);
       const allToks = Array.from(new Set([].concat.apply([], sentences.map(s => s.toks))));
+      const singles = pairs.filter(p => !/\s/.test(p.vi) && /[a-zà-ỹ]/i.test(p.vi));
 
+      if ('speechSynthesis' in window) speechSynthesis.getVoices();
+      if (!type) { showLibrary(); return; }
+      runDrill(type);
+
+      // ---------- LIBRARY ----------
+      function showLibrary() {
+        document.getElementById('qtitle').textContent = 'Practice Library';
+        const tabsWrap = document.createElement('div'); tabsWrap.className = 'lib-tabs';
+        const grid = document.createElement('div'); grid.className = 'lib-grid';
+        let active = 0;
+        function paint() {
+          tabsWrap.innerHTML = '';
+          SKILLS.forEach((s, i) => { const b = document.createElement('button'); b.className = 'lib-tab' + (i === active ? ' on' : ''); b.textContent = s.key; b.onclick = () => { active = i; paint(); }; tabsWrap.appendChild(b); });
+          grid.innerHTML = '';
+          SKILLS[active].games.forEach(g => {
+            const fgT = g.dark ? '#fff' : '#23223B', fgD = g.dark ? 'rgba(255,255,255,.82)' : 'rgba(35,34,59,.72)', fgL = g.dark ? 'rgba(255,255,255,.7)' : 'rgba(35,34,59,.6)';
+            const a = document.createElement('a'); a.className = 'gcard'; a.style.background = g.c;
+            a.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level) + '&type=' + g.id;
+            let best = 0; try { best = parseInt(localStorage.getItem('quizbest:' + level + ':' + lessonId + ':' + g.id) || '0', 10); } catch (e) {}
+            a.innerHTML =
+              '<div class="gc-label" style="color:' + fgL + '">' + SKILLS[active].key + '</div>'
+              + '<div class="gc-row"><div class="gc-name" style="color:' + fgT + '">' + g.name + '</div><span class="gc-icon">' + g.icon + '</span></div>'
+              + '<div class="gc-desc" style="color:' + fgD + '">' + g.desc + '</div>'
+              + '<div class="gc-foot"><span class="gc-play" style="color:' + fgT + '">Play →</span>' + (best ? '<span class="gc-best" style="color:' + fgT + '">' + best + '%</span>' : '') + '</div>';
+            grid.appendChild(a);
+          });
+        }
+        paint();
+        stage.appendChild(tabsWrap); stage.appendChild(grid);
+      }
+
+      // ---------- GENERATORS ----------
       function distract(val, key, n) { return sample(pairs.filter(p => norm(p[key]) !== norm(val)).map(p => p[key]), n); }
+      function toneOpts(answer) { return shuffle([answer].concat(sample(TONE_NAMES.filter(x => x !== answer), 3))); }
       function gen(tp) {
-        if (tp === 'matching') {
-          if (pairs.length < 4) return [];
-          const rounds = Math.min(3, Math.max(1, Math.floor(pairs.length / 5)));
-          const pool = shuffle(pairs); const out = [];
-          for (let i = 0; i < rounds; i++) { let set = pool.slice(i * 5, i * 5 + 5); if (set.length < 3) set = sample(pairs, Math.min(5, pairs.length)); out.push({ t: 'match', set }); }
-          return out;
-        }
-        if (tp === 'reorder') return sample(sentences, Math.min(8, sentences.length)).map(s => ({ t: 'reorder', s }));
+        if (tp === 'matching') { if (pairs.length < 4) return []; const rounds = Math.min(3, Math.max(1, Math.floor(pairs.length / 5))); const pool = shuffle(pairs); const out = []; for (let i = 0; i < rounds; i++) { let set = pool.slice(i * 5, i * 5 + 5); if (set.length < 3) set = sample(pairs, Math.min(5, pairs.length)); out.push({ t: 'match', set: set }); } return out; }
+        if (tp === 'gap') { const usable = sentences.filter(s => s.toks.length >= 4); return sample(usable, Math.min(8, usable.length)).map(s => { const bi = 1 + Math.floor(Math.random() * (s.toks.length - 1)); const ans = s.toks[bi]; return { t: 'gap', toks: s.toks, bi: bi, en: s.en, options: shuffle([ans].concat(sample(allToks.filter(x => norm(x) !== norm(ans)), 3))) }; }); }
+        if (tp === 'reorder') return sample(sentences, Math.min(8, sentences.length)).map(s => ({ t: 'reorder', toks: s.toks, en: s.en }));
+        if (tp === 'build') return sample(sentences, Math.min(8, sentences.length)).map(s => ({ t: 'build', toks: s.toks, en: s.en, extra: sample(allToks.filter(x => s.toks.indexOf(x) < 0), 2) }));
+        if (tp === 'diacritics') return sample(singles, Math.min(8, singles.length)).map(p => { const ans = toneOf(p.vi); return { t: 'diacritics', w: p.vi, en: p.en, answer: ans, options: toneOpts(ans) }; });
+        if (tp === 'translate') { if (sentences.length < 2) return []; const others = sentences.map(s => s.toks.join(' ')); return sample(sentences, Math.min(8, sentences.length)).map(s => { const ans = s.toks.join(' '); return { t: 'translateMcq', en: s.en, answer: ans, options: shuffle([ans].concat(sample(others.filter(x => x !== ans), 3))) }; }); }
         if (tp === 'dictation') { const pool = pairs.concat(sentences.map(s => ({ vi: s.toks.join(' '), en: s.en }))); return sample(pool, Math.min(8, pool.length)).map(p => ({ t: 'dictation', vi: p.vi, en: p.en })); }
-        if (tp === 'gap') {
-          const usable = sentences.filter(s => s.toks.length >= 4);
-          return sample(usable, Math.min(8, usable.length)).map(s => { const bi = 1 + Math.floor(Math.random() * (s.toks.length - 1)); const answer = s.toks[bi]; return { t: 'gap', toks: s.toks, bi, en: s.en, options: [answer].concat(sample(allToks.filter(t => norm(t) !== norm(answer)), 3)) }; });
-        }
-        if (tp === 'translate') {
-          const out = [];
-          sample(pairs, Math.min(4, pairs.length)).forEach(p => { if (distract(p.en, 'en', 3).length === 3) out.push({ t: 'mcq', kind: 'VI → EN', ask: p.vi, sub: 'Nghĩa tiếng Anh là gì?', answer: p.en, options: [p.en].concat(distract(p.en, 'en', 3)) }); });
-          sample(pairs, Math.min(3, pairs.length)).forEach(p => { if (distract(p.vi, 'vi', 3).length === 3) out.push({ t: 'mcq', kind: 'EN → VI', ask: p.en, sub: 'Từ tiếng Việt nào đúng?', answer: p.vi, options: [p.vi].concat(distract(p.vi, 'vi', 3)) }); });
-          const others = sentences.map(s => s.en);
-          if (sentences.length >= 4) sample(sentences, Math.min(3, sentences.length)).forEach(s => out.push({ t: 'mcq', kind: 'Dịch câu', ask: s.toks.join(' '), sub: 'Câu này nghĩa là gì?', answer: s.en, options: [s.en].concat(sample(others.filter(e => e !== s.en), 3)) }));
-          return shuffle(out).slice(0, 10);
-        }
+        if (tp === 'tone') return sample(singles, Math.min(8, singles.length)).map(p => { const ans = toneOf(p.vi); return { t: 'tone', w: p.vi, en: p.en, answer: ans, options: toneOpts(ans) }; });
+        if (tp === 'listenpick') { const pool = pairs.concat(sentences.map(s => ({ vi: s.toks.join(' '), en: s.en }))); const ens = pool.map(p => p.en); return sample(pool, Math.min(8, pool.length)).map(p => ({ t: 'listenpick', vi: p.vi, en: p.en, options: shuffle([p.en].concat(sample(ens.filter(e => e !== p.en), 3))) })); }
+        if (tp === 'shadow' || tp === 'readaloud') return sample(sentences, Math.min(6, sentences.length)).map(s => ({ t: 'speak', mode: tp, vi: s.toks.join(' '), en: s.en }));
+        if (tp === 'answer') return sample(sentences, Math.min(6, sentences.length)).map(s => { const tgt = s.toks.slice().sort((a, b) => b.length - a.length)[0]; return { t: 'speak', mode: 'answer', vi: s.toks.join(' '), en: s.en, target: tgt }; });
         return [];
       }
 
-      if (!type) { showMenu(); if ('speechSynthesis' in window) speechSynthesis.getVoices(); return; }
-      runDrill(type);
-      if ('speechSynthesis' in window) speechSynthesis.getVoices();
-
-      function showMenu() {
-        document.getElementById('qtitle').textContent = 'Practice — ' + (lesson.title || lessonId);
-        const grid = document.createElement('div'); grid.className = 'cards';
-        TYPES.forEach(t => {
-          const a = document.createElement('a'); a.className = 'card';
-          a.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level) + '&type=' + t.id;
-          const head = document.createElement('div'); head.className = 'card-head';
-          const h3 = document.createElement('h3'); h3.innerHTML = '<span class="type-emoji">' + t.emoji + '</span> ' + t.name; head.appendChild(h3);
-          let best = 0; try { best = parseInt(localStorage.getItem('quizbest:' + level + ':' + lessonId + ':' + t.id) || '0', 10); } catch (e) {}
-          if (best) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = best + '%'; head.appendChild(b); }
-          a.appendChild(head);
-          const p = document.createElement('p'); p.textContent = t.desc; a.appendChild(p);
-          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Bắt đầu →'; a.appendChild(go);
-          grid.appendChild(a);
-        });
-        stage.appendChild(grid);
-      }
-
+      // ---------- DRILL RUNNER ----------
       function runDrill(tp) {
-        const meta = TYPES.find(t => t.id === tp) || { name: tp, emoji: '' };
-        document.getElementById('qtitle').textContent = meta.emoji + ' ' + meta.name;
+        const meta = GAME[tp] || { name: tp, skill: '' };
+        document.getElementById('qtitle').textContent = meta.name;
         const questions = gen(tp);
-        if (!questions.length) { stage.innerHTML = '<p class="note-warn">Chưa đủ dữ liệu cho dạng này ở bài này.</p><p style="margin-top:12px"><a class="btn-ghost" href="quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level) + '">← Chọn dạng khác</a></p>'; return; }
+        if (!questions.length) { stage.innerHTML = '<p class="note-warn">Chưa đủ dữ liệu cho game này ở bài này.</p><p style="margin-top:12px"><a class="btn-ghost" href="quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level) + '">← Practice Library</a></p>'; return; }
         topbar.style.display = 'flex';
         let idx = 0, correct = 0; const total = questions.length;
         function setBar() { bar.style.width = (idx / total * 100) + '%'; scoreEl.textContent = correct; }
@@ -168,12 +225,16 @@
         function actions(fb, ok) { const w = document.createElement('div'); w.className = 'q-actions'; if (fb) { const f = document.createElement('span'); f.className = 'feedback ' + (ok ? 'ok' : 'no'); f.textContent = fb; w.appendChild(f); } const b = document.createElement('button'); b.className = 'btn-primary'; b.style.marginLeft = 'auto'; b.textContent = idx + 1 >= total ? 'Xem kết quả' : 'Tiếp →'; b.onclick = next; w.appendChild(b); return w; }
         function card(kind, prompt, sub) { stage.innerHTML = ''; const c = document.createElement('div'); c.className = 'q-card'; const k = document.createElement('div'); k.className = 'q-kind'; k.textContent = kind; c.appendChild(k); if (prompt) { const p = document.createElement('div'); p.className = 'q-prompt'; p.innerHTML = prompt; c.appendChild(p); } if (sub) { const s = document.createElement('div'); s.className = 'q-sub'; s.innerHTML = sub; c.appendChild(s); } stage.appendChild(c); return c; }
 
-        function render(q) { setBar(); ({ match: rMatch, reorder: rReorder, dictation: rDict, gap: rGap, mcq: rMcq })[q.t](q); }
+        function render(q) { setBar(); ({ match: rMatch, gap: rGap, reorder: rReorder, build: rBuild, diacritics: rTonePick, translateMcq: rTransMcq, dictation: rDict, tone: rTonePick, listenpick: rListen, speak: rSpeak })[q.t](q); }
 
-        function rMcq(q) { const c = card(q.kind, q.ask, q.sub); const box = document.createElement('div'); box.className = 'options two'; shuffle(q.options).forEach(o => { const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = norm(o) === norm(q.answer); b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (norm(x.textContent) === norm(q.answer)) x.classList.add('correct'); }); mark(ok); c.appendChild(actions(ok ? 'Chính xác!' : 'Đáp án: ' + q.answer, ok)); }; box.appendChild(b); }); c.appendChild(box); }
+        function mcqBox(c, opts, answer, onDone, revealText) {
+          const box = document.createElement('div'); box.className = 'options two';
+          shuffle(opts).forEach(o => { const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = norm(o) === norm(answer); b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (norm(x.textContent) === norm(answer)) x.classList.add('correct'); }); mark(ok); c.appendChild(actions((ok ? 'Chính xác!' : 'Đáp án: ' + answer) + (revealText ? ' — ' + revealText : ''), ok)); }; box.appendChild(b); });
+          c.appendChild(box);
+        }
 
         function rMatch(q) {
-          const c = card('Matching', 'Ghép từ với nghĩa', 'Bấm một ô bên trái rồi ô tương ứng bên phải');
+          const c = card('Ghép Đôi (Matching)', 'Ghép từ với nghĩa', 'Bấm một ô bên trái rồi ô tương ứng bên phải');
           const cols = document.createElement('div'); cols.className = 'match-cols';
           const L = document.createElement('div'); L.className = 'match-col'; const R = document.createElement('div'); R.className = 'match-col';
           let sel = null, done = 0;
@@ -184,18 +245,37 @@
           cols.appendChild(L); cols.appendChild(R); c.appendChild(cols);
         }
 
-        function rReorder(q) {
-          const c = card('Reorder', q.s.en, 'Bấm các từ theo đúng thứ tự');
+        function rGap(q) {
+          const shown = q.toks.map((t, i) => i === q.bi ? '<u>____</u>' : t).join(' ');
+          const c = card('Điền Vào (Gap)', shown, (q.en ? q.en + '<br>' : '') + 'Chọn từ còn thiếu');
+          mcqBox(c, q.options, q.toks[q.bi]);
+        }
+
+        function buildTiles(c, correctToks, tilePool) {
           const ans = document.createElement('div'); ans.className = 'answer-row'; const tiles = document.createElement('div'); tiles.className = 'tiles'; const chosen = [];
-          shuffle(q.s.toks.map((t, i) => ({ t, i }))).forEach(o => { const b = document.createElement('button'); b.className = 'tile'; b.textContent = o.t; b.onclick = () => { if (b.classList.contains('used')) return; b.classList.add('used'); chosen.push(o.t); const a = document.createElement('button'); a.className = 'tile'; a.textContent = o.t; a.onclick = () => { a.remove(); b.classList.remove('used'); chosen.splice(chosen.indexOf(o.t), 1); }; ans.appendChild(a); }; tiles.appendChild(b); });
+          shuffle(tilePool.map((t, i) => ({ t: t, i: i }))).forEach(o => { const b = document.createElement('button'); b.className = 'tile'; b.textContent = o.t; b.onclick = () => { if (b.classList.contains('used')) return; b.classList.add('used'); chosen.push(o.t); const a = document.createElement('button'); a.className = 'tile'; a.textContent = o.t; a.onclick = () => { a.remove(); b.classList.remove('used'); chosen.splice(chosen.indexOf(o.t), 1); }; ans.appendChild(a); }; tiles.appendChild(b); });
           c.appendChild(ans); c.appendChild(tiles);
           const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Kiểm tra';
-          ck.onclick = () => { const ok = norm(chosen.join(' ')) === norm(q.s.toks.join(' ')); ck.remove(); mark(ok); c.appendChild(actions(ok ? 'Chính xác!' : 'Đáp án: ' + q.s.toks.join(' '), ok)); };
+          ck.onclick = () => { const ok = norm(chosen.join(' ')) === norm(correctToks.join(' ')); ck.remove(); mark(ok); c.appendChild(actions(ok ? 'Chính xác!' : 'Đáp án: ' + correctToks.join(' '), ok)); };
           c.appendChild(ck);
+        }
+        function rReorder(q) { const c = card('Xếp Câu (Reorder)', q.en, 'Bấm các từ theo đúng thứ tự'); buildTiles(c, q.toks, q.toks); }
+        function rBuild(q) { const c = card('Ghép Câu (Build)', q.en, 'Chọn và sắp xếp từ — có vài từ thừa'); buildTiles(c, q.toks, q.toks.concat(q.extra)); }
+
+        function rTransMcq(q) { const c = card('Dịch Sang Việt', q.en, 'Câu tiếng Việt nào đúng?'); mcqBox(c, q.options, q.answer); }
+
+        function rTonePick(q) {
+          const isAudio = q.t === 'tone';
+          const c = card(isAudio ? 'Bắt Thanh (Tone)' : 'Bỏ Dấu (Tone mark)', isAudio ? '🎧' : stripD(q.w), isAudio ? 'Nghe từ và chọn thanh điệu' : ((q.en ? q.en + '<br>' : '') + 'Từ này mang thanh gì?'));
+          if (isAudio) { const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Nghe lại'; play.onclick = () => speak(q.w); c.appendChild(play); c.appendChild(document.createElement('div')); speak(q.w); }
+          const labeled = q.options.map(o => o + ' (' + TONE_GLYPH[o] + ')');
+          const box = document.createElement('div'); box.className = 'options two';
+          labeled.forEach(o => { const tone = o.split(' ')[0]; const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = tone === q.answer; b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (x.textContent.split(' ')[0] === q.answer) x.classList.add('correct'); }); mark(ok); c.appendChild(actions((ok ? 'Chính xác!' : 'Đáp án: ' + q.answer) + ' — ' + q.w + (q.en ? ' (' + q.en + ')' : ''), ok)); }; box.appendChild(b); });
+          c.appendChild(box);
         }
 
         function rDict(q) {
-          const c = card('Dictation', '🎧', 'Nghe rồi gõ lại bằng tiếng Việt (không bắt buộc dấu)');
+          const c = card('Chép Chính Tả (Dictation)', '🎧', 'Nghe rồi gõ lại bằng tiếng Việt (không bắt buộc dấu)');
           const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Nghe lại'; play.onclick = () => speak(q.vi); c.appendChild(play); speak(q.vi);
           const inp = document.createElement('input'); inp.className = 'txt-in'; inp.style.marginTop = '14px'; inp.placeholder = 'Gõ những gì bạn nghe…'; c.appendChild(inp); inp.focus();
           const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Kiểm tra';
@@ -204,12 +284,52 @@
           c.appendChild(ck);
         }
 
-        function rGap(q) {
-          const shown = q.toks.map((t, i) => i === q.bi ? '<u>____</u>' : t).join(' ');
-          const c = card('Gap filling', shown, (q.en ? q.en + '<br>' : '') + 'Chọn từ còn thiếu');
-          const box = document.createElement('div'); box.className = 'options two';
-          shuffle(q.options).forEach(o => { const b = document.createElement('button'); b.className = 'opt'; b.textContent = o; b.onclick = () => { box.querySelectorAll('.opt').forEach(x => x.disabled = true); const ok = norm(o) === norm(q.toks[q.bi]); b.classList.add(ok ? 'correct' : 'wrong'); if (!ok) box.querySelectorAll('.opt').forEach(x => { if (norm(x.textContent) === norm(q.toks[q.bi])) x.classList.add('correct'); }); mark(ok); c.appendChild(actions(ok ? 'Chính xác!' : 'Đáp án: ' + q.toks[q.bi], ok)); }; box.appendChild(b); });
-          c.appendChild(box);
+        function rListen(q) {
+          const c = card('Nghe & Chọn (Listen)', '🎧', 'Nghe rồi chọn nghĩa đúng');
+          const play = document.createElement('button'); play.className = 'mic-btn'; play.textContent = '🔊 Nghe lại'; play.onclick = () => speak(q.vi); c.appendChild(play); const sp = document.createElement('div'); sp.style.height = '12px'; c.appendChild(sp); speak(q.vi);
+          mcqBox(c, q.options, q.en, null, q.vi);
+        }
+
+        let stream = null;
+        function rSpeak(q) {
+          const titleMap = { shadow: 'Nói Theo (Shadowing)', readaloud: 'Đọc To (Read aloud)', answer: 'Trả Lời Nhanh (Quick answer)' };
+          const promptHtml = q.mode === 'answer' ? q.en : q.vi;
+          const sub = q.mode === 'answer' ? ('Trả lời bằng tiếng Việt, dùng từ: <strong>' + q.target + '</strong>') : (q.en || '');
+          const c = card(titleMap[q.mode], promptHtml, sub);
+          const row = document.createElement('div'); row.className = 'spk-row';
+          const model = document.createElement('button'); model.className = 'mic-btn ghost'; model.textContent = '🔊 Nghe mẫu'; model.onclick = () => speak(q.vi); row.appendChild(model);
+
+          const heard = document.createElement('div'); heard.className = 'heard';
+          if ('MediaRecorder' in window && navigator.mediaDevices) {
+            const recBtn = document.createElement('button'); recBtn.className = 'mic-btn'; recBtn.textContent = '🎙 Thu';
+            const playBtn = document.createElement('button'); playBtn.className = 'mic-btn ghost'; playBtn.textContent = '▶ Nghe lại'; playBtn.disabled = true;
+            let rec = null, chunks = [], url = null;
+            recBtn.onclick = async () => {
+              if (rec && rec.state === 'recording') { rec.stop(); return; }
+              try { if (!stream) stream = await navigator.mediaDevices.getUserMedia({ audio: true }); chunks = []; rec = new MediaRecorder(stream); rec.ondataavailable = e => chunks.push(e.data); rec.onstop = () => { if (url) URL.revokeObjectURL(url); url = URL.createObjectURL(new Blob(chunks)); playBtn.disabled = false; recBtn.textContent = '🎙 Thu lại'; }; rec.start(); recBtn.textContent = '⏹ Dừng'; } catch (e) { heard.textContent = 'Không truy cập được micro.'; }
+            };
+            playBtn.onclick = () => { if (url) new Audio(url).play(); };
+            row.appendChild(recBtn); row.appendChild(playBtn);
+          }
+
+          if (SR) {
+            const chk = document.createElement('button'); chk.className = 'mic-btn'; chk.textContent = '✓ Kiểm tra (beta)';
+            chk.onclick = () => {
+              const r = new SR(); r.lang = 'vi-VN'; r.interimResults = false; r.maxAlternatives = 1; heard.textContent = '🎤 Đang nghe, hãy nói…';
+              r.onresult = e => { const txt = e.results[0][0].transcript; let ok; if (q.mode === 'answer') ok = stripD(norm(txt)).indexOf(stripD(norm(q.target))) >= 0; else { const a = stripD(norm(txt)).split(' '), b = stripD(norm(q.vi)).split(' '); const hit = b.filter(w => a.indexOf(w) >= 0).length; ok = hit / b.length >= 0.6; } heard.innerHTML = (ok ? '✅ Đúng từ rồi! ' : '🔁 Chưa khớp. ') + 'Nghe được: “' + txt + '”<div class="beta-note">* Chỉ kiểm tra từ ngữ, chưa chấm thanh điệu.</div>'; };
+              r.onerror = () => { heard.textContent = 'Không nghe được, thử lại.'; };
+              try { r.start(); } catch (e) {}
+            };
+            row.appendChild(chk);
+          }
+          c.appendChild(row);
+          if (!SR) { const n = document.createElement('div'); n.className = 'beta-note'; n.textContent = 'Trình duyệt này không hỗ trợ kiểm tra giọng nói — hãy tự nghe lại và so với mẫu.'; c.appendChild(n); }
+          c.appendChild(heard);
+
+          const act = document.createElement('div'); act.className = 'q-actions';
+          const good = document.createElement('button'); good.className = 'btn-primary'; good.textContent = '👍 Được'; good.onclick = () => { mark(true); next(); };
+          const retry = document.createElement('button'); retry.className = 'btn-ghost'; retry.textContent = (idx + 1 >= total ? 'Bỏ qua → kết quả' : '🔁 Bỏ qua'); retry.onclick = () => next();
+          act.appendChild(good); act.appendChild(retry); c.appendChild(act);
         }
 
         function end() {
@@ -222,7 +342,7 @@
           const c = document.createElement('div'); c.className = 'q-card end-card';
           c.innerHTML = '<div class="q-kind">' + meta.name + '</div><div class="end-score">' + pct + '%</div><div class="q-sub">Đúng ' + correct + '/' + total + ' · Cao nhất: ' + best + '%</div>';
           const again = document.createElement('button'); again.className = 'btn-primary'; again.textContent = '↻ Làm lại'; again.onclick = () => location.reload();
-          const menu = document.createElement('a'); menu.className = 'btn-ghost'; menu.textContent = 'Chọn dạng khác'; menu.style.marginLeft = '12px'; menu.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level);
+          const menu = document.createElement('a'); menu.className = 'btn-ghost'; menu.textContent = 'Practice Library'; menu.style.marginLeft = '12px'; menu.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level);
           const row = document.createElement('div'); row.style.marginTop = '16px'; row.appendChild(again); row.appendChild(menu); c.appendChild(row);
           stage.appendChild(c);
         }
