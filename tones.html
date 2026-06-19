@@ -39,7 +39,7 @@
     .eq-badge small { display: block; font-weight: 600; }
 
     .tone-note { margin-top: 18px; background: #F4F4EC; border: 1.5px solid var(--stroke); border-radius: 14px; padding: 14px 18px; display: flex; gap: 12px; align-items: flex-start; line-height: 1.5; }
-    .tone-note .sym { font-size: 1.2rem; color: var(--accent-deep); flex: none; }
+    .tone-note .sym { font-size: 1.2rem; color: var(--accent-deep); flex: none; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -48,20 +48,17 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" href="lessons.html?level=mam">← bài học</a>
+          <a class="back-link" id="back-link" href="lessons.html?level=mam">← bài học</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <div class="lesson-head"><h1>Tone map <span class="title-en">(tiếng miền nam)</span></h1></div>
+    <div class="lesson-head"><h1>Tone map <span class="title-en" id="subtitle"></span></h1></div>
     <div><span class="tap-hint">🔊 Bấm vào chữ cái hoặc từ để nghe phát âm</span></div>
     <div class="tones-grid" id="grid"></div>
-    <div class="tone-note">
-      <span class="sym">≈</span>
-      <div><strong>Miền Nam:</strong> thanh hỏi và thanh ngã phát âm như nhau — học viên thực tế chỉ cần phân biệt 5 thanh.</div>
-    </div>
+    <div class="tone-note" id="tone-note"></div>
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
@@ -75,12 +72,7 @@
     function play(name, el) {
       if (lastEl) lastEl.classList.remove('playing');
       lastEl = el; if (el) el.classList.add('playing');
-      try {
-        player.pause();
-        player.src = 'audio/tones/' + voice + '/' + name + '.mp3';
-        player.currentTime = 0;
-        player.play().catch(() => {});
-      } catch (e) {}
+      try { player.pause(); player.src = 'audio/tones/' + voice + '/' + name + '.mp3'; player.currentTime = 0; player.play().catch(() => {}); } catch (e) {}
     }
     player.addEventListener('ended', () => { if (lastEl) lastEl.classList.remove('playing'); });
     player.addEventListener('error', () => { if (lastEl) lastEl.classList.remove('playing'); });
@@ -94,12 +86,15 @@
       else if (type === 'fall') shape = '<path d="M50,38 L186,62" ' + sw + '/>';
       else if (type === 'dip') shape = '<path d="M54,44 Q118,72 182,48" ' + sw + '/>';
       else if (type === 'dipDash') shape = '<path d="M54,44 Q118,72 182,48" ' + sw + ' stroke-dasharray="6 4"/>';
+      else if (type === 'dipRise') shape = '<path d="M52,40 Q104,74 134,54 Q160,38 184,22" ' + sw + '/>';
       else if (type === 'rise') shape = '<path d="M50,55 L186,22" ' + sw + '/>';
+      else if (type === 'broken') shape = '<path d="M52,52 L98,44" ' + sw + '/><path d="M120,46 Q150,46 184,20" ' + sw + '/><line x1="108" y1="34" x2="108" y2="56" stroke="' + color + '" stroke-width="1.6" stroke-dasharray="2 2"/>';
       else if (type === 'drop') shape = '<path d="M52,40 L168,60" ' + sw + '/><circle cx="172" cy="61" r="3.4" fill="' + color + '"/>';
       return '<svg class="contour" viewBox="0 0 200 84" xmlns="http://www.w3.org/2000/svg">' + grid + shape + '</svg>';
     }
 
-    const TONES = [
+    // Miền Nam: hỏi ≈ ngã (5 thanh phân biệt)
+    const NAM = [
       { id: 'ngang', name: 'Ngang', desc: ['flat', 'mid'], letter: 'a', color: '#6E6E6E', shape: 'flat', word: 'ma', mean: 'ghost' },
       { id: 'huyen', name: 'Huyền', desc: ['low', 'falling'], letter: 'à', color: '#2D6CA8', shape: 'fall', word: 'mà', mean: 'but / yet' },
       { id: 'hoi', name: 'Hỏi', desc: ['low', 'dipping'], letter: 'ả', color: '#1E7A5E', shape: 'dip', word: 'mả', mean: 'tomb', eq: 'ngã' },
@@ -107,6 +102,22 @@
       { id: 'sac', name: 'Sắc', desc: ['high', 'rising'], letter: 'á', color: '#C68A1E', shape: 'rise', word: 'má', mean: 'mom / cheek' },
       { id: 'nang', name: 'Nặng', desc: ['low + stop'], letter: 'ạ', color: '#9B3A2C', shape: 'drop', word: 'mạ', mean: 'rice seedling' },
     ];
+    // Miền Bắc: đủ 6 thanh, ngã ≠ hỏi
+    const BAC = [
+      { id: 'ngang', name: 'Ngang', desc: ['flat', 'mid'], letter: 'a', color: '#6E6E6E', shape: 'flat', word: 'ma', mean: 'ghost' },
+      { id: 'huyen', name: 'Huyền', desc: ['low', 'falling'], letter: 'à', color: '#2D6CA8', shape: 'fall', word: 'mà', mean: 'but / yet' },
+      { id: 'hoi', name: 'Hỏi', desc: ['dipping', 'rising'], letter: 'ả', color: '#1E7A5E', shape: 'dipRise', word: 'mả', mean: 'tomb' },
+      { id: 'nga', name: 'Ngã', desc: ['broken', 'rising'], letter: 'ã', color: '#8E44AD', shape: 'broken', word: 'mã', mean: 'code / horse' },
+      { id: 'sac', name: 'Sắc', desc: ['high', 'rising'], letter: 'á', color: '#C68A1E', shape: 'rise', word: 'má', mean: 'mom / cheek' },
+      { id: 'nang', name: 'Nặng', desc: ['low + stop'], letter: 'ạ', color: '#9B3A2C', shape: 'drop', word: 'mạ', mean: 'rice seedling' },
+    ];
+
+    const isBac = voice === 'bac';
+    const TONES = isBac ? BAC : NAM;
+    document.getElementById('subtitle').textContent = isBac ? '(tiếng miền bắc)' : '(tiếng miền nam)';
+    document.getElementById('tone-note').innerHTML = isBac
+      ? '<span class="sym">≠</span><div><strong>Miền Bắc:</strong> đủ 6 thanh phân biệt rõ — thanh ngã (lên giọng, có tắc thanh hầu) khác hẳn thanh hỏi (xuống rồi lên).</div>'
+      : '<span class="sym">≈</span><div><strong>Miền Nam:</strong> thanh hỏi và thanh ngã phát âm như nhau — học viên thực tế chỉ cần phân biệt 5 thanh.</div>';
 
     const grid = document.getElementById('grid');
     TONES.forEach(t => {
