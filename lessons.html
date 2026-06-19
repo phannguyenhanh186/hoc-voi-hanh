@@ -41,6 +41,16 @@
         const shown = lessons.filter(l => l.level === activeLevel);
         if (!shown.length) { cards.innerHTML = '<p class="note">No lessons yet at this level.</p>'; return; }
         cards.innerHTML = '';
+        if (activeLevel === 'mam') {
+          const a = document.createElement('a'); a.className = 'card'; a.href = 'tones.html';
+          const head = document.createElement('div'); head.className = 'card-head';
+          const h3 = document.createElement('h3'); h3.innerHTML = 'Bài 0: Tone map <span class="title-en">(tiếng miền nam)</span>'; head.appendChild(h3);
+          const b = document.createElement('span'); b.className = 'badge'; b.textContent = 'tra cứu'; head.appendChild(b);
+          a.appendChild(head);
+          const p = document.createElement('p'); p.textContent = 'Bảng thanh điệu tiếng Việt — nghe và so sánh 6 thanh.'; a.appendChild(p);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Xem →'; a.appendChild(go);
+          cards.appendChild(a);
+        }
         shown.forEach(l => {
           const a = document.createElement('a'); a.className = 'card';
           a.href = 'lesson.html?id=' + encodeURIComponent(l.id) + '&level=' + encodeURIComponent(l.level);
