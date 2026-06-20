@@ -277,12 +277,12 @@
         }
 
         function rBuildFree(q) {
-          const c = card('Sentence Builder', 'Make a sentence using: <strong>' + q.req + '</strong>', 'Tap words to build your own sentence — it just needs to include that word.');
+          const c = card('Sentence Builder', 'Make a sentence using: <strong>' + q.req + '</strong>', 'Build your own sentence (at least 3 words) that includes the word above.');
           const ans = document.createElement('div'); ans.className = 'answer-row'; const tiles = document.createElement('div'); tiles.className = 'tiles'; const chosen = [];
           shuffle(q.bank).forEach(w => { const b = document.createElement('button'); b.className = 'tile'; b.textContent = w; b.onclick = () => { if (b.classList.contains('used')) return; b.classList.add('used'); chosen.push(w); const a = document.createElement('button'); a.className = 'tile'; a.textContent = w; a.onclick = () => { a.remove(); b.classList.remove('used'); chosen.splice(chosen.indexOf(w), 1); }; ans.appendChild(a); }; tiles.appendChild(b); });
           c.appendChild(ans); c.appendChild(tiles);
           const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Check';
-          ck.onclick = () => { const hasReq = chosen.some(t => norm(t) === norm(q.req)); const ok = hasReq && chosen.length >= 2; ck.remove(); mark(ok); const msg = ok ? 'Nice!' : ('Your sentence must include “' + q.req + '” (at least 2 words).'); const ex = document.createElement('div'); ex.className = 'explain'; ex.innerHTML = '<strong>' + msg + '</strong><br>Your sentence: “' + (chosen.join(' ') || '—') + '”<br>Example: “' + q.sample + '”'; c.appendChild(ex); c.appendChild(actions('', ok)); };
+          ck.onclick = () => { const hasReq = chosen.some(t => norm(t) === norm(q.req)); const ok = hasReq && chosen.length >= 3; ck.remove(); mark(ok); const msg = ok ? 'Nice!' : ('Your sentence must include “' + q.req + '” and have at least 3 words.'); const ex = document.createElement('div'); ex.className = 'explain'; ex.innerHTML = '<strong>' + msg + '</strong><br>Your sentence: “' + (chosen.join(' ') || '—') + '”<br>Example: “' + q.sample + '”'; c.appendChild(ex); c.appendChild(actions('', ok)); };
           c.appendChild(ck);
         }
 
