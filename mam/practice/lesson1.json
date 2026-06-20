@@ -422,7 +422,8 @@
           "y tá"
         ],
         "qen": "Are you a doctor?",
-        "aen": "No, I am a nurse."
+        "aen": "No, I am a nurse.",
+        "atext": "Không. Mình làm y tá."
       }
     ]
   }
