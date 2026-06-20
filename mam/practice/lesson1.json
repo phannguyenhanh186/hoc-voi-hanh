@@ -209,5 +209,106 @@
         ]
       }
     ]
+  },
+  "build": {
+    "items": [
+      {
+        "req": "tên",
+        "bank": [
+          "em",
+          "mình",
+          "anh",
+          "chị",
+          "bạn",
+          "tên",
+          "là",
+          "gì",
+          "Thơ",
+          "Nam"
+        ],
+        "sample": "Em tên là Thơ."
+      },
+      {
+        "req": "người",
+        "bank": [
+          "em",
+          "mình",
+          "anh",
+          "chị",
+          "là",
+          "người",
+          "Việt",
+          "Mỹ",
+          "Anh",
+          "Nhật",
+          "Pháp"
+        ],
+        "sample": "Mình là người Việt."
+      },
+      {
+        "req": "làm",
+        "bank": [
+          "em",
+          "anh",
+          "chị",
+          "làm",
+          "nghề",
+          "gì",
+          "bác sĩ",
+          "kỹ sư",
+          "y tá",
+          "ở"
+        ],
+        "sample": "Chị làm nghề gì?"
+      },
+      {
+        "req": "gì",
+        "bank": [
+          "em",
+          "anh",
+          "chị",
+          "bạn",
+          "tên",
+          "là",
+          "gì",
+          "nghề",
+          "làm",
+          "người"
+        ],
+        "sample": "Bạn tên là gì?"
+      },
+      {
+        "req": "không",
+        "bank": [
+          "bạn",
+          "là",
+          "bác sĩ",
+          "người",
+          "Nhật",
+          "đúng",
+          "không",
+          "làm",
+          "nghề",
+          "y tá"
+        ],
+        "sample": "Bạn là bác sĩ đúng không?"
+      },
+      {
+        "req": "còn",
+        "bank": [
+          "còn",
+          "em",
+          "anh",
+          "chị",
+          "bạn",
+          "mình",
+          "là",
+          "tên",
+          "gì",
+          "người"
+        ],
+        "sample": "Còn anh?"
+      }
+    ]
   }
 }
