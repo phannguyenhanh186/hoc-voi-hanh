@@ -291,7 +291,7 @@
           "nghề",
           "y tá"
         ],
-        "sample": "Bạn là bác sĩ đúng không?"
+        "sample": "Bạn làm bác sĩ đúng không?"
       },
       {
         "req": "còn",
@@ -308,6 +308,121 @@
           "người"
         ],
         "sample": "Còn em tên gì?"
+      }
+    ]
+  },
+  "qa": {
+    "pairs": [
+      {
+        "q": [
+          "Em",
+          "tên",
+          "là",
+          "gì"
+        ],
+        "a": [
+          "Em",
+          "tên",
+          "là",
+          "Nam"
+        ],
+        "qen": "What is your name?",
+        "aen": "My name is Nam."
+      },
+      {
+        "q": [
+          "Anh",
+          "tên",
+          "là",
+          "gì"
+        ],
+        "a": [
+          "Anh",
+          "tên",
+          "là",
+          "Hải"
+        ],
+        "qen": "What is your name?",
+        "aen": "My name is Hải."
+      },
+      {
+        "q": [
+          "Chị",
+          "tên",
+          "là",
+          "gì"
+        ],
+        "a": [
+          "Chị",
+          "tên",
+          "là",
+          "Mai"
+        ],
+        "qen": "What is your name?",
+        "aen": "My name is Mai."
+      },
+      {
+        "q": [
+          "Chị",
+          "làm",
+          "nghề",
+          "gì"
+        ],
+        "a": [
+          "Chị",
+          "làm",
+          "bác sĩ"
+        ],
+        "qen": "What do you do for a living?",
+        "aen": "I am a doctor."
+      },
+      {
+        "q": [
+          "Anh",
+          "làm",
+          "nghề",
+          "gì"
+        ],
+        "a": [
+          "Anh",
+          "làm",
+          "kỹ sư"
+        ],
+        "qen": "What do you do for a living?",
+        "aen": "I am an engineer."
+      },
+      {
+        "q": [
+          "Bạn",
+          "là",
+          "người",
+          "Nhật",
+          "đúng",
+          "không"
+        ],
+        "a": [
+          "Đúng",
+          "rồi"
+        ],
+        "qen": "Are you Japanese?",
+        "aen": "That is right."
+      },
+      {
+        "q": [
+          "Bạn",
+          "làm",
+          "bác sĩ",
+          "đúng",
+          "không"
+        ],
+        "a": [
+          "Không",
+          "mình",
+          "làm",
+          "y tá"
+        ],
+        "qen": "Are you a doctor?",
+        "aen": "No, I am a nurse."
       }
     ]
   }
