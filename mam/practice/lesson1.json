@@ -1,0 +1,213 @@
+{
+  "gap": {
+    "items": [
+      {
+        "set": "Name",
+        "q": "Chào anh. Em ___ là Nam.",
+        "a": "tên",
+        "en": "Hello. My name is Nam.",
+        "ex": "\"tên\" means \"name.\" The pattern \"Em tên là + [name]\" is how you say \"My name is…\" (here you call yourself \"em\").",
+        "opts": [
+          "tên",
+          "là",
+          "người"
+        ]
+      },
+      {
+        "set": "Name",
+        "q": "Chào anh. ___ tên là gì?",
+        "a": "anh",
+        "en": "Hello. What is your name?",
+        "ex": "You greet an older man and address him as \"anh,\" so \"Anh tên là gì?\" = \"What is your name?\"",
+        "opts": [
+          "anh",
+          "em",
+          "chị",
+          "mình"
+        ]
+      },
+      {
+        "set": "Name",
+        "q": "Chào bạn. ___ tên là Hải.",
+        "a": "mình",
+        "en": "Hi. My name is Hải.",
+        "ex": "When you call the other person \"bạn\" (same age), you refer to yourself as \"mình.\" So \"Mình tên là Hải\" = \"My name is Hải.\"",
+        "opts": [
+          "mình",
+          "em",
+          "bạn",
+          "anh"
+        ]
+      },
+      {
+        "set": "Name",
+        "q": "Chào ___. Chị tên là gì?",
+        "a": "chị",
+        "en": "Hello. What is your name?",
+        "ex": "You are speaking to an older woman, so you address her as \"chị\": \"Chào chị. Chị tên là gì?\" = \"Hello. What is your name?\"",
+        "opts": [
+          "chị",
+          "anh",
+          "em",
+          "bạn"
+        ]
+      },
+      {
+        "set": "Name",
+        "q": "Chị tên là Mai. Còn ___?",
+        "a": "em",
+        "en": "My name is Mai. And you?",
+        "ex": "Mai (a \"chị\") turns the question back to the younger person, addressed as \"em\": \"Còn em?\" = \"And you?\"",
+        "opts": [
+          "em",
+          "chị",
+          "anh",
+          "mình"
+        ]
+      },
+      {
+        "set": "Job",
+        "q": "Em làm ___ ở nhà hàng.",
+        "a": "phục vụ",
+        "en": "I work as a waiter at a restaurant.",
+        "ex": "\"làm + [job]\" = \"work as…\". \"phục vụ\" = waiter/server, \"nhà hàng\" = restaurant.",
+        "opts": [
+          "phục vụ",
+          "bác sĩ",
+          "kỹ sư",
+          "y tá"
+        ]
+      },
+      {
+        "set": "Job",
+        "q": "Chị làm ___ gì?",
+        "a": "nghề",
+        "en": "What do you do for a living?",
+        "ex": "\"nghề\" = job/occupation. \"làm nghề gì?\" is the set phrase for \"what do you do for a living?\"",
+        "opts": [
+          "nghề",
+          "người",
+          "tên",
+          "việc"
+        ]
+      },
+      {
+        "set": "Job",
+        "q": "Anh làm kỹ sư. Còn ___?",
+        "a": "em",
+        "en": "I am an engineer. And you?",
+        "ex": "The older speaker (\"anh\") turns the question back to the younger person: \"Còn em?\" = \"And you?\"",
+        "opts": [
+          "em",
+          "anh",
+          "chị",
+          "mình"
+        ]
+      },
+      {
+        "set": "Job",
+        "q": "Bạn làm bác sĩ đúng ___?",
+        "a": "không",
+        "en": "You are a doctor, right?",
+        "ex": "\"…đúng không?\" is a tag question, like \"…, right?\" So \"Bạn làm bác sĩ đúng không?\" = \"You are a doctor, right?\"",
+        "opts": [
+          "không",
+          "rồi",
+          "gì",
+          "ạ"
+        ]
+      },
+      {
+        "set": "Job",
+        "q": "Chị ___ nghề gì?",
+        "a": "làm",
+        "en": "What job do you do?",
+        "ex": "\"làm\" = to do/work. \"Chị làm nghề gì?\" = \"What job do you do?\"",
+        "opts": [
+          "làm",
+          "là",
+          "ở",
+          "tên"
+        ]
+      },
+      {
+        "set": "Job",
+        "q": "Anh làm y tá ở ___.",
+        "a": "bệnh viện",
+        "en": "I work as a nurse at a hospital.",
+        "ex": "\"ở + [place]\" = \"at [place].\" \"bệnh viện\" = hospital, \"y tá\" = nurse.",
+        "opts": [
+          "bệnh viện",
+          "nhà hàng",
+          "trường",
+          "công ty"
+        ]
+      },
+      {
+        "set": "Nationality",
+        "q": "Em là người Việt. ___ chị?",
+        "a": "Còn",
+        "en": "I am Vietnamese. And you?",
+        "ex": "\"Còn + [pronoun]?\" turns the question back: \"Còn chị?\" = \"And you?\"",
+        "opts": [
+          "Còn",
+          "Là",
+          "Và",
+          "Của"
+        ]
+      },
+      {
+        "set": "Nationality",
+        "q": "Anh là ___ Mỹ.",
+        "a": "người",
+        "en": "I am American.",
+        "ex": "Nationality = \"người + [country].\" \"người Mỹ\" = American (literally \"person America\").",
+        "opts": [
+          "người",
+          "nước",
+          "là",
+          "tên"
+        ]
+      },
+      {
+        "set": "Nationality",
+        "q": "Chị là người Anh đúng không? → Đúng ___.",
+        "a": "rồi",
+        "en": "You are English, right? → That is right.",
+        "ex": "\"Đúng rồi\" = \"That is right.\" It is the natural way to confirm \"yes.\"",
+        "opts": [
+          "rồi",
+          "không",
+          "gì",
+          "ạ"
+        ]
+      },
+      {
+        "set": "Nationality",
+        "q": "Bạn là người ___ đúng không?",
+        "a": "Nhật",
+        "en": "You are Japanese, right?",
+        "ex": "\"Nhật\" = Japan/Japanese. \"người Nhật\" = a Japanese person.",
+        "opts": [
+          "Nhật",
+          "Mỹ",
+          "Pháp",
+          "Anh"
+        ]
+      },
+      {
+        "set": "Nationality",
+        "q": "Mình là ___ Pháp. Còn bạn?",
+        "a": "người",
+        "en": "I am French. And you?",
+        "ex": "Again \"người + [country]\": \"người Pháp\" = French. Note: with \"bạn,\" you call yourself \"mình.\"",
+        "opts": [
+          "người",
+          "nước",
+          "là",
+          "tên"
+        ]
+      }
+    ]
+  }
+}
