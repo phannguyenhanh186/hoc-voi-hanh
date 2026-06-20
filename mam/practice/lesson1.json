@@ -426,5 +426,49 @@
         "atext": "Không. Mình làm y tá."
       }
     ]
+  },
+  "translate": {
+    "items": [
+      {
+        "en": "Hi. What's your name?",
+        "vi": "Chào em. Em tên là gì?"
+      },
+      {
+        "en": "Hi. What do you do for a living?",
+        "vi": "Chào chị. Chị làm nghề gì?"
+      },
+      {
+        "en": "Hi. Your name is Nam, right?",
+        "vi": "Chào anh. Anh tên là Nam đúng không?"
+      },
+      {
+        "en": "Hi. Are you English?",
+        "vi": "Chào bạn. Bạn là người nước Anh đúng không?"
+      },
+      {
+        "en": "I am Vietnamese.",
+        "vi": "Anh là người Việt Nam."
+      },
+      {
+        "en": "My name is Mai.",
+        "vi": "Chị tên là Mai."
+      },
+      {
+        "en": "You work as a waiter at an eatery.",
+        "vi": "Bạn làm phục vụ ở quán ăn."
+      },
+      {
+        "en": "I work as a teacher at school.",
+        "vi": "Mình làm giáo viên ở trường."
+      },
+      {
+        "en": "Are you Japanese?",
+        "vi": "Bạn là người nước Nhật đúng không?"
+      },
+      {
+        "en": "I am American.",
+        "vi": "Mình là người nước Mỹ."
+      }
+    ]
   }
 }
