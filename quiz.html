@@ -101,7 +101,7 @@
     const bar = document.getElementById('bar');
     const scoreEl = document.getElementById('score');
     const topbar = document.getElementById('topbar');
-    document.getElementById('back-lesson').href = 'lesson.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level);
+    (function(){ const bl = document.getElementById('back-lesson'); const enc = encodeURIComponent; if (type) { bl.href = 'quiz.html?id=' + enc(lessonId) + '&level=' + enc(level); bl.textContent = '← practice'; } else { bl.href = 'lesson.html?id=' + enc(lessonId) + '&level=' + enc(level); bl.textContent = '← lesson'; } })();
 
     let voice = 'nam'; try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
     const norm = s => (s || '').toLowerCase().normalize('NFC').replace(/[.,!?…"'/]/g, '').replace(/\s+/g, ' ').trim();
@@ -208,7 +208,7 @@
         if (tp === 'matching') { if (pairs.length < 4) return []; const rounds = Math.min(3, Math.max(1, Math.floor(pairs.length / 5))); const pool = shuffle(pairs); const out = []; for (let i = 0; i < rounds; i++) { let set = pool.slice(i * 5, i * 5 + 5); if (set.length < 3) set = sample(pairs, Math.min(5, pairs.length)); out.push({ t: 'match', set: set }); } return out; }
         if (tp === 'gap') { if (custom.gap && custom.gap.items && custom.gap.items.length) return sample(custom.gap.items, Math.min(10, custom.gap.items.length)).map(it => ({ t: 'gapCustom', q: it.q, a: it.a, en: it.en, ex: it.ex, set: it.set, options: (it.opts && it.opts.length ? it.opts : [it.a]) })); const gsrc = (shortS.length >= 3 ? shortS : sentences).filter(s => s.toks.length >= 4); const pool = []; gsrc.forEach(s => { for (let i = 1; i < s.toks.length; i++) pool.push({ toks: s.toks, bi: i, en: s.en, a: s.toks[i] }); }); if (!pool.length) return []; return take(pool, 10).map(it => ({ t: 'gapCustom', q: it.toks.map((t, i) => i === it.bi ? '___' : t).join(' '), a: it.a, en: it.en, ex: 'The missing word is “' + it.a + '”. Full sentence: “' + it.toks.join(' ') + '” — ' + it.en, options: shuffle([it.a].concat(sample(allToks.filter(x => norm(x) !== norm(it.a)), 3))) })); }
         if (tp === 'reorder') return take(shortS, 10).map(s => ({ t: 'reorder', toks: s.toks, en: s.en }));
-        if (tp === 'build') return take(shortS, 10).map(s => ({ t: 'build', toks: s.toks, en: s.en, extra: sample(allToks.filter(x => s.toks.indexOf(x) < 0), 2) }));
+        if (tp === 'build') { const target = (lessonId === 'lesson1') ? 10 : 14; return take(shortS, 10).map(s => { const dp = allToks.filter(x => s.toks.indexOf(x) < 0); const need = Math.max(3, target - s.toks.length); return { t: 'build', toks: s.toks, en: s.en, extra: sample(dp, Math.min(need, dp.length)) }; }); }
         if (tp === 'diacritics') return take(singles, 10).map(p => { const ans = toneOf(p.vi); return { t: 'diacritics', w: p.vi, en: p.en, answer: ans, options: toneOpts(ans) }; });
         if (tp === 'translate') { if (sentences.length < 2) return []; const others = sentences.map(s => s.toks.join(' ')); return take(shortS, 10).map(s => { const ans = s.toks.join(' '); return { t: 'translateMcq', en: s.en, answer: ans, options: shuffle([ans].concat(sample(others.filter(x => x !== ans), 3))) }; }); }
         if (tp === 'dictation') { const pool = shortWords.concat(shortS.map(s => ({ vi: s.toks.join(' '), en: s.en }))); return take(pool, 10).map(p => ({ t: 'dictation', vi: p.vi, en: p.en })); }
