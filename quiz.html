@@ -133,7 +133,7 @@
       ] },
       { key: 'Writing', games: [
         { id: 'build', name: 'Sentence Builder', desc: 'Build a sentence from a word bank.', icon: '🧱', c: P.ink, dark: true },
-        { id: 'diacritics', name: 'Tone Marks', desc: 'Choose the correct tone mark.', icon: '🔤', c: P.mint },
+        { id: 'qa', name: 'Question & Answer', desc: 'Write the question or the answer.', icon: '💬', c: P.mint },
         { id: 'translate', name: 'Translate', desc: 'Choose the correct Vietnamese.', icon: '🔄', c: P.coral },
       ] },
       { key: 'Speaking', games: [
@@ -169,6 +169,10 @@
       function shortPick(n) { return sample(shortS, Math.min(n, shortS.length)); }
       function take(pool, n) { if (!pool.length) return []; const out = []; let bag = []; while (out.length < n) { if (!bag.length) bag = shuffle(pool); out.push(bag.pop()); } return out; }
       const shortWords = pairs.filter(p => (p.vi.split(' ').length <= 3));
+      const turnsRaw = lesson.sentences.filter(s => s.phrases).map(s => ({ toks: s.phrases.filter(p => p.vi).map(p => p.vi), en: s.translation }));
+      let qaPairs = [];
+      for (let i = 0; i < turnsRaw.length - 1; i++) { const cu = turnsRaw[i], nx = turnsRaw[i + 1]; if (cu.toks.length >= 2 && nx.toks.length >= 2 && /\?/.test(cu.en || '')) qaPairs.push({ q: cu, a: nx }); }
+      if (custom.qa && custom.qa.pairs && custom.qa.pairs.length) qaPairs = custom.qa.pairs.map(p => ({ q: { toks: p.q, en: p.qen || '' }, a: { toks: p.a, en: p.aen || '' } }));
 
       if ('speechSynthesis' in window) speechSynthesis.getVoices();
       if (!type) { showLibrary(); return; }
@@ -214,6 +218,7 @@
         if (tp === 'dictation') { const pool = shortWords.concat(shortS.map(s => ({ vi: s.toks.join(' '), en: s.en }))); return take(pool, 10).map(p => ({ t: 'dictation', vi: p.vi, en: p.en })); }
         if (tp === 'tone') return take(singles, 10).map(p => { const ans = toneOf(p.vi); return { t: 'tone', w: p.vi, en: p.en, answer: ans, options: toneOpts(ans) }; });
         if (tp === 'listenpick') { const pool = shortWords.concat(shortS.map(s => ({ vi: s.toks.join(' '), en: s.en }))); const ens = pool.map(p => p.en); return take(pool, 10).map(p => ({ t: 'listenpick', vi: p.vi, en: p.en, options: shuffle([p.en].concat(sample(ens.filter(e => e !== p.en), 3))) })); }
+        if (tp === 'qa') { const qaTokPool = Array.from(new Set([].concat(allToks, [].concat.apply([], qaPairs.map(p => p.q.toks.concat(p.a.toks)))))); const usable = qaPairs.filter(p => p.a.toks.length <= 8 || p.q.toks.length <= 8); if (!usable.length) return []; return take(usable, 10).map(p => { const dirs = []; if (p.a.toks.length <= 8) dirs.push('a'); if (p.q.toks.length <= 8) dirs.push('q'); const dir = dirs[Math.floor(Math.random() * dirs.length)]; const tgt = dir === 'a' ? p.a : p.q; const pr = dir === 'a' ? p.q : p.a; const dp = qaTokPool.filter(x => tgt.toks.indexOf(x) < 0); return { t: 'qa', dir: dir, prompt: pr.toks.join(' '), promptEn: pr.en, target: tgt.toks, bank: shuffle(tgt.toks.concat(sample(dp, Math.min(3, dp.length)))) }; }); }
         if (tp === 'shadow' || tp === 'readaloud') return take(shortS, 10).map(s => ({ t: 'speak', mode: tp, vi: s.toks.join(' '), en: s.en }));
         if (tp === 'answer') return take(shortS, 10).map(s => { const tgt = s.toks.slice().sort((a, b) => b.length - a.length)[0]; return { t: 'speak', mode: 'answer', vi: s.toks.join(' '), en: s.en, target: tgt }; });
         return [];
@@ -233,7 +238,7 @@
         function actions(fb, ok) { const w = document.createElement('div'); w.className = 'q-actions'; if (fb) { const f = document.createElement('span'); f.className = 'feedback ' + (ok ? 'ok' : 'no'); f.textContent = fb; w.appendChild(f); } const b = document.createElement('button'); b.className = 'btn-primary'; b.style.marginLeft = 'auto'; b.textContent = idx + 1 >= total ? 'See results' : 'Next →'; b.onclick = next; w.appendChild(b); return w; }
         function card(kind, prompt, sub) { stage.innerHTML = ''; const c = document.createElement('div'); c.className = 'q-card'; const k = document.createElement('div'); k.className = 'q-kind'; k.textContent = kind; c.appendChild(k); if (prompt) { const p = document.createElement('div'); p.className = 'q-prompt'; p.innerHTML = prompt; c.appendChild(p); } if (sub) { const s = document.createElement('div'); s.className = 'q-sub'; s.innerHTML = sub; c.appendChild(s); } stage.appendChild(c); return c; }
 
-        function render(q) { setBar(); ({ match: rMatch, gap: rGap, gapCustom: rGapCustom, reorder: rReorder, build: rBuild, buildFree: rBuildFree, diacritics: rTonePick, translateMcq: rTransMcq, dictation: rDict, tone: rTonePick, listenpick: rListen, speak: rSpeak })[q.t](q); }
+        function render(q) { setBar(); ({ match: rMatch, gap: rGap, gapCustom: rGapCustom, reorder: rReorder, build: rBuild, buildFree: rBuildFree, qa: rQA, diacritics: rTonePick, translateMcq: rTransMcq, dictation: rDict, tone: rTonePick, listenpick: rListen, speak: rSpeak })[q.t](q); }
 
         function mcqBox(c, opts, answer, onDone, revealText) {
           const box = document.createElement('div'); box.className = 'options two';
@@ -284,6 +289,12 @@
           const ck = document.createElement('button'); ck.className = 'btn-primary'; ck.style.marginTop = '14px'; ck.textContent = 'Check';
           ck.onclick = () => { const hasReq = chosen.some(t => norm(t) === norm(q.req)); const ok = hasReq && chosen.length >= 3; ck.remove(); mark(ok); const msg = ok ? 'Nice!' : ('Your sentence must include “' + q.req + '” and have at least 3 words.'); const ex = document.createElement('div'); ex.className = 'explain'; ex.innerHTML = '<strong>' + msg + '</strong><br>Your sentence: “' + (chosen.join(' ') || '—') + '”<br>Example: “' + q.sample + '”'; c.appendChild(ex); c.appendChild(actions('', ok)); };
           c.appendChild(ck);
+        }
+
+        function rQA(q) {
+          const label = q.dir === 'a' ? 'answer' : 'question';
+          const c = card('Question & Answer', q.prompt, (q.promptEn ? q.promptEn + '<br>' : '') + 'Build the ' + label + ' by tapping the words.');
+          buildTiles(c, q.target, q.bank);
         }
 
         function buildTiles(c, correctToks, tilePool) {
