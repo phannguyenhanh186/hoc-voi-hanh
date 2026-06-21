@@ -98,9 +98,14 @@
           "audio": "audio/words/{voice}/roi.mp3"
         },
         {
-          "vi": "rẽ trái",
-          "en": "turn left",
-          "audio": "audio/words/{voice}/re_trai.mp3"
+          "vi": "rẽ",
+          "en": "turn",
+          "audio": "audio/words/{voice}/re2.mp3"
+        },
+        {
+          "vi": "trái",
+          "en": "left",
+          "audio": "audio/words/{voice}/trai.mp3"
         },
         {
           "vi": "là",
@@ -230,19 +235,9 @@
           "audio": "audio/words/{voice}/sua.mp3"
         },
         {
-          "vi": "nằm",
-          "en": "located",
-          "audio": "audio/words/{voice}/nam2.mp3"
-        },
-        {
           "vi": "ở",
           "en": "at",
           "audio": "audio/words/{voice}/o.mp3"
-        },
-        {
-          "vi": "ngay",
-          "en": "right at",
-          "audio": "audio/words/{voice}/ngay2.mp3"
         },
         {
           "vi": "lối vào",
@@ -263,9 +258,14 @@
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
-          "vi": "rẽ phải",
-          "en": "turn right",
-          "audio": "audio/words/{voice}/re_phai.mp3"
+          "vi": "rẽ",
+          "en": "turn",
+          "audio": "audio/words/{voice}/re2.mp3"
+        },
+        {
+          "vi": "phải",
+          "en": "right",
+          "audio": "audio/words/{voice}/phai.mp3"
         },
         {
           "vi": "rồi",
@@ -273,9 +273,14 @@
           "audio": "audio/words/{voice}/roi.mp3"
         },
         {
-          "vi": "rẽ trái",
-          "en": "turn left",
-          "audio": "audio/words/{voice}/re_trai.mp3"
+          "vi": "rẽ",
+          "en": "turn",
+          "audio": "audio/words/{voice}/re2.mp3"
+        },
+        {
+          "vi": "trái",
+          "en": "left",
+          "audio": "audio/words/{voice}/trai.mp3"
         },
         {
           "vi": "là",
@@ -323,9 +328,14 @@
           "audio": "audio/words/{voice}/size.mp3"
         },
         {
-          "vi": "lớn hơn",
-          "en": "bigger",
-          "audio": "audio/words/{voice}/lon_hon.mp3"
+          "vi": "lớn",
+          "en": "big",
+          "audio": "audio/words/{voice}/lon.mp3"
+        },
+        {
+          "vi": "hơn",
+          "en": "more",
+          "audio": "audio/words/{voice}/hon.mp3"
         },
         {
           "vi": "không",
@@ -594,9 +604,14 @@
           "audio": "audio/words/{voice}/da.mp3"
         },
         {
-          "vi": "đây là",
-          "en": "here is",
-          "audio": "audio/words/{voice}/day_la.mp3"
+          "vi": "đây",
+          "en": "here",
+          "audio": "audio/words/{voice}/day.mp3"
+        },
+        {
+          "vi": "là",
+          "en": "is",
+          "audio": "audio/words/{voice}/la.mp3"
         },
         {
           "vi": "hoá đơn",
