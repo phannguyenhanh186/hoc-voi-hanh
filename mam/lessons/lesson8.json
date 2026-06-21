@@ -103,9 +103,14 @@
           "audio": "audio/words/{voice}/re_trai.mp3"
         },
         {
-          "vi": "là tới",
-          "en": "and you're there",
-          "audio": "audio/words/{voice}/la_toi.mp3"
+          "vi": "là",
+          "en": "then",
+          "audio": "audio/words/{voice}/la.mp3"
+        },
+        {
+          "vi": "tới",
+          "en": "arrive",
+          "audio": "audio/words/{voice}/toi2.mp3"
         }
       ]
     },
@@ -273,9 +278,14 @@
           "audio": "audio/words/{voice}/re_trai.mp3"
         },
         {
-          "vi": "là tới",
-          "en": "and you're there",
-          "audio": "audio/words/{voice}/la_toi.mp3"
+          "vi": "là",
+          "en": "then",
+          "audio": "audio/words/{voice}/la.mp3"
+        },
+        {
+          "vi": "tới",
+          "en": "arrive",
+          "audio": "audio/words/{voice}/toi2.mp3"
         }
       ]
     },
