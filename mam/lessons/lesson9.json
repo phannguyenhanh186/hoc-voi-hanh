@@ -57,9 +57,14 @@
           "audio": "audio/words/{voice}/anh.mp3"
         },
         {
-          "vi": "làm gì",
-          "en": "do what",
-          "audio": "audio/words/{voice}/lam_gi.mp3"
+          "vi": "làm",
+          "en": "do",
+          "audio": "audio/words/{voice}/lam.mp3"
+        },
+        {
+          "vi": "gì",
+          "en": "what",
+          "audio": "audio/words/{voice}/gi.mp3"
         }
       ]
     },
