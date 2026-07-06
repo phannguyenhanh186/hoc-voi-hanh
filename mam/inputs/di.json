@@ -1,0 +1,56 @@
+{
+  "id": "di",
+  "title": "đi",
+  "terms": [
+    "đi"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"đi\" means \"go,\" and when followed directly by a place, it means \"go to [place].\""
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Subject] + đi + [place]"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Bạn đi đâu? → Mình đi Đà Lạt.",
+          "en": "Where are you going? → I'm going to Đà Lạt."
+        },
+        {
+          "type": "example",
+          "vi": "Chị ấy đi đâu? → Chị ấy đi Việt Nam du lịch.",
+          "en": "Where's she traveling to? → She's traveling to Vietnam."
+        },
+        {
+          "type": "example",
+          "vi": "Bạn đi đâu? → Mình đi chợ.",
+          "en": "Where are you going? → I'm going to the market."
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "No preposition (like \"to\") is needed — \"đi\" + place = \"go to [place].\" Compare \"đi + verb\" (đi ăn = go eat, đi chơi = go hang out), where đi pairs with an activity instead of a destination."
+        }
+      ]
+    }
+  ]
+}

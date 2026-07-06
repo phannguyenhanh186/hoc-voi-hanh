@@ -1,0 +1,66 @@
+{
+  "id": "thich_hon",
+  "title": "thích … hơn",
+  "terms": [
+    "thích",
+    "hơn"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"thích … hơn\" (prefer / like … more). Used to compare two options, expressing a preference for one over the other."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Subject] + thích + [option A] + hơn + [option B]  —  [Subject] prefers A over B"
+        },
+        {
+          "type": "text",
+          "text": "[Subject] + thích + [option A] + hơn  —  [Subject] prefers A (more)"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Chị thích nấu ăn hơn đi ăn ở quán.",
+          "en": "I prefer cooking over eating out."
+        },
+        {
+          "type": "example",
+          "vi": "Mình thích cà phê đen hơn cà phê sữa.",
+          "en": "I prefer black coffee over milk coffee."
+        },
+        {
+          "type": "example",
+          "vi": "Bạn thích xem phim hơn hay đọc sách hơn?",
+          "en": "Do you prefer watching movies or reading books?"
+        },
+        {
+          "type": "example",
+          "vi": "Mình thích trà hơn.",
+          "en": "I prefer tea (more)."
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"hơn\" alone means \"more / -er\" (comparative), so \"thích … hơn\" literally means \"like … more.\""
+        }
+      ]
+    }
+  ]
+}

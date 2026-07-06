@@ -1,0 +1,113 @@
+{
+  "_guide": {
+    "doc": "Master index cap Unit cho 1 level. App bo qua key bat dau bang '_'.",
+    "item.type": "'lesson' (A/B/C/D, co file trong items/<id>.json) | 'practical' (file trong practicals/<id>.json) | 'revise' (file trong revise/<id>.json)",
+    "item.status": "'ready' = da co file noi dung | 'todo' = chua soan, trang se hien 'Coming soon'"
+  },
+  "level": "mam",
+  "units": [
+    {
+      "num": 1,
+      "title": "Giới thiệu bản thân",
+      "titleEn": "Introducing yourself",
+      "items": [
+        { "id": "u1a", "letter": "A", "title": "Chào bạn", "type": "lesson", "status": "ready" },
+        { "id": "u1b", "letter": "B", "title": "Bạn là người Việt đúng không?", "type": "lesson", "status": "todo" },
+        { "id": "u1c", "letter": "C", "title": "Chị ấy làm giáo viên.", "type": "lesson", "status": "todo" },
+        { "id": "u1d", "letter": "D", "title": "Mình hai lăm tuổi.", "type": "lesson", "status": "todo" },
+        { "id": "u1-practical", "title": "Trên máy bay", "type": "practical", "status": "todo" },
+        { "id": "u1-revise", "title": "Revise & Check", "type": "revise", "status": "todo" }
+      ]
+    },
+    {
+      "num": 2,
+      "title": "Hoạt động trong ngày",
+      "titleEn": "Daily activities",
+      "items": [
+        { "id": "u2a", "letter": "A", "title": "Sáng bạn ngủ dậy lúc mấy giờ?", "type": "lesson", "status": "todo" },
+        { "id": "u2b", "letter": "B", "title": "Bây giờ mẹ bạn đang làm gì?", "type": "lesson", "status": "todo" },
+        { "id": "u2c", "letter": "C", "title": "Hôm nay là thứ mấy?", "type": "lesson", "status": "todo" },
+        { "id": "u2d", "letter": "D", "title": "Tối hôm qua bạn ăn gì?", "type": "lesson", "status": "todo" },
+        { "id": "u2-practical", "title": "Qua điện thoại", "type": "practical", "status": "todo" },
+        { "id": "u2-revise", "title": "Revise & Check", "type": "revise", "status": "todo" }
+      ]
+    },
+    {
+      "num": 3,
+      "title": "Hỏi/Nói giá tiền",
+      "titleEn": "Asking about price",
+      "items": [
+        { "id": "u3a", "letter": "A", "title": "Cho em một cà phê đen", "type": "lesson", "status": "todo" },
+        { "id": "u3b", "letter": "B", "title": "Cái điện thoại này bao nhiêu tiền?", "type": "lesson", "status": "todo" },
+        { "id": "u3c", "letter": "C", "title": "Cái áo này mắc quá!", "type": "lesson", "status": "todo" },
+        { "id": "u3d", "letter": "D", "title": "Của anh hai trăm ngàn", "type": "lesson", "status": "todo" },
+        { "id": "u3-practical", "title": "Quán cà phê", "type": "practical", "status": "todo" },
+        { "id": "u3-revise", "title": "Revise & Check", "type": "revise", "status": "todo" }
+      ]
+    },
+    {
+      "num": 4,
+      "title": "Tần suất các hoạt động",
+      "titleEn": "Frequency of activities",
+      "items": [
+        { "id": "u4a", "letter": "A", "title": "Bạn ăn cơm chưa?", "type": "lesson", "status": "todo" },
+        { "id": "u4b", "letter": "B", "title": "Cuối tuần bạn thường làm gì?", "type": "lesson", "status": "todo" },
+        { "id": "u4c", "letter": "C", "title": "Bạn tập thể dục bao nhiêu lần một tuần?", "type": "lesson", "status": "todo" },
+        { "id": "u4d", "letter": "D", "title": "Mẹ bạn thích làm gì?", "type": "lesson", "status": "todo" },
+        { "id": "u4-practical", "title": "Ở nhà thuốc", "type": "practical", "status": "todo" }
+      ]
+    },
+    {
+      "num": 5,
+      "title": "Nơi chốn",
+      "titleEn": "Places",
+      "items": [
+        { "id": "u5a", "letter": "A", "title": "Quê bạn ở đâu?", "type": "lesson", "status": "todo" },
+        { "id": "u5b", "letter": "B", "title": "Vũng Tàu có gần Sài Gòn không?", "type": "lesson", "status": "todo" },
+        { "id": "u5c", "letter": "C", "title": "Cho em đi tới Bến Thành", "type": "lesson", "status": "todo" },
+        { "id": "u5d", "letter": "D", "title": "Đi từ Sài Gòn tới Đà Lạt mất bao lâu?", "type": "lesson", "status": "todo" },
+        { "id": "u5-practical", "title": "Trên xe taxi", "type": "practical", "status": "todo" },
+        { "id": "u5-revise", "title": "Revise & Check", "type": "revise", "status": "todo" }
+      ]
+    },
+    {
+      "num": 6,
+      "title": "Mua sắm, so sánh",
+      "titleEn": "Shopping & comparison",
+      "items": [
+        { "id": "u6a", "letter": "A", "title": "Ở đây có bán kệ sách không?", "type": "lesson", "status": "todo" },
+        { "id": "u6b", "letter": "B", "title": "Quầy trái cây ở đâu?", "type": "lesson", "status": "todo" },
+        { "id": "u6c", "letter": "C", "title": "Cái quần này mắc hơn.", "type": "lesson", "status": "todo" },
+        { "id": "u6d", "letter": "D", "title": "Anh Huy lớn tuổi nhất", "type": "lesson", "status": "todo" },
+        { "id": "u6-practical", "title": "Trong siêu thị", "type": "practical", "status": "todo" }
+      ]
+    },
+    {
+      "num": 7,
+      "title": "Kế hoạch, số lượng",
+      "titleEn": "Plans & quantities",
+      "items": [
+        { "id": "u7a", "letter": "A", "title": "Em định du lịch cuối tuần này", "type": "lesson", "status": "todo" },
+        { "id": "u7b", "letter": "B", "title": "Cho em đặt bàn bốn người", "type": "lesson", "status": "todo" },
+        { "id": "u7c", "letter": "C", "title": "Cho em mì ít cay", "type": "lesson", "status": "todo" },
+        { "id": "u7d", "letter": "D", "title": "Bạn có biết chú Hùng không?", "type": "lesson", "status": "todo" },
+        { "id": "u7-practical", "title": "Quán ăn", "type": "practical", "status": "todo" }
+      ]
+    },
+    {
+      "num": 8,
+      "title": "Thời tiết",
+      "titleEn": "Weather",
+      "items": [
+        { "id": "u8a", "letter": "A", "title": "Hôm nay trời rất nóng!", "type": "lesson", "status": "todo" },
+        { "id": "u8b", "letter": "B", "title": "Việt Nam có đang mưa không?", "type": "lesson", "status": "todo" },
+        { "id": "u8c", "letter": "C", "title": "Mình rất thích mùa xuân ở miền Bắc", "type": "lesson", "status": "todo" },
+        { "id": "u8d", "letter": "D", "title": "Khi nào bạn nghỉ Tết?", "type": "lesson", "status": "todo" },
+        { "id": "u8-practical", "title": "Nghỉ Tết ở nhà", "type": "practical", "status": "todo" }
+      ]
+    }
+  ],
+  "selfStudy": [
+    { "id": "tones", "title": "6 thanh điệu", "titleEn": "The 6 tones", "type": "self-study", "status": "ready" }
+  ]
+}
