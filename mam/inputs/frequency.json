@@ -1,0 +1,68 @@
+{
+  "id": "frequency",
+  "title": "tần suất (frequency)",
+  "terms": [
+    "lần",
+    "một"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[number] + lần + một + [ngày/tuần/tháng/năm]"
+        },
+        {
+          "type": "text",
+          "text": "Nghĩa: \"[number] times per [day/week/month/year].\""
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Em uống cà phê một lần một ngày.",
+          "en": "I drink coffee once a day."
+        },
+        {
+          "type": "example",
+          "vi": "Anh đi ăn với bạn hai lần một tuần.",
+          "en": "I eat out with friends twice a week."
+        },
+        {
+          "type": "example",
+          "vi": "Chị về quê một tới hai lần một tháng.",
+          "en": "I go back home one to two times a month."
+        },
+        {
+          "type": "example",
+          "vi": "Anh ấy đi du lịch ba lần một năm.",
+          "en": "He travels three times a year."
+        }
+      ]
+    },
+    {
+      "label": "Đảo ngược — [time period] + một lần (once every…)",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "ba tháng một lần",
+          "en": "once every three months"
+        },
+        {
+          "type": "example",
+          "vi": "một tuần một lần",
+          "en": "once a week (= once every week)"
+        },
+        {
+          "type": "example",
+          "vi": "Anh về quê ba tháng một lần.",
+          "en": "I go home once every three months."
+        }
+      ]
+    }
+  ]
+}

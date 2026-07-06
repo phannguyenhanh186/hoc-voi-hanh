@@ -1,0 +1,38 @@
+{
+  "id": "age",
+  "title": "Tuổi",
+  "terms": [
+    "mấy",
+    "tuổi"
+  ],
+  "sections": [
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Question: [Pronoun] mấy tuổi?  —  How old are you / is [pronoun]?"
+        },
+        {
+          "type": "text",
+          "text": "Answer: [Pronoun] [x] tuổi.  —  [Pronoun] is [x] years old."
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Em mấy tuổi? → Em 25 tuổi.",
+          "en": "How old are you (em)? → I'm 25 years old."
+        },
+        {
+          "type": "example",
+          "vi": "Anh ấy mấy tuổi? → Anh ấy 30 tuổi.",
+          "en": "How old is he? → He is 30 years old."
+        }
+      ]
+    }
+  ]
+}
