@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" href="how.html">← choose level</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head"><h1 id="title">Bài học</h1></div>
+    <div class="cards" id="cards"><p class="note">Loading…</p></div>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script>
+    const LEVELS = { mam: 'mầm', choi: 'chồi', la: 'lá' };
+    const activeLevel = new URLSearchParams(location.search).get('level') || 'mam';
+    document.getElementById('title').textContent = (LEVELS[activeLevel] || activeLevel);
+
+    (async function () {
+      const cards = document.getElementById('cards');
+      try {
+        let lessons = await (await fetch('manifest.json', { cache: 'no-cache' })).json();
+        if (!Array.isArray(lessons)) lessons = [];
+        const shown = lessons.filter(l => l.level === activeLevel);
+        if (!shown.length) { cards.innerHTML = '<p class="note">No lessons yet at this level.</p>'; return; }
+        cards.innerHTML = '';
+        if (activeLevel === 'mam') {
+          let v = 'nam'; try { v = localStorage.getItem('voice') || 'nam'; } catch (e) {}
+          const accentVi = v === 'bac' ? 'tiếng miền bắc' : 'tiếng miền nam';
+          const a = document.createElement('a'); a.className = 'card'; a.href = 'tones.html';
+          const head = document.createElement('div'); head.className = 'card-head';
+          const h3 = document.createElement('h3'); h3.innerHTML = 'Bài 0: Tone map <span class="title-en">(' + accentVi + ')</span>'; head.appendChild(h3);
+          const b = document.createElement('span'); b.className = 'badge'; b.textContent = 'tra cứu'; head.appendChild(b);
+          a.appendChild(head);
+          const p = document.createElement('p'); p.textContent = 'Bảng thanh điệu tiếng Việt — nghe và so sánh 6 thanh.'; a.appendChild(p);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Xem →'; a.appendChild(go);
+          cards.appendChild(a);
+        }
+        shown.forEach(l => {
+          const a = document.createElement('a'); a.className = 'card';
+          a.href = 'lesson.html?id=' + encodeURIComponent(l.id) + '&level=' + encodeURIComponent(l.level);
+          const head = document.createElement('div'); head.className = 'card-head';
+          const h3 = document.createElement('h3'); h3.textContent = 'Bài ' + (l.num || '') + ': ' + (l.title || l.id);
+          if (l.titleEn) { const en = document.createElement('span'); en.className = 'title-en'; en.textContent = ' (' + l.titleEn + ')'; h3.appendChild(en); }
+          head.appendChild(h3);
+          if (l.level && LEVELS[l.level]) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = LEVELS[l.level]; head.appendChild(b); }
+          a.appendChild(head);
+          const p = document.createElement('p'); p.textContent = l.description || ''; a.appendChild(p);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = 'Vào học →'; a.appendChild(go);
+          cards.appendChild(a);
+        });
+      } catch (e) { cards.innerHTML = '<p class="note">Could not load the lesson list.</p>'; }
+    })();
+  </script>
+</body>
+</html>
