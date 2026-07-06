@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" href="how.html">← choose level</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head"><h1 id="title">Bài học</h1></div>
+    <div class="cards" id="cards"><p class="note">Loading…</p></div>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script>
+    const LEVELS = { mam: 'mầm', choi: 'chồi', la: 'lá' };
+    const activeLevel = new URLSearchParams(location.search).get('level') || 'mam';
+    document.getElementById('title').textContent = (LEVELS[activeLevel] || activeLevel);
+
+    function unitStatus(u) {
+      const items = u.items || [];
+      if (items.some(it => it.status !== 'todo')) return 'ready';
+      return 'todo';
+    }
+    function unitSummary(u) {
+      const items = u.items || [];
+      const readyCount = items.filter(it => it.status !== 'todo').length;
+      return readyCount + '/' + items.length + ' bài đã có';
+    }
+
+    (async function () {
+      const cards = document.getElementById('cards');
+      try {
+        const data = await (await fetch(activeLevel + '/units.json', { cache: 'no-cache' })).json();
+        cards.innerHTML = '';
+
+        (data.selfStudy || []).forEach(s => {
+          const a = document.createElement('a');
+          a.className = 'card' + (s.status === 'todo' ? ' card-soon' : '');
+          a.href = s.status === 'todo' ? '#' : (s.id === 'tones' ? 'tones.html' : ('lesson.html?id=' + encodeURIComponent(s.id) + '&level=' + encodeURIComponent(activeLevel)));
+          const head = document.createElement('div'); head.className = 'card-head';
+          const h3 = document.createElement('h3'); h3.innerHTML = s.title + (s.titleEn ? ' <span class="title-en">(' + s.titleEn + ')</span>' : ''); head.appendChild(h3);
+          const b = document.createElement('span'); b.className = 'badge'; b.textContent = s.status === 'todo' ? 'sắp ra mắt' : 'tự học'; head.appendChild(b);
+          a.appendChild(head);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = s.status === 'todo' ? '' : 'Xem →'; a.appendChild(go);
+          cards.appendChild(a);
+        });
+
+        const units = data.units || [];
+        if (!units.length) { cards.innerHTML += '<p class="note">No units yet at this level.</p>'; return; }
+
+        const grid = document.createElement('div'); grid.className = 'cards';
+        units.forEach(u => {
+          const isTodo = unitStatus(u) === 'todo';
+          const a = document.createElement('a');
+          a.className = 'card' + (isTodo ? ' card-soon' : '');
+          a.href = isTodo ? '#' : ('unit.html?level=' + encodeURIComponent(activeLevel) + '&num=' + u.num);
+          const head = document.createElement('div'); head.className = 'card-head';
+          const h3 = document.createElement('h3'); h3.innerHTML = 'Unit ' + u.num + ': ' + u.title + (u.titleEn ? ' <span class="title-en">(' + u.titleEn + ')</span>' : ''); head.appendChild(h3);
+          const b = document.createElement('span'); b.className = 'badge'; b.textContent = isTodo ? 'sắp ra mắt' : 'unit'; head.appendChild(b);
+          a.appendChild(head);
+          const p = document.createElement('p'); p.textContent = unitSummary(u); a.appendChild(p);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = isTodo ? '' : 'Vào Unit →'; a.appendChild(go);
+          grid.appendChild(a);
+        });
+        cards.appendChild(grid);
+      } catch (e) { cards.innerHTML = '<p class="note">Could not load the lesson list.</p>'; }
+    })();
+  </script>
+</body>
+</html>
