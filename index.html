@@ -16,8 +16,10 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hocvoihanh</a>
         <div class="nav-links">
+          <span class="nav-divider"></span>
           <a href="how.html">How this works?</a>
           <a href="about.html">Contact</a>
+          <span class="nav-divider"></span>
         </div>
         <div class="nav-right">
           <a class="nav-login" href="#">Log in</a>
@@ -32,11 +34,11 @@
       <h1>Learn Vietnamese beyond textbooks</h1>
       <p>Build real-world Vietnamese with lessons, reading materials, native audio, and practical exercises.</p>
       <div class="hero-cta">
-        <a class="cta-btn" href="lessons.html?level=mam">Get started →</a>
+        <a class="cta-btn" href="screening.html">Get started →</a>
       </div>
     </section>
 
-    <section class="frame-section">
+    <section class="frame-section frame-blue">
       <div class="frame-heading">
         <h2>Explore now</h2>
       </div>
@@ -70,23 +72,70 @@
         <h2>Your path to real conversations</h2>
         <p>Progress through lessons, practice regularly, and develop the skills you need for everyday communication.</p>
       </div>
-      <div class="path-list">
-        <a class="path-card is-link" href="lessons.html?level=mam">
-          <h3>Mầm 🌱</h3>
-          <p>You are beginning to understand basic Vietnamese sounds and words.</p>
-        </a>
-        <a class="path-card is-link" href="lessons.html?level=choi">
-          <h3>Chồi 🌿</h3>
-          <p>You can communicate about familiar topics with growing confidence.</p>
-        </a>
-        <a class="path-card is-link" href="lessons.html?level=la">
-          <h3>Lá 🌿</h3>
-          <p>You understand Vietnamese beyond the textbook and participate in real conversations.</p>
-        </a>
+      <div class="hero-cta" style="margin-bottom:36px;">
+        <a class="cta-btn" href="screening.html">Take entrance test →</a>
+      </div>
+      <div class="path-wrap">
+        <svg class="path-svg" id="path-svg"></svg>
+        <div class="path-list" id="path-list">
+          <a class="path-card is-link strip-blue" href="lessons.html?level=mam">
+            <h3>Mầm 🌱</h3>
+            <p>You are beginning to understand basic Vietnamese sounds and words.</p>
+          </a>
+          <a class="path-card is-link strip-yellow strip-right" href="lessons.html?level=choi">
+            <h3>Chồi 🌿</h3>
+            <p>You can communicate about familiar topics with growing confidence.</p>
+          </a>
+          <a class="path-card is-link strip-green" href="lessons.html?level=la">
+            <h3>Lá 🍃</h3>
+            <p>You understand Vietnamese beyond the textbook and participate in real conversations.</p>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer"><div class="wrap-wide">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script>
+    // Vẽ đường nối bậc thang giữa 3 thẻ Mầm/Chồi/Lá bằng SVG, tự tính lại theo layout thực tế
+    (function () {
+      const wrap = document.querySelector('.path-wrap');
+      const svg = document.getElementById('path-svg');
+      const list = document.getElementById('path-list');
+      if (!wrap || !svg || !list) return;
+
+      function draw() {
+        const cards = Array.from(list.children);
+        if (window.innerWidth < 640 || cards.length < 2) { svg.innerHTML = ''; return; }
+        const wrapRect = wrap.getBoundingClientRect();
+        svg.innerHTML = '';
+        for (let i = 0; i < cards.length - 1; i++) {
+          const a = cards[i].getBoundingClientRect();
+          const b = cards[i + 1].getBoundingClientRect();
+          const goingRight = (b.left + b.width / 2) > (a.left + a.width / 2);
+          const x1 = (goingRight ? a.right : a.left) - wrapRect.left;
+          const y1 = a.bottom - wrapRect.top;
+          const x2 = (goingRight ? b.left : b.right) - wrapRect.left;
+          const y2 = b.top - wrapRect.top;
+          const midY = (y1 + y2) / 2;
+          const r = Math.min(16, Math.abs(midY - y1), Math.abs(y2 - midY), Math.abs(x2 - x1) / 2 || 16);
+          const dir = x2 > x1 ? 1 : -1;
+          const d = `M ${x1} ${y1} L ${x1} ${midY - r} Q ${x1} ${midY} ${x1 + dir * r} ${midY} L ${x2 - dir * r} ${midY} Q ${x2} ${midY} ${x2} ${midY + r} L ${x2} ${y2}`;
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', d);
+          path.setAttribute('fill', 'none');
+          path.setAttribute('stroke', '#1B1B28');
+          path.setAttribute('stroke-width', '2.5');
+          path.setAttribute('stroke-linecap', 'round');
+          svg.appendChild(path);
+        }
+      }
+      draw();
+      window.addEventListener('resize', draw);
+      window.addEventListener('load', draw);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+    })();
+  </script>
 </body>
 </html>
