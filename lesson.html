@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="lessons.html">← quay lại</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <h1 id="title">Đang tải…</h1>
+    </div>
+
+    <div class="toolbar">
+      <div class="tabs" id="tabs">
+        <button class="tab-btn active" data-tab="lesson">Bài học</button>
+        <button class="tab-btn" data-tab="homework">BTVN</button>
+      </div>
+      <div class="toolbar-right" id="inputs-nav"></div>
+    </div>
+
+    <section class="tab-panel" id="panel-lesson"><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-homework" hidden><p class="note">Đang tải…</p></section>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || '';
+    let level = params.get('level') || 'mam';
+
+    const $title = document.getElementById('title');
+    const $backLink = document.getElementById('back-link');
+    const $panelLesson = document.getElementById('panel-lesson');
+    const $panelHomework = document.getElementById('panel-homework');
+    const $tabs = document.getElementById('tabs');
+
+    let voice = 'nam';
+    try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
+    function resolveAudio(path) { return (path || '').replace('{voice}', voice); }
+
+    let player = new Audio();
+    player.preload = 'auto';
+    let currentEl = null;
+    player.addEventListener('ended', function () { if (currentEl) currentEl.classList.remove('playing'); });
+    function play(src, elm) {
+      if (!src) return;
+      if (currentEl) currentEl.classList.remove('playing');
+      currentEl = elm || null;
+      if (currentEl) currentEl.classList.add('playing');
+      try { player.pause(); } catch (e) {}
+      player.src = src;
+      try { player.currentTime = 0; } catch (e) {}
+      const pr = player.play();
+      if (pr && pr.catch) pr.catch(function (e) {
+        if (currentEl) currentEl.classList.remove('playing');
+        console.warn('Không phát được audio:', src, e && e.message);
+      });
+    }
+
+    function el(tag, cls, txt) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (txt != null) n.textContent = txt;
+      return n;
+    }
+    function playBtn(src) {
+      const b = el('button', 'play-sentence');
+      b.setAttribute('aria-label', 'Phát audio');
+      b.innerHTML = '▶';
+      if (src) { b.addEventListener('click', function () { play(resolveAudio(src), b); }); }
+      else { b.disabled = true; }
+      return b;
+    }
+    function norm(s) {
+      return (s || '')
+        .toString().trim().toLowerCase()
+        .normalize('NFC')
+        .replace(/[.,!?;:"'“”]/g, '')
+        .replace(/\s+/g, ' ');
+    }
+
+    // ---------- Tabs ----------
+    $tabs.addEventListener('click', function (e) {
+      const btn = e.target.closest('.tab-btn');
+      if (!btn) return;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tab = btn.dataset.tab;
+      $panelLesson.hidden = tab !== 'lesson';
+      $panelHomework.hidden = tab !== 'homework';
+    });
+
+    // ---------- Lesson tab renderers ----------
+    function renderFocus(item) {
+      const wrap = el('div', 'focus-row');
+      (item.focus && item.focus.grammar || []).forEach(function (g) {
+        const a = document.createElement('a');
+        a.className = 'chip chip-link';
+        a.href = 'input.html?id=' + encodeURIComponent(g.id) + '&level=' + encodeURIComponent(level);
+        a.textContent = g.title;
+        wrap.appendChild(a);
+      });
+      if (item.focus && item.focus.vocabRef) {
+        const a = document.createElement('a');
+        a.className = 'chip chip-link chip-vocab';
+        a.href = 'vocab.html?id=' + encodeURIComponent(item.focus.vocabRef) + '&level=' + encodeURIComponent(level);
+        a.textContent = 'Từ vựng';
+        wrap.appendChild(a);
+      }
+      if (item.focus && item.focus.pronunciationRef) {
+        const a = document.createElement('a');
+        a.className = 'chip chip-link';
+        a.href = 'input.html?id=' + encodeURIComponent(item.focus.pronunciationRef) + '&level=' + encodeURIComponent(level);
+        a.textContent = 'Phát âm';
+        wrap.appendChild(a);
+      } else if (item.focus && item.focus.pronunciationNote) {
+        const note = el('span', 'chip chip-note', item.focus.pronunciationNote);
+        wrap.appendChild(note);
+      }
+      return wrap;
+    }
+
+    function renderDialogues(listening) {
+      const sec = el('div', 'exercise');
+      sec.appendChild(el('h3', 'ex-title', listening.title || 'Nghe và lặp lại'));
+      if (listening.instruction) sec.appendChild(el('p', 'ex-instruction', listening.instruction));
+      (listening.dialogues || []).forEach(function (d) {
+        const box = el('div', 'dialogue');
+        const head = el('div', 'dialogue-head');
+        head.appendChild(playBtn(d.audio));
+        head.appendChild(el('span', 'dialogue-label', 'Nghe cả đoạn'));
+        box.appendChild(head);
+        (d.turns || []).forEach(function (t) {
+          const row = el('div', 'turn');
+          row.appendChild(el('span', 'turn-speaker', t.speaker + ':'));
+          row.appendChild(el('span', 'turn-text', t.text));
+          box.appendChild(row);
+        });
+        sec.appendChild(box);
+      });
+      return sec;
+    }
+
+    function renderVocabListening(vl) {
+      const sec = el('div', 'exercise');
+      sec.appendChild(el('h3', 'ex-title', vl.title || 'Nghe và lặp lại'));
+      if (vl.instruction) sec.appendChild(el('p', 'ex-instruction', vl.instruction));
+      const grid = el('div', 'num-grid');
+      (vl.items || []).forEach(function (it) {
+        const cell = el('div', 'num-cell');
+        cell.appendChild(playBtn(it.audio));
+        cell.appendChild(el('span', 'num-value', String(it.num)));
+        grid.appendChild(cell);
+      });
+      sec.appendChild(grid);
+      return sec;
+    }
+
+    function renderLesson(item) {
+      $panelLesson.innerHTML = '';
+      $panelLesson.appendChild(renderFocus(item));
+      const lesson = item.lesson || {};
+      if (lesson.listening) $panelLesson.appendChild(renderDialogues(lesson.listening));
+      if (lesson.vocabListening) $panelLesson.appendChild(renderVocabListening(lesson.vocabListening));
+      if (!lesson.listening && !lesson.vocabListening) {
+        $panelLesson.appendChild(el('p', 'note', 'Nội dung bài học đang được soạn.'));
+      }
+    }
+
+    // ---------- Homework tab: exercise renderers ----------
+    function checkRow(ok) { return el('span', 'result ' + (ok ? 'result-ok' : 'result-bad'), ok ? '✓' : '✗'); }
+
+    function renderMatching(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+
+      const groups = ex.groups || [{ label: null, prompts: ex.prompts || [] }];
+      const selects = [];
+      groups.forEach(function (g) {
+        if (g.label) box.appendChild(el('h4', 'group-label', g.label));
+        (g.prompts || []).forEach(function (p) {
+          const row = el('div', 'match-row');
+          row.appendChild(el('span', 'match-prompt', p.text));
+          const select = document.createElement('select');
+          select.className = 'answer-select';
+          const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+          ex.answerBank.forEach(function (a) {
+            const opt = el('option', null, a.text);
+            opt.value = a.id;
+            select.appendChild(opt);
+          });
+          select.dataset.answer = p.answer;
+          row.appendChild(select);
+          const resultSlot = el('span', 'result-slot');
+          row.appendChild(resultSlot);
+          row._resultSlot = resultSlot;
+          row._select = select;
+          selects.push(row);
+          box.appendChild(row);
+        });
+      });
+
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      checkBtn.addEventListener('click', function () {
+        selects.forEach(function (row) {
+          const ok = row._select.value === row._select.dataset.answer;
+          row._resultSlot.innerHTML = '';
+          row._resultSlot.appendChild(checkRow(ok));
+          if (!ok) {
+            const correctText = ex.answerBank.find(a => a.id === row._select.dataset.answer);
+            row._resultSlot.appendChild(el('span', 'correct-hint', correctText ? ' (' + correctText.text + ')' : ''));
+          }
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function renderRimeTableFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+
+      const allInputs = [];
+      (ex.groups || []).forEach(function (g) {
+        const row = el('div', 'rime-row');
+        (g.given || []).forEach(function (w) { row.appendChild(el('span', 'chip chip-given', w)); });
+        const groupInputs = [];
+        for (let i = 0; i < g.blanks; i++) {
+          const input = document.createElement('input');
+          input.type = 'text'; input.className = 'blank-input';
+          input.dataset.answer = g.answers[i];
+          row.appendChild(input);
+          groupInputs.push(input);
+        }
+        allInputs.push.apply(allInputs, groupInputs);
+        box.appendChild(row);
+      });
+
+      if (ex.wordBank) {
+        const bank = el('div', 'word-bank');
+        bank.appendChild(el('span', 'word-bank-label', 'Ngân hàng từ: '));
+        ex.wordBank.forEach(function (w) { bank.appendChild(el('span', 'chip chip-bank', w)); });
+        box.appendChild(bank);
+      }
+
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      checkBtn.addEventListener('click', function () {
+        allInputs.forEach(function (input) {
+          const ok = norm(input.value) === norm(input.dataset.answer);
+          input.classList.remove('input-ok', 'input-bad');
+          input.classList.add(ok ? 'input-ok' : 'input-bad');
+          if (!ok) input.title = 'Đáp án: ' + input.dataset.answer;
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function renderSort(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+
+      let selectedChip = null;
+      const assignment = {};
+
+      const bank = el('div', 'word-bank');
+      const chipEls = {};
+      ex.wordBank.forEach(function (w) {
+        const chip = el('span', 'chip chip-pickable', w);
+        chip.addEventListener('click', function () {
+          if (chip.classList.contains('chip-used')) return;
+          if (selectedChip) selectedChip.classList.remove('chip-selected');
+          selectedChip = chip;
+          chip.classList.add('chip-selected');
+        });
+        chipEls[w] = chip;
+        bank.appendChild(chip);
+      });
+      box.appendChild(bank);
+
+      const catsWrap = el('div', 'sort-cats');
+      (ex.categories || []).forEach(function (cat) {
+        const catBox = el('div', 'sort-cat');
+        catBox.appendChild(el('h4', 'group-label', cat.label));
+        if (cat.example) catBox.appendChild(el('span', 'chip chip-given', cat.example));
+        const dropZone = el('div', 'sort-dropzone');
+        catBox.appendChild(dropZone);
+        catBox.addEventListener('click', function () {
+          if (!selectedChip) return;
+          const word = selectedChip.textContent;
+          selectedChip.classList.add('chip-used');
+          selectedChip.classList.remove('chip-selected');
+          assignment[word] = cat.id;
+          dropZone.appendChild(el('span', 'chip chip-placed', word));
+          selectedChip = null;
+        });
+        catsWrap.appendChild(catBox);
+      });
+      box.appendChild(catsWrap);
+
+      const resetBtn = el('button', 'btn-check btn-secondary', 'Làm lại');
+      resetBtn.addEventListener('click', function () {
+        Object.keys(assignment).forEach(function (k) { delete assignment[k]; });
+        catsWrap.querySelectorAll('.sort-dropzone').forEach(function (z) { z.innerHTML = ''; });
+        Object.values(chipEls).forEach(function (c) { c.classList.remove('chip-used', 'chip-selected'); });
+        selectedChip = null;
+      });
+
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      const resultLine = el('p', 'ex-instruction');
+      checkBtn.addEventListener('click', function () {
+        let correct = 0, total = 0;
+        (ex.categories || []).forEach(function (cat) {
+          (cat.answers || []).forEach(function (w) { total++; if (assignment[w] === cat.id) correct++; });
+        });
+        resultLine.textContent = 'Đúng ' + correct + '/' + total + '.';
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resetBtn);
+      box.appendChild(resultLine);
+      return box;
+    }
+
+    function renderScramble(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+
+      (ex.items || []).forEach(function (item) {
+        const itemBox = el('div', 'scramble-item');
+        itemBox.appendChild(el('p', 'match-prompt', item.prompt));
+        const built = el('div', 'scramble-built');
+        const bank = el('div', 'scramble-bank');
+        let order = [];
+
+        function refreshBuilt() {
+          built.innerHTML = '';
+          order.forEach(function (idx) {
+            const chip = el('span', 'chip chip-placed', item.tokens[idx]);
+            chip.addEventListener('click', function () {
+              order = order.filter(function (i) { return i !== idx; });
+              refreshBuilt(); refreshBank();
+            });
+            built.appendChild(chip);
+          });
+        }
+        function refreshBank() {
+          bank.innerHTML = '';
+          item.tokens.forEach(function (tok, idx) {
+            if (order.indexOf(idx) !== -1) return;
+            const chip = el('span', 'chip chip-pickable', tok);
+            chip.addEventListener('click', function () { order.push(idx); refreshBuilt(); refreshBank(); });
+            bank.appendChild(chip);
+          });
+        }
+        refreshBuilt(); refreshBank();
+        itemBox.appendChild(built);
+        itemBox.appendChild(bank);
+
+        const resultSlot = el('span', 'result-slot');
+        const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+        checkBtn.addEventListener('click', function () {
+          const builtStr = order.map(function (i) { return item.tokens[i]; }).join(' ');
+          const ok = norm(builtStr) === norm(item.answer);
+          resultSlot.innerHTML = '';
+          resultSlot.appendChild(checkRow(ok));
+          if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+        });
+        itemBox.appendChild(checkBtn);
+        itemBox.appendChild(resultSlot);
+        box.appendChild(itemBox);
+      });
+      return box;
+    }
+
+    function renderListenOrderFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+
+      const rows = [];
+      (ex.items || []).forEach(function (item) {
+        const row = el('div', 'listen-row');
+        row.appendChild(playBtn(item.audio));
+        row.appendChild(el('span', 'match-prompt', item.place));
+        const parts = (item.template || '').split('___');
+        row.appendChild(el('span', null, parts[0]));
+        const numInput = document.createElement('input');
+        numInput.type = 'text'; numInput.className = 'blank-input blank-input-sm';
+        numInput.dataset.answer = item.answer;
+        row.appendChild(numInput);
+        row.appendChild(el('span', null, parts[1] || ''));
+
+        row.appendChild(el('span', 'order-label', ' — thứ tự nghe:'));
+        const orderInput = document.createElement('input');
+        orderInput.type = 'text'; orderInput.className = 'blank-input blank-input-sm';
+        orderInput.dataset.answer = String(item.order);
+        row.appendChild(orderInput);
+
+        const resultSlot = el('span', 'result-slot');
+        row.appendChild(resultSlot);
+        rows.push({ numInput: numInput, orderInput: orderInput, resultSlot: resultSlot });
+        box.appendChild(row);
+      });
+
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      checkBtn.addEventListener('click', function () {
+        rows.forEach(function (r) {
+          const ok = norm(r.numInput.value) === norm(r.numInput.dataset.answer) &&
+                     norm(r.orderInput.value) === norm(r.orderInput.dataset.answer);
+          r.resultSlot.innerHTML = '';
+          r.resultSlot.appendChild(checkRow(ok));
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    const RENDERERS = {
+      matching: renderMatching,
+      rime_table_fill: renderRimeTableFill,
+      sort: renderSort,
+      scramble: renderScramble,
+      listen_order_fill: renderListenOrderFill
+    };
+
+    function renderHomework(item) {
+      $panelHomework.innerHTML = '';
+      const hw = item.homework || {};
+      if (hw.reviewNote) $panelHomework.appendChild(el('p', 'note', hw.reviewNote));
+      const exercises = hw.exercises || [];
+      if (!exercises.length) {
+        $panelHomework.appendChild(el('p', 'note', 'Chưa có bài tập về nhà cho bài này.'));
+        return;
+      }
+      exercises.forEach(function (ex) {
+        const renderer = RENDERERS[ex.type];
+        if (renderer) $panelHomework.appendChild(renderer(ex));
+        else $panelHomework.appendChild(el('p', 'note', 'Chưa hỗ trợ loại bài tập: ' + ex.type));
+      });
+    }
+
+    // ---------- Load ----------
+    (async function () {
+      let type = 'lesson';
+      let unitNum = null;
+      try {
+        const u = await (await fetch(level + '/units.json', { cache: 'no-cache' })).json();
+        for (const unit of (u.units || [])) {
+          const found = (unit.items || []).find(function (it) { return it.id === itemId; });
+          if (found) { type = found.type; unitNum = unit.num; break; }
+        }
+      } catch (e) { /* fallback type=lesson */ }
+
+      $backLink.href = unitNum ? ('unit.html?level=' + encodeURIComponent(level) + '&num=' + unitNum) : ('lessons.html?level=' + encodeURIComponent(level));
+
+      const folder = type === 'practical' ? 'practicals' : (type === 'revise' ? 'revise' : 'items');
+      try {
+        const res = await fetch(level + '/' + folder + '/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+
+        document.title = (item.title || itemId) + ' — hoc voi hanh';
+        $title.textContent = 'Bài ' + (item.letter || '') + '. ' + (item.title || itemId);
+
+        renderLesson(item);
+        renderHomework(item);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Không tải được bài học';
+        $panelLesson.innerHTML = '<p class="note">Không tìm thấy file bài học. Kiểm tra đường dẫn <code>' + level + '/' + folder + '/' + itemId + '.json</code>.</p>';
+        $panelHomework.innerHTML = '';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+</body>
+</html>
