@@ -83,7 +83,7 @@ a { color: var(--accent-deep); text-decoration: none; }
   font-weight: 700;
   font-size: 1.02rem;
   letter-spacing: .2px;
-  color: var(--accent-deep);
+  color: var(--ink);
 }
 .levels { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .level {
@@ -379,10 +379,10 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .learn-list li { margin: 3px 0; line-height: 1.45; }
 
 /* drop shadow khi hover cho các button (giống thẻ) */
-.cta-btn, .cta-ghost, .back-link, .nav-link, .btn-primary, .opt, .mic-btn, #inputs-nav .btn-input {
+.cta-btn, .cta-ghost, .back-link, .nav-link, .btn-primary, .opt, .mic-btn, #inputs-nav .btn-input, .btn-signup, .tab-btn {
   transition: transform .12s ease, box-shadow .12s ease, background .15s ease, filter .12s ease;
 }
-.cta-btn:hover, .cta-ghost:hover, .back-link:hover, .nav-link:hover, .btn-primary:hover, .opt:hover, .mic-btn:hover, #inputs-nav .btn-input:hover {
+.cta-btn:hover, .cta-ghost:hover, .back-link:hover, .nav-link:hover, .btn-primary:hover, .opt:hover, .mic-btn:hover, #inputs-nav .btn-input:hover, .btn-signup:hover, .tab-btn:hover {
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0 0 var(--stroke);
 }
@@ -419,7 +419,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   border: 2px solid var(--stroke); border-radius: 28px;
   background: var(--surface); padding: 38px 22px 32px; margin: 40px 0;
 }
-.frame-section.frame-blue { border-color: var(--blue); }
+.frame-section.frame-blue { border-color: var(--stroke); }
 .frame-heading { text-align: center; margin-bottom: 30px; }
 .frame-heading h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2rem); margin: 0 0 10px; letter-spacing: -.3px; color: var(--ink); }
 .frame-heading p { color: var(--ink); margin: 0 auto; max-width: 50ch; }
@@ -440,8 +440,14 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .explore-card-head .subtitle { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); opacity: .65; }
 .explore-card p.desc { padding: 14px 18px 20px; margin: 0; color: var(--ink); font-size: .92rem; line-height: 1.55; flex: 1; }
 .explore-card.is-link:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 0 var(--stroke); }
+.explore-card { position: relative; }
 .explore-card.is-soon { opacity: .85; }
-.explore-card.is-soon .explore-card-head::after { content: "sắp ra mắt"; float: right; font-size: .68rem; font-weight: 700; background: rgba(255,255,255,.65); border-radius: 999px; padding: 2px 8px; }
+.explore-card.is-soon::after {
+  content: "sắp ra mắt"; position: absolute; top: 10px; right: 10px; z-index: 2;
+  font-size: .66rem; font-weight: 700; color: var(--ink);
+  background: rgba(255,255,255,.85); border: 1.5px solid var(--stroke);
+  border-radius: 999px; padding: 2px 9px;
+}
 
 /* Path to real conversations — thẻ dải màu bên trái + đường nối bậc thang */
 .path-wrap { position: relative; margin-top: 4px; }
@@ -479,7 +485,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   padding: 20px 76px 20px 24px; margin-bottom: 22px; background: var(--surface);
   box-shadow: 6px 6px 0 0 var(--stroke); overflow: hidden;
 }
-.screen-q::after { content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 56px; background: var(--primary); }
+.screen-q::after { content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 56px; background: var(--primary); border-left: 2px solid var(--stroke); }
 .screen-q h3 { font-family: var(--font-body); font-weight: 700; font-size: .98rem; margin: 0 0 16px; color: var(--ink); position: relative; z-index: 1; }
 .opt-list { display: flex; flex-direction: column; gap: 11px; position: relative; z-index: 1; }
 .opt-list.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 11px 18px; }
