@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="lessons.html">← danh sách unit</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head"><h1 id="title">Unit</h1></div>
+    <div class="cards" id="cards"><p class="note">Loading…</p></div>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script>
+    const LEVELS = { mam: 'mầm', choi: 'chồi', la: 'lá' };
+    const params = new URLSearchParams(location.search);
+    const activeLevel = params.get('level') || 'mam';
+    const activeNum = parseInt(params.get('num'), 10);
+    document.getElementById('back-link').href = 'lessons.html?level=' + encodeURIComponent(activeLevel);
+
+    const TYPE_BADGE = { lesson: '', practical: 'practical', revise: 'ôn tập' };
+
+    (async function () {
+      const cards = document.getElementById('cards');
+      try {
+        const data = await (await fetch(activeLevel + '/units.json', { cache: 'no-cache' })).json();
+        const unit = (data.units || []).find(u => u.num === activeNum);
+        if (!unit) { cards.innerHTML = '<p class="note">Không tìm thấy unit này.</p>'; return; }
+
+        document.getElementById('title').innerHTML = 'Unit ' + unit.num + ': ' + unit.title +
+          (unit.titleEn ? ' <span class="title-en">(' + unit.titleEn + ')</span>' : '');
+        document.title = 'Unit ' + unit.num + ' — hoc voi hanh';
+
+        cards.innerHTML = '';
+        (unit.items || []).forEach(it => {
+          const isTodo = it.status === 'todo';
+          const a = document.createElement('a');
+          a.className = 'card' + (isTodo ? ' card-soon' : '');
+          a.href = isTodo ? '#' : ('lesson.html?id=' + encodeURIComponent(it.id) + '&level=' + encodeURIComponent(activeLevel));
+          const head = document.createElement('div'); head.className = 'card-head';
+          const label = it.letter ? (it.letter + '. ') : '';
+          const h3 = document.createElement('h3'); h3.textContent = label + it.title; head.appendChild(h3);
+          const badgeText = isTodo ? 'sắp ra mắt' : (TYPE_BADGE[it.type] || '');
+          if (badgeText) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = badgeText; head.appendChild(b); }
+          a.appendChild(head);
+          const go = document.createElement('div'); go.className = 'go'; go.textContent = isTodo ? '' : 'Vào học →'; a.appendChild(go);
+          cards.appendChild(a);
+        });
+      } catch (e) { cards.innerHTML = '<p class="note">Could not load this unit.</p>'; }
+    })();
+  </script>
+</body>
+</html>

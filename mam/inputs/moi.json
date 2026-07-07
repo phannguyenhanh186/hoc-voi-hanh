@@ -1,0 +1,76 @@
+{
+  "id": "moi",
+  "title": "mới",
+  "terms": [
+    "mới"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indicates an action happened recently / just now (in the past)."
+        }
+      ]
+    },
+    {
+      "label": "Structure",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "[Subject] + mới + [verb]"
+        }
+      ]
+    },
+    {
+      "label": "Example",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Mình mới ăn cơm.",
+          "en": "I just ate."
+        },
+        {
+          "type": "example",
+          "vi": "Anh ấy mới về nhà.",
+          "en": "He just got home."
+        },
+        {
+          "type": "example",
+          "vi": "Em mới mua cái này.",
+          "en": "I just bought this."
+        },
+        {
+          "type": "example",
+          "vi": "Chị mới đi làm về.",
+          "en": "I just got back from work."
+        }
+      ]
+    },
+    {
+      "label": "Compare with rồi",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Mình mới ăn.",
+          "en": "I just ate (emphasizes recency)."
+        },
+        {
+          "type": "example",
+          "vi": "Mình ăn rồi.",
+          "en": "I already ate (emphasizes completion)."
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"mới\" can also mean \"new\" (adjective): cái mới (new thing). Before a verb = \"just (did)\"; describing a noun = \"new.\""
+        }
+      ]
+    }
+  ]
+}

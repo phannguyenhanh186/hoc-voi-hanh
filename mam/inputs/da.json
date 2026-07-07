@@ -1,0 +1,62 @@
+{
+  "id": "da",
+  "title": "Dạ",
+  "terms": [
+    "Dạ"
+  ],
+  "sections": [
+    {
+      "label": "Explanation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A very common politeness marker, used to show respect when speaking to someone older or in a formal/service context. No direct English translation — it works like a polite \"yes\" or softens a response."
+        }
+      ]
+    },
+    {
+      "label": "As \"yes / okay\"",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Anh chị dùng ở đây hay mang về? → Dạ, ở đây.",
+          "en": "Will you eat here or take away? → Here, please."
+        }
+      ]
+    },
+    {
+      "label": "Politeness opener",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Dạ, anh chị trả tiền mặt hay thẻ?",
+          "en": "Will you pay by cash or card? (polite opener)"
+        },
+        {
+          "type": "example",
+          "vi": "Dạ không, cảm ơn.",
+          "en": "No, thank you."
+        }
+      ]
+    },
+    {
+      "label": "Responding when called",
+      "blocks": [
+        {
+          "type": "example",
+          "vi": "Em ơi! → Dạ?",
+          "en": "Hey! → Yes?"
+        }
+      ]
+    },
+    {
+      "label": "Note",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "\"Dạ\" is used especially by younger people speaking to older people, or by staff speaking to customers, to convey politeness. It can start almost any response to sound more courteous."
+        }
+      ]
+    }
+  ]
+}
