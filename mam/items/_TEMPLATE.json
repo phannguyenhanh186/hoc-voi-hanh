@@ -1,0 +1,71 @@
+{
+  "_guide": "File nay la MAU (khong phai noi dung that, app se bo qua vi ten bat dau bang _). Copy sang mam/items/<id>.json va dien noi dung that vao.",
+
+  "id": "b1",
+  "num": 1,
+  "title": "Chào bạn, bạn tên là gì?",
+
+  "vocab": {
+    "items": [
+      { "id": "v1", "word": "chào", "ipa": "/tɕaːw˧˨/", "meaning": "hello", "audio": "audio/b1/{voice}/vocab_chao.mp3" },
+      { "id": "v2", "word": "tên", "ipa": "/tenˀ/", "meaning": "name", "audio": "audio/b1/{voice}/vocab_ten.mp3" }
+    ]
+  },
+
+  "grammar": {
+    "points": [
+      {
+        "id": "g1",
+        "title": "Xưng hô anh/chị/em theo tuổi",
+        "explanation": "Người Việt xưng hô theo tuổi tác thay vì chỉ dùng 'you' như tiếng Anh.",
+        "examples": ["Anh tên là gì?", "Chị tên là Mai."],
+        "refInput": "pronouns"
+      }
+    ]
+  },
+
+  "listening": {
+    "instruction": "Nghe và chọn đúng.",
+    "items": [
+      { "title": "Đoạn 1", "audio": "audio/b1/{voice}/listen_01.mp3", "transcript": "Chào em, em tên là gì?" }
+    ]
+  },
+
+  "reading": {
+    "passages": [
+      {
+        "id": "r1",
+        "title": "Bài đọc: Xin chào",
+        "audio": "audio/b1/{voice}/reading_01.mp3",
+        "text": "Đoạn văn ở đây.\nCó thể xuống dòng để tách đoạn."
+      }
+    ]
+  },
+
+  "preClass": {
+    "note": "Nghe trước 4 đoạn hội thoại này trước khi tới lớp nhé.",
+    "dialogues": [
+      {
+        "audio": "audio/b1/{voice}/dialogue_01.m4a",
+        "turns": [
+          { "speaker": "A", "text": "Chào em. Em tên là gì?" },
+          { "speaker": "B", "text": "Em tên là Vân. Còn chị?" }
+        ]
+      }
+    ]
+  },
+
+  "postClass": {
+    "reviewNote": "Làm các bài dưới đây sau buổi học để ôn lại.",
+    "exercises": [
+      {
+        "id": "ex1",
+        "type": "matching",
+        "title": "Ghép câu trả lời",
+        "instruction": "Chọn câu trả lời phù hợp.",
+        "prompts": [ { "id": "q1", "text": "Bạn tên là gì?", "answer": "a1" } ],
+        "answerBank": [ { "id": "a1", "text": "Mình tên là Minh." } ]
+      }
+    ]
+  }
+}

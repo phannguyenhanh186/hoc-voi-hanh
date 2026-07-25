@@ -1,0 +1,21 @@
+{
+  "_guide": {
+    "doc": "Master index cho 1 level. App bo qua key bat dau bang '_'.",
+    "structure": "Moi 'lesson' = 1 Bai hoan chinh (id trong mam/items/<id>.json), dung khung 6 tab: vocab/grammar/listening/reading/preClass/postClass. Khong con chia A/B/C/D/Practical/Revise nua.",
+    "status": "'ready' = da co file noi dung | 'todo' = chua soan, the se mo 'sap ra mat'"
+  },
+  "level": "mam",
+  "selfStudy": [
+    { "id": "tones", "title": "6 thanh điệu", "titleEn": "The 6 tones", "status": "ready" }
+  ],
+  "lessons": [
+    { "id": "b1", "num": 1, "title": "Chào bạn, bạn tên là gì?", "status": "todo" },
+    { "id": "b2", "num": 2, "title": "Hoạt động trong ngày", "status": "todo" },
+    { "id": "b3", "num": 3, "title": "Hỏi/Nói giá tiền", "status": "todo" },
+    { "id": "b4", "num": 4, "title": "Tần suất các hoạt động", "status": "todo" },
+    { "id": "b5", "num": 5, "title": "Nơi chốn", "status": "todo" },
+    { "id": "b6", "num": 6, "title": "Mua sắm, so sánh", "status": "todo" },
+    { "id": "b7", "num": 7, "title": "Kế hoạch, số lượng", "status": "todo" },
+    { "id": "b8", "num": 8, "title": "Thời tiết", "status": "todo" }
+  ]
+}
