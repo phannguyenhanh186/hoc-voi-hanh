@@ -442,6 +442,9 @@
           if (para.trim()) box.appendChild(el('p', 'reading-para', para.trim()));
         });
         panel.appendChild(box);
+        if (p.questions && p.questions.length) {
+          panel.appendChild(renderChoiceQuiz({ title: 'Câu hỏi', items: p.questions }));
+        }
       });
     }
 
@@ -988,7 +991,7 @@
       const selects = [];
       (ex.lines || []).forEach(function (line) {
         const row = el('div', 'turn dialogue-fill-line');
-        row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
+        if (line.speaker) row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
         const textSpan = el('span', 'turn-text');
         (line.parts || []).forEach(function (part) {
           if (typeof part === 'string') {
