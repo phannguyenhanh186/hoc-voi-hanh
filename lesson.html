@@ -603,19 +603,85 @@
       return box;
     }
 
+    function renderPreClassFlow(flow) {
+      const wrapper = el('div', 'profession-flow');
+      if (flow.title) wrapper.appendChild(el('h2', 'preflow-title', flow.title));
+      const stage = el('div', 'exercise');
+      wrapper.appendChild(stage);
+
+      let i = 0;
+      const vp = flow.vocabPreview || {};
+      const items = vp.items || [];
+      const quiz = flow.quiz;
+
+      function drawPreview() {
+        stage.innerHTML = '';
+        stage.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+        if (vp.instruction) stage.appendChild(el('p', 'ex-instruction', vp.instruction));
+
+        const it = items[i];
+        const card = el('div', 'preview-card');
+        const img = document.createElement('img');
+        img.src = it.image; img.alt = it.word; img.className = 'preview-img';
+        card.appendChild(img);
+        const wordRow = el('div', 'preview-word-row');
+        wordRow.appendChild(el('span', 'preview-word', it.word));
+        wordRow.appendChild(playBtn(it.audio));
+        card.appendChild(wordRow);
+        stage.appendChild(card);
+
+        const dots = el('div', 'step-dots');
+        items.forEach(function (_, idx) { dots.appendChild(el('span', 'step-dot' + (idx === i ? ' active' : ''))); });
+        stage.appendChild(dots);
+
+        const nav = el('div', 'step-nav');
+        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        prev.style.visibility = i === 0 ? 'hidden' : 'visible';
+        prev.addEventListener('click', function () { i--; drawPreview(); });
+        const isLast = i >= items.length - 1;
+        const next = el('button', 'btn-check', (isLast && quiz) ? 'Bắt đầu kiểm tra →' : 'Tiếp →'); next.type = 'button';
+        next.addEventListener('click', function () {
+          if (!isLast) { i++; drawPreview(); }
+          else if (quiz) { drawQuiz(); }
+        });
+        nav.appendChild(prev); nav.appendChild(next);
+        stage.appendChild(nav);
+      }
+
+      function drawQuiz() {
+        stage.innerHTML = '';
+        stage.appendChild(renderChoiceQuiz(quiz));
+        if (items.length) {
+          const nav = el('div', 'step-nav');
+          const back = el('button', 'btn-check btn-secondary', '← Xem lại từ vựng'); back.type = 'button';
+          back.addEventListener('click', function () { i = 0; drawPreview(); });
+          nav.appendChild(back);
+          stage.appendChild(nav);
+        }
+      }
+
+      if (items.length) drawPreview();
+      else if (quiz) drawQuiz();
+      return wrapper;
+    }
+
     function renderPreClassTab(item) {
       const panel = document.getElementById('panel-preclass');
       panel.innerHTML = '';
       const pre = item.preClass || {};
       const dialogues = pre.dialogues || [];
-      const hasNew = pre.vocabPreview || pre.imageMatch || pre.reasoningQuiz;
+      const flows = pre.flows || [];
+      const hasLegacyFlow = pre.vocabPreview || pre.imageMatch || pre.reasoningQuiz;
+      const hasNew = hasLegacyFlow || flows.length;
       if (pre.note) panel.appendChild(el('p', 'note', pre.note));
       if (!dialogues.length && !hasNew) {
         if (!pre.note) panel.appendChild(emptyNote('Nội dung chuẩn bị trước buổi học đang được cập nhật.'));
         return;
       }
-      const hasFlow = pre.vocabPreview || pre.imageMatch || pre.reasoningQuiz;
-      if (hasFlow) {
+
+      if (flows.length) {
+        flows.forEach(function (flow) { panel.appendChild(renderPreClassFlow(flow)); });
+      } else if (hasLegacyFlow) {
         panel.appendChild(renderProfessionsFlow(pre.vocabPreview, pre.imageMatch, pre.reasoningQuiz));
       }
 
@@ -884,6 +950,7 @@
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
       (ex.items || []).forEach(function (q) {
         const qBox = el('div', 'reasoning-item');
+        if (q.image) { const img = document.createElement('img'); img.src = q.image; img.className = 'choice-quiz-img'; qBox.appendChild(img); }
         if (q.context) qBox.appendChild(renderChoiceContext(q.context));
         const optWrap = el('div', 'quiz-options');
         const explainSlot = el('p', 'ex-instruction reasoning-explain');
