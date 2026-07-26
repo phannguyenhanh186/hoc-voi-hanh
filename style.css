@@ -658,6 +658,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .choice-context { margin-bottom: 10px; }
 .choice-line { margin: 2px 0; font-size: .98rem; }
 .choice-quiz-img { width: 100%; max-width: 220px; height: 150px; object-fit: cover; border-radius: 14px; border: 1.5px solid var(--stroke); background: var(--tint); display: block; margin-bottom: 10px; }
+.choice-quiz-shared-img { width: 100%; max-width: 420px; height: auto; object-fit: cover; border-radius: 14px; border: 1.5px solid var(--stroke); background: var(--tint); display: block; margin: 0 0 16px; }
 
 .dialogue-fill-line { padding: 6px 0 6px 42px; }
 .blank-select { margin: 0 3px; }
