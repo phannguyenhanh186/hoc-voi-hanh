@@ -1,0 +1,186 @@
+{
+  "id": "b4",
+  "num": 4,
+  "title": "Hôm qua chị đi ngủ lúc mấy giờ?",
+
+  "vocab": {
+    "items": [
+      { "id": "v1", "word": "mười một", "meaning": "11", "audio": "audio/b4/{voice}/vocab_muoi_mot.mp3" },
+      { "id": "v2", "word": "trễ", "meaning": "late", "audio": "audio/b4/{voice}/vocab_tre.mp3" },
+      { "id": "v3", "word": "mười hai", "meaning": "12", "audio": "audio/b4/{voice}/vocab_muoi_hai.mp3" },
+      { "id": "v4", "word": "sớm", "meaning": "early", "audio": "audio/b4/{voice}/vocab_som.mp3" },
+      { "id": "v5", "word": "mười ba", "meaning": "13", "audio": "audio/b4/{voice}/vocab_muoi_ba.mp3" },
+      { "id": "v6", "word": "sau đó", "meaning": "after that", "audio": "audio/b4/{voice}/vocab_sau_do.mp3" },
+      { "id": "v7", "word": "mười bốn", "meaning": "14", "audio": "audio/b4/{voice}/vocab_muoi_bon.mp3" },
+      { "id": "v8", "word": "trước đó", "meaning": "before that", "audio": "audio/b4/{voice}/vocab_truoc_do.mp3" },
+      { "id": "v9", "word": "mười lăm", "meaning": "15", "audio": "audio/b4/{voice}/vocab_muoi_lam.mp3" },
+      { "id": "v10", "word": "đánh răng", "meaning": "brush teeth", "audio": "audio/b4/{voice}/vocab_danh_rang.mp3" },
+      { "id": "v11", "word": "mười sáu", "meaning": "16", "audio": "audio/b4/{voice}/vocab_muoi_sau.mp3" },
+      { "id": "v12", "word": "rửa mặt", "meaning": "wash the face", "audio": "audio/b4/{voice}/vocab_rua_mat.mp3" },
+      { "id": "v13", "word": "mười bảy", "meaning": "17", "audio": "audio/b4/{voice}/vocab_muoi_bay.mp3" },
+      { "id": "v14", "word": "đi tắm", "meaning": "take a shower/take a bath", "audio": "audio/b4/{voice}/vocab_di_tam.mp3" },
+      { "id": "v15", "word": "mười tám", "meaning": "18", "audio": "audio/b4/{voice}/vocab_muoi_tam.mp3" },
+      { "id": "v16", "word": "gội đầu", "meaning": "wash hair", "audio": "audio/b4/{voice}/vocab_goi_dau.mp3" },
+      { "id": "v17", "word": "mười chín", "meaning": "19", "audio": "audio/b4/{voice}/vocab_muoi_chin.mp3" },
+      { "id": "v18", "word": "về nhà", "meaning": "go back home", "audio": "audio/b4/{voice}/vocab_ve_nha.mp3" },
+      { "id": "v19", "word": "hai mươi", "meaning": "20", "audio": "audio/b4/{voice}/vocab_hai_muoi.mp3" },
+      { "id": "v20", "word": "rửa chén", "meaning": "do the dishes", "audio": "audio/b4/{voice}/vocab_rua_chen.mp3" },
+      { "id": "v21", "word": "giờ", "meaning": "hour, o'clock", "audio": "audio/b4/{voice}/vocab_gio.mp3" },
+      { "id": "v22", "word": "giặt đồ", "meaning": "do the laundry", "audio": "audio/b4/{voice}/vocab_giat_do.mp3" },
+      { "id": "v23", "word": "phút", "meaning": "minute", "audio": "audio/b4/{voice}/vocab_phut.mp3" },
+      { "id": "v24", "word": "pha cà phê", "meaning": "make coffee", "audio": "audio/b4/{voice}/vocab_pha_ca_phe.mp3" },
+      { "id": "v25", "word": "rưỡi", "meaning": "half past", "audio": "audio/b4/{voice}/vocab_ruoi.mp3" },
+      { "id": "v26", "word": "đi bộ", "meaning": "go for a walk", "audio": "audio/b4/{voice}/vocab_di_bo.mp3" },
+      { "id": "v27", "word": "lúc", "meaning": "at (time)", "audio": "audio/b4/{voice}/vocab_luc.mp3" },
+      { "id": "v28", "word": "nghe nhạc", "meaning": "listen to music", "audio": "audio/b4/{voice}/vocab_nghe_nhac.mp3" },
+      { "id": "v29", "word": "mấy", "meaning": "how many", "audio": "audio/b4/{voice}/vocab_may.mp3" },
+      { "id": "v30", "word": "đọc sách", "meaning": "read books", "audio": "audio/b4/{voice}/vocab_doc_sach.mp3" },
+      { "id": "v31", "word": "bây giờ", "meaning": "now, currently", "audio": "audio/b4/{voice}/vocab_bay_gio.mp3" },
+      { "id": "v32", "word": "xem phim", "meaning": "watch movies", "audio": "audio/b4/{voice}/vocab_xem_phim.mp3" },
+      { "id": "v33", "word": "hôm qua", "meaning": "yesterday", "audio": "audio/b4/{voice}/vocab_hom_qua.mp3" },
+      { "id": "v34", "word": "chơi game", "meaning": "play games", "audio": "audio/b4/{voice}/vocab_choi_game.mp3" },
+      { "id": "v35", "word": "hôm nay", "meaning": "today", "audio": "audio/b4/{voice}/vocab_hom_nay.mp3" },
+      { "id": "v36", "word": "tại vì", "meaning": "because, because of", "audio": "audio/b4/{voice}/vocab_tai_vi.mp3" },
+      { "id": "v37", "word": "ngày mai", "meaning": "tomorrow", "audio": "audio/b4/{voice}/vocab_ngay_mai.mp3" },
+      { "id": "v38", "word": "sinh viên", "meaning": "college student", "audio": "audio/b4/{voice}/vocab_sinh_vien.mp3" },
+      { "id": "v39", "word": "sáng nay", "meaning": "today's morning, this morning", "audio": "audio/b4/{voice}/vocab_sang_nay.mp3" },
+      { "id": "v40", "word": "chuẩn bị", "meaning": "prepare", "audio": "audio/b4/{voice}/vocab_chuan_bi.mp3" },
+      { "id": "v41", "word": "trưa nay", "meaning": "today's noon, this noon", "audio": "audio/b4/{voice}/vocab_trua_nay.mp3" },
+      { "id": "v42", "word": "có", "meaning": "have, there is/there are", "audio": "audio/b4/{voice}/vocab_co.mp3" },
+      { "id": "v43", "word": "chiều nay", "meaning": "today's afternoon, this afternoon", "audio": "audio/b4/{voice}/vocab_chieu_nay.mp3" },
+      { "id": "v44", "word": "lớp", "meaning": "class", "audio": "audio/b4/{voice}/vocab_lop.mp3" },
+      { "id": "v45", "word": "tối nay", "meaning": "today's evening, tonight", "audio": "audio/b4/{voice}/vocab_toi_nay.mp3" },
+      { "id": "v46", "word": "sáng mai", "meaning": "tomorrow morning", "audio": "audio/b4/{voice}/vocab_sang_mai.mp3" },
+      { "id": "v47", "word": "trưa mai", "meaning": "tomorrow noon", "audio": "audio/b4/{voice}/vocab_trua_mai.mp3" },
+      { "id": "v48", "word": "chiều mai", "meaning": "tomorrow afternoon", "audio": "audio/b4/{voice}/vocab_chieu_mai.mp3" },
+      { "id": "v49", "word": "tối mai", "meaning": "tomorrow evening, tomorrow night", "audio": "audio/b4/{voice}/vocab_toi_mai.mp3" }
+    ]
+  },
+
+  "grammar": {
+    "points": [
+      {
+        "id": "g1",
+        "title": "[X] giờ ([Y] phút) + sáng/trưa/chiều/tối",
+        "explanation": "Dùng để nói giờ trong ngày, thêm buổi (sáng/trưa/chiều/tối) sau số giờ (và số phút nếu có).",
+        "examples": ["Chín giờ sáng.", "Mười một giờ mười lăm phút trưa.", "Ba giờ ba mươi phút chiều.", "Bảy giờ năm phút tối."]
+      },
+      {
+        "id": "g2",
+        "title": "Bây giờ là mấy giờ? → Bây giờ là + [X] giờ ([Y] phút)",
+        "explanation": "Dùng để hỏi và trả lời giờ hiện tại.",
+        "examples": ["Bây giờ là mấy giờ? → Bây giờ là tám giờ mười lăm phút.", "Bây giờ là mấy giờ? → Bây giờ là mười hai giờ trưa."]
+      },
+      {
+        "id": "g3",
+        "title": "[Chủ ngữ] + [Động từ] + lúc mấy giờ? → [Chủ ngữ] + [Động từ] + lúc + [X] giờ ([Y] phút)",
+        "explanation": "Dùng để hỏi và trả lời thời điểm làm một việc gì đó.",
+        "examples": ["Bạn ăn sáng lúc mấy giờ? → Mình ăn sáng lúc bảy giờ.", "Chị ấy thường đi làm lúc mấy giờ? → Chị ấy thường đi làm lúc tám giờ sáng.", "Hôm qua bạn đi ngủ lúc mấy giờ? → Mười một giờ rưỡi."]
+      }
+    ]
+  },
+
+  "listening": {
+    "instruction": "Nghe và gõ lại câu bạn nghe được. Bấm vào từ trong ngân hàng từ bên dưới nếu cần trợ giúp.",
+    "groups": [
+      {
+        "id": "d1",
+        "title": "Hội thoại 1: Tối qua bạn ngủ lúc mấy giờ?",
+        "lines": [
+          { "audio": "audio/b4/{voice}/listen_d1_01.mp3", "text": "Tối qua bạn đi ngủ lúc mấy giờ?", "wordBank": ["mấy", "bạn", "tối nay", "giờ?", "đi ngủ", "tối qua", "mình"] },
+          { "audio": "audio/b4/{voice}/listen_d1_02.mp3", "text": "Tối qua mình đi ngủ lúc mười giờ tối. Còn bạn?", "wordBank": ["đi ngủ", "còn", "một", "tối qua", "giờ", "bạn?", "lúc", "mình", "tối", "phút"] },
+          { "audio": "audio/b4/{voice}/listen_d1_03.mp3", "text": "Hôm qua mình đi ngủ lúc một giờ sáng.", "wordBank": ["lúc", "sáng", "mười", "hôm qua", "bạn", "giờ", "đi ngủ", "mình", "một", "tối"] },
+          { "audio": "audio/b4/{voice}/listen_d1_04.mp3", "text": "Thiệt hả?", "wordBank": ["hả?", "bạn", "không", "thiệt"] },
+          { "audio": "audio/b4/{voice}/listen_d1_05.mp3", "text": "Đúng rồi. Mình thường đi ngủ trễ.", "wordBank": ["thường", "bạn", "đi ngủ", "thích", "đúng rồi", "mình", "trễ", "tối"] }
+        ]
+      },
+      {
+        "id": "d2",
+        "title": "Hội thoại 2: Giờ ở Việt Nam",
+        "lines": [
+          { "audio": "audio/b4/{voice}/listen_d2_01.mp3", "text": "Bây giờ là mấy giờ ở Mỹ?", "wordBank": ["ở", "là", "gì?", "mấy", "bây giờ", "làm", "Mỹ?", "giờ"] },
+          { "audio": "audio/b4/{voice}/listen_d2_02.mp3", "text": "Bây giờ là mười giờ sáng. Còn Việt Nam?", "wordBank": ["còn", "mười", "chiều", "một", "Việt Nam?", "bây giờ", "giờ", "sáng"] },
+          { "audio": "audio/b4/{voice}/listen_d2_03.mp3", "text": "Bây giờ là chín giờ tối ở Việt Nam.", "wordBank": ["giờ", "ở", "tối", "Việt Nam", "không", "bây giờ", "là", "làm", "chín"] },
+          { "audio": "audio/b4/{voice}/listen_d2_04.mp3", "text": "Sáng nay bạn ngủ dậy lúc mấy giờ?", "wordBank": ["giờ?", "bây giờ", "là", "bạn", "mấy", "sáng nay", "lúc", "đi ngủ", "ngủ dậy", "mình"] },
+          { "audio": "audio/b4/{voice}/listen_d2_05.mp3", "text": "Chín rưỡi sáng. Hôm nay mình ngủ dậy trễ tại vì hôm nay là Chủ Nhật.", "wordBank": ["Chủ Nhật", "hôm nay", "ngủ dậy", "chín", "sáng", "là", "trễ", "mình", "sáng nay", "tại vì", "rưỡi"] }
+        ]
+      }
+    ]
+  },
+
+  "reading": {
+    "passages": [
+      {
+        "id": "r1",
+        "title": "Một ngày của Minh",
+        "text": "Minh là sinh viên. Hôm nay Minh có lớp vào buổi sáng.\nSáng nay, Minh ngủ dậy lúc bảy giờ sáng. Sau đó, Minh đánh răng, rửa mặt và pha cà phê. Minh ăn sáng lúc bảy giờ ba mươi phút rồi đi học.\nTrưa nay, Minh ăn trưa lúc mười hai giờ với bạn. Sau khi ăn trưa, Minh học đến năm giờ chiều. Sau đó, Minh về nhà. Ở nhà, Minh giặt đồ và gội đầu.\nTối nay, Minh ăn tối lúc bảy giờ tối. Sau khi ăn tối, Minh nghe nhạc, chơi game hoặc xem phim. Minh thường đi ngủ lúc mười rưỡi tối. Nhưng tối nay Minh ngủ trễ tại vì Minh không có lớp vào sáng mai.",
+        "questions": [
+          { "id": "rq1", "context": "Minh làm nghề gì?", "options": ["Giáo viên", "Bác sĩ", "Sinh viên"], "answer": "Sinh viên" },
+          { "id": "rq2", "context": "Sáng nay Minh ngủ dậy lúc mấy giờ?", "options": ["6 giờ sáng", "7 giờ sáng", "8 giờ sáng"], "answer": "7 giờ sáng" },
+          { "id": "rq3", "context": "Sau khi ăn trưa, Minh làm gì?", "options": ["tập thể dục", "học", "về nhà"], "answer": "học" },
+          { "id": "rq4", "context": "Minh thường đi ngủ lúc mấy giờ?", "options": ["10 giờ tối", "10 rưỡi tối", "11 giờ tối"], "answer": "10 rưỡi tối" },
+          { "id": "rq5", "context": "Tối nay Minh _____ tại vì Minh không đi học vào sáng mai.", "options": ["xem phim", "ngủ trễ", "ngủ sớm"], "answer": "ngủ trễ" }
+        ]
+      }
+    ]
+  },
+
+  "preClass": {
+    "note": "Xem thời khoá biểu rồi làm trắc nghiệm.",
+    "flows": [
+      {
+        "title": "Thời khoá biểu của Phương",
+        "quiz": {
+          "title": "Thời khoá biểu của Phương",
+          "instruction": "Xem thời khoá biểu rồi chọn đáp án đúng.",
+          "image": "images/b4/nghe/thoi_khoa_bieu_phuong.jpg",
+          "items": [
+            { "id": "pc1q1", "context": "Sáng nay Phương đi làm lúc mấy giờ?", "options": ["6 giờ", "7 giờ rưỡi", "8 giờ"], "answer": "8 giờ" },
+            { "id": "pc1q2", "context": "Chiều qua Phương về nhà lúc mấy giờ?", "options": ["4 rưỡi", "5 giờ", "6 rưỡi"], "answer": "6 rưỡi" },
+            { "id": "pc1q3", "context": "Tối qua Phương đi ngủ lúc mấy giờ?", "options": ["10 giờ", "11 giờ", "12 giờ"], "answer": "10 giờ" },
+            { "id": "pc1q4", "context": "Chiều mai Phương làm gì lúc bảy giờ tối?", "options": ["nấu ăn", "đi ăn", "đi cà phê"], "answer": "đi ăn" }
+          ]
+        }
+      }
+    ]
+  },
+  "postClass": {
+    "exercises": [
+      {
+        "type": "choice",
+        "title": "1. Chọn đáp án đúng.",
+        "items": [
+          { "id": "1", "context": "Bây giờ là ________?", "options": ["mấy giờ", "lúc mấy giờ", "mấy phút"], "answer": "mấy giờ" },
+          { "id": "2", "context": "Mình ăn sáng ________ bảy giờ sáng.", "options": ["vào", "lúc", "khi"], "answer": "lúc" },
+          { "id": "3", "context": "Minh ngủ trễ ________ ngày mai không có lớp.", "options": ["nhưng", "với", "tại vì"], "answer": "tại vì" },
+          { "id": "4", "context": "Sau khi đánh răng, mình thường ________.", "options": ["ngủ dậy", "đi ngủ", "về nhà"], "answer": "đi ngủ" },
+          { "id": "5", "context": "Hôm nay là thứ Sáu. ________ là thứ Bảy.", "options": ["Hôm qua", "Ngày mai", "Bây giờ"], "answer": "Ngày mai" }
+        ]
+      },
+      {
+        "type": "dialogue_fill",
+        "title": "2. Hoàn thành câu.",
+        "instruction": "Điền từ thích hợp.",
+        "wordBank": ["lúc", "sau đó", "hôm qua", "tại vì"],
+        "lines": [
+          { "parts": ["Mình ăn sáng ", { "blank": "lúc" }, " bảy giờ ba mươi phút."] },
+          { "parts": ["Mình đánh răng. ", { "blank": "sau đó" }, ", mình rửa mặt."] },
+          { "parts": [{ "blank": "hôm qua" }, ", mình đi ngủ lúc mười một giờ."] },
+          { "parts": ["Hôm nay mình hơi mệt ", { "blank": "tại vì" }, " hôm qua mình đi ngủ trễ."] }
+        ]
+      },
+      {
+        "type": "scramble",
+        "title": "3. Sắp xếp câu.",
+        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+        "items": [
+          { "prompt": "Câu 1", "tokens": ["bảy giờ", "lúc", "Long", "ngủ dậy"], "answer": "Long ngủ dậy lúc bảy giờ." },
+          { "prompt": "Câu 2", "tokens": ["rửa mặt", "đánh răng", "sau đó", "Minh"], "answer": "Minh đánh răng. Sau đó, rửa mặt." },
+          { "prompt": "Câu 3", "tokens": ["lúc", "bạn", "mấy giờ", "đi ngủ"], "answer": "Bạn đi ngủ lúc mấy giờ?" },
+          { "prompt": "Câu 4", "tokens": ["mấy", "là", "bây giờ", "giờ?"], "answer": "Bây giờ là mấy giờ?" },
+          { "prompt": "Câu 5", "tokens": ["về nhà", "giờ?", "chị", "mấy", "lúc", "hôm qua"], "answer": "Hôm qua chị về nhà lúc mấy giờ?" }
+        ]
+      }
+    ]
+  }
+}
