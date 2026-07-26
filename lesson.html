@@ -948,6 +948,7 @@
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      if (ex.image) { const img = document.createElement('img'); img.src = ex.image; img.className = 'choice-quiz-shared-img'; box.appendChild(img); }
       (ex.items || []).forEach(function (q) {
         const qBox = el('div', 'reasoning-item');
         if (q.image) { const img = document.createElement('img'); img.src = q.image; img.className = 'choice-quiz-img'; qBox.appendChild(img); }
