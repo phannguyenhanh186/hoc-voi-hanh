@@ -628,6 +628,9 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 
 .scramble-item { border-top: 1px dashed var(--line); padding: 14px 0; }
 .scramble-item:first-of-type { border-top: none; padding-top: 0; }
+.dictation-item { border-top: 1px dashed var(--line); padding: 14px 0; }
+.dictation-item:first-of-type { border-top: none; padding-top: 0; }
+.dictation-input { flex: 1; min-width: 200px; }
 .scramble-built { display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; padding: 8px 0; border-bottom: 1.5px solid var(--line); margin-bottom: 10px; }
 .scramble-bank { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 
