@@ -52,13 +52,13 @@
         "id": "g2",
         "title": "[Chủ ngữ] + thường + [Động từ]",
         "explanation": "Dùng 'thường' để nói việc gì đó xảy ra thường xuyên, theo thói quen.",
-        "examples": ["Mình thường đi làm vào buổi sáng.", "Anh Kiên thường ở nhà vào Chủ Nhật."]
+        "examples": ["Mình thường đi làm vào buổi sáng.", "Anh Kiên thường ở nhà vào Chủ Nhật.", "Chồng của chị thường tập thể dục vào buổi chiều."]
       },
       {
         "id": "g3",
-        "title": "[Chủ ngữ] + không thường + [Động từ]",
-        "explanation": "Thêm 'không' trước 'thường' để nói việc gì đó không xảy ra thường xuyên.",
-        "examples": ["Em không thường tập thể dục vào buổi trưa.", "Chị ấy không thường nấu ăn vào thứ Bảy và Chủ Nhật."]
+        "title": "[Chủ ngữ] + thường + [Động từ] + gì?",
+        "explanation": "Dùng để hỏi ai đó thường làm gì.",
+        "examples": ["Em thường ăn gì vào buổi sáng?", "Chị ấy thường làm gì vào buổi tối?"]
       },
       {
         "id": "g4",
@@ -106,5 +106,43 @@
   },
 
   "preClass": { "dialogues": [] },
-  "postClass": { "exercises": [] }
+  "postClass": {
+    "exercises": [
+      {
+        "type": "choice",
+        "title": "1. Chọn đáp án đúng.",
+        "items": [
+          { "id": "1", "context": "Anh Minh thường ________ vào buổi sáng.", "options": ["ngủ trưa", "đi làm", "đi ngủ"], "answer": "đi làm" },
+          { "id": "2", "context": "Chị Lan thường ăn tối ________ gia đình.", "options": ["vào", "để", "với"], "answer": "với" },
+          { "id": "3", "context": "Bạn có thường tập thể dục ________ buổi sáng không?", "options": ["ở", "với", "vào"], "answer": "vào" },
+          { "id": "4", "context": "Sau khi ăn tối, mình thường ________.", "options": ["đánh răng", "ăn sáng", "ngủ dậy"], "answer": "đánh răng" },
+          { "id": "5", "context": "Vào Chủ Nhật, nhiều người thường ________.", "options": ["ở nhà", "đi làm", "ăn sáng ở văn phòng"], "answer": "ở nhà" }
+        ]
+      },
+      {
+        "type": "scramble",
+        "title": "2. Sắp xếp câu.",
+        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+        "items": [
+          { "prompt": "Câu 1", "tokens": ["thường", "vào buổi sáng", "mình", "đi làm"], "answer": "Mình thường đi làm vào buổi sáng." },
+          { "prompt": "Câu 2", "tokens": ["thường", "anh", "tập thể dục", "trước khi", "đi làm"], "answer": "Anh thường tập thể dục trước khi đi làm." },
+          { "prompt": "Câu 3", "tokens": ["với gia đình", "ăn tối", "chị", "thường"], "answer": "Chị thường ăn tối với gia đình." },
+          { "prompt": "Câu 4", "tokens": ["thường", "lướt điện thoại", "sau khi", "mình", "ăn tối"], "answer": "Mình thường lướt điện thoại sau khi ăn tối." },
+          { "prompt": "Câu 5", "tokens": ["có thường", "bạn", "ngủ trưa", "không"], "answer": "Bạn có thường ngủ trưa không?" }
+        ]
+      },
+      {
+        "type": "dialogue_fill",
+        "title": "3. Hoàn thành đoạn hội thoại.",
+        "instruction": "Điền từ thích hợp.",
+        "wordBank": ["thường", "có", "vào", "với", "gì", "không"],
+        "lines": [
+          { "speaker": "Mai", "parts": ["Bạn ", { "blank": "có" }, " thường đi làm ", { "blank": "vào" }, " buổi sáng ", { "blank": "không" }, "?"] },
+          { "speaker": "Nam", "parts": ["Có."] },
+          { "speaker": "Mai", "parts": ["Bạn ", { "blank": "thường" }, " ăn ", { "blank": "gì" }, " vào buổi trưa?"] },
+          { "speaker": "Nam", "parts": ["Mình thường ăn phở hoặc cơm gà ", { "blank": "với" }, " đồng nghiệp."] }
+        ]
+      }
+    ]
+  }
 }
