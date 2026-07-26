@@ -1,0 +1,37 @@
+{
+  "title": "Danh xưng — cách gọi người khác & gọi mình",
+  "terms": ["anh", "chị", "em", "bạn", "mình"],
+  "sections": [
+    {
+      "label": "Bảng danh xưng",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Người Việt không dùng một từ cố định cho 'you' và 'I' như tiếng Anh — danh xưng thay đổi tùy vào tuổi tác của người bạn đang nói chuyện so với bạn."
+        },
+        {
+          "type": "table",
+          "columns": ["Người bạn đang nói chuyện", "Gọi họ", "Gọi mình"],
+          "rows": [
+            ["Lớn tuổi hơn bạn", "anh / chị", "em"],
+            ["Nhỏ tuổi hơn bạn", "em", "anh / chị"],
+            ["Cùng tuổi hoặc không biết tuổi", "bạn", "mình"]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Ví dụ",
+      "blocks": [
+        { "type": "example", "context": "Chào", "vi": "Chào anh.", "en": "Hello (to someone older, male)." },
+        { "type": "example", "context": "Chào", "vi": "Chào em.", "en": "Hello (to someone younger)." },
+        { "type": "example", "context": "Cám ơn", "vi": "Cám ơn bạn.", "en": "Thank you (to someone the same age)." },
+        { "type": "example", "context": "Cám ơn", "vi": "Cám ơn chị.", "en": "Thank you (to someone older, female)." },
+        { "type": "example", "context": "Xin lỗi", "vi": "Xin lỗi em.", "en": "Sorry (to someone younger)." },
+        { "type": "example", "context": "Xin lỗi", "vi": "Xin lỗi bạn.", "en": "Sorry (to someone the same age)." },
+        { "type": "example", "context": "Khoẻ không?", "vi": "Bạn khoẻ không? → Mình khoẻ.", "en": "Are you well? → I'm well. (same age)" },
+        { "type": "example", "context": "Khoẻ không?", "vi": "Anh khoẻ không? → Anh khoẻ.", "en": "Are you well? → I'm well. (older, male — repeats the term of address)" }
+      ]
+    }
+  ]
+}
