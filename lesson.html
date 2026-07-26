@@ -975,13 +975,62 @@
       return box;
     }
 
+    function renderDialogueFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      if (ex.wordBank && ex.wordBank.length) {
+        const bankRow = el('div', 'scramble-bank');
+        ex.wordBank.forEach(function (w) { bankRow.appendChild(el('span', 'chip chip-given', w)); });
+        box.appendChild(bankRow);
+      }
+      const selects = [];
+      (ex.lines || []).forEach(function (line) {
+        const row = el('div', 'turn dialogue-fill-line');
+        row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
+        const textSpan = el('span', 'turn-text');
+        (line.parts || []).forEach(function (part) {
+          if (typeof part === 'string') {
+            textSpan.appendChild(document.createTextNode(part));
+          } else if (part && part.blank) {
+            const select = document.createElement('select');
+            select.className = 'answer-select blank-select';
+            const optEmpty = el('option', null, '…'); optEmpty.value = ''; select.appendChild(optEmpty);
+            (ex.wordBank || []).forEach(function (w) { const opt = el('option', null, w); opt.value = w; select.appendChild(opt); });
+            select.dataset.answer = part.blank;
+            selects.push(select);
+            textSpan.appendChild(select);
+          }
+        });
+        row.appendChild(textSpan);
+        box.appendChild(row);
+      });
+      const resultSlot = el('span', 'result-slot dialogue-fill-result');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        let allOk = true;
+        selects.forEach(function (s) {
+          const ok = s.value === s.dataset.answer;
+          if (!ok) allOk = false;
+          s.classList.toggle('select-wrong', s.value !== '' && !ok);
+          s.classList.toggle('select-ok', ok);
+        });
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(allOk));
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resultSlot);
+      return box;
+    }
+
     const EX_RENDERERS = {
       matching: renderMatching,
       rime_table_fill: renderRimeTableFill,
       sort: renderSort,
       scramble: renderScramble,
       listen_order_fill: renderListenOrderFill,
-      choice: renderChoiceQuiz
+      choice: renderChoiceQuiz,
+      dialogue_fill: renderDialogueFill
     };
 
     function renderPostClassTab(item) {
