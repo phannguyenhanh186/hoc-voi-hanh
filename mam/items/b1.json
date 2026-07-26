@@ -204,5 +204,56 @@
       ]
     }
   },
-  "postClass": { "exercises": [] }
+  "postClass": {
+    "exercises": [
+      {
+        "type": "choice",
+        "title": "1. Chọn danh xưng đúng.",
+        "items": [
+          {
+            "id": "A",
+            "context": "Mai (22 tuổi) nói với Nam (30 tuổi).\nMai: \"Chào ______.\"",
+            "options": ["em", "anh", "bạn"],
+            "answer": "anh"
+          },
+          {
+            "id": "B",
+            "context": "Huy (35 tuổi) nói với An (19 tuổi).\nHuy: \"Em khoẻ không?\"\nAn: \"______ khoẻ.\"",
+            "options": ["Anh", "Em", "Bạn"],
+            "answer": "Em"
+          },
+          {
+            "id": "C",
+            "context": "Lan (25 tuổi) và Lisa (25 tuổi).\nLan: \"Chào ______.\"",
+            "options": ["em", "bạn", "chị"],
+            "answer": "bạn"
+          }
+        ]
+      },
+      {
+        "type": "choice",
+        "title": "2. Chọn câu trả lời phù hợp.",
+        "items": [
+          {
+            "id": "1",
+            "context": "— Anh tên là gì?",
+            "options": ["Anh khoẻ.", "Anh tên là Minh.", "Anh là bác sĩ."],
+            "answer": "Anh tên là Minh."
+          },
+          {
+            "id": "2",
+            "context": "— Chị khoẻ không?",
+            "options": ["Chị khoẻ.", "Chị là giáo viên.", "Xin lỗi chị."],
+            "answer": "Chị khoẻ."
+          },
+          {
+            "id": "3",
+            "context": "— Xin lỗi.",
+            "options": ["Cám ơn.", "Đúng rồi.", "Không sao."],
+            "answer": "Không sao."
+          }
+        ]
+      }
+    ]
+  }
 }
