@@ -637,7 +637,17 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .image-vocab-img { width: 100%; height: 120px; object-fit: cover; display: block; background: var(--tint); }
 .image-vocab-word { padding: 8px 6px; font-weight: 700; font-family: var(--font-display); }
 
-.image-match-row .match-img { width: 64px; height: 64px; object-fit: cover; border-radius: 10px; border: 1.5px solid var(--stroke); background: var(--tint); flex: none; }
+.image-match-row .match-img { width: 96px; height: 96px; object-fit: cover; border-radius: 12px; border: 1.5px solid var(--stroke); background: var(--tint); flex: none; }
+
+.profession-flow { margin-bottom: 18px; }
+.preview-card { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 10px 0 6px; }
+.preview-img {
+  width: 100%; max-width: 320px; height: 260px; object-fit: cover;
+  border-radius: 18px; border: 2px solid var(--stroke); background: var(--tint);
+  box-shadow: 6px 6px 0 0 var(--stroke);
+}
+.preview-word-row { display: flex; align-items: center; gap: 10px; }
+.preview-word { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; color: var(--ink); }
 
 .reasoning-item { border-top: 1px dashed var(--line); padding: 16px 0; }
 .reasoning-item:first-of-type { border-top: none; padding-top: 0; }
