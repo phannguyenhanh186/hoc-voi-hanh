@@ -448,13 +448,13 @@
     // ========================================================
     // CHUẨN BỊ (pre-class)
     // ========================================================
-    function renderProfessionsFlow(vp, im) {
+    function renderProfessionsFlow(vp, im, rq) {
       const wrapper = el('div', 'profession-flow');
       const stage = el('div', 'exercise');
       wrapper.appendChild(stage);
 
       let i = 0;
-      const items = vp.items || [];
+      const items = (vp && vp.items) || [];
 
       function drawPreview() {
         stage.innerHTML = '';
@@ -484,12 +484,39 @@
         const next = el('button', 'btn-check', (isLast && im) ? 'Bắt đầu kiểm tra →' : 'Tiếp →'); next.type = 'button';
         next.addEventListener('click', function () {
           if (!isLast) { i++; drawPreview(); }
-          else if (im) { wrapper.removeChild(stage); wrapper.appendChild(renderImageMatch(im)); }
+          else if (im) { drawQuiz(); }
         });
         nav.appendChild(prev); nav.appendChild(next);
         stage.appendChild(nav);
       }
-      drawPreview();
+
+      function drawQuiz() {
+        stage.innerHTML = '';
+        stage.appendChild(renderImageMatch(im));
+        if (rq) {
+          const nav = el('div', 'step-nav');
+          const back = el('button', 'btn-check btn-secondary', '← Trước'); back.type = 'button';
+          back.addEventListener('click', function () { drawPreview(); });
+          const next = el('button', 'btn-check', 'Tiếp →'); next.type = 'button';
+          next.addEventListener('click', function () { drawReasoning(); });
+          nav.appendChild(back); nav.appendChild(next);
+          stage.appendChild(nav);
+        }
+      }
+
+      function drawReasoning() {
+        stage.innerHTML = '';
+        stage.appendChild(renderReasoningQuiz(rq));
+        const nav = el('div', 'step-nav');
+        const back = el('button', 'btn-check btn-secondary', '← Trước'); back.type = 'button';
+        back.addEventListener('click', function () { drawQuiz(); });
+        nav.appendChild(back);
+        stage.appendChild(nav);
+      }
+
+      if (items.length) drawPreview();
+      else if (im) drawQuiz();
+      else if (rq) drawReasoning();
       return wrapper;
     }
 
@@ -587,13 +614,10 @@
         if (!pre.note) panel.appendChild(emptyNote('Nội dung chuẩn bị trước buổi học đang được cập nhật.'));
         return;
       }
-      if (pre.vocabPreview && pre.imageMatch) {
-        panel.appendChild(renderProfessionsFlow(pre.vocabPreview, pre.imageMatch));
-      } else {
-        if (pre.vocabPreview) panel.appendChild(renderVocabPreview(pre.vocabPreview));
-        if (pre.imageMatch) panel.appendChild(renderImageMatch(pre.imageMatch));
+      const hasFlow = pre.vocabPreview || pre.imageMatch || pre.reasoningQuiz;
+      if (hasFlow) {
+        panel.appendChild(renderProfessionsFlow(pre.vocabPreview, pre.imageMatch, pre.reasoningQuiz));
       }
-      if (pre.reasoningQuiz) panel.appendChild(renderReasoningQuiz(pre.reasoningQuiz));
 
       if (dialogues.length) {
         const box = el('div', 'exercise');
