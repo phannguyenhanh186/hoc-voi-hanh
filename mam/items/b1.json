@@ -1,208 +1,841 @@
-{
-  "id": "b1",
-  "num": 1,
-  "title": "Chào bạn, bạn tên là gì?",
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="lessons.html">← quay lại</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  "vocab": {
-    "items": [
-      { "id": "v1", "word": "anh", "meaning": "you, older brother", "audio": "audio/b1/{voice}/vocab_anh.mp3" },
-      { "id": "v2", "word": "không", "meaning": "no, not, zero", "audio": "audio/b1/{voice}/vocab_khong.mp3" },
-      { "id": "v3", "word": "chị", "meaning": "you, older sister", "audio": "audio/b1/{voice}/vocab_chi.mp3" },
-      { "id": "v4", "word": "một", "meaning": "one", "audio": "audio/b1/{voice}/vocab_mot.mp3" },
-      { "id": "v5", "word": "em", "meaning": "younger sibling", "audio": "audio/b1/{voice}/vocab_em.mp3" },
-      { "id": "v6", "word": "hai", "meaning": "two", "audio": "audio/b1/{voice}/vocab_hai.mp3" },
-      { "id": "v7", "word": "anh trai", "meaning": "older brother", "audio": "audio/b1/{voice}/vocab_anh_trai.mp3" },
-      { "id": "v8", "word": "ba", "meaning": "three", "audio": "audio/b1/{voice}/vocab_ba.mp3" },
-      { "id": "v9", "word": "chị gái", "meaning": "older sister", "audio": "audio/b1/{voice}/vocab_chi_gai.mp3" },
-      { "id": "v10", "word": "bốn", "meaning": "four", "audio": "audio/b1/{voice}/vocab_bon.mp3" },
-      { "id": "v11", "word": "em trai", "meaning": "younger brother", "audio": "audio/b1/{voice}/vocab_em_trai.mp3" },
-      { "id": "v12", "word": "năm", "meaning": "five", "audio": "audio/b1/{voice}/vocab_nam.mp3" },
-      { "id": "v13", "word": "em gái", "meaning": "younger sister", "audio": "audio/b1/{voice}/vocab_em_gai.mp3" },
-      { "id": "v14", "word": "sáu", "meaning": "six", "audio": "audio/b1/{voice}/vocab_sau.mp3" },
-      { "id": "v15", "word": "mình", "meaning": "I (when talking to someone at the same age)", "audio": "audio/b1/{voice}/vocab_minh.mp3" },
-      { "id": "v16", "word": "bảy", "meaning": "seven", "audio": "audio/b1/{voice}/vocab_bay.mp3" },
-      { "id": "v17", "word": "bạn", "meaning": "you, friend", "audio": "audio/b1/{voice}/vocab_ban.mp3" },
-      { "id": "v18", "word": "tám", "meaning": "eight", "audio": "audio/b1/{voice}/vocab_tam.mp3" },
-      { "id": "v19", "word": "bạn thân", "meaning": "best friend", "audio": "audio/b1/{voice}/vocab_ban_than.mp3" },
-      { "id": "v20", "word": "chín", "meaning": "nine", "audio": "audio/b1/{voice}/vocab_chin.mp3" },
-      { "id": "v21", "word": "vợ", "meaning": "wife", "audio": "audio/b1/{voice}/vocab_vo.mp3" },
-      { "id": "v22", "word": "mười", "meaning": "ten", "audio": "audio/b1/{voice}/vocab_muoi.mp3" },
-      { "id": "v23", "word": "chồng", "meaning": "husband", "audio": "audio/b1/{voice}/vocab_chong.mp3" },
-      { "id": "v24", "word": "số", "meaning": "number", "audio": "audio/b1/{voice}/vocab_so.mp3" },
-      { "id": "v25", "word": "là", "meaning": "be, be identified as", "audio": "audio/b1/{voice}/vocab_la.mp3" },
-      { "id": "v26", "word": "tuổi", "meaning": "age, year old", "audio": "audio/b1/{voice}/vocab_tuoi.mp3" },
-      { "id": "v27", "word": "chào", "meaning": "hi, hello, goodbye", "audio": "audio/b1/{voice}/vocab_chao.mp3" },
-      { "id": "v28", "word": "phòng", "meaning": "room", "audio": "audio/b1/{voice}/vocab_phong.mp3" },
-      { "id": "v29", "word": "xin lỗi", "meaning": "sorry", "audio": "audio/b1/{voice}/vocab_xin_loi.mp3" },
-      { "id": "v30", "word": "làm", "meaning": "do", "audio": "audio/b1/{voice}/vocab_lam.mp3" },
-      { "id": "v31", "word": "cám ơn", "meaning": "thank you", "audio": "audio/b1/{voice}/vocab_cam_on.mp3" },
-      { "id": "v32", "word": "bác sĩ", "meaning": "doctor", "audio": "audio/b1/{voice}/vocab_bac_si.mp3" },
-      { "id": "v33", "word": "khoẻ", "meaning": "healthy, fine", "audio": "audio/b1/{voice}/vocab_khoe.mp3" },
-      { "id": "v34", "word": "giáo viên", "meaning": "teacher", "audio": "audio/b1/{voice}/vocab_giao_vien.mp3" },
-      { "id": "v35", "word": "và", "meaning": "and", "audio": "audio/b1/{voice}/vocab_va.mp3" },
-      { "id": "v36", "word": "kỹ sư", "meaning": "engineer", "audio": "audio/b1/{voice}/vocab_ky_su.mp3" },
-      { "id": "v37", "word": "tên", "meaning": "name", "audio": "audio/b1/{voice}/vocab_ten.mp3" },
-      { "id": "v38", "word": "nhân viên", "meaning": "staff", "audio": "audio/b1/{voice}/vocab_nhan_vien.mp3" },
-      { "id": "v39", "word": "nghề", "meaning": "job", "audio": "audio/b1/{voice}/vocab_nghe.mp3" },
-      { "id": "v40", "word": "nhân viên văn phòng", "meaning": "office staff", "audio": "audio/b1/{voice}/vocab_nhan_vien_van_phong.mp3" },
-      { "id": "v41", "word": "gì", "meaning": "what", "audio": "audio/b1/{voice}/vocab_gi.mp3" },
-      { "id": "v42", "word": "đúng rồi", "meaning": "right, correct", "audio": "audio/b1/{voice}/vocab_dung_roi.mp3" },
-      { "id": "v43", "word": "còn", "meaning": "and, still", "audio": "audio/b1/{voice}/vocab_con.mp3" },
-      { "id": "v44", "word": "của", "meaning": "of, belong to", "audio": "audio/b1/{voice}/vocab_cua.mp3" },
-      { "id": "v45", "word": "biết", "meaning": "know", "audio": "audio/b1/{voice}/vocab_biet.mp3" },
-      { "id": "v46", "word": "không phải", "meaning": "incorrect", "audio": "audio/b1/{voice}/vocab_khong_phai.mp3" },
-      { "id": "v47", "word": "không biết", "meaning": "don't know", "audio": "audio/b1/{voice}/vocab_khong_biet.mp3" },
-      { "id": "v48", "word": "dạ", "meaning": "yes", "audio": "audio/b1/{voice}/vocab_da.mp3" },
-      { "id": "v49", "word": "cũng", "meaning": "also", "audio": "audio/b1/{voice}/vocab_cung.mp3" }
-    ]
-  },
+  <main class="wrap">
+    <div class="lesson-head">
+      <div class="meta-badges" id="meta-badges"></div>
+      <h1 id="title">Đang tải…</h1>
+    </div>
 
-  "grammar": {
-    "points": [
-      {
-        "id": "g1",
-        "title": "Danh xưng — cách gọi người khác & gọi mình",
-        "explanation": "Người Việt chọn danh xưng (anh/chị/em/bạn/mình) tùy theo tuổi tác so với người đang nói chuyện. Xem bảng đầy đủ ở phần chi tiết.",
-        "examples": [],
-        "refInput": "pronouns"
-      },
-      {
-        "id": "g2",
-        "title": "Chào + [Danh xưng]",
-        "explanation": "Thêm danh xưng phù hợp ngay sau 'Chào' để chào ai đó.",
-        "examples": ["Chào anh.", "Chào em."]
-      },
-      {
-        "id": "g3",
-        "title": "Cám ơn + [Danh xưng]",
-        "explanation": "Thêm danh xưng phù hợp ngay sau 'Cám ơn' để cảm ơn ai đó.",
-        "examples": ["Cám ơn bạn.", "Cám ơn chị."]
-      },
-      {
-        "id": "g4",
-        "title": "Xin lỗi + [Danh xưng]",
-        "explanation": "Thêm danh xưng phù hợp ngay sau 'Xin lỗi' khi xin lỗi ai đó.",
-        "examples": ["Xin lỗi em.", "Xin lỗi bạn."]
-      },
-      {
-        "id": "g5",
-        "title": "[Danh xưng] + khoẻ không?",
-        "explanation": "Hỏi thăm sức khoẻ; trả lời bằng cách lặp lại danh xưng rồi thêm 'khoẻ'.",
-        "examples": ["Bạn khoẻ không? → Mình khoẻ.", "Anh khoẻ không? → Anh khoẻ."]
-      }
-    ]
-  },
-  "listening": {
-    "instruction": "Nghe và gõ lại câu bạn nghe được. Bấm vào từ trong ngân hàng từ bên dưới nếu cần trợ giúp.",
-    "groups": [
-      {
-        "id": "d1",
-        "title": "Hội thoại 1",
-        "lines": [
-          { "audio": "audio/b1/{voice}/listen_d1_01.mp3", "text": "Chào em, em tên là gì?", "wordBank": ["gì?", "em", "làm", "anh", "chào", "là", "tên", "nghề", "em", "chị"] },
-          { "audio": "audio/b1/{voice}/listen_d1_02.mp3", "text": "Em tên là Huy. Còn chị?", "wordBank": ["là", "anh", "tên", "em", "Huy", "nghề", "số"] },
-          { "audio": "audio/b1/{voice}/listen_d1_03.mp3", "text": "Chị tên là Liên. Em làm nghề gì?", "wordBank": ["Liên", "làm", "gì?", "tên", "chị", "nghề", "là", "cũng", "em"] },
-          { "audio": "audio/b1/{voice}/listen_d1_04.mp3", "text": "Em là bác sĩ. Còn chị?", "wordBank": ["em", "là", "bác sĩ", "còn", "chị?", "anh", "giáo viên", "kỹ sư", "nghề"] },
-          { "audio": "audio/b1/{voice}/listen_d1_05.mp3", "text": "Chị là giáo viên.", "wordBank": ["chị", "là", "giáo viên", "bác sĩ", "kỹ sư", "nhân viên", "em"] }
-        ]
-      },
-      {
-        "id": "d2",
-        "title": "Hội thoại 2",
-        "lines": [
-          { "audio": "audio/b1/{voice}/listen_d2_01.mp3", "text": "Chào chị, chị tên là gì?", "wordBank": [] },
-          { "audio": "audio/b1/{voice}/listen_d2_02.mp3", "text": "Chị tên là Nguyễn Hà Phương.", "wordBank": [] },
-          { "audio": "audio/b1/{voice}/listen_d2_03.mp3", "text": "Cám ơn chị Hà Phương. Phòng của chị là phòng số 507.", "wordBank": ["chị", "bảy", "Hà Phương", "phòng", "anh", "một", "cám ơn", "em", "phòng", "bảy", "số", "không", "của", "năm", "chị", "là"] },
-          { "audio": "audio/b1/{voice}/listen_d2_04.mp3", "text": "Cám ơn em.", "wordBank": [] }
-        ]
-      },
-      {
-        "id": "d3",
-        "title": "Hội thoại 3",
-        "lines": [
-          { "audio": "audio/b1/{voice}/listen_d3_01.mp3", "text": "Chào bạn, bạn tên là Kiên đúng không?", "wordBank": [] },
-          { "audio": "audio/b1/{voice}/listen_d3_02.mp3", "text": "Không, mình tên là Phong.", "wordBank": [] },
-          { "audio": "audio/b1/{voice}/listen_d3_03.mp3", "text": "Xin lỗi Phong. Số điện thoại của bạn là 091 456 987 đúng không?", "wordBank": [] },
-          { "audio": "audio/b1/{voice}/listen_d3_04.mp3", "text": "Đúng rồi.", "wordBank": [] },
-          { "audio": "audio/b1/{voice}/listen_d3_05.mp3", "text": "Cám ơn bạn.", "wordBank": [] }
-        ]
-      }
-    ]
-  },
-  "reading": {
-    "passages": [
-      {
-        "id": "r1",
-        "title": "Cách xưng hô",
-        "text": "Người Việt thường dùng anh, chị, em hoặc bạn để nói chuyện với người khác. Nếu người kia lớn tuổi hơn bạn, bạn có thể gọi họ là anh (nếu họ là nam) hoặc chị (nếu họ là nữ). Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là em. Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng bạn hoặc mình khi nói chuyện. Cách xưng hô này giúp cuộc nói chuyện thân thiện và lịch sự hơn. Khi không biết nên gọi là gì, nhiều người thường dùng bạn trước. Sau khi biết tuổi, mọi người có thể đổi cách xưng hô cho đúng."
-      }
-    ]
-  },
-  "preClass": {
-    "note": "Xem hình rồi ghi nhớ tên nghề nghiệp trước khi vào bài học.",
-    "vocabPreview": {
-      "instruction": "Xem hình và tên nghề nghiệp.",
-      "items": [
-        { "word": "bác sĩ", "image": "images/b1/nghe/bac_si.jpg" },
-        { "word": "kỹ sư", "image": "images/b1/nghe/ky_su.jpg" },
-        { "word": "nhân viên văn phòng", "image": "images/b1/nghe/nhan_vien_van_phong.jpg" }
-      ]
-    },
-    "imageMatch": {
-      "title": "Nối từ với hình",
-      "instruction": "Chọn đúng nghề cho mỗi hình.",
-      "items": [
-        { "id": "im1", "image": "images/b1/nghe/bac_si.jpg", "answer": "bác sĩ" },
-        { "id": "im2", "image": "images/b1/nghe/ky_su.jpg", "answer": "kỹ sư" },
-        { "id": "im3", "image": "images/b1/nghe/nhan_vien_van_phong.jpg", "answer": "nhân viên văn phòng" }
-      ],
-      "answerBank": ["bác sĩ", "kỹ sư", "nhân viên văn phòng"]
-    },
-    "reasoningQuiz": {
-      "title": "Bài 2: Chọn cách xưng hô đúng",
-      "instruction": "Chọn từ đúng. Nếu chọn sai, đọc giải thích để hiểu vì sao.",
-      "items": [
-        {
-          "id": "q1",
-          "personA": { "name": "Hương", "age": 21, "image": "images/b1/nguoi/huong.jpg" },
-          "personB": { "name": "Phong", "age": 32, "image": "images/b1/nguoi/phong.jpg" },
-          "options": ["anh", "chị", "em", "bạn"],
-          "answer": "anh",
-          "explanations": {
-            "anh": "Đúng! Phong lớn tuổi hơn Hương và là nam, nên Hương gọi Phong là 'anh'.",
-            "chị": "Chưa đúng. 'Chị' dùng khi người lớn tuổi hơn là nữ — nhưng Phong là nam, nên phải gọi 'anh'.",
-            "em": "Chưa đúng. 'Em' dùng khi người kia nhỏ tuổi hơn mình — nhưng Phong (32 tuổi) lớn tuổi hơn Hương (21 tuổi), nên không thể gọi 'em'.",
-            "bạn": "Chưa đúng. 'Bạn' thường dùng khi hai người bằng tuổi hoặc không biết tuổi — ở đây đã biết Phong lớn tuổi hơn, nên gọi 'anh' sẽ đúng hơn."
-          }
-        },
-        {
-          "id": "q2",
-          "personA": { "name": "Kiên", "age": 18, "image": "images/b1/nguoi/kien.jpg" },
-          "personB": { "name": "Phương", "age": 25, "image": "images/b1/nguoi/phuong.jpg" },
-          "options": ["anh", "chị", "em", "bạn"],
-          "answer": "chị",
-          "explanations": {
-            "anh": "Chưa đúng. 'Anh' dùng khi người lớn tuổi hơn là nam — nhưng Phương là nữ, nên phải gọi 'chị'.",
-            "chị": "Đúng! Phương lớn tuổi hơn Kiên và là nữ, nên Kiên gọi Phương là 'chị'.",
-            "em": "Chưa đúng. 'Em' dùng khi người kia nhỏ tuổi hơn mình — nhưng Phương (25 tuổi) lớn tuổi hơn Kiên (18 tuổi).",
-            "bạn": "Chưa đúng. 'Bạn' thường dùng khi hai người bằng tuổi hoặc không biết tuổi — ở đây Phương lớn tuổi hơn Kiên khá nhiều, nên gọi 'chị' sẽ đúng hơn."
-          }
-        },
-        {
-          "id": "q3",
-          "personA": { "name": "Lan", "age": 27, "image": "images/b1/nguoi/lan.jpg" },
-          "personB": { "name": "Long", "age": 27, "image": "images/b1/nguoi/long.jpg" },
-          "options": ["anh", "chị", "em", "bạn"],
-          "answer": "bạn",
-          "explanations": {
-            "anh": "Chưa đúng. 'Anh' dùng khi người kia lớn tuổi hơn — nhưng Lan và Long bằng tuổi nhau (27 tuổi).",
-            "chị": "Chưa đúng. 'Chị' dùng khi người nói nhỏ tuổi hơn một người nữ lớn tuổi hơn — ở đây cả hai bằng tuổi.",
-            "em": "Chưa đúng. 'Em' dùng khi người kia nhỏ tuổi hơn — nhưng Lan và Long bằng tuổi nhau.",
-            "bạn": "Đúng! Lan và Long bằng tuổi nhau (27 tuổi), nên dùng 'bạn' là phù hợp nhất."
-          }
-        }
-      ]
+    <div class="toolbar">
+      <div class="tabs tabs-6" id="tabs">
+        <button class="tab-btn active" data-tab="vocab">Từ vựng</button>
+        <button class="tab-btn" data-tab="grammar">Ngữ pháp</button>
+        <button class="tab-btn" data-tab="listening">Nghe</button>
+        <button class="tab-btn" data-tab="reading">Đọc</button>
+        <button class="tab-btn" data-tab="preclass">Chuẩn bị</button>
+        <button class="tab-btn" data-tab="postclass">Ôn tập</button>
+      </div>
+    </div>
+
+    <section class="tab-panel" id="panel-vocab"><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-grammar" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-listening" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-reading" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-preclass" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-postclass" hidden><p class="note">Đang tải…</p></section>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || '';
+    let level = params.get('level') || 'mam';
+
+    const $title = document.getElementById('title');
+    const $backLink = document.getElementById('back-link');
+    const $tabs = document.getElementById('tabs');
+    const PANELS = ['vocab', 'grammar', 'listening', 'reading', 'preclass', 'postclass'];
+
+    let voice = 'nam';
+    try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
+    function resolveAudio(path) { return (path || '').replace('{voice}', voice); }
+
+    let player = new Audio();
+    player.preload = 'auto';
+    let currentEl = null;
+    player.addEventListener('ended', function () { if (currentEl) currentEl.classList.remove('playing'); });
+    function play(src, elm) {
+      if (!src) return;
+      if (currentEl) currentEl.classList.remove('playing');
+      currentEl = elm || null;
+      if (currentEl) currentEl.classList.add('playing');
+      try { player.pause(); } catch (e) {}
+      player.src = src;
+      try { player.currentTime = 0; } catch (e) {}
+      const pr = player.play();
+      if (pr && pr.catch) pr.catch(function (e) {
+        if (currentEl) currentEl.classList.remove('playing');
+        console.warn('Không phát được audio:', src, e && e.message);
+      });
     }
-  },
-  "postClass": { "exercises": [] }
-}
+
+    function el(tag, cls, txt) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (txt != null) n.textContent = txt;
+      return n;
+    }
+    function playBtn(src) {
+      const b = el('button', 'play-sentence');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Phát audio');
+      b.innerHTML = '▶';
+      if (src) { b.addEventListener('click', function () { play(resolveAudio(src), b); }); }
+      else { b.disabled = true; }
+      return b;
+    }
+    function norm(s) {
+      return (s || '')
+        .toString().trim().toLowerCase()
+        .normalize('NFC')
+        .replace(/[.,!?;:"'“”]/g, '')
+        .replace(/\s+/g, ' ');
+    }
+    function emptyNote(text) { return el('p', 'note', text); }
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+      }
+      return a;
+    }
+
+    // ---------- Tabs ----------
+    $tabs.addEventListener('click', function (e) {
+      const btn = e.target.closest('.tab-btn');
+      if (!btn) return;
+      document.querySelectorAll('#tabs .tab-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const tab = btn.dataset.tab;
+      PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = (p !== tab); });
+    });
+
+    // ========================================================
+    // TỪ VỰNG — Danh sách / Flashcards / Trắc nghiệm
+    // ========================================================
+    function savedKey(w) { return 'saved:' + level + ':' + itemId + ':' + w.id; }
+    function isSaved(w) { try { return localStorage.getItem(savedKey(w)) === '1'; } catch (e) { return false; } }
+    function toggleSaved(w, starEl) {
+      try {
+        const now = !isSaved(w);
+        localStorage.setItem(savedKey(w), now ? '1' : '0');
+        starEl.classList.toggle('starred', now);
+      } catch (e) {}
+    }
+
+    function renderVocabList(items) {
+      const wrap = el('div', 'vocab-list');
+      items.forEach(function (w, i) {
+        const row = el('div', 'vocab-row');
+        row.appendChild(el('span', 'vocab-idx', String(i + 1) + '.'));
+        const main = el('div', 'vocab-row-main');
+        main.appendChild(el('span', 'vocab-row-word', w.word));
+        if (w.ipa) main.appendChild(el('span', 'vocab-row-ipa', w.ipa));
+        main.appendChild(el('span', 'vocab-row-sep', '—'));
+        main.appendChild(el('span', 'vocab-row-meaning', w.meaning));
+        row.appendChild(main);
+        const actions = el('div', 'vocab-row-actions');
+        const star = el('button', 'icon-btn star-btn' + (isSaved(w) ? ' starred' : ''));
+        star.type = 'button'; star.innerHTML = '★'; star.setAttribute('aria-label', 'Lưu từ');
+        star.addEventListener('click', function () { toggleSaved(w, star); });
+        actions.appendChild(star);
+        actions.appendChild(playBtn(w.audio));
+        row.appendChild(actions);
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    function renderVocabFlashcards(items) {
+      const wrap = el('div', 'flash-wrap');
+      let i = 0, flipped = false;
+      const card = el('div', 'flash-card');
+      const progress = el('div', 'flash-progress');
+      function draw() {
+        flipped = false;
+        card.classList.remove('flipped');
+        const w = items[i];
+        card.innerHTML = '';
+        const front = el('div', 'flash-face flash-front', w.word);
+        const back = el('div', 'flash-face flash-back');
+        if (w.ipa) back.appendChild(el('div', 'flash-ipa', w.ipa));
+        back.appendChild(el('div', 'flash-meaning', w.meaning));
+        card.appendChild(front); card.appendChild(back);
+        progress.textContent = (i + 1) + ' / ' + items.length;
+      }
+      card.addEventListener('click', function () {
+        flipped = !flipped;
+        card.classList.toggle('flipped', flipped);
+        if (flipped) play(resolveAudio(items[i].audio));
+      });
+      const nav = el('div', 'flash-nav');
+      const prev = el('button', 'btn-check btn-secondary', '← Trước');
+      const next = el('button', 'btn-check', 'Tiếp →');
+      prev.type = 'button'; next.type = 'button';
+      prev.addEventListener('click', function () { i = (i - 1 + items.length) % items.length; draw(); });
+      next.addEventListener('click', function () { i = (i + 1) % items.length; draw(); });
+      draw();
+      wrap.appendChild(progress);
+      wrap.appendChild(card);
+      wrap.appendChild(el('p', 'ex-instruction', 'Bấm vào thẻ để lật xem nghĩa (tự phát âm khi lật).'));
+      nav.appendChild(prev); nav.appendChild(next);
+      wrap.appendChild(nav);
+      return wrap;
+    }
+
+    function renderVocabQuiz(items) {
+      const wrap = el('div', 'quiz-wrap');
+      const order = shuffle(items);
+      let i = 0, correct = 0, answered = false;
+      const body = el('div', 'quiz-body');
+      const foot = el('div', 'quiz-foot');
+      function nextQuestion() {
+        answered = false;
+        body.innerHTML = '';
+        if (i >= order.length) {
+          body.appendChild(el('p', 'quiz-score', 'Xong! Đúng ' + correct + '/' + order.length + ' câu.'));
+          const retry = el('button', 'btn-check', 'Làm lại');
+          retry.type = 'button';
+          retry.addEventListener('click', function () { i = 0; correct = 0; nextQuestion(); });
+          body.appendChild(retry);
+          foot.textContent = '';
+          return;
+        }
+        const w = order[i];
+        foot.textContent = 'Câu ' + (i + 1) + '/' + order.length;
+        const qHead = el('div', 'quiz-q-head');
+        qHead.appendChild(el('span', 'quiz-word', w.word));
+        qHead.appendChild(playBtn(w.audio));
+        body.appendChild(qHead);
+        if (w.ipa) body.appendChild(el('p', 'vocab-row-ipa', w.ipa));
+
+        const distractors = shuffle(items.filter(function (x) { return x.id !== w.id; })).slice(0, 3);
+        const options = shuffle([w].concat(distractors));
+        const optWrap = el('div', 'quiz-options');
+        options.forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt.meaning);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            if (answered) return;
+            answered = true;
+            const ok = opt.id === w.id;
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) {
+              Array.from(optWrap.children).forEach(function (c) {
+                if (c.textContent === w.meaning) c.classList.add('opt-correct');
+              });
+            } else { correct++; }
+            const nextBtn = el('button', 'btn-check', i + 1 >= order.length ? 'Xem kết quả →' : 'Câu tiếp →');
+            nextBtn.type = 'button';
+            nextBtn.style.marginTop = '14px';
+            nextBtn.addEventListener('click', function () { i++; nextQuestion(); });
+            body.appendChild(nextBtn);
+          });
+          optWrap.appendChild(btn);
+        });
+        body.appendChild(optWrap);
+      }
+      nextQuestion();
+      wrap.appendChild(foot);
+      wrap.appendChild(body);
+      return wrap;
+    }
+
+    function renderVocabTab(item) {
+      const panel = document.getElementById('panel-vocab');
+      panel.innerHTML = '';
+      const items = (item.vocab && item.vocab.items) || [];
+      if (!items.length) { panel.appendChild(emptyNote('Từ vựng đang được cập nhật.')); return; }
+
+      const modeBar = el('div', 'mode-bar');
+      const modes = [['list', 'Danh sách'], ['flashcards', 'Flashcards'], ['quiz', 'Trắc nghiệm']];
+      const content = el('div', 'vocab-content');
+      let activeMode = 'list';
+      function draw() {
+        content.innerHTML = '';
+        if (activeMode === 'list') content.appendChild(renderVocabList(items));
+        else if (activeMode === 'flashcards') content.appendChild(renderVocabFlashcards(items));
+        else content.appendChild(renderVocabQuiz(items));
+      }
+      modes.forEach(function (m) {
+        const b = el('button', 'mode-btn' + (m[0] === activeMode ? ' active' : ''), m[1]);
+        b.type = 'button';
+        b.addEventListener('click', function () {
+          activeMode = m[0];
+          modeBar.querySelectorAll('.mode-btn').forEach(function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          draw();
+        });
+        modeBar.appendChild(b);
+      });
+      panel.appendChild(modeBar);
+      panel.appendChild(content);
+      draw();
+    }
+
+    // ========================================================
+    // NGỮ PHÁP
+    // ========================================================
+    function renderGrammarTab(item) {
+      const panel = document.getElementById('panel-grammar');
+      panel.innerHTML = '';
+      const points = (item.grammar && item.grammar.points) || [];
+      if (!points.length) { panel.appendChild(emptyNote('Ngữ pháp đang được cập nhật.')); return; }
+      points.forEach(function (g) {
+        const box = el('div', 'exercise');
+        const headRow = el('div', 'grammar-head');
+        headRow.appendChild(el('h3', 'ex-title', g.title));
+        if (g.refInput) {
+          const a = document.createElement('a');
+          a.className = 'chip chip-link';
+          a.href = 'input.html?id=' + encodeURIComponent(g.refInput) + '&level=' + encodeURIComponent(level);
+          a.textContent = 'Xem chi tiết →';
+          headRow.appendChild(a);
+        }
+        box.appendChild(headRow);
+        if (g.explanation) box.appendChild(el('p', 'ex-instruction', g.explanation));
+        (g.examples || []).forEach(function (ex) {
+          const row = el('div', 'turn');
+          row.appendChild(el('span', 'turn-text', ex));
+          box.appendChild(row);
+        });
+        panel.appendChild(box);
+      });
+    }
+
+    // ========================================================
+    // NGHE
+    // ========================================================
+    function renderDictationLine(line) {
+      const wrap = el('div', 'dictation-item');
+      const row = el('div', 'listen-row');
+      row.appendChild(playBtn(line.audio));
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'blank-input dictation-input';
+      input.placeholder = 'Gõ câu bạn nghe được…';
+      row.appendChild(input);
+      const resultSlot = el('span', 'result-slot');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        const ok = norm(input.value) === norm(line.text);
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+        if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + line.text + ')'));
+      });
+      row.appendChild(checkBtn);
+      row.appendChild(resultSlot);
+      wrap.appendChild(row);
+      const bankWords = line.wordBank || [];
+      if (bankWords.length) {
+        const bank = el('div', 'scramble-bank');
+        bankWords.forEach(function (w) {
+          const chip = el('span', 'chip chip-pickable', w);
+          chip.addEventListener('click', function () {
+            input.value = (input.value ? input.value + ' ' : '') + w;
+            input.focus();
+          });
+          bank.appendChild(chip);
+        });
+        wrap.appendChild(bank);
+      }
+      return wrap;
+    }
+
+    function renderListeningTab(item) {
+      const panel = document.getElementById('panel-listening');
+      panel.innerHTML = '';
+      const listening = item.listening || {};
+      const groups = listening.groups || [];
+      const entries = listening.items || [];
+      if (!groups.length && !entries.length) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
+      if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
+
+      // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank
+      groups.forEach(function (g, gi) {
+        const box = el('div', 'exercise');
+        box.appendChild(el('h3', 'ex-title', g.title || ('Đoạn hội thoại ' + (gi + 1))));
+        (g.lines || []).forEach(function (line) { box.appendChild(renderDictationLine(line)); });
+        panel.appendChild(box);
+      });
+
+      // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
+      if (entries.length) {
+        const box = el('div', 'exercise');
+        entries.forEach(function (it, i) {
+          const row = el('div', 'listen-row');
+          row.appendChild(playBtn(it.audio));
+          row.appendChild(el('span', 'match-prompt', it.title || ('Đoạn ' + (i + 1))));
+          if (it.transcript) row.appendChild(el('span', 'order-label', it.transcript));
+          box.appendChild(row);
+        });
+        panel.appendChild(box);
+      }
+    }
+
+    // ========================================================
+    // ĐỌC
+    // ========================================================
+    function renderReadingTab(item) {
+      const panel = document.getElementById('panel-reading');
+      panel.innerHTML = '';
+      const passages = (item.reading && item.reading.passages) || [];
+      if (!passages.length) { panel.appendChild(emptyNote('Bài đọc đang được cập nhật.')); return; }
+      passages.forEach(function (p) {
+        const box = el('div', 'exercise reading-passage');
+        const head = el('div', 'dialogue-head');
+        if (p.audio) head.appendChild(playBtn(p.audio));
+        head.appendChild(el('h3', 'ex-title', p.title || ''));
+        box.appendChild(head);
+        (String(p.text || '').split(/\n+/)).forEach(function (para) {
+          if (para.trim()) box.appendChild(el('p', 'reading-para', para.trim()));
+        });
+        panel.appendChild(box);
+      });
+    }
+
+    // ========================================================
+    // CHUẨN BỊ (pre-class)
+    // ========================================================
+    function renderVocabPreview(vp) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+      if (vp.instruction) box.appendChild(el('p', 'ex-instruction', vp.instruction));
+      const grid = el('div', 'image-vocab-grid');
+      (vp.items || []).forEach(function (it) {
+        const card = el('div', 'image-vocab-card');
+        const img = document.createElement('img');
+        img.src = it.image; img.alt = it.word; img.className = 'image-vocab-img';
+        card.appendChild(img);
+        card.appendChild(el('div', 'image-vocab-word', it.word));
+        grid.appendChild(card);
+      });
+      box.appendChild(grid);
+      return box;
+    }
+
+    function renderImageMatch(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const rows = [];
+      (ex.items || []).forEach(function (it) {
+        const row = el('div', 'match-row image-match-row');
+        const img = document.createElement('img');
+        img.src = it.image; img.alt = ''; img.className = 'match-img';
+        row.appendChild(img);
+        const select = document.createElement('select');
+        select.className = 'answer-select';
+        const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+        (ex.answerBank || []).forEach(function (a) { const opt = el('option', null, a); opt.value = a; select.appendChild(opt); });
+        select.dataset.answer = it.answer;
+        row.appendChild(select);
+        const resultSlot = el('span', 'result-slot');
+        row.appendChild(resultSlot);
+        rows.push({ select: select, resultSlot: resultSlot });
+        box.appendChild(row);
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        rows.forEach(function (r) {
+          const ok = r.select.value === r.select.dataset.answer;
+          r.resultSlot.innerHTML = '';
+          r.resultSlot.appendChild(checkRow(ok));
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function personLabel(p) { return p ? p.name + ' (' + p.age + ' tuổi)' : ''; }
+
+    function renderReasoningQuiz(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      (ex.items || []).forEach(function (q) {
+        const qBox = el('div', 'reasoning-item');
+        const head = el('div', 'reasoning-head');
+        if (q.personA && q.personA.image) { const img = document.createElement('img'); img.src = q.personA.image; img.className = 'reasoning-avatar'; head.appendChild(img); }
+        head.appendChild(el('span', 'match-prompt', personLabel(q.personA) + ' gọi ' + personLabel(q.personB) + ' là gì?'));
+        if (q.personB && q.personB.image) { const img2 = document.createElement('img'); img2.src = q.personB.image; img2.className = 'reasoning-avatar'; head.appendChild(img2); }
+        qBox.appendChild(head);
+        const optWrap = el('div', 'quiz-options');
+        const explainSlot = el('p', 'ex-instruction reasoning-explain');
+        (q.options || []).forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            const ok = opt === q.answer;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+          });
+          optWrap.appendChild(btn);
+        });
+        qBox.appendChild(optWrap);
+        qBox.appendChild(explainSlot);
+        box.appendChild(qBox);
+      });
+      return box;
+    }
+
+    function renderPreClassTab(item) {
+      const panel = document.getElementById('panel-preclass');
+      panel.innerHTML = '';
+      const pre = item.preClass || {};
+      const dialogues = pre.dialogues || [];
+      const hasNew = pre.vocabPreview || pre.imageMatch || pre.reasoningQuiz;
+      if (pre.note) panel.appendChild(el('p', 'note', pre.note));
+      if (!dialogues.length && !hasNew) {
+        if (!pre.note) panel.appendChild(emptyNote('Nội dung chuẩn bị trước buổi học đang được cập nhật.'));
+        return;
+      }
+      if (pre.vocabPreview) panel.appendChild(renderVocabPreview(pre.vocabPreview));
+      if (pre.imageMatch) panel.appendChild(renderImageMatch(pre.imageMatch));
+      if (pre.reasoningQuiz) panel.appendChild(renderReasoningQuiz(pre.reasoningQuiz));
+
+      if (dialogues.length) {
+        const box = el('div', 'exercise');
+        box.appendChild(el('h3', 'ex-title', 'Nghe trước ở nhà'));
+        dialogues.forEach(function (d) {
+          const dbox = el('div', 'dialogue');
+          const head = el('div', 'dialogue-head');
+          head.appendChild(playBtn(d.audio));
+          head.appendChild(el('span', 'dialogue-label', 'Nghe cả đoạn'));
+          dbox.appendChild(head);
+          (d.turns || []).forEach(function (t) {
+            const row = el('div', 'turn');
+            row.appendChild(el('span', 'turn-speaker', t.speaker + ':'));
+            row.appendChild(el('span', 'turn-text', t.text));
+            dbox.appendChild(row);
+          });
+          box.appendChild(dbox);
+        });
+        panel.appendChild(box);
+      }
+    }
+
+    // ========================================================
+    // ÔN TẬP (post-class) — tái dùng bộ renderer bài tập
+    // ========================================================
+    function checkRow(ok) { return el('span', 'result ' + (ok ? 'result-ok' : 'result-bad'), ok ? '✓' : '✗'); }
+
+    function renderMatching(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const groups = ex.groups || [{ label: null, prompts: ex.prompts || [] }];
+      const selects = [];
+      groups.forEach(function (g) {
+        if (g.label) box.appendChild(el('h4', 'group-label', g.label));
+        (g.prompts || []).forEach(function (p) {
+          const row = el('div', 'match-row');
+          row.appendChild(el('span', 'match-prompt', p.text));
+          const select = document.createElement('select');
+          select.className = 'answer-select';
+          const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+          ex.answerBank.forEach(function (a) {
+            const opt = el('option', null, a.text); opt.value = a.id; select.appendChild(opt);
+          });
+          select.dataset.answer = p.answer;
+          row.appendChild(select);
+          const resultSlot = el('span', 'result-slot');
+          row.appendChild(resultSlot);
+          row._resultSlot = resultSlot; row._select = select;
+          selects.push(row);
+          box.appendChild(row);
+        });
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        selects.forEach(function (row) {
+          const ok = row._select.value === row._select.dataset.answer;
+          row._resultSlot.innerHTML = '';
+          row._resultSlot.appendChild(checkRow(ok));
+          if (!ok) {
+            const correctText = ex.answerBank.find(function (a) { return a.id === row._select.dataset.answer; });
+            row._resultSlot.appendChild(el('span', 'correct-hint', correctText ? ' (' + correctText.text + ')' : ''));
+          }
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function renderRimeTableFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const allInputs = [];
+      (ex.groups || []).forEach(function (g) {
+        const row = el('div', 'rime-row');
+        (g.given || []).forEach(function (w) { row.appendChild(el('span', 'chip chip-given', w)); });
+        const groupInputs = [];
+        for (let i = 0; i < g.blanks; i++) {
+          const input = document.createElement('input');
+          input.type = 'text'; input.className = 'blank-input';
+          input.dataset.answer = g.answers[i];
+          row.appendChild(input);
+          groupInputs.push(input);
+        }
+        allInputs.push.apply(allInputs, groupInputs);
+        box.appendChild(row);
+      });
+      if (ex.wordBank) {
+        const bank = el('div', 'word-bank');
+        bank.appendChild(el('span', 'word-bank-label', 'Ngân hàng từ: '));
+        ex.wordBank.forEach(function (w) { bank.appendChild(el('span', 'chip chip-bank', w)); });
+        box.appendChild(bank);
+      }
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        allInputs.forEach(function (input) {
+          const ok = norm(input.value) === norm(input.dataset.answer);
+          input.classList.remove('input-ok', 'input-bad');
+          input.classList.add(ok ? 'input-ok' : 'input-bad');
+          if (!ok) input.title = 'Đáp án: ' + input.dataset.answer;
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function renderSort(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      let selectedChip = null;
+      const assignment = {};
+      const bank = el('div', 'word-bank');
+      const chipEls = {};
+      ex.wordBank.forEach(function (w) {
+        const chip = el('span', 'chip chip-pickable', w);
+        chip.addEventListener('click', function () {
+          if (chip.classList.contains('chip-used')) return;
+          if (selectedChip) selectedChip.classList.remove('chip-selected');
+          selectedChip = chip;
+          chip.classList.add('chip-selected');
+        });
+        chipEls[w] = chip;
+        bank.appendChild(chip);
+      });
+      box.appendChild(bank);
+      const catsWrap = el('div', 'sort-cats');
+      (ex.categories || []).forEach(function (cat) {
+        const catBox = el('div', 'sort-cat');
+        catBox.appendChild(el('h4', 'group-label', cat.label));
+        if (cat.example) catBox.appendChild(el('span', 'chip chip-given', cat.example));
+        const dropZone = el('div', 'sort-dropzone');
+        catBox.appendChild(dropZone);
+        catBox.addEventListener('click', function () {
+          if (!selectedChip) return;
+          const word = selectedChip.textContent;
+          selectedChip.classList.add('chip-used');
+          selectedChip.classList.remove('chip-selected');
+          assignment[word] = cat.id;
+          dropZone.appendChild(el('span', 'chip chip-placed', word));
+          selectedChip = null;
+        });
+        catsWrap.appendChild(catBox);
+      });
+      box.appendChild(catsWrap);
+      const resetBtn = el('button', 'btn-check btn-secondary', 'Làm lại'); resetBtn.type = 'button';
+      resetBtn.addEventListener('click', function () {
+        Object.keys(assignment).forEach(function (k) { delete assignment[k]; });
+        catsWrap.querySelectorAll('.sort-dropzone').forEach(function (z) { z.innerHTML = ''; });
+        Object.values(chipEls).forEach(function (c) { c.classList.remove('chip-used', 'chip-selected'); });
+        selectedChip = null;
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const resultLine = el('p', 'ex-instruction');
+      checkBtn.addEventListener('click', function () {
+        let correct = 0, total = 0;
+        (ex.categories || []).forEach(function (cat) {
+          (cat.answers || []).forEach(function (w) { total++; if (assignment[w] === cat.id) correct++; });
+        });
+        resultLine.textContent = 'Đúng ' + correct + '/' + total + '.';
+      });
+      box.appendChild(checkBtn); box.appendChild(resetBtn); box.appendChild(resultLine);
+      return box;
+    }
+
+    function renderScramble(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      (ex.items || []).forEach(function (item) {
+        const itemBox = el('div', 'scramble-item');
+        itemBox.appendChild(el('p', 'match-prompt', item.prompt));
+        const built = el('div', 'scramble-built');
+        const bank = el('div', 'scramble-bank');
+        let order = [];
+        function refreshBuilt() {
+          built.innerHTML = '';
+          order.forEach(function (idx) {
+            const chip = el('span', 'chip chip-placed', item.tokens[idx]);
+            chip.addEventListener('click', function () {
+              order = order.filter(function (i) { return i !== idx; });
+              refreshBuilt(); refreshBank();
+            });
+            built.appendChild(chip);
+          });
+        }
+        function refreshBank() {
+          bank.innerHTML = '';
+          item.tokens.forEach(function (tok, idx) {
+            if (order.indexOf(idx) !== -1) return;
+            const chip = el('span', 'chip chip-pickable', tok);
+            chip.addEventListener('click', function () { order.push(idx); refreshBuilt(); refreshBank(); });
+            bank.appendChild(chip);
+          });
+        }
+        refreshBuilt(); refreshBank();
+        itemBox.appendChild(built); itemBox.appendChild(bank);
+        const resultSlot = el('span', 'result-slot');
+        const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+        checkBtn.addEventListener('click', function () {
+          const builtStr = order.map(function (i) { return item.tokens[i]; }).join(' ');
+          const ok = norm(builtStr) === norm(item.answer);
+          resultSlot.innerHTML = '';
+          resultSlot.appendChild(checkRow(ok));
+          if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+        });
+        itemBox.appendChild(checkBtn); itemBox.appendChild(resultSlot);
+        box.appendChild(itemBox);
+      });
+      return box;
+    }
+
+    function renderListenOrderFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const rows = [];
+      (ex.items || []).forEach(function (item) {
+        const row = el('div', 'listen-row');
+        row.appendChild(playBtn(item.audio));
+        row.appendChild(el('span', 'match-prompt', item.place));
+        const parts = (item.template || '').split('___');
+        row.appendChild(el('span', null, parts[0]));
+        const numInput = document.createElement('input');
+        numInput.type = 'text'; numInput.className = 'blank-input blank-input-sm';
+        numInput.dataset.answer = item.answer;
+        row.appendChild(numInput);
+        row.appendChild(el('span', null, parts[1] || ''));
+        row.appendChild(el('span', 'order-label', ' — thứ tự nghe:'));
+        const orderInput = document.createElement('input');
+        orderInput.type = 'text'; orderInput.className = 'blank-input blank-input-sm';
+        orderInput.dataset.answer = String(item.order);
+        row.appendChild(orderInput);
+        const resultSlot = el('span', 'result-slot');
+        row.appendChild(resultSlot);
+        rows.push({ numInput: numInput, orderInput: orderInput, resultSlot: resultSlot });
+        box.appendChild(row);
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        rows.forEach(function (r) {
+          const ok = norm(r.numInput.value) === norm(r.numInput.dataset.answer) &&
+                     norm(r.orderInput.value) === norm(r.orderInput.dataset.answer);
+          r.resultSlot.innerHTML = '';
+          r.resultSlot.appendChild(checkRow(ok));
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    const EX_RENDERERS = {
+      matching: renderMatching,
+      rime_table_fill: renderRimeTableFill,
+      sort: renderSort,
+      scramble: renderScramble,
+      listen_order_fill: renderListenOrderFill
+    };
+
+    function renderPostClassTab(item) {
+      const panel = document.getElementById('panel-postclass');
+      panel.innerHTML = '';
+      const post = item.postClass || {};
+      if (post.reviewNote) panel.appendChild(el('p', 'note', post.reviewNote));
+      const exercises = post.exercises || [];
+      if (!exercises.length) {
+        if (!post.reviewNote) panel.appendChild(emptyNote('Bài ôn tập đang được cập nhật.'));
+        return;
+      }
+      exercises.forEach(function (ex) {
+        const renderer = EX_RENDERERS[ex.type];
+        if (renderer) panel.appendChild(renderer(ex));
+        else panel.appendChild(emptyNote('Chưa hỗ trợ loại bài tập: ' + ex.type));
+      });
+    }
+
+    // ========================================================
+    // Badge số liệu đầu trang
+    // ========================================================
+    function renderMetaBadges(item) {
+      const wrap = document.getElementById('meta-badges');
+      wrap.innerHTML = '';
+      const counts = [
+        ['🔤', ((item.vocab && item.vocab.items) || []).length + ' từ'],
+        ['📖', ((item.grammar && item.grammar.points) || []).length + ' ngữ pháp'],
+        ['🎧', ((item.listening && item.listening.items) || []).length + ' bài nghe'],
+        ['📄', ((item.reading && item.reading.passages) || []).length + ' bài đọc']
+      ];
+      counts.forEach(function (c) {
+        wrap.appendChild(el('span', 'meta-badge', c[0] + ' ' + c[1]));
+      });
+    }
+
+    // ---------- Load ----------
+    (async function () {
+      $backLink.href = 'lessons.html?level=' + encodeURIComponent(level);
+
+      try {
+        const res = await fetch(level + '/items/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+
+        document.title = (item.title || itemId) + ' — hoc voi hanh';
+        $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
+
+        renderMetaBadges(item);
+        renderVocabTab(item);
+        renderGrammarTab(item);
+        renderListeningTab(item);
+        renderReadingTab(item);
+        renderPreClassTab(item);
+        renderPostClassTab(item);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Không tải được bài học';
+        document.getElementById('panel-vocab').innerHTML = '<p class="note">Không tìm thấy file bài học. Kiểm tra đường dẫn <code>' + level + '/items/' + itemId + '.json</code>.</p>';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+</body>
+</html>
