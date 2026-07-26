@@ -36,7 +36,9 @@
       { "id": "v29", "word": "và", "meaning": "and", "audio": "audio/b3/{voice}/vocab_va.mp3" },
       { "id": "v30", "word": "một mình", "meaning": "alone", "audio": "audio/b3/{voice}/vocab_mot_minh.mp3" },
       { "id": "v31", "word": "để", "meaning": "in order to", "audio": "audio/b3/{voice}/vocab_de.mp3" },
-      { "id": "v32", "word": "hoặc", "meaning": "or", "audio": "audio/b3/{voice}/vocab_hoac.mp3" }
+      { "id": "v32", "word": "hoặc", "meaning": "or", "audio": "audio/b3/{voice}/vocab_hoac.mp3" },
+      { "id": "v33", "word": "sớm", "meaning": "early", "audio": "audio/b3/{voice}/vocab_som.mp3" },
+      { "id": "v34", "word": "trễ", "meaning": "late", "audio": "audio/b3/{voice}/vocab_tre.mp3" }
     ]
   },
 
