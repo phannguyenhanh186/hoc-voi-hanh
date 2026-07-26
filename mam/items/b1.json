@@ -145,7 +145,8 @@
       "items": [
         { "word": "bác sĩ", "image": "images/b1/nghe/bac_si.jpg" },
         { "word": "kỹ sư", "image": "images/b1/nghe/ky_su.jpg" },
-        { "word": "nhân viên văn phòng", "image": "images/b1/nghe/nhan_vien_van_phong.jpg" }
+        { "word": "nhân viên văn phòng", "image": "images/b1/nghe/nhan_vien_van_phong.jpg" },
+        { "word": "giáo viên", "image": "images/b1/nghe/giao_vien.jpg" }
       ]
     },
     "imageMatch": {
@@ -154,9 +155,10 @@
       "items": [
         { "id": "im1", "image": "images/b1/nghe/bac_si.jpg", "answer": "bác sĩ" },
         { "id": "im2", "image": "images/b1/nghe/ky_su.jpg", "answer": "kỹ sư" },
-        { "id": "im3", "image": "images/b1/nghe/nhan_vien_van_phong.jpg", "answer": "nhân viên văn phòng" }
+        { "id": "im3", "image": "images/b1/nghe/nhan_vien_van_phong.jpg", "answer": "nhân viên văn phòng" },
+        { "id": "im4", "image": "images/b1/nghe/giao_vien.jpg", "answer": "giáo viên" }
       ],
-      "answerBank": ["bác sĩ", "kỹ sư", "nhân viên văn phòng"]
+      "answerBank": ["bác sĩ", "kỹ sư", "nhân viên văn phòng", "giáo viên"]
     },
     "reasoningQuiz": {
       "title": "Bài 2: Chọn cách xưng hô đúng",
