@@ -9,7 +9,7 @@
     { "id": "tones", "title": "6 thanh điệu", "titleEn": "The 6 tones", "status": "ready" }
   ],
   "lessons": [
-    { "id": "b1", "num": 1, "title": "Chào bạn, bạn tên là gì?", "status": "todo" },
+    { "id": "b1", "num": 1, "title": "Chào bạn, bạn tên là gì?", "status": "ready" },
     { "id": "b2", "num": 2, "title": "Hoạt động trong ngày", "status": "todo" },
     { "id": "b3", "num": 3, "title": "Hỏi/Nói giá tiền", "status": "todo" },
     { "id": "b4", "num": 4, "title": "Tần suất các hoạt động", "status": "todo" },
