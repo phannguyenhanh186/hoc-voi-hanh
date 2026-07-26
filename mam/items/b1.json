@@ -129,7 +129,80 @@
       }
     ]
   },
-  "reading": { "passages": [] },
-  "preClass": { "dialogues": [] },
+  "reading": {
+    "passages": [
+      {
+        "id": "r1",
+        "title": "Cách xưng hô",
+        "text": "Người Việt thường dùng anh, chị, em hoặc bạn để nói chuyện với người khác. Nếu người kia lớn tuổi hơn bạn, bạn có thể gọi họ là anh (nếu họ là nam) hoặc chị (nếu họ là nữ). Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là em. Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng bạn hoặc mình khi nói chuyện. Cách xưng hô này giúp cuộc nói chuyện thân thiện và lịch sự hơn. Khi không biết nên gọi là gì, nhiều người thường dùng bạn trước. Sau khi biết tuổi, mọi người có thể đổi cách xưng hô cho đúng."
+      }
+    ]
+  },
+  "preClass": {
+    "note": "Xem hình rồi ghi nhớ tên nghề nghiệp trước khi vào bài học.",
+    "vocabPreview": {
+      "instruction": "Xem hình và tên nghề nghiệp.",
+      "items": [
+        { "word": "bác sĩ", "image": "images/b1/nghe/bac_si.jpg" },
+        { "word": "kỹ sư", "image": "images/b1/nghe/ky_su.jpg" },
+        { "word": "nhân viên văn phòng", "image": "images/b1/nghe/nhan_vien_van_phong.jpg" }
+      ]
+    },
+    "imageMatch": {
+      "title": "Nối từ với hình",
+      "instruction": "Chọn đúng nghề cho mỗi hình.",
+      "items": [
+        { "id": "im1", "image": "images/b1/nghe/bac_si.jpg", "answer": "bác sĩ" },
+        { "id": "im2", "image": "images/b1/nghe/ky_su.jpg", "answer": "kỹ sư" },
+        { "id": "im3", "image": "images/b1/nghe/nhan_vien_van_phong.jpg", "answer": "nhân viên văn phòng" }
+      ],
+      "answerBank": ["bác sĩ", "kỹ sư", "nhân viên văn phòng"]
+    },
+    "reasoningQuiz": {
+      "title": "Bài 2: Chọn cách xưng hô đúng",
+      "instruction": "Chọn từ đúng. Nếu chọn sai, đọc giải thích để hiểu vì sao.",
+      "items": [
+        {
+          "id": "q1",
+          "personA": { "name": "Hương", "age": 21, "image": "images/b1/nguoi/huong.jpg" },
+          "personB": { "name": "Phong", "age": 32, "image": "images/b1/nguoi/phong.jpg" },
+          "options": ["anh", "chị", "em", "bạn"],
+          "answer": "anh",
+          "explanations": {
+            "anh": "Đúng! Phong lớn tuổi hơn Hương và là nam, nên Hương gọi Phong là 'anh'.",
+            "chị": "Chưa đúng. 'Chị' dùng khi người lớn tuổi hơn là nữ — nhưng Phong là nam, nên phải gọi 'anh'.",
+            "em": "Chưa đúng. 'Em' dùng khi người kia nhỏ tuổi hơn mình — nhưng Phong (32 tuổi) lớn tuổi hơn Hương (21 tuổi), nên không thể gọi 'em'.",
+            "bạn": "Chưa đúng. 'Bạn' thường dùng khi hai người bằng tuổi hoặc không biết tuổi — ở đây đã biết Phong lớn tuổi hơn, nên gọi 'anh' sẽ đúng hơn."
+          }
+        },
+        {
+          "id": "q2",
+          "personA": { "name": "Kiên", "age": 18, "image": "images/b1/nguoi/kien.jpg" },
+          "personB": { "name": "Phương", "age": 25, "image": "images/b1/nguoi/phuong.jpg" },
+          "options": ["anh", "chị", "em", "bạn"],
+          "answer": "chị",
+          "explanations": {
+            "anh": "Chưa đúng. 'Anh' dùng khi người lớn tuổi hơn là nam — nhưng Phương là nữ, nên phải gọi 'chị'.",
+            "chị": "Đúng! Phương lớn tuổi hơn Kiên và là nữ, nên Kiên gọi Phương là 'chị'.",
+            "em": "Chưa đúng. 'Em' dùng khi người kia nhỏ tuổi hơn mình — nhưng Phương (25 tuổi) lớn tuổi hơn Kiên (18 tuổi).",
+            "bạn": "Chưa đúng. 'Bạn' thường dùng khi hai người bằng tuổi hoặc không biết tuổi — ở đây Phương lớn tuổi hơn Kiên khá nhiều, nên gọi 'chị' sẽ đúng hơn."
+          }
+        },
+        {
+          "id": "q3",
+          "personA": { "name": "Lan", "age": 27, "image": "images/b1/nguoi/lan.jpg" },
+          "personB": { "name": "Long", "age": 27, "image": "images/b1/nguoi/long.jpg" },
+          "options": ["anh", "chị", "em", "bạn"],
+          "answer": "bạn",
+          "explanations": {
+            "anh": "Chưa đúng. 'Anh' dùng khi người kia lớn tuổi hơn — nhưng Lan và Long bằng tuổi nhau (27 tuổi).",
+            "chị": "Chưa đúng. 'Chị' dùng khi người nói nhỏ tuổi hơn một người nữ lớn tuổi hơn — ở đây cả hai bằng tuổi.",
+            "em": "Chưa đúng. 'Em' dùng khi người kia nhỏ tuổi hơn — nhưng Lan và Long bằng tuổi nhau.",
+            "bạn": "Đúng! Lan và Long bằng tuổi nhau (27 tuổi), nên dùng 'bạn' là phù hợp nhất."
+          }
+        }
+      ]
+    }
+  },
   "postClass": { "exercises": [] }
 }
