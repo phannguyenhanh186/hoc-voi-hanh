@@ -107,6 +107,92 @@
     ]
   },
 
-  "preClass": { "dialogues": [] },
-  "postClass": { "exercises": [] }
+  "preClass": {
+    "note": "Xem hình rồi ghi nhớ từ vựng trước khi làm trắc nghiệm.",
+    "flows": [
+      {
+        "title": "Bài 1: Đồ ăn, thức uống",
+        "vocabPreview": {
+          "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+          "items": [
+            { "word": "cà phê đen", "image": "images/b2/nghe/ca_phe_den.jpg", "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3" },
+            { "word": "cà phê sữa", "image": "images/b2/nghe/ca_phe_sua.jpg", "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3" },
+            { "word": "trà xanh", "image": "images/b2/nghe/tra_xanh.jpg", "audio": "audio/b2/{voice}/vocab_tra_xanh.mp3" },
+            { "word": "cơm gà", "image": "images/b2/nghe/com_ga.jpg", "audio": "audio/b2/{voice}/vocab_com_ga.mp3" },
+            { "word": "bún bò", "image": "images/b2/nghe/bun_bo.jpg", "audio": "audio/b2/{voice}/vocab_bun_bo.mp3" },
+            { "word": "canh", "image": "images/b2/nghe/canh.jpg", "audio": "audio/b2/{voice}/vocab_canh.mp3" },
+            { "word": "rau", "image": "images/b2/nghe/rau.jpg", "audio": "audio/b2/{voice}/vocab_rau.mp3" }
+          ]
+        },
+        "quiz": {
+          "title": "Những người này thích gì?",
+          "instruction": "Chọn đáp án đúng cho mỗi hình.",
+          "items": [
+            { "id": "pc1q1", "image": "images/b2/nghe/bun_bo.jpg", "context": "Minh thích ăn ______.", "options": ["cơm gà", "bún bò", "canh"], "answer": "bún bò" },
+            { "id": "pc1q2", "image": "images/b2/nghe/ca_phe_sua.jpg", "context": "Chị Mai thích uống ______.", "options": ["cà phê đen", "trà xanh", "cà phê sữa"], "answer": "cà phê sữa" },
+            { "id": "pc1q3", "image": "images/b2/nghe/rau.jpg", "context": "Mẹ của mình thích ______.", "options": ["nước mắm", "canh", "rau"], "answer": "rau" }
+          ]
+        }
+      },
+      {
+        "title": "Bài 2: Hoạt động",
+        "vocabPreview": {
+          "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+          "items": [
+            { "word": "đi làm", "image": "images/b2/nghe/di_lam.jpg", "audio": "audio/b2/{voice}/vocab_di_lam.mp3" },
+            { "word": "đi ăn", "image": "images/b2/nghe/di_an.jpg", "audio": "audio/b2/{voice}/vocab_di_an.mp3" },
+            { "word": "đi chơi", "image": "images/b2/nghe/di_choi.jpg", "audio": "audio/b2/{voice}/vocab_di_choi.mp3" },
+            { "word": "dọn nhà", "image": "images/b2/nghe/don_nha.jpg", "audio": "audio/b2/{voice}/vocab_don_nha.mp3" },
+            { "word": "xem tivi", "image": "images/b2/nghe/xem_tivi.jpg", "audio": "audio/b2/{voice}/vocab_xem_tivi.mp3" },
+            { "word": "du lịch", "image": "images/b2/nghe/du_lich.jpg", "audio": "audio/b2/{voice}/vocab_du_lich.mp3" },
+            { "word": "ngủ dậy", "image": "images/b2/nghe/ngu_day.jpg", "audio": "audio/b2/{voice}/vocab_ngu_day.mp3" },
+            { "word": "đi ngủ", "image": "images/b2/nghe/di_ngu.jpg", "audio": "audio/b2/{voice}/vocab_di_ngu.mp3" }
+          ]
+        },
+        "quiz": {
+          "title": "Những người này không thích gì?",
+          "instruction": "Chọn đáp án đúng cho mỗi hình.",
+          "items": [
+            { "id": "pc2q1", "image": "images/b2/nghe/di_lam.jpg", "context": "Mai không thích ______.", "options": ["đi làm", "du lịch", "xem tivi"], "answer": "đi làm" },
+            { "id": "pc2q2", "image": "images/b2/nghe/don_nha.jpg", "context": "Anh Phong không thích ______.", "options": ["đi chơi", "xem tivi", "dọn nhà"], "answer": "dọn nhà" },
+            { "id": "pc2q3", "image": "images/b2/nghe/di_ngu.jpg", "context": "Em trai của mình không thích ______.", "options": ["đi ăn", "đi ngủ", "ngủ dậy"], "answer": "đi ngủ" }
+          ]
+        }
+      }
+    ]
+  },
+  "postClass": {
+    "exercises": [
+      {
+        "type": "choice",
+        "title": "1. Chọn từ đúng.",
+        "items": [
+          { "id": "A", "context": "Minh ________ ăn phở.", "options": ["thích", "không", "là"], "answer": "thích" },
+          { "id": "B", "context": "Chị Lan không ________ cà phê.", "options": ["làm", "thích", "học"], "answer": "thích" },
+          { "id": "C", "context": "Anh Nam thích ________ cà phê sữa.", "options": ["uống", "đi", "làm"], "answer": "uống" },
+          { "id": "D", "context": "Bạn thích ________ gì?", "options": ["làm", "ăn", "ngủ"], "answer": "làm" }
+        ]
+      },
+      {
+        "type": "scramble",
+        "title": "2. Sắp xếp câu.",
+        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+        "items": [
+          { "prompt": "Câu 1", "tokens": ["thích", "mình", "cà phê sữa"], "answer": "Mình thích cà phê sữa." },
+          { "prompt": "Câu 2", "tokens": ["không thích", "chị", "rau"], "answer": "Chị không thích rau." },
+          { "prompt": "Câu 3", "tokens": ["ăn", "bạn", "thích", "gì"], "answer": "Bạn thích ăn gì?" },
+          { "prompt": "Câu 4", "tokens": ["đi chơi", "em", "thích"], "answer": "Em thích đi chơi." }
+        ]
+      },
+      {
+        "type": "choice",
+        "title": "3. Chọn câu trả lời phù hợp.",
+        "items": [
+          { "id": "1", "context": "Bạn thích uống gì?", "options": ["Mình thích trà xanh.", "Mình là giáo viên.", "Mình đi làm."], "answer": "Mình thích trà xanh." },
+          { "id": "2", "context": "Anh thích làm gì?", "options": ["Anh thích đi chơi.", "Anh thích phở.", "Anh là bác sĩ."], "answer": "Anh thích đi chơi." },
+          { "id": "3", "context": "Em không thích ăn gì?", "options": ["Em không thích rau.", "Em không thích uống.", "Em là học sinh."], "answer": "Em không thích rau." }
+        ]
+      }
+    ]
+  }
 }
