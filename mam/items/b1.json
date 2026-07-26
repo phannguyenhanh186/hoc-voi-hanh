@@ -675,7 +675,7 @@
           },
           {
             "id": "B",
-            "context": "Huy (35 tuổi) nói với An (19 tuổi).\nHuy: \"Em khoẻ không?\"\nAn: \"______ khoẻ.\"",
+            "context": "Huy (35 tuổi) nói với An (19 tuổi).\nHuy: \"______ khoẻ không?\"",
             "options": [
               "Anh",
               "Em",
