@@ -644,6 +644,8 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .reasoning-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
 .reasoning-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--stroke); background: var(--tint); flex: none; }
 .reasoning-explain { margin-top: 10px; }
+.choice-context { margin-bottom: 10px; }
+.choice-line { margin: 2px 0; font-size: .98rem; }
 .scramble-built { display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; padding: 8px 0; border-bottom: 1.5px solid var(--line); margin-bottom: 10px; }
 .scramble-bank { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 
