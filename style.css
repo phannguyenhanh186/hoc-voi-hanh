@@ -665,6 +665,9 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .blank-select.select-ok { border-color: #2E8B4F; background: #EAF7EE; }
 .blank-select.select-wrong { border-color: #C0392B; background: #FBEAEA; }
 .dialogue-fill-result { display: block; margin-top: 10px; }
+.text-answer-item { border-top: 1px dashed var(--line); padding: 14px 0; }
+.text-answer-item:first-of-type { border-top: none; padding-top: 0; }
+.text-answer-input { flex: none; width: auto; min-width: 220px; margin: 8px 0; display: block; }
 .scramble-built { display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; padding: 8px 0; border-bottom: 1.5px solid var(--line); margin-bottom: 10px; }
 .scramble-bank { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 
