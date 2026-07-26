@@ -319,6 +319,39 @@
     // ========================================================
     // NGHE
     // ========================================================
+    // ---------- Stepper dùng chung: hiện từng bước một, Tiếp mới qua bước sau ----------
+    function buildStepper(container, steps, renderStepFn, opts) {
+      opts = opts || {};
+      let i = 0;
+      const stage = el('div', opts.stageClass || '');
+      const dots = el('div', 'step-dots');
+      const nav = el('div', 'step-nav');
+      container.appendChild(stage);
+      container.appendChild(dots);
+      container.appendChild(nav);
+
+      function draw() {
+        stage.innerHTML = '';
+        stage.appendChild(renderStepFn(steps[i], i));
+
+        dots.innerHTML = '';
+        steps.forEach(function (_, idx) { dots.appendChild(el('span', 'step-dot' + (idx === i ? ' active' : ''))); });
+
+        nav.innerHTML = '';
+        const isLast = i >= steps.length - 1;
+        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        prev.style.visibility = i === 0 ? 'hidden' : 'visible';
+        prev.addEventListener('click', function () { i--; draw(); });
+        const next = el('button', 'btn-check', isLast ? (opts.lastLabel || 'Hoàn tất ✓') : 'Tiếp →'); next.type = 'button';
+        next.addEventListener('click', function () {
+          if (!isLast) { i++; draw(); }
+          else if (opts.onFinish) { opts.onFinish(); }
+        });
+        nav.appendChild(prev); nav.appendChild(next);
+      }
+      draw();
+    }
+
     function renderDictationLine(line) {
       const wrap = el('div', 'dictation-item');
       const row = el('div', 'listen-row');
@@ -365,13 +398,17 @@
       if (!groups.length && !entries.length) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
       if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
 
-      // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank
-      groups.forEach(function (g, gi) {
-        const box = el('div', 'exercise');
-        box.appendChild(el('h3', 'ex-title', g.title || ('Đoạn hội thoại ' + (gi + 1))));
-        (g.lines || []).forEach(function (line) { box.appendChild(renderDictationLine(line)); });
-        panel.appendChild(box);
-      });
+      // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank — hiện từng đoạn 1, xong mới qua đoạn sau
+      if (groups.length) {
+        const wrap = el('div', 'exercise');
+        buildStepper(wrap, groups, function (g, gi) {
+          const box = el('div');
+          box.appendChild(el('h3', 'ex-title', g.title || ('Đoạn hội thoại ' + (gi + 1))));
+          (g.lines || []).forEach(function (line) { box.appendChild(renderDictationLine(line)); });
+          return box;
+        }, { lastLabel: 'Xong bài nghe 🎉' });
+        panel.appendChild(wrap);
+      }
 
       // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
       if (entries.length) {
@@ -866,11 +903,12 @@
         if (!post.reviewNote) panel.appendChild(emptyNote('Bài ôn tập đang được cập nhật.'));
         return;
       }
-      exercises.forEach(function (ex) {
+      const wrap = el('div', 'postclass-wrap');
+      buildStepper(wrap, exercises, function (ex) {
         const renderer = EX_RENDERERS[ex.type];
-        if (renderer) panel.appendChild(renderer(ex));
-        else panel.appendChild(emptyNote('Chưa hỗ trợ loại bài tập: ' + ex.type));
-      });
+        return renderer ? renderer(ex) : emptyNote('Chưa hỗ trợ loại bài tập: ' + ex.type);
+      }, { lastLabel: 'Xong bài ôn tập 🎉' });
+      panel.appendChild(wrap);
     }
 
     // ========================================================
