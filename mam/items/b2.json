@@ -31,7 +31,7 @@
       { "id": "v24", "word": "cà phê đen", "meaning": "black coffee", "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3" },
       { "id": "v25", "word": "dọn nhà", "meaning": "tidy the house", "audio": "audio/b2/{voice}/vocab_don_nha.mp3" },
       { "id": "v26", "word": "cà phê sữa", "meaning": "milk coffee", "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3" },
-      { "id": "v27", "word": "xem tivi", "meaning": "watch TV", "audio": "audio/b2/{voice}/vocab_xem_tivi.mp3" },
+      { "id": "v27", "word": "coi tivi", "meaning": "watch TV", "audio": "audio/b2/{voice}/vocab_coi_tivi.mp3" },
       { "id": "v28", "word": "bạc xỉu", "meaning": "Vietnamese coffee with extra milk", "audio": "audio/b2/{voice}/vocab_bac_xiu.mp3" },
       { "id": "v29", "word": "người", "meaning": "human, person, people", "audio": "audio/b2/{voice}/vocab_nguoi.mp3" },
       { "id": "v30", "word": "trà", "meaning": "tea", "audio": "audio/b2/{voice}/vocab_tra.mp3" },
@@ -54,7 +54,7 @@
         "id": "g2",
         "title": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ]",
         "explanation": "Thêm 'không' trước 'thích' để nói mình không yêu thích một thứ gì đó hoặc không thích làm một việc gì đó.",
-        "examples": ["Em không thích rau.", "Chị ấy không thích dọn nhà.", "Mẹ của mình không thích xem tivi."]
+        "examples": ["Em không thích rau.", "Chị ấy không thích dọn nhà.", "Mẹ của mình không thích coi tivi."]
       },
       {
         "id": "g3",
@@ -143,7 +143,7 @@
             { "word": "đi ăn", "image": "images/b2/nghe/di_an.jpg", "audio": "audio/b2/{voice}/vocab_di_an.mp3" },
             { "word": "đi chơi", "image": "images/b2/nghe/di_choi.jpg", "audio": "audio/b2/{voice}/vocab_di_choi.mp3" },
             { "word": "dọn nhà", "image": "images/b2/nghe/don_nha.jpg", "audio": "audio/b2/{voice}/vocab_don_nha.mp3" },
-            { "word": "xem tivi", "image": "images/b2/nghe/xem_tivi.jpg", "audio": "audio/b2/{voice}/vocab_xem_tivi.mp3" },
+            { "word": "coi tivi", "image": "images/b2/nghe/coi_tivi.jpg", "audio": "audio/b2/{voice}/vocab_coi_tivi.mp3" },
             { "word": "du lịch", "image": "images/b2/nghe/du_lich.jpg", "audio": "audio/b2/{voice}/vocab_du_lich.mp3" },
             { "word": "ngủ dậy", "image": "images/b2/nghe/ngu_day.jpg", "audio": "audio/b2/{voice}/vocab_ngu_day.mp3" },
             { "word": "đi ngủ", "image": "images/b2/nghe/di_ngu.jpg", "audio": "audio/b2/{voice}/vocab_di_ngu.mp3" }
@@ -153,8 +153,8 @@
           "title": "Những người này không thích gì?",
           "instruction": "Chọn đáp án đúng cho mỗi hình.",
           "items": [
-            { "id": "pc2q1", "image": "images/b2/nghe/di_lam.jpg", "context": "Mai không thích ______.", "options": ["đi làm", "du lịch", "xem tivi"], "answer": "đi làm" },
-            { "id": "pc2q2", "image": "images/b2/nghe/don_nha.jpg", "context": "Anh Phong không thích ______.", "options": ["đi chơi", "xem tivi", "dọn nhà"], "answer": "dọn nhà" },
+            { "id": "pc2q1", "image": "images/b2/nghe/di_lam.jpg", "context": "Mai không thích ______.", "options": ["đi làm", "du lịch", "coi tivi"], "answer": "đi làm" },
+            { "id": "pc2q2", "image": "images/b2/nghe/don_nha.jpg", "context": "Anh Phong không thích ______.", "options": ["đi chơi", "coi tivi", "dọn nhà"], "answer": "dọn nhà" },
             { "id": "pc2q3", "image": "images/b2/nghe/di_ngu.jpg", "context": "Em trai của mình không thích ______.", "options": ["đi ăn", "đi ngủ", "ngủ dậy"], "answer": "đi ngủ" }
           ]
         }
