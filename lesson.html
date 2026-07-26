@@ -319,22 +319,72 @@
     // ========================================================
     // NGHE
     // ========================================================
+    function renderDictationLine(line) {
+      const wrap = el('div', 'dictation-item');
+      const row = el('div', 'listen-row');
+      row.appendChild(playBtn(line.audio));
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'blank-input dictation-input';
+      input.placeholder = 'Gõ câu bạn nghe được…';
+      row.appendChild(input);
+      const resultSlot = el('span', 'result-slot');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        const ok = norm(input.value) === norm(line.text);
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+        if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + line.text + ')'));
+      });
+      row.appendChild(checkBtn);
+      row.appendChild(resultSlot);
+      wrap.appendChild(row);
+      const bankWords = line.wordBank || [];
+      if (bankWords.length) {
+        const bank = el('div', 'scramble-bank');
+        bankWords.forEach(function (w) {
+          const chip = el('span', 'chip chip-pickable', w);
+          chip.addEventListener('click', function () {
+            input.value = (input.value ? input.value + ' ' : '') + w;
+            input.focus();
+          });
+          bank.appendChild(chip);
+        });
+        wrap.appendChild(bank);
+      }
+      return wrap;
+    }
+
     function renderListeningTab(item) {
       const panel = document.getElementById('panel-listening');
       panel.innerHTML = '';
       const listening = item.listening || {};
+      const groups = listening.groups || [];
       const entries = listening.items || [];
-      if (!entries.length) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
-      const box = el('div', 'exercise');
-      if (listening.instruction) box.appendChild(el('p', 'ex-instruction', listening.instruction));
-      entries.forEach(function (it, i) {
-        const row = el('div', 'listen-row');
-        row.appendChild(playBtn(it.audio));
-        row.appendChild(el('span', 'match-prompt', it.title || ('Đoạn ' + (i + 1))));
-        if (it.transcript) row.appendChild(el('span', 'order-label', it.transcript));
-        box.appendChild(row);
+      if (!groups.length && !entries.length) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
+      if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
+
+      // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank
+      groups.forEach(function (g, gi) {
+        const box = el('div', 'exercise');
+        box.appendChild(el('h3', 'ex-title', g.title || ('Đoạn hội thoại ' + (gi + 1))));
+        (g.lines || []).forEach(function (line) { box.appendChild(renderDictationLine(line)); });
+        panel.appendChild(box);
       });
-      panel.appendChild(box);
+
+      // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
+      if (entries.length) {
+        const box = el('div', 'exercise');
+        entries.forEach(function (it, i) {
+          const row = el('div', 'listen-row');
+          row.appendChild(playBtn(it.audio));
+          row.appendChild(el('span', 'match-prompt', it.title || ('Đoạn ' + (i + 1))));
+          if (it.transcript) row.appendChild(el('span', 'order-label', it.transcript));
+          box.appendChild(row);
+        });
+        panel.appendChild(box);
+      }
     }
 
     // ========================================================
