@@ -105,7 +105,35 @@
     ]
   },
 
-  "preClass": { "dialogues": [] },
+  "preClass": {
+    "note": "Xem hình rồi ghi nhớ từ vựng trước khi làm trắc nghiệm.",
+    "flows": [
+      {
+        "title": "Bài 1: Hoạt động",
+        "vocabPreview": {
+          "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+          "items": [
+            { "word": "tập thể dục", "image": "images/b3/nghe/tap_the_duc.jpg", "audio": "audio/b3/{voice}/vocab_tap_the_duc.mp3" },
+            { "word": "nấu ăn", "image": "images/b3/nghe/nau_an.jpg", "audio": "audio/b3/{voice}/vocab_nau_an.mp3" },
+            { "word": "ngủ trưa", "image": "images/b3/nghe/ngu_trua.jpg", "audio": "audio/b3/{voice}/vocab_ngu_trua.mp3" },
+            { "word": "lướt điện thoại", "image": "images/b3/nghe/luot_dien_thoai.jpg", "audio": "audio/b3/{voice}/vocab_luot_dien_thoai.mp3" },
+            { "word": "đánh răng", "image": "images/b3/nghe/danh_rang.jpg", "audio": "audio/b3/{voice}/vocab_danh_rang.mp3" },
+            { "word": "ở nhà", "image": "images/b3/nghe/o_nha.jpg", "audio": "audio/b3/{voice}/vocab_o_nha.mp3" }
+          ]
+        },
+        "quiz": {
+          "title": "Thời khoá biểu của Minh",
+          "instruction": "Xem thời khoá biểu rồi chọn đáp án đúng.",
+          "image": "images/b3/nghe/thoi_khoa_bieu_minh.jpg",
+          "items": [
+            { "id": "pc1q1", "context": "Minh thường ______ vào buổi sáng.", "options": ["tập thể dục", "nấu ăn", "đi làm"], "answer": "đi làm" },
+            { "id": "pc1q2", "context": "Minh thường đi chơi với bạn vào ______ thứ Bảy.", "options": ["buổi sáng", "buổi trưa", "buổi tối"], "answer": "buổi tối" },
+            { "id": "pc1q3", "context": "Minh không ngủ trưa vào ______.", "options": ["thứ hai", "thứ năm", "Chủ Nhật"], "answer": "" }
+          ]
+        }
+      }
+    ]
+  },
   "postClass": {
     "exercises": [
       {
