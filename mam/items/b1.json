@@ -57,8 +57,78 @@
     ]
   },
 
-  "grammar": { "points": [] },
-  "listening": { "items": [] },
+  "grammar": {
+    "points": [
+      {
+        "id": "g1",
+        "title": "Danh xưng — cách gọi người khác & gọi mình",
+        "explanation": "Người Việt chọn danh xưng (anh/chị/em/bạn/mình) tùy theo tuổi tác so với người đang nói chuyện. Xem bảng đầy đủ ở phần chi tiết.",
+        "examples": [],
+        "refInput": "pronouns"
+      },
+      {
+        "id": "g2",
+        "title": "Chào + [Danh xưng]",
+        "explanation": "Thêm danh xưng phù hợp ngay sau 'Chào' để chào ai đó.",
+        "examples": ["Chào anh.", "Chào em."]
+      },
+      {
+        "id": "g3",
+        "title": "Cám ơn + [Danh xưng]",
+        "explanation": "Thêm danh xưng phù hợp ngay sau 'Cám ơn' để cảm ơn ai đó.",
+        "examples": ["Cám ơn bạn.", "Cám ơn chị."]
+      },
+      {
+        "id": "g4",
+        "title": "Xin lỗi + [Danh xưng]",
+        "explanation": "Thêm danh xưng phù hợp ngay sau 'Xin lỗi' khi xin lỗi ai đó.",
+        "examples": ["Xin lỗi em.", "Xin lỗi bạn."]
+      },
+      {
+        "id": "g5",
+        "title": "[Danh xưng] + khoẻ không?",
+        "explanation": "Hỏi thăm sức khoẻ; trả lời bằng cách lặp lại danh xưng rồi thêm 'khoẻ'.",
+        "examples": ["Bạn khoẻ không? → Mình khoẻ.", "Anh khoẻ không? → Anh khoẻ."]
+      }
+    ]
+  },
+  "listening": {
+    "instruction": "Nghe và gõ lại câu bạn nghe được. Bấm vào từ trong ngân hàng từ bên dưới nếu cần trợ giúp.",
+    "groups": [
+      {
+        "id": "d1",
+        "title": "Hội thoại 1",
+        "lines": [
+          { "audio": "audio/b1/{voice}/listen_d1_01.mp3", "text": "Chào em, em tên là gì?", "wordBank": ["gì?", "em", "làm", "anh", "chào", "là", "tên", "nghề", "em", "chị"] },
+          { "audio": "audio/b1/{voice}/listen_d1_02.mp3", "text": "Em tên là Huy. Còn chị?", "wordBank": ["là", "anh", "tên", "em", "Huy", "nghề", "số"] },
+          { "audio": "audio/b1/{voice}/listen_d1_03.mp3", "text": "Chị tên là Liên. Em làm nghề gì?", "wordBank": ["Liên", "làm", "gì?", "tên", "chị", "nghề", "là", "cũng", "em"] },
+          { "audio": "audio/b1/{voice}/listen_d1_04.mp3", "text": "Em là bác sĩ. Còn chị?", "wordBank": ["em", "là", "bác sĩ", "còn", "chị?", "anh", "giáo viên", "kỹ sư", "nghề"] },
+          { "audio": "audio/b1/{voice}/listen_d1_05.mp3", "text": "Chị là giáo viên.", "wordBank": ["chị", "là", "giáo viên", "bác sĩ", "kỹ sư", "nhân viên", "em"] }
+        ]
+      },
+      {
+        "id": "d2",
+        "title": "Hội thoại 2",
+        "lines": [
+          { "audio": "audio/b1/{voice}/listen_d2_01.mp3", "text": "Chào chị, chị tên là gì?", "wordBank": [] },
+          { "audio": "audio/b1/{voice}/listen_d2_02.mp3", "text": "Chị tên là Nguyễn Hà Phương.", "wordBank": [] },
+          { "audio": "audio/b1/{voice}/listen_d2_03.mp3", "text": "Cám ơn chị Hà Phương. Phòng của chị là phòng số 507.", "wordBank": ["chị", "bảy", "Hà Phương", "phòng", "anh", "một", "cám ơn", "em", "phòng", "bảy", "số", "không", "của", "năm", "chị", "là"] },
+          { "audio": "audio/b1/{voice}/listen_d2_04.mp3", "text": "Cám ơn em.", "wordBank": [] }
+        ]
+      },
+      {
+        "id": "d3",
+        "title": "Hội thoại 3",
+        "lines": [
+          { "audio": "audio/b1/{voice}/listen_d3_01.mp3", "text": "Chào bạn, bạn tên là Kiên đúng không?", "wordBank": [] },
+          { "audio": "audio/b1/{voice}/listen_d3_02.mp3", "text": "Không, mình tên là Phong.", "wordBank": [] },
+          { "audio": "audio/b1/{voice}/listen_d3_03.mp3", "text": "Xin lỗi Phong. Số điện thoại của bạn là 091 456 987 đúng không?", "wordBank": [] },
+          { "audio": "audio/b1/{voice}/listen_d3_04.mp3", "text": "Đúng rồi.", "wordBank": [] },
+          { "audio": "audio/b1/{voice}/listen_d3_05.mp3", "text": "Cám ơn bạn.", "wordBank": [] }
+        ]
+      }
+    ]
+  },
   "reading": { "passages": [] },
   "preClass": { "dialogues": [] },
   "postClass": { "exercises": [] }
