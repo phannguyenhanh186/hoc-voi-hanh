@@ -411,33 +411,123 @@
     // ========================================================
     // CHUẨN BỊ (pre-class)
     // ========================================================
+    function renderVocabPreview(vp) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+      if (vp.instruction) box.appendChild(el('p', 'ex-instruction', vp.instruction));
+      const grid = el('div', 'image-vocab-grid');
+      (vp.items || []).forEach(function (it) {
+        const card = el('div', 'image-vocab-card');
+        const img = document.createElement('img');
+        img.src = it.image; img.alt = it.word; img.className = 'image-vocab-img';
+        card.appendChild(img);
+        card.appendChild(el('div', 'image-vocab-word', it.word));
+        grid.appendChild(card);
+      });
+      box.appendChild(grid);
+      return box;
+    }
+
+    function renderImageMatch(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const rows = [];
+      (ex.items || []).forEach(function (it) {
+        const row = el('div', 'match-row image-match-row');
+        const img = document.createElement('img');
+        img.src = it.image; img.alt = ''; img.className = 'match-img';
+        row.appendChild(img);
+        const select = document.createElement('select');
+        select.className = 'answer-select';
+        const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+        (ex.answerBank || []).forEach(function (a) { const opt = el('option', null, a); opt.value = a; select.appendChild(opt); });
+        select.dataset.answer = it.answer;
+        row.appendChild(select);
+        const resultSlot = el('span', 'result-slot');
+        row.appendChild(resultSlot);
+        rows.push({ select: select, resultSlot: resultSlot });
+        box.appendChild(row);
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        rows.forEach(function (r) {
+          const ok = r.select.value === r.select.dataset.answer;
+          r.resultSlot.innerHTML = '';
+          r.resultSlot.appendChild(checkRow(ok));
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function personLabel(p) { return p ? p.name + ' (' + p.age + ' tuổi)' : ''; }
+
+    function renderReasoningQuiz(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      (ex.items || []).forEach(function (q) {
+        const qBox = el('div', 'reasoning-item');
+        const head = el('div', 'reasoning-head');
+        if (q.personA && q.personA.image) { const img = document.createElement('img'); img.src = q.personA.image; img.className = 'reasoning-avatar'; head.appendChild(img); }
+        head.appendChild(el('span', 'match-prompt', personLabel(q.personA) + ' gọi ' + personLabel(q.personB) + ' là gì?'));
+        if (q.personB && q.personB.image) { const img2 = document.createElement('img'); img2.src = q.personB.image; img2.className = 'reasoning-avatar'; head.appendChild(img2); }
+        qBox.appendChild(head);
+        const optWrap = el('div', 'quiz-options');
+        const explainSlot = el('p', 'ex-instruction reasoning-explain');
+        (q.options || []).forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            const ok = opt === q.answer;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+          });
+          optWrap.appendChild(btn);
+        });
+        qBox.appendChild(optWrap);
+        qBox.appendChild(explainSlot);
+        box.appendChild(qBox);
+      });
+      return box;
+    }
+
     function renderPreClassTab(item) {
       const panel = document.getElementById('panel-preclass');
       panel.innerHTML = '';
       const pre = item.preClass || {};
       const dialogues = pre.dialogues || [];
+      const hasNew = pre.vocabPreview || pre.imageMatch || pre.reasoningQuiz;
       if (pre.note) panel.appendChild(el('p', 'note', pre.note));
-      if (!dialogues.length) {
+      if (!dialogues.length && !hasNew) {
         if (!pre.note) panel.appendChild(emptyNote('Nội dung chuẩn bị trước buổi học đang được cập nhật.'));
         return;
       }
-      const box = el('div', 'exercise');
-      box.appendChild(el('h3', 'ex-title', 'Nghe trước ở nhà'));
-      dialogues.forEach(function (d) {
-        const dbox = el('div', 'dialogue');
-        const head = el('div', 'dialogue-head');
-        head.appendChild(playBtn(d.audio));
-        head.appendChild(el('span', 'dialogue-label', 'Nghe cả đoạn'));
-        dbox.appendChild(head);
-        (d.turns || []).forEach(function (t) {
-          const row = el('div', 'turn');
-          row.appendChild(el('span', 'turn-speaker', t.speaker + ':'));
-          row.appendChild(el('span', 'turn-text', t.text));
-          dbox.appendChild(row);
+      if (pre.vocabPreview) panel.appendChild(renderVocabPreview(pre.vocabPreview));
+      if (pre.imageMatch) panel.appendChild(renderImageMatch(pre.imageMatch));
+      if (pre.reasoningQuiz) panel.appendChild(renderReasoningQuiz(pre.reasoningQuiz));
+
+      if (dialogues.length) {
+        const box = el('div', 'exercise');
+        box.appendChild(el('h3', 'ex-title', 'Nghe trước ở nhà'));
+        dialogues.forEach(function (d) {
+          const dbox = el('div', 'dialogue');
+          const head = el('div', 'dialogue-head');
+          head.appendChild(playBtn(d.audio));
+          head.appendChild(el('span', 'dialogue-label', 'Nghe cả đoạn'));
+          dbox.appendChild(head);
+          (d.turns || []).forEach(function (t) {
+            const row = el('div', 'turn');
+            row.appendChild(el('span', 'turn-speaker', t.speaker + ':'));
+            row.appendChild(el('span', 'turn-text', t.text));
+            dbox.appendChild(row);
+          });
+          box.appendChild(dbox);
         });
-        box.appendChild(dbox);
-      });
-      panel.appendChild(box);
+        panel.appendChild(box);
+      }
     }
 
     // ========================================================
