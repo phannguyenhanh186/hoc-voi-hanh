@@ -411,6 +411,51 @@
     // ========================================================
     // CHUẨN BỊ (pre-class)
     // ========================================================
+    function renderProfessionsFlow(vp, im) {
+      const wrapper = el('div', 'profession-flow');
+      const stage = el('div', 'exercise');
+      wrapper.appendChild(stage);
+
+      let i = 0;
+      const items = vp.items || [];
+
+      function drawPreview() {
+        stage.innerHTML = '';
+        stage.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+        if (vp.instruction) stage.appendChild(el('p', 'ex-instruction', vp.instruction));
+
+        const it = items[i];
+        const card = el('div', 'preview-card');
+        const img = document.createElement('img');
+        img.src = it.image; img.alt = it.word; img.className = 'preview-img';
+        card.appendChild(img);
+        const wordRow = el('div', 'preview-word-row');
+        wordRow.appendChild(el('span', 'preview-word', it.word));
+        wordRow.appendChild(playBtn(it.audio));
+        card.appendChild(wordRow);
+        stage.appendChild(card);
+
+        const dots = el('div', 'step-dots');
+        items.forEach(function (_, idx) { dots.appendChild(el('span', 'step-dot' + (idx === i ? ' active' : ''))); });
+        stage.appendChild(dots);
+
+        const nav = el('div', 'step-nav');
+        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        prev.style.visibility = i === 0 ? 'hidden' : 'visible';
+        prev.addEventListener('click', function () { i--; drawPreview(); });
+        const isLast = i >= items.length - 1;
+        const next = el('button', 'btn-check', (isLast && im) ? 'Bắt đầu kiểm tra →' : 'Tiếp →'); next.type = 'button';
+        next.addEventListener('click', function () {
+          if (!isLast) { i++; drawPreview(); }
+          else if (im) { wrapper.removeChild(stage); wrapper.appendChild(renderImageMatch(im)); }
+        });
+        nav.appendChild(prev); nav.appendChild(next);
+        stage.appendChild(nav);
+      }
+      drawPreview();
+      return wrapper;
+    }
+
     function renderVocabPreview(vp) {
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
@@ -505,8 +550,12 @@
         if (!pre.note) panel.appendChild(emptyNote('Nội dung chuẩn bị trước buổi học đang được cập nhật.'));
         return;
       }
-      if (pre.vocabPreview) panel.appendChild(renderVocabPreview(pre.vocabPreview));
-      if (pre.imageMatch) panel.appendChild(renderImageMatch(pre.imageMatch));
+      if (pre.vocabPreview && pre.imageMatch) {
+        panel.appendChild(renderProfessionsFlow(pre.vocabPreview, pre.imageMatch));
+      } else {
+        if (pre.vocabPreview) panel.appendChild(renderVocabPreview(pre.vocabPreview));
+        if (pre.imageMatch) panel.appendChild(renderImageMatch(pre.imageMatch));
+      }
       if (pre.reasoningQuiz) panel.appendChild(renderReasoningQuiz(pre.reasoningQuiz));
 
       if (dialogues.length) {
