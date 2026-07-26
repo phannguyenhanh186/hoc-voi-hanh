@@ -631,6 +631,19 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .dictation-item { border-top: 1px dashed var(--line); padding: 14px 0; }
 .dictation-item:first-of-type { border-top: none; padding-top: 0; }
 .dictation-input { flex: 1; min-width: 200px; }
+
+.image-vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; }
+.image-vocab-card { border: 1.5px solid var(--stroke); border-radius: 12px; overflow: hidden; background: var(--surface); text-align: center; }
+.image-vocab-img { width: 100%; height: 120px; object-fit: cover; display: block; background: var(--tint); }
+.image-vocab-word { padding: 8px 6px; font-weight: 700; font-family: var(--font-display); }
+
+.image-match-row .match-img { width: 64px; height: 64px; object-fit: cover; border-radius: 10px; border: 1.5px solid var(--stroke); background: var(--tint); flex: none; }
+
+.reasoning-item { border-top: 1px dashed var(--line); padding: 16px 0; }
+.reasoning-item:first-of-type { border-top: none; padding-top: 0; }
+.reasoning-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.reasoning-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--stroke); background: var(--tint); flex: none; }
+.reasoning-explain { margin-top: 10px; }
 .scramble-built { display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; padding: 8px 0; border-bottom: 1.5px solid var(--line); margin-bottom: 10px; }
 .scramble-bank { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 
