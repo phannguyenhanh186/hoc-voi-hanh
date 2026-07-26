@@ -1,0 +1,110 @@
+{
+  "id": "b3",
+  "num": 3,
+  "title": "Em thường đi chơi vào tối Chủ Nhật",
+
+  "vocab": {
+    "items": [
+      { "id": "v1", "word": "Thứ hai", "meaning": "Monday", "audio": "audio/b3/{voice}/vocab_thu_hai.mp3" },
+      { "id": "v2", "word": "tập thể dục", "meaning": "exercise", "audio": "audio/b3/{voice}/vocab_tap_the_duc.mp3" },
+      { "id": "v3", "word": "Thứ ba", "meaning": "Tuesday", "audio": "audio/b3/{voice}/vocab_thu_ba.mp3" },
+      { "id": "v4", "word": "nấu ăn", "meaning": "cook", "audio": "audio/b3/{voice}/vocab_nau_an.mp3" },
+      { "id": "v5", "word": "Thứ tư", "meaning": "Wednesday", "audio": "audio/b3/{voice}/vocab_thu_tu.mp3" },
+      { "id": "v6", "word": "ăn sáng", "meaning": "eat breakfast", "audio": "audio/b3/{voice}/vocab_an_sang.mp3" },
+      { "id": "v7", "word": "Thứ năm", "meaning": "Thursday", "audio": "audio/b3/{voice}/vocab_thu_nam.mp3" },
+      { "id": "v8", "word": "ăn trưa", "meaning": "eat lunch", "audio": "audio/b3/{voice}/vocab_an_trua.mp3" },
+      { "id": "v9", "word": "Thứ sáu", "meaning": "Friday", "audio": "audio/b3/{voice}/vocab_thu_sau.mp3" },
+      { "id": "v10", "word": "ăn tối", "meaning": "eat dinner", "audio": "audio/b3/{voice}/vocab_an_toi.mp3" },
+      { "id": "v11", "word": "Thứ bảy", "meaning": "Saturday", "audio": "audio/b3/{voice}/vocab_thu_bay.mp3" },
+      { "id": "v12", "word": "ngủ trưa", "meaning": "take a nap at noon", "audio": "audio/b3/{voice}/vocab_ngu_trua.mp3" },
+      { "id": "v13", "word": "Chủ nhật", "meaning": "Sunday", "audio": "audio/b3/{voice}/vocab_chu_nhat.mp3" },
+      { "id": "v14", "word": "điện thoại", "meaning": "general phone, cell phone, landline phone", "audio": "audio/b3/{voice}/vocab_dien_thoai.mp3" },
+      { "id": "v15", "word": "buổi sáng", "meaning": "morning", "audio": "audio/b3/{voice}/vocab_buoi_sang.mp3" },
+      { "id": "v16", "word": "lướt điện thoại", "meaning": "scroll on a phone", "audio": "audio/b3/{voice}/vocab_luot_dien_thoai.mp3" },
+      { "id": "v17", "word": "buổi trưa", "meaning": "noon", "audio": "audio/b3/{voice}/vocab_buoi_trua.mp3" },
+      { "id": "v18", "word": "đánh răng", "meaning": "brush teeth", "audio": "audio/b3/{voice}/vocab_danh_rang.mp3" },
+      { "id": "v19", "word": "buổi chiều", "meaning": "afternoon", "audio": "audio/b3/{voice}/vocab_buoi_chieu.mp3" },
+      { "id": "v20", "word": "trước khi", "meaning": "before", "audio": "audio/b3/{voice}/vocab_truoc_khi.mp3" },
+      { "id": "v21", "word": "buổi tối", "meaning": "evening, night", "audio": "audio/b3/{voice}/vocab_buoi_toi.mp3" },
+      { "id": "v22", "word": "sau khi", "meaning": "after", "audio": "audio/b3/{voice}/vocab_sau_khi.mp3" },
+      { "id": "v23", "word": "thường", "meaning": "often, usually", "audio": "audio/b3/{voice}/vocab_thuong.mp3" },
+      { "id": "v24", "word": "quay lại", "meaning": "go back to", "audio": "audio/b3/{voice}/vocab_quay_lai.mp3" },
+      { "id": "v25", "word": "vào", "meaning": "on (a date), in (time of day), into", "audio": "audio/b3/{voice}/vocab_vao.mp3" },
+      { "id": "v26", "word": "ở nhà", "meaning": "stay at home, at home", "audio": "audio/b3/{voice}/vocab_o_nha.mp3" },
+      { "id": "v27", "word": "với", "meaning": "with", "audio": "audio/b3/{voice}/vocab_voi.mp3" },
+      { "id": "v28", "word": "gia đình", "meaning": "family", "audio": "audio/b3/{voice}/vocab_gia_dinh.mp3" },
+      { "id": "v29", "word": "và", "meaning": "and", "audio": "audio/b3/{voice}/vocab_va.mp3" },
+      { "id": "v30", "word": "một mình", "meaning": "alone", "audio": "audio/b3/{voice}/vocab_mot_minh.mp3" },
+      { "id": "v31", "word": "để", "meaning": "in order to", "audio": "audio/b3/{voice}/vocab_de.mp3" },
+      { "id": "v32", "word": "hoặc", "meaning": "or", "audio": "audio/b3/{voice}/vocab_hoac.mp3" }
+    ]
+  },
+
+  "grammar": {
+    "points": [
+      {
+        "id": "g1",
+        "title": "Vào + [Thứ] / [Buổi]",
+        "explanation": "Dùng 'vào' trước thứ trong tuần hoặc buổi trong ngày để chỉ thời gian.",
+        "examples": ["Vào thứ Hai.", "Vào buổi sáng.", "Vào buổi tối Chủ Nhật."]
+      },
+      {
+        "id": "g2",
+        "title": "[Chủ ngữ] + thường + [Động từ]",
+        "explanation": "Dùng 'thường' để nói việc gì đó xảy ra thường xuyên, theo thói quen.",
+        "examples": ["Mình thường đi làm vào buổi sáng.", "Anh Kiên thường ở nhà vào Chủ Nhật."]
+      },
+      {
+        "id": "g3",
+        "title": "[Chủ ngữ] + không thường + [Động từ]",
+        "explanation": "Thêm 'không' trước 'thường' để nói việc gì đó không xảy ra thường xuyên.",
+        "examples": ["Em không thường tập thể dục vào buổi trưa.", "Chị ấy không thường nấu ăn vào thứ Bảy và Chủ Nhật."]
+      },
+      {
+        "id": "g4",
+        "title": "[Chủ ngữ] + có thường + [Động từ] + không?",
+        "explanation": "Dùng để hỏi ai đó có làm việc gì thường xuyên hay không.",
+        "examples": ["Bạn có thường ăn phở không?", "Anh có thường uống cà phê vào buổi tối không?", "Chị có thường đi chơi vào buổi tối thứ Sáu không?"]
+      }
+    ]
+  },
+
+  "listening": {
+    "instruction": "Nghe và gõ lại câu bạn nghe được. Bấm vào từ trong ngân hàng từ bên dưới nếu cần trợ giúp.",
+    "groups": [
+      {
+        "id": "d1",
+        "title": "Hội thoại 1: Tối thứ Bảy",
+        "lines": [
+          { "audio": "audio/b3/{voice}/listen_d1_01.mp3", "text": "Em thường làm gì vào tối thứ Bảy?", "wordBank": ["thường", "gì", "thứ bảy?", "làm", "em", "tối", "vào", "thứ hai", "là"] },
+          { "audio": "audio/b3/{voice}/listen_d1_02.mp3", "text": "Em thường đi chơi với bạn. Còn anh?", "wordBank": ["đi chơi", "bạn", "em", "đi làm", "thường", "anh?", "và", "còn", "với"] },
+          { "audio": "audio/b3/{voice}/listen_d1_03.mp3", "text": "Anh thường ở nhà xem tivi.", "wordBank": ["thường", "ở nhà", "em", "xem tivi", "anh", "dọn nhà", "đi chơi", "gì"] }
+        ]
+      },
+      {
+        "id": "d2",
+        "title": "Hội thoại 2: Ăn phở",
+        "lines": [
+          { "audio": "audio/b3/{voice}/listen_d2_01.mp3", "text": "Bạn có thường ăn phở vào buổi sáng không?", "wordBank": ["phở", "thứ hai", "buổi sáng", "ăn", "có", "không?", "em", "bạn", "vào"] },
+          { "audio": "audio/b3/{voice}/listen_d2_02.mp3", "text": "Mình có. Mình thích ăn phở vào buổi sáng.", "wordBank": ["có", "thường", "không", "ăn", "buổi tối", "bún", "thường", "vào", "mình", "buổi sáng", "bò", "mình"] },
+          { "audio": "audio/b3/{voice}/listen_d2_03.mp3", "text": "Bạn thường ăn phở gì?", "wordBank": ["gì?", "ăn", "thích", "bạn", "phở", "không", "thường", "mình"] },
+          { "audio": "audio/b3/{voice}/listen_d2_04.mp3", "text": "Mình thường ăn phở bò. Còn bạn?", "wordBank": ["ăn", "gà", "gì?", "bạn", "thích", "mình", "phở", "buổi tối", "thường"] },
+          { "audio": "audio/b3/{voice}/listen_d2_05.mp3", "text": "Không. Mình thường ăn bún bò vào buổi sáng.", "wordBank": ["buổi sáng", "bún", "mình", "không", "thích", "vào", "bò", "thường", "bạn", "ăn", "phở"] }
+        ]
+      }
+    ]
+  },
+
+  "reading": {
+    "passages": [
+      {
+        "id": "r1",
+        "title": "Một ngày của nhân viên văn phòng",
+        "text": "Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để ăn sáng và đi làm. Có người thường ăn phở bò. Có người thường ăn bún bò hoặc bánh mì. Một số người thường tập thể dục trước khi đi làm.\nVào buổi trưa, họ thường đi ăn với đồng nghiệp. Sau khi ăn trưa xong, họ ngủ trưa hoặc quay lại làm việc.\nNhân viên văn phòng ở Việt Nam không thường đi chơi hay đi ăn sau khi về nhà vào buổi chiều. Họ thường ăn tối với gia đình hoặc một mình. Sau đó, họ thường dọn nhà, đánh răng, lướt điện thoại và đi ngủ."
+      }
+    ]
+  },
+
+  "preClass": { "dialogues": [] },
+  "postClass": { "exercises": [] }
+}
