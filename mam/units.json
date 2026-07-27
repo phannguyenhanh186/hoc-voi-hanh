@@ -16,6 +16,6 @@
     { "id": "b5", "num": 5, "title": "Sinh nhật của bạn là ngày mấy?", "status": "ready" },
     { "id": "b6", "num": 6, "title": "Cho em một phở và một trà đá!", "status": "ready" },
     { "id": "b7", "num": 7, "title": "Của anh chị một trăm ngàn!", "status": "ready" },
-    { "id": "b8", "num": 8, "title": "Thời tiết", "status": "ready" }
+    { "id": "b8", "num": 8, "title": "Hôm nay trời mưa to!", "status": "ready" }
   ]
 }
