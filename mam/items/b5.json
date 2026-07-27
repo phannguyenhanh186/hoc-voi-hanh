@@ -333,10 +333,28 @@
   "grammar": {
     "points": [
       {
-        "id": "g0",
+        "id": "g0a",
         "title": "Đếm số từ 21 tới 99: [Hàng chục] + [Hàng đơn vị]",
-        "explanation": "Từ 20 tới 99, số 1 ở hàng đơn vị thường đọc là 'mốt'. Từ 20 tới 99, số 4 ở hàng đơn vị thường đọc là 'bốn' hoặc 'tư'. Từ 10 tới 99, số 5 ở hàng đơn vị thường đọc là 'lăm'.",
-        "examples": ["Hai mươi - 20", "Bốn ba - 43", "Bảy bảy - 77", "Hai mốt - 21", "Sáu mốt - 61", "Bốn bốn/bốn tư - 44", "Tám bốn/tám tư - 84", "Mười lăm - 15", "Ba lăm - 35"]
+        "explanation": "",
+        "examples": ["Hai mươi - 20", "Bốn ba - 43", "Bảy bảy - 77"]
+      },
+      {
+        "id": "g0b",
+        "title": "Từ số 20 tới 99, số 1 ở hàng đơn vị thường đọc là 'mốt'.",
+        "explanation": "",
+        "examples": ["Hai mốt - 21", "Sáu mốt - 61"]
+      },
+      {
+        "id": "g0c",
+        "title": "Từ số 20 tới 99, số 4 ở hàng đơn vị thường đọc là 'bốn' hoặc 'tư'.",
+        "explanation": "",
+        "examples": ["Bốn bốn/bốn tư - 44", "Tám bốn/tám tư - 84"]
+      },
+      {
+        "id": "g0d",
+        "title": "Từ số 10 tới 99, số 5 ở hàng đơn vị thường đọc là 'lăm'.",
+        "explanation": "",
+        "examples": ["Mười lăm - 15", "Ba lăm - 35"]
       },
       {
         "id": "g1",
