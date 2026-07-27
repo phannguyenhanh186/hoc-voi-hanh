@@ -138,6 +138,7 @@
           "type": "text_answer",
           "title": "Test lại: đọc số bằng chữ",
           "instruction": "Viết cách đọc của mỗi số bằng chữ.",
+          "wordBank": ["một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "trăm", "ngàn", "lẻ", "mốt", "tư", "lăm", "mươi"],
           "items": [
             { "prompt": "25", "answer": "hai lăm" },
             { "prompt": "31", "answer": "ba mốt" },
