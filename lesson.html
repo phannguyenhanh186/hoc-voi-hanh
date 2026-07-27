@@ -395,8 +395,15 @@
       const listening = item.listening || {};
       const groups = listening.groups || [];
       const entries = listening.items || [];
-      if (!groups.length && !entries.length) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
+      const numberFill = listening.numberFill;
+      const hasNumberFill = numberFill && numberFill.items && numberFill.items.length;
+      if (!groups.length && !entries.length && !hasNumberFill) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
       if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
+
+      // Điền số vào chỗ trống bằng bàn phím số
+      if (hasNumberFill) {
+        panel.appendChild(renderNumberFillListening(numberFill));
+      }
 
       // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank — hiện từng đoạn 1, xong mới qua đoạn sau
       if (groups.length) {
@@ -444,6 +451,9 @@
         panel.appendChild(box);
         if (p.questions && p.questions.length) {
           panel.appendChild(renderChoiceQuiz({ title: 'Câu hỏi', items: p.questions }));
+        }
+        if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
+          panel.appendChild(renderFillBlanksText(Object.assign({ title: 'Điền vào chỗ trống' }, p.fillBlanks)));
         }
       });
     }
@@ -624,9 +634,13 @@
 
         const it = items[i];
         const card = el('div', 'preview-card');
-        const img = document.createElement('img');
-        img.src = it.image; img.alt = it.word; img.className = 'preview-img';
-        card.appendChild(img);
+        if (it.image) {
+          const img = document.createElement('img');
+          img.src = it.image; img.alt = it.word; img.className = 'preview-img';
+          card.appendChild(img);
+        } else if (it.number) {
+          card.appendChild(el('div', 'preview-number', it.number));
+        }
         const wordRow = el('div', 'preview-word-row');
         wordRow.appendChild(el('span', 'preview-word', it.word));
         wordRow.appendChild(playBtn(it.audio));
@@ -655,7 +669,7 @@
 
       function drawQuiz() {
         stage.innerHTML = '';
-        stage.appendChild(renderChoiceQuiz(quiz));
+        stage.appendChild(quiz.type === 'text_answer' ? renderTextAnswer(quiz) : renderChoiceQuiz(quiz));
         if (items.length) {
           const nav = el('div', 'step-nav');
           const back = el('button', 'btn-check btn-secondary', '← Xem lại từ vựng'); back.type = 'button';
@@ -1029,16 +1043,188 @@
       return box;
     }
 
+    function renderFillBlanksText(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const inputs = [];
+      (ex.lines || []).forEach(function (line) {
+        const row = el('div', 'turn dialogue-fill-line');
+        if (line.speaker) row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
+        const textSpan = el('span', 'turn-text');
+        (line.parts || []).forEach(function (part) {
+          if (typeof part === 'string') {
+            textSpan.appendChild(document.createTextNode(part));
+          } else if (part && part.blank) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'blank-input fill-blank-input';
+            input.dataset.answer = part.blank;
+            inputs.push(input);
+            textSpan.appendChild(input);
+          }
+        });
+        row.appendChild(textSpan);
+        box.appendChild(row);
+      });
+      const resultSlot = el('span', 'result-slot dialogue-fill-result');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        let allOk = true;
+        inputs.forEach(function (inp) {
+          const ok = norm(inp.value) === norm(inp.dataset.answer);
+          if (!ok) allOk = false;
+          inp.classList.toggle('select-wrong', inp.value !== '' && !ok);
+          inp.classList.toggle('select-ok', ok);
+        });
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(allOk));
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resultSlot);
+      return box;
+    }
+
+    function renderKeypad(onDigit, onBackspace) {
+      const pad = el('div', 'number-keypad');
+      ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].forEach(function (d) {
+        const b = el('button', 'key-btn', d); b.type = 'button';
+        b.addEventListener('click', function () { onDigit(d); });
+        pad.appendChild(b);
+      });
+      const back = el('button', 'key-btn key-back', '⌫'); back.type = 'button';
+      back.addEventListener('click', onBackspace);
+      pad.appendChild(back);
+      return pad;
+    }
+
+    function renderNumberFillItem(item, withAudio) {
+      const wrap = el('div', 'text-answer-item number-fill-item');
+      if (withAudio) {
+        const row = el('div', 'listen-row');
+        if (item.audio) row.appendChild(playBtn(item.audio));
+        row.appendChild(el('span', 'match-prompt', item.context));
+        wrap.appendChild(row);
+      } else {
+        wrap.appendChild(el('p', 'match-prompt', item.prompt));
+      }
+      const display = el('div', 'number-display', '—');
+      wrap.appendChild(display);
+      let val = '';
+      function updateDisplay() { display.textContent = val || '—'; }
+      const pad = renderKeypad(
+        function (d) { val += d; updateDisplay(); },
+        function () { val = val.slice(0, -1); updateDisplay(); }
+      );
+      wrap.appendChild(pad);
+      const resultSlot = el('span', 'result-slot');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        const ok = val.replace(/\D/g, '') === String(item.answer).replace(/\D/g, '');
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+        if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+      });
+      wrap.appendChild(checkBtn); wrap.appendChild(resultSlot);
+      return wrap;
+    }
+
+    function renderNumberFillListening(nf) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', nf.title || 'Điền số vào chỗ trống'));
+      if (nf.instruction) box.appendChild(el('p', 'ex-instruction', nf.instruction));
+      (nf.items || []).forEach(function (item) { box.appendChild(renderNumberFillItem(item, true)); });
+      return box;
+    }
+
+    function renderNumberFillExercise(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      (ex.items || []).forEach(function (item) { box.appendChild(renderNumberFillItem(item, false)); });
+      return box;
+    }
+
+    function renderDialogueOrder(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const turns = ex.turns || [];
+      function turnLabel(t) { return t.speaker + ': ' + t.text; }
+
+      box.appendChild(el('p', 'ex-instruction', 'Đã sắp xếp:'));
+      const built = el('div', 'dialogue-order-built');
+      box.appendChild(built);
+      box.appendChild(el('p', 'ex-instruction', 'Bấm theo đúng thứ tự:'));
+      const bank = el('div', 'dialogue-order-bank');
+      box.appendChild(bank);
+
+      let order = [];
+      const shuffled = shuffle(turns.map(function (_, i) { return i; }));
+
+      function refreshBuilt() {
+        built.innerHTML = '';
+        order.forEach(function (idx, pos) {
+          const row = el('div', 'dialogue-order-item placed');
+          row.appendChild(el('span', 'order-num', String(pos + 1) + '.'));
+          row.appendChild(el('span', 'order-text', turnLabel(turns[idx])));
+          row.addEventListener('click', function () {
+            order = order.filter(function (i) { return i !== idx; });
+            refreshBuilt(); refreshBank();
+          });
+          built.appendChild(row);
+        });
+      }
+      function refreshBank() {
+        bank.innerHTML = '';
+        shuffled.forEach(function (idx) {
+          if (order.indexOf(idx) !== -1) return;
+          const row = el('div', 'dialogue-order-item pickable');
+          row.appendChild(el('span', 'order-text', turnLabel(turns[idx])));
+          row.addEventListener('click', function () { order.push(idx); refreshBuilt(); refreshBank(); });
+          bank.appendChild(row);
+        });
+      }
+      refreshBuilt(); refreshBank();
+
+      const resultSlot = el('span', 'result-slot');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        const ok = order.length === turns.length && order.every(function (idx, pos) { return idx === pos; });
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resultSlot);
+      return box;
+    }
+
     function renderTextAnswer(ex) {
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      var activeInput = null;
+      if (ex.wordBank && ex.wordBank.length) {
+        const bankRow = el('div', 'scramble-bank');
+        ex.wordBank.forEach(function (w) {
+          const chip = el('span', 'chip chip-pickable', w);
+          chip.addEventListener('click', function () {
+            const target = activeInput || box.querySelector('.text-answer-input');
+            if (!target) return;
+            target.value = (target.value ? target.value + ' ' : '') + w;
+            target.focus();
+          });
+          bankRow.appendChild(chip);
+        });
+        box.appendChild(bankRow);
+      }
       (ex.items || []).forEach(function (item) {
         const row = el('div', 'text-answer-item');
         row.appendChild(el('p', 'match-prompt', item.prompt));
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'blank-input text-answer-input';
         input.placeholder = 'Viết bằng chữ…';
+        input.addEventListener('focus', function () { activeInput = input; });
         row.appendChild(input);
         const resultSlot = el('span', 'result-slot');
         const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
@@ -1062,7 +1248,9 @@
       listen_order_fill: renderListenOrderFill,
       choice: renderChoiceQuiz,
       dialogue_fill: renderDialogueFill,
-      text_answer: renderTextAnswer
+      text_answer: renderTextAnswer,
+      number_fill: renderNumberFillExercise,
+      dialogue_order: renderDialogueOrder
     };
 
     function renderPostClassTab(item) {
