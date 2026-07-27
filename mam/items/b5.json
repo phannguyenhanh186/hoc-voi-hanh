@@ -333,6 +333,12 @@
   "grammar": {
     "points": [
       {
+        "id": "g0",
+        "title": "Đếm số từ 21 tới 99: [Hàng chục] + [Hàng đơn vị]",
+        "explanation": "Từ 20 tới 99, số 1 ở hàng đơn vị thường đọc là 'mốt'. Từ 20 tới 99, số 4 ở hàng đơn vị thường đọc là 'bốn' hoặc 'tư'. Từ 10 tới 99, số 5 ở hàng đơn vị thường đọc là 'lăm'.",
+        "examples": ["Hai mươi - 20", "Bốn ba - 43", "Bảy bảy - 77", "Hai mốt - 21", "Sáu mốt - 61", "Bốn bốn/bốn tư - 44", "Tám bốn/tám tư - 84", "Mười lăm - 15", "Ba lăm - 35"]
+      },
+      {
         "id": "g1",
         "title": "Ngày + [số] — Tháng + [số]",
         "explanation": "Dùng 'ngày' + số để nói ngày trong tháng, 'tháng' + số để nói tháng trong năm (tháng 4 có thể nói là 'tháng tư' hoặc 'tháng bốn').",
