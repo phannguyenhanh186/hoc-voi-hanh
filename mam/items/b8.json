@@ -1,0 +1,54 @@
+{
+  "id": "b8",
+  "num": 8,
+  "title": "Hôm nay trời mưa to!",
+
+  "vocab": {
+    "items": [
+      { "id": "v1", "word": "trời", "meaning": "sky", "audio": "audio/b8/{voice}/vocab_troi.mp3" },
+      { "id": "v2", "word": "nắng", "meaning": "sun, sunny", "audio": "audio/b8/{voice}/vocab_nang.mp3" },
+      { "id": "v3", "word": "mưa", "meaning": "rain, rainy", "audio": "audio/b8/{voice}/vocab_mua.mp3" },
+      { "id": "v4", "word": "trời nắng", "meaning": "it's sunny, sunny day", "audio": "audio/b8/{voice}/vocab_troi_nang.mp3" },
+      { "id": "v5", "word": "trời mưa", "meaning": "it's rainy, rainy day", "audio": "audio/b8/{voice}/vocab_troi_mua.mp3" },
+      { "id": "v6", "word": "to", "meaning": "big", "audio": "audio/b8/{voice}/vocab_to.mp3" },
+      { "id": "v7", "word": "trời nắng to", "meaning": "it's very sunny", "audio": "audio/b8/{voice}/vocab_troi_nang_to.mp3" },
+      { "id": "v8", "word": "trời mưa to", "meaning": "it's heavily raining", "audio": "audio/b8/{voice}/vocab_troi_mua_to.mp3" },
+      { "id": "v9", "word": "nóng", "meaning": "hot", "audio": "audio/b8/{voice}/vocab_nong.mp3" },
+      { "id": "v10", "word": "lạnh", "meaning": "cold", "audio": "audio/b8/{voice}/vocab_lanh.mp3" },
+      { "id": "v11", "word": "mát", "meaning": "cool", "audio": "audio/b8/{voice}/vocab_mat.mp3" },
+      { "id": "v12", "word": "trời nóng", "meaning": "hot weather", "audio": "audio/b8/{voice}/vocab_troi_nong.mp3" },
+      { "id": "v13", "word": "trời lạnh", "meaning": "cold weather", "audio": "audio/b8/{voice}/vocab_troi_lanh.mp3" },
+      { "id": "v14", "word": "trời mát", "meaning": "cool weather", "audio": "audio/b8/{voice}/vocab_troi_mat.mp3" },
+      { "id": "v15", "word": "thời tiết", "meaning": "weather", "audio": "audio/b8/{voice}/vocab_thoi_tiet.mp3" },
+      { "id": "v16", "word": "thế nào", "meaning": "how", "audio": "audio/b8/{voice}/vocab_the_nao.mp3" }
+    ]
+  },
+
+  "grammar": {
+    "points": [
+      {
+        "id": "g1",
+        "title": "[Chủ ngữ] + đang + động từ",
+        "explanation": "Dùng 'đang' để nói một hành động đang diễn ra ngay bây giờ.",
+        "examples": ["Mình đang ăn.", "Anh đang uống cà phê.", "Chị đang học.", "Trời đang mưa to."]
+      },
+      {
+        "id": "g2",
+        "title": "Hỏi - trả lời với 'đang'",
+        "explanation": "",
+        "examples": ["Bạn đang làm gì? → Mình đang làm việc.", "Anh ấy đang làm gì? → Anh ấy đang dọn nhà."]
+      },
+      {
+        "id": "g3",
+        "title": "Hỏi về thời tiết: Bây giờ/Hôm nay/Hôm qua thời tiết thế nào?",
+        "explanation": "",
+        "examples": ["Bây giờ thời tiết thế nào? → Trời đang mưa to.", "Hôm nay thời tiết ở Việt Nam thế nào? → Hôm nay trời nắng.", "Hôm qua thời tiết thế nào? → Hôm qua trời mát, không mưa."]
+      }
+    ]
+  },
+
+  "listening": { "groups": [] },
+  "reading": { "passages": [] },
+  "preClass": { "dialogues": [] },
+  "postClass": { "exercises": [] }
+}
