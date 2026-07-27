@@ -397,8 +397,15 @@
       const entries = listening.items || [];
       const numberFill = listening.numberFill;
       const hasNumberFill = numberFill && numberFill.items && numberFill.items.length;
-      if (!groups.length && !entries.length && !hasNumberFill) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
+      const dialogueFill = listening.dialogueFill;
+      const hasDialogueFill = dialogueFill && dialogueFill.lines && dialogueFill.lines.length;
+      if (!groups.length && !entries.length && !hasNumberFill && !hasDialogueFill) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
       if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
+
+      // Điền từ vào chỗ trống (word bank)
+      if (hasDialogueFill) {
+        panel.appendChild(renderDialogueFill(Object.assign({ title: 'Điền từ vào chỗ trống' }, dialogueFill)));
+      }
 
       // Điền số vào chỗ trống bằng bàn phím số
       if (hasNumberFill) {
