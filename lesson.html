@@ -459,6 +459,9 @@
         if (p.questions && p.questions.length) {
           panel.appendChild(renderChoiceQuiz({ title: 'Câu hỏi', items: p.questions }));
         }
+        if (p.textQuestions && p.textQuestions.length) {
+          panel.appendChild(renderTextAnswer({ title: 'Câu hỏi đọc hiểu', items: p.textQuestions }));
+        }
         if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
           panel.appendChild(renderFillBlanksText(Object.assign({ title: 'Điền vào chỗ trống' }, p.fillBlanks)));
         }
@@ -1232,6 +1235,18 @@
         input.type = 'text'; input.className = 'blank-input text-answer-input';
         input.placeholder = 'Viết bằng chữ…';
         input.addEventListener('focus', function () { activeInput = input; });
+        if (item.wordBank && item.wordBank.length) {
+          const itemBank = el('div', 'scramble-bank');
+          item.wordBank.forEach(function (w) {
+            const chip = el('span', 'chip chip-pickable', w);
+            chip.addEventListener('click', function () {
+              input.value = (input.value ? input.value + ' ' : '') + w;
+              input.focus();
+            });
+            itemBank.appendChild(chip);
+          });
+          row.appendChild(itemBank);
+        }
         row.appendChild(input);
         const resultSlot = el('span', 'result-slot');
         const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
