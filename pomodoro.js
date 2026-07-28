@@ -63,7 +63,7 @@
   };
 
   var CSS = ''
-    + '.pomo-widget{position:fixed;z-index:9999;width:300px;background:var(--surface,#fff);'
+    + '.pomo-widget{position:fixed;z-index:9999;width:300px;max-width:calc(100vw - 16px);background:var(--surface,#fff);'
     + 'border:1.5px solid var(--stroke,#1B1B28);border-radius:var(--radius,16px);'
     + 'box-shadow:5px 5px 0 0 var(--stroke,#1B1B28);font-family:var(--font-body,sans-serif);'
     + 'color:var(--ink,#000);user-select:none;}'
@@ -257,22 +257,56 @@
     handle.addEventListener('pointercancel', endDrag);
   }
 
+  function clampToViewport(el, left, top) {
+    var w = el.offsetWidth || 300, h = el.offsetHeight || 60;
+    var maxLeft = Math.max(0, window.innerWidth - w - 4);
+    var maxTop = Math.max(0, window.innerHeight - h - 4);
+    var l = Math.min(Math.max(0, left), maxLeft);
+    var t = Math.min(Math.max(0, top), maxTop);
+    return { left: l, top: t };
+  }
+
   function applyPos() {
     if (state.pos && state.pos.left) {
-      els.wrap.style.left = state.pos.left;
-      els.wrap.style.top = state.pos.top;
+      var l = parseFloat(state.pos.left) || 0;
+      var t = parseFloat(state.pos.top) || 0;
+      var c = clampToViewport(els.wrap, l, t);
+      els.wrap.style.left = c.left + 'px';
+      els.wrap.style.top = c.top + 'px';
+      els.wrap.style.right = 'auto';
     } else {
       els.wrap.style.right = '24px';
       els.wrap.style.top = '24px';
     }
     var savedFab = loadState().posFab;
     if (savedFab && savedFab.left) {
-      els.fab.style.left = savedFab.left;
-      els.fab.style.top = savedFab.top;
+      var fl = parseFloat(savedFab.left) || 0;
+      var ft = parseFloat(savedFab.top) || 0;
+      var cf = clampToViewport(els.fab, fl, ft);
+      els.fab.style.left = cf.left + 'px';
+      els.fab.style.top = cf.top + 'px';
+      els.fab.style.right = 'auto';
+      els.fab.style.bottom = 'auto';
     } else {
       els.fab.style.right = '24px';
       els.fab.style.bottom = '24px';
     }
+  }
+
+  function reclampOnResize() {
+    // Đọc lại vị trí hiện tại trên màn hình rồi kẹp lại trong khung nhìn,
+    // để thu nhỏ cửa sổ hoặc xoay màn hình điện thoại không bao giờ làm mất widget.
+    [els.wrap, els.fab].forEach(function (elm) {
+      if (!elm || elm.style.display === 'none') return;
+      var rect = elm.getBoundingClientRect();
+      var c = clampToViewport(elm, rect.left, rect.top);
+      if (c.left !== rect.left || c.top !== rect.top) {
+        elm.style.left = c.left + 'px';
+        elm.style.top = c.top + 'px';
+        elm.style.right = 'auto';
+        elm.style.bottom = 'auto';
+      }
+    });
   }
 
   function render() {
@@ -396,6 +430,14 @@
     buildDOM();
     applyPos();
     render();
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(reclampOnResize, 120);
+    });
+    window.addEventListener('orientationchange', function () {
+      setTimeout(reclampOnResize, 200);
+    });
   }
 
   if (document.readyState === 'loading') {
