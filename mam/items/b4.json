@@ -501,6 +501,7 @@
       {
         "id": "r1",
         "title": "Một ngày của Minh",
+        "audio": "audio/b4/{voice}/reading_r1.mp3",
         "text": "Minh là sinh viên. Hôm nay Minh có lớp vào buổi sáng.\nSáng nay, Minh ngủ dậy lúc bảy giờ sáng. Sau đó, Minh đánh răng, rửa mặt và pha cà phê. Minh ăn sáng lúc bảy giờ ba mươi phút rồi đi học.\nTrưa nay, Minh ăn trưa lúc mười hai giờ với bạn. Sau khi ăn trưa, Minh học đến năm giờ chiều. Sau đó, Minh về nhà. Ở nhà, Minh giặt đồ và gội đầu.\nTối nay, Minh ăn tối lúc bảy giờ tối. Sau khi ăn tối, Minh nghe nhạc, chơi game hoặc coi phim. Minh thường đi ngủ lúc mười rưỡi tối. Nhưng tối nay Minh ngủ trễ tại vì Minh không có lớp vào sáng mai.",
         "questions": [
           {
