@@ -96,9 +96,9 @@
         { "word": "màu đen", "color": "#1B1B28", "audio": "audio/b10/{voice}/vocab_mau_den.mp3" },
         { "word": "màu xanh dương", "color": "#77D2FD", "audio": "audio/b10/{voice}/vocab_mau_xanh_duong.mp3" },
         { "word": "màu xanh lá", "color": "#9BFAB9", "audio": "audio/b10/{voice}/vocab_mau_xanh_la.mp3" },
-        { "word": "màu đỏ", "color": "#FA9E9C", "audio": "audio/b10/{voice}/vocab_mau_do.mp3" },
+        { "word": "màu đỏ", "color": "#FA4141", "audio": "audio/b10/{voice}/vocab_mau_do.mp3" },
         { "word": "màu vàng", "color": "#FAE79B", "audio": "audio/b10/{voice}/vocab_mau_vang.mp3" },
-        { "word": "màu cam", "color": "#FAAD9B", "audio": "audio/b10/{voice}/vocab_mau_cam.mp3" },
+        { "word": "màu cam", "color": "#FA6141", "audio": "audio/b10/{voice}/vocab_mau_cam.mp3" },
         { "word": "màu xám", "color": "#D6D1D1", "audio": "audio/b10/{voice}/vocab_mau_xam.mp3" },
         { "word": "màu nâu", "color": "#613938", "audio": "audio/b10/{voice}/vocab_mau_nau.mp3" }
       ]
@@ -111,9 +111,9 @@
         { "id": "im2", "color": "#1B1B28", "answer": "màu đen" },
         { "id": "im3", "color": "#77D2FD", "answer": "màu xanh dương" },
         { "id": "im4", "color": "#9BFAB9", "answer": "màu xanh lá" },
-        { "id": "im5", "color": "#FA9E9C", "answer": "màu đỏ" },
+        { "id": "im5", "color": "#FA4141", "answer": "màu đỏ" },
         { "id": "im6", "color": "#FAE79B", "answer": "màu vàng" },
-        { "id": "im7", "color": "#FAAD9B", "answer": "màu cam" },
+        { "id": "im7", "color": "#FA6141", "answer": "màu cam" },
         { "id": "im8", "color": "#D6D1D1", "answer": "màu xám" },
         { "id": "im9", "color": "#613938", "answer": "màu nâu" }
       ],
