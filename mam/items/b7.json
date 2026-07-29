@@ -2,117 +2,310 @@
   "id": "b7",
   "num": 7,
   "title": "Của anh chị một trăm ngàn!",
-
   "vocab": {
     "items": [
-      { "id": "v1", "word": "một trăm", "meaning": "100", "audio": "audio/b7/{voice}/vocab_mot_tram.mp3" },
-      { "id": "v2", "word": "một ngàn", "meaning": "1,000", "audio": "audio/b7/{voice}/vocab_mot_ngan.mp3" },
-      { "id": "v3", "word": "mười ngàn", "meaning": "10,000", "audio": "audio/b7/{voice}/vocab_muoi_ngan.mp3" },
-      { "id": "v4", "word": "một trăm ngàn", "meaning": "100,000", "audio": "audio/b7/{voice}/vocab_mot_tram_ngan.mp3" },
-      { "id": "v5", "word": "đồng", "meaning": "Dong (currency)", "audio": "audio/b7/{voice}/vocab_dong.mp3" },
-      { "id": "v6", "word": "đồ uống", "meaning": "beverage", "audio": "audio/b7/{voice}/vocab_do_uong.mp3" },
-      { "id": "v7", "word": "này", "meaning": "this", "audio": "audio/b7/{voice}/vocab_nay.mp3" },
-      { "id": "v8", "word": "kia", "meaning": "that", "audio": "audio/b7/{voice}/vocab_kia.mp3" },
-      { "id": "v9", "word": "cái này", "meaning": "this one", "audio": "audio/b7/{voice}/vocab_cai_nay.mp3" },
-      { "id": "v10", "word": "cái kia", "meaning": "that one", "audio": "audio/b7/{voice}/vocab_cai_kia.mp3" },
-      { "id": "v11", "word": "thành phố", "meaning": "city", "audio": "audio/b7/{voice}/vocab_thanh_pho.mp3" },
-      { "id": "v12", "word": "thành phố lớn", "meaning": "big, major city", "audio": "audio/b7/{voice}/vocab_thanh_pho_lon.mp3" },
-      { "id": "v13", "word": "như", "meaning": "like, such as", "audio": "audio/b7/{voice}/vocab_nhu.mp3" },
-      { "id": "v14", "word": "cao", "meaning": "high", "audio": "audio/b7/{voice}/vocab_cao.mp3" },
-      { "id": "v15", "word": "cao hơn", "meaning": "higher than", "audio": "audio/b7/{voice}/vocab_cao_hon.mp3" },
-      { "id": "v16", "word": "nơi khác", "meaning": "another place, other places", "audio": "audio/b7/{voice}/vocab_noi_khac.mp3" },
-      { "id": "v17", "word": "giá", "meaning": "price, cost", "audio": "audio/b7/{voice}/vocab_gia.mp3" },
-      { "id": "v18", "word": "lựa chọn", "meaning": "choice, option, selection", "audio": "audio/b7/{voice}/vocab_lua_chon.mp3" },
-      { "id": "v19", "word": "từ", "meaning": "from", "audio": "audio/b7/{voice}/vocab_tu.mp3" },
-      { "id": "v20", "word": "tới", "meaning": "to, towards", "audio": "audio/b7/{voice}/vocab_toi.mp3" }
+      {
+        "id": "v1",
+        "word": "một trăm",
+        "meaning": "100",
+        "audio": "audio/b7/{voice}/vocab_mot_tram.mp3"
+      },
+      {
+        "id": "v2",
+        "word": "một ngàn",
+        "meaning": "1,000",
+        "audio": "audio/b7/{voice}/vocab_mot_ngan.mp3"
+      },
+      {
+        "id": "v3",
+        "word": "mười ngàn",
+        "meaning": "10,000",
+        "audio": "audio/b7/{voice}/vocab_muoi_ngan.mp3"
+      },
+      {
+        "id": "v4",
+        "word": "một trăm ngàn",
+        "meaning": "100,000",
+        "audio": "audio/b7/{voice}/vocab_mot_tram_ngan.mp3"
+      },
+      {
+        "id": "v5",
+        "word": "đồng",
+        "meaning": "Dong (currency)",
+        "audio": "audio/b7/{voice}/vocab_dong.mp3"
+      },
+      {
+        "id": "v6",
+        "word": "đồ uống",
+        "meaning": "beverage",
+        "audio": "audio/b7/{voice}/vocab_do_uong.mp3"
+      },
+      {
+        "id": "v7",
+        "word": "này",
+        "meaning": "this",
+        "audio": "audio/b7/{voice}/vocab_nay.mp3"
+      },
+      {
+        "id": "v8",
+        "word": "kia",
+        "meaning": "that",
+        "audio": "audio/b7/{voice}/vocab_kia.mp3"
+      },
+      {
+        "id": "v9",
+        "word": "cái này",
+        "meaning": "this one",
+        "audio": "audio/b7/{voice}/vocab_cai_nay.mp3"
+      },
+      {
+        "id": "v10",
+        "word": "cái kia",
+        "meaning": "that one",
+        "audio": "audio/b7/{voice}/vocab_cai_kia.mp3"
+      },
+      {
+        "id": "v11",
+        "word": "thành phố",
+        "meaning": "city",
+        "audio": "audio/b7/{voice}/vocab_thanh_pho.mp3"
+      },
+      {
+        "id": "v12",
+        "word": "thành phố lớn",
+        "meaning": "big, major city",
+        "audio": "audio/b7/{voice}/vocab_thanh_pho_lon.mp3"
+      },
+      {
+        "id": "v13",
+        "word": "như",
+        "meaning": "like, such as",
+        "audio": "audio/b7/{voice}/vocab_nhu.mp3"
+      },
+      {
+        "id": "v14",
+        "word": "cao",
+        "meaning": "high",
+        "audio": "audio/b7/{voice}/vocab_cao.mp3"
+      },
+      {
+        "id": "v15",
+        "word": "cao hơn",
+        "meaning": "higher than",
+        "audio": "audio/b7/{voice}/vocab_cao_hon.mp3"
+      },
+      {
+        "id": "v16",
+        "word": "nơi khác",
+        "meaning": "another place, other places",
+        "audio": "audio/b7/{voice}/vocab_noi_khac.mp3"
+      },
+      {
+        "id": "v17",
+        "word": "giá",
+        "meaning": "price, cost",
+        "audio": "audio/b7/{voice}/vocab_gia.mp3"
+      },
+      {
+        "id": "v18",
+        "word": "lựa chọn",
+        "meaning": "choice, option, selection",
+        "audio": "audio/b7/{voice}/vocab_lua_chon.mp3"
+      },
+      {
+        "id": "v19",
+        "word": "từ",
+        "meaning": "from",
+        "audio": "audio/b7/{voice}/vocab_tu.mp3"
+      },
+      {
+        "id": "v20",
+        "word": "tới",
+        "meaning": "to, towards",
+        "audio": "audio/b7/{voice}/vocab_toi.mp3"
+      }
     ]
   },
-
   "grammar": {
     "points": [
       {
         "id": "g1",
         "title": "Có hàng chục: [Hàng trăm] + trăm + [Hàng chục] + [Hàng đơn vị]",
         "explanation": "",
-        "examples": ["Một trăm ba mươi - 130", "Bốn trăm mười - 410", "Hai trăm sáu tư - 264", "Bảy trăm năm lăm - 755", "Chín trăm tám mốt - 981"]
+        "examples": [
+          "Một trăm ba mươi - 130",
+          "Bốn trăm mười - 410",
+          "Hai trăm sáu tư - 264",
+          "Bảy trăm năm lăm - 755",
+          "Chín trăm tám mốt - 981"
+        ]
       },
       {
         "id": "g2",
         "title": "Không có hàng chục: [Hàng trăm] + trăm + lẻ + [Hàng đơn vị]",
         "explanation": "",
-        "examples": ["Hai trăm lẻ bảy - 207", "Năm trăm lẻ sáu - 506", "Bốn trăm lẻ chín - 409", "Tám trăm lẻ hai - 802"]
+        "examples": [
+          "Hai trăm lẻ bảy - 207",
+          "Năm trăm lẻ sáu - 506",
+          "Bốn trăm lẻ chín - 409",
+          "Tám trăm lẻ hai - 802"
+        ]
       },
       {
         "id": "g3",
         "title": "Hàng ngàn: [X] + ngàn",
         "explanation": "",
-        "examples": ["Năm ngàn - 5,000", "Mười ngàn - 10,000", "Hai mươi ngàn - 20,000", "Bốn lăm ngàn - 45,000", "Một trăm tám tư ngàn - 184,000", "Bảy trăm ba mốt ngàn - 731,000"]
+        "examples": [
+          "Năm ngàn - 5,000",
+          "Mười ngàn - 10,000",
+          "Hai mươi ngàn - 20,000",
+          "Bốn lăm ngàn - 45,000",
+          "Một trăm tám tư ngàn - 184,000",
+          "Bảy trăm ba mốt ngàn - 731,000"
+        ]
       },
       {
         "id": "g4",
         "title": "Hỏi giá tiền — Của + [danh xưng]",
         "explanation": "Dùng khi hỏi tổng tiền của một người.",
-        "examples": ["Của mình bao nhiêu tiền? - How much is mine?"]
+        "examples": [
+          "Của mình bao nhiêu tiền? - How much is mine?"
+        ]
       },
       {
         "id": "g5",
         "title": "Hỏi giá tiền — Cái này / Cái kia",
         "explanation": "Dùng khi không biết hoặc không muốn nói tên món.",
-        "examples": ["Cái này bao nhiêu tiền? - How much is this?", "Cái kia bao nhiêu tiền? - How much is that?"]
+        "examples": [
+          "Cái này bao nhiêu tiền? - How much is this?",
+          "Cái kia bao nhiêu tiền? - How much is that?"
+        ]
       },
       {
         "id": "g6",
         "title": "Hỏi giá tiền — [Danh từ] + này",
         "explanation": "",
-        "examples": ["Cơm này bao nhiêu tiền? - How much is this rice dish?", "Cà phê này bao nhiêu tiền? - How much is this coffee?", "Bánh ngọt này bao nhiêu tiền? - How much is this cake?"]
+        "examples": [
+          "Cơm này bao nhiêu tiền? - How much is this rice dish?",
+          "Cà phê này bao nhiêu tiền? - How much is this coffee?",
+          "Bánh ngọt này bao nhiêu tiền? - How much is this cake?"
+        ]
       },
       {
         "id": "g7",
         "title": "Nói giá tiền — Của + [Danh xưng] + [X] ngàn (đồng)",
         "explanation": "",
-        "examples": ["Của anh bốn lăm ngàn - Yours is 45,000 dong", "Của chị hai trăm ba tư ngàn đồng - Yours is 234,000 dong"]
+        "examples": [
+          "Của anh bốn lăm ngàn - Yours is 45,000 dong",
+          "Của chị hai trăm ba tư ngàn đồng - Yours is 234,000 dong"
+        ]
       },
       {
         "id": "g8",
         "title": "Nói giá tiền — Cái/[Danh từ] + này + [X] ngàn (đồng)",
         "explanation": "",
-        "examples": ["Cái này tám mốt ngàn - This is 81,000 dong", "Bánh này một trăm lẻ năm ngàn đồng - This cake is 105,000 dong"]
+        "examples": [
+          "Cái này tám mốt ngàn - This is 81,000 dong",
+          "Bánh này một trăm lẻ năm ngàn đồng - This cake is 105,000 dong"
+        ]
       }
     ]
   },
-
   "listening": {
     "numberFill": {
       "title": "Điền số vào chỗ trống",
       "instruction": "Nghe rồi điền số bằng bàn phím bên dưới.",
       "items": [
-        { "audio": "audio/b7/{voice}/listen_nf_01.mp3", "context": "Cái này bao nhiêu? → Cái này ______ đồng.", "answer": "71000" },
-        { "audio": "audio/b7/{voice}/listen_nf_02.mp3", "context": "Hai tô bún bò này bao nhiêu? → Của anh ______ đồng.", "answer": "125000" },
-        { "audio": "audio/b7/{voice}/listen_nf_03.mp3", "context": "Cái áo này bao nhiêu? → Cái này ______ đồng.", "answer": "380000" },
-        { "audio": "audio/b7/{voice}/listen_nf_04.mp3", "context": "Của mình bao nhiêu? → Của chị ______ đồng.", "answer": "534000" }
+        {
+          "audio": "audio/b7/{voice}/listen_nf_01.mp3",
+          "context": "Cái này bao nhiêu? → Cái này ______ đồng.",
+          "answer": "71000"
+        },
+        {
+          "audio": "audio/b7/{voice}/listen_nf_02.mp3",
+          "context": "Hai tô bún bò này bao nhiêu? → Của anh ______ đồng.",
+          "answer": "125000"
+        },
+        {
+          "audio": "audio/b7/{voice}/listen_nf_03.mp3",
+          "context": "Cái áo này bao nhiêu? → Cái này ______ đồng.",
+          "answer": "380000"
+        },
+        {
+          "audio": "audio/b7/{voice}/listen_nf_04.mp3",
+          "context": "Của mình bao nhiêu? → Của chị ______ đồng.",
+          "answer": "534000"
+        }
       ]
     }
   },
-
   "reading": {
     "passages": [
       {
         "id": "r1",
         "title": "Giá cả ở Việt Nam",
+        "audio": "audio/b7/{voice}/reading_r1.mp3",
         "text": "Ở Việt Nam, giá món ăn và đồ uống tùy vào quán và khu vực. Ở thành phố lớn như Sài Gòn và Hà Nội, giá thường cao hơn những nơi khác.\nGiá một tô phở bò thường có giá từ bốn mươi ngàn tới sáu mươi ngàn đồng. Giá một tô bún bò cũng thường từ bốn mươi ngàn tới sáu mươi ngàn đồng.\nNếu muốn uống cà phê, bạn có nhiều lựa chọn. Giá một cốc cà phê đen thường từ ba mươi ngàn tới năm mươi ngàn đồng, còn giá một cốc cà phê sữa thường có giá từ bốn mươi ngàn tới sáu mươi ngàn đồng.",
         "fillBlanks": {
           "instruction": "Điền số vào chỗ trống.",
           "lines": [
-            { "parts": ["Giá một tô phở bò thường từ ", { "blank": "bốn mươi ngàn" }, " tới ", { "blank": "sáu mươi ngàn" }, "."] },
-            { "parts": ["Một tô bún bò thường từ ", { "blank": "bốn mươi ngàn" }, " tới ", { "blank": "sáu mươi ngàn" }, "."] },
-            { "parts": ["Một cốc cà phê đen thường từ ", { "blank": "ba mươi ngàn" }, " tới ", { "blank": "năm mươi ngàn" }, "."] },
-            { "parts": ["Một cốc cà phê sữa thường từ ", { "blank": "bốn mươi ngàn" }, " tới ", { "blank": "sáu mươi ngàn" }, "."] }
+            {
+              "parts": [
+                "Giá một tô phở bò thường từ ",
+                {
+                  "blank": "bốn mươi ngàn"
+                },
+                " tới ",
+                {
+                  "blank": "sáu mươi ngàn"
+                },
+                "."
+              ]
+            },
+            {
+              "parts": [
+                "Một tô bún bò thường từ ",
+                {
+                  "blank": "bốn mươi ngàn"
+                },
+                " tới ",
+                {
+                  "blank": "sáu mươi ngàn"
+                },
+                "."
+              ]
+            },
+            {
+              "parts": [
+                "Một cốc cà phê đen thường từ ",
+                {
+                  "blank": "ba mươi ngàn"
+                },
+                " tới ",
+                {
+                  "blank": "năm mươi ngàn"
+                },
+                "."
+              ]
+            },
+            {
+              "parts": [
+                "Một cốc cà phê sữa thường từ ",
+                {
+                  "blank": "bốn mươi ngàn"
+                },
+                " tới ",
+                {
+                  "blank": "sáu mươi ngàn"
+                },
+                "."
+              ]
+            }
           ]
         }
       }
     ]
   },
-
   "preClass": {
     "note": "Xem cách đọc số rồi tự luyện tập.",
     "flows": [
@@ -121,55 +314,180 @@
         "vocabPreview": {
           "instruction": "Xem số, thử đọc bằng chữ, rồi bấm nghe để kiểm tra.",
           "items": [
-            { "number": "15", "word": "mười lăm", "audio": "audio/b7/{voice}/num_15.mp3" },
-            { "number": "61", "word": "sáu mốt", "audio": "audio/b7/{voice}/num_61.mp3" },
-            { "number": "24", "word": "hai tư / hai bốn", "audio": "audio/b7/{voice}/num_24.mp3" },
-            { "number": "300", "word": "ba trăm", "audio": "audio/b7/{voice}/num_300.mp3" },
-            { "number": "507", "word": "năm trăm lẻ bảy", "audio": "audio/b7/{voice}/num_507.mp3" },
-            { "number": "810", "word": "tám trăm mười", "audio": "audio/b7/{voice}/num_810.mp3" },
-            { "number": "350", "word": "ba trăm năm mươi", "audio": "audio/b7/{voice}/num_350.mp3" },
-            { "number": "791", "word": "bảy trăm chín mốt", "audio": "audio/b7/{voice}/num_791.mp3" },
-            { "number": "5,000", "word": "năm ngàn", "audio": "audio/b7/{voice}/num_5000.mp3" },
-            { "number": "34,000", "word": "ba tư ngàn / ba bốn ngàn", "audio": "audio/b7/{voice}/num_34000.mp3" },
-            { "number": "198,000", "word": "một trăm chín tám ngàn", "audio": "audio/b7/{voice}/num_198000.mp3" }
+            {
+              "number": "15",
+              "word": "mười lăm",
+              "audio": "audio/b7/{voice}/num_15.mp3"
+            },
+            {
+              "number": "61",
+              "word": "sáu mốt",
+              "audio": "audio/b7/{voice}/num_61.mp3"
+            },
+            {
+              "number": "24",
+              "word": "hai tư / hai bốn",
+              "audio": "audio/b7/{voice}/num_24.mp3"
+            },
+            {
+              "number": "300",
+              "word": "ba trăm",
+              "audio": "audio/b7/{voice}/num_300.mp3"
+            },
+            {
+              "number": "507",
+              "word": "năm trăm lẻ bảy",
+              "audio": "audio/b7/{voice}/num_507.mp3"
+            },
+            {
+              "number": "810",
+              "word": "tám trăm mười",
+              "audio": "audio/b7/{voice}/num_810.mp3"
+            },
+            {
+              "number": "350",
+              "word": "ba trăm năm mươi",
+              "audio": "audio/b7/{voice}/num_350.mp3"
+            },
+            {
+              "number": "791",
+              "word": "bảy trăm chín mốt",
+              "audio": "audio/b7/{voice}/num_791.mp3"
+            },
+            {
+              "number": "5,000",
+              "word": "năm ngàn",
+              "audio": "audio/b7/{voice}/num_5000.mp3"
+            },
+            {
+              "number": "34,000",
+              "word": "ba tư ngàn / ba bốn ngàn",
+              "audio": "audio/b7/{voice}/num_34000.mp3"
+            },
+            {
+              "number": "198,000",
+              "word": "một trăm chín tám ngàn",
+              "audio": "audio/b7/{voice}/num_198000.mp3"
+            }
           ]
         },
         "quiz": {
           "type": "text_answer",
           "title": "Test lại: đọc số bằng chữ",
           "instruction": "Viết cách đọc của mỗi số bằng chữ.",
-          "wordBank": ["một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "trăm", "ngàn", "lẻ", "mốt", "tư", "lăm", "mươi"],
+          "wordBank": [
+            "một",
+            "hai",
+            "ba",
+            "bốn",
+            "năm",
+            "sáu",
+            "bảy",
+            "tám",
+            "chín",
+            "trăm",
+            "ngàn",
+            "lẻ",
+            "mốt",
+            "tư",
+            "lăm",
+            "mươi"
+          ],
           "items": [
-            { "prompt": "25", "answer": "hai lăm" },
-            { "prompt": "31", "answer": "ba mốt" },
-            { "prompt": "84", "answer": "tám tư" },
-            { "prompt": "705", "answer": "bảy trăm lẻ năm" },
-            { "prompt": "6,000", "answer": "sáu ngàn" },
-            { "prompt": "18,000", "answer": "mười tám ngàn" },
-            { "prompt": "210,000", "answer": "hai trăm mười ngàn" },
-            { "prompt": "356,000", "answer": "ba trăm năm sáu ngàn" }
+            {
+              "prompt": "25",
+              "answer": "hai lăm"
+            },
+            {
+              "prompt": "31",
+              "answer": "ba mốt"
+            },
+            {
+              "prompt": "84",
+              "answer": "tám tư"
+            },
+            {
+              "prompt": "705",
+              "answer": "bảy trăm lẻ năm"
+            },
+            {
+              "prompt": "6,000",
+              "answer": "sáu ngàn"
+            },
+            {
+              "prompt": "18,000",
+              "answer": "mười tám ngàn"
+            },
+            {
+              "prompt": "210,000",
+              "answer": "hai trăm mười ngàn"
+            },
+            {
+              "prompt": "356,000",
+              "answer": "ba trăm năm sáu ngàn"
+            }
           ]
         }
       }
     ]
   },
-
   "postClass": {
     "exercises": [
       {
         "type": "text_answer",
         "title": "1. Đọc số và viết bằng chữ.",
         "instruction": "Viết các số sau bằng chữ.",
-        "wordBank": ["một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "trăm", "ngàn", "lẻ", "mốt", "tư", "lăm", "mươi"],
+        "wordBank": [
+          "một",
+          "hai",
+          "ba",
+          "bốn",
+          "năm",
+          "sáu",
+          "bảy",
+          "tám",
+          "chín",
+          "trăm",
+          "ngàn",
+          "lẻ",
+          "mốt",
+          "tư",
+          "lăm",
+          "mươi"
+        ],
         "items": [
-          { "prompt": "125", "answer": "một trăm hai lăm" },
-          { "prompt": "409", "answer": "bốn trăm lẻ chín" },
-          { "prompt": "581", "answer": "năm trăm tám mốt" },
-          { "prompt": "802", "answer": "tám trăm lẻ hai" },
-          { "prompt": "45.000", "answer": "bốn lăm ngàn" },
-          { "prompt": "105.000", "answer": "một trăm lẻ năm ngàn" },
-          { "prompt": "184.000", "answer": "một trăm tám tư ngàn" },
-          { "prompt": "731.000", "answer": "bảy trăm ba mốt ngàn" }
+          {
+            "prompt": "125",
+            "answer": "một trăm hai lăm"
+          },
+          {
+            "prompt": "409",
+            "answer": "bốn trăm lẻ chín"
+          },
+          {
+            "prompt": "581",
+            "answer": "năm trăm tám mốt"
+          },
+          {
+            "prompt": "802",
+            "answer": "tám trăm lẻ hai"
+          },
+          {
+            "prompt": "45.000",
+            "answer": "bốn lăm ngàn"
+          },
+          {
+            "prompt": "105.000",
+            "answer": "một trăm lẻ năm ngàn"
+          },
+          {
+            "prompt": "184.000",
+            "answer": "một trăm tám tư ngàn"
+          },
+          {
+            "prompt": "731.000",
+            "answer": "bảy trăm ba mốt ngàn"
+          }
         ]
       },
       {
@@ -177,14 +495,38 @@
         "title": "2. Viết số.",
         "instruction": "Viết các số dưới đây bằng số. Dùng bàn phím số bên dưới.",
         "items": [
-          { "prompt": "Một trăm ba mươi lăm", "answer": "135" },
-          { "prompt": "Bảy trăm lẻ sáu", "answer": "706" },
-          { "prompt": "Chín trăm tám mươi tư", "answer": "984" },
-          { "prompt": "Hai trăm lẻ chín", "answer": "209" },
-          { "prompt": "Ba mươi lăm ngàn", "answer": "35000" },
-          { "prompt": "Một trăm hai mươi lăm ngàn", "answer": "125000" },
-          { "prompt": "Hai trăm năm mươi tám ngàn", "answer": "258000" },
-          { "prompt": "Bảy trăm ba mươi mốt ngàn", "answer": "731000" }
+          {
+            "prompt": "Một trăm ba mươi lăm",
+            "answer": "135"
+          },
+          {
+            "prompt": "Bảy trăm lẻ sáu",
+            "answer": "706"
+          },
+          {
+            "prompt": "Chín trăm tám mươi tư",
+            "answer": "984"
+          },
+          {
+            "prompt": "Hai trăm lẻ chín",
+            "answer": "209"
+          },
+          {
+            "prompt": "Ba mươi lăm ngàn",
+            "answer": "35000"
+          },
+          {
+            "prompt": "Một trăm hai mươi lăm ngàn",
+            "answer": "125000"
+          },
+          {
+            "prompt": "Hai trăm năm mươi tám ngàn",
+            "answer": "258000"
+          },
+          {
+            "prompt": "Bảy trăm ba mươi mốt ngàn",
+            "answer": "731000"
+          }
         ]
       },
       {
@@ -192,13 +534,34 @@
         "title": "3. Sắp xếp hội thoại.",
         "instruction": "Bấm vào từng câu theo đúng thứ tự hội thoại.",
         "turns": [
-          { "speaker": "Nhân viên", "text": "Chào anh. Anh dùng gì ạ." },
-          { "speaker": "Khách", "text": "Phở này bao nhiêu tiền?" },
-          { "speaker": "Nhân viên", "text": "Phở bò năm lăm ngàn đồng ạ." },
-          { "speaker": "Khách", "text": "Cho anh một phở bò và thêm một cà phê đen." },
-          { "speaker": "Nhân viên", "text": "Dạ. Còn gì nữa không ạ." },
-          { "speaker": "Khách", "text": "Không. Cho anh tính tiền." },
-          { "speaker": "Nhân viên", "text": "Của anh một trăm mười ngàn đồng ạ." }
+          {
+            "speaker": "Nhân viên",
+            "text": "Chào anh. Anh dùng gì ạ."
+          },
+          {
+            "speaker": "Khách",
+            "text": "Phở này bao nhiêu tiền?"
+          },
+          {
+            "speaker": "Nhân viên",
+            "text": "Phở bò năm lăm ngàn đồng ạ."
+          },
+          {
+            "speaker": "Khách",
+            "text": "Cho anh một phở bò và thêm một cà phê đen."
+          },
+          {
+            "speaker": "Nhân viên",
+            "text": "Dạ. Còn gì nữa không ạ."
+          },
+          {
+            "speaker": "Khách",
+            "text": "Không. Cho anh tính tiền."
+          },
+          {
+            "speaker": "Nhân viên",
+            "text": "Của anh một trăm mười ngàn đồng ạ."
+          }
         ]
       }
     ]
