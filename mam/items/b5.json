@@ -516,6 +516,7 @@
       {
         "id": "r1",
         "title": "Sinh nhật ở Việt Nam",
+        "audio": "audio/b5/{voice}/reading_r1.mp3",
         "text": "Ở Việt Nam, nhiều người thích sinh nhật. Sinh nhật là một ngày đặc biệt trong năm. Vào ngày này, mọi người thường ăn uống với gia đình hoặc bạn. Có người tổ chức sinh nhật ở nhà. Có người tổ chức ở nhà hàng hoặc quán cà phê.\nNhiều người Việt biết ngày, tháng và năm sinh của mình. Tuy nhiên, một số người lớn tuổi không biết chính xác sinh nhật.\nNgày nay, nhiều người trẻ thường tổ chức sinh nhật mỗi năm với gia đình và bạn. Sinh nhật là ngày để mọi người gặp nhau, ăn uống và nói chuyện.",
         "questions": [
           {
@@ -596,14 +597,49 @@
           "type": "text_answer",
           "title": "Test lại: đọc ngày tháng bằng chữ",
           "instruction": "Viết ngày tháng dưới đây bằng chữ.",
-          "wordBank": ["một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "mười", "mươi", "mốt", "tư", "lăm", "ngày", "tháng"],
+          "wordBank": [
+            "một",
+            "hai",
+            "ba",
+            "bốn",
+            "năm",
+            "sáu",
+            "bảy",
+            "tám",
+            "chín",
+            "mười",
+            "mươi",
+            "mốt",
+            "tư",
+            "lăm",
+            "ngày",
+            "tháng"
+          ],
           "items": [
-            { "prompt": "March 3", "answer": "ngày ba tháng ba" },
-            { "prompt": "July 20", "answer": "ngày hai mươi tháng bảy" },
-            { "prompt": "December 12", "answer": "ngày mười hai tháng mười hai" },
-            { "prompt": "January 9", "answer": "ngày chín tháng một" },
-            { "prompt": "October 28", "answer": "ngày hai mươi tám tháng mười" },
-            { "prompt": "February 14", "answer": "ngày mười bốn tháng hai" }
+            {
+              "prompt": "March 3",
+              "answer": "ngày ba tháng ba"
+            },
+            {
+              "prompt": "July 20",
+              "answer": "ngày hai mươi tháng bảy"
+            },
+            {
+              "prompt": "December 12",
+              "answer": "ngày mười hai tháng mười hai"
+            },
+            {
+              "prompt": "January 9",
+              "answer": "ngày chín tháng một"
+            },
+            {
+              "prompt": "October 28",
+              "answer": "ngày hai mươi tám tháng mười"
+            },
+            {
+              "prompt": "February 14",
+              "answer": "ngày mười bốn tháng hai"
+            }
           ]
         }
       }
