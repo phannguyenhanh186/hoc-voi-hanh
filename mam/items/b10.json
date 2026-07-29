@@ -90,32 +90,32 @@
   "preClass": {
     "note": "Xem hình rồi nối từ.",
     "vocabPreview": {
-      "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+      "instruction": "Xem màu và bấm vào từ để nghe phát âm.",
       "items": [
-        { "word": "màu trắng", "image": "images/b10/nghe/mau_trang.jpg", "audio": "audio/b10/{voice}/vocab_mau_trang.mp3" },
-        { "word": "màu đen", "image": "images/b10/nghe/mau_den.jpg", "audio": "audio/b10/{voice}/vocab_mau_den.mp3" },
-        { "word": "màu xanh dương", "image": "images/b10/nghe/mau_xanh_duong.jpg", "audio": "audio/b10/{voice}/vocab_mau_xanh_duong.mp3" },
-        { "word": "màu xanh lá", "image": "images/b10/nghe/mau_xanh_la.jpg", "audio": "audio/b10/{voice}/vocab_mau_xanh_la.mp3" },
-        { "word": "màu đỏ", "image": "images/b10/nghe/mau_do.jpg", "audio": "audio/b10/{voice}/vocab_mau_do.mp3" },
-        { "word": "màu vàng", "image": "images/b10/nghe/mau_vang.jpg", "audio": "audio/b10/{voice}/vocab_mau_vang.mp3" },
-        { "word": "màu cam", "image": "images/b10/nghe/mau_cam.jpg", "audio": "audio/b10/{voice}/vocab_mau_cam.mp3" },
-        { "word": "màu xám", "image": "images/b10/nghe/mau_xam.jpg", "audio": "audio/b10/{voice}/vocab_mau_xam.mp3" },
-        { "word": "màu nâu", "image": "images/b10/nghe/mau_nau.jpg", "audio": "audio/b10/{voice}/vocab_mau_nau.mp3" }
+        { "word": "màu trắng", "color": "#FFFFFF", "audio": "audio/b10/{voice}/vocab_mau_trang.mp3" },
+        { "word": "màu đen", "color": "#1B1B28", "audio": "audio/b10/{voice}/vocab_mau_den.mp3" },
+        { "word": "màu xanh dương", "color": "#77D2FD", "audio": "audio/b10/{voice}/vocab_mau_xanh_duong.mp3" },
+        { "word": "màu xanh lá", "color": "#9BFAB9", "audio": "audio/b10/{voice}/vocab_mau_xanh_la.mp3" },
+        { "word": "màu đỏ", "color": "#FA9E9C", "audio": "audio/b10/{voice}/vocab_mau_do.mp3" },
+        { "word": "màu vàng", "color": "#FAE79B", "audio": "audio/b10/{voice}/vocab_mau_vang.mp3" },
+        { "word": "màu cam", "color": "#FAAD9B", "audio": "audio/b10/{voice}/vocab_mau_cam.mp3" },
+        { "word": "màu xám", "color": "#D6D1D1", "audio": "audio/b10/{voice}/vocab_mau_xam.mp3" },
+        { "word": "màu nâu", "color": "#613938", "audio": "audio/b10/{voice}/vocab_mau_nau.mp3" }
       ]
     },
     "imageMatch": {
-      "title": "Nối từ với hình",
-      "instruction": "Chọn đúng từ cho mỗi hình.",
+      "title": "Nối từ với màu",
+      "instruction": "Chọn đúng từ cho mỗi màu.",
       "items": [
-        { "id": "im1", "image": "images/b10/nghe/mau_trang.jpg", "answer": "màu trắng" },
-        { "id": "im2", "image": "images/b10/nghe/mau_den.jpg", "answer": "màu đen" },
-        { "id": "im3", "image": "images/b10/nghe/mau_xanh_duong.jpg", "answer": "màu xanh dương" },
-        { "id": "im4", "image": "images/b10/nghe/mau_xanh_la.jpg", "answer": "màu xanh lá" },
-        { "id": "im5", "image": "images/b10/nghe/mau_do.jpg", "answer": "màu đỏ" },
-        { "id": "im6", "image": "images/b10/nghe/mau_vang.jpg", "answer": "màu vàng" },
-        { "id": "im7", "image": "images/b10/nghe/mau_cam.jpg", "answer": "màu cam" },
-        { "id": "im8", "image": "images/b10/nghe/mau_xam.jpg", "answer": "màu xám" },
-        { "id": "im9", "image": "images/b10/nghe/mau_nau.jpg", "answer": "màu nâu" }
+        { "id": "im1", "color": "#FFFFFF", "answer": "màu trắng" },
+        { "id": "im2", "color": "#1B1B28", "answer": "màu đen" },
+        { "id": "im3", "color": "#77D2FD", "answer": "màu xanh dương" },
+        { "id": "im4", "color": "#9BFAB9", "answer": "màu xanh lá" },
+        { "id": "im5", "color": "#FA9E9C", "answer": "màu đỏ" },
+        { "id": "im6", "color": "#FAE79B", "answer": "màu vàng" },
+        { "id": "im7", "color": "#FAAD9B", "answer": "màu cam" },
+        { "id": "im8", "color": "#D6D1D1", "answer": "màu xám" },
+        { "id": "im9", "color": "#613938", "answer": "màu nâu" }
       ],
       "answerBank": ["màu trắng", "màu đen", "màu xanh dương", "màu xanh lá", "màu đỏ", "màu vàng", "màu cam", "màu xám", "màu nâu"]
     }
