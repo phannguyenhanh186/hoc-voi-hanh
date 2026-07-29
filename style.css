@@ -638,6 +638,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .image-vocab-word { padding: 8px 6px; font-weight: 700; font-family: var(--font-display); }
 
 .image-match-row .match-img { width: 96px; height: 96px; object-fit: cover; border-radius: 12px; border: 1.5px solid var(--stroke); background: var(--tint); flex: none; }
+.color-swatch { width: 96px; height: 96px; border-radius: 12px; border: 1.5px solid var(--stroke); flex: none; display: inline-block; }
 
 .profession-flow { margin-bottom: 28px; }
 .preflow-title { font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 12px; }
@@ -645,6 +646,11 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .preview-img {
   width: 100%; max-width: 320px; height: 260px; object-fit: cover;
   border-radius: 18px; border: 2px solid var(--stroke); background: var(--tint);
+  box-shadow: 6px 6px 0 0 var(--stroke);
+}
+.preview-swatch {
+  width: 100%; max-width: 320px; height: 260px;
+  border-radius: 18px; border: 2px solid var(--stroke);
   box-shadow: 6px 6px 0 0 var(--stroke);
 }
 .preview-word-row { display: flex; align-items: center; gap: 10px; }
