@@ -2,75 +2,258 @@
   "id": "b2",
   "num": 2,
   "title": "Anh thích ăn phở",
-
   "vocab": {
     "items": [
-      { "id": "v1", "word": "ăn", "meaning": "eat", "audio": "audio/b2/{voice}/vocab_an.mp3" },
-      { "id": "v2", "word": "cơm", "meaning": "rice", "audio": "audio/b2/{voice}/vocab_com.mp3" },
-      { "id": "v3", "word": "uống", "meaning": "drink", "audio": "audio/b2/{voice}/vocab_uong.mp3" },
-      { "id": "v4", "word": "bún", "meaning": "rice noodle", "audio": "audio/b2/{voice}/vocab_bun.mp3" },
-      { "id": "v5", "word": "làm", "meaning": "do, work", "audio": "audio/b2/{voice}/vocab_lam.mp3" },
-      { "id": "v6", "word": "phở", "meaning": "pho", "audio": "audio/b2/{voice}/vocab_pho.mp3" },
-      { "id": "v7", "word": "đi", "meaning": "go", "audio": "audio/b2/{voice}/vocab_di.mp3" },
-      { "id": "v8", "word": "bánh mì", "meaning": "bread", "audio": "audio/b2/{voice}/vocab_banh_mi.mp3" },
-      { "id": "v9", "word": "học", "meaning": "study, learn", "audio": "audio/b2/{voice}/vocab_hoc.mp3" },
-      { "id": "v10", "word": "thịt gà", "meaning": "chicken meat", "audio": "audio/b2/{voice}/vocab_thit_ga.mp3" },
-      { "id": "v11", "word": "làm việc", "meaning": "work", "audio": "audio/b2/{voice}/vocab_lam_viec.mp3" },
-      { "id": "v12", "word": "thịt bò", "meaning": "beef", "audio": "audio/b2/{voice}/vocab_thit_bo.mp3" },
-      { "id": "v13", "word": "đi làm", "meaning": "go to work", "audio": "audio/b2/{voice}/vocab_di_lam.mp3" },
-      { "id": "v14", "word": "thịt heo", "meaning": "pork", "audio": "audio/b2/{voice}/vocab_thit_heo.mp3" },
-      { "id": "v15", "word": "đi chơi", "meaning": "hang out", "audio": "audio/b2/{voice}/vocab_di_choi.mp3" },
-      { "id": "v16", "word": "rau", "meaning": "vegetables (general)", "audio": "audio/b2/{voice}/vocab_rau.mp3" },
-      { "id": "v17", "word": "đi ăn", "meaning": "eat out", "audio": "audio/b2/{voice}/vocab_di_an.mp3" },
-      { "id": "v18", "word": "canh", "meaning": "soup", "audio": "audio/b2/{voice}/vocab_canh.mp3" },
-      { "id": "v19", "word": "đi ngủ", "meaning": "go to sleep", "audio": "audio/b2/{voice}/vocab_di_ngu.mp3" },
-      { "id": "v20", "word": "bánh xèo", "meaning": "Vietnamese crispy pancake", "audio": "audio/b2/{voice}/vocab_banh_xeo.mp3" },
-      { "id": "v21", "word": "ngủ dậy", "meaning": "wake up", "audio": "audio/b2/{voice}/vocab_ngu_day.mp3" },
-      { "id": "v22", "word": "cà phê", "meaning": "coffee", "audio": "audio/b2/{voice}/vocab_ca_phe.mp3" },
-      { "id": "v23", "word": "du lịch", "meaning": "travel", "audio": "audio/b2/{voice}/vocab_du_lich.mp3" },
-      { "id": "v24", "word": "cà phê đen", "meaning": "black coffee", "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3" },
-      { "id": "v25", "word": "dọn nhà", "meaning": "tidy the house", "audio": "audio/b2/{voice}/vocab_don_nha.mp3" },
-      { "id": "v26", "word": "cà phê sữa", "meaning": "milk coffee", "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3" },
-      { "id": "v27", "word": "coi tivi", "meaning": "watch TV", "audio": "audio/b2/{voice}/vocab_coi_tivi.mp3" },
-      { "id": "v28", "word": "bạc xỉu", "meaning": "Vietnamese coffee with extra milk", "audio": "audio/b2/{voice}/vocab_bac_xiu.mp3" },
-      { "id": "v29", "word": "người", "meaning": "human, person, people", "audio": "audio/b2/{voice}/vocab_nguoi.mp3" },
-      { "id": "v30", "word": "trà", "meaning": "tea", "audio": "audio/b2/{voice}/vocab_tra.mp3" },
-      { "id": "v31", "word": "nhiều", "meaning": "many", "audio": "audio/b2/{voice}/vocab_nhieu.mp3" },
-      { "id": "v32", "word": "trà xanh", "meaning": "green tea", "audio": "audio/b2/{voice}/vocab_tra_xanh.mp3" },
-      { "id": "v33", "word": "quán cà phê", "meaning": "coffee store", "audio": "audio/b2/{voice}/vocab_quan_ca_phe.mp3" },
-      { "id": "v34", "word": "nước trái cây", "meaning": "fruit juice", "audio": "audio/b2/{voice}/vocab_nuoc_trai_cay.mp3" }
+      {
+        "id": "v1",
+        "word": "ăn",
+        "meaning": "eat",
+        "audio": "audio/b2/{voice}/vocab_an.mp3"
+      },
+      {
+        "id": "v2",
+        "word": "cơm",
+        "meaning": "rice",
+        "audio": "audio/b2/{voice}/vocab_com.mp3"
+      },
+      {
+        "id": "v3",
+        "word": "uống",
+        "meaning": "drink",
+        "audio": "audio/b2/{voice}/vocab_uong.mp3"
+      },
+      {
+        "id": "v4",
+        "word": "bún",
+        "meaning": "rice noodle",
+        "audio": "audio/b2/{voice}/vocab_bun.mp3"
+      },
+      {
+        "id": "v5",
+        "word": "làm",
+        "meaning": "do, work",
+        "audio": "audio/b2/{voice}/vocab_lam.mp3"
+      },
+      {
+        "id": "v6",
+        "word": "phở",
+        "meaning": "pho",
+        "audio": "audio/b2/{voice}/vocab_pho.mp3"
+      },
+      {
+        "id": "v7",
+        "word": "đi",
+        "meaning": "go",
+        "audio": "audio/b2/{voice}/vocab_di.mp3"
+      },
+      {
+        "id": "v8",
+        "word": "bánh mì",
+        "meaning": "bread",
+        "audio": "audio/b2/{voice}/vocab_banh_mi.mp3"
+      },
+      {
+        "id": "v9",
+        "word": "học",
+        "meaning": "study, learn",
+        "audio": "audio/b2/{voice}/vocab_hoc.mp3"
+      },
+      {
+        "id": "v10",
+        "word": "thịt gà",
+        "meaning": "chicken meat",
+        "audio": "audio/b2/{voice}/vocab_thit_ga.mp3"
+      },
+      {
+        "id": "v11",
+        "word": "làm việc",
+        "meaning": "work",
+        "audio": "audio/b2/{voice}/vocab_lam_viec.mp3"
+      },
+      {
+        "id": "v12",
+        "word": "thịt bò",
+        "meaning": "beef",
+        "audio": "audio/b2/{voice}/vocab_thit_bo.mp3"
+      },
+      {
+        "id": "v13",
+        "word": "đi làm",
+        "meaning": "go to work",
+        "audio": "audio/b2/{voice}/vocab_di_lam.mp3"
+      },
+      {
+        "id": "v14",
+        "word": "thịt heo",
+        "meaning": "pork",
+        "audio": "audio/b2/{voice}/vocab_thit_heo.mp3"
+      },
+      {
+        "id": "v15",
+        "word": "đi chơi",
+        "meaning": "hang out",
+        "audio": "audio/b2/{voice}/vocab_di_choi.mp3"
+      },
+      {
+        "id": "v16",
+        "word": "rau",
+        "meaning": "vegetables (general)",
+        "audio": "audio/b2/{voice}/vocab_rau.mp3"
+      },
+      {
+        "id": "v17",
+        "word": "đi ăn",
+        "meaning": "eat out",
+        "audio": "audio/b2/{voice}/vocab_di_an.mp3"
+      },
+      {
+        "id": "v18",
+        "word": "canh",
+        "meaning": "soup",
+        "audio": "audio/b2/{voice}/vocab_canh.mp3"
+      },
+      {
+        "id": "v19",
+        "word": "đi ngủ",
+        "meaning": "go to sleep",
+        "audio": "audio/b2/{voice}/vocab_di_ngu.mp3"
+      },
+      {
+        "id": "v20",
+        "word": "bánh xèo",
+        "meaning": "Vietnamese crispy pancake",
+        "audio": "audio/b2/{voice}/vocab_banh_xeo.mp3"
+      },
+      {
+        "id": "v21",
+        "word": "ngủ dậy",
+        "meaning": "wake up",
+        "audio": "audio/b2/{voice}/vocab_ngu_day.mp3"
+      },
+      {
+        "id": "v22",
+        "word": "cà phê",
+        "meaning": "coffee",
+        "audio": "audio/b2/{voice}/vocab_ca_phe.mp3"
+      },
+      {
+        "id": "v23",
+        "word": "du lịch",
+        "meaning": "travel",
+        "audio": "audio/b2/{voice}/vocab_du_lich.mp3"
+      },
+      {
+        "id": "v24",
+        "word": "cà phê đen",
+        "meaning": "black coffee",
+        "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3"
+      },
+      {
+        "id": "v25",
+        "word": "dọn nhà",
+        "meaning": "tidy the house",
+        "audio": "audio/b2/{voice}/vocab_don_nha.mp3"
+      },
+      {
+        "id": "v26",
+        "word": "cà phê sữa",
+        "meaning": "milk coffee",
+        "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3"
+      },
+      {
+        "id": "v27",
+        "word": "coi tivi",
+        "meaning": "watch TV",
+        "audio": "audio/b2/{voice}/vocab_coi_tivi.mp3"
+      },
+      {
+        "id": "v28",
+        "word": "bạc xỉu",
+        "meaning": "Vietnamese coffee with extra milk",
+        "audio": "audio/b2/{voice}/vocab_bac_xiu.mp3"
+      },
+      {
+        "id": "v29",
+        "word": "người",
+        "meaning": "human, person, people",
+        "audio": "audio/b2/{voice}/vocab_nguoi.mp3"
+      },
+      {
+        "id": "v30",
+        "word": "trà",
+        "meaning": "tea",
+        "audio": "audio/b2/{voice}/vocab_tra.mp3"
+      },
+      {
+        "id": "v31",
+        "word": "nhiều",
+        "meaning": "many",
+        "audio": "audio/b2/{voice}/vocab_nhieu.mp3"
+      },
+      {
+        "id": "v32",
+        "word": "trà xanh",
+        "meaning": "green tea",
+        "audio": "audio/b2/{voice}/vocab_tra_xanh.mp3"
+      },
+      {
+        "id": "v33",
+        "word": "quán cà phê",
+        "meaning": "coffee store",
+        "audio": "audio/b2/{voice}/vocab_quan_ca_phe.mp3"
+      },
+      {
+        "id": "v34",
+        "word": "nước trái cây",
+        "meaning": "fruit juice",
+        "audio": "audio/b2/{voice}/vocab_nuoc_trai_cay.mp3"
+      }
     ]
   },
-
   "grammar": {
     "points": [
       {
         "id": "g1",
         "title": "[Chủ ngữ] + thích + [Danh từ] / [Động từ]",
         "explanation": "Dùng 'thích' để nói mình yêu thích một thứ gì đó hoặc thích làm một việc gì đó.",
-        "examples": ["Minh thích cà phê sữa.", "Anh thích ăn bánh mì Việt Nam.", "Chị Linh thích đi chơi ở Sài Gòn."]
+        "examples": [
+          "Minh thích cà phê sữa.",
+          "Anh thích ăn bánh mì Việt Nam.",
+          "Chị Linh thích đi chơi ở Sài Gòn."
+        ]
       },
       {
         "id": "g2",
         "title": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ]",
         "explanation": "Thêm 'không' trước 'thích' để nói mình không yêu thích một thứ gì đó hoặc không thích làm một việc gì đó.",
-        "examples": ["Em không thích rau.", "Chị ấy không thích dọn nhà.", "Mẹ của mình không thích coi tivi."]
+        "examples": [
+          "Em không thích rau.",
+          "Chị ấy không thích dọn nhà.",
+          "Mẹ của mình không thích coi tivi."
+        ]
       },
       {
         "id": "g3",
         "title": "[Chủ ngữ] + thích + [Danh từ] / [Động từ] + gì?",
         "explanation": "Dùng để hỏi người khác thích cái gì hoặc thích làm gì.",
-        "examples": ["Bạn thích cà phê gì?", "Anh Nam thích ăn gì?", "Ba của bạn thích làm gì?"]
+        "examples": [
+          "Bạn thích cà phê gì?",
+          "Anh Nam thích ăn gì?",
+          "Ba của bạn thích làm gì?"
+        ]
       },
       {
         "id": "g4",
         "title": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ] + gì?",
         "explanation": "Dùng để hỏi người khác không thích cái gì hoặc không thích làm gì.",
-        "examples": ["Bạn không thích rau gì?", "Chị không thích uống nước gì?", "Em gái của bạn không thích làm gì?"]
+        "examples": [
+          "Bạn không thích rau gì?",
+          "Chị không thích uống nước gì?",
+          "Em gái của bạn không thích làm gì?"
+        ]
       }
     ]
   },
-
   "listening": {
     "instruction": "Nghe và gõ lại câu bạn nghe được. Bấm vào từ trong ngân hàng từ bên dưới nếu cần trợ giúp.",
     "groups": [
@@ -78,35 +261,141 @@
         "id": "d1",
         "title": "Hội thoại 1: Cà phê",
         "lines": [
-          { "audio": "audio/b2/{voice}/listen_d1_01.mp3", "text": "Em thích cà phê gì?", "wordBank": ["anh", "gì?", "là", "thích", "không", "uống", "em", "cà phê"] },
-          { "audio": "audio/b2/{voice}/listen_d1_02.mp3", "text": "Em thích cà phê sữa. Chị có thích cà phê sữa không?", "wordBank": ["cà phê", "không?", "thích", "sữa", "gì?", "là", "sữa", "em", "thích", "đen", "cà phê"] },
-          { "audio": "audio/b2/{voice}/listen_d1_03.mp3", "text": "Chị không thích cà phê sữa, nhưng chị thích cà phê đen.", "wordBank": ["không", "chị", "đen", "sữa", "chị", "thích", "cà phê", "cà phê", "chị", "nhưng", "là"] }
+          {
+            "audio": "audio/b2/{voice}/listen_d1_01.mp3",
+            "text": "Em thích cà phê gì?",
+            "wordBank": [
+              "anh",
+              "gì?",
+              "là",
+              "thích",
+              "không",
+              "uống",
+              "em",
+              "cà phê"
+            ]
+          },
+          {
+            "audio": "audio/b2/{voice}/listen_d1_02.mp3",
+            "text": "Em thích cà phê sữa. Chị có thích cà phê sữa không?",
+            "wordBank": [
+              "cà phê",
+              "không?",
+              "thích",
+              "sữa",
+              "gì?",
+              "là",
+              "sữa",
+              "em",
+              "thích",
+              "đen",
+              "cà phê"
+            ]
+          },
+          {
+            "audio": "audio/b2/{voice}/listen_d1_03.mp3",
+            "text": "Chị không thích cà phê sữa, nhưng chị thích cà phê đen.",
+            "wordBank": [
+              "không",
+              "chị",
+              "đen",
+              "sữa",
+              "chị",
+              "thích",
+              "cà phê",
+              "cà phê",
+              "chị",
+              "nhưng",
+              "là"
+            ]
+          }
         ]
       },
       {
         "id": "d2",
         "title": "Hội thoại 2: Ăn gì?",
         "lines": [
-          { "audio": "audio/b2/{voice}/listen_d2_01.mp3", "text": "Bạn thích ăn gì?", "wordBank": ["gì?", "thích", "uống", "bạn", "anh", "ăn"] },
-          { "audio": "audio/b2/{voice}/listen_d2_02.mp3", "text": "Mình thích cơm gà và bún bò. Còn bạn?", "wordBank": ["cơm", "ăn", "bò", "thích", "mình", "uống", "bạn?", "Còn", "gà", "bún"] },
-          { "audio": "audio/b2/{voice}/listen_d2_03.mp3", "text": "Mình cũng thích bún bò.", "wordBank": ["thích", "bò", "bạn", "cơm", "bún", "mình", "cũng"] },
-          { "audio": "audio/b2/{voice}/listen_d2_04.mp3", "text": "Anh Minh thích ăn gì bạn biết không?", "wordBank": ["Minh", "thích", "bún", "anh", "bạn", "ăn", "không?", "biết", "gì"] },
-          { "audio": "audio/b2/{voice}/listen_d2_05.mp3", "text": "Mình không biết.", "wordBank": ["biết", "bạn", "mình", "không", "thích"] }
+          {
+            "audio": "audio/b2/{voice}/listen_d2_01.mp3",
+            "text": "Bạn thích ăn gì?",
+            "wordBank": [
+              "gì?",
+              "thích",
+              "uống",
+              "bạn",
+              "anh",
+              "ăn"
+            ]
+          },
+          {
+            "audio": "audio/b2/{voice}/listen_d2_02.mp3",
+            "text": "Mình thích cơm gà và bún bò. Còn bạn?",
+            "wordBank": [
+              "cơm",
+              "ăn",
+              "bò",
+              "thích",
+              "mình",
+              "uống",
+              "bạn?",
+              "Còn",
+              "gà",
+              "bún"
+            ]
+          },
+          {
+            "audio": "audio/b2/{voice}/listen_d2_03.mp3",
+            "text": "Mình cũng thích bún bò.",
+            "wordBank": [
+              "thích",
+              "bò",
+              "bạn",
+              "cơm",
+              "bún",
+              "mình",
+              "cũng"
+            ]
+          },
+          {
+            "audio": "audio/b2/{voice}/listen_d2_04.mp3",
+            "text": "Anh Minh thích ăn gì bạn biết không?",
+            "wordBank": [
+              "Minh",
+              "thích",
+              "bún",
+              "anh",
+              "bạn",
+              "ăn",
+              "không?",
+              "biết",
+              "gì"
+            ]
+          },
+          {
+            "audio": "audio/b2/{voice}/listen_d2_05.mp3",
+            "text": "Mình không biết.",
+            "wordBank": [
+              "biết",
+              "bạn",
+              "mình",
+              "không",
+              "thích"
+            ]
+          }
         ]
       }
     ]
   },
-
   "reading": {
     "passages": [
       {
         "id": "r1",
         "title": "Người Việt và cà phê",
+        "audio": "audio/b2/{voice}/reading_r1.mp3",
         "text": "Nhiều người Việt Nam thích cà phê. Mọi người thường uống cà phê trước khi đi làm. Có người thích ngồi ở quán cà phê. Có người thích làm việc hoặc thích học ở quán cà phê. Nhiều người trẻ cũng thích gặp bạn ở quán cà phê. Không phải ai cũng thích cà phê. Một số người không thích uống cà phê. Họ thích trà hoặc nước trái cây. Có người không thích ngồi ở quán đông người. Họ thích pha và uống cà phê ở nhà."
       }
     ]
   },
-
   "preClass": {
     "note": "Xem hình rồi ghi nhớ từ vựng trước khi làm trắc nghiệm.",
     "flows": [
@@ -115,22 +404,80 @@
         "vocabPreview": {
           "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
           "items": [
-            { "word": "cà phê đen", "image": "images/b2/nghe/ca_phe_den.jpg", "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3" },
-            { "word": "cà phê sữa", "image": "images/b2/nghe/ca_phe_sua.jpg", "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3" },
-            { "word": "trà xanh", "image": "images/b2/nghe/tra_xanh.jpg", "audio": "audio/b2/{voice}/vocab_tra_xanh.mp3" },
-            { "word": "cơm gà", "image": "images/b2/nghe/com_ga.jpg", "audio": "audio/b2/{voice}/vocab_com_ga.mp3" },
-            { "word": "bún bò", "image": "images/b2/nghe/bun_bo.jpg", "audio": "audio/b2/{voice}/vocab_bun_bo.mp3" },
-            { "word": "canh", "image": "images/b2/nghe/canh.jpg", "audio": "audio/b2/{voice}/vocab_canh.mp3" },
-            { "word": "rau", "image": "images/b2/nghe/rau.jpg", "audio": "audio/b2/{voice}/vocab_rau.mp3" }
+            {
+              "word": "cà phê đen",
+              "image": "images/b2/nghe/ca_phe_den.jpg",
+              "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3"
+            },
+            {
+              "word": "cà phê sữa",
+              "image": "images/b2/nghe/ca_phe_sua.jpg",
+              "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3"
+            },
+            {
+              "word": "trà xanh",
+              "image": "images/b2/nghe/tra_xanh.jpg",
+              "audio": "audio/b2/{voice}/vocab_tra_xanh.mp3"
+            },
+            {
+              "word": "cơm gà",
+              "image": "images/b2/nghe/com_ga.jpg",
+              "audio": "audio/b2/{voice}/vocab_com_ga.mp3"
+            },
+            {
+              "word": "bún bò",
+              "image": "images/b2/nghe/bun_bo.jpg",
+              "audio": "audio/b2/{voice}/vocab_bun_bo.mp3"
+            },
+            {
+              "word": "canh",
+              "image": "images/b2/nghe/canh.jpg",
+              "audio": "audio/b2/{voice}/vocab_canh.mp3"
+            },
+            {
+              "word": "rau",
+              "image": "images/b2/nghe/rau.jpg",
+              "audio": "audio/b2/{voice}/vocab_rau.mp3"
+            }
           ]
         },
         "quiz": {
           "title": "Những người này thích gì?",
           "instruction": "Chọn đáp án đúng cho mỗi hình.",
           "items": [
-            { "id": "pc1q1", "image": "images/b2/nghe/bun_bo.jpg", "context": "Minh thích ăn ______.", "options": ["cơm gà", "bún bò", "canh"], "answer": "bún bò" },
-            { "id": "pc1q2", "image": "images/b2/nghe/ca_phe_sua.jpg", "context": "Chị Mai thích uống ______.", "options": ["cà phê đen", "trà xanh", "cà phê sữa"], "answer": "cà phê sữa" },
-            { "id": "pc1q3", "image": "images/b2/nghe/rau.jpg", "context": "Mẹ của mình thích ______.", "options": ["nước mắm", "canh", "rau"], "answer": "rau" }
+            {
+              "id": "pc1q1",
+              "image": "images/b2/nghe/bun_bo.jpg",
+              "context": "Minh thích ăn ______.",
+              "options": [
+                "cơm gà",
+                "bún bò",
+                "canh"
+              ],
+              "answer": "bún bò"
+            },
+            {
+              "id": "pc1q2",
+              "image": "images/b2/nghe/ca_phe_sua.jpg",
+              "context": "Chị Mai thích uống ______.",
+              "options": [
+                "cà phê đen",
+                "trà xanh",
+                "cà phê sữa"
+              ],
+              "answer": "cà phê sữa"
+            },
+            {
+              "id": "pc1q3",
+              "image": "images/b2/nghe/rau.jpg",
+              "context": "Mẹ của mình thích ______.",
+              "options": [
+                "nước mắm",
+                "canh",
+                "rau"
+              ],
+              "answer": "rau"
+            }
           ]
         }
       },
@@ -139,23 +486,85 @@
         "vocabPreview": {
           "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
           "items": [
-            { "word": "đi làm", "image": "images/b2/nghe/di_lam.jpg", "audio": "audio/b2/{voice}/vocab_di_lam.mp3" },
-            { "word": "đi ăn", "image": "images/b2/nghe/di_an.jpg", "audio": "audio/b2/{voice}/vocab_di_an.mp3" },
-            { "word": "đi chơi", "image": "images/b2/nghe/di_choi.jpg", "audio": "audio/b2/{voice}/vocab_di_choi.mp3" },
-            { "word": "dọn nhà", "image": "images/b2/nghe/don_nha.jpg", "audio": "audio/b2/{voice}/vocab_don_nha.mp3" },
-            { "word": "coi tivi", "image": "images/b2/nghe/coi_tivi.jpg", "audio": "audio/b2/{voice}/vocab_coi_tivi.mp3" },
-            { "word": "du lịch", "image": "images/b2/nghe/du_lich.jpg", "audio": "audio/b2/{voice}/vocab_du_lich.mp3" },
-            { "word": "ngủ dậy", "image": "images/b2/nghe/ngu_day.jpg", "audio": "audio/b2/{voice}/vocab_ngu_day.mp3" },
-            { "word": "đi ngủ", "image": "images/b2/nghe/di_ngu.jpg", "audio": "audio/b2/{voice}/vocab_di_ngu.mp3" }
+            {
+              "word": "đi làm",
+              "image": "images/b2/nghe/di_lam.jpg",
+              "audio": "audio/b2/{voice}/vocab_di_lam.mp3"
+            },
+            {
+              "word": "đi ăn",
+              "image": "images/b2/nghe/di_an.jpg",
+              "audio": "audio/b2/{voice}/vocab_di_an.mp3"
+            },
+            {
+              "word": "đi chơi",
+              "image": "images/b2/nghe/di_choi.jpg",
+              "audio": "audio/b2/{voice}/vocab_di_choi.mp3"
+            },
+            {
+              "word": "dọn nhà",
+              "image": "images/b2/nghe/don_nha.jpg",
+              "audio": "audio/b2/{voice}/vocab_don_nha.mp3"
+            },
+            {
+              "word": "coi tivi",
+              "image": "images/b2/nghe/coi_tivi.jpg",
+              "audio": "audio/b2/{voice}/vocab_coi_tivi.mp3"
+            },
+            {
+              "word": "du lịch",
+              "image": "images/b2/nghe/du_lich.jpg",
+              "audio": "audio/b2/{voice}/vocab_du_lich.mp3"
+            },
+            {
+              "word": "ngủ dậy",
+              "image": "images/b2/nghe/ngu_day.jpg",
+              "audio": "audio/b2/{voice}/vocab_ngu_day.mp3"
+            },
+            {
+              "word": "đi ngủ",
+              "image": "images/b2/nghe/di_ngu.jpg",
+              "audio": "audio/b2/{voice}/vocab_di_ngu.mp3"
+            }
           ]
         },
         "quiz": {
           "title": "Những người này không thích gì?",
           "instruction": "Chọn đáp án đúng cho mỗi hình.",
           "items": [
-            { "id": "pc2q1", "image": "images/b2/nghe/di_lam.jpg", "context": "Mai không thích ______.", "options": ["đi làm", "du lịch", "coi tivi"], "answer": "đi làm" },
-            { "id": "pc2q2", "image": "images/b2/nghe/don_nha.jpg", "context": "Anh Phong không thích ______.", "options": ["đi chơi", "coi tivi", "dọn nhà"], "answer": "dọn nhà" },
-            { "id": "pc2q3", "image": "images/b2/nghe/di_ngu.jpg", "context": "Em trai của mình không thích ______.", "options": ["đi ăn", "đi ngủ", "ngủ dậy"], "answer": "đi ngủ" }
+            {
+              "id": "pc2q1",
+              "image": "images/b2/nghe/di_lam.jpg",
+              "context": "Mai không thích ______.",
+              "options": [
+                "đi làm",
+                "du lịch",
+                "coi tivi"
+              ],
+              "answer": "đi làm"
+            },
+            {
+              "id": "pc2q2",
+              "image": "images/b2/nghe/don_nha.jpg",
+              "context": "Anh Phong không thích ______.",
+              "options": [
+                "đi chơi",
+                "coi tivi",
+                "dọn nhà"
+              ],
+              "answer": "dọn nhà"
+            },
+            {
+              "id": "pc2q3",
+              "image": "images/b2/nghe/di_ngu.jpg",
+              "context": "Em trai của mình không thích ______.",
+              "options": [
+                "đi ăn",
+                "đi ngủ",
+                "ngủ dậy"
+              ],
+              "answer": "đi ngủ"
+            }
           ]
         }
       }
@@ -167,10 +576,46 @@
         "type": "choice",
         "title": "1. Chọn từ đúng.",
         "items": [
-          { "id": "A", "context": "Minh ________ ăn phở.", "options": ["thích", "không", "là"], "answer": "thích" },
-          { "id": "B", "context": "Chị Lan không ________ cà phê.", "options": ["làm", "thích", "học"], "answer": "thích" },
-          { "id": "C", "context": "Anh Nam thích ________ cà phê sữa.", "options": ["uống", "đi", "làm"], "answer": "uống" },
-          { "id": "D", "context": "Bạn thích ________ gì?", "options": ["làm", "ăn", "ngủ"], "answer": "làm" }
+          {
+            "id": "A",
+            "context": "Minh ________ ăn phở.",
+            "options": [
+              "thích",
+              "không",
+              "là"
+            ],
+            "answer": "thích"
+          },
+          {
+            "id": "B",
+            "context": "Chị Lan không ________ cà phê.",
+            "options": [
+              "làm",
+              "thích",
+              "học"
+            ],
+            "answer": "thích"
+          },
+          {
+            "id": "C",
+            "context": "Anh Nam thích ________ cà phê sữa.",
+            "options": [
+              "uống",
+              "đi",
+              "làm"
+            ],
+            "answer": "uống"
+          },
+          {
+            "id": "D",
+            "context": "Bạn thích ________ gì?",
+            "options": [
+              "làm",
+              "ăn",
+              "ngủ"
+            ],
+            "answer": "làm"
+          }
         ]
       },
       {
@@ -178,19 +623,79 @@
         "title": "2. Sắp xếp câu.",
         "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
         "items": [
-          { "prompt": "Câu 1", "tokens": ["thích", "mình", "cà phê sữa"], "answer": "Mình thích cà phê sữa." },
-          { "prompt": "Câu 2", "tokens": ["không thích", "chị", "rau"], "answer": "Chị không thích rau." },
-          { "prompt": "Câu 3", "tokens": ["ăn", "bạn", "thích", "gì"], "answer": "Bạn thích ăn gì?" },
-          { "prompt": "Câu 4", "tokens": ["đi chơi", "em", "thích"], "answer": "Em thích đi chơi." }
+          {
+            "prompt": "Câu 1",
+            "tokens": [
+              "thích",
+              "mình",
+              "cà phê sữa"
+            ],
+            "answer": "Mình thích cà phê sữa."
+          },
+          {
+            "prompt": "Câu 2",
+            "tokens": [
+              "không thích",
+              "chị",
+              "rau"
+            ],
+            "answer": "Chị không thích rau."
+          },
+          {
+            "prompt": "Câu 3",
+            "tokens": [
+              "ăn",
+              "bạn",
+              "thích",
+              "gì"
+            ],
+            "answer": "Bạn thích ăn gì?"
+          },
+          {
+            "prompt": "Câu 4",
+            "tokens": [
+              "đi chơi",
+              "em",
+              "thích"
+            ],
+            "answer": "Em thích đi chơi."
+          }
         ]
       },
       {
         "type": "choice",
         "title": "3. Chọn câu trả lời phù hợp.",
         "items": [
-          { "id": "1", "context": "Bạn thích uống gì?", "options": ["Mình thích trà xanh.", "Mình là giáo viên.", "Mình đi làm."], "answer": "Mình thích trà xanh." },
-          { "id": "2", "context": "Anh thích làm gì?", "options": ["Anh thích đi chơi.", "Anh thích phở.", "Anh là bác sĩ."], "answer": "Anh thích đi chơi." },
-          { "id": "3", "context": "Em không thích ăn gì?", "options": ["Em không thích rau.", "Em không thích uống.", "Em là học sinh."], "answer": "Em không thích rau." }
+          {
+            "id": "1",
+            "context": "Bạn thích uống gì?",
+            "options": [
+              "Mình thích trà xanh.",
+              "Mình là giáo viên.",
+              "Mình đi làm."
+            ],
+            "answer": "Mình thích trà xanh."
+          },
+          {
+            "id": "2",
+            "context": "Anh thích làm gì?",
+            "options": [
+              "Anh thích đi chơi.",
+              "Anh thích phở.",
+              "Anh là bác sĩ."
+            ],
+            "answer": "Anh thích đi chơi."
+          },
+          {
+            "id": "3",
+            "context": "Em không thích ăn gì?",
+            "options": [
+              "Em không thích rau.",
+              "Em không thích uống.",
+              "Em là học sinh."
+            ],
+            "answer": "Em không thích rau."
+          }
         ]
       }
     ]
