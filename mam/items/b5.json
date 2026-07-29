@@ -591,6 +591,20 @@
               "audio": "audio/b5/{voice}/date_31_03.mp3"
             }
           ]
+        },
+        "quiz": {
+          "type": "text_answer",
+          "title": "Test lại: đọc ngày tháng bằng chữ",
+          "instruction": "Viết ngày tháng dưới đây bằng chữ.",
+          "wordBank": ["một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "mười", "mươi", "mốt", "tư", "lăm", "ngày", "tháng"],
+          "items": [
+            { "prompt": "March 3", "answer": "ngày ba tháng ba" },
+            { "prompt": "July 20", "answer": "ngày hai mươi tháng bảy" },
+            { "prompt": "December 12", "answer": "ngày mười hai tháng mười hai" },
+            { "prompt": "January 9", "answer": "ngày chín tháng một" },
+            { "prompt": "October 28", "answer": "ngày hai mươi tám tháng mười" },
+            { "prompt": "February 14", "answer": "ngày mười bốn tháng hai" }
+          ]
         }
       }
     ]
