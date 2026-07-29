@@ -486,9 +486,15 @@
 
         const it = items[i];
         const card = el('div', 'preview-card');
-        const img = document.createElement('img');
-        img.src = it.image; img.alt = it.word; img.className = 'preview-img';
-        card.appendChild(img);
+        if (it.color) {
+          const sw = el('div', 'preview-swatch');
+          sw.style.background = it.color;
+          card.appendChild(sw);
+        } else {
+          const img = document.createElement('img');
+          img.src = it.image; img.alt = it.word; img.className = 'preview-img';
+          card.appendChild(img);
+        }
         const wordRow = el('div', 'preview-word-row');
         wordRow.appendChild(el('span', 'preview-word', it.word));
         wordRow.appendChild(playBtn(it.audio));
@@ -567,9 +573,15 @@
       const rows = [];
       (ex.items || []).forEach(function (it) {
         const row = el('div', 'match-row image-match-row');
-        const img = document.createElement('img');
-        img.src = it.image; img.alt = ''; img.className = 'match-img';
-        row.appendChild(img);
+        if (it.color) {
+          const sw = el('span', 'color-swatch');
+          sw.style.background = it.color;
+          row.appendChild(sw);
+        } else {
+          const img = document.createElement('img');
+          img.src = it.image; img.alt = ''; img.className = 'match-img';
+          row.appendChild(img);
+        }
         const select = document.createElement('select');
         select.className = 'answer-select';
         const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
