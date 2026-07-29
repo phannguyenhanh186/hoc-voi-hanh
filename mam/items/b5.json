@@ -562,32 +562,32 @@
           "items": [
             {
               "word": "ngày hai tháng chín",
-              "image": "images/b5/nghe/date_02_09.jpg",
+              "number": "September 2",
               "audio": "audio/b5/{voice}/date_02_09.mp3"
             },
             {
               "word": "ngày mười tám tháng năm",
-              "image": "images/b5/nghe/date_18_05.jpg",
+              "number": "May 18",
               "audio": "audio/b5/{voice}/date_18_05.mp3"
             },
             {
               "word": "ngày mười tháng tư",
-              "image": "images/b5/nghe/date_10_04.jpg",
+              "number": "April 10",
               "audio": "audio/b5/{voice}/date_10_04.mp3"
             },
             {
               "word": "ngày hai mươi lăm tháng sáu",
-              "image": "images/b5/nghe/date_25_06.jpg",
+              "number": "June 25",
               "audio": "audio/b5/{voice}/date_25_06.mp3"
             },
             {
               "word": "ngày bảy tháng mười một",
-              "image": "images/b5/nghe/date_07_11.jpg",
+              "number": "November 7",
               "audio": "audio/b5/{voice}/date_07_11.mp3"
             },
             {
               "word": "ngày ba mươi mốt tháng ba",
-              "image": "images/b5/nghe/date_31_03.jpg",
+              "number": "March 31",
               "audio": "audio/b5/{voice}/date_31_03.mp3"
             }
           ]
