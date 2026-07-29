@@ -2,75 +2,260 @@
   "id": "b9",
   "num": 9,
   "title": "Đi xe máy phải đội nón bảo hiểm",
-
   "vocab": {
     "items": [
-      { "id": "v1", "word": "nón", "meaning": "hat", "audio": "audio/b9/{voice}/vocab_non.mp3" },
-      { "id": "v2", "word": "nón bảo hiểm", "meaning": "helmet", "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3" },
-      { "id": "v3", "word": "đội nón", "meaning": "wear a hat", "audio": "audio/b9/{voice}/vocab_doi_non.mp3" },
-      { "id": "v4", "word": "đội nón bảo hiểm", "meaning": "wear a helmet", "audio": "audio/b9/{voice}/vocab_doi_non_bao_hiem.mp3" },
-      { "id": "v5", "word": "áo", "meaning": "shirt", "audio": "audio/b9/{voice}/vocab_ao.mp3" },
-      { "id": "v6", "word": "áo mưa", "meaning": "raincoat", "audio": "audio/b9/{voice}/vocab_ao_mua.mp3" },
-      { "id": "v7", "word": "áo khoác", "meaning": "jacket", "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3" },
-      { "id": "v8", "word": "quần", "meaning": "pants", "audio": "audio/b9/{voice}/vocab_quan.mp3" },
-      { "id": "v9", "word": "mặc áo", "meaning": "wear a shirt", "audio": "audio/b9/{voice}/vocab_mac_ao.mp3" },
-      { "id": "v10", "word": "mặc áo mưa", "meaning": "wear a raincoat", "audio": "audio/b9/{voice}/vocab_mac_ao_mua.mp3" },
-      { "id": "v11", "word": "mặc quần", "meaning": "wear pants", "audio": "audio/b9/{voice}/vocab_mac_quan.mp3" },
-      { "id": "v12", "word": "khẩu trang", "meaning": "mask", "audio": "audio/b9/{voice}/vocab_khau_trang.mp3" },
-      { "id": "v13", "word": "kính", "meaning": "glasses", "audio": "audio/b9/{voice}/vocab_kinh.mp3" },
-      { "id": "v14", "word": "túi", "meaning": "bag", "audio": "audio/b9/{voice}/vocab_tui.mp3" },
-      { "id": "v15", "word": "đeo khẩu trang", "meaning": "wear a mask", "audio": "audio/b9/{voice}/vocab_deo_khau_trang.mp3" },
-      { "id": "v16", "word": "đeo kính", "meaning": "wear glasses", "audio": "audio/b9/{voice}/vocab_deo_kinh.mp3" },
-      { "id": "v17", "word": "đeo túi", "meaning": "wear a bag", "audio": "audio/b9/{voice}/vocab_deo_tui.mp3" },
-      { "id": "v18", "word": "dép", "meaning": "slippers", "audio": "audio/b9/{voice}/vocab_dep.mp3" },
-      { "id": "v19", "word": "giày", "meaning": "sneakers", "audio": "audio/b9/{voice}/vocab_giay.mp3" },
-      { "id": "v20", "word": "đi dép", "meaning": "wear slippers", "audio": "audio/b9/{voice}/vocab_di_dep.mp3" },
-      { "id": "v21", "word": "đi giày", "meaning": "wear sneakers", "audio": "audio/b9/{voice}/vocab_di_giay.mp3" },
-      { "id": "v22", "word": "đường", "meaning": "street", "audio": "audio/b9/{voice}/vocab_duong.mp3" },
-      { "id": "v23", "word": "ra đường", "meaning": "go out and about", "audio": "audio/b9/{voice}/vocab_ra_duong.mp3" },
-      { "id": "v24", "word": "đông", "meaning": "crowded", "audio": "audio/b9/{voice}/vocab_dong.mp3" },
-      { "id": "v25", "word": "nhỏ", "meaning": "small", "audio": "audio/b9/{voice}/vocab_nho.mp3" },
-      { "id": "v26", "word": "đường đông", "meaning": "crowded street", "audio": "audio/b9/{voice}/vocab_duong_dong.mp3" },
-      { "id": "v27", "word": "đông người", "meaning": "crowded, lots of people", "audio": "audio/b9/{voice}/vocab_dong_nguoi.mp3" },
-      { "id": "v28", "word": "ít người", "meaning": "a few people", "audio": "audio/b9/{voice}/vocab_it_nguoi.mp3" },
-      { "id": "v29", "word": "nhiều người", "meaning": "a lot of people", "audio": "audio/b9/{voice}/vocab_nhieu_nguoi.mp3" },
-      { "id": "v30", "word": "xe máy", "meaning": "motorbike", "audio": "audio/b9/{voice}/vocab_xe_may.mp3" },
-      { "id": "v31", "word": "đi lại", "meaning": "walk around, get around", "audio": "audio/b9/{voice}/vocab_di_lai.mp3" },
-      { "id": "v32", "word": "đi bộ", "meaning": "go on foot, walk", "audio": "audio/b9/{voice}/vocab_di_bo.mp3" },
-      { "id": "v33", "word": "tiện", "meaning": "convenient", "audio": "audio/b9/{voice}/vocab_tien.mp3" },
-      { "id": "v34", "word": "bằng", "meaning": "by", "audio": "audio/b9/{voice}/vocab_bang.mp3" }
+      {
+        "id": "v1",
+        "word": "nón",
+        "meaning": "hat",
+        "audio": "audio/b9/{voice}/vocab_non.mp3"
+      },
+      {
+        "id": "v2",
+        "word": "nón bảo hiểm",
+        "meaning": "helmet",
+        "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3"
+      },
+      {
+        "id": "v3",
+        "word": "đội nón",
+        "meaning": "wear a hat",
+        "audio": "audio/b9/{voice}/vocab_doi_non.mp3"
+      },
+      {
+        "id": "v4",
+        "word": "đội nón bảo hiểm",
+        "meaning": "wear a helmet",
+        "audio": "audio/b9/{voice}/vocab_doi_non_bao_hiem.mp3"
+      },
+      {
+        "id": "v5",
+        "word": "áo",
+        "meaning": "shirt",
+        "audio": "audio/b9/{voice}/vocab_ao.mp3"
+      },
+      {
+        "id": "v6",
+        "word": "áo mưa",
+        "meaning": "raincoat",
+        "audio": "audio/b9/{voice}/vocab_ao_mua.mp3"
+      },
+      {
+        "id": "v7",
+        "word": "áo khoác",
+        "meaning": "jacket",
+        "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3"
+      },
+      {
+        "id": "v8",
+        "word": "quần",
+        "meaning": "pants",
+        "audio": "audio/b9/{voice}/vocab_quan.mp3"
+      },
+      {
+        "id": "v9",
+        "word": "mặc áo",
+        "meaning": "wear a shirt",
+        "audio": "audio/b9/{voice}/vocab_mac_ao.mp3"
+      },
+      {
+        "id": "v10",
+        "word": "mặc áo mưa",
+        "meaning": "wear a raincoat",
+        "audio": "audio/b9/{voice}/vocab_mac_ao_mua.mp3"
+      },
+      {
+        "id": "v10b",
+        "word": "mặc áo khoác",
+        "meaning": "wear a jacket",
+        "audio": "audio/b9/{voice}/vocab_mac_ao_khoac.mp3"
+      },
+      {
+        "id": "v11",
+        "word": "mặc quần",
+        "meaning": "wear pants",
+        "audio": "audio/b9/{voice}/vocab_mac_quan.mp3"
+      },
+      {
+        "id": "v12",
+        "word": "khẩu trang",
+        "meaning": "mask",
+        "audio": "audio/b9/{voice}/vocab_khau_trang.mp3"
+      },
+      {
+        "id": "v13",
+        "word": "kính",
+        "meaning": "glasses",
+        "audio": "audio/b9/{voice}/vocab_kinh.mp3"
+      },
+      {
+        "id": "v14",
+        "word": "túi",
+        "meaning": "bag",
+        "audio": "audio/b9/{voice}/vocab_tui.mp3"
+      },
+      {
+        "id": "v15",
+        "word": "đeo khẩu trang",
+        "meaning": "wear a mask",
+        "audio": "audio/b9/{voice}/vocab_deo_khau_trang.mp3"
+      },
+      {
+        "id": "v16",
+        "word": "đeo kính",
+        "meaning": "wear glasses",
+        "audio": "audio/b9/{voice}/vocab_deo_kinh.mp3"
+      },
+      {
+        "id": "v17",
+        "word": "đeo túi",
+        "meaning": "wear a bag",
+        "audio": "audio/b9/{voice}/vocab_deo_tui.mp3"
+      },
+      {
+        "id": "v18",
+        "word": "dép",
+        "meaning": "slippers",
+        "audio": "audio/b9/{voice}/vocab_dep.mp3"
+      },
+      {
+        "id": "v19",
+        "word": "giày",
+        "meaning": "sneakers",
+        "audio": "audio/b9/{voice}/vocab_giay.mp3"
+      },
+      {
+        "id": "v20",
+        "word": "đi dép",
+        "meaning": "wear slippers",
+        "audio": "audio/b9/{voice}/vocab_di_dep.mp3"
+      },
+      {
+        "id": "v21",
+        "word": "đi giày",
+        "meaning": "wear sneakers",
+        "audio": "audio/b9/{voice}/vocab_di_giay.mp3"
+      },
+      {
+        "id": "v22",
+        "word": "đường",
+        "meaning": "street",
+        "audio": "audio/b9/{voice}/vocab_duong.mp3"
+      },
+      {
+        "id": "v23",
+        "word": "ra đường",
+        "meaning": "go out and about",
+        "audio": "audio/b9/{voice}/vocab_ra_duong.mp3"
+      },
+      {
+        "id": "v24",
+        "word": "đông",
+        "meaning": "crowded",
+        "audio": "audio/b9/{voice}/vocab_dong.mp3"
+      },
+      {
+        "id": "v25",
+        "word": "nhỏ",
+        "meaning": "small",
+        "audio": "audio/b9/{voice}/vocab_nho.mp3"
+      },
+      {
+        "id": "v26",
+        "word": "đường đông",
+        "meaning": "crowded street",
+        "audio": "audio/b9/{voice}/vocab_duong_dong.mp3"
+      },
+      {
+        "id": "v27",
+        "word": "đông người",
+        "meaning": "crowded, lots of people",
+        "audio": "audio/b9/{voice}/vocab_dong_nguoi.mp3"
+      },
+      {
+        "id": "v28",
+        "word": "ít người",
+        "meaning": "a few people",
+        "audio": "audio/b9/{voice}/vocab_it_nguoi.mp3"
+      },
+      {
+        "id": "v29",
+        "word": "nhiều người",
+        "meaning": "a lot of people",
+        "audio": "audio/b9/{voice}/vocab_nhieu_nguoi.mp3"
+      },
+      {
+        "id": "v30",
+        "word": "xe máy",
+        "meaning": "motorbike",
+        "audio": "audio/b9/{voice}/vocab_xe_may.mp3"
+      },
+      {
+        "id": "v31",
+        "word": "đi lại",
+        "meaning": "walk around, get around",
+        "audio": "audio/b9/{voice}/vocab_di_lai.mp3"
+      },
+      {
+        "id": "v32",
+        "word": "đi bộ",
+        "meaning": "go on foot, walk",
+        "audio": "audio/b9/{voice}/vocab_di_bo.mp3"
+      },
+      {
+        "id": "v33",
+        "word": "tiện",
+        "meaning": "convenient",
+        "audio": "audio/b9/{voice}/vocab_tien.mp3"
+      },
+      {
+        "id": "v34",
+        "word": "bằng",
+        "meaning": "by",
+        "audio": "audio/b9/{voice}/vocab_bang.mp3"
+      }
     ]
   },
-
   "grammar": {
     "points": [
       {
         "id": "g1",
         "title": "Cấu trúc câu khẳng định: Chủ ngữ + phải + động từ",
         "explanation": "",
-        "examples": ["Ở Việt Nam, bạn phải đội nón bảo hiểm khi ra đường.", "Em phải mặc áo khoác vì trời lạnh."]
+        "examples": [
+          "Ở Việt Nam, bạn phải đội nón bảo hiểm khi ra đường.",
+          "Em phải mặc áo khoác vì trời lạnh."
+        ]
       },
       {
         "id": "g2",
         "title": "Cấu trúc câu phủ định: Chủ ngữ + không phải + động từ",
         "explanation": "",
-        "examples": ["Hôm nay em ấy không phải đi học vì trời mưa.", "Ở Đức, bạn không phải đội nón bảo hiểm khi đi xe."]
+        "examples": [
+          "Hôm nay em ấy không phải đi học vì trời mưa.",
+          "Ở Đức, bạn không phải đội nón bảo hiểm khi đi xe."
+        ]
       },
       {
         "id": "g3",
         "title": "Cấu trúc câu hỏi mở: Chủ ngữ + phải + mặc/đội/đeo/đi + gì?",
         "explanation": "",
-        "examples": ["Mình phải đeo gì?", "Đi làm chị phải mặc áo gì?"]
+        "examples": [
+          "Mình phải đeo gì?",
+          "Đi làm chị phải mặc áo gì?"
+        ]
       },
       {
         "id": "g4",
         "title": "Cấu trúc câu hỏi: Chủ ngữ + có phải + động từ + không?",
         "explanation": "",
-        "examples": ["Trời nắng anh có phải mặc áo khoác không?", "Bạn có phải đội nón bảo hiểm ở Mỹ không?"]
+        "examples": [
+          "Trời nắng anh có phải mặc áo khoác không?",
+          "Bạn có phải đội nón bảo hiểm ở Mỹ không?"
+        ]
       }
     ]
   },
-
   "listening": {
     "instruction": "Nghe và gõ lại câu bạn nghe được. Bấm vào từ trong ngân hàng từ bên dưới nếu cần trợ giúp.",
     "groups": [
@@ -78,68 +263,257 @@
         "id": "d1",
         "title": "Chép chính tả",
         "lines": [
-          { "audio": "audio/b9/{voice}/listen_d1_01.mp3", "text": "Mình phải mặc áo khoác tại vì trời nắng to.", "wordBank": ["nắng", "phải", "áo mưa", "mình", "tại vì", "to", "trời", "áo khoác", "không"] },
-          { "audio": "audio/b9/{voice}/listen_d1_02.mp3", "text": "Anh Phong thường đội nón và đi giày khi ra đường.", "wordBank": ["khi", "đi", "và", "anh", "phải", "ra đường", "thường", "đội", "giày", "Phong", "đeo", "nón"] },
-          { "audio": "audio/b9/{voice}/listen_d1_03.mp3", "text": "Tại vì hôm nay trời không mưa, chị không phải mặc áo mưa.", "wordBank": ["mưa", "không", "trời", "hôm nay", "chị", "tại vì", "không", "áo mưa", "đeo", "mặc", "phải"] },
-          { "audio": "audio/b9/{voice}/listen_d1_04.mp3", "text": "Hôm qua bạn có phải đi làm không?", "wordBank": ["đi làm", "đi ngủ", "có", "hôm nay", "phải", "không?", "bạn", "hôm qua"] }
+          {
+            "audio": "audio/b9/{voice}/listen_d1_01.mp3",
+            "text": "Mình phải mặc áo khoác tại vì trời nắng to.",
+            "wordBank": [
+              "nắng",
+              "phải",
+              "áo mưa",
+              "mình",
+              "tại vì",
+              "to",
+              "trời",
+              "áo khoác",
+              "không"
+            ]
+          },
+          {
+            "audio": "audio/b9/{voice}/listen_d1_02.mp3",
+            "text": "Anh Phong thường đội nón và đi giày khi ra đường.",
+            "wordBank": [
+              "khi",
+              "đi",
+              "và",
+              "anh",
+              "phải",
+              "ra đường",
+              "thường",
+              "đội",
+              "giày",
+              "Phong",
+              "đeo",
+              "nón"
+            ]
+          },
+          {
+            "audio": "audio/b9/{voice}/listen_d1_03.mp3",
+            "text": "Tại vì hôm nay trời không mưa, chị không phải mặc áo mưa.",
+            "wordBank": [
+              "mưa",
+              "không",
+              "trời",
+              "hôm nay",
+              "chị",
+              "tại vì",
+              "không",
+              "áo mưa",
+              "đeo",
+              "mặc",
+              "phải"
+            ]
+          },
+          {
+            "audio": "audio/b9/{voice}/listen_d1_04.mp3",
+            "text": "Hôm qua bạn có phải đi làm không?",
+            "wordBank": [
+              "đi làm",
+              "đi ngủ",
+              "có",
+              "hôm nay",
+              "phải",
+              "không?",
+              "bạn",
+              "hôm qua"
+            ]
+          }
         ]
       }
     ]
   },
-
   "reading": {
     "passages": [
       {
         "id": "r1",
         "title": "Văn hóa đi lại ở Việt Nam",
+        "audio": "audio/b9/{voice}/reading_r1.mp3",
         "text": "Ở Việt Nam, mọi người thường ra đường bằng xe máy. Xe máy rất tiện tại vì đường nhỏ và đông người. Khi đi xe máy, mọi người phải đội nón bảo hiểm. Tại vì ở đây trời rất nắng và nóng, họ phải đeo khẩu trang và đeo kính. Trời mưa, họ phải mặc áo mưa.\nBây giờ, nhiều người đi làm hoặc đi chơi bằng metro hoặc xe buýt. Ít người đi bộ, tại vì ở Việt Nam trời thường nắng và nóng, và đường cũng rất đông xe.\nTrong tuần, mọi người đến công ty làm việc vào buổi sáng và về nhà ăn cơm với gia đình vào buổi tối. Cuối tuần, mọi người thường đi ăn với gia đình hoặc đi ăn với bạn ở quán ăn. Họ cũng rất thích uống cà phê và trà.",
         "questions": [
-          { "id": "rq1", "context": "Ở Việt Nam, mọi người thường đi bộ ra đường.", "options": ["Đúng", "Sai"], "answer": "Sai" },
-          { "id": "rq2", "context": "Khi đi xe máy, mọi người không phải đội nón bảo hiểm.", "options": ["Đúng", "Sai"], "answer": "Sai" },
-          { "id": "rq3", "context": "Bây giờ không nhiều người đi làm bằng tàu metro ở Việt Nam.", "options": ["Đúng", "Sai"], "answer": "Sai" },
-          { "id": "rq4", "context": "Ở Việt Nam, nhiều người đi bộ tại vì trời mát.", "options": ["Đúng", "Sai"], "answer": "Sai" },
-          { "id": "rq5", "context": "Người Việt Nam thích uống cà phê.", "options": ["Đúng", "Sai"], "answer": "Đúng" }
+          {
+            "id": "rq1",
+            "context": "Ở Việt Nam, mọi người thường đi bộ ra đường.",
+            "options": [
+              "Đúng",
+              "Sai"
+            ],
+            "answer": "Sai"
+          },
+          {
+            "id": "rq2",
+            "context": "Khi đi xe máy, mọi người không phải đội nón bảo hiểm.",
+            "options": [
+              "Đúng",
+              "Sai"
+            ],
+            "answer": "Sai"
+          },
+          {
+            "id": "rq3",
+            "context": "Bây giờ không nhiều người đi làm bằng tàu metro ở Việt Nam.",
+            "options": [
+              "Đúng",
+              "Sai"
+            ],
+            "answer": "Sai"
+          },
+          {
+            "id": "rq4",
+            "context": "Ở Việt Nam, nhiều người đi bộ tại vì trời mát.",
+            "options": [
+              "Đúng",
+              "Sai"
+            ],
+            "answer": "Sai"
+          },
+          {
+            "id": "rq5",
+            "context": "Người Việt Nam thích uống cà phê.",
+            "options": [
+              "Đúng",
+              "Sai"
+            ],
+            "answer": "Đúng"
+          }
         ]
       }
     ]
   },
-
   "preClass": {
     "note": "Xem hình rồi nối từ.",
     "vocabPreview": {
       "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
       "items": [
-        { "word": "nón", "image": "images/b9/nghe/non.jpg", "audio": "audio/b9/{voice}/vocab_non.mp3" },
-        { "word": "nón bảo hiểm", "image": "images/b9/nghe/non_bao_hiem.jpg", "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3" },
-        { "word": "áo", "image": "images/b9/nghe/ao.jpg", "audio": "audio/b9/{voice}/vocab_ao.mp3" },
-        { "word": "áo mưa", "image": "images/b9/nghe/ao_mua.jpg", "audio": "audio/b9/{voice}/vocab_ao_mua.mp3" },
-        { "word": "áo khoác", "image": "images/b9/nghe/ao_khoac.jpg", "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3" },
-        { "word": "dép", "image": "images/b9/nghe/dep.jpg", "audio": "audio/b9/{voice}/vocab_dep.mp3" },
-        { "word": "giày", "image": "images/b9/nghe/giay.jpg", "audio": "audio/b9/{voice}/vocab_giay.mp3" },
-        { "word": "kính", "image": "images/b9/nghe/kinh.jpg", "audio": "audio/b9/{voice}/vocab_kinh.mp3" },
-        { "word": "khẩu trang", "image": "images/b9/nghe/khau_trang.jpg", "audio": "audio/b9/{voice}/vocab_khau_trang.mp3" },
-        { "word": "túi", "image": "images/b9/nghe/tui.jpg", "audio": "audio/b9/{voice}/vocab_tui.mp3" }
+        {
+          "word": "nón",
+          "image": "images/b9/nghe/non.jpg",
+          "audio": "audio/b9/{voice}/vocab_non.mp3"
+        },
+        {
+          "word": "nón bảo hiểm",
+          "image": "images/b9/nghe/non_bao_hiem.jpg",
+          "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3"
+        },
+        {
+          "word": "áo",
+          "image": "images/b9/nghe/ao.jpg",
+          "audio": "audio/b9/{voice}/vocab_ao.mp3"
+        },
+        {
+          "word": "áo mưa",
+          "image": "images/b9/nghe/ao_mua.jpg",
+          "audio": "audio/b9/{voice}/vocab_ao_mua.mp3"
+        },
+        {
+          "word": "áo khoác",
+          "image": "images/b9/nghe/ao_khoac.jpg",
+          "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3"
+        },
+        {
+          "word": "dép",
+          "image": "images/b9/nghe/dep.jpg",
+          "audio": "audio/b9/{voice}/vocab_dep.mp3"
+        },
+        {
+          "word": "giày",
+          "image": "images/b9/nghe/giay.jpg",
+          "audio": "audio/b9/{voice}/vocab_giay.mp3"
+        },
+        {
+          "word": "kính",
+          "image": "images/b9/nghe/kinh.jpg",
+          "audio": "audio/b9/{voice}/vocab_kinh.mp3"
+        },
+        {
+          "word": "khẩu trang",
+          "image": "images/b9/nghe/khau_trang.jpg",
+          "audio": "audio/b9/{voice}/vocab_khau_trang.mp3"
+        },
+        {
+          "word": "túi",
+          "image": "images/b9/nghe/tui.jpg",
+          "audio": "audio/b9/{voice}/vocab_tui.mp3"
+        }
       ]
     },
     "imageMatch": {
       "title": "Nối từ với hình",
       "instruction": "Chọn đúng từ cho mỗi hình.",
       "items": [
-        { "id": "im1", "image": "images/b9/nghe/non.jpg", "answer": "nón" },
-        { "id": "im2", "image": "images/b9/nghe/non_bao_hiem.jpg", "answer": "nón bảo hiểm" },
-        { "id": "im3", "image": "images/b9/nghe/ao.jpg", "answer": "áo" },
-        { "id": "im4", "image": "images/b9/nghe/ao_mua.jpg", "answer": "áo mưa" },
-        { "id": "im5", "image": "images/b9/nghe/ao_khoac.jpg", "answer": "áo khoác" },
-        { "id": "im6", "image": "images/b9/nghe/dep.jpg", "answer": "dép" },
-        { "id": "im7", "image": "images/b9/nghe/giay.jpg", "answer": "giày" },
-        { "id": "im8", "image": "images/b9/nghe/kinh.jpg", "answer": "kính" },
-        { "id": "im9", "image": "images/b9/nghe/khau_trang.jpg", "answer": "khẩu trang" },
-        { "id": "im10", "image": "images/b9/nghe/tui.jpg", "answer": "túi" }
+        {
+          "id": "im1",
+          "image": "images/b9/nghe/non.jpg",
+          "answer": "nón"
+        },
+        {
+          "id": "im2",
+          "image": "images/b9/nghe/non_bao_hiem.jpg",
+          "answer": "nón bảo hiểm"
+        },
+        {
+          "id": "im3",
+          "image": "images/b9/nghe/ao.jpg",
+          "answer": "áo"
+        },
+        {
+          "id": "im4",
+          "image": "images/b9/nghe/ao_mua.jpg",
+          "answer": "áo mưa"
+        },
+        {
+          "id": "im5",
+          "image": "images/b9/nghe/ao_khoac.jpg",
+          "answer": "áo khoác"
+        },
+        {
+          "id": "im6",
+          "image": "images/b9/nghe/dep.jpg",
+          "answer": "dép"
+        },
+        {
+          "id": "im7",
+          "image": "images/b9/nghe/giay.jpg",
+          "answer": "giày"
+        },
+        {
+          "id": "im8",
+          "image": "images/b9/nghe/kinh.jpg",
+          "answer": "kính"
+        },
+        {
+          "id": "im9",
+          "image": "images/b9/nghe/khau_trang.jpg",
+          "answer": "khẩu trang"
+        },
+        {
+          "id": "im10",
+          "image": "images/b9/nghe/tui.jpg",
+          "answer": "túi"
+        }
       ],
-      "answerBank": ["nón", "nón bảo hiểm", "áo", "áo mưa", "áo khoác", "dép", "giày", "kính", "khẩu trang", "túi"]
+      "answerBank": [
+        "nón",
+        "nón bảo hiểm",
+        "áo",
+        "áo mưa",
+        "áo khoác",
+        "dép",
+        "giày",
+        "kính",
+        "khẩu trang",
+        "túi"
+      ]
     }
   },
-
   "postClass": {
     "exercises": [
       {
@@ -147,40 +521,165 @@
         "title": "1. Nối từ.",
         "instruction": "Nối động từ với đồ vật phù hợp.",
         "prompts": [
-          { "text": "Đội", "answer": "c" },
-          { "text": "Mặc", "answer": "d" },
-          { "text": "Đeo", "answer": "b" },
-          { "text": "Đi", "answer": "a" }
+          {
+            "text": "Đội",
+            "answer": "c"
+          },
+          {
+            "text": "Mặc",
+            "answer": "d"
+          },
+          {
+            "text": "Đeo",
+            "answer": "b"
+          },
+          {
+            "text": "Đi",
+            "answer": "a"
+          }
         ],
         "answerBank": [
-          { "id": "a", "text": "giày" },
-          { "id": "b", "text": "khẩu trang" },
-          { "id": "c", "text": "nón bảo hiểm" },
-          { "id": "d", "text": "áo khoác" }
+          {
+            "id": "a",
+            "text": "giày"
+          },
+          {
+            "id": "b",
+            "text": "khẩu trang"
+          },
+          {
+            "id": "c",
+            "text": "nón bảo hiểm"
+          },
+          {
+            "id": "d",
+            "text": "áo khoác"
+          }
         ]
       },
       {
         "type": "choice",
         "title": "2. Chọn đáp án đúng.",
         "items": [
-          { "id": "1", "context": "Trời mưa, mình phải ________.", "options": ["mặc áo mưa", "đeo kính", "đi dép"], "answer": "mặc áo mưa" },
-          { "id": "2", "context": "Khi đi xe máy ở Việt Nam, bạn phải ________.", "options": ["đội nón bảo hiểm", "mặc áo khoác", "đeo túi"], "answer": "đội nón bảo hiểm" },
-          { "id": "3", "context": "Mình phải mặc ________ tại vì trời mưa.", "options": ["áo khoác", "dép", "kính"], "answer": "áo khoác" },
-          { "id": "4", "context": "Anh Nam không phải đeo ________.", "options": ["dép", "kính", "nón"], "answer": "kính" },
-          { "id": "5", "context": "Mình phải đội ________ và đeo ________ trước khi ra đường.", "options": ["giày/kính", "nón/kính", "nón/giày"], "answer": "nón/kính" }
+          {
+            "id": "1",
+            "context": "Trời mưa, mình phải ________.",
+            "options": [
+              "mặc áo mưa",
+              "đeo kính",
+              "đi dép"
+            ],
+            "answer": "mặc áo mưa"
+          },
+          {
+            "id": "2",
+            "context": "Khi đi xe máy ở Việt Nam, bạn phải ________.",
+            "options": [
+              "đội nón bảo hiểm",
+              "mặc áo khoác",
+              "đeo túi"
+            ],
+            "answer": "đội nón bảo hiểm"
+          },
+          {
+            "id": "3",
+            "context": "Mình phải mặc ________ tại vì trời mưa.",
+            "options": [
+              "áo khoác",
+              "dép",
+              "kính"
+            ],
+            "answer": "áo khoác"
+          },
+          {
+            "id": "4",
+            "context": "Anh Nam không phải đeo ________.",
+            "options": [
+              "dép",
+              "kính",
+              "nón"
+            ],
+            "answer": "kính"
+          },
+          {
+            "id": "5",
+            "context": "Mình phải đội ________ và đeo ________ trước khi ra đường.",
+            "options": [
+              "giày/kính",
+              "nón/kính",
+              "nón/giày"
+            ],
+            "answer": "nón/kính"
+          }
         ]
       },
       {
         "type": "dialogue_fill",
         "title": "3. Điền từ vào chỗ trống.",
         "instruction": "Điền từ thích hợp.",
-        "wordBank": ["nón", "kính", "đi", "phải", "không phải", "xe máy", "ra đường"],
+        "wordBank": [
+          "nón",
+          "kính",
+          "đi",
+          "phải",
+          "không phải",
+          "xe máy",
+          "ra đường"
+        ],
         "lines": [
-          { "parts": ["Ở Việt Nam, bạn ", { "blank": "phải" }, " đội nón bảo hiểm khi đi ", { "blank": "xe máy" }, "."] },
-          { "parts": ["Hôm nay trời không mưa, mình ", { "blank": "không phải" }, " mặc áo mưa."] },
-          { "parts": ["Khi ", { "blank": "ra đường" }, ", nhiều người đeo khẩu trang."] },
-          { "parts": ["Mình thường ", { "blank": "đi" }, " giày khi đi làm."] },
-          { "parts": ["Hôm qua mình phải đội ", { "blank": "nón" }, " và đeo ", { "blank": "kính" }, " vì trời nắng to."] }
+          {
+            "parts": [
+              "Ở Việt Nam, bạn ",
+              {
+                "blank": "phải"
+              },
+              " đội nón bảo hiểm khi đi ",
+              {
+                "blank": "xe máy"
+              },
+              "."
+            ]
+          },
+          {
+            "parts": [
+              "Hôm nay trời không mưa, mình ",
+              {
+                "blank": "không phải"
+              },
+              " mặc áo mưa."
+            ]
+          },
+          {
+            "parts": [
+              "Khi ",
+              {
+                "blank": "ra đường"
+              },
+              ", nhiều người đeo khẩu trang."
+            ]
+          },
+          {
+            "parts": [
+              "Mình thường ",
+              {
+                "blank": "đi"
+              },
+              " giày khi đi làm."
+            ]
+          },
+          {
+            "parts": [
+              "Hôm qua mình phải đội ",
+              {
+                "blank": "nón"
+              },
+              " và đeo ",
+              {
+                "blank": "kính"
+              },
+              " vì trời nắng to."
+            ]
+          }
         ]
       },
       {
@@ -188,11 +687,63 @@
         "title": "4. Sắp xếp câu.",
         "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
         "items": [
-          { "prompt": "Câu 1", "tokens": ["phải", "đội", "nón bảo hiểm", "bạn"], "answer": "Bạn phải đội nón bảo hiểm." },
-          { "prompt": "Câu 2", "tokens": ["trời", "áo mưa", "mặc", "phải", "vì", "mưa", "mình"], "answer": "Mình phải mặc áo mưa vì trời mưa." },
-          { "prompt": "Câu 3", "tokens": ["phải", "không", "hôm nay", "đi học", "em", "có"], "answer": "Hôm nay em có phải đi học không?" },
-          { "prompt": "Câu 4", "tokens": ["đeo", "gì", "mình", "phải"], "answer": "Mình phải đeo gì?" },
-          { "prompt": "Câu 5", "tokens": ["đi", "phải", "bạn", "giày", "không", "có"], "answer": "Bạn có phải đi giày không?" }
+          {
+            "prompt": "Câu 1",
+            "tokens": [
+              "phải",
+              "đội",
+              "nón bảo hiểm",
+              "bạn"
+            ],
+            "answer": "Bạn phải đội nón bảo hiểm."
+          },
+          {
+            "prompt": "Câu 2",
+            "tokens": [
+              "trời",
+              "áo mưa",
+              "mặc",
+              "phải",
+              "vì",
+              "mưa",
+              "mình"
+            ],
+            "answer": "Mình phải mặc áo mưa vì trời mưa."
+          },
+          {
+            "prompt": "Câu 3",
+            "tokens": [
+              "phải",
+              "không",
+              "hôm nay",
+              "đi học",
+              "em",
+              "có"
+            ],
+            "answer": "Hôm nay em có phải đi học không?"
+          },
+          {
+            "prompt": "Câu 4",
+            "tokens": [
+              "đeo",
+              "gì",
+              "mình",
+              "phải"
+            ],
+            "answer": "Mình phải đeo gì?"
+          },
+          {
+            "prompt": "Câu 5",
+            "tokens": [
+              "đi",
+              "phải",
+              "bạn",
+              "giày",
+              "không",
+              "có"
+            ],
+            "answer": "Bạn có phải đi giày không?"
+          }
         ]
       }
     ]
