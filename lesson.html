@@ -65,9 +65,11 @@
     let player = new Audio();
     player.preload = 'auto';
     let currentEl = null;
+    const customAudios = [];
     player.addEventListener('ended', function () { if (currentEl) currentEl.classList.remove('playing'); });
     function play(src, elm) {
       if (!src) return;
+      customAudios.forEach(function (a) { try { a.pause(); } catch (e) {} });
       if (currentEl) currentEl.classList.remove('playing');
       currentEl = elm || null;
       if (currentEl) currentEl.classList.add('playing');
@@ -79,6 +81,63 @@
         if (currentEl) currentEl.classList.remove('playing');
         console.warn('Không phát được audio:', src, e && e.message);
       });
+    }
+
+    function fmtAudioTime(s) {
+      if (!isFinite(s) || s < 0) return '0:00';
+      s = Math.floor(s);
+      const m = Math.floor(s / 60), sec = s % 60;
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    function renderAudioPlayer(rawSrc) {
+      const wrap = el('div', 'audio-player');
+      if (!rawSrc) { wrap.classList.add('audio-player-disabled'); return wrap; }
+      const src = resolveAudio(rawSrc);
+      const audio = new Audio(src);
+      audio.preload = 'metadata';
+      customAudios.push(audio);
+
+      const btn = el('button', 'audio-play-btn', '▶');
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Phát / tạm dừng');
+
+      const seek = document.createElement('input');
+      seek.type = 'range'; seek.min = '0'; seek.max = '0'; seek.value = '0'; seek.step = '0.1';
+      seek.className = 'audio-seek';
+
+      const time = el('span', 'audio-time', '0:00 / 0:00');
+
+      let seeking = false;
+      audio.addEventListener('loadedmetadata', function () {
+        seek.max = String(audio.duration || 0);
+        time.textContent = fmtAudioTime(0) + ' / ' + fmtAudioTime(audio.duration);
+      });
+      audio.addEventListener('timeupdate', function () {
+        if (!seeking) seek.value = String(audio.currentTime);
+        time.textContent = fmtAudioTime(audio.currentTime) + ' / ' + fmtAudioTime(audio.duration);
+      });
+      audio.addEventListener('play', function () { btn.textContent = '⏸'; btn.classList.add('playing'); });
+      audio.addEventListener('pause', function () { btn.textContent = '▶'; btn.classList.remove('playing'); });
+      audio.addEventListener('ended', function () { btn.textContent = '▶'; btn.classList.remove('playing'); });
+
+      btn.addEventListener('click', function () {
+        if (audio.paused) {
+          try { player.pause(); } catch (e) {}
+          customAudios.forEach(function (a) { if (a !== audio) { try { a.pause(); } catch (e) {} } });
+          const pr = audio.play();
+          if (pr && pr.catch) pr.catch(function (e) { console.warn('Không phát được audio:', src, e && e.message); });
+        } else {
+          audio.pause();
+        }
+      });
+      seek.addEventListener('input', function () { seeking = true; audio.currentTime = Number(seek.value); });
+      seek.addEventListener('change', function () { seeking = false; });
+
+      wrap.appendChild(btn);
+      wrap.appendChild(seek);
+      wrap.appendChild(time);
+      return wrap;
     }
 
     function el(tag, cls, txt) {
@@ -449,9 +508,9 @@
       passages.forEach(function (p) {
         const box = el('div', 'exercise reading-passage');
         const head = el('div', 'dialogue-head');
-        if (p.audio) head.appendChild(playBtn(p.audio));
         head.appendChild(el('h3', 'ex-title', p.title || ''));
         box.appendChild(head);
+        if (p.audio) box.appendChild(renderAudioPlayer(p.audio));
         (String(p.text || '').split(/\n+/)).forEach(function (para) {
           if (para.trim()) box.appendChild(el('p', 'reading-para', para.trim()));
         });
