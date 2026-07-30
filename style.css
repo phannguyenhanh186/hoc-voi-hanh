@@ -634,7 +634,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 
 .image-vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; }
 .image-vocab-card { border: 1.5px solid var(--stroke); border-radius: 12px; overflow: hidden; background: var(--surface); text-align: center; }
-.image-vocab-img { width: 100%; height: 120px; object-fit: cover; display: block; background: var(--tint); }
+.image-vocab-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: var(--tint); }
 .image-vocab-word { padding: 8px 6px; font-weight: 700; font-family: var(--font-display); }
 
 .image-match-row .match-img { width: 96px; height: 96px; object-fit: cover; border-radius: 12px; border: 1.5px solid var(--stroke); background: var(--tint); flex: none; }
@@ -644,12 +644,12 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .preflow-title { font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 12px; }
 .preview-card { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 10px 0 6px; }
 .preview-img {
-  width: 100%; max-width: 320px; height: 260px; object-fit: cover;
+  width: 100%; max-width: 280px; aspect-ratio: 1 / 1; object-fit: cover;
   border-radius: 18px; border: 2px solid var(--stroke); background: var(--tint);
   box-shadow: 6px 6px 0 0 var(--stroke);
 }
 .preview-swatch {
-  width: 100%; max-width: 320px; height: 260px;
+  width: 100%; max-width: 280px; aspect-ratio: 1 / 1;
   border-radius: 18px; border: 2px solid var(--stroke);
   box-shadow: 6px 6px 0 0 var(--stroke);
 }
