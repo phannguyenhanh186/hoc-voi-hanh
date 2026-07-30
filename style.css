@@ -795,6 +795,29 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .reading-para { line-height: 1.7; margin: 0 0 10px; color: var(--ink); }
 .reading-passage .dialogue-head { margin-bottom: 10px; }
 
+.audio-player { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; }
+.audio-player-disabled { display: none; }
+.audio-play-btn {
+  flex: none; width: 40px; height: 40px; border-radius: 50%;
+  border: 1.5px solid var(--stroke); background: var(--primary); color: var(--ink);
+  font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.audio-play-btn:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 var(--stroke); }
+.audio-play-btn.playing { background: var(--accent-deep); color: #fff; }
+.audio-seek {
+  flex: 1; height: 6px; -webkit-appearance: none; appearance: none;
+  border-radius: 999px; background: var(--line); outline: none; cursor: pointer;
+}
+.audio-seek::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent-deep); border: 1.5px solid var(--stroke); cursor: pointer;
+}
+.audio-seek::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent-deep); border: 1.5px solid var(--stroke); cursor: pointer;
+}
+.audio-time { flex: none; font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 78px; text-align: right; }
+
 /* ---------- stepper: hiện từng bài một trong tab Bài học ---------- */
 .step-dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 18px; }
 .step-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--line); border: 1.5px solid var(--stroke); }
