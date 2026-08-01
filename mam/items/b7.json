@@ -430,8 +430,7 @@
             "lẻ",
             "mốt",
             "tư",
-            "lăm",
-            "mươi"
+            "lăm"
           ],
           "items": [
             {
@@ -492,8 +491,7 @@
           "lẻ",
           "mốt",
           "tư",
-          "lăm",
-          "mươi"
+          "lăm"
         ],
         "items": [
           {
@@ -536,7 +534,7 @@
         "instruction": "Viết các số dưới đây bằng số. Dùng bàn phím số bên dưới.",
         "items": [
           {
-            "prompt": "Một trăm ba mươi lăm",
+            "prompt": "Một trăm ba lăm",
             "answer": "135"
           },
           {
@@ -544,7 +542,7 @@
             "answer": "706"
           },
           {
-            "prompt": "Chín trăm tám mươi tư",
+            "prompt": "Chín trăm tám tư",
             "answer": "984"
           },
           {
@@ -552,19 +550,19 @@
             "answer": "209"
           },
           {
-            "prompt": "Ba mươi lăm ngàn",
+            "prompt": "Ba lăm ngàn",
             "answer": "35000"
           },
           {
-            "prompt": "Một trăm hai mươi lăm ngàn",
+            "prompt": "Một trăm hai lăm ngàn",
             "answer": "125000"
           },
           {
-            "prompt": "Hai trăm năm mươi tám ngàn",
+            "prompt": "Hai trăm năm tám ngàn",
             "answer": "258000"
           },
           {
-            "prompt": "Bảy trăm ba mươi mốt ngàn",
+            "prompt": "Bảy trăm ba mốt ngàn",
             "answer": "731000"
           }
         ]
