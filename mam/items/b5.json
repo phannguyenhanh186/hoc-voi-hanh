@@ -582,7 +582,7 @@
               "audio": "audio/b5/{voice}/date_10_04.mp3"
             },
             {
-              "word": "ngày hai mươi lăm tháng sáu",
+              "word": "ngày hai lăm tháng sáu",
               "number": "June 25",
               "audio": "audio/b5/{voice}/date_25_06.mp3"
             },
@@ -592,7 +592,7 @@
               "audio": "audio/b5/{voice}/date_07_11.mp3"
             },
             {
-              "word": "ngày ba mươi mốt tháng ba",
+              "word": "ngày ba mốt tháng ba",
               "number": "March 31",
               "audio": "audio/b5/{voice}/date_31_03.mp3"
             }
@@ -639,7 +639,7 @@
             },
             {
               "prompt": "October 28",
-              "answer": "ngày hai mươi tám tháng mười"
+              "answer": "ngày hai tám tháng mười"
             },
             {
               "prompt": "February 14",
@@ -758,7 +758,7 @@
           },
           {
             "prompt": "25/06",
-            "answer": "Ngày hai mươi lăm tháng sáu."
+            "answer": "Ngày hai lăm tháng sáu."
           },
           {
             "prompt": "07/11",
@@ -766,7 +766,7 @@
           },
           {
             "prompt": "31/03",
-            "answer": "Ngày ba mươi mốt tháng ba."
+            "answer": "Ngày ba mốt tháng ba."
           }
         ]
       },
@@ -789,7 +789,7 @@
               {
                 "blank": "ngày"
               },
-              " hai mươi ba ",
+              " hai ba ",
               {
                 "blank": "tháng"
               },
