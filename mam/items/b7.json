@@ -253,11 +253,21 @@
               "parts": [
                 "Giá một tô phở bò thường từ ",
                 {
-                  "blank": "bốn mươi ngàn"
+                  "blank": [
+                    "bốn mươi ngàn",
+                    "40000",
+                    "40.000",
+                    "40,000"
+                  ]
                 },
                 " tới ",
                 {
-                  "blank": "sáu mươi ngàn"
+                  "blank": [
+                    "sáu mươi ngàn",
+                    "60000",
+                    "60.000",
+                    "60,000"
+                  ]
                 },
                 "."
               ]
@@ -266,11 +276,21 @@
               "parts": [
                 "Một tô bún bò thường từ ",
                 {
-                  "blank": "bốn mươi ngàn"
+                  "blank": [
+                    "bốn mươi ngàn",
+                    "40000",
+                    "40.000",
+                    "40,000"
+                  ]
                 },
                 " tới ",
                 {
-                  "blank": "sáu mươi ngàn"
+                  "blank": [
+                    "sáu mươi ngàn",
+                    "60000",
+                    "60.000",
+                    "60,000"
+                  ]
                 },
                 "."
               ]
@@ -279,11 +299,21 @@
               "parts": [
                 "Một cốc cà phê đen thường từ ",
                 {
-                  "blank": "ba mươi ngàn"
+                  "blank": [
+                    "ba mươi ngàn",
+                    "30000",
+                    "30.000",
+                    "30,000"
+                  ]
                 },
                 " tới ",
                 {
-                  "blank": "năm mươi ngàn"
+                  "blank": [
+                    "năm mươi ngàn",
+                    "50000",
+                    "50.000",
+                    "50,000"
+                  ]
                 },
                 "."
               ]
@@ -292,11 +322,21 @@
               "parts": [
                 "Một cốc cà phê sữa thường từ ",
                 {
-                  "blank": "bốn mươi ngàn"
+                  "blank": [
+                    "bốn mươi ngàn",
+                    "40000",
+                    "40.000",
+                    "40,000"
+                  ]
                 },
                 " tới ",
                 {
-                  "blank": "sáu mươi ngàn"
+                  "blank": [
+                    "sáu mươi ngàn",
+                    "60000",
+                    "60.000",
+                    "60,000"
+                  ]
                 },
                 "."
               ]
