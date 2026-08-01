@@ -380,7 +380,9 @@
               "em",
               "Huy",
               "nghề",
-              "số"
+              "số",
+              "còn",
+              "chị?"
             ]
           },
           {
@@ -481,7 +483,8 @@
               "của",
               "năm",
               "chị",
-              "là"
+              "là",
+              "507"
             ]
           },
           {
@@ -504,27 +507,71 @@
           {
             "audio": "audio/b1/{voice}/listen_d3_01.mp3",
             "text": "Chào bạn, bạn tên là Kiên đúng không?",
-            "wordBank": []
+            "wordBank": [
+              "chào",
+              "bạn",
+              "tên",
+              "là",
+              "Kiên",
+              "đúng",
+              "không?",
+              "bạn",
+              "em",
+              "chị"
+            ]
           },
           {
             "audio": "audio/b1/{voice}/listen_d3_02.mp3",
             "text": "Không, mình tên là Phong.",
-            "wordBank": []
+            "wordBank": [
+              "không",
+              "mình",
+              "tên",
+              "là",
+              "Phong",
+              "bạn",
+              "em"
+            ]
           },
           {
             "audio": "audio/b1/{voice}/listen_d3_03.mp3",
             "text": "Xin lỗi Phong. Số điện thoại của bạn là 091 456 987 đúng không?",
-            "wordBank": []
+            "wordBank": [
+              "xin lỗi",
+              "Phong",
+              "số",
+              "điện thoại",
+              "của",
+              "bạn",
+              "là",
+              "091",
+              "456",
+              "987",
+              "đúng",
+              "không?",
+              "em",
+              "chị"
+            ]
           },
           {
             "audio": "audio/b1/{voice}/listen_d3_04.mp3",
             "text": "Đúng rồi.",
-            "wordBank": []
+            "wordBank": [
+              "đúng",
+              "rồi",
+              "không",
+              "là"
+            ]
           },
           {
             "audio": "audio/b1/{voice}/listen_d3_05.mp3",
             "text": "Cám ơn bạn.",
-            "wordBank": []
+            "wordBank": [
+              "cám ơn",
+              "bạn",
+              "chị",
+              "em"
+            ]
           }
         ]
       }
