@@ -620,6 +620,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .chip-pickable:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 var(--stroke); }
 .chip-selected { background: var(--accent-deep); color: #fff; }
 .chip-used { opacity: .35; cursor: default; }
+.chip-hidden { display: none; }
 .chip-placed { background: var(--green); }
 .sort-cats { display: grid; gap: 14px; margin-top: 14px; }
 @media (min-width: 640px) { .sort-cats { grid-template-columns: repeat(2, 1fr); } }
