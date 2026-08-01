@@ -435,12 +435,32 @@
           {
             "audio": "audio/b1/{voice}/listen_d2_01.mp3",
             "text": "Chào chị, chị tên là gì?",
-            "wordBank": []
+            "wordBank": [
+              "chào",
+              "chị",
+              "tên",
+              "là",
+              "gì?",
+              "chị",
+              "em",
+              "anh",
+              "làm",
+              "nghề"
+            ]
           },
           {
             "audio": "audio/b1/{voice}/listen_d2_02.mp3",
             "text": "Chị tên là Nguyễn Hà Phương.",
-            "wordBank": []
+            "wordBank": [
+              "chị",
+              "tên",
+              "là",
+              "Nguyễn Hà Phương",
+              "anh",
+              "em",
+              "Huy",
+              "số"
+            ]
           },
           {
             "audio": "audio/b1/{voice}/listen_d2_03.mp3",
@@ -467,7 +487,13 @@
           {
             "audio": "audio/b1/{voice}/listen_d2_04.mp3",
             "text": "Cám ơn em.",
-            "wordBank": []
+            "wordBank": [
+              "cám ơn",
+              "em",
+              "chị",
+              "anh",
+              "bạn"
+            ]
           }
         ]
       },
