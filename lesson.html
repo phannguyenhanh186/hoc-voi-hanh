@@ -440,6 +440,7 @@
           chip.addEventListener('click', function () {
             input.value = (input.value ? input.value + ' ' : '') + w;
             input.focus();
+            chip.classList.add('chip-hidden');
           });
           bank.appendChild(chip);
         });
