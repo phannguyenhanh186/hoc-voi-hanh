@@ -66,189 +66,189 @@
       },
       {
         "id": "v11",
-        "word": "trễ",
-        "meaning": "late",
-        "audio": "audio/b4/{voice}/vocab_tre.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "sớm",
-        "meaning": "early",
-        "audio": "audio/b4/{voice}/vocab_som.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "sau đó",
-        "meaning": "after that",
-        "audio": "audio/b4/{voice}/vocab_sau_do.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "trước đó",
-        "meaning": "before that",
-        "audio": "audio/b4/{voice}/vocab_truoc_do.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "đánh răng",
-        "meaning": "brush teeth",
-        "audio": "audio/b4/{voice}/vocab_danh_rang.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "rửa mặt",
-        "meaning": "wash the face",
-        "audio": "audio/b4/{voice}/vocab_rua_mat.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "đi tắm",
-        "meaning": "take a shower/take a bath",
-        "audio": "audio/b4/{voice}/vocab_di_tam.mp3"
-      },
-      {
-        "id": "v18",
-        "word": "gội đầu",
-        "meaning": "wash hair",
-        "audio": "audio/b4/{voice}/vocab_goi_dau.mp3"
-      },
-      {
-        "id": "v19",
-        "word": "về nhà",
-        "meaning": "go back home",
-        "audio": "audio/b4/{voice}/vocab_ve_nha.mp3"
-      },
-      {
-        "id": "v20",
-        "word": "rửa chén",
-        "meaning": "do the dishes",
-        "audio": "audio/b4/{voice}/vocab_rua_chen.mp3"
-      },
-      {
-        "id": "v21",
         "word": "giờ",
         "meaning": "hour, o'clock",
         "audio": "audio/b4/{voice}/vocab_gio.mp3"
       },
       {
-        "id": "v22",
-        "word": "giặt đồ",
-        "meaning": "do the laundry",
-        "audio": "audio/b4/{voice}/vocab_giat_do.mp3"
-      },
-      {
-        "id": "v23",
+        "id": "v12",
         "word": "phút",
         "meaning": "minute",
         "audio": "audio/b4/{voice}/vocab_phut.mp3"
       },
       {
-        "id": "v24",
-        "word": "pha cà phê",
-        "meaning": "make coffee",
-        "audio": "audio/b4/{voice}/vocab_pha_ca_phe.mp3"
-      },
-      {
-        "id": "v25",
+        "id": "v13",
         "word": "rưỡi",
         "meaning": "half past",
         "audio": "audio/b4/{voice}/vocab_ruoi.mp3"
       },
       {
-        "id": "v26",
-        "word": "đi bộ",
-        "meaning": "go for a walk",
-        "audio": "audio/b4/{voice}/vocab_di_bo.mp3"
-      },
-      {
-        "id": "v27",
+        "id": "v14",
         "word": "lúc",
         "meaning": "at (time)",
         "audio": "audio/b4/{voice}/vocab_luc.mp3"
       },
       {
-        "id": "v28",
-        "word": "nghe nhạc",
-        "meaning": "listen to music",
-        "audio": "audio/b4/{voice}/vocab_nghe_nhac.mp3"
-      },
-      {
-        "id": "v29",
+        "id": "v15",
         "word": "mấy",
         "meaning": "how many",
         "audio": "audio/b4/{voice}/vocab_may.mp3"
       },
       {
-        "id": "v30",
-        "word": "đọc sách",
-        "meaning": "read books",
-        "audio": "audio/b4/{voice}/vocab_doc_sach.mp3"
-      },
-      {
-        "id": "v31",
+        "id": "v16",
         "word": "bây giờ",
         "meaning": "now, currently",
         "audio": "audio/b4/{voice}/vocab_bay_gio.mp3"
       },
       {
-        "id": "v32",
-        "word": "coi phim",
-        "meaning": "watch movies",
-        "audio": "audio/b4/{voice}/vocab_coi_phim.mp3"
-      },
-      {
-        "id": "v33",
+        "id": "v17",
         "word": "hôm qua",
         "meaning": "yesterday",
         "audio": "audio/b4/{voice}/vocab_hom_qua.mp3"
       },
       {
-        "id": "v34",
-        "word": "chơi game",
-        "meaning": "play games",
-        "audio": "audio/b4/{voice}/vocab_choi_game.mp3"
-      },
-      {
-        "id": "v35",
+        "id": "v18",
         "word": "hôm nay",
         "meaning": "today",
         "audio": "audio/b4/{voice}/vocab_hom_nay.mp3"
       },
       {
-        "id": "v36",
-        "word": "tại vì",
-        "meaning": "because, because of",
-        "audio": "audio/b4/{voice}/vocab_tai_vi.mp3"
-      },
-      {
-        "id": "v37",
+        "id": "v19",
         "word": "ngày mai",
         "meaning": "tomorrow",
         "audio": "audio/b4/{voice}/vocab_ngay_mai.mp3"
       },
       {
-        "id": "v38",
-        "word": "sinh viên",
-        "meaning": "college student",
-        "audio": "audio/b4/{voice}/vocab_sinh_vien.mp3"
-      },
-      {
-        "id": "v39",
+        "id": "v20",
         "word": "sáng nay",
         "meaning": "today's morning, this morning",
         "audio": "audio/b4/{voice}/vocab_sang_nay.mp3"
       },
       {
-        "id": "v40",
-        "word": "chuẩn bị",
-        "meaning": "prepare",
-        "audio": "audio/b4/{voice}/vocab_chuan_bi.mp3"
-      },
-      {
-        "id": "v41",
+        "id": "v21",
         "word": "trưa nay",
         "meaning": "today's noon, this noon",
         "audio": "audio/b4/{voice}/vocab_trua_nay.mp3"
+      },
+      {
+        "id": "v22",
+        "word": "chiều nay",
+        "meaning": "today's afternoon, this afternoon",
+        "audio": "audio/b4/{voice}/vocab_chieu_nay.mp3"
+      },
+      {
+        "id": "v23",
+        "word": "tối nay",
+        "meaning": "today's evening, tonight",
+        "audio": "audio/b4/{voice}/vocab_toi_nay.mp3"
+      },
+      {
+        "id": "v24",
+        "word": "sáng mai",
+        "meaning": "tomorrow morning",
+        "audio": "audio/b4/{voice}/vocab_sang_mai.mp3"
+      },
+      {
+        "id": "v25",
+        "word": "trưa mai",
+        "meaning": "tomorrow noon",
+        "audio": "audio/b4/{voice}/vocab_trua_mai.mp3"
+      },
+      {
+        "id": "v26",
+        "word": "chiều mai",
+        "meaning": "tomorrow afternoon",
+        "audio": "audio/b4/{voice}/vocab_chieu_mai.mp3"
+      },
+      {
+        "id": "v27",
+        "word": "tối mai",
+        "meaning": "tomorrow evening, tomorrow night",
+        "audio": "audio/b4/{voice}/vocab_toi_mai.mp3"
+      },
+      {
+        "id": "v28",
+        "word": "đánh răng",
+        "meaning": "brush teeth",
+        "audio": "audio/b4/{voice}/vocab_danh_rang.mp3"
+      },
+      {
+        "id": "v29",
+        "word": "rửa mặt",
+        "meaning": "wash the face",
+        "audio": "audio/b4/{voice}/vocab_rua_mat.mp3"
+      },
+      {
+        "id": "v30",
+        "word": "đi tắm",
+        "meaning": "take a shower/take a bath",
+        "audio": "audio/b4/{voice}/vocab_di_tam.mp3"
+      },
+      {
+        "id": "v31",
+        "word": "gội đầu",
+        "meaning": "wash hair",
+        "audio": "audio/b4/{voice}/vocab_goi_dau.mp3"
+      },
+      {
+        "id": "v32",
+        "word": "rửa chén",
+        "meaning": "do the dishes",
+        "audio": "audio/b4/{voice}/vocab_rua_chen.mp3"
+      },
+      {
+        "id": "v33",
+        "word": "giặt đồ",
+        "meaning": "do the laundry",
+        "audio": "audio/b4/{voice}/vocab_giat_do.mp3"
+      },
+      {
+        "id": "v34",
+        "word": "pha cà phê",
+        "meaning": "make coffee",
+        "audio": "audio/b4/{voice}/vocab_pha_ca_phe.mp3"
+      },
+      {
+        "id": "v35",
+        "word": "đi bộ",
+        "meaning": "go for a walk",
+        "audio": "audio/b4/{voice}/vocab_di_bo.mp3"
+      },
+      {
+        "id": "v36",
+        "word": "nghe nhạc",
+        "meaning": "listen to music",
+        "audio": "audio/b4/{voice}/vocab_nghe_nhac.mp3"
+      },
+      {
+        "id": "v37",
+        "word": "đọc sách",
+        "meaning": "read books",
+        "audio": "audio/b4/{voice}/vocab_doc_sach.mp3"
+      },
+      {
+        "id": "v38",
+        "word": "coi phim",
+        "meaning": "watch movies",
+        "audio": "audio/b4/{voice}/vocab_coi_phim.mp3"
+      },
+      {
+        "id": "v39",
+        "word": "chơi game",
+        "meaning": "play games",
+        "audio": "audio/b4/{voice}/vocab_choi_game.mp3"
+      },
+      {
+        "id": "v40",
+        "word": "về nhà",
+        "meaning": "go back home",
+        "audio": "audio/b4/{voice}/vocab_ve_nha.mp3"
+      },
+      {
+        "id": "v41",
+        "word": "chuẩn bị",
+        "meaning": "prepare",
+        "audio": "audio/b4/{voice}/vocab_chuan_bi.mp3"
       },
       {
         "id": "v42",
@@ -258,45 +258,45 @@
       },
       {
         "id": "v43",
-        "word": "chiều nay",
-        "meaning": "today's afternoon, this afternoon",
-        "audio": "audio/b4/{voice}/vocab_chieu_nay.mp3"
-      },
-      {
-        "id": "v44",
         "word": "lớp",
         "meaning": "class",
         "audio": "audio/b4/{voice}/vocab_lop.mp3"
       },
       {
+        "id": "v44",
+        "word": "sinh viên",
+        "meaning": "college student",
+        "audio": "audio/b4/{voice}/vocab_sinh_vien.mp3"
+      },
+      {
         "id": "v45",
-        "word": "tối nay",
-        "meaning": "today's evening, tonight",
-        "audio": "audio/b4/{voice}/vocab_toi_nay.mp3"
+        "word": "trễ",
+        "meaning": "late",
+        "audio": "audio/b4/{voice}/vocab_tre.mp3"
       },
       {
         "id": "v46",
-        "word": "sáng mai",
-        "meaning": "tomorrow morning",
-        "audio": "audio/b4/{voice}/vocab_sang_mai.mp3"
+        "word": "sớm",
+        "meaning": "early",
+        "audio": "audio/b4/{voice}/vocab_som.mp3"
       },
       {
         "id": "v47",
-        "word": "trưa mai",
-        "meaning": "tomorrow noon",
-        "audio": "audio/b4/{voice}/vocab_trua_mai.mp3"
+        "word": "sau đó",
+        "meaning": "after that",
+        "audio": "audio/b4/{voice}/vocab_sau_do.mp3"
       },
       {
         "id": "v48",
-        "word": "chiều mai",
-        "meaning": "tomorrow afternoon",
-        "audio": "audio/b4/{voice}/vocab_chieu_mai.mp3"
+        "word": "trước đó",
+        "meaning": "before that",
+        "audio": "audio/b4/{voice}/vocab_truoc_do.mp3"
       },
       {
         "id": "v49",
-        "word": "tối mai",
-        "meaning": "tomorrow evening, tomorrow night",
-        "audio": "audio/b4/{voice}/vocab_toi_mai.mp3"
+        "word": "tại vì",
+        "meaning": "because, because of",
+        "audio": "audio/b4/{voice}/vocab_tai_vi.mp3"
       }
     ]
   },
