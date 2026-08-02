@@ -12,159 +12,159 @@
       },
       {
         "id": "v2",
-        "word": "cơm",
-        "meaning": "rice",
-        "audio": "audio/b2/{voice}/vocab_com.mp3"
-      },
-      {
-        "id": "v3",
         "word": "uống",
         "meaning": "drink",
         "audio": "audio/b2/{voice}/vocab_uong.mp3"
       },
       {
-        "id": "v4",
-        "word": "bún",
-        "meaning": "rice noodle",
-        "audio": "audio/b2/{voice}/vocab_bun.mp3"
-      },
-      {
-        "id": "v5",
+        "id": "v3",
         "word": "làm",
         "meaning": "do, work",
         "audio": "audio/b2/{voice}/vocab_lam.mp3"
       },
       {
-        "id": "v6",
-        "word": "phở",
-        "meaning": "pho",
-        "audio": "audio/b2/{voice}/vocab_pho.mp3"
-      },
-      {
-        "id": "v7",
+        "id": "v4",
         "word": "đi",
         "meaning": "go",
         "audio": "audio/b2/{voice}/vocab_di.mp3"
       },
       {
-        "id": "v8",
-        "word": "bánh mì",
-        "meaning": "bread",
-        "audio": "audio/b2/{voice}/vocab_banh_mi.mp3"
-      },
-      {
-        "id": "v9",
+        "id": "v5",
         "word": "học",
         "meaning": "study, learn",
         "audio": "audio/b2/{voice}/vocab_hoc.mp3"
       },
       {
-        "id": "v10",
-        "word": "thịt gà",
-        "meaning": "chicken meat",
-        "audio": "audio/b2/{voice}/vocab_thit_ga.mp3"
-      },
-      {
-        "id": "v11",
-        "word": "làm việc",
-        "meaning": "work",
-        "audio": "audio/b2/{voice}/vocab_lam_viec.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "thịt bò",
-        "meaning": "beef",
-        "audio": "audio/b2/{voice}/vocab_thit_bo.mp3"
-      },
-      {
-        "id": "v13",
+        "id": "v6",
         "word": "đi làm",
         "meaning": "go to work",
         "audio": "audio/b2/{voice}/vocab_di_lam.mp3"
       },
       {
-        "id": "v14",
-        "word": "thịt heo",
-        "meaning": "pork",
-        "audio": "audio/b2/{voice}/vocab_thit_heo.mp3"
+        "id": "v7",
+        "word": "làm việc",
+        "meaning": "work",
+        "audio": "audio/b2/{voice}/vocab_lam_viec.mp3"
       },
       {
-        "id": "v15",
-        "word": "đi chơi",
-        "meaning": "hang out",
-        "audio": "audio/b2/{voice}/vocab_di_choi.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "rau",
-        "meaning": "vegetables (general)",
-        "audio": "audio/b2/{voice}/vocab_rau.mp3"
-      },
-      {
-        "id": "v17",
+        "id": "v8",
         "word": "đi ăn",
         "meaning": "eat out",
         "audio": "audio/b2/{voice}/vocab_di_an.mp3"
       },
       {
-        "id": "v18",
-        "word": "canh",
-        "meaning": "soup",
-        "audio": "audio/b2/{voice}/vocab_canh.mp3"
+        "id": "v9",
+        "word": "đi chơi",
+        "meaning": "hang out",
+        "audio": "audio/b2/{voice}/vocab_di_choi.mp3"
       },
       {
-        "id": "v19",
+        "id": "v10",
         "word": "đi ngủ",
         "meaning": "go to sleep",
         "audio": "audio/b2/{voice}/vocab_di_ngu.mp3"
       },
       {
-        "id": "v20",
-        "word": "bánh xèo",
-        "meaning": "Vietnamese crispy pancake",
-        "audio": "audio/b2/{voice}/vocab_banh_xeo.mp3"
-      },
-      {
-        "id": "v21",
+        "id": "v11",
         "word": "ngủ dậy",
         "meaning": "wake up",
         "audio": "audio/b2/{voice}/vocab_ngu_day.mp3"
       },
       {
-        "id": "v22",
-        "word": "cà phê",
-        "meaning": "coffee",
-        "audio": "audio/b2/{voice}/vocab_ca_phe.mp3"
-      },
-      {
-        "id": "v23",
-        "word": "du lịch",
-        "meaning": "travel",
-        "audio": "audio/b2/{voice}/vocab_du_lich.mp3"
-      },
-      {
-        "id": "v24",
-        "word": "cà phê đen",
-        "meaning": "black coffee",
-        "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3"
-      },
-      {
-        "id": "v25",
+        "id": "v12",
         "word": "dọn nhà",
         "meaning": "tidy the house",
         "audio": "audio/b2/{voice}/vocab_don_nha.mp3"
       },
       {
-        "id": "v26",
-        "word": "cà phê sữa",
-        "meaning": "milk coffee",
-        "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3"
-      },
-      {
-        "id": "v27",
+        "id": "v13",
         "word": "coi tivi",
         "meaning": "watch TV",
         "audio": "audio/b2/{voice}/vocab_coi_tivi.mp3"
+      },
+      {
+        "id": "v14",
+        "word": "du lịch",
+        "meaning": "travel",
+        "audio": "audio/b2/{voice}/vocab_du_lich.mp3"
+      },
+      {
+        "id": "v15",
+        "word": "cơm",
+        "meaning": "rice",
+        "audio": "audio/b2/{voice}/vocab_com.mp3"
+      },
+      {
+        "id": "v16",
+        "word": "bún",
+        "meaning": "rice noodle",
+        "audio": "audio/b2/{voice}/vocab_bun.mp3"
+      },
+      {
+        "id": "v17",
+        "word": "phở",
+        "meaning": "pho",
+        "audio": "audio/b2/{voice}/vocab_pho.mp3"
+      },
+      {
+        "id": "v18",
+        "word": "bánh mì",
+        "meaning": "bread",
+        "audio": "audio/b2/{voice}/vocab_banh_mi.mp3"
+      },
+      {
+        "id": "v19",
+        "word": "thịt gà",
+        "meaning": "chicken meat",
+        "audio": "audio/b2/{voice}/vocab_thit_ga.mp3"
+      },
+      {
+        "id": "v20",
+        "word": "thịt bò",
+        "meaning": "beef",
+        "audio": "audio/b2/{voice}/vocab_thit_bo.mp3"
+      },
+      {
+        "id": "v21",
+        "word": "thịt heo",
+        "meaning": "pork",
+        "audio": "audio/b2/{voice}/vocab_thit_heo.mp3"
+      },
+      {
+        "id": "v22",
+        "word": "rau",
+        "meaning": "vegetables (general)",
+        "audio": "audio/b2/{voice}/vocab_rau.mp3"
+      },
+      {
+        "id": "v23",
+        "word": "canh",
+        "meaning": "soup",
+        "audio": "audio/b2/{voice}/vocab_canh.mp3"
+      },
+      {
+        "id": "v24",
+        "word": "bánh xèo",
+        "meaning": "Vietnamese crispy pancake",
+        "audio": "audio/b2/{voice}/vocab_banh_xeo.mp3"
+      },
+      {
+        "id": "v25",
+        "word": "cà phê",
+        "meaning": "coffee",
+        "audio": "audio/b2/{voice}/vocab_ca_phe.mp3"
+      },
+      {
+        "id": "v26",
+        "word": "cà phê đen",
+        "meaning": "black coffee",
+        "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3"
+      },
+      {
+        "id": "v27",
+        "word": "cà phê sữa",
+        "meaning": "milk coffee",
+        "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3"
       },
       {
         "id": "v28",
@@ -174,39 +174,39 @@
       },
       {
         "id": "v29",
-        "word": "người",
-        "meaning": "human, person, people",
-        "audio": "audio/b2/{voice}/vocab_nguoi.mp3"
-      },
-      {
-        "id": "v30",
         "word": "trà",
         "meaning": "tea",
         "audio": "audio/b2/{voice}/vocab_tra.mp3"
       },
       {
-        "id": "v31",
-        "word": "nhiều",
-        "meaning": "many",
-        "audio": "audio/b2/{voice}/vocab_nhieu.mp3"
-      },
-      {
-        "id": "v32",
+        "id": "v30",
         "word": "trà xanh",
         "meaning": "green tea",
         "audio": "audio/b2/{voice}/vocab_tra_xanh.mp3"
       },
       {
-        "id": "v33",
+        "id": "v31",
+        "word": "nước trái cây",
+        "meaning": "fruit juice",
+        "audio": "audio/b2/{voice}/vocab_nuoc_trai_cay.mp3"
+      },
+      {
+        "id": "v32",
         "word": "quán cà phê",
         "meaning": "coffee store",
         "audio": "audio/b2/{voice}/vocab_quan_ca_phe.mp3"
       },
       {
+        "id": "v33",
+        "word": "người",
+        "meaning": "human, person, people",
+        "audio": "audio/b2/{voice}/vocab_nguoi.mp3"
+      },
+      {
         "id": "v34",
-        "word": "nước trái cây",
-        "meaning": "fruit juice",
-        "audio": "audio/b2/{voice}/vocab_nuoc_trai_cay.mp3"
+        "word": "nhiều",
+        "meaning": "many",
+        "audio": "audio/b2/{voice}/vocab_nhieu.mp3"
       }
     ]
   },
