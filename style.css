@@ -743,6 +743,10 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .mode-btn:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 0 var(--stroke); }
 
 .vocab-list { display: flex; flex-direction: column; }
+@media (min-width: 640px) {
+  .vocab-list { display: block; columns: 2; column-gap: 36px; }
+  .vocab-row { break-inside: avoid; -webkit-column-break-inside: avoid; }
+}
 .vocab-row {
   display: flex; align-items: center; gap: 12px; padding: 10px 4px;
   border-bottom: 1px dotted var(--line);
