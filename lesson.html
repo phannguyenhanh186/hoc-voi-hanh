@@ -415,37 +415,56 @@
       const wrap = el('div', 'dictation-item');
       const row = el('div', 'listen-row');
       row.appendChild(playBtn(line.audio));
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.className = 'blank-input dictation-input';
-      input.placeholder = 'Gõ câu bạn nghe được…';
-      row.appendChild(input);
       const resultSlot = el('span', 'result-slot');
+      row.appendChild(resultSlot);
+      wrap.appendChild(row);
+
+      const bankWords = line.wordBank || [];
+      const built = el('div', 'scramble-built');
+      const bank = el('div', 'scramble-bank');
+      const displayOrder = shuffle(bankWords.map(function (_, i) { return i; }));
+      let chosen = [];
+
+      function refreshBuilt() {
+        built.innerHTML = '';
+        if (!chosen.length) {
+          built.appendChild(el('span', 'dictation-placeholder', 'Bấm vào từ bên dưới để ghép câu…'));
+        }
+        chosen.forEach(function (idx) {
+          const chip = el('span', 'chip chip-placed', bankWords[idx]);
+          chip.addEventListener('click', function () {
+            chosen = chosen.filter(function (i) { return i !== idx; });
+            refreshBuilt(); refreshBank();
+          });
+          built.appendChild(chip);
+        });
+      }
+      function refreshBank() {
+        bank.innerHTML = '';
+        displayOrder.forEach(function (idx) {
+          if (chosen.indexOf(idx) !== -1) return;
+          const chip = el('span', 'chip chip-pickable', bankWords[idx]);
+          chip.addEventListener('click', function () {
+            chosen.push(idx);
+            refreshBuilt(); refreshBank();
+          });
+          bank.appendChild(chip);
+        });
+      }
+      refreshBuilt(); refreshBank();
+      wrap.appendChild(built);
+      if (bankWords.length) wrap.appendChild(bank);
+
       const checkBtn = el('button', 'btn-check', 'Kiểm tra');
       checkBtn.type = 'button';
       checkBtn.addEventListener('click', function () {
-        const ok = norm(input.value) === norm(line.text);
+        const builtStr = chosen.map(function (i) { return bankWords[i]; }).join(' ');
+        const ok = norm(builtStr) === norm(line.text);
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(ok));
         if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + line.text + ')'));
       });
-      row.appendChild(checkBtn);
-      row.appendChild(resultSlot);
-      wrap.appendChild(row);
-      const bankWords = line.wordBank || [];
-      if (bankWords.length) {
-        const bank = el('div', 'scramble-bank');
-        bankWords.forEach(function (w) {
-          const chip = el('span', 'chip chip-pickable', w);
-          chip.addEventListener('click', function () {
-            input.value = (input.value ? input.value + ' ' : '') + w;
-            input.focus();
-            chip.classList.add('chip-hidden');
-          });
-          bank.appendChild(chip);
-        });
-        wrap.appendChild(bank);
-      }
+      wrap.appendChild(checkBtn);
       return wrap;
     }
 
