@@ -24,15 +24,15 @@
       },
       {
         "id": "v4",
-        "word": "tính tiền",
-        "meaning": "pay the bill",
-        "audio": "audio/b6/{voice}/vocab_tinh_tien.mp3"
-      },
-      {
-        "id": "v5",
         "word": "gọi món",
         "meaning": "order food/drink",
         "audio": "audio/b6/{voice}/vocab_goi_mon.mp3"
+      },
+      {
+        "id": "v5",
+        "word": "tính tiền",
+        "meaning": "pay the bill",
+        "audio": "audio/b6/{voice}/vocab_tinh_tien.mp3"
       },
       {
         "id": "v6",
@@ -48,147 +48,147 @@
       },
       {
         "id": "v8",
+        "word": "còn gì nữa không?",
+        "meaning": "Anything else?",
+        "audio": "audio/b6/{voice}/vocab_con_gi_nua_khong.mp3"
+      },
+      {
+        "id": "v9",
         "word": "nhiều",
         "meaning": "a lot of",
         "audio": "audio/b6/{voice}/vocab_nhieu.mp3"
       },
       {
-        "id": "v9",
+        "id": "v10",
         "word": "ít",
         "meaning": "a few",
         "audio": "audio/b6/{voice}/vocab_it.mp3"
       },
       {
-        "id": "v10",
-        "word": "đá",
-        "meaning": "ice",
-        "audio": "audio/b6/{voice}/vocab_da.mp3"
-      },
-      {
         "id": "v11",
-        "word": "đường",
-        "meaning": "sugar",
-        "audio": "audio/b6/{voice}/vocab_duong.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "ớt",
-        "meaning": "chilli",
-        "audio": "audio/b6/{voice}/vocab_ot.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "sữa",
-        "meaning": "milk",
-        "audio": "audio/b6/{voice}/vocab_sua.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "bánh ngọt",
-        "meaning": "cake",
-        "audio": "audio/b6/{voice}/vocab_banh_ngot.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "tương cà",
-        "meaning": "ketchup",
-        "audio": "audio/b6/{voice}/vocab_tuong_ca.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "tương ớt",
-        "meaning": "chilli sauce",
-        "audio": "audio/b6/{voice}/vocab_tuong_ot.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "muỗng",
-        "meaning": "spoon",
-        "audio": "audio/b6/{voice}/vocab_muong.mp3"
-      },
-      {
-        "id": "v18",
-        "word": "đũa",
-        "meaning": "chopstick",
-        "audio": "audio/b6/{voice}/vocab_dua.mp3"
-      },
-      {
-        "id": "v19",
-        "word": "cốc",
-        "meaning": "cup",
-        "audio": "audio/b6/{voice}/vocab_coc.mp3"
-      },
-      {
-        "id": "v20",
-        "word": "chén",
-        "meaning": "bowl (often for cơm,...)",
-        "audio": "audio/b6/{voice}/vocab_chen.mp3"
-      },
-      {
-        "id": "v21",
-        "word": "tô",
-        "meaning": "large bowl (often for phở, bún,...)",
-        "audio": "audio/b6/{voice}/vocab_to.mp3"
-      },
-      {
-        "id": "v22",
-        "word": "dĩa",
-        "meaning": "plate",
-        "audio": "audio/b6/{voice}/vocab_dia.mp3"
-      },
-      {
-        "id": "v23",
-        "word": "món ăn",
-        "meaning": "food (dish)",
-        "audio": "audio/b6/{voice}/vocab_mon_an.mp3"
-      },
-      {
-        "id": "v24",
-        "word": "quán",
-        "meaning": "eatery, shop, bar (general)",
-        "audio": "audio/b6/{voice}/vocab_quan.mp3"
-      },
-      {
-        "id": "v25",
-        "word": "ngoài ra",
-        "meaning": "besides",
-        "audio": "audio/b6/{voice}/vocab_ngoai_ra.mp3"
-      },
-      {
-        "id": "v26",
-        "word": "tuỳ vào",
-        "meaning": "depend on",
-        "audio": "audio/b6/{voice}/vocab_tuy_vao.mp3"
-      },
-      {
-        "id": "v27",
         "word": "rồi",
         "meaning": "already, then",
         "audio": "audio/b6/{voice}/vocab_roi.mp3"
       },
       {
+        "id": "v12",
+        "word": "đá",
+        "meaning": "ice",
+        "audio": "audio/b6/{voice}/vocab_da.mp3"
+      },
+      {
+        "id": "v13",
+        "word": "đường",
+        "meaning": "sugar",
+        "audio": "audio/b6/{voice}/vocab_duong.mp3"
+      },
+      {
+        "id": "v14",
+        "word": "ớt",
+        "meaning": "chilli",
+        "audio": "audio/b6/{voice}/vocab_ot.mp3"
+      },
+      {
+        "id": "v15",
+        "word": "sữa",
+        "meaning": "milk",
+        "audio": "audio/b6/{voice}/vocab_sua.mp3"
+      },
+      {
+        "id": "v16",
+        "word": "tương cà",
+        "meaning": "ketchup",
+        "audio": "audio/b6/{voice}/vocab_tuong_ca.mp3"
+      },
+      {
+        "id": "v17",
+        "word": "tương ớt",
+        "meaning": "chilli sauce",
+        "audio": "audio/b6/{voice}/vocab_tuong_ot.mp3"
+      },
+      {
+        "id": "v18",
+        "word": "bánh ngọt",
+        "meaning": "cake",
+        "audio": "audio/b6/{voice}/vocab_banh_ngot.mp3"
+      },
+      {
+        "id": "v19",
+        "word": "muỗng",
+        "meaning": "spoon",
+        "audio": "audio/b6/{voice}/vocab_muong.mp3"
+      },
+      {
+        "id": "v20",
+        "word": "đũa",
+        "meaning": "chopstick",
+        "audio": "audio/b6/{voice}/vocab_dua.mp3"
+      },
+      {
+        "id": "v21",
+        "word": "cốc",
+        "meaning": "cup",
+        "audio": "audio/b6/{voice}/vocab_coc.mp3"
+      },
+      {
+        "id": "v22",
+        "word": "chén",
+        "meaning": "bowl (often for cơm,...)",
+        "audio": "audio/b6/{voice}/vocab_chen.mp3"
+      },
+      {
+        "id": "v23",
+        "word": "tô",
+        "meaning": "large bowl (often for phở, bún,...)",
+        "audio": "audio/b6/{voice}/vocab_to.mp3"
+      },
+      {
+        "id": "v24",
+        "word": "dĩa",
+        "meaning": "plate",
+        "audio": "audio/b6/{voice}/vocab_dia.mp3"
+      },
+      {
+        "id": "v25",
+        "word": "món ăn",
+        "meaning": "food (dish)",
+        "audio": "audio/b6/{voice}/vocab_mon_an.mp3"
+      },
+      {
+        "id": "v26",
+        "word": "quán",
+        "meaning": "eatery, shop, bar (general)",
+        "audio": "audio/b6/{voice}/vocab_quan.mp3"
+      },
+      {
+        "id": "v27",
+        "word": "ngoài ra",
+        "meaning": "besides",
+        "audio": "audio/b6/{voice}/vocab_ngoai_ra.mp3"
+      },
+      {
         "id": "v28",
+        "word": "tuỳ vào",
+        "meaning": "depend on",
+        "audio": "audio/b6/{voice}/vocab_tuy_vao.mp3"
+      },
+      {
+        "id": "v29",
         "word": "miền Nam",
         "meaning": "South, Southern",
         "audio": "audio/b6/{voice}/vocab_mien_nam.mp3"
       },
       {
-        "id": "v29",
+        "id": "v30",
         "word": "miền Trung",
         "meaning": "Central",
         "audio": "audio/b6/{voice}/vocab_mien_trung.mp3"
       },
       {
-        "id": "v30",
+        "id": "v31",
         "word": "miền Bắc",
         "meaning": "North, Northern",
         "audio": "audio/b6/{voice}/vocab_mien_bac.mp3"
-      },
-      {
-        "id": "v31",
-        "word": "còn gì nữa không?",
-        "meaning": "Anything else?",
-        "audio": "audio/b6/{voice}/vocab_con_gi_nua_khong.mp3"
       }
     ]
   },
