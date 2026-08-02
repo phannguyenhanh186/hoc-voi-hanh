@@ -6,123 +6,123 @@
     "items": [
       {
         "id": "v1",
-        "word": "anh",
-        "meaning": "you, older brother",
-        "audio": "audio/b1/{voice}/vocab_anh.mp3"
-      },
-      {
-        "id": "v2",
-        "word": "không",
-        "meaning": "no, not, zero",
-        "audio": "audio/b1/{voice}/vocab_khong.mp3"
-      },
-      {
-        "id": "v3",
-        "word": "chị",
-        "meaning": "you, older sister",
-        "audio": "audio/b1/{voice}/vocab_chi.mp3"
-      },
-      {
-        "id": "v4",
         "word": "một",
         "meaning": "one",
         "audio": "audio/b1/{voice}/vocab_mot.mp3"
       },
       {
-        "id": "v5",
-        "word": "em",
-        "meaning": "younger sibling",
-        "audio": "audio/b1/{voice}/vocab_em.mp3"
-      },
-      {
-        "id": "v6",
+        "id": "v2",
         "word": "hai",
         "meaning": "two",
         "audio": "audio/b1/{voice}/vocab_hai.mp3"
       },
       {
-        "id": "v7",
-        "word": "anh trai",
-        "meaning": "older brother",
-        "audio": "audio/b1/{voice}/vocab_anh_trai.mp3"
-      },
-      {
-        "id": "v8",
+        "id": "v3",
         "word": "ba",
         "meaning": "three",
         "audio": "audio/b1/{voice}/vocab_ba.mp3"
       },
       {
-        "id": "v9",
-        "word": "chị gái",
-        "meaning": "older sister",
-        "audio": "audio/b1/{voice}/vocab_chi_gai.mp3"
-      },
-      {
-        "id": "v10",
+        "id": "v4",
         "word": "bốn",
         "meaning": "four",
         "audio": "audio/b1/{voice}/vocab_bon.mp3"
       },
       {
-        "id": "v11",
-        "word": "em trai",
-        "meaning": "younger brother",
-        "audio": "audio/b1/{voice}/vocab_em_trai.mp3"
-      },
-      {
-        "id": "v12",
+        "id": "v5",
         "word": "năm",
         "meaning": "five",
         "audio": "audio/b1/{voice}/vocab_nam.mp3"
       },
       {
-        "id": "v13",
-        "word": "em gái",
-        "meaning": "younger sister",
-        "audio": "audio/b1/{voice}/vocab_em_gai.mp3"
-      },
-      {
-        "id": "v14",
+        "id": "v6",
         "word": "sáu",
         "meaning": "six",
         "audio": "audio/b1/{voice}/vocab_sau.mp3"
       },
       {
-        "id": "v15",
-        "word": "mình",
-        "meaning": "I (when talking to someone at the same age)",
-        "audio": "audio/b1/{voice}/vocab_minh.mp3"
-      },
-      {
-        "id": "v16",
+        "id": "v7",
         "word": "bảy",
         "meaning": "seven",
         "audio": "audio/b1/{voice}/vocab_bay.mp3"
       },
       {
-        "id": "v17",
-        "word": "bạn",
-        "meaning": "you, friend",
-        "audio": "audio/b1/{voice}/vocab_ban.mp3"
-      },
-      {
-        "id": "v18",
+        "id": "v8",
         "word": "tám",
         "meaning": "eight",
         "audio": "audio/b1/{voice}/vocab_tam.mp3"
       },
       {
-        "id": "v19",
-        "word": "bạn thân",
-        "meaning": "best friend",
-        "audio": "audio/b1/{voice}/vocab_ban_than.mp3"
-      },
-      {
-        "id": "v20",
+        "id": "v9",
         "word": "chín",
         "meaning": "nine",
         "audio": "audio/b1/{voice}/vocab_chin.mp3"
+      },
+      {
+        "id": "v10",
+        "word": "mười",
+        "meaning": "ten",
+        "audio": "audio/b1/{voice}/vocab_muoi.mp3"
+      },
+      {
+        "id": "v11",
+        "word": "anh",
+        "meaning": "you, older brother",
+        "audio": "audio/b1/{voice}/vocab_anh.mp3"
+      },
+      {
+        "id": "v12",
+        "word": "anh trai",
+        "meaning": "older brother",
+        "audio": "audio/b1/{voice}/vocab_anh_trai.mp3"
+      },
+      {
+        "id": "v13",
+        "word": "chị",
+        "meaning": "you, older sister",
+        "audio": "audio/b1/{voice}/vocab_chi.mp3"
+      },
+      {
+        "id": "v14",
+        "word": "chị gái",
+        "meaning": "older sister",
+        "audio": "audio/b1/{voice}/vocab_chi_gai.mp3"
+      },
+      {
+        "id": "v15",
+        "word": "em",
+        "meaning": "younger sibling",
+        "audio": "audio/b1/{voice}/vocab_em.mp3"
+      },
+      {
+        "id": "v16",
+        "word": "em trai",
+        "meaning": "younger brother",
+        "audio": "audio/b1/{voice}/vocab_em_trai.mp3"
+      },
+      {
+        "id": "v17",
+        "word": "em gái",
+        "meaning": "younger sister",
+        "audio": "audio/b1/{voice}/vocab_em_gai.mp3"
+      },
+      {
+        "id": "v18",
+        "word": "mình",
+        "meaning": "I (when talking to someone at the same age)",
+        "audio": "audio/b1/{voice}/vocab_minh.mp3"
+      },
+      {
+        "id": "v19",
+        "word": "bạn",
+        "meaning": "you, friend",
+        "audio": "audio/b1/{voice}/vocab_ban.mp3"
+      },
+      {
+        "id": "v20",
+        "word": "bạn thân",
+        "meaning": "best friend",
+        "audio": "audio/b1/{voice}/vocab_ban_than.mp3"
       },
       {
         "id": "v21",
@@ -132,129 +132,129 @@
       },
       {
         "id": "v22",
-        "word": "mười",
-        "meaning": "ten",
-        "audio": "audio/b1/{voice}/vocab_muoi.mp3"
-      },
-      {
-        "id": "v23",
         "word": "chồng",
         "meaning": "husband",
         "audio": "audio/b1/{voice}/vocab_chong.mp3"
       },
       {
-        "id": "v24",
-        "word": "số",
-        "meaning": "number",
-        "audio": "audio/b1/{voice}/vocab_so.mp3"
-      },
-      {
-        "id": "v25",
-        "word": "là",
-        "meaning": "be, be identified as",
-        "audio": "audio/b1/{voice}/vocab_la.mp3"
-      },
-      {
-        "id": "v26",
-        "word": "tuổi",
-        "meaning": "age, year old",
-        "audio": "audio/b1/{voice}/vocab_tuoi.mp3"
-      },
-      {
-        "id": "v27",
-        "word": "chào",
-        "meaning": "hi, hello, goodbye",
-        "audio": "audio/b1/{voice}/vocab_chao.mp3"
-      },
-      {
-        "id": "v28",
-        "word": "phòng",
-        "meaning": "room",
-        "audio": "audio/b1/{voice}/vocab_phong.mp3"
-      },
-      {
-        "id": "v29",
-        "word": "xin lỗi",
-        "meaning": "sorry",
-        "audio": "audio/b1/{voice}/vocab_xin_loi.mp3"
-      },
-      {
-        "id": "v30",
-        "word": "làm",
-        "meaning": "do",
-        "audio": "audio/b1/{voice}/vocab_lam.mp3"
-      },
-      {
-        "id": "v31",
-        "word": "cám ơn",
-        "meaning": "thank you",
-        "audio": "audio/b1/{voice}/vocab_cam_on.mp3"
-      },
-      {
-        "id": "v32",
-        "word": "bác sĩ",
-        "meaning": "doctor",
-        "audio": "audio/b1/{voice}/vocab_bac_si.mp3"
-      },
-      {
-        "id": "v33",
-        "word": "khoẻ",
-        "meaning": "healthy, fine",
-        "audio": "audio/b1/{voice}/vocab_khoe.mp3"
-      },
-      {
-        "id": "v34",
-        "word": "giáo viên",
-        "meaning": "teacher",
-        "audio": "audio/b1/{voice}/vocab_giao_vien.mp3"
-      },
-      {
-        "id": "v35",
-        "word": "và",
-        "meaning": "and",
-        "audio": "audio/b1/{voice}/vocab_va.mp3"
-      },
-      {
-        "id": "v36",
-        "word": "kỹ sư",
-        "meaning": "engineer",
-        "audio": "audio/b1/{voice}/vocab_ky_su.mp3"
-      },
-      {
-        "id": "v37",
-        "word": "tên",
-        "meaning": "name",
-        "audio": "audio/b1/{voice}/vocab_ten.mp3"
-      },
-      {
-        "id": "v38",
-        "word": "nhân viên",
-        "meaning": "staff",
-        "audio": "audio/b1/{voice}/vocab_nhan_vien.mp3"
-      },
-      {
-        "id": "v39",
+        "id": "v23",
         "word": "nghề",
         "meaning": "job",
         "audio": "audio/b1/{voice}/vocab_nghe.mp3"
       },
       {
-        "id": "v40",
+        "id": "v24",
+        "word": "làm",
+        "meaning": "do",
+        "audio": "audio/b1/{voice}/vocab_lam.mp3"
+      },
+      {
+        "id": "v25",
+        "word": "bác sĩ",
+        "meaning": "doctor",
+        "audio": "audio/b1/{voice}/vocab_bac_si.mp3"
+      },
+      {
+        "id": "v26",
+        "word": "giáo viên",
+        "meaning": "teacher",
+        "audio": "audio/b1/{voice}/vocab_giao_vien.mp3"
+      },
+      {
+        "id": "v27",
+        "word": "kỹ sư",
+        "meaning": "engineer",
+        "audio": "audio/b1/{voice}/vocab_ky_su.mp3"
+      },
+      {
+        "id": "v28",
+        "word": "nhân viên",
+        "meaning": "staff",
+        "audio": "audio/b1/{voice}/vocab_nhan_vien.mp3"
+      },
+      {
+        "id": "v29",
         "word": "nhân viên văn phòng",
         "meaning": "office staff",
         "audio": "audio/b1/{voice}/vocab_nhan_vien_van_phong.mp3"
       },
       {
-        "id": "v41",
+        "id": "v30",
+        "word": "chào",
+        "meaning": "hi, hello, goodbye",
+        "audio": "audio/b1/{voice}/vocab_chao.mp3"
+      },
+      {
+        "id": "v31",
+        "word": "khoẻ",
+        "meaning": "healthy, fine",
+        "audio": "audio/b1/{voice}/vocab_khoe.mp3"
+      },
+      {
+        "id": "v32",
+        "word": "xin lỗi",
+        "meaning": "sorry",
+        "audio": "audio/b1/{voice}/vocab_xin_loi.mp3"
+      },
+      {
+        "id": "v33",
+        "word": "cám ơn",
+        "meaning": "thank you",
+        "audio": "audio/b1/{voice}/vocab_cam_on.mp3"
+      },
+      {
+        "id": "v34",
+        "word": "dạ",
+        "meaning": "yes",
+        "audio": "audio/b1/{voice}/vocab_da.mp3"
+      },
+      {
+        "id": "v35",
+        "word": "đúng rồi",
+        "meaning": "right, correct",
+        "audio": "audio/b1/{voice}/vocab_dung_roi.mp3"
+      },
+      {
+        "id": "v36",
+        "word": "tên",
+        "meaning": "name",
+        "audio": "audio/b1/{voice}/vocab_ten.mp3"
+      },
+      {
+        "id": "v37",
+        "word": "là",
+        "meaning": "be, be identified as",
+        "audio": "audio/b1/{voice}/vocab_la.mp3"
+      },
+      {
+        "id": "v38",
         "word": "gì",
         "meaning": "what",
         "audio": "audio/b1/{voice}/vocab_gi.mp3"
       },
       {
+        "id": "v39",
+        "word": "tuổi",
+        "meaning": "age, year old",
+        "audio": "audio/b1/{voice}/vocab_tuoi.mp3"
+      },
+      {
+        "id": "v40",
+        "word": "số",
+        "meaning": "number",
+        "audio": "audio/b1/{voice}/vocab_so.mp3"
+      },
+      {
+        "id": "v41",
+        "word": "phòng",
+        "meaning": "room",
+        "audio": "audio/b1/{voice}/vocab_phong.mp3"
+      },
+      {
         "id": "v42",
-        "word": "đúng rồi",
-        "meaning": "right, correct",
-        "audio": "audio/b1/{voice}/vocab_dung_roi.mp3"
+        "word": "và",
+        "meaning": "and",
+        "audio": "audio/b1/{voice}/vocab_va.mp3"
       },
       {
         "id": "v43",
@@ -270,9 +270,9 @@
       },
       {
         "id": "v45",
-        "word": "biết",
-        "meaning": "know",
-        "audio": "audio/b1/{voice}/vocab_biet.mp3"
+        "word": "không",
+        "meaning": "no, not, zero",
+        "audio": "audio/b1/{voice}/vocab_khong.mp3"
       },
       {
         "id": "v46",
@@ -282,15 +282,15 @@
       },
       {
         "id": "v47",
-        "word": "không biết",
-        "meaning": "don't know",
-        "audio": "audio/b1/{voice}/vocab_khong_biet.mp3"
+        "word": "biết",
+        "meaning": "know",
+        "audio": "audio/b1/{voice}/vocab_biet.mp3"
       },
       {
         "id": "v48",
-        "word": "dạ",
-        "meaning": "yes",
-        "audio": "audio/b1/{voice}/vocab_da.mp3"
+        "word": "không biết",
+        "meaning": "don't know",
+        "audio": "audio/b1/{voice}/vocab_khong_biet.mp3"
       },
       {
         "id": "v49",
