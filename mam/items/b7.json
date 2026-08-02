@@ -36,75 +36,75 @@
       },
       {
         "id": "v6",
+        "word": "giá",
+        "meaning": "price, cost",
+        "audio": "audio/b7/{voice}/vocab_gia.mp3"
+      },
+      {
+        "id": "v7",
         "word": "đồ uống",
         "meaning": "beverage",
         "audio": "audio/b7/{voice}/vocab_do_uong.mp3"
       },
       {
-        "id": "v7",
+        "id": "v8",
         "word": "này",
         "meaning": "this",
         "audio": "audio/b7/{voice}/vocab_nay.mp3"
       },
       {
-        "id": "v8",
+        "id": "v9",
         "word": "kia",
         "meaning": "that",
         "audio": "audio/b7/{voice}/vocab_kia.mp3"
       },
       {
-        "id": "v9",
+        "id": "v10",
         "word": "cái này",
         "meaning": "this one",
         "audio": "audio/b7/{voice}/vocab_cai_nay.mp3"
       },
       {
-        "id": "v10",
+        "id": "v11",
         "word": "cái kia",
         "meaning": "that one",
         "audio": "audio/b7/{voice}/vocab_cai_kia.mp3"
       },
       {
-        "id": "v11",
+        "id": "v12",
         "word": "thành phố",
         "meaning": "city",
         "audio": "audio/b7/{voice}/vocab_thanh_pho.mp3"
       },
       {
-        "id": "v12",
+        "id": "v13",
         "word": "thành phố lớn",
         "meaning": "big, major city",
         "audio": "audio/b7/{voice}/vocab_thanh_pho_lon.mp3"
       },
       {
-        "id": "v13",
+        "id": "v14",
         "word": "như",
         "meaning": "like, such as",
         "audio": "audio/b7/{voice}/vocab_nhu.mp3"
       },
       {
-        "id": "v14",
+        "id": "v15",
         "word": "cao",
         "meaning": "high",
         "audio": "audio/b7/{voice}/vocab_cao.mp3"
       },
       {
-        "id": "v15",
+        "id": "v16",
         "word": "cao hơn",
         "meaning": "higher than",
         "audio": "audio/b7/{voice}/vocab_cao_hon.mp3"
       },
       {
-        "id": "v16",
+        "id": "v17",
         "word": "nơi khác",
         "meaning": "another place, other places",
         "audio": "audio/b7/{voice}/vocab_noi_khac.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "giá",
-        "meaning": "price, cost",
-        "audio": "audio/b7/{voice}/vocab_gia.mp3"
       },
       {
         "id": "v18",
