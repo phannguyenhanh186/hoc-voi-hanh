@@ -632,6 +632,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .dictation-item { border-top: 1px dashed var(--line); padding: 14px 0; }
 .dictation-item:first-of-type { border-top: none; padding-top: 0; }
 .dictation-input { flex: 1; min-width: 200px; }
+.dictation-placeholder { color: var(--muted); font-style: italic; font-size: .95em; }
 
 .image-vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; }
 .image-vocab-card { border: 1.5px solid var(--stroke); border-radius: 12px; overflow: hidden; background: var(--surface); text-align: center; }
