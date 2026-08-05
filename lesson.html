@@ -385,11 +385,74 @@
       const wrap = el('div', 'grammar-examples');
       (lines || []).forEach(function (ln) {
         const row = el('div', 'example');
-        row.appendChild(el('div', 'ex-vi', ln.vi));
-        if (ln.en) row.appendChild(el('div', 'ex-en', ln.en));
+        if (typeof ln === 'string') {
+          row.appendChild(el('div', 'ex-vi', ln));
+        } else {
+          row.appendChild(el('div', 'ex-vi', ln.vi));
+          if (ln.en) row.appendChild(el('div', 'ex-en', ln.en));
+        }
         wrap.appendChild(row);
       });
       return wrap;
+    }
+
+    function renderQuizToggle(quiz, label) {
+      return makeToggleSection(label || 'Small quiz', function () {
+        const wrap = el('div');
+        quiz.forEach(function (q, idx) {
+          const qBox = el('div', 'reasoning-item');
+          qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
+          const optWrap = el('div', 'quiz-options');
+          (q.options || []).forEach(function (opt) {
+            const obtn = el('button', 'quiz-option', opt);
+            obtn.type = 'button';
+            obtn.addEventListener('click', function () {
+              const ok = opt === q.answer;
+              Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+              obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+              if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+            });
+            optWrap.appendChild(obtn);
+          });
+          qBox.appendChild(optWrap);
+          wrap.appendChild(qBox);
+        });
+        return wrap;
+      });
+    }
+
+    // Render pattern + notes + toggle(examples) + optional tip + optional answer-note/examples + toggle(quiz)
+    // into `container`. Used both for standalone grammar points and for subsections grouped in one card.
+    function renderPatternBody(container, g) {
+      if (g.pattern) container.appendChild(el('div', 'grammar-pattern', g.pattern));
+      if (g.explanation) container.appendChild(el('p', 'ex-instruction', g.explanation));
+      if (g.notes && g.notes.length) {
+        const ul = document.createElement('ul');
+        ul.className = 'grammar-notes';
+        g.notes.forEach(function (n) {
+          const li = document.createElement('li');
+          li.textContent = n;
+          ul.appendChild(li);
+        });
+        container.appendChild(ul);
+      }
+      if (g.examples && g.examples.length) {
+        container.appendChild(makeToggleSection('Examples', function () { return renderExampleLines(g.examples); }));
+      }
+      if (g.tip) {
+        const tipBox = el('div', 'grammar-callout');
+        tipBox.appendChild(el('p', '', g.tip.label + (g.tip.text ? ': ' + g.tip.text : '')));
+        if (g.tip.correct) tipBox.appendChild(el('p', 'tip-correct', '✅ ' + g.tip.correct));
+        if (g.tip.incorrect) tipBox.appendChild(el('p', 'tip-incorrect', '❌ ' + g.tip.incorrect));
+        container.appendChild(tipBox);
+      }
+      if (g.answerNote) {
+        container.appendChild(el('p', 'ex-instruction', g.answerNote));
+        if (g.answerExamples && g.answerExamples.length) {
+          container.appendChild(makeToggleSection('Examples', function () { return renderExampleLines(g.answerExamples); }));
+        }
+      }
+      if (g.quiz && g.quiz.length) container.appendChild(renderQuizToggle(g.quiz));
     }
 
     function renderPronounContent(pc) {
@@ -490,60 +553,20 @@
           panel.appendChild(box);
           return;
         }
+        if (g.subsections && g.subsections.length) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          g.subsections.forEach(function (sub, i) {
+            const subBox = el('div', 'grammar-subsection');
+            subBox.appendChild(el('h4', 'grammar-subhead grammar-subhead-purple', sub.subtitle));
+            renderPatternBody(subBox, sub);
+            box.appendChild(subBox);
+          });
+          panel.appendChild(box);
+          return;
+        }
         if (g.pattern) {
           box.appendChild(el('h3', 'ex-title', g.title));
-          box.appendChild(el('div', 'grammar-pattern', g.pattern));
-          if (g.explanation) box.appendChild(el('p', 'ex-instruction', g.explanation));
-          if (g.notes && g.notes.length) {
-            const ul = document.createElement('ul');
-            ul.className = 'grammar-notes';
-            g.notes.forEach(function (n) {
-              const li = document.createElement('li');
-              li.textContent = n;
-              ul.appendChild(li);
-            });
-            box.appendChild(ul);
-          }
-          if (g.examples && g.examples.length) {
-            box.appendChild(makeToggleSection('Ví dụ', function () {
-              const wrap = el('div', 'grammar-examples');
-              g.examples.forEach(function (ex) {
-                const row = el('div', 'example');
-                if (typeof ex === 'string') {
-                  row.appendChild(el('div', 'ex-vi', ex));
-                } else {
-                  row.appendChild(el('div', 'ex-vi', ex.vi));
-                  if (ex.en) row.appendChild(el('div', 'ex-en', ex.en));
-                }
-                wrap.appendChild(row);
-              });
-              return wrap;
-            }));
-          }
-          if (g.quiz && g.quiz.length) {
-            box.appendChild(makeToggleSection('Small quiz', function () {
-              const wrap = el('div');
-              g.quiz.forEach(function (q, idx) {
-                const qBox = el('div', 'reasoning-item');
-                qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
-                const optWrap = el('div', 'quiz-options');
-                (q.options || []).forEach(function (opt) {
-                  const obtn = el('button', 'quiz-option', opt);
-                  obtn.type = 'button';
-                  obtn.addEventListener('click', function () {
-                    const ok = opt === q.answer;
-                    Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
-                    obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
-                    if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
-                  });
-                  optWrap.appendChild(obtn);
-                });
-                qBox.appendChild(optWrap);
-                wrap.appendChild(qBox);
-              });
-              return wrap;
-            }));
-          }
+          renderPatternBody(box, g);
           panel.appendChild(box);
           return;
         }
