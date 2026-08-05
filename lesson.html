@@ -346,6 +346,25 @@
     }
 
     // ========================================================
+    // TOGGLE (dùng cho Ví dụ / Quiz nhỏ trong Ngữ pháp)
+    // ========================================================
+    function makeToggleSection(label, buildContent) {
+      const wrap = el('div', 'toggle-section');
+      const btn = el('button', 'toggle-btn', label);
+      btn.type = 'button';
+      const content = el('div', 'toggle-content hidden');
+      content.appendChild(buildContent());
+      btn.addEventListener('click', function () {
+        const willOpen = content.classList.contains('hidden');
+        content.classList.toggle('hidden');
+        btn.classList.toggle('open', willOpen);
+      });
+      wrap.appendChild(btn);
+      wrap.appendChild(content);
+      return wrap;
+    }
+
+    // ========================================================
     // NGỮ PHÁP
     // ========================================================
     function renderGrammarTab(item) {
@@ -355,6 +374,63 @@
       if (!points.length) { panel.appendChild(emptyNote('Ngữ pháp đang được cập nhật.')); return; }
       points.forEach(function (g) {
         const box = el('div', 'exercise');
+        if (g.pattern) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          box.appendChild(el('div', 'grammar-pattern', g.pattern));
+          if (g.explanation) box.appendChild(el('p', 'ex-instruction', g.explanation));
+          if (g.notes && g.notes.length) {
+            const ul = document.createElement('ul');
+            ul.className = 'grammar-notes';
+            g.notes.forEach(function (n) {
+              const li = document.createElement('li');
+              li.textContent = n;
+              ul.appendChild(li);
+            });
+            box.appendChild(ul);
+          }
+          if (g.examples && g.examples.length) {
+            box.appendChild(makeToggleSection('Ví dụ', function () {
+              const wrap = el('div', 'grammar-examples');
+              g.examples.forEach(function (ex) {
+                const row = el('div', 'example');
+                if (typeof ex === 'string') {
+                  row.appendChild(el('div', 'ex-vi', ex));
+                } else {
+                  row.appendChild(el('div', 'ex-vi', ex.vi));
+                  if (ex.en) row.appendChild(el('div', 'ex-en', ex.en));
+                }
+                wrap.appendChild(row);
+              });
+              return wrap;
+            }));
+          }
+          if (g.quiz && g.quiz.length) {
+            box.appendChild(makeToggleSection('Quiz nhỏ', function () {
+              const wrap = el('div');
+              g.quiz.forEach(function (q, idx) {
+                const qBox = el('div', 'reasoning-item');
+                qBox.appendChild(el('p', 'ex-instruction', 'Câu ' + (idx + 1) + '. ' + q.question));
+                const optWrap = el('div', 'quiz-options');
+                (q.options || []).forEach(function (opt) {
+                  const obtn = el('button', 'quiz-option', opt);
+                  obtn.type = 'button';
+                  obtn.addEventListener('click', function () {
+                    const ok = opt === q.answer;
+                    Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+                    obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+                    if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+                  });
+                  optWrap.appendChild(obtn);
+                });
+                qBox.appendChild(optWrap);
+                wrap.appendChild(qBox);
+              });
+              return wrap;
+            }));
+          }
+          panel.appendChild(box);
+          return;
+        }
         if (g.refInput) {
           box.appendChild(el('h3', 'ex-title', g.title));
           const actions = el('div', 'grammar-actions');
