@@ -307,7 +307,29 @@
         "title": "Danh xưng — cách gọi người khác & gọi mình",
         "explanation": "Người Việt chọn danh xưng (anh/chị/em/bạn/mình) tùy theo tuổi tác so với người đang nói chuyện. Xem bảng đầy đủ ở phần chi tiết.",
         "examples": [],
-        "refInput": "pronouns"
+        "refInput": "pronouns",
+        "quiz": [
+          {
+            "context": "Hoàng: _____ tên là gì?\nPhương: Mình tên là Phương.",
+            "options": ["mình", "bạn", "em"],
+            "answer": "bạn"
+          },
+          {
+            "context": "Minh: Chào chị.\nHà: Chào ______.",
+            "options": ["chị", "anh", "em"],
+            "answer": "em"
+          },
+          {
+            "context": "Lan: Em tên là Lan. Còn _____?\nHuy: Anh tên là Huy.",
+            "options": ["anh", "chị", "em"],
+            "answer": "anh"
+          },
+          {
+            "context": "Kiên: Số điện thoại của bạn là gì?\nPhong: Số điện thoại của _____ là 083 123 456.",
+            "options": ["bạn", "mình", "em"],
+            "answer": "mình"
+          }
+        ]
       },
       {
         "id": "g2",
