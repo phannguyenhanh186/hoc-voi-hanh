@@ -410,19 +410,25 @@
       }
       if (pc.tip) box.appendChild(el('p', 'grammar-callout', '💡 Tip: ' + pc.tip));
       if (pc.exampleGroups && pc.exampleGroups.length) {
-        box.appendChild(el('h4', 'grammar-subhead', 'Examples'));
-        pc.exampleGroups.forEach(function (grp) {
-          box.appendChild(el('p', 'example-group-title', grp.heading));
-          box.appendChild(renderExampleLines(grp.lines));
-        });
+        box.appendChild(makeToggleSection('Examples', function () {
+          const wrap = el('div');
+          pc.exampleGroups.forEach(function (grp) {
+            wrap.appendChild(el('p', 'example-group-title', grp.heading));
+            wrap.appendChild(renderExampleLines(grp.lines));
+          });
+          return wrap;
+        }));
       }
       if (pc.specialRule) {
-        box.appendChild(el('h4', 'grammar-subhead', pc.specialRule.heading));
-        if (pc.specialRule.text) box.appendChild(el('p', 'ex-instruction', pc.specialRule.text));
-        (pc.specialRule.examples || []).forEach(function (ex) {
-          box.appendChild(renderExampleLines(ex.lines));
-          if (ex.note) box.appendChild(el('p', 'grammar-note', ex.note));
-        });
+        box.appendChild(makeToggleSection(pc.specialRule.heading, function () {
+          const wrap = el('div');
+          if (pc.specialRule.text) wrap.appendChild(el('p', 'ex-instruction', pc.specialRule.text));
+          (pc.specialRule.examples || []).forEach(function (ex) {
+            wrap.appendChild(renderExampleLines(ex.lines));
+            if (ex.note) wrap.appendChild(el('p', 'grammar-note', ex.note));
+          });
+          return wrap;
+        }));
       }
       if (pc.remember) {
         box.appendChild(el('h4', 'grammar-subhead', pc.remember.heading));
