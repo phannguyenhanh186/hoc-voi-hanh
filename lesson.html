@@ -365,6 +365,85 @@
     }
 
     // ========================================================
+    // NỘI DUNG DANH XƯNG (pronounContent) — hiển thị trực tiếp trong tab Ngữ pháp
+    // ========================================================
+    function renderExampleLines(lines) {
+      const wrap = el('div', 'grammar-examples');
+      (lines || []).forEach(function (ln) {
+        const row = el('div', 'example');
+        row.appendChild(el('div', 'ex-vi', ln.vi));
+        if (ln.en) row.appendChild(el('div', 'ex-en', ln.en));
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    function renderPronounContent(pc) {
+      const box = el('div', 'pronoun-content');
+      (pc.intro || []).forEach(function (p) {
+        box.appendChild(el('p', 'ex-instruction', p));
+      });
+      if (pc.table) {
+        const table = document.createElement('table');
+        table.className = 'grammar-table';
+        const thead = document.createElement('thead');
+        const headRow = document.createElement('tr');
+        pc.table.headers.forEach(function (h) {
+          const th = document.createElement('th');
+          th.textContent = h;
+          headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+        const tbody = document.createElement('tbody');
+        pc.table.rows.forEach(function (r) {
+          const tr = document.createElement('tr');
+          r.forEach(function (cell) {
+            const td = document.createElement('td');
+            td.textContent = cell;
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        box.appendChild(table);
+      }
+      if (pc.tip) box.appendChild(el('p', 'grammar-callout', '💡 Tip: ' + pc.tip));
+      if (pc.exampleGroups && pc.exampleGroups.length) {
+        box.appendChild(el('h4', 'grammar-subhead', 'Examples'));
+        pc.exampleGroups.forEach(function (grp) {
+          box.appendChild(el('p', 'example-group-title', grp.heading));
+          box.appendChild(renderExampleLines(grp.lines));
+        });
+      }
+      if (pc.specialRule) {
+        box.appendChild(el('h4', 'grammar-subhead', pc.specialRule.heading));
+        if (pc.specialRule.text) box.appendChild(el('p', 'ex-instruction', pc.specialRule.text));
+        (pc.specialRule.examples || []).forEach(function (ex) {
+          box.appendChild(renderExampleLines(ex.lines));
+          if (ex.note) box.appendChild(el('p', 'grammar-note', ex.note));
+        });
+      }
+      if (pc.remember) {
+        box.appendChild(el('h4', 'grammar-subhead', pc.remember.heading));
+        if (pc.remember.text) box.appendChild(el('p', 'ex-instruction', pc.remember.text));
+        if (pc.remember.pairs && pc.remember.pairs.length) {
+          const ul = document.createElement('ul');
+          ul.className = 'grammar-notes';
+          pc.remember.pairs.forEach(function (p) {
+            const li = document.createElement('li');
+            li.textContent = p;
+            ul.appendChild(li);
+          });
+          box.appendChild(ul);
+        }
+        if (pc.remember.footer) box.appendChild(el('p', 'ex-instruction', pc.remember.footer));
+      }
+      if (pc.cultureNote) box.appendChild(el('p', 'grammar-callout', '💡 Culture Note: ' + pc.cultureNote));
+      return box;
+    }
+
+    // ========================================================
     // NGỮ PHÁP
     // ========================================================
     function renderGrammarTab(item) {
@@ -374,6 +453,23 @@
       if (!points.length) { panel.appendChild(emptyNote('Ngữ pháp đang được cập nhật.')); return; }
       points.forEach(function (g) {
         const box = el('div', 'exercise');
+        if (g.pronounContent) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          box.appendChild(renderPronounContent(g.pronounContent));
+          if (g.quiz && g.quiz.length) {
+            const actions = el('div', 'grammar-actions');
+            const quizBtn = document.createElement('a');
+            quizBtn.className = 'btn-purple';
+            quizBtn.href = 'quiz.html?id=' + encodeURIComponent(itemId) +
+              '&level=' + encodeURIComponent(level) +
+              '&point=' + encodeURIComponent(g.id);
+            quizBtn.textContent = 'Quiz →';
+            actions.appendChild(quizBtn);
+            box.appendChild(actions);
+          }
+          panel.appendChild(box);
+          return;
+        }
         if (g.pattern) {
           box.appendChild(el('h3', 'ex-title', g.title));
           box.appendChild(el('div', 'grammar-pattern', g.pattern));
@@ -389,7 +485,7 @@
             box.appendChild(ul);
           }
           if (g.examples && g.examples.length) {
-            box.appendChild(makeToggleSection('Example', function () {
+            box.appendChild(makeToggleSection('Ví dụ', function () {
               const wrap = el('div', 'grammar-examples');
               g.examples.forEach(function (ex) {
                 const row = el('div', 'example');
@@ -405,11 +501,11 @@
             }));
           }
           if (g.quiz && g.quiz.length) {
-            box.appendChild(makeToggleSection('Small quiz', function () {
+            box.appendChild(makeToggleSection('Quiz nhỏ', function () {
               const wrap = el('div');
               g.quiz.forEach(function (q, idx) {
                 const qBox = el('div', 'reasoning-item');
-                qBox.appendChild(el('p', 'ex-instruction', 'Question ' + (idx + 1) + '. ' + q.question));
+                qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
                 const optWrap = el('div', 'quiz-options');
                 (q.options || []).forEach(function (opt) {
                   const obtn = el('button', 'quiz-option', opt);
