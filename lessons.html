@@ -15,7 +15,7 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" href="index.html">← trang chủ</a>
+          <a class="back-link" id="back-link" href="lessons.html">← quay lại</a>
         </div>
       </nav>
     </div>
@@ -23,90 +23,1608 @@
 
   <main class="wrap">
     <div class="lesson-head">
+      <div class="meta-badges" id="meta-badges"></div>
       <h1 id="title">Đang tải…</h1>
     </div>
-    <div class="path-page-list" id="cards"><p class="note">Đang tải…</p></div>
+
+    <div class="toolbar">
+      <div class="tabs tabs-6" id="tabs">
+        <button class="tab-btn active" data-tab="vocab">Từ vựng</button>
+        <button class="tab-btn" data-tab="grammar">Ngữ pháp</button>
+        <button class="tab-btn" data-tab="listening">Nghe</button>
+        <button class="tab-btn" data-tab="reading">Đọc</button>
+        <button class="tab-btn" data-tab="preclass">Chuẩn bị</button>
+        <button class="tab-btn" data-tab="postclass">Ôn tập</button>
+      </div>
+    </div>
+
+    <section class="tab-panel" id="panel-vocab"><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-grammar" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-listening" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-reading" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-preclass" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-postclass" hidden><p class="note">Đang tải…</p></section>
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
 
   <script>
-    const LEVELS = { mam: 'mầm', choi: 'chồi', la: 'lá' };
-    const LEVEL_MASCOT = { mam: '🌱', choi: '🌿', la: '🍃' };
-    const activeLevel = new URLSearchParams(location.search).get('level') || 'mam';
-    document.getElementById('title').textContent = 'Cấp ' + (LEVELS[activeLevel] || activeLevel);
-    document.title = 'Cấp ' + (LEVELS[activeLevel] || activeLevel) + ' — hoc voi hanh';
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || '';
+    let level = params.get('level') || 'mam';
 
-    function el(tag, cls) { const n = document.createElement(tag); if (cls) n.className = cls; return n; }
+    const $title = document.getElementById('title');
+    const $backLink = document.getElementById('back-link');
+    const $tabs = document.getElementById('tabs');
+    const PANELS = ['vocab', 'grammar', 'listening', 'reading', 'preclass', 'postclass'];
 
-    function makeSectionCard(opts) {
-      // opts: { eyebrow, title, ready, total, href, sample, mascot }
-      const isActive = opts.ready > 0;
-      const card = el('a', 'section-card ' + (isActive ? 'section-active' : 'section-todo'));
-      card.href = isActive ? opts.href : '#';
+    let voice = 'nam';
+    try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
+    function resolveAudio(path) { return (path || '').replace('{voice}', voice); }
 
-      const main = el('div', 'section-main');
-      const eyebrow = el('span', 'section-eyebrow'); eyebrow.textContent = opts.eyebrow; main.appendChild(eyebrow);
-      const h2 = el('h3', 'section-title'); h2.textContent = opts.title; main.appendChild(h2);
-
-      if (opts.total) {
-        const bar = el('div', 'progress-bar');
-        const fill = el('div', 'progress-fill');
-        fill.style.width = Math.round((opts.ready / opts.total) * 100) + '%';
-        bar.appendChild(fill);
-        main.appendChild(bar);
-        const count = el('div', 'section-count');
-        count.style.marginTop = '8px';
-        count.textContent = (isActive ? '' : '🔒 ') + opts.ready + '/' + opts.total + ' bài đã có';
-        main.appendChild(count);
-      }
-
-      const ctaWrap = el('div', 'section-cta');
-      const cta = el('span', 'btn-jump');
-      cta.textContent = isActive ? 'Vào học →' : 'Sắp ra mắt';
-      ctaWrap.appendChild(cta);
-      main.appendChild(ctaWrap);
-      card.appendChild(main);
-
-      if (opts.mascot) {
-        const speech = el('div', 'section-speech');
-        if (opts.sample) { const bubble = el('div', 'speech-bubble'); bubble.textContent = opts.sample; speech.appendChild(bubble); }
-        const mascot = el('div', 'section-mascot'); mascot.textContent = opts.mascot; speech.appendChild(mascot);
-        card.appendChild(speech);
-      }
-      return card;
+    let player = new Audio();
+    player.preload = 'auto';
+    let currentEl = null;
+    const customAudios = [];
+    player.addEventListener('ended', function () { if (currentEl) currentEl.classList.remove('playing'); });
+    function play(src, elm) {
+      if (!src) return;
+      customAudios.forEach(function (a) { try { a.pause(); } catch (e) {} });
+      if (currentEl) currentEl.classList.remove('playing');
+      currentEl = elm || null;
+      if (currentEl) currentEl.classList.add('playing');
+      try { player.pause(); } catch (e) {}
+      player.src = src;
+      try { player.currentTime = 0; } catch (e) {}
+      const pr = player.play();
+      if (pr && pr.catch) pr.catch(function (e) {
+        if (currentEl) currentEl.classList.remove('playing');
+        console.warn('Không phát được audio:', src, e && e.message);
+      });
     }
 
-    (async function () {
-      const cards = document.getElementById('cards');
+    function fmtAudioTime(s) {
+      if (!isFinite(s) || s < 0) return '0:00';
+      s = Math.floor(s);
+      const m = Math.floor(s / 60), sec = s % 60;
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    function renderAudioPlayer(rawSrc) {
+      const wrap = el('div', 'audio-player');
+      if (!rawSrc) { wrap.classList.add('audio-player-disabled'); return wrap; }
+      const src = resolveAudio(rawSrc);
+      const audio = new Audio(src);
+      audio.preload = 'metadata';
+      customAudios.push(audio);
+
+      const btn = el('button', 'audio-play-btn', '▶');
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Phát / tạm dừng');
+
+      const seek = document.createElement('input');
+      seek.type = 'range'; seek.min = '0'; seek.max = '0'; seek.value = '0'; seek.step = '0.1';
+      seek.className = 'audio-seek';
+
+      const time = el('span', 'audio-time', '0:00 / 0:00');
+
+      let seeking = false;
+      audio.addEventListener('loadedmetadata', function () {
+        seek.max = String(audio.duration || 0);
+        time.textContent = fmtAudioTime(0) + ' / ' + fmtAudioTime(audio.duration);
+      });
+      audio.addEventListener('timeupdate', function () {
+        if (!seeking) seek.value = String(audio.currentTime);
+        time.textContent = fmtAudioTime(audio.currentTime) + ' / ' + fmtAudioTime(audio.duration);
+      });
+      audio.addEventListener('play', function () { btn.textContent = '⏸'; btn.classList.add('playing'); });
+      audio.addEventListener('pause', function () { btn.textContent = '▶'; btn.classList.remove('playing'); });
+      audio.addEventListener('ended', function () { btn.textContent = '▶'; btn.classList.remove('playing'); });
+
+      btn.addEventListener('click', function () {
+        if (audio.paused) {
+          try { player.pause(); } catch (e) {}
+          customAudios.forEach(function (a) { if (a !== audio) { try { a.pause(); } catch (e) {} } });
+          const pr = audio.play();
+          if (pr && pr.catch) pr.catch(function (e) { console.warn('Không phát được audio:', src, e && e.message); });
+        } else {
+          audio.pause();
+        }
+      });
+      seek.addEventListener('input', function () { seeking = true; audio.currentTime = Number(seek.value); });
+      seek.addEventListener('change', function () { seeking = false; });
+
+      wrap.appendChild(btn);
+      wrap.appendChild(seek);
+      wrap.appendChild(time);
+      return wrap;
+    }
+
+    function el(tag, cls, txt) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (txt != null) n.textContent = txt;
+      return n;
+    }
+    function playBtn(src) {
+      const b = el('button', 'play-sentence');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Phát audio');
+      b.innerHTML = '▶';
+      if (src) { b.addEventListener('click', function () { play(resolveAudio(src), b); }); }
+      else { b.disabled = true; }
+      return b;
+    }
+    function norm(s) {
+      return (s || '')
+        .toString().trim().toLowerCase()
+        .normalize('NFC')
+        .replace(/[.,!?;:"'“”]/g, '')
+        .replace(/\s+/g, ' ');
+    }
+    function emptyNote(text) { return el('p', 'note', text); }
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+      }
+      return a;
+    }
+
+    // ---------- Tabs ----------
+    $tabs.addEventListener('click', function (e) {
+      const btn = e.target.closest('.tab-btn');
+      if (!btn) return;
+      document.querySelectorAll('#tabs .tab-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const tab = btn.dataset.tab;
+      PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = (p !== tab); });
+    });
+
+    // ========================================================
+    // TỪ VỰNG — Danh sách / Flashcards / Trắc nghiệm
+    // ========================================================
+    function savedKey(w) { return 'saved:' + level + ':' + itemId + ':' + w.id; }
+    function isSaved(w) { try { return localStorage.getItem(savedKey(w)) === '1'; } catch (e) { return false; } }
+    function toggleSaved(w, starEl) {
       try {
-        const data = await (await fetch(activeLevel + '/units.json', { cache: 'no-cache' })).json();
-        cards.innerHTML = '';
+        const now = !isSaved(w);
+        localStorage.setItem(savedKey(w), now ? '1' : '0');
+        starEl.classList.toggle('starred', now);
+      } catch (e) {}
+    }
 
-        (data.selfStudy || []).forEach(s => {
-          const ready = s.status !== 'todo';
-          const card = makeSectionCard({
-            eyebrow: 'Tự học', title: s.title, ready: ready ? 1 : 0, total: 1,
-            href: s.id === 'tones' ? 'tones.html' : ('lesson.html?id=' + encodeURIComponent(s.id) + '&level=' + encodeURIComponent(activeLevel)),
-            sample: s.titleEn || '', mascot: '📖'
+    function renderVocabList(items) {
+      const wrap = el('div', 'vocab-list');
+      items.forEach(function (w, i) {
+        const row = el('div', 'vocab-row');
+        row.appendChild(el('span', 'vocab-idx', String(i + 1) + '.'));
+        const main = el('div', 'vocab-row-main');
+        main.appendChild(el('span', 'vocab-row-word', w.word));
+        if (w.ipa) main.appendChild(el('span', 'vocab-row-ipa', w.ipa));
+        main.appendChild(el('span', 'vocab-row-sep', '—'));
+        main.appendChild(el('span', 'vocab-row-meaning', w.meaning));
+        row.appendChild(main);
+        const actions = el('div', 'vocab-row-actions');
+        const star = el('button', 'icon-btn star-btn' + (isSaved(w) ? ' starred' : ''));
+        star.type = 'button'; star.innerHTML = '★'; star.setAttribute('aria-label', 'Lưu từ');
+        star.addEventListener('click', function () { toggleSaved(w, star); });
+        actions.appendChild(star);
+        actions.appendChild(playBtn(w.audio));
+        row.appendChild(actions);
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    function renderVocabFlashcards(items) {
+      const wrap = el('div', 'flash-wrap');
+      let i = 0, flipped = false;
+      const card = el('div', 'flash-card');
+      const progress = el('div', 'flash-progress');
+      function draw() {
+        flipped = false;
+        card.classList.remove('flipped');
+        const w = items[i];
+        card.innerHTML = '';
+        const front = el('div', 'flash-face flash-front', w.word);
+        const back = el('div', 'flash-face flash-back');
+        if (w.ipa) back.appendChild(el('div', 'flash-ipa', w.ipa));
+        back.appendChild(el('div', 'flash-meaning', w.meaning));
+        card.appendChild(front); card.appendChild(back);
+        progress.textContent = (i + 1) + ' / ' + items.length;
+      }
+      card.addEventListener('click', function () {
+        flipped = !flipped;
+        card.classList.toggle('flipped', flipped);
+        if (flipped) play(resolveAudio(items[i].audio));
+      });
+      const nav = el('div', 'flash-nav');
+      const prev = el('button', 'btn-check btn-secondary', '← Trước');
+      const next = el('button', 'btn-check', 'Tiếp →');
+      prev.type = 'button'; next.type = 'button';
+      prev.addEventListener('click', function () { i = (i - 1 + items.length) % items.length; draw(); });
+      next.addEventListener('click', function () { i = (i + 1) % items.length; draw(); });
+      draw();
+      wrap.appendChild(progress);
+      wrap.appendChild(card);
+      wrap.appendChild(el('p', 'ex-instruction', 'Bấm vào thẻ để lật xem nghĩa (tự phát âm khi lật).'));
+      nav.appendChild(prev); nav.appendChild(next);
+      wrap.appendChild(nav);
+      return wrap;
+    }
+
+    function renderVocabQuiz(items) {
+      const wrap = el('div', 'quiz-wrap');
+      const order = shuffle(items);
+      let i = 0, correct = 0, answered = false;
+      const body = el('div', 'quiz-body');
+      const foot = el('div', 'quiz-foot');
+      function nextQuestion() {
+        answered = false;
+        body.innerHTML = '';
+        if (i >= order.length) {
+          body.appendChild(el('p', 'quiz-score', 'Xong! Đúng ' + correct + '/' + order.length + ' câu.'));
+          const retry = el('button', 'btn-check', 'Làm lại');
+          retry.type = 'button';
+          retry.addEventListener('click', function () { i = 0; correct = 0; nextQuestion(); });
+          body.appendChild(retry);
+          foot.textContent = '';
+          return;
+        }
+        const w = order[i];
+        foot.textContent = 'Câu ' + (i + 1) + '/' + order.length;
+        const qHead = el('div', 'quiz-q-head');
+        qHead.appendChild(el('span', 'quiz-word', w.word));
+        qHead.appendChild(playBtn(w.audio));
+        body.appendChild(qHead);
+        if (w.ipa) body.appendChild(el('p', 'vocab-row-ipa', w.ipa));
+
+        const distractors = shuffle(items.filter(function (x) { return x.id !== w.id; })).slice(0, 3);
+        const options = shuffle([w].concat(distractors));
+        const optWrap = el('div', 'quiz-options');
+        options.forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt.meaning);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            if (answered) return;
+            answered = true;
+            const ok = opt.id === w.id;
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) {
+              Array.from(optWrap.children).forEach(function (c) {
+                if (c.textContent === w.meaning) c.classList.add('opt-correct');
+              });
+            } else { correct++; }
+            const nextBtn = el('button', 'btn-check', i + 1 >= order.length ? 'Xem kết quả →' : 'Câu tiếp →');
+            nextBtn.type = 'button';
+            nextBtn.style.marginTop = '14px';
+            nextBtn.addEventListener('click', function () { i++; nextQuestion(); });
+            body.appendChild(nextBtn);
           });
-          cards.appendChild(card);
+          optWrap.appendChild(btn);
         });
+        body.appendChild(optWrap);
+      }
+      nextQuestion();
+      wrap.appendChild(foot);
+      wrap.appendChild(body);
+      return wrap;
+    }
 
-        const lessons = data.lessons || [];
-        if (!lessons.length) { cards.innerHTML += '<p class="note">Chưa có bài nào ở cấp này.</p>'; return; }
+    function renderVocabTab(item) {
+      const panel = document.getElementById('panel-vocab');
+      panel.innerHTML = '';
+      const items = (item.vocab && item.vocab.items) || [];
+      if (!items.length) { panel.appendChild(emptyNote('Từ vựng đang được cập nhật.')); return; }
 
-        lessons.forEach(function (b) {
-          const ready = b.status !== 'todo' ? 1 : 0;
-          cards.appendChild(makeSectionCard({
-            eyebrow: 'Bài ' + b.num,
-            title: b.title,
-            ready: ready, total: 1,
-            href: 'lesson.html?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel),
-            mascot: LEVEL_MASCOT[activeLevel] || '🌱'
-          }));
+      const modeBar = el('div', 'mode-bar');
+      const modes = [['list', 'Danh sách'], ['flashcards', 'Flashcards'], ['quiz', 'Trắc nghiệm']];
+      const content = el('div', 'vocab-content');
+      let activeMode = 'list';
+      function draw() {
+        content.innerHTML = '';
+        if (activeMode === 'list') content.appendChild(renderVocabList(items));
+        else if (activeMode === 'flashcards') content.appendChild(renderVocabFlashcards(items));
+        else content.appendChild(renderVocabQuiz(items));
+      }
+      modes.forEach(function (m) {
+        const b = el('button', 'mode-btn' + (m[0] === activeMode ? ' active' : ''), m[1]);
+        b.type = 'button';
+        b.addEventListener('click', function () {
+          activeMode = m[0];
+          modeBar.querySelectorAll('.mode-btn').forEach(function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          draw();
         });
-      } catch (e) { cards.innerHTML = '<p class="note">Could not load the lesson list.</p>'; }
+        modeBar.appendChild(b);
+      });
+      panel.appendChild(modeBar);
+      panel.appendChild(content);
+      draw();
+    }
+
+    // ========================================================
+    // TOGGLE (dùng cho Ví dụ / Quiz nhỏ trong Ngữ pháp)
+    // ========================================================
+    function makeToggleSection(label, buildContent) {
+      const wrap = el('div', 'toggle-section');
+      const btn = el('button', 'toggle-btn', label);
+      btn.type = 'button';
+      const content = el('div', 'toggle-content hidden');
+      content.appendChild(buildContent());
+      btn.addEventListener('click', function () {
+        const willOpen = content.classList.contains('hidden');
+        content.classList.toggle('hidden');
+        btn.classList.toggle('open', willOpen);
+      });
+      wrap.appendChild(btn);
+      wrap.appendChild(content);
+      return wrap;
+    }
+
+    // ========================================================
+    // NỘI DUNG DANH XƯNG (pronounContent) — hiển thị trực tiếp trong tab Ngữ pháp
+    // ========================================================
+    function renderExampleLines(lines) {
+      const wrap = el('div', 'grammar-examples');
+      (lines || []).forEach(function (ln) {
+        const row = el('div', 'example');
+        row.appendChild(el('div', 'ex-vi', ln.vi));
+        if (ln.en) row.appendChild(el('div', 'ex-en', ln.en));
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    function renderPronounContent(pc) {
+      const box = el('div', 'pronoun-content');
+      (pc.intro || []).forEach(function (p) {
+        box.appendChild(el('p', 'ex-instruction', p));
+      });
+      if (pc.table) {
+        const table = document.createElement('table');
+        table.className = 'grammar-table';
+        const thead = document.createElement('thead');
+        const headRow = document.createElement('tr');
+        pc.table.headers.forEach(function (h) {
+          const th = document.createElement('th');
+          th.textContent = h;
+          headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+        const tbody = document.createElement('tbody');
+        pc.table.rows.forEach(function (r) {
+          const tr = document.createElement('tr');
+          r.forEach(function (cell) {
+            const td = document.createElement('td');
+            td.textContent = cell;
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        box.appendChild(table);
+      }
+      if (pc.tip) box.appendChild(el('p', 'grammar-callout', '💡 Tip: ' + pc.tip));
+      if (pc.exampleGroups && pc.exampleGroups.length) {
+        box.appendChild(el('h4', 'grammar-subhead', 'Examples'));
+        pc.exampleGroups.forEach(function (grp) {
+          box.appendChild(el('p', 'example-group-title', grp.heading));
+          box.appendChild(renderExampleLines(grp.lines));
+        });
+      }
+      if (pc.specialRule) {
+        box.appendChild(el('h4', 'grammar-subhead', pc.specialRule.heading));
+        if (pc.specialRule.text) box.appendChild(el('p', 'ex-instruction', pc.specialRule.text));
+        (pc.specialRule.examples || []).forEach(function (ex) {
+          box.appendChild(renderExampleLines(ex.lines));
+          if (ex.note) box.appendChild(el('p', 'grammar-note', ex.note));
+        });
+      }
+      if (pc.remember) {
+        box.appendChild(el('h4', 'grammar-subhead', pc.remember.heading));
+        if (pc.remember.text) box.appendChild(el('p', 'ex-instruction', pc.remember.text));
+        if (pc.remember.pairs && pc.remember.pairs.length) {
+          const ul = document.createElement('ul');
+          ul.className = 'grammar-notes';
+          pc.remember.pairs.forEach(function (p) {
+            const li = document.createElement('li');
+            li.textContent = p;
+            ul.appendChild(li);
+          });
+          box.appendChild(ul);
+        }
+        if (pc.remember.footer) box.appendChild(el('p', 'ex-instruction', pc.remember.footer));
+      }
+      if (pc.cultureNote) box.appendChild(el('p', 'grammar-callout', '💡 Culture Note: ' + pc.cultureNote));
+      return box;
+    }
+
+    // ========================================================
+    // NGỮ PHÁP
+    // ========================================================
+    function renderGrammarTab(item) {
+      const panel = document.getElementById('panel-grammar');
+      panel.innerHTML = '';
+      const points = (item.grammar && item.grammar.points) || [];
+      if (!points.length) { panel.appendChild(emptyNote('Ngữ pháp đang được cập nhật.')); return; }
+      points.forEach(function (g) {
+        const box = el('div', 'exercise');
+        if (g.pronounContent) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          box.appendChild(renderPronounContent(g.pronounContent));
+          if (g.quiz && g.quiz.length) {
+            const actions = el('div', 'grammar-actions');
+            const quizBtn = document.createElement('a');
+            quizBtn.className = 'btn-purple';
+            quizBtn.href = 'quiz.html?id=' + encodeURIComponent(itemId) +
+              '&level=' + encodeURIComponent(level) +
+              '&point=' + encodeURIComponent(g.id);
+            quizBtn.textContent = 'Quiz →';
+            actions.appendChild(quizBtn);
+            box.appendChild(actions);
+          }
+          panel.appendChild(box);
+          return;
+        }
+        if (g.pattern) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          box.appendChild(el('div', 'grammar-pattern', g.pattern));
+          if (g.explanation) box.appendChild(el('p', 'ex-instruction', g.explanation));
+          if (g.notes && g.notes.length) {
+            const ul = document.createElement('ul');
+            ul.className = 'grammar-notes';
+            g.notes.forEach(function (n) {
+              const li = document.createElement('li');
+              li.textContent = n;
+              ul.appendChild(li);
+            });
+            box.appendChild(ul);
+          }
+          if (g.examples && g.examples.length) {
+            box.appendChild(makeToggleSection('Ví dụ', function () {
+              const wrap = el('div', 'grammar-examples');
+              g.examples.forEach(function (ex) {
+                const row = el('div', 'example');
+                if (typeof ex === 'string') {
+                  row.appendChild(el('div', 'ex-vi', ex));
+                } else {
+                  row.appendChild(el('div', 'ex-vi', ex.vi));
+                  if (ex.en) row.appendChild(el('div', 'ex-en', ex.en));
+                }
+                wrap.appendChild(row);
+              });
+              return wrap;
+            }));
+          }
+          if (g.quiz && g.quiz.length) {
+            box.appendChild(makeToggleSection('Quiz nhỏ', function () {
+              const wrap = el('div');
+              g.quiz.forEach(function (q, idx) {
+                const qBox = el('div', 'reasoning-item');
+                qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
+                const optWrap = el('div', 'quiz-options');
+                (q.options || []).forEach(function (opt) {
+                  const obtn = el('button', 'quiz-option', opt);
+                  obtn.type = 'button';
+                  obtn.addEventListener('click', function () {
+                    const ok = opt === q.answer;
+                    Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+                    obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+                    if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+                  });
+                  optWrap.appendChild(obtn);
+                });
+                qBox.appendChild(optWrap);
+                wrap.appendChild(qBox);
+              });
+              return wrap;
+            }));
+          }
+          panel.appendChild(box);
+          return;
+        }
+        if (g.refInput) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          const actions = el('div', 'grammar-actions');
+          const readBtn = document.createElement('a');
+          readBtn.className = 'btn-purple';
+          readBtn.href = 'input.html?id=' + encodeURIComponent(g.refInput) +
+            '&level=' + encodeURIComponent(level) +
+            '&lesson=' + encodeURIComponent(itemId) +
+            '&point=' + encodeURIComponent(g.id);
+          readBtn.textContent = 'Đọc →';
+          actions.appendChild(readBtn);
+          if (g.quiz && g.quiz.length) {
+            const quizBtn = document.createElement('a');
+            quizBtn.className = 'btn-purple';
+            quizBtn.href = 'quiz.html?id=' + encodeURIComponent(itemId) +
+              '&level=' + encodeURIComponent(level) +
+              '&point=' + encodeURIComponent(g.id);
+            quizBtn.textContent = 'Quiz →';
+            actions.appendChild(quizBtn);
+          }
+          box.appendChild(actions);
+          panel.appendChild(box);
+          return;
+        }
+        const headRow = el('div', 'grammar-head');
+        headRow.appendChild(el('h3', 'ex-title', g.title));
+        box.appendChild(headRow);
+        if (g.explanation) box.appendChild(el('p', 'ex-instruction', g.explanation));
+        (g.examples || []).forEach(function (ex) {
+          const row = el('div', 'turn');
+          row.appendChild(el('span', 'turn-text', ex));
+          box.appendChild(row);
+        });
+        panel.appendChild(box);
+      });
+    }
+
+    // ========================================================
+    // NGHE
+    // ========================================================
+    // ---------- Stepper dùng chung: hiện từng bước một, Tiếp mới qua bước sau ----------
+    function buildStepper(container, steps, renderStepFn, opts) {
+      opts = opts || {};
+      let i = 0;
+      const stage = el('div', opts.stageClass || '');
+      const dots = el('div', 'step-dots');
+      const nav = el('div', 'step-nav');
+      container.appendChild(stage);
+      container.appendChild(dots);
+      container.appendChild(nav);
+
+      function draw() {
+        stage.innerHTML = '';
+        stage.appendChild(renderStepFn(steps[i], i));
+
+        dots.innerHTML = '';
+        steps.forEach(function (_, idx) { dots.appendChild(el('span', 'step-dot' + (idx === i ? ' active' : ''))); });
+
+        nav.innerHTML = '';
+        const isLast = i >= steps.length - 1;
+        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        prev.style.visibility = i === 0 ? 'hidden' : 'visible';
+        prev.addEventListener('click', function () { i--; draw(); });
+        const next = el('button', 'btn-check', isLast ? (opts.lastLabel || 'Hoàn tất ✓') : 'Tiếp →'); next.type = 'button';
+        next.addEventListener('click', function () {
+          if (!isLast) { i++; draw(); }
+          else if (opts.onFinish) { opts.onFinish(); }
+        });
+        nav.appendChild(prev); nav.appendChild(next);
+      }
+      draw();
+    }
+
+    function renderDictationLine(line) {
+      const wrap = el('div', 'dictation-item');
+      const row = el('div', 'listen-row');
+      row.appendChild(playBtn(line.audio));
+      const resultSlot = el('span', 'result-slot');
+      row.appendChild(resultSlot);
+      wrap.appendChild(row);
+
+      const bankWords = line.wordBank || [];
+      const built = el('div', 'scramble-built');
+      const bank = el('div', 'scramble-bank');
+      const displayOrder = shuffle(bankWords.map(function (_, i) { return i; }));
+      let chosen = [];
+
+      function refreshBuilt() {
+        built.innerHTML = '';
+        if (!chosen.length) {
+          built.appendChild(el('span', 'dictation-placeholder', 'Bấm vào từ bên dưới để ghép câu…'));
+        }
+        chosen.forEach(function (idx) {
+          const chip = el('span', 'chip chip-placed', bankWords[idx]);
+          chip.addEventListener('click', function () {
+            chosen = chosen.filter(function (i) { return i !== idx; });
+            refreshBuilt(); refreshBank();
+          });
+          built.appendChild(chip);
+        });
+      }
+      function refreshBank() {
+        bank.innerHTML = '';
+        displayOrder.forEach(function (idx) {
+          if (chosen.indexOf(idx) !== -1) return;
+          const chip = el('span', 'chip chip-pickable', bankWords[idx]);
+          chip.addEventListener('click', function () {
+            chosen.push(idx);
+            refreshBuilt(); refreshBank();
+          });
+          bank.appendChild(chip);
+        });
+      }
+      refreshBuilt(); refreshBank();
+      wrap.appendChild(built);
+      if (bankWords.length) wrap.appendChild(bank);
+
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        const builtStr = chosen.map(function (i) { return bankWords[i]; }).join(' ');
+        const ok = norm(builtStr) === norm(line.text);
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+        if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + line.text + ')'));
+      });
+      wrap.appendChild(checkBtn);
+      return wrap;
+    }
+
+    function renderListeningTab(item) {
+      const panel = document.getElementById('panel-listening');
+      panel.innerHTML = '';
+      const listening = item.listening || {};
+      const groups = listening.groups || [];
+      const entries = listening.items || [];
+      const numberFill = listening.numberFill;
+      const hasNumberFill = numberFill && numberFill.items && numberFill.items.length;
+      const dialogueFill = listening.dialogueFill;
+      const hasDialogueFill = dialogueFill && dialogueFill.lines && dialogueFill.lines.length;
+      if (!groups.length && !entries.length && !hasNumberFill && !hasDialogueFill) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
+      if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
+
+      // Điền từ vào chỗ trống (word bank)
+      if (hasDialogueFill) {
+        panel.appendChild(renderDialogueFill(Object.assign({ title: 'Điền từ vào chỗ trống' }, dialogueFill)));
+      }
+
+      // Điền số vào chỗ trống bằng bàn phím số
+      if (hasNumberFill) {
+        panel.appendChild(renderNumberFillListening(numberFill));
+      }
+
+      // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank — hiện từng đoạn 1, xong mới qua đoạn sau
+      if (groups.length) {
+        const wrap = el('div', 'exercise');
+        buildStepper(wrap, groups, function (g, gi) {
+          const box = el('div');
+          box.appendChild(el('h3', 'ex-title', g.title || ('Đoạn hội thoại ' + (gi + 1))));
+          (g.lines || []).forEach(function (line) { box.appendChild(renderDictationLine(line)); });
+          return box;
+        }, { lastLabel: 'Xong bài nghe 🎉' });
+        panel.appendChild(wrap);
+      }
+
+      // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
+      if (entries.length) {
+        const box = el('div', 'exercise');
+        entries.forEach(function (it, i) {
+          const row = el('div', 'listen-row');
+          row.appendChild(playBtn(it.audio));
+          row.appendChild(el('span', 'match-prompt', it.title || ('Đoạn ' + (i + 1))));
+          if (it.transcript) row.appendChild(el('span', 'order-label', it.transcript));
+          box.appendChild(row);
+        });
+        panel.appendChild(box);
+      }
+    }
+
+    // ========================================================
+    // ĐỌC
+    // ========================================================
+    function renderReadingTab(item) {
+      const panel = document.getElementById('panel-reading');
+      panel.innerHTML = '';
+      const passages = (item.reading && item.reading.passages) || [];
+      if (!passages.length) { panel.appendChild(emptyNote('Bài đọc đang được cập nhật.')); return; }
+      passages.forEach(function (p) {
+        const box = el('div', 'exercise reading-passage');
+        const head = el('div', 'dialogue-head');
+        head.appendChild(el('h3', 'ex-title', p.title || ''));
+        box.appendChild(head);
+        if (p.audio) box.appendChild(renderAudioPlayer(p.audio));
+        (String(p.text || '').split(/\n+/)).forEach(function (para) {
+          if (para.trim()) box.appendChild(el('p', 'reading-para', para.trim()));
+        });
+        panel.appendChild(box);
+        if (p.questions && p.questions.length) {
+          panel.appendChild(renderChoiceQuiz({ title: 'Câu hỏi', items: p.questions }));
+        }
+        if (p.textQuestions && p.textQuestions.length) {
+          panel.appendChild(renderTextAnswer({ title: 'Câu hỏi đọc hiểu', items: p.textQuestions }));
+        }
+        if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
+          panel.appendChild(renderFillBlanksText(Object.assign({ title: 'Điền vào chỗ trống' }, p.fillBlanks)));
+        }
+      });
+    }
+
+    // ========================================================
+    // CHUẨN BỊ (pre-class)
+    // ========================================================
+    function renderProfessionsFlow(vp, im, rq) {
+      const wrapper = el('div', 'profession-flow');
+      const stage = el('div', 'exercise');
+      wrapper.appendChild(stage);
+
+      let i = 0;
+      const items = (vp && vp.items) || [];
+
+      function drawPreview() {
+        stage.innerHTML = '';
+        stage.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+        if (vp.instruction) stage.appendChild(el('p', 'ex-instruction', vp.instruction));
+
+        const it = items[i];
+        const card = el('div', 'preview-card');
+        if (it.color) {
+          const sw = el('div', 'preview-swatch');
+          sw.style.background = it.color;
+          card.appendChild(sw);
+        } else {
+          const img = document.createElement('img');
+          img.src = it.image; img.alt = it.word; img.className = 'preview-img';
+          card.appendChild(img);
+        }
+        const wordRow = el('div', 'preview-word-row');
+        wordRow.appendChild(el('span', 'preview-word', it.word));
+        wordRow.appendChild(playBtn(it.audio));
+        card.appendChild(wordRow);
+        stage.appendChild(card);
+
+        const dots = el('div', 'step-dots');
+        items.forEach(function (_, idx) { dots.appendChild(el('span', 'step-dot' + (idx === i ? ' active' : ''))); });
+        stage.appendChild(dots);
+
+        const nav = el('div', 'step-nav');
+        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        prev.style.visibility = i === 0 ? 'hidden' : 'visible';
+        prev.addEventListener('click', function () { i--; drawPreview(); });
+        const isLast = i >= items.length - 1;
+        const next = el('button', 'btn-check', (isLast && im) ? 'Bắt đầu kiểm tra →' : 'Tiếp →'); next.type = 'button';
+        next.addEventListener('click', function () {
+          if (!isLast) { i++; drawPreview(); }
+          else if (im) { drawQuiz(); }
+        });
+        nav.appendChild(prev); nav.appendChild(next);
+        stage.appendChild(nav);
+      }
+
+      function drawQuiz() {
+        stage.innerHTML = '';
+        stage.appendChild(renderImageMatch(im));
+        if (rq) {
+          const nav = el('div', 'step-nav');
+          const back = el('button', 'btn-check btn-secondary', '← Trước'); back.type = 'button';
+          back.addEventListener('click', function () { drawPreview(); });
+          const next = el('button', 'btn-check', 'Tiếp →'); next.type = 'button';
+          next.addEventListener('click', function () { drawReasoning(); });
+          nav.appendChild(back); nav.appendChild(next);
+          stage.appendChild(nav);
+        }
+      }
+
+      function drawReasoning() {
+        stage.innerHTML = '';
+        stage.appendChild(renderReasoningQuiz(rq));
+        const nav = el('div', 'step-nav');
+        const back = el('button', 'btn-check btn-secondary', '← Trước'); back.type = 'button';
+        back.addEventListener('click', function () { drawQuiz(); });
+        nav.appendChild(back);
+        stage.appendChild(nav);
+      }
+
+      if (items.length) drawPreview();
+      else if (im) drawQuiz();
+      else if (rq) drawReasoning();
+      return wrapper;
+    }
+
+    function renderVocabPreview(vp) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+      if (vp.instruction) box.appendChild(el('p', 'ex-instruction', vp.instruction));
+      const grid = el('div', 'image-vocab-grid');
+      (vp.items || []).forEach(function (it) {
+        const card = el('div', 'image-vocab-card');
+        const img = document.createElement('img');
+        img.src = it.image; img.alt = it.word; img.className = 'image-vocab-img';
+        card.appendChild(img);
+        card.appendChild(el('div', 'image-vocab-word', it.word));
+        grid.appendChild(card);
+      });
+      box.appendChild(grid);
+      return box;
+    }
+
+    function renderImageMatch(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const rows = [];
+      (ex.items || []).forEach(function (it) {
+        const row = el('div', 'match-row image-match-row');
+        if (it.color) {
+          const sw = el('span', 'color-swatch');
+          sw.style.background = it.color;
+          row.appendChild(sw);
+        } else {
+          const img = document.createElement('img');
+          img.src = it.image; img.alt = ''; img.className = 'match-img';
+          row.appendChild(img);
+        }
+        const select = document.createElement('select');
+        select.className = 'answer-select';
+        const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+        (ex.answerBank || []).forEach(function (a) { const opt = el('option', null, a); opt.value = a; select.appendChild(opt); });
+        select.dataset.answer = it.answer;
+        row.appendChild(select);
+        const resultSlot = el('span', 'result-slot');
+        row.appendChild(resultSlot);
+        rows.push({ select: select, resultSlot: resultSlot });
+        box.appendChild(row);
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        rows.forEach(function (r) {
+          const ok = r.select.value === r.select.dataset.answer;
+          r.resultSlot.innerHTML = '';
+          r.resultSlot.appendChild(checkRow(ok));
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function personLabel(p) { return p ? p.name + ' (' + p.age + ' tuổi)' : ''; }
+
+    function renderReasoningQuiz(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      (ex.items || []).forEach(function (q) {
+        const qBox = el('div', 'reasoning-item');
+        const head = el('div', 'reasoning-head');
+        if (q.personA && q.personA.image) { const img = document.createElement('img'); img.src = q.personA.image; img.className = 'reasoning-avatar'; head.appendChild(img); }
+        head.appendChild(el('span', 'match-prompt', personLabel(q.personA) + ' gọi ' + personLabel(q.personB) + ' là gì?'));
+        if (q.personB && q.personB.image) { const img2 = document.createElement('img'); img2.src = q.personB.image; img2.className = 'reasoning-avatar'; head.appendChild(img2); }
+        qBox.appendChild(head);
+        const optWrap = el('div', 'quiz-options');
+        const explainSlot = el('p', 'ex-instruction reasoning-explain');
+        (q.options || []).forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            const ok = opt === q.answer;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+          });
+          optWrap.appendChild(btn);
+        });
+        qBox.appendChild(optWrap);
+        qBox.appendChild(explainSlot);
+        box.appendChild(qBox);
+      });
+      return box;
+    }
+
+    function renderPreClassFlow(flow) {
+      const wrapper = el('div', 'profession-flow');
+      if (flow.title) wrapper.appendChild(el('h2', 'preflow-title', flow.title));
+      const stage = el('div', 'exercise');
+      wrapper.appendChild(stage);
+
+      let i = 0;
+      const vp = flow.vocabPreview || {};
+      const items = vp.items || [];
+      const quiz = flow.quiz;
+
+      function drawPreview() {
+        stage.innerHTML = '';
+        stage.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+        if (vp.instruction) stage.appendChild(el('p', 'ex-instruction', vp.instruction));
+
+        const it = items[i];
+        const card = el('div', 'preview-card');
+        if (it.image) {
+          const img = document.createElement('img');
+          img.src = it.image; img.alt = it.word; img.className = 'preview-img';
+          card.appendChild(img);
+        } else if (it.number) {
+          card.appendChild(el('div', 'preview-number', it.number));
+        }
+        const wordRow = el('div', 'preview-word-row');
+        wordRow.appendChild(el('span', 'preview-word', it.word));
+        wordRow.appendChild(playBtn(it.audio));
+        card.appendChild(wordRow);
+        stage.appendChild(card);
+
+        const dots = el('div', 'step-dots');
+        items.forEach(function (_, idx) { dots.appendChild(el('span', 'step-dot' + (idx === i ? ' active' : ''))); });
+        stage.appendChild(dots);
+
+        const nav = el('div', 'step-nav');
+        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        prev.style.visibility = i === 0 ? 'hidden' : 'visible';
+        prev.addEventListener('click', function () { i--; drawPreview(); });
+        const isLast = i >= items.length - 1;
+        const label = (isLast && quiz) ? 'Bắt đầu kiểm tra →' : (isLast ? 'Hoàn tất ✓' : 'Tiếp →');
+        const next = el('button', 'btn-check', label); next.type = 'button';
+        if (isLast && !quiz) next.disabled = true;
+        next.addEventListener('click', function () {
+          if (!isLast) { i++; drawPreview(); }
+          else if (quiz) { drawQuiz(); }
+        });
+        nav.appendChild(prev); nav.appendChild(next);
+        stage.appendChild(nav);
+      }
+
+      function drawQuiz() {
+        stage.innerHTML = '';
+        stage.appendChild(quiz.type === 'text_answer' ? renderTextAnswer(quiz) : renderChoiceQuiz(quiz));
+        if (items.length) {
+          const nav = el('div', 'step-nav');
+          const back = el('button', 'btn-check btn-secondary', '← Xem lại từ vựng'); back.type = 'button';
+          back.addEventListener('click', function () { i = 0; drawPreview(); });
+          nav.appendChild(back);
+          stage.appendChild(nav);
+        }
+      }
+
+      if (items.length) drawPreview();
+      else if (quiz) drawQuiz();
+      return wrapper;
+    }
+
+    function renderPreClassTab(item) {
+      const panel = document.getElementById('panel-preclass');
+      panel.innerHTML = '';
+      const pre = item.preClass || {};
+      const dialogues = pre.dialogues || [];
+      const flows = pre.flows || [];
+      const hasLegacyFlow = pre.vocabPreview || pre.imageMatch || pre.reasoningQuiz;
+      const hasNew = hasLegacyFlow || flows.length;
+      if (pre.note) panel.appendChild(el('p', 'note', pre.note));
+      if (!dialogues.length && !hasNew) {
+        if (!pre.note) panel.appendChild(emptyNote('Nội dung chuẩn bị trước buổi học đang được cập nhật.'));
+        return;
+      }
+
+      if (flows.length) {
+        flows.forEach(function (flow) { panel.appendChild(renderPreClassFlow(flow)); });
+      } else if (hasLegacyFlow) {
+        panel.appendChild(renderProfessionsFlow(pre.vocabPreview, pre.imageMatch, pre.reasoningQuiz));
+      }
+
+      if (dialogues.length) {
+        const box = el('div', 'exercise');
+        box.appendChild(el('h3', 'ex-title', 'Nghe trước ở nhà'));
+        dialogues.forEach(function (d) {
+          const dbox = el('div', 'dialogue');
+          const head = el('div', 'dialogue-head');
+          head.appendChild(playBtn(d.audio));
+          head.appendChild(el('span', 'dialogue-label', 'Nghe cả đoạn'));
+          dbox.appendChild(head);
+          (d.turns || []).forEach(function (t) {
+            const row = el('div', 'turn');
+            row.appendChild(el('span', 'turn-speaker', t.speaker + ':'));
+            row.appendChild(el('span', 'turn-text', t.text));
+            dbox.appendChild(row);
+          });
+          box.appendChild(dbox);
+        });
+        panel.appendChild(box);
+      }
+    }
+
+    // ========================================================
+    // ÔN TẬP (post-class) — tái dùng bộ renderer bài tập
+    // ========================================================
+    function checkRow(ok) { return el('span', 'result ' + (ok ? 'result-ok' : 'result-bad'), ok ? '✓' : '✗'); }
+
+    function renderMatching(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const groups = ex.groups || [{ label: null, prompts: ex.prompts || [] }];
+      const selects = [];
+      groups.forEach(function (g) {
+        if (g.label) box.appendChild(el('h4', 'group-label', g.label));
+        (g.prompts || []).forEach(function (p) {
+          const row = el('div', 'match-row');
+          row.appendChild(el('span', 'match-prompt', p.text));
+          const select = document.createElement('select');
+          select.className = 'answer-select';
+          const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+          ex.answerBank.forEach(function (a) {
+            const opt = el('option', null, a.text); opt.value = a.id; select.appendChild(opt);
+          });
+          select.dataset.answer = p.answer;
+          row.appendChild(select);
+          const resultSlot = el('span', 'result-slot');
+          row.appendChild(resultSlot);
+          row._resultSlot = resultSlot; row._select = select;
+          selects.push(row);
+          box.appendChild(row);
+        });
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        selects.forEach(function (row) {
+          const ok = row._select.value === row._select.dataset.answer;
+          row._resultSlot.innerHTML = '';
+          row._resultSlot.appendChild(checkRow(ok));
+          if (!ok) {
+            const correctText = ex.answerBank.find(function (a) { return a.id === row._select.dataset.answer; });
+            row._resultSlot.appendChild(el('span', 'correct-hint', correctText ? ' (' + correctText.text + ')' : ''));
+          }
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function renderRimeTableFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const allInputs = [];
+      (ex.groups || []).forEach(function (g) {
+        const row = el('div', 'rime-row');
+        (g.given || []).forEach(function (w) { row.appendChild(el('span', 'chip chip-given', w)); });
+        const groupInputs = [];
+        for (let i = 0; i < g.blanks; i++) {
+          const input = document.createElement('input');
+          input.type = 'text'; input.className = 'blank-input';
+          input.dataset.answer = g.answers[i];
+          row.appendChild(input);
+          groupInputs.push(input);
+        }
+        allInputs.push.apply(allInputs, groupInputs);
+        box.appendChild(row);
+      });
+      if (ex.wordBank) {
+        const bank = el('div', 'word-bank');
+        bank.appendChild(el('span', 'word-bank-label', 'Ngân hàng từ: '));
+        ex.wordBank.forEach(function (w) { bank.appendChild(el('span', 'chip chip-bank', w)); });
+        box.appendChild(bank);
+      }
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        allInputs.forEach(function (input) {
+          const ok = norm(input.value) === norm(input.dataset.answer);
+          input.classList.remove('input-ok', 'input-bad');
+          input.classList.add(ok ? 'input-ok' : 'input-bad');
+          if (!ok) input.title = 'Đáp án: ' + input.dataset.answer;
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function renderSort(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      let selectedChip = null;
+      const assignment = {};
+      const bank = el('div', 'word-bank');
+      const chipEls = {};
+      ex.wordBank.forEach(function (w) {
+        const chip = el('span', 'chip chip-pickable', w);
+        chip.addEventListener('click', function () {
+          if (chip.classList.contains('chip-used')) return;
+          if (selectedChip) selectedChip.classList.remove('chip-selected');
+          selectedChip = chip;
+          chip.classList.add('chip-selected');
+        });
+        chipEls[w] = chip;
+        bank.appendChild(chip);
+      });
+      box.appendChild(bank);
+      const catsWrap = el('div', 'sort-cats');
+      (ex.categories || []).forEach(function (cat) {
+        const catBox = el('div', 'sort-cat');
+        catBox.appendChild(el('h4', 'group-label', cat.label));
+        if (cat.example) catBox.appendChild(el('span', 'chip chip-given', cat.example));
+        const dropZone = el('div', 'sort-dropzone');
+        catBox.appendChild(dropZone);
+        catBox.addEventListener('click', function () {
+          if (!selectedChip) return;
+          const word = selectedChip.textContent;
+          selectedChip.classList.add('chip-used');
+          selectedChip.classList.remove('chip-selected');
+          assignment[word] = cat.id;
+          dropZone.appendChild(el('span', 'chip chip-placed', word));
+          selectedChip = null;
+        });
+        catsWrap.appendChild(catBox);
+      });
+      box.appendChild(catsWrap);
+      const resetBtn = el('button', 'btn-check btn-secondary', 'Làm lại'); resetBtn.type = 'button';
+      resetBtn.addEventListener('click', function () {
+        Object.keys(assignment).forEach(function (k) { delete assignment[k]; });
+        catsWrap.querySelectorAll('.sort-dropzone').forEach(function (z) { z.innerHTML = ''; });
+        Object.values(chipEls).forEach(function (c) { c.classList.remove('chip-used', 'chip-selected'); });
+        selectedChip = null;
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const resultLine = el('p', 'ex-instruction');
+      checkBtn.addEventListener('click', function () {
+        let correct = 0, total = 0;
+        (ex.categories || []).forEach(function (cat) {
+          (cat.answers || []).forEach(function (w) { total++; if (assignment[w] === cat.id) correct++; });
+        });
+        resultLine.textContent = 'Đúng ' + correct + '/' + total + '.';
+      });
+      box.appendChild(checkBtn); box.appendChild(resetBtn); box.appendChild(resultLine);
+      return box;
+    }
+
+    function renderScramble(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      (ex.items || []).forEach(function (item) {
+        const itemBox = el('div', 'scramble-item');
+        itemBox.appendChild(el('p', 'match-prompt', item.prompt));
+        const built = el('div', 'scramble-built');
+        const bank = el('div', 'scramble-bank');
+        let order = [];
+        function refreshBuilt() {
+          built.innerHTML = '';
+          order.forEach(function (idx) {
+            const chip = el('span', 'chip chip-placed', item.tokens[idx]);
+            chip.addEventListener('click', function () {
+              order = order.filter(function (i) { return i !== idx; });
+              refreshBuilt(); refreshBank();
+            });
+            built.appendChild(chip);
+          });
+        }
+        function refreshBank() {
+          bank.innerHTML = '';
+          item.tokens.forEach(function (tok, idx) {
+            if (order.indexOf(idx) !== -1) return;
+            const chip = el('span', 'chip chip-pickable', tok);
+            chip.addEventListener('click', function () { order.push(idx); refreshBuilt(); refreshBank(); });
+            bank.appendChild(chip);
+          });
+        }
+        refreshBuilt(); refreshBank();
+        itemBox.appendChild(built); itemBox.appendChild(bank);
+        const resultSlot = el('span', 'result-slot');
+        const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+        checkBtn.addEventListener('click', function () {
+          const builtStr = order.map(function (i) { return item.tokens[i]; }).join(' ');
+          const ok = norm(builtStr) === norm(item.answer);
+          resultSlot.innerHTML = '';
+          resultSlot.appendChild(checkRow(ok));
+          if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+        });
+        itemBox.appendChild(checkBtn); itemBox.appendChild(resultSlot);
+        box.appendChild(itemBox);
+      });
+      return box;
+    }
+
+    function renderListenOrderFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const rows = [];
+      (ex.items || []).forEach(function (item) {
+        const row = el('div', 'listen-row');
+        row.appendChild(playBtn(item.audio));
+        row.appendChild(el('span', 'match-prompt', item.place));
+        const parts = (item.template || '').split('___');
+        row.appendChild(el('span', null, parts[0]));
+        const numInput = document.createElement('input');
+        numInput.type = 'text'; numInput.className = 'blank-input blank-input-sm';
+        numInput.dataset.answer = item.answer;
+        row.appendChild(numInput);
+        row.appendChild(el('span', null, parts[1] || ''));
+        row.appendChild(el('span', 'order-label', ' — thứ tự nghe:'));
+        const orderInput = document.createElement('input');
+        orderInput.type = 'text'; orderInput.className = 'blank-input blank-input-sm';
+        orderInput.dataset.answer = String(item.order);
+        row.appendChild(orderInput);
+        const resultSlot = el('span', 'result-slot');
+        row.appendChild(resultSlot);
+        rows.push({ numInput: numInput, orderInput: orderInput, resultSlot: resultSlot });
+        box.appendChild(row);
+      });
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        rows.forEach(function (r) {
+          const ok = norm(r.numInput.value) === norm(r.numInput.dataset.answer) &&
+                     norm(r.orderInput.value) === norm(r.orderInput.dataset.answer);
+          r.resultSlot.innerHTML = '';
+          r.resultSlot.appendChild(checkRow(ok));
+        });
+      });
+      box.appendChild(checkBtn);
+      return box;
+    }
+
+    function renderChoiceContext(text) {
+      const wrap = el('div', 'choice-context');
+      (String(text || '').split(/\n+/)).forEach(function (line) {
+        if (line.trim()) wrap.appendChild(el('p', 'choice-line', line.trim()));
+      });
+      return wrap;
+    }
+
+    function renderChoiceQuiz(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      if (ex.image) { const img = document.createElement('img'); img.src = ex.image; img.className = 'choice-quiz-shared-img'; box.appendChild(img); }
+      (ex.items || []).forEach(function (q) {
+        const qBox = el('div', 'reasoning-item');
+        if (q.image) { const img = document.createElement('img'); img.src = q.image; img.className = 'choice-quiz-img'; qBox.appendChild(img); }
+        if (q.context) qBox.appendChild(renderChoiceContext(q.context));
+        const optWrap = el('div', 'quiz-options');
+        const explainSlot = el('p', 'ex-instruction reasoning-explain');
+        (q.options || []).forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            const ok = opt === q.answer;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) {
+              Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+            }
+            explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+          });
+          optWrap.appendChild(btn);
+        });
+        qBox.appendChild(optWrap);
+        qBox.appendChild(explainSlot);
+        box.appendChild(qBox);
+      });
+      return box;
+    }
+
+    function renderDialogueFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      if (ex.wordBank && ex.wordBank.length) {
+        const bankRow = el('div', 'scramble-bank');
+        ex.wordBank.forEach(function (w) { bankRow.appendChild(el('span', 'chip chip-given', w)); });
+        box.appendChild(bankRow);
+      }
+      const selects = [];
+      (ex.lines || []).forEach(function (line) {
+        const row = el('div', 'turn dialogue-fill-line');
+        if (line.speaker) row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
+        const textSpan = el('span', 'turn-text');
+        (line.parts || []).forEach(function (part) {
+          if (typeof part === 'string') {
+            textSpan.appendChild(document.createTextNode(part));
+          } else if (part && part.blank) {
+            const select = document.createElement('select');
+            select.className = 'answer-select blank-select';
+            const optEmpty = el('option', null, '…'); optEmpty.value = ''; select.appendChild(optEmpty);
+            (ex.wordBank || []).forEach(function (w) { const opt = el('option', null, w); opt.value = w; select.appendChild(opt); });
+            select.dataset.answer = part.blank;
+            selects.push(select);
+            textSpan.appendChild(select);
+          }
+        });
+        row.appendChild(textSpan);
+        box.appendChild(row);
+      });
+      const resultSlot = el('span', 'result-slot dialogue-fill-result');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        let allOk = true;
+        selects.forEach(function (s) {
+          const ok = s.value === s.dataset.answer;
+          if (!ok) allOk = false;
+          s.classList.toggle('select-wrong', s.value !== '' && !ok);
+          s.classList.toggle('select-ok', ok);
+        });
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(allOk));
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resultSlot);
+      return box;
+    }
+
+    function renderFillBlanksText(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const inputs = [];
+      (ex.lines || []).forEach(function (line) {
+        const row = el('div', 'turn dialogue-fill-line');
+        if (line.speaker) row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
+        const textSpan = el('span', 'turn-text');
+        (line.parts || []).forEach(function (part) {
+          if (typeof part === 'string') {
+            textSpan.appendChild(document.createTextNode(part));
+          } else if (part && part.blank) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'blank-input fill-blank-input';
+            const accepted = Array.isArray(part.blank) ? part.blank : [part.blank];
+            inputs.push({ input: input, accepted: accepted });
+            textSpan.appendChild(input);
+          }
+        });
+        row.appendChild(textSpan);
+        box.appendChild(row);
+      });
+      const resultSlot = el('span', 'result-slot dialogue-fill-result');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        let allOk = true;
+        inputs.forEach(function (pair) {
+          const inp = pair.input;
+          const val = norm(inp.value);
+          const ok = pair.accepted.some(function (a) { return norm(a) === val; });
+          if (!ok) allOk = false;
+          inp.classList.toggle('select-wrong', inp.value !== '' && !ok);
+          inp.classList.toggle('select-ok', ok);
+        });
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(allOk));
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resultSlot);
+      return box;
+    }
+
+    function renderKeypad(onDigit, onBackspace) {
+      const pad = el('div', 'number-keypad');
+      ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].forEach(function (d) {
+        const b = el('button', 'key-btn', d); b.type = 'button';
+        b.addEventListener('click', function () { onDigit(d); });
+        pad.appendChild(b);
+      });
+      const back = el('button', 'key-btn key-back', '⌫'); back.type = 'button';
+      back.addEventListener('click', onBackspace);
+      pad.appendChild(back);
+      return pad;
+    }
+
+    function renderNumberFillItem(item, withAudio) {
+      const wrap = el('div', 'text-answer-item number-fill-item');
+      if (withAudio) {
+        const row = el('div', 'listen-row');
+        if (item.audio) row.appendChild(playBtn(item.audio));
+        row.appendChild(el('span', 'match-prompt', item.context));
+        wrap.appendChild(row);
+      } else {
+        wrap.appendChild(el('p', 'match-prompt', item.prompt));
+      }
+      const display = el('div', 'number-display', '—');
+      wrap.appendChild(display);
+      let val = '';
+      function updateDisplay() { display.textContent = val || '—'; }
+      const pad = renderKeypad(
+        function (d) { val += d; updateDisplay(); },
+        function () { val = val.slice(0, -1); updateDisplay(); }
+      );
+      wrap.appendChild(pad);
+      const resultSlot = el('span', 'result-slot');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        const ok = val.replace(/\D/g, '') === String(item.answer).replace(/\D/g, '');
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+        if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+      });
+      wrap.appendChild(checkBtn); wrap.appendChild(resultSlot);
+      return wrap;
+    }
+
+    function renderNumberFillListening(nf) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', nf.title || 'Điền số vào chỗ trống'));
+      if (nf.instruction) box.appendChild(el('p', 'ex-instruction', nf.instruction));
+      (nf.items || []).forEach(function (item) { box.appendChild(renderNumberFillItem(item, true)); });
+      return box;
+    }
+
+    function renderNumberFillExercise(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      (ex.items || []).forEach(function (item) { box.appendChild(renderNumberFillItem(item, false)); });
+      return box;
+    }
+
+    function renderDialogueOrder(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const turns = ex.turns || [];
+      function turnLabel(t) { return t.speaker + ': ' + t.text; }
+
+      box.appendChild(el('p', 'ex-instruction', 'Đã sắp xếp:'));
+      const built = el('div', 'dialogue-order-built');
+      box.appendChild(built);
+      box.appendChild(el('p', 'ex-instruction', 'Bấm theo đúng thứ tự:'));
+      const bank = el('div', 'dialogue-order-bank');
+      box.appendChild(bank);
+
+      let order = [];
+      const shuffled = shuffle(turns.map(function (_, i) { return i; }));
+
+      function refreshBuilt() {
+        built.innerHTML = '';
+        order.forEach(function (idx, pos) {
+          const row = el('div', 'dialogue-order-item placed');
+          row.appendChild(el('span', 'order-num', String(pos + 1) + '.'));
+          row.appendChild(el('span', 'order-text', turnLabel(turns[idx])));
+          row.addEventListener('click', function () {
+            order = order.filter(function (i) { return i !== idx; });
+            refreshBuilt(); refreshBank();
+          });
+          built.appendChild(row);
+        });
+      }
+      function refreshBank() {
+        bank.innerHTML = '';
+        shuffled.forEach(function (idx) {
+          if (order.indexOf(idx) !== -1) return;
+          const row = el('div', 'dialogue-order-item pickable');
+          row.appendChild(el('span', 'order-text', turnLabel(turns[idx])));
+          row.addEventListener('click', function () { order.push(idx); refreshBuilt(); refreshBank(); });
+          bank.appendChild(row);
+        });
+      }
+      refreshBuilt(); refreshBank();
+
+      const resultSlot = el('span', 'result-slot');
+      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        const ok = order.length === turns.length && order.every(function (idx, pos) { return idx === pos; });
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resultSlot);
+      return box;
+    }
+
+    function renderTextAnswer(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      var activeInput = null;
+      if (ex.wordBank && ex.wordBank.length) {
+        const bankRow = el('div', 'scramble-bank');
+        ex.wordBank.forEach(function (w) {
+          const chip = el('span', 'chip chip-pickable', w);
+          chip.addEventListener('click', function () {
+            const target = activeInput || box.querySelector('.text-answer-input');
+            if (!target) return;
+            target.value = (target.value ? target.value + ' ' : '') + w;
+            target.focus();
+          });
+          bankRow.appendChild(chip);
+        });
+        box.appendChild(bankRow);
+      }
+      (ex.items || []).forEach(function (item) {
+        const row = el('div', 'text-answer-item');
+        row.appendChild(el('p', 'match-prompt', item.prompt));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'blank-input text-answer-input';
+        input.placeholder = 'Viết bằng chữ…';
+        input.addEventListener('focus', function () { activeInput = input; });
+        if (item.wordBank && item.wordBank.length) {
+          const itemBank = el('div', 'scramble-bank');
+          item.wordBank.forEach(function (w) {
+            const chip = el('span', 'chip chip-pickable', w);
+            chip.addEventListener('click', function () {
+              input.value = (input.value ? input.value + ' ' : '') + w;
+              input.focus();
+            });
+            itemBank.appendChild(chip);
+          });
+          row.appendChild(itemBank);
+        }
+        row.appendChild(input);
+        const resultSlot = el('span', 'result-slot');
+        const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+        checkBtn.addEventListener('click', function () {
+          const ok = norm(input.value) === norm(item.answer);
+          resultSlot.innerHTML = '';
+          resultSlot.appendChild(checkRow(ok));
+          if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+        });
+        row.appendChild(checkBtn); row.appendChild(resultSlot);
+        box.appendChild(row);
+      });
+      return box;
+    }
+
+    const EX_RENDERERS = {
+      matching: renderMatching,
+      rime_table_fill: renderRimeTableFill,
+      sort: renderSort,
+      scramble: renderScramble,
+      listen_order_fill: renderListenOrderFill,
+      choice: renderChoiceQuiz,
+      dialogue_fill: renderDialogueFill,
+      text_answer: renderTextAnswer,
+      number_fill: renderNumberFillExercise,
+      dialogue_order: renderDialogueOrder
+    };
+
+    function renderPostClassTab(item) {
+      const panel = document.getElementById('panel-postclass');
+      panel.innerHTML = '';
+      const post = item.postClass || {};
+      if (post.reviewNote) panel.appendChild(el('p', 'note', post.reviewNote));
+      const exercises = post.exercises || [];
+      if (!exercises.length) {
+        if (!post.reviewNote) panel.appendChild(emptyNote('Bài ôn tập đang được cập nhật.'));
+        return;
+      }
+      const wrap = el('div', 'postclass-wrap');
+      buildStepper(wrap, exercises, function (ex) {
+        const renderer = EX_RENDERERS[ex.type];
+        return renderer ? renderer(ex) : emptyNote('Chưa hỗ trợ loại bài tập: ' + ex.type);
+      }, { lastLabel: 'Xong bài ôn tập 🎉' });
+      panel.appendChild(wrap);
+    }
+
+    // ========================================================
+    // Badge số liệu đầu trang
+    // ========================================================
+    function renderMetaBadges(item) {
+      const wrap = document.getElementById('meta-badges');
+      wrap.innerHTML = '';
+      const counts = [
+        ['🔤', ((item.vocab && item.vocab.items) || []).length + ' từ'],
+        ['📖', ((item.grammar && item.grammar.points) || []).length + ' ngữ pháp'],
+        ['🎧', ((item.listening && item.listening.items) || []).length + ' bài nghe'],
+        ['📄', ((item.reading && item.reading.passages) || []).length + ' bài đọc']
+      ];
+      counts.forEach(function (c) {
+        wrap.appendChild(el('span', 'meta-badge', c[0] + ' ' + c[1]));
+      });
+    }
+
+    // ---------- Load ----------
+    (async function () {
+      $backLink.href = 'lessons.html?level=' + encodeURIComponent(level);
+
+      try {
+        const res = await fetch(level + '/items/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+
+        document.title = (item.title || itemId) + ' — hoc voi hanh';
+        $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
+
+        renderMetaBadges(item);
+        renderVocabTab(item);
+        renderGrammarTab(item);
+        renderListeningTab(item);
+        renderReadingTab(item);
+        renderPreClassTab(item);
+        renderPostClassTab(item);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Không tải được bài học';
+        document.getElementById('panel-vocab').innerHTML = '<p class="note">Không tìm thấy file bài học. Kiểm tra đường dẫn <code>' + level + '/items/' + itemId + '.json</code>.</p>';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
     })();
   </script>
   <script src="pomodoro.js" defer></script>
