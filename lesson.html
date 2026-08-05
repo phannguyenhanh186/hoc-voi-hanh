@@ -173,14 +173,28 @@
     }
 
     // ---------- Tabs ----------
+    const tabMemoKey = 'lastTab:' + level + ':' + itemId;
+    function setActiveTab(tab) {
+      if (PANELS.indexOf(tab) === -1) return;
+      document.querySelectorAll('#tabs .tab-btn').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.tab === tab);
+      });
+      PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = (p !== tab); });
+    }
     $tabs.addEventListener('click', function (e) {
       const btn = e.target.closest('.tab-btn');
       if (!btn) return;
-      document.querySelectorAll('#tabs .tab-btn').forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
       const tab = btn.dataset.tab;
-      PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = (p !== tab); });
+      setActiveTab(tab);
+      try { sessionStorage.setItem(tabMemoKey, tab); } catch (e) {}
     });
+    (function () {
+      let initialTab = params.get('tab');
+      if (!initialTab) {
+        try { initialTab = sessionStorage.getItem(tabMemoKey); } catch (e) {}
+      }
+      if (initialTab && initialTab !== 'vocab') setActiveTab(initialTab);
+    })();
 
     // ========================================================
     // TỪ VỰNG — Danh sách / Flashcards / Trắc nghiệm
@@ -507,7 +521,7 @@
             }));
           }
           if (g.quiz && g.quiz.length) {
-            box.appendChild(makeToggleSection('Quiz nhỏ', function () {
+            box.appendChild(makeToggleSection('Small quiz', function () {
               const wrap = el('div');
               g.quiz.forEach(function (q, idx) {
                 const qBox = el('div', 'reasoning-item');
