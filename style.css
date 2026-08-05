@@ -815,7 +815,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   padding: 10px 14px; margin: 12px 0; font-size: .95rem;
 }
 .grammar-subhead { font-family: var(--font-display); font-size: 1.05rem; margin: 18px 0 6px; }
-.example-group-title { font-weight: 700; margin: 10px 0 4px; color: var(--muted); }
+.example-group-title { font-weight: 700; margin: 10px 0 4px; color: var(--accent-deep); }
 .grammar-note { color: var(--muted); font-size: .9rem; font-style: italic; margin: 4px 0 12px; }
 .toggle-section { margin-top: 12px; }
 .toggle-btn {
