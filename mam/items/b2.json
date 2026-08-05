@@ -214,42 +214,127 @@
     "points": [
       {
         "id": "g1",
-        "title": "[Chủ ngữ] + thích + [Danh từ] / [Động từ]",
+        "title": "Nói về điều mình thích",
+        "pattern": "[Chủ ngữ] + thích + [Danh từ] / [Động từ]",
         "explanation": "Dùng 'thích' để nói mình yêu thích một thứ gì đó hoặc thích làm một việc gì đó.",
+        "notes": [
+          "Nếu thích một thứ, dùng danh từ.",
+          "Nếu thích làm gì đó, dùng động từ."
+        ],
         "examples": [
-          "Minh thích cà phê sữa.",
-          "Anh thích ăn bánh mì Việt Nam.",
-          "Chị Linh thích đi chơi ở Sài Gòn."
+          { "vi": "Minh thích cà phê sữa.", "en": "Minh likes milk coffee." },
+          { "vi": "Anh thích ăn bánh mì Việt Nam.", "en": "He likes eating Vietnamese bánh mì." },
+          { "vi": "Chị Linh thích đi chơi ở Sài Gòn.", "en": "Linh likes going out in Saigon." }
+        ],
+        "quiz": [
+          {
+            "question": "Câu nào có nghĩa là \"I like coffee\"?",
+            "options": ["Mình không thích cà phê.", "Mình thích cà phê.", "Mình thích gì?"],
+            "answer": "Mình thích cà phê."
+          },
+          {
+            "question": "Từ nào có nghĩa là \"like\"?",
+            "options": ["không", "thích", "ăn"],
+            "answer": "thích"
+          },
+          {
+            "question": "Điền vào chỗ trống: Anh ______ đi chơi.",
+            "options": ["thích", "không", "gì"],
+            "answer": "thích"
+          }
         ]
       },
       {
         "id": "g2",
-        "title": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ]",
+        "title": "Nói về điều mình không thích",
+        "pattern": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ]",
         "explanation": "Thêm 'không' trước 'thích' để nói mình không yêu thích một thứ gì đó hoặc không thích làm một việc gì đó.",
+        "notes": [],
         "examples": [
-          "Em không thích rau.",
-          "Chị ấy không thích dọn nhà.",
-          "Mẹ của mình không thích coi tivi."
+          { "vi": "Em không thích rau.", "en": "I don't like vegetables." },
+          { "vi": "Chị ấy không thích dọn nhà.", "en": "She doesn't like cleaning the house." },
+          { "vi": "Mẹ của mình không thích coi tivi.", "en": "My mother doesn't like watching TV." }
+        ],
+        "quiz": [
+          {
+            "question": "Câu nào có nghĩa là \"She doesn't like TV\"?",
+            "options": ["Chị ấy thích coi tivi.", "Chị ấy không thích coi tivi.", "Chị ấy coi tivi."],
+            "answer": "Chị ấy không thích coi tivi."
+          },
+          {
+            "question": "Từ \"không\" trong câu này dùng để làm gì?",
+            "options": ["Làm câu phủ định", "Đặt câu hỏi", "Chỉ thời gian"],
+            "answer": "Làm câu phủ định"
+          },
+          {
+            "question": "Điền vào chỗ trống: Mình ______ thích cà phê.",
+            "options": ["gì", "không", "ăn"],
+            "answer": "không"
+          }
         ]
       },
       {
         "id": "g3",
-        "title": "[Chủ ngữ] + thích + [Danh từ] / [Động từ] + gì?",
+        "title": "Hỏi người khác thích gì",
+        "pattern": "[Chủ ngữ] + thích + [Danh từ] / [Động từ] + gì?",
         "explanation": "Dùng để hỏi người khác thích cái gì hoặc thích làm gì.",
+        "notes": [
+          "Dùng danh từ để hỏi về một thứ.",
+          "Dùng động từ để hỏi về một hoạt động.",
+          "'Gì' có nghĩa là 'what'."
+        ],
         "examples": [
-          "Bạn thích cà phê gì?",
-          "Anh Nam thích ăn gì?",
-          "Ba của bạn thích làm gì?"
+          { "vi": "Bạn thích cà phê gì?", "en": "What coffee do you like?" },
+          { "vi": "Anh Nam thích ăn gì?", "en": "What does Nam like to eat?" },
+          { "vi": "Ba của bạn thích làm gì?", "en": "What does your father like to do?" }
+        ],
+        "quiz": [
+          {
+            "question": "'Gì' có nghĩa là gì?",
+            "options": ["when", "what", "where"],
+            "answer": "what"
+          },
+          {
+            "question": "Câu nào hỏi \"What do you like to eat?\"",
+            "options": ["Bạn thích ăn gì?", "Bạn ăn gì.", "Bạn không thích ăn."],
+            "answer": "Bạn thích ăn gì?"
+          },
+          {
+            "question": "Điền vào chỗ trống: Chị thích ______?",
+            "options": ["gì", "không", "là"],
+            "answer": "gì"
+          }
         ]
       },
       {
         "id": "g4",
-        "title": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ] + gì?",
+        "title": "Hỏi người khác không thích gì",
+        "pattern": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ] + gì?",
         "explanation": "Dùng để hỏi người khác không thích cái gì hoặc không thích làm gì.",
+        "notes": [
+          "'Gì' vẫn có nghĩa là 'what'."
+        ],
         "examples": [
-          "Bạn không thích rau gì?",
-          "Chị không thích uống nước gì?",
-          "Em gái của bạn không thích làm gì?"
+          { "vi": "Bạn không thích rau gì?", "en": "What vegetables don't you like?" },
+          { "vi": "Chị không thích uống nước gì?", "en": "What drinks don't you like?" },
+          { "vi": "Em gái của bạn không thích làm gì?", "en": "What doesn't your younger sister like to do?" }
+        ],
+        "quiz": [
+          {
+            "question": "Câu nào hỏi \"What don't you like?\"",
+            "options": ["Bạn thích gì?", "Bạn không thích gì?", "Bạn là gì?"],
+            "answer": "Bạn không thích gì?"
+          },
+          {
+            "question": "Điền vào chỗ trống: Anh không thích ăn ______?",
+            "options": ["gì", "không", "thích"],
+            "answer": "gì"
+          },
+          {
+            "question": "Câu nào đúng?",
+            "options": ["Bạn không thích gì?", "Bạn gì không thích?", "Gì bạn không thích?"],
+            "answer": "Bạn không thích gì?"
+          }
         ]
       }
     ]
