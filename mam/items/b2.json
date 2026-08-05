@@ -214,126 +214,158 @@
     "points": [
       {
         "id": "g1",
-        "title": "Nói về điều mình thích",
-        "pattern": "[Chủ ngữ] + thích + [Danh từ] / [Động từ]",
-        "explanation": "Dùng 'thích' để nói mình yêu thích một thứ gì đó hoặc thích làm một việc gì đó.",
+        "title": "Talking about things you like",
+        "pattern": "[Subject] + thích + [Noun / Verb]",
+        "explanation": "Use thích to say that you like something or enjoy doing an activity.",
         "notes": [
-          "Nếu thích một thứ, dùng danh từ.",
-          "Nếu thích làm gì đó, dùng động từ."
+          "If you like a thing, use a noun.",
+          "If you like an activity, use a verb."
         ],
         "examples": [
-          { "vi": "Minh thích cà phê sữa.", "en": "Minh likes milk coffee." },
-          { "vi": "Anh thích ăn bánh mì Việt Nam.", "en": "He likes eating Vietnamese bánh mì." },
-          { "vi": "Chị Linh thích đi chơi ở Sài Gòn.", "en": "Linh likes going out in Saigon." }
+          {
+            "vi": "Minh thích cà phê sữa.",
+            "en": "Minh likes milk coffee."
+          },
+          {
+            "vi": "Anh thích ăn bánh mì Việt Nam.",
+            "en": "He likes eating Vietnamese bánh mì."
+          },
+          {
+            "vi": "Chị Linh thích đi chơi ở Sài Gòn.",
+            "en": "Linh likes going out in Saigon."
+          }
         ],
         "quiz": [
           {
-            "question": "Câu nào có nghĩa là \"I like coffee\"?",
-            "options": ["Mình không thích cà phê.", "Mình thích cà phê.", "Mình thích gì?"],
-            "answer": "Mình thích cà phê."
-          },
-          {
-            "question": "Từ nào có nghĩa là \"like\"?",
-            "options": ["không", "thích", "ăn"],
+            "question": "Which word means \"like\"?",
+            "options": [
+              "không",
+              "thích",
+              "ăn"
+            ],
             "answer": "thích"
           },
           {
-            "question": "Điền vào chỗ trống: Anh ______ đi chơi.",
-            "options": ["thích", "không", "gì"],
+            "question": "Which sentence means \"I like coffee\"?",
+            "options": [
+              "Mình không thích cà phê.",
+              "Mình thích cà phê.",
+              "Mình thích gì?"
+            ],
+            "answer": "Mình thích cà phê."
+          },
+          {
+            "question": "Complete the sentence: Anh ______ đi chơi.",
+            "options": [
+              "thích",
+              "không",
+              "gì"
+            ],
             "answer": "thích"
           }
         ]
       },
       {
         "id": "g2",
-        "title": "Nói về điều mình không thích",
-        "pattern": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ]",
-        "explanation": "Thêm 'không' trước 'thích' để nói mình không yêu thích một thứ gì đó hoặc không thích làm một việc gì đó.",
+        "title": "Talking about things you don't like",
+        "pattern": "[Subject] + không thích + [Noun / Verb]",
+        "explanation": "Add không before thích to say that you do not like something or do not enjoy doing an activity.",
         "notes": [],
         "examples": [
-          { "vi": "Em không thích rau.", "en": "I don't like vegetables." },
-          { "vi": "Chị ấy không thích dọn nhà.", "en": "She doesn't like cleaning the house." },
-          { "vi": "Mẹ của mình không thích coi tivi.", "en": "My mother doesn't like watching TV." }
+          {
+            "vi": "Em không thích rau.",
+            "en": "I don't like vegetables."
+          },
+          {
+            "vi": "Chị ấy không thích dọn nhà.",
+            "en": "She doesn't like cleaning the house."
+          },
+          {
+            "vi": "Mẹ của mình không thích coi tivi.",
+            "en": "My mother doesn't like watching TV."
+          }
         ],
         "quiz": [
           {
-            "question": "Câu nào có nghĩa là \"She doesn't like TV\"?",
-            "options": ["Chị ấy thích coi tivi.", "Chị ấy không thích coi tivi.", "Chị ấy coi tivi."],
+            "question": "Which sentence means \"She doesn't like TV\"?",
+            "options": [
+              "Chị ấy thích coi tivi.",
+              "Chị ấy không thích coi tivi.",
+              "Chị ấy coi tivi."
+            ],
             "answer": "Chị ấy không thích coi tivi."
           },
           {
-            "question": "Từ \"không\" trong câu này dùng để làm gì?",
-            "options": ["Làm câu phủ định", "Đặt câu hỏi", "Chỉ thời gian"],
-            "answer": "Làm câu phủ định"
+            "question": "What does \"không\" do in this sentence?",
+            "options": [
+              "Makes the sentence negative",
+              "Asks a question",
+              "Shows time"
+            ],
+            "answer": "Makes the sentence negative"
           },
           {
-            "question": "Điền vào chỗ trống: Mình ______ thích cà phê.",
-            "options": ["gì", "không", "ăn"],
+            "question": "Complete the sentence: Mình ______ thích cà phê.",
+            "options": [
+              "gì",
+              "không",
+              "ăn"
+            ],
             "answer": "không"
           }
         ]
       },
       {
         "id": "g3",
-        "title": "Hỏi người khác thích gì",
-        "pattern": "[Chủ ngữ] + thích + [Danh từ] / [Động từ] + gì?",
-        "explanation": "Dùng để hỏi người khác thích cái gì hoặc thích làm gì.",
+        "title": "Asking what someone likes",
+        "pattern": "[Subject] + thích + [Noun / Verb] + gì?",
+        "explanation": "Use this pattern to ask what someone likes.",
         "notes": [
-          "Dùng danh từ để hỏi về một thứ.",
-          "Dùng động từ để hỏi về một hoạt động.",
-          "'Gì' có nghĩa là 'what'."
+          "Use a noun to ask about things.",
+          "Use a verb to ask about activities.",
+          "\"Gì\" means \"what\"."
         ],
         "examples": [
-          { "vi": "Bạn thích cà phê gì?", "en": "What coffee do you like?" },
-          { "vi": "Anh Nam thích ăn gì?", "en": "What does Nam like to eat?" },
-          { "vi": "Ba của bạn thích làm gì?", "en": "What does your father like to do?" }
+          {
+            "vi": "Bạn thích cà phê gì?",
+            "en": "What coffee do you like?"
+          },
+          {
+            "vi": "Anh Nam thích ăn gì?",
+            "en": "What does Nam like to eat?"
+          },
+          {
+            "vi": "Ba của bạn thích làm gì?",
+            "en": "What does your father like to do?"
+          }
         ],
         "quiz": [
           {
-            "question": "'Gì' có nghĩa là gì?",
-            "options": ["when", "what", "where"],
+            "question": "What does \"gì\" mean?",
+            "options": [
+              "when",
+              "what",
+              "where"
+            ],
             "answer": "what"
           },
           {
-            "question": "Câu nào hỏi \"What do you like to eat?\"",
-            "options": ["Bạn thích ăn gì?", "Bạn ăn gì.", "Bạn không thích ăn."],
+            "question": "Which sentence asks \"What do you like to eat?\"",
+            "options": [
+              "Bạn thích ăn gì?",
+              "Bạn ăn gì.",
+              "Bạn không thích ăn."
+            ],
             "answer": "Bạn thích ăn gì?"
           },
           {
-            "question": "Điền vào chỗ trống: Chị thích ______?",
-            "options": ["gì", "không", "là"],
+            "question": "Complete the sentence: Chị thích ______?",
+            "options": [
+              "gì",
+              "không",
+              "là"
+            ],
             "answer": "gì"
-          }
-        ]
-      },
-      {
-        "id": "g4",
-        "title": "Hỏi người khác không thích gì",
-        "pattern": "[Chủ ngữ] + không thích + [Danh từ] / [Động từ] + gì?",
-        "explanation": "Dùng để hỏi người khác không thích cái gì hoặc không thích làm gì.",
-        "notes": [
-          "'Gì' vẫn có nghĩa là 'what'."
-        ],
-        "examples": [
-          { "vi": "Bạn không thích rau gì?", "en": "What vegetables don't you like?" },
-          { "vi": "Chị không thích uống nước gì?", "en": "What drinks don't you like?" },
-          { "vi": "Em gái của bạn không thích làm gì?", "en": "What doesn't your younger sister like to do?" }
-        ],
-        "quiz": [
-          {
-            "question": "Câu nào hỏi \"What don't you like?\"",
-            "options": ["Bạn thích gì?", "Bạn không thích gì?", "Bạn là gì?"],
-            "answer": "Bạn không thích gì?"
-          },
-          {
-            "question": "Điền vào chỗ trống: Anh không thích ăn ______?",
-            "options": ["gì", "không", "thích"],
-            "answer": "gì"
-          },
-          {
-            "question": "Câu nào đúng?",
-            "options": ["Bạn không thích gì?", "Bạn gì không thích?", "Gì bạn không thích?"],
-            "answer": "Bạn không thích gì?"
           }
         ]
       }
