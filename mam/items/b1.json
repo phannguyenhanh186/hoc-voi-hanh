@@ -304,10 +304,81 @@
     "points": [
       {
         "id": "g1",
-        "title": "Danh xưng — cách gọi người khác & gọi mình",
-        "explanation": "Người Việt chọn danh xưng (anh/chị/em/bạn/mình) tùy theo tuổi tác so với người đang nói chuyện. Xem bảng đầy đủ ở phần chi tiết.",
-        "examples": [],
-        "refInput": "pronouns",
+        "title": "Personal Pronouns in Vietnamese",
+        "pronounContent": {
+          "intro": [
+            "Unlike English, Vietnamese does not always use the same words for \"I\" and \"you.\"",
+            "Instead, the words change depending on the age of the person you are talking to.",
+            "Don't worry—you only need to remember three common situations to start speaking Vietnamese."
+          ],
+          "table": {
+            "headers": ["The other person is...", "Call them", "Call yourself"],
+            "rows": [
+              ["Older than you", "anh (male) / chị (female)", "em"],
+              ["Younger than you", "em", "anh / chị"],
+              ["About the same age or you don't know their age", "bạn", "mình"]
+            ]
+          },
+          "tip": "If you're not sure how old someone is, bạn is usually the safest choice.",
+          "exampleGroups": [
+            {
+              "heading": "Talking to someone older (male)",
+              "lines": [
+                { "vi": "Chào anh.", "en": "Hello." },
+                { "vi": "Anh khỏe không?", "en": "How are you?" },
+                { "vi": "Em khỏe.", "en": "I'm fine." }
+              ]
+            },
+            {
+              "heading": "Talking to someone older (female)",
+              "lines": [
+                { "vi": "Cảm ơn chị.", "en": "Thank you." },
+                { "vi": "Xin lỗi chị.", "en": "Sorry." }
+              ]
+            },
+            {
+              "heading": "Talking to someone younger",
+              "lines": [
+                { "vi": "Chào em.", "en": "Hello." },
+                { "vi": "Xin lỗi em.", "en": "Sorry." }
+              ]
+            },
+            {
+              "heading": "Talking to someone your age",
+              "lines": [
+                { "vi": "Cảm ơn bạn.", "en": "Thank you." },
+                { "vi": "Bạn khỏe không?", "en": "How are you?" },
+                { "vi": "Mình khỏe.", "en": "I'm fine." }
+              ]
+            }
+          ],
+          "specialRule": {
+            "heading": "A Special Rule",
+            "text": "In Vietnamese, people often repeat the same pronoun instead of saying \"I.\" For example:",
+            "examples": [
+              {
+                "lines": [
+                  { "vi": "Anh khỏe không?", "en": "How are you?" },
+                  { "vi": "Anh khỏe.", "en": "I'm fine." }
+                ],
+                "note": "Here, anh means \"you\" in the question, but \"I\" in the answer. This sounds completely natural in Vietnamese."
+              },
+              {
+                "lines": [
+                  { "vi": "Chị thích cà phê không?", "en": "Do you like coffee?" },
+                  { "vi": "Chị thích.", "en": "Yes, I do." }
+                ]
+              }
+            ]
+          },
+          "remember": {
+            "heading": "Remember",
+            "text": "You don't need to memorize every Vietnamese pronoun at the beginning. For now, just remember these three pairs:",
+            "pairs": ["anh/chị ↔ em", "em ↔ anh/chị", "bạn ↔ mình"],
+            "footer": "These are enough for most everyday conversations with Vietnamese speakers."
+          },
+          "cultureNote": "Vietnamese pronouns show respect and closeness, not just who is speaking. Using the right pronouns makes your Vietnamese sound much more natural, even if your grammar is still simple. Many Vietnamese people appreciate the effort, and they will often help you choose the correct pronouns if you're unsure."
+        },
         "quiz": [
           {
             "context": "Hoàng: _____ tên là gì?\nPhương: Mình tên là Phương.",
@@ -329,33 +400,6 @@
             "options": ["bạn", "mình", "em"],
             "answer": "mình"
           }
-        ]
-      },
-      {
-        "id": "g2",
-        "title": "Chào + [Danh xưng]",
-        "explanation": "Thêm danh xưng phù hợp ngay sau 'Chào' để chào ai đó.",
-        "examples": [
-          "Chào anh.",
-          "Chào em."
-        ]
-      },
-      {
-        "id": "g3",
-        "title": "Cám ơn + [Danh xưng]",
-        "explanation": "Thêm danh xưng phù hợp ngay sau 'Cám ơn' để cảm ơn ai đó.",
-        "examples": [
-          "Cám ơn bạn.",
-          "Cám ơn chị."
-        ]
-      },
-      {
-        "id": "g4",
-        "title": "Xin lỗi + [Danh xưng]",
-        "explanation": "Thêm danh xưng phù hợp ngay sau 'Xin lỗi' khi xin lỗi ai đó.",
-        "examples": [
-          "Xin lỗi em.",
-          "Xin lỗi bạn."
         ]
       },
       {
