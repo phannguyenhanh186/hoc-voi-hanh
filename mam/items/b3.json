@@ -214,41 +214,134 @@
     "points": [
       {
         "id": "g1",
-        "title": "Vào + [Thứ] / [Buổi]",
-        "explanation": "Dùng 'vào' trước thứ trong tuần hoặc buổi trong ngày để chỉ thời gian.",
+        "title": "VÀO",
+        "pattern": "vào + [Day] / [Time of day]",
+        "explanation": "Use vào before a day of the week or a time of day to say when something happens. It works like \"on\" or \"in\" in English.",
+        "notes": [
+          "Use vào + day for days of the week.",
+          "Use vào + buổi + time of day for parts of the day."
+        ],
         "examples": [
-          "Vào thứ Hai.",
-          "Vào buổi sáng.",
-          "Vào buổi tối Chủ Nhật."
+          { "vi": "Vào thứ Hai.", "en": "On Monday." },
+          { "vi": "Vào buổi sáng.", "en": "In the morning." },
+          { "vi": "Vào buổi tối Chủ Nhật.", "en": "On Sunday evening." },
+          { "vi": "Mình học tiếng Việt vào thứ Ba.", "en": "I study Vietnamese on Tuesday." },
+          { "vi": "Anh ấy đi làm vào buổi sáng.", "en": "He goes to work in the morning." }
+        ],
+        "quiz": [
+          {
+            "question": "Which sentence means \"on Monday\"?",
+            "options": ["Vào buổi sáng.", "Ở thứ Hai.", "Là Thứ Hai."],
+            "answer": "Ở thứ Hai."
+          },
+          {
+            "question": "Complete the sentence: Mình đi làm ______ buổi sáng.",
+            "options": ["ở", "vào", "là"],
+            "answer": "vào"
+          },
+          {
+            "question": "Which sentence means \"I go home in the evening.\"",
+            "options": ["Mình về nhà ở buổi chiều.", "Mình về nhà vào buổi trưa.", "Mình về nhà vào buổi tối."],
+            "answer": "Mình về nhà vào buổi tối."
+          }
         ]
       },
       {
         "id": "g2",
-        "title": "[Chủ ngữ] + thường + [Động từ]",
-        "explanation": "Dùng 'thường' để nói việc gì đó xảy ra thường xuyên, theo thói quen.",
-        "examples": [
-          "Mình thường đi làm vào buổi sáng.",
-          "Anh Kiên thường ở nhà vào Chủ Nhật.",
-          "Chồng của chị thường tập thể dục vào buổi chiều."
-        ]
-      },
-      {
-        "id": "g3",
-        "title": "[Chủ ngữ] + thường + [Động từ] + gì?",
-        "explanation": "Dùng để hỏi ai đó thường làm gì.",
-        "examples": [
-          "Em thường ăn gì vào buổi sáng?",
-          "Chị ấy thường làm gì vào buổi tối?"
-        ]
-      },
-      {
-        "id": "g4",
-        "title": "[Chủ ngữ] + có thường + [Động từ] + không?",
-        "explanation": "Dùng để hỏi ai đó có làm việc gì thường xuyên hay không.",
-        "examples": [
-          "Bạn có thường ăn phở không?",
-          "Anh có thường uống cà phê vào buổi tối không?",
-          "Chị có thường đi chơi vào buổi tối thứ Sáu không?"
+        "title": "THƯỜNG",
+        "subsections": [
+          {
+            "subtitle": "1. Talking About Habits",
+            "pattern": "[Subject] + thường + [Verb]",
+            "explanation": "Use thường to talk about things that happen regularly or are part of someone's daily routine. In English, thường is similar to usually.",
+            "examples": [
+              { "vi": "Mình thường đi làm vào buổi sáng.", "en": "I usually go to work in the morning." },
+              { "vi": "Anh Kiên thường ở nhà vào Chủ Nhật.", "en": "Kien usually stays at home on Sundays." },
+              { "vi": "Chồng của chị thường tập thể dục vào buổi chiều.", "en": "Her husband usually exercises in the afternoon." }
+            ],
+            "tip": {
+              "label": "💡 Language Tip",
+              "text": "Thường comes before the verb.",
+              "correct": "Mình thường uống cà phê.",
+              "incorrect": "Mình uống thường cà phê."
+            },
+            "quiz": [
+              {
+                "question": "What does thường mean?",
+                "options": ["always", "usually", "never"],
+                "answer": "usually"
+              },
+              {
+                "question": "Which sentence means \"I usually study Vietnamese\"?",
+                "options": ["Mình thường học tiếng Việt.", "Mình học thường tiếng Việt.", "Mình học tiếng Việt thường."],
+                "answer": "Mình thường học tiếng Việt."
+              },
+              {
+                "question": "Which sentence means \"I usually sleep at noon\"?",
+                "options": ["Anh ngủ thường vào buổi trưa.", "Anh ngủ vào buổi trưa thường.", "Anh thường ngủ vào buổi trưa."],
+                "answer": "Anh thường ngủ vào buổi trưa."
+              }
+            ]
+          },
+          {
+            "subtitle": "2. Asking About Someone's Habits",
+            "pattern": "[Subject] + thường + [Verb] + gì?",
+            "explanation": "Use this pattern to ask what someone usually does. Gì means \"what.\"",
+            "examples": [
+              { "vi": "Em thường ăn gì vào buổi sáng?", "en": "What do you usually eat in the morning?" },
+              { "vi": "Chị ấy thường làm gì vào buổi tối?", "en": "What does she usually do in the evening?" },
+              { "vi": "Bạn thường coi gì trên YouTube?", "en": "What do you usually watch on YouTube?" }
+            ],
+            "quiz": [
+              {
+                "question": "Which sentence means \"What do you usually do?\"",
+                "options": ["Bạn thường làm gì?", "Bạn làm gì?", "Bạn có làm không?"],
+                "answer": "Bạn thường làm gì?"
+              },
+              {
+                "question": "Which sentence means \"What does your mother usually cook?\"",
+                "options": ["Mẹ của bạn thích nấu gì?", "Mẹ của bạn không nấu gì?", "Mẹ của bạn thường nấu gì?"],
+                "answer": "Mẹ của bạn thường nấu gì?"
+              },
+              {
+                "question": "Which sentence means \"What do you usually drink in the morning?\"",
+                "options": ["Bạn thường uống vào buổi sáng?", "Bạn thường uống gì vào buổi sáng?", "Bạn uống gì ở buổi sáng?"],
+                "answer": "Bạn thường uống gì vào buổi sáng?"
+              }
+            ]
+          },
+          {
+            "subtitle": "3. Asking If Someone Usually Does Something",
+            "pattern": "[Subject] + có thường + [Verb] + không?",
+            "explanation": "This is a Yes/No question. It is similar to: Do you usually...?",
+            "examples": [
+              { "vi": "Bạn có thường ăn phở không?", "en": "Do you usually eat phở?" },
+              { "vi": "Anh có thường uống cà phê vào buổi tối không?", "en": "Do you usually drink coffee in the evening?" },
+              { "vi": "Chị có thường đi chơi vào tối thứ Sáu không?", "en": "Do you usually go out on Friday evenings?" }
+            ],
+            "answerNote": "To answer this Yes/No question, follow the pattern [Pronoun] + Có/Không",
+            "answerExamples": [
+              "Bạn có thường ăn phở không? → Mình có.",
+              "Anh có thường uống cà phê vào buổi tối không? → Anh không."
+            ],
+            "quiz": [
+              {
+                "question": "Which sentence asks \"Do you usually exercise?\"",
+                "options": ["Bạn thường tập thể dục gì?", "Bạn có thường tập thể dục không?", "Bạn tập thể dục gì?"],
+                "answer": "Bạn có thường tập thể dục không?"
+              },
+              {
+                "question": "Which answer means \"Yes, I usually do.\"",
+                "options": ["Mình có.", "Mình thường.", "Mình không."],
+                "answer": "Mình có."
+              },
+              {
+                "question": "Which sentence asks \"Do you usually go to sleep early?\"",
+                "options": ["Em thường đi ngủ sớm gì?", "Em có thường đi ngủ sớm không?", "Em có đi ngủ sớm không?"],
+                "answer": "Em có thường đi ngủ sớm không?"
+              }
+            ]
+          }
         ]
       }
     ]
