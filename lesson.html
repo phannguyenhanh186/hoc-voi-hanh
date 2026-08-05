@@ -389,7 +389,7 @@
             box.appendChild(ul);
           }
           if (g.examples && g.examples.length) {
-            box.appendChild(makeToggleSection('Ví dụ', function () {
+            box.appendChild(makeToggleSection('Example', function () {
               const wrap = el('div', 'grammar-examples');
               g.examples.forEach(function (ex) {
                 const row = el('div', 'example');
@@ -405,7 +405,7 @@
             }));
           }
           if (g.quiz && g.quiz.length) {
-            box.appendChild(makeToggleSection('Quiz nhỏ', function () {
+            box.appendChild(makeToggleSection('Small quiz', function () {
               const wrap = el('div');
               g.quiz.forEach(function (q, idx) {
                 const qBox = el('div', 'reasoning-item');
