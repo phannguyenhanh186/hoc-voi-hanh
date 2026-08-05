@@ -409,7 +409,7 @@
               const wrap = el('div');
               g.quiz.forEach(function (q, idx) {
                 const qBox = el('div', 'reasoning-item');
-                qBox.appendChild(el('p', 'ex-instruction', 'Câu ' + (idx + 1) + '. ' + q.question));
+                qBox.appendChild(el('p', 'ex-instruction', 'Question ' + (idx + 1) + '. ' + q.question));
                 const optWrap = el('div', 'quiz-options');
                 (q.options || []).forEach(function (opt) {
                   const obtn = el('button', 'quiz-option', opt);
