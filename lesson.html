@@ -355,15 +355,32 @@
       if (!points.length) { panel.appendChild(emptyNote('Ngữ pháp đang được cập nhật.')); return; }
       points.forEach(function (g) {
         const box = el('div', 'exercise');
+        if (g.refInput) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          const actions = el('div', 'grammar-actions');
+          const readBtn = document.createElement('a');
+          readBtn.className = 'btn-purple';
+          readBtn.href = 'input.html?id=' + encodeURIComponent(g.refInput) +
+            '&level=' + encodeURIComponent(level) +
+            '&lesson=' + encodeURIComponent(itemId) +
+            '&point=' + encodeURIComponent(g.id);
+          readBtn.textContent = 'Đọc →';
+          actions.appendChild(readBtn);
+          if (g.quiz && g.quiz.length) {
+            const quizBtn = document.createElement('a');
+            quizBtn.className = 'btn-purple';
+            quizBtn.href = 'quiz.html?id=' + encodeURIComponent(itemId) +
+              '&level=' + encodeURIComponent(level) +
+              '&point=' + encodeURIComponent(g.id);
+            quizBtn.textContent = 'Quiz →';
+            actions.appendChild(quizBtn);
+          }
+          box.appendChild(actions);
+          panel.appendChild(box);
+          return;
+        }
         const headRow = el('div', 'grammar-head');
         headRow.appendChild(el('h3', 'ex-title', g.title));
-        if (g.refInput) {
-          const a = document.createElement('a');
-          a.className = 'chip chip-link';
-          a.href = 'input.html?id=' + encodeURIComponent(g.refInput) + '&level=' + encodeURIComponent(level);
-          a.textContent = 'Xem chi tiết →';
-          headRow.appendChild(a);
-        }
         box.appendChild(headRow);
         if (g.explanation) box.appendChild(el('p', 'ex-instruction', g.explanation));
         (g.examples || []).forEach(function (ex) {
