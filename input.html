@@ -25,6 +25,10 @@
     <div class="lesson-head">
       <h1 id="title">Đang tải…</h1>
     </div>
+    <div class="grammar-actions" id="top-actions">
+      <button type="button" class="btn-input" id="back-btn-top">← back</button>
+      <a class="btn-purple" id="quiz-link" style="display:none">Quiz →</a>
+    </div>
     <section id="sections" class="input-sections"></section>
     <div class="back-row">
       <button type="button" class="btn-input" id="back-btn">← back</button>
@@ -32,9 +36,24 @@
   </main>
 
   <script>
-    document.getElementById('back-btn').addEventListener('click', function () {
+    function goBack() {
+      const lessonId = new URLSearchParams(location.search).get('lesson');
+      const backLevel = new URLSearchParams(location.search).get('level');
+      if (lessonId) { location.href = 'lesson.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(backLevel || ''); return; }
       if (history.length > 1) history.back(); else location.href = 'index.html';
-    });
+    }
+    document.getElementById('back-btn').addEventListener('click', goBack);
+    document.getElementById('back-btn-top').addEventListener('click', goBack);
+    (function () {
+      const lessonId = new URLSearchParams(location.search).get('lesson');
+      const pointId = new URLSearchParams(location.search).get('point');
+      const qLevel = new URLSearchParams(location.search).get('level') || '';
+      if (lessonId && pointId) {
+        const qLink = document.getElementById('quiz-link');
+        qLink.href = 'quiz.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(qLevel) + '&point=' + encodeURIComponent(pointId);
+        qLink.style.display = '';
+      }
+    })();
     const inputId = new URLSearchParams(location.search).get('id') || 'pronouns';
     const $title = document.getElementById('title');
     const $sections = document.getElementById('sections');
