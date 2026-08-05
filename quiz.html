@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="#" onclick="goBack();return false;">← quay lại</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <h1 id="title">Đang tải…</h1>
+    </div>
+    <div class="grammar-actions" id="top-actions">
+      <button type="button" class="btn-input" id="back-btn-top">← back</button>
+    </div>
+    <section id="quiz-body" class="input-sections"></section>
+    <div class="back-row">
+      <button type="button" class="btn-input" id="back-btn">← back</button>
+    </div>
+  </main>
+
+  <script>
+    const qp = new URLSearchParams(location.search);
+    const lessonId = qp.get('id') || '';
+    const level = qp.get('level') || 'mam';
+    const pointId = qp.get('point') || '';
+
+    function goBack() {
+      if (lessonId) { location.href = 'lesson.html?id=' + encodeURIComponent(lessonId) + '&level=' + encodeURIComponent(level); return; }
+      if (history.length > 1) history.back(); else location.href = 'index.html';
+    }
+    document.getElementById('back-btn').addEventListener('click', goBack);
+    document.getElementById('back-btn-top').addEventListener('click', goBack);
+
+    function el(tag, cls, txt) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (txt != null) n.textContent = txt;
+      return n;
+    }
+
+    function renderChoiceContext(text) {
+      const wrap = el('div', 'choice-context');
+      (String(text || '').split(/\n+/)).forEach(function (line) {
+        if (line.trim()) wrap.appendChild(el('p', 'choice-line', line.trim()));
+      });
+      return wrap;
+    }
+
+    function renderQuiz(title, quiz) {
+      document.title = 'Quiz: ' + title + ' — hoc voi hanh';
+      document.getElementById('title').textContent = 'Quiz: ' + title;
+      const body = document.getElementById('quiz-body');
+      body.innerHTML = '';
+      const box = el('div', 'input-card');
+      (quiz || []).forEach(function (q, idx) {
+        const qBox = el('div', 'reasoning-item');
+        qBox.appendChild(el('p', 'ex-instruction', 'Câu ' + (idx + 1) + '.'));
+        if (q.context) qBox.appendChild(renderChoiceContext(q.context));
+        const optWrap = el('div', 'quiz-options');
+        const explainSlot = el('p', 'ex-instruction reasoning-explain');
+        (q.options || []).forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            const ok = opt === q.answer;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) {
+              Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+            }
+            explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+          });
+          optWrap.appendChild(btn);
+        });
+        qBox.appendChild(optWrap);
+        qBox.appendChild(explainSlot);
+        box.appendChild(qBox);
+      });
+      if (!quiz || !quiz.length) box.appendChild(el('p', 'note', 'Chưa có câu hỏi cho phần này.'));
+      body.appendChild(box);
+    }
+
+    (async function () {
+      try {
+        const res = await fetch(level + '/items/' + lessonId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        const points = (data.grammar && data.grammar.points) || [];
+        const point = points.find(function (p) { return p.id === pointId; });
+        if (!point) throw new Error('Không tìm thấy điểm ngữ pháp');
+        renderQuiz(point.title, point.quiz);
+      } catch (err) {
+        console.error(err);
+        document.getElementById('title').textContent = 'Không tải được quiz';
+        document.getElementById('quiz-body').innerHTML = '<p class="note">Không tìm thấy quiz cho mục này.</p>';
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      var v = "nam";
+      try { v = localStorage.getItem("voice") || "nam"; } catch (e) {}
+      var sel = document.getElementById("voice-select");
+      if (sel) {
+        sel.value = v;
+        sel.addEventListener("change", function () {
+          try { localStorage.setItem("voice", sel.value); } catch (e) {}
+        });
+      }
+    })();
+  </script>
+  <script src="pomodoro.js" defer></script>
+</body>
+</html>
