@@ -401,15 +401,6 @@
             "answer": "mình"
           }
         ]
-      },
-      {
-        "id": "g5",
-        "title": "[Danh xưng] + khoẻ không?",
-        "explanation": "Hỏi thăm sức khoẻ; trả lời bằng cách lặp lại danh xưng rồi thêm 'khoẻ'.",
-        "examples": [
-          "Bạn khoẻ không? → Mình khoẻ.",
-          "Anh khoẻ không? → Anh khoẻ."
-        ]
       }
     ]
   },
