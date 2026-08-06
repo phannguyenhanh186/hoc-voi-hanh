@@ -65,7 +65,7 @@
       const box = el('div', 'input-card');
       (quiz || []).forEach(function (q, idx) {
         const qBox = el('div', 'reasoning-item');
-        qBox.appendChild(el('p', 'ex-instruction', 'Câu ' + (idx + 1) + '.'));
+        qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + (q.question || '')));
         if (q.context) qBox.appendChild(renderChoiceContext(q.context));
         const optWrap = el('div', 'quiz-options');
         const explainSlot = el('p', 'ex-instruction reasoning-explain');
