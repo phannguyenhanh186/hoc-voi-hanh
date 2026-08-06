@@ -299,8 +299,8 @@ a { color: var(--accent-deep); text-decoration: none; }
 .example:first-of-type { padding-top: 2px; }
 .example:last-child { border-bottom: none; padding-bottom: 0; }
 .ex-context { font-size: .85rem; font-weight: 600; color: var(--accent-deep); margin-bottom: 3px; }
-.ex-vi { font-size: 1.12rem; font-weight: 600; line-height: 1.4; }
-.ex-en { color: var(--muted); font-style: italic; font-size: .95rem; }
+.ex-vi { font-size: 1.12rem; font-weight: 600; line-height: 1.4; white-space: pre-line; }
+.ex-en { color: var(--muted); font-style: italic; font-size: .95rem; white-space: pre-line; }
 
 .back-row { padding: 4px 0 64px; }
 
@@ -787,7 +787,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .quiz-options { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
 .quiz-option {
   font: inherit; text-align: left; background: var(--surface); border: 1.5px solid var(--stroke);
-  border-radius: 12px; padding: 10px 14px; cursor: pointer; color: var(--ink);
+  border-radius: 12px; padding: 10px 14px; cursor: pointer; color: var(--ink); white-space: pre-line;
 }
 .quiz-option:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 0 var(--stroke); }
 .quiz-option.opt-correct { background: #EAF7EE; border-color: #2E8B4F; }
