@@ -446,6 +446,14 @@
         if (g.tip.incorrect) tipBox.appendChild(el('p', 'tip-incorrect', '❌ ' + g.tip.incorrect));
         container.appendChild(tipBox);
       }
+      if (g.tipBlocks && g.tipBlocks.length) {
+        g.tipBlocks.forEach(function (tb) {
+          if (tb.tip) container.appendChild(el('p', 'grammar-callout', '💡 ' + tb.tip));
+          if (tb.examples && tb.examples.length) {
+            container.appendChild(makeToggleSection('Examples', function () { return renderExampleLines(tb.examples); }));
+          }
+        });
+      }
       if (g.answerNote) {
         container.appendChild(el('p', 'ex-instruction', g.answerNote));
         if (g.answerExamples && g.answerExamples.length) {
@@ -453,6 +461,18 @@
         }
       }
       if (g.quiz && g.quiz.length) container.appendChild(renderQuizToggle(g.quiz));
+      if (g.extraTip) {
+        const et = g.extraTip;
+        const box = el('div', 'grammar-callout');
+        box.appendChild(el('p', '', et.label));
+        if (et.text) box.appendChild(el('p', '', et.text));
+        if (et.dialogue && et.dialogue.length) {
+          et.dialogue.forEach(function (d) { box.appendChild(el('p', '', d)); });
+        }
+        if (et.examples && et.examples.length) box.appendChild(renderExampleLines(et.examples));
+        if (et.footer) box.appendChild(el('p', '', et.footer));
+        container.appendChild(box);
+      }
     }
 
     function renderPronounContent(pc) {
