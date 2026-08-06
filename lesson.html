@@ -570,6 +570,20 @@
           panel.appendChild(box);
           return;
         }
+        if (g.quiz && g.quiz.length && !g.pattern && !g.subsections && !g.pronounContent && !g.refInput) {
+          box.appendChild(el('h3', 'ex-title', g.title));
+          const actions = el('div', 'grammar-actions');
+          const quizBtn = document.createElement('a');
+          quizBtn.className = 'btn-purple';
+          quizBtn.href = 'quiz.html?id=' + encodeURIComponent(itemId) +
+            '&level=' + encodeURIComponent(level) +
+            '&point=' + encodeURIComponent(g.id);
+          quizBtn.textContent = 'Quiz →';
+          actions.appendChild(quizBtn);
+          box.appendChild(actions);
+          panel.appendChild(box);
+          return;
+        }
         if (g.refInput) {
           box.appendChild(el('h3', 'ex-title', g.title));
           const actions = el('div', 'grammar-actions');
