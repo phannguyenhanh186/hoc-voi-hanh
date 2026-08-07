@@ -461,18 +461,47 @@
         }
       }
       if (g.quiz && g.quiz.length) container.appendChild(renderQuizToggle(g.quiz));
-      if (g.extraTip) {
-        const et = g.extraTip;
-        const box = el('div', 'grammar-callout');
-        box.appendChild(el('p', '', et.label));
-        if (et.text) box.appendChild(el('p', '', et.text));
-        if (et.dialogue && et.dialogue.length) {
-          et.dialogue.forEach(function (d) { box.appendChild(el('p', '', d)); });
-        }
-        if (et.examples && et.examples.length) box.appendChild(renderExampleLines(et.examples));
-        if (et.footer) box.appendChild(el('p', '', et.footer));
-        container.appendChild(box);
+      if (g.extraTip) container.appendChild(renderTipBox(g.extraTip));
+      if (g.extraTips && g.extraTips.length) {
+        g.extraTips.forEach(function (et) { container.appendChild(renderTipBox(et)); });
       }
+    }
+
+    function renderTipBox(et) {
+      const box = el('div', 'grammar-callout');
+      box.appendChild(el('p', '', et.label));
+      if (et.text) box.appendChild(el('p', '', et.text));
+      if (et.dialogue && et.dialogue.length) {
+        et.dialogue.forEach(function (d) { box.appendChild(el('p', '', d)); });
+      }
+      if (et.table) {
+        const table = document.createElement('table');
+        table.className = 'grammar-table';
+        const thead = document.createElement('thead');
+        const headRow = document.createElement('tr');
+        et.table.headers.forEach(function (h) {
+          const th = document.createElement('th');
+          th.textContent = h;
+          headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+        const tbody = document.createElement('tbody');
+        et.table.rows.forEach(function (r) {
+          const tr = document.createElement('tr');
+          r.forEach(function (cell) {
+            const td = document.createElement('td');
+            td.textContent = cell;
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        box.appendChild(table);
+      }
+      if (et.examples && et.examples.length) box.appendChild(renderExampleLines(et.examples));
+      if (et.footer) box.appendChild(el('p', '', et.footer));
+      return box;
     }
 
     function renderPronounContent(pc) {
@@ -581,6 +610,9 @@
             renderPatternBody(subBox, sub);
             box.appendChild(subBox);
           });
+          if (g.extraTips && g.extraTips.length) {
+            g.extraTips.forEach(function (et) { box.appendChild(renderTipBox(et)); });
+          }
           if (g.quiz && g.quiz.length) box.appendChild(renderQuizToggle(g.quiz));
           panel.appendChild(box);
           return;
