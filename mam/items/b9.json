@@ -527,6 +527,162 @@
             "answer": "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
           }
         ]
+      },
+      {
+        "id": "g5",
+        "title": "Quiz tổng",
+        "quiz": [
+          {
+            "question": "What does phải mean?",
+            "options": [
+              "can",
+              "must",
+              "want to",
+              "like to"
+            ],
+            "answer": "must"
+          },
+          {
+            "question": "Which sentence means \"You must wear a helmet.\"",
+            "options": [
+              "Bạn đội nón bảo hiểm.",
+              "Bạn đang đội nón bảo hiểm.",
+              "Bạn phải đội nón bảo hiểm.",
+              "Bạn thường đội nón bảo hiểm."
+            ],
+            "answer": "Bạn phải đội nón bảo hiểm."
+          },
+          {
+            "question": "Which sentence means \"I don't have to go to work today.\"",
+            "options": [
+              "Anh không đi làm hôm nay.",
+              "Anh không phải đi làm hôm nay.",
+              "Anh đang không đi làm.",
+              "Anh thường không đi làm."
+            ],
+            "answer": "Anh không phải đi làm hôm nay."
+          },
+          {
+            "question": "Complete the sentence: Em ______ mặc áo khoác vì trời lạnh.",
+            "options": [
+              "đang",
+              "phải",
+              "thường",
+              "có"
+            ],
+            "answer": "phải"
+          },
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "Bạn phải không đội nón bảo hiểm.",
+              "Bạn không phải đội nón bảo hiểm.",
+              "Bạn đội không phải nón bảo hiểm.",
+              "Không bạn phải đội nón bảo hiểm."
+            ],
+            "answer": "Bạn không phải đội nón bảo hiểm."
+          },
+          {
+            "question": "How do you ask \"What do I have to wear?\"",
+            "options": [
+              "Chị mặc gì?",
+              "Chị đang mặc gì?",
+              "Chị phải mặc gì?",
+              "Chị có mặc gì không?"
+            ],
+            "answer": "Chị phải mặc gì?"
+          },
+          {
+            "question": "Which answer best completes the conversation?\nA: Bạn phải mang gì?\nB: ______",
+            "options": [
+              "Mình phải mang hộ chiếu.",
+              "Mình mang hôm qua.",
+              "Mình đang mang.",
+              "Mình thích hộ chiếu."
+            ],
+            "answer": "Mình phải mang hộ chiếu."
+          },
+          {
+            "question": "Complete the question that means \"What do I have to wear?\": Chị _______ gì?",
+            "options": [
+              "phải",
+              "phải đeo",
+              "đang đeo",
+              "đeo"
+            ],
+            "answer": "phải đeo"
+          },
+          {
+            "question": "How do you ask \"Do you have to bring your phone?\"",
+            "options": [
+              "Bạn phải mang điện thoại?",
+              "Bạn có mang điện thoại không?",
+              "Bạn có phải mang điện thoại không?",
+              "Bạn có đang mang điện thoại không?"
+            ],
+            "answer": "Bạn có phải mang điện thoại không?"
+          },
+          {
+            "question": "Which is the best answer?\nA: Bạn có phải đi làm hôm nay không?",
+            "options": [
+              "Có, mình phải đi làm.",
+              "Có mình.",
+              "Có, mình phải.",
+              "Mình đi làm."
+            ],
+            "answer": "Có, mình phải đi làm."
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo.",
+              "A: Bạn có phải đeo khẩu trang không?\nB: Không đeo khẩu trang",
+              "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình đeo.",
+              "A: Bạn có phải đeo khẩu trang không?\nB: Mình phải có."
+            ],
+            "answer": "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo."
+          },
+          {
+            "question": "Which sentence means \"What do you have to bring to work?\"",
+            "options": [
+              "Đi làm bạn mặc gì?",
+              "Đi làm bạn phải mặc gì?",
+              "Đi làm bạn có mặc gì?",
+              "Đi làm bạn có phải mặc gì?"
+            ],
+            "answer": "Đi làm bạn phải mặc gì?"
+          },
+          {
+            "question": "Which sentence is the most natural?",
+            "options": [
+              "Ở Việt Nam, phải bạn đội nón bảo hiểm.",
+              "Ở Việt Nam, bạn đội phải nón bảo hiểm.",
+              "Ở Việt Nam, bạn phải đội nón bảo hiểm.",
+              "Ở Việt Nam, bạn nón bảo hiểm phải đội."
+            ],
+            "answer": "Ở Việt Nam, bạn phải đội nón bảo hiểm."
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi.",
+              "A: Đi làm chị phải mặc áo gì?\nB: Chị mặc quần đùi.",
+              "A: Đi làm chị phải mặc áo gì?\nB: Chị đang mặc áo sơ mi.",
+              "A: Đi làm chị phải mặc áo gì?\nB: Chị không phải đi giày"
+            ],
+            "answer": "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi."
+          },
+          {
+            "question": "Choose the best conversation.",
+            "options": [
+              "A: Bạn phải mặc gì?\nB: Có, mình phải mặc áo.",
+              "A: Bạn phải đeo gì?\nB: Mình có.",
+              "A: Bạn có phải đeo kính không?\nB: Mình phải có.",
+              "A: Bạn có phải đeo kính không?\nB: Mình có."
+            ],
+            "answer": "A: Bạn có phải đeo kính không?\nB: Mình có."
+          }
+        ]
       }
     ]
   },
