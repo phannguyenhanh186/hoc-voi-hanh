@@ -711,6 +711,192 @@
             "answer": "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư."
           }
         ]
+      },
+      {
+        "id": "g4",
+        "title": "Quiz tổng",
+        "quiz": [
+          {
+            "question": "Which is the natural way to read 21?",
+            "options": [
+              "Hai một",
+              "Hai mốt",
+              "Một hai",
+              "Mốt hai"
+            ],
+            "answer": "Hai mốt"
+          },
+          {
+            "question": "Which number is read naturally?",
+            "options": [
+              "Ba năm",
+              "Sáu mười",
+              "Bốn tư",
+              "Hai một"
+            ],
+            "answer": "Bốn tư"
+          },
+          {
+            "question": "How do you ask \"What day is it today?\"",
+            "options": [
+              "Hôm nay là năm mấy?",
+              "Hôm nay là thứ mấy?",
+              "Hôm nay là tháng mấy?",
+              "Hôm nay mấy giờ?"
+            ],
+            "answer": "Hôm nay là thứ mấy?"
+          },
+          {
+            "question": "Which answer means \"Today is Tuesday.\"",
+            "options": [
+              "Hôm nay là ngày ba.",
+              "Hôm nay là tháng ba.",
+              "Hôm nay là thứ Ba.",
+              "Hôm nay là ba giờ."
+            ],
+            "answer": "Hôm nay là thứ Ba."
+          },
+          {
+            "question": "How do you ask \"What is today's date?\"",
+            "options": [
+              "Hôm nay là thứ mấy?",
+              "Hôm nay là ngày mấy?",
+              "Hôm nay là tháng mấy?",
+              "Hôm nay mấy giờ?"
+            ],
+            "answer": "Hôm nay là ngày mấy?"
+          },
+          {
+            "question": "Which answer means \"Today is April 11th.\"",
+            "options": [
+              "Hôm nay là ngày mười mốt tháng tư.",
+              "Hôm nay là ngày mười mốt tháng bốn.",
+              "Hôm nay là ngày mười một tháng tư.",
+              "Hôm nay là ngày bốn tháng mười một."
+            ],
+            "answer": "Hôm nay là ngày mười mốt tháng bốn."
+          },
+          {
+            "question": "Complete the sentence: Hôm qua là ______.",
+            "options": [
+              "ngày mai",
+              "Chủ Nhật",
+              "tháng tám",
+              "tám giờ"
+            ],
+            "answer": "Chủ Nhật"
+          },
+          {
+            "question": "Which question asks about someone's birthday month?",
+            "options": [
+              "Sinh nhật của bạn là ngày mấy?",
+              "Sinh nhật của bạn là tháng mấy?",
+              "Sinh nhật của bạn là thứ mấy?",
+              "Sinh nhật của bạn là mấy giờ?"
+            ],
+            "answer": "Sinh nhật của bạn là tháng mấy?"
+          },
+          {
+            "question": "Which answer means \"My birthday is in December.\"",
+            "options": [
+              "Sinh nhật của mình là ngày mười hai.",
+              "Sinh nhật của mình là tháng mười hai.",
+              "Hôm nay là tháng mười hai.",
+              "Tháng mười hai là hôm nay."
+            ],
+            "answer": "Sinh nhật của mình là tháng mười hai."
+          },
+          {
+            "question": "Choose the correct date.",
+            "options": [
+              "Ngày ba mươi tháng tư.",
+              "Tháng ba mươi ngày tư.",
+              "Ba mươi tháng tư ngày.",
+              "Ngày tư tháng ba mươi."
+            ],
+            "answer": "Ngày ba mươi tháng tư."
+          },
+          {
+            "question": "Which sentence means \"Yesterday was Sunday the 25th.\"",
+            "options": [
+              "Hôm nay là thứ Bảy ngày hai lăm.",
+              "Hôm nay là Chủ Nhật ngày hai năm.",
+              "Hôm qua là thứ Bảy ngày hai năm.",
+              "Hôm qua là Chủ Nhật ngày hai lăm."
+            ],
+            "answer": "Hôm qua là Chủ Nhật ngày hai lăm."
+          },
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "Ngày hai mươi tháng bảy.",
+              "Tháng hai mươi ngày bảy.",
+              "Ngày bảy tháng hai mươi.",
+              "Hai mươi ngày tháng bảy."
+            ],
+            "answer": "Ngày hai mươi tháng bảy."
+          },
+          {
+            "question": "Choose the correct conversation.",
+            "options": [
+              "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu.",
+              "A: Sinh nhật của bạn là tháng mấy?\nB: Sinh nhật của mình là thứ Sáu.",
+              "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
+              "A: Hôm qua là thứ mấy?\nB: Hôm nay là thứ Sáu."
+            ],
+            "answer": "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu."
+          },
+          {
+            "question": "Choose the correct conversation.",
+            "options": [
+              "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám.",
+              "A: Sinh nhật của bạn là thứ mấy?\nB: Ngày bảy tháng hai.",
+              "A: Sinh nhật của bạn là tháng mấy?\nB: Thứ năm.",
+              "A: Sinh nhật của bạn là mấy giờ?\nB: Thứ sáu ngày mười tám."
+            ],
+            "answer": "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám."
+          },
+          {
+            "question": "Which sentence is NOT natural?",
+            "options": [
+              "Hai mốt",
+              "Ba lăm",
+              "Bốn bốn",
+              "Tám năm"
+            ],
+            "answer": "Tám năm"
+          },
+          {
+            "question": "Complete the sentence: Hôm nay là ngày ______ tháng tư.",
+            "options": [
+              "ba mươi",
+              "Chủ Nhật",
+              "thứ Ba",
+              "tám giờ"
+            ],
+            "answer": "ba mươi"
+          },
+          {
+            "question": "Which question asks about tomorrow's day of the week?",
+            "options": [
+              "Ngày mai là ngày mấy?",
+              "Ngày mai là tháng mấy?",
+              "Ngày mai là thứ mấy?",
+              "Ngày mai mấy giờ?"
+            ],
+            "answer": "Ngày mai là thứ mấy?"
+          },
+          {
+            "question": "Choose the best response: Ngày mai là thứ mấy?",
+            "options": [
+              "Ngày mai là thứ Hai.",
+              "Ngày mai là ngày hai.",
+              "Ngày mai là tháng hai.",
+              "Ngày mai là hai giờ."
+            ],
+            "answer": "Ngày mai là thứ Hai."
+          }
+        ]
       }
     ]
   },
