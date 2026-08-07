@@ -581,6 +581,7 @@
             renderPatternBody(subBox, sub);
             box.appendChild(subBox);
           });
+          if (g.quiz && g.quiz.length) box.appendChild(renderQuizToggle(g.quiz));
           panel.appendChild(box);
           return;
         }
