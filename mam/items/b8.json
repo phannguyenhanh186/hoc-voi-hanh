@@ -106,32 +106,396 @@
     "points": [
       {
         "id": "g1",
-        "title": "[Chủ ngữ] + đang + động từ",
-        "explanation": "Dùng 'đang' để nói một hành động đang diễn ra ngay bây giờ.",
+        "title": "Talking About Actions Happening Now",
+        "pattern": "[Subject] + đang + [Verb]",
+        "explanation": "Use đang to talk about an action that is happening now, at the moment of speaking. It is similar to the present continuous in English (be + verb-ing).",
         "examples": [
-          "Mình đang ăn.",
-          "Anh đang uống cà phê.",
-          "Chị đang học.",
-          "Trời đang mưa to."
+          {
+            "vi": "Mình đang ăn.",
+            "en": "I'm eating."
+          },
+          {
+            "vi": "Anh đang uống cà phê.",
+            "en": "He is drinking coffee."
+          },
+          {
+            "vi": "Chị đang học.",
+            "en": "She is studying."
+          },
+          {
+            "vi": "Trời đang mưa to.",
+            "en": "It is raining heavily."
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "Đang comes before the verb. Compare:",
+          "examples": [
+            {
+              "vi": "Mình ăn.",
+              "en": "I eat. / I am eating. (general statement or context-dependent)"
+            },
+            {
+              "vi": "Mình đang ăn.",
+              "en": "I am eating right now."
+            }
+          ],
+          "footer": "Adding đang makes it clear that the action is happening at this moment."
+        },
+        "quiz": [
+          {
+            "question": "What does \"đang\" tell us?",
+            "options": [
+              "The action happened yesterday.",
+              "The action is happening now.",
+              "The action will happen tomorrow."
+            ],
+            "answer": "The action is happening now."
+          },
+          {
+            "question": "Which sentence means \"She is studying.\"",
+            "options": [
+              "Chị học.",
+              "Chị đang học.",
+              "Chị thường học."
+            ],
+            "answer": "Chị đang học."
+          },
+          {
+            "question": "Which sentence means \"I am working\"",
+            "options": [
+              "Chị làm việc.",
+              "Chị thường làm việc.",
+              "Chị đang làm việc."
+            ],
+            "answer": "Chị đang làm việc."
+          },
+          {
+            "question": "Which sentence means \"It is raining.\"",
+            "options": [
+              "Trời mưa.",
+              "Trời đang mưa.",
+              "Trời không mưa."
+            ],
+            "answer": "Trời đang mưa."
+          }
         ]
       },
       {
         "id": "g2",
-        "title": "Hỏi - trả lời với 'đang'",
-        "explanation": "",
+        "title": "Asking What Someone Is Doing",
+        "pattern": "[Subject] + đang + làm gì?",
+        "explanation": "Use this pattern to ask what someone is doing right now. To answer, use: [Subject] + đang + [Verb].",
         "examples": [
-          "Bạn đang làm gì? → Mình đang làm việc.",
-          "Anh ấy đang làm gì? → Anh ấy đang dọn nhà."
+          {
+            "vi": "Bạn đang làm gì?\n→ Mình đang làm việc.",
+            "en": "What are you doing?\nI'm working."
+          },
+          {
+            "vi": "Anh ấy đang làm gì?\n→ Anh ấy đang dọn nhà.",
+            "en": "What is he doing?\nHe is cleaning the house."
+          },
+          {
+            "vi": "Chị đang làm gì?\n→ Chị đang nấu ăn.",
+            "en": "What are you doing?\nI'm cooking."
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "Làm gì means \"do what?\" or \"what are ... doing?\" To answer, simply replace làm gì with the action. Compare:",
+          "examples": [
+            {
+              "vi": "Bạn đang làm gì?",
+              "en": "What are you doing?"
+            },
+            {
+              "vi": "Mình đang đọc sách.",
+              "en": "I'm reading a book."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "How do you ask \"What are you doing?\"",
+            "options": [
+              "Bạn làm gì?",
+              "Bạn đang làm gì?",
+              "Bạn thường làm gì?"
+            ],
+            "answer": "Bạn đang làm gì?"
+          },
+          {
+            "question": "Choose the best answer: Bạn đang làm gì?",
+            "options": [
+              "Mình đọc sách.",
+              "Mình đang đọc sách.",
+              "Mình thường đọc sách."
+            ],
+            "answer": "Mình đang đọc sách."
+          },
+          {
+            "question": "How do you ask \"Now, what are you doing?\"",
+            "options": [
+              "Bạn đang làm gì?",
+              "Hôm nay bạn đang làm gì?",
+              "Bây giờ bạn đang làm gì?"
+            ],
+            "answer": "Hôm nay bạn đang làm gì?"
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Bạn đang làm gì?\nB: Mình đang nấu ăn.",
+              "A: Bạn đang làm gì?\nB: Hôm nay mình nấu ăn.",
+              "A: Hôm qua bạn đang làm gì?\nB: Mình đi ngủ."
+            ],
+            "answer": "A: Bạn đang làm gì?\nB: Mình đang nấu ăn."
+          }
         ]
       },
       {
         "id": "g3",
-        "title": "Hỏi về thời tiết: Bây giờ/Hôm nay/Hôm qua thời tiết thế nào?",
-        "explanation": "",
+        "title": "Asking About the Weather",
+        "pattern": "Bây giờ / Hôm nay / Hôm qua + thời tiết + thế nào?",
+        "explanation": "Use this pattern to ask what the weather is like. You can ask about now, today, or yesterday. To answer, simply describe the weather.",
         "examples": [
-          "Bây giờ thời tiết thế nào? → Trời đang mưa to.",
-          "Hôm nay thời tiết ở Việt Nam thế nào? → Hôm nay trời nắng.",
-          "Hôm qua thời tiết thế nào? → Hôm qua trời mát, không mưa."
+          {
+            "vi": "Bây giờ thời tiết thế nào?\n→ Trời đang mưa to.",
+            "en": "What's the weather like now?\nIt's raining heavily."
+          },
+          {
+            "vi": "Hôm nay thời tiết ở Việt Nam thế nào?\n→ Hôm nay trời nắng.",
+            "en": "What's the weather like in Vietnam today?\nIt's sunny today."
+          },
+          {
+            "vi": "Hôm qua thời tiết thế nào?\n→ Hôm qua trời mát, không mưa.",
+            "en": "What was the weather like yesterday?\nIt was cool and didn't rain."
+          },
+          {
+            "vi": "Hôm nay thời tiết thế nào?\n→ Hôm nay trời nhiều mây.",
+            "en": "What's the weather like today?\nIt's cloudy today."
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "To answer this question, Vietnamese speakers usually begin with trời. Common weather expressions include:",
+          "examples": [
+            {
+              "vi": "Trời nắng.",
+              "en": "It's sunny."
+            },
+            {
+              "vi": "Trời mưa.",
+              "en": "It's raining."
+            },
+            {
+              "vi": "Trời mát.",
+              "en": "It's cool."
+            },
+            {
+              "vi": "Trời nóng.",
+              "en": "It's hot."
+            },
+            {
+              "vi": "Trời lạnh.",
+              "en": "It's cold."
+            }
+          ],
+          "footer": "You can also combine them:\nTrời mát, không mưa. (It's cool and not raining.)\nTrời đang mưa to. (It's raining heavily.)"
+        },
+        "quiz": [
+          {
+            "question": "How do you ask \"What's the weather like today?\"",
+            "options": [
+              "Hôm nay trời gì?",
+              "Hôm nay thời tiết thế nào?",
+              "Hôm nay bạn thế nào?"
+            ],
+            "answer": "Hôm nay thời tiết thế nào?"
+          },
+          {
+            "question": "Which answer means \"It's raining heavily.\"",
+            "options": [
+              "Trời mưa.",
+              "Trời mưa to.",
+              "Trời đang mưa to."
+            ],
+            "answer": "Trời đang mưa to."
+          },
+          {
+            "question": "Complete the question: Bây giờ ______ thế nào?",
+            "options": [
+              "thời tiết",
+              "thời gian",
+              "mấy giờ"
+            ],
+            "answer": "thời tiết"
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Hôm qua thời tiết thế nào?\nB: Hôm nay trời mát, không mưa.",
+              "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời nắng to.",
+              "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời đang mưa to."
+            ],
+            "answer": "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời nắng to."
+          }
+        ]
+      },
+      {
+        "id": "g4",
+        "title": "Quiz tổng",
+        "quiz": [
+          {
+            "question": "Which sentence means \"I am eating.\"",
+            "options": [
+              "Mình ăn.",
+              "Mình thường ăn.",
+              "Mình đang ăn.",
+              "Mình sẽ ăn."
+            ],
+            "answer": "Mình đang ăn."
+          },
+          {
+            "question": "Which sentence means \"He is drinking coffee.\"",
+            "options": [
+              "Anh uống cà phê.",
+              "Anh đang uống cà phê.",
+              "Anh thường uống cà phê.",
+              "Anh sẽ uống cà phê."
+            ],
+            "answer": "Anh đang uống cà phê."
+          },
+          {
+            "question": "Complete the sentence: Chị ______ học.",
+            "options": [
+              "đang",
+              "thường",
+              "là",
+              "có"
+            ],
+            "answer": "đang"
+          },
+          {
+            "question": "How do you ask \"What are you doing now?\"",
+            "options": [
+              "Bạn làm gì?",
+              "Bạn thường làm gì?",
+              "Bây giờ bạn đang làm gì?",
+              "Bạn là gì?"
+            ],
+            "answer": "Bây giờ bạn đang làm gì?"
+          },
+          {
+            "question": "Choose the best answer.\nA: Bạn đang làm gì?\nB: ______",
+            "options": [
+              "Mình đang đọc sách.",
+              "Mình thường đọc sách.",
+              "Mình hôm qua đọc sách.",
+              "Mình là học sinh."
+            ],
+            "answer": "Mình đang đọc sách."
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Anh ấy đang làm gì?\nB: Anh ấy đang dọn nhà.",
+              "A: Anh ấy đang làm gì?\nB: Anh ấy thường dọn nhà.",
+              "A: Anh ấy đang làm gì?\nB: Anh ấy hôm qua dọn nhà.",
+              "A: Anh ấy đang làm gì?\nB: Anh ấy là giáo viên."
+            ],
+            "answer": "A: Anh ấy đang làm gì?\nB: Anh ấy đang dọn nhà."
+          },
+          {
+            "question": "How do you ask \"What's the weather like today?\"",
+            "options": [
+              "Hôm nay trời gì?",
+              "Hôm nay thời tiết thế nào?",
+              "Hôm nay mấy giờ?",
+              "Hôm nay làm gì?"
+            ],
+            "answer": "Hôm nay thời tiết thế nào?"
+          },
+          {
+            "question": "Which answer means \"It's raining heavily.\"",
+            "options": [
+              "Trời mưa.",
+              "Trời đang mưa to.",
+              "Trời mát.",
+              "Trời lạnh."
+            ],
+            "answer": "Trời đang mưa to."
+          },
+          {
+            "question": "Complete the question: Hôm qua ______ thế nào?",
+            "options": [
+              "thời tiết",
+              "làm gì",
+              "giờ",
+              "người"
+            ],
+            "answer": "thời tiết"
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Hôm nay thời tiết thế nào?\nB: Hôm nay trời nhiều mây.",
+              "A: Hôm nay thời tiết thế nào?\nB: Hôm nay là thứ Hai.",
+              "A: Hôm nay thời tiết thế nào?\nB: Mình đang học.",
+              "A: Hôm nay thời tiết thế nào?\nB: Tám giờ sáng."
+            ],
+            "answer": "A: Hôm nay thời tiết thế nào?\nB: Hôm nay trời nhiều mây."
+          },
+          {
+            "question": "Which sentence is the most natural?",
+            "options": [
+              "Trời đang nắng.",
+              "Trời đang mưa to.",
+              "Trời đang lạnh.",
+              "All of the above."
+            ],
+            "answer": "All of the above."
+          },
+          {
+            "question": "Which sentence uses đang correctly?",
+            "options": [
+              "Bạn đang học tiếng Việt.",
+              "Đang bạn học tiếng Việt.",
+              "Bạn học đang tiếng Việt.",
+              "Bạn tiếng Việt đang học."
+            ],
+            "answer": "Bạn đang học tiếng Việt."
+          },
+          {
+            "question": "Choose the correct conversation.",
+            "options": [
+              "A: Bây giờ thời tiết thế nào?\nB: Trời đang mưa to.",
+              "A: Bây giờ thời tiết thế nào?\nB: Hôm qua trời mưa.",
+              "A: Bây giờ thời tiết thế nào?\nB: Mình đang làm việc.",
+              "A: Bây giờ thời tiết thế nào?\nB: Thứ Ba."
+            ],
+            "answer": "A: Bây giờ thời tiết thế nào?\nB: Trời đang mưa to."
+          },
+          {
+            "question": "You see your friend reading a book right now. What can you ask?",
+            "options": [
+              "Bạn thường làm gì?",
+              "Bạn đang làm gì?",
+              "Bạn làm gì hôm qua?",
+              "Bạn là gì?"
+            ],
+            "answer": "Bạn đang làm gì?"
+          },
+          {
+            "question": "Choose the best conversation.",
+            "options": [
+              "A: Bây giờ bạn đang làm gì?\nB: Mình đang uống cà phê.",
+              "A: Bây giờ bạn đang làm gì?\nB: Hôm qua mình uống cà phê.",
+              "A: Bây giờ bạn đang làm gì?\nB: Trời đang mưa.",
+              "A: Bây giờ bạn đang làm gì?\nB: Hôm nay nóng."
+            ],
+            "answer": "A: Bây giờ bạn đang làm gì?\nB: Mình đang uống cà phê."
+          }
         ]
       }
     ]
