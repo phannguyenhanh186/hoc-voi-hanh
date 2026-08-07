@@ -112,46 +112,384 @@
     "points": [
       {
         "id": "g1",
-        "title": "Màu gì? — Hỏi: ... + màu gì? → Trả lời: ... + màu + [màu]",
-        "explanation": "",
+        "title": "Asking About Colors",
+        "pattern": "[Noun] + màu gì?\n→ [Noun] + màu + [Color].",
+        "explanation": "Use this pattern to ask what color something is or what color someone likes, wears, or wants. To answer, simply say: [Noun] + màu + [Color].",
         "examples": [
-          "Xe máy của bạn màu gì? → Xe máy của mình màu trắng.",
-          "Chị ấy không thích màu gì? → Chị ấy không thích màu xanh dương.",
-          "Anh ấy thích điện thoại màu gì? → Anh ấy thích điện thoại màu đen.",
-          "Em đang mặc áo màu gì? → Em đang mặc áo màu xám."
+          {
+            "vi": "Xe máy của bạn màu gì?\n→ Xe máy của mình màu trắng.",
+            "en": "What color is your motorbike?\nMy motorbike is white."
+          },
+          {
+            "vi": "Chị ấy không thích màu gì?\n→ Chị ấy không thích màu xanh dương.",
+            "en": "What color doesn't she like?\nShe doesn't like blue."
+          },
+          {
+            "vi": "Anh ấy thích điện thoại màu gì?\n→ Anh ấy thích điện thoại màu đen.",
+            "en": "What color phone does he like?\nHe likes a black phone."
+          },
+          {
+            "vi": "Em đang mặc áo màu gì?\n→ Em đang mặc áo màu xám.",
+            "en": "What color shirt are you wearing?\nI'm wearing a gray shirt."
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "In Vietnamese, màu comes before the color. Compare:",
+          "examples": [
+            {
+              "vi": "Áo màu đỏ.",
+              "en": "A red shirt."
+            },
+            {
+              "vi": "Xe màu trắng.",
+              "en": "A white vehicle."
+            }
+          ],
+          "footer": "To ask about the color, simply replace the color with gì.\nÁo màu đỏ. (A red shirt.) → Áo màu gì? (What color is the shirt?)"
+        },
+        "quiz": [
+          {
+            "question": "How do you ask \"What color is your motorbike?\"",
+            "options": [
+              "Xe máy của bạn là gì?",
+              "Xe máy của bạn màu gì?",
+              "Xe máy của bạn màu thế nào?"
+            ],
+            "answer": "Xe máy của bạn màu gì?"
+          },
+          {
+            "question": "Which answer means \"My motorbike is white.\"",
+            "options": [
+              "Xe máy của mình trắng.",
+              "Xe máy của mình trắng màu.",
+              "Xe máy của mình màu trắng."
+            ],
+            "answer": "Xe máy của mình màu trắng."
+          },
+          {
+            "question": "Which question means \"What color shirt are you wearing?\"",
+            "options": [
+              "Em mặc áo gì?",
+              "Em đang mặc áo màu gì?",
+              "Em đang mặc màu gì?"
+            ],
+            "answer": "Em đang mặc áo màu gì?"
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Kính của bạn màu gì?\nB: Kính của mình màu đỏ.",
+              "A: Điện thoại của bạn màu gì?\nB: Điện thoại của mình đỏ màu.",
+              "A: Bạn thích áo màu gì?\nB: Mình đang mặc quần màu đen."
+            ],
+            "answer": "A: Kính của bạn màu gì?\nB: Kính của mình màu đỏ."
+          },
+          {
+            "question": "Which sentence means \"What color is this shirt?\"",
+            "options": [
+              "Áo màu gì?",
+              "Áo này màu gì?",
+              "Áo này là màu gì?"
+            ],
+            "answer": "Áo này màu gì?"
+          },
+          {
+            "question": "Which answer means \"It's black.\"",
+            "options": [
+              "Màu vàng.",
+              "Màu xanh.",
+              "Màu đen."
+            ],
+            "answer": "Màu đen."
+          },
+          {
+            "question": "Which question asks about someone's favorite car color?",
+            "options": [
+              "Anh ấy có ô tô màu gì?",
+              "Anh ấy thích ô tô màu gì?",
+              "Anh ấy có ô tô màu đen không?"
+            ],
+            "answer": "Anh ấy thích ô tô màu gì?"
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Em đang mặc áo màu gì?\nB: Em đang có màu trắng.",
+              "A: Anh đang mặc áo màu gì?\nB: Anh đang mặc áo màu trắng.",
+              "A: Chị ấy đang mặc áo màu gì?\nB: Chị ấy thích màu trắng."
+            ],
+            "answer": "A: Anh đang mặc áo màu gì?\nB: Anh đang mặc áo màu trắng."
+          }
         ]
       },
       {
         "id": "g2",
-        "title": "Lắm — câu khẳng định: Chủ ngữ + Động từ/Tính từ + lắm",
-        "explanation": "'Lắm' dùng để nhấn mạnh mức độ rất cao của một tính chất, trạng thái hoặc hành động. Trong tiếng Anh, thường tương đương với 'a lot'.",
-        "examples": [
-          "Phở này ngon lắm.",
-          "Em thích cà phê lắm.",
-          "Hôm nay trời nóng lắm.",
-          "Cảm ơn anh nhiều lắm."
+        "title": "Emphasizing with lắm",
+        "subsections": [
+          {
+            "subtitle": "Affirmative",
+            "pattern": "[Subject] + [Verb / Adjective] + lắm.",
+            "explanation": "Use lắm to emphasize the meaning of the word before it. With affirmative sentences, lắm means very or a lot. This pattern is commonly used with adjectives and verbs of feeling or preference, such as thích (like).",
+            "examples": [
+              {
+                "vi": "Phở này ngon lắm.",
+                "en": "This phở is very delicious."
+              },
+              {
+                "vi": "Em thích cà phê lắm.",
+                "en": "I like coffee a lot."
+              },
+              {
+                "vi": "Hôm nay trời nóng lắm.",
+                "en": "It's very hot today."
+              },
+              {
+                "vi": "Cảm ơn anh nhiều lắm.",
+                "en": "Thank you very much."
+              }
+            ]
+          },
+          {
+            "subtitle": "Negative",
+            "pattern": "[Subject] + không + [Verb / Adjective] + lắm.",
+            "explanation": "With negative sentences, không ... lắm means not very or not ... very much.",
+            "examples": [
+              {
+                "vi": "Gà này không ngon lắm.",
+                "en": "This chicken isn't very delicious."
+              },
+              {
+                "vi": "Anh không thích ở nhà lắm.",
+                "en": "He doesn't like staying at home very much."
+              },
+              {
+                "vi": "Hôm nay trời không lạnh lắm.",
+                "en": "It isn't very cold today."
+              },
+              {
+                "vi": "Mình không mệt lắm.",
+                "en": "I'm not very tired."
+              }
+            ]
+          }
+        ],
+        "extraTips": [
+          {
+            "label": "💡 Language Tip",
+            "text": "Lắm comes after the verb or adjective. Compare:",
+            "table": {
+              "headers": [
+                "Vietnamese",
+                "Meaning"
+              ],
+              "rows": [
+                [
+                  "Mình thích cà phê.",
+                  "I like coffee."
+                ],
+                [
+                  "Mình thích cà phê lắm.",
+                  "I like coffee a lot."
+                ],
+                [
+                  "Mình không thích cà phê.",
+                  "I don't like coffee."
+                ],
+                [
+                  "Mình không thích cà phê lắm.",
+                  "I don't like coffee very much."
+                ]
+              ]
+            },
+            "footer": "Notice that không thích lắm is softer and more polite than simply saying không thích."
+          },
+          {
+            "label": "💡 Levels of Liking",
+            "text": "Không thích 🖤🖤\nKhông thích lắm 🖤🤍\nThích 🤍\nThích lắm 🤍🤍"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does lắm do?",
+            "options": [
+              "It makes the meaning stronger.",
+              "It makes the meaning weaker.",
+              "It shows the past."
+            ],
+            "answer": "It makes the meaning stronger."
+          },
+          {
+            "question": "Which sentence means \"This phở is very delicious.\"",
+            "options": [
+              "Phở này ngon.",
+              "Phở này ngon lắm.",
+              "Phở này không ngon."
+            ],
+            "answer": "Phở này ngon lắm."
+          },
+          {
+            "question": "Which sentence means \"I don't like coffee very much.\"",
+            "options": [
+              "Mình thích cà phê.",
+              "Mình thích cà phê lắm.",
+              "Mình không thích cà phê lắm."
+            ],
+            "answer": "Mình không thích cà phê lắm."
+          },
+          {
+            "question": "Which sentence expresses the strongest liking?",
+            "options": [
+              "Mình không thích cà phê.",
+              "Mình không thích cà phê lắm.",
+              "Mình thích cà phê lắm."
+            ],
+            "answer": "Mình thích cà phê lắm."
+          },
+          {
+            "question": "Which sentence means \"I'm not very tired.\"",
+            "options": [
+              "Mình mệt lắm.",
+              "Mình đang mệt.",
+              "Mình không mệt lắm."
+            ],
+            "answer": "Mình không mệt lắm."
+          },
+          {
+            "question": "Which sentence means \"Thank you very much.\"",
+            "options": [
+              "Cảm ơn anh.",
+              "Cảm ơn anh nhiều lắm.",
+              "Anh cảm ơn nhiều."
+            ],
+            "answer": "Cảm ơn anh nhiều lắm."
+          }
         ]
       },
       {
         "id": "g3",
-        "title": "Lắm — câu phủ định: Chủ ngữ + không + Động từ/Tính từ + lắm",
-        "explanation": "",
-        "examples": [
-          "Gà này không ngon lắm.",
-          "Anh không thích ở nhà lắm.",
-          "Hôm nay trời không lạnh lắm.",
-          "Mình không mệt lắm."
-        ]
-      },
-      {
-        "id": "g4",
-        "title": "Thang mức độ 'thích'",
-        "explanation": "",
-        "examples": [
-          "Không thích 🖤🖤",
-          "Không thích lắm 🖤🤍",
-          "Thích 🤍",
-          "Thích lắm 🤍🤍"
+        "title": "Quiz tổng",
+        "quiz": [
+          {
+            "question": "How do you ask \"What color is your motorbike?\"",
+            "options": [
+              "Xe máy của bạn là màu gì?",
+              "Xe máy của bạn màu gì?",
+              "Xe máy của bạn màu thế nào?",
+              "Xe máy của bạn có màu không?"
+            ],
+            "answer": "Xe máy của bạn màu gì?"
+          },
+          {
+            "question": "Which answer means \"My motorbike is white.\"",
+            "options": [
+              "Xe máy của mình trắng.",
+              "Xe máy của mình là trắng.",
+              "Xe máy của mình màu trắng.",
+              "Xe máy mình trắng màu."
+            ],
+            "answer": "Xe máy của mình màu trắng."
+          },
+          {
+            "question": "Which sentence means \"What color shirt are you wearing?\"",
+            "options": [
+              "Em mặc áo gì?",
+              "Em thích áo màu gì?",
+              "Em đang mặc áo màu gì?",
+              "Em thường mặc áo màu gì?"
+            ],
+            "answer": "Em đang mặc áo màu gì?"
+          },
+          {
+            "question": "Complete the sentence which means \"He likes a black phone.\": Anh ấy thích điện thoại _________.",
+            "options": [
+              "xanh.",
+              "màu đen.",
+              "xám màu.",
+              "là nâu."
+            ],
+            "answer": "màu đen."
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Xe máy của bạn màu gì?\nB: Xe máy của mình màu đỏ.",
+              "A: Xe máy của bạn màu gì?\nB: Xe máy của mình đỏ màu.",
+              "A: Xe máy của bạn màu gì?\nB: Của mình đỏ.",
+              "A: Xe máy của bạn màu gì?\nB: Xe máy đỏ mình."
+            ],
+            "answer": "A: Xe máy của bạn màu gì?\nB: Xe máy của mình màu đỏ."
+          },
+          {
+            "question": "Which sentence that means \"This morning I was very tired.\"",
+            "options": [
+              "Sáng qua mình vui lắm.",
+              "Hôm nay mình mệt.",
+              "Bây giờ mình không vui lắm.",
+              "Sáng nay mình mệt lắm."
+            ],
+            "answer": "Sáng qua mình vui lắm."
+          },
+          {
+            "question": "Which sentence means \"This phở is very delicious.\"",
+            "options": [
+              "Phở này ngon.",
+              "Phở này ngon lắm.",
+              "Phở này không ngon.",
+              "Phở này có ngon."
+            ],
+            "answer": "Phở này ngon lắm."
+          },
+          {
+            "question": "Which sentence means \"I don't like coffee very much.\"",
+            "options": [
+              "Mình không thích cà phê.",
+              "Mình thích cà phê.",
+              "Mình không thích cà phê lắm.",
+              "Mình thích cà phê lắm."
+            ],
+            "answer": "Mình không thích cà phê lắm."
+          },
+          {
+            "question": "Which sentence expresses the strongest liking?",
+            "options": [
+              "Mình không thích cà phê.",
+              "Mình không thích cà phê lắm.",
+              "Mình thích cà phê.",
+              "Mình thích cà phê lắm."
+            ],
+            "answer": "Mình thích cà phê lắm."
+          },
+          {
+            "question": "Which sentence means \"I'm not very tired.\"",
+            "options": [
+              "Mình mệt lắm.",
+              "Mình đang mệt.",
+              "Mình không mệt lắm.",
+              "Mình thường mệt."
+            ],
+            "answer": "Mình không mệt lắm."
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Anh ấy thích màu gì?\nB: Mình thích màu đen lắm.",
+              "A: Bạn thích màu gì?\nB: Mình màu đen lắm.",
+              "A: Bạn có thích màu đen không?\nB: Mình không. Mình thích màu trắng.",
+              "A: Bạn thích màu gì?\nB: Mình màu thích đen."
+            ],
+            "answer": "A: Bạn có thích màu đen không?\nB: Mình không. Mình thích màu trắng."
+          },
+          {
+            "question": "Which sentence means \"She likes white very much.\"",
+            "options": [
+              "Chị ấy màu trắng lắm.",
+              "Chị ấy thích màu trắng.",
+              "Chị ấy thích màu trắng lắm.",
+              "Chị ấy đang màu trắng."
+            ],
+            "answer": "Chị ấy thích màu trắng lắm."
+          }
         ]
       }
     ]
