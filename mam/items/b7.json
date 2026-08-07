@@ -130,83 +130,451 @@
     "points": [
       {
         "id": "g1",
-        "title": "Có hàng chục: [Hàng trăm] + trăm + [Hàng chục] + [Hàng đơn vị]",
-        "explanation": "",
+        "title": "Reading Numbers from 100 to 999",
+        "pattern": "[Hundreds] + trăm + [Tens] + [Ones]",
+        "explanation": "Numbers from 100 to 999 are read by saying the hundreds, the tens, and the ones.",
         "examples": [
-          "Một trăm ba mươi - 130",
-          "Bốn trăm mười - 410",
-          "Hai trăm sáu tư - 264",
-          "Bảy trăm năm lăm - 755",
-          "Chín trăm tám mốt - 981"
+          {
+            "vi": "Một trăm ba mươi.",
+            "en": "130"
+          },
+          {
+            "vi": "Bốn trăm mười.",
+            "en": "410"
+          },
+          {
+            "vi": "Hai trăm sáu tư.",
+            "en": "264"
+          },
+          {
+            "vi": "Bảy trăm năm lăm.",
+            "en": "755"
+          },
+          {
+            "vi": "Chín trăm tám mốt.",
+            "en": "981"
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "The pronunciation rules you learned for mốt, tư, and lăm still apply in larger numbers. Compare:",
+          "examples": [
+            {
+              "vi": "Hai trăm sáu tư",
+              "en": "264"
+            },
+            {
+              "vi": "Bảy trăm năm lăm",
+              "en": "755"
+            },
+            {
+              "vi": "Chín trăm tám mốt",
+              "en": "981"
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Which number is 264?",
+            "options": [
+              "Hai trăm bốn sáu",
+              "Hai sáu tư",
+              "Hai trăm sáu tư"
+            ],
+            "answer": "Hai trăm sáu tư"
+          },
+          {
+            "question": "Which number is 755?",
+            "options": [
+              "Bảy trăm năm lăm",
+              "Bảy trăm năm năm",
+              "Bảy trăm lăm năm"
+            ],
+            "answer": "Bảy trăm năm lăm"
+          },
+          {
+            "question": "Which number is 981?",
+            "options": [
+              "Chín trăm tám một",
+              "Chín trăm tám mốt",
+              "Chín tám mốt"
+            ],
+            "answer": "Chín trăm tám mốt"
+          },
+          {
+            "question": "Which sentence means 410?",
+            "options": [
+              "Bốn trăm mười",
+              "Một trăm bốn mươi",
+              "Bốn một không"
+            ],
+            "answer": "Bốn trăm mười"
+          },
+          {
+            "question": "Which sentence is NOT the natural pronunciation? (131: Một trăm ba mốt)",
+            "options": [
+              "Hai trăm sáu tư",
+              "Bảy trăm năm lăm",
+              "Chín trăm tám một"
+            ],
+            "answer": "Chín trăm tám một"
+          }
         ]
       },
       {
         "id": "g2",
-        "title": "Không có hàng chục: [Hàng trăm] + trăm + lẻ + [Hàng đơn vị]",
-        "explanation": "",
+        "title": "Reading Numbers with Zero Tens",
+        "pattern": "[Hundreds] + trăm + lẻ + [Ones]",
+        "explanation": "When the tens digit is 0, use lẻ before the last digit.",
         "examples": [
-          "Hai trăm lẻ bảy - 207",
-          "Năm trăm lẻ sáu - 506",
-          "Bốn trăm lẻ chín - 409",
-          "Tám trăm lẻ hai - 802"
+          {
+            "vi": "Hai trăm lẻ bảy.",
+            "en": "207"
+          },
+          {
+            "vi": "Năm trăm lẻ sáu.",
+            "en": "506"
+          },
+          {
+            "vi": "Bốn trăm lẻ chín.",
+            "en": "409"
+          },
+          {
+            "vi": "Tám trăm lẻ hai.",
+            "en": "802"
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "Use lẻ only when there is no tens digit. Compare:",
+          "examples": [
+            {
+              "vi": "Hai trăm sáu tư",
+              "en": "264"
+            },
+            {
+              "vi": "Hai trăm lẻ bảy",
+              "en": "207"
+            }
+          ],
+          "footer": "Notice that lẻ is not used when the tens digit is 1 or higher."
+        },
+        "quiz": [
+          {
+            "question": "Which number is 207?",
+            "options": [
+              "Hai trăm lẻ bảy",
+              "Hai trăm bảy",
+              "Hai lẻ bảy"
+            ],
+            "answer": "Hai trăm lẻ bảy"
+          },
+          {
+            "question": "Which sentence means 506?",
+            "options": [
+              "Năm sáu",
+              "Năm trăm sáu",
+              "Năm trăm lẻ sáu"
+            ],
+            "answer": "Năm trăm lẻ sáu"
+          },
+          {
+            "question": "Which sentence means 409?",
+            "options": [
+              "Bốn trăm chín",
+              "Bốn trăm lẻ chín",
+              "Bốn chín"
+            ],
+            "answer": "Bốn trăm lẻ chín"
+          },
+          {
+            "question": "Which sentence means 810?",
+            "options": [
+              "Tám trăm mười",
+              "Tám trăm lẻ mười",
+              "Tám mười"
+            ],
+            "answer": "Tám trăm mười"
+          },
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "Năm trăm lẻ bảy",
+              "Hai trăm lẻ sáu tư",
+              "Bốn trăm lẻ lăm"
+            ],
+            "answer": "Hai trăm lẻ sáu tư"
+          }
         ]
       },
       {
         "id": "g3",
-        "title": "Hàng ngàn: [X] + ngàn",
-        "explanation": "",
+        "title": "Reading Thousands",
+        "pattern": "[Number] + ngàn",
+        "explanation": "To say numbers in the thousands, add ngàn after the number. The number before ngàn can be one digit, two digits, or three digits.",
         "examples": [
-          "Năm ngàn - 5,000",
-          "Mười ngàn - 10,000",
-          "Hai mươi ngàn - 20,000",
-          "Bốn lăm ngàn - 45,000",
-          "Một trăm tám tư ngàn - 184,000",
-          "Bảy trăm ba mốt ngàn - 731,000"
+          {
+            "vi": "Năm ngàn.",
+            "en": "5,000"
+          },
+          {
+            "vi": "Mười ngàn.",
+            "en": "10,000"
+          },
+          {
+            "vi": "Hai mươi ngàn.",
+            "en": "20,000"
+          },
+          {
+            "vi": "Bốn lăm ngàn.",
+            "en": "45,000"
+          },
+          {
+            "vi": "Một trăm tám tư ngàn.",
+            "en": "184,000"
+          },
+          {
+            "vi": "Bảy trăm ba mốt ngàn.",
+            "en": "731,000"
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "The same reading rules for mốt, tư, and lăm still apply before ngàn. Compare:",
+          "examples": [
+            {
+              "vi": "Bốn lăm ngàn.",
+              "en": "45,000"
+            },
+            {
+              "vi": "Một trăm tám tư ngàn.",
+              "en": "184,000"
+            },
+            {
+              "vi": "Bảy trăm ba mốt ngàn.",
+              "en": "731,000"
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Which sentence means 5,000?",
+            "options": [
+              "Năm trăm",
+              "Năm ngàn",
+              "Năm mươi"
+            ],
+            "answer": "Năm ngàn"
+          },
+          {
+            "question": "Which sentence means 20,000?",
+            "options": [
+              "Hai ngàn",
+              "Hai mươi",
+              "Hai mươi ngàn"
+            ],
+            "answer": "Hai mươi ngàn"
+          },
+          {
+            "question": "Which sentence means 45,000?",
+            "options": [
+              "Bốn năm ngàn",
+              "Bốn lăm ngàn",
+              "Bốn mươi ngàn"
+            ],
+            "answer": "Bốn lăm ngàn"
+          },
+          {
+            "question": "Which sentence means 184,000?",
+            "options": [
+              "Một trăm tám bốn ngàn",
+              "Một trăm bốn tám ngàn",
+              "Một tám tư ngàn"
+            ],
+            "answer": "Một trăm tám bốn ngàn"
+          },
+          {
+            "question": "Which sentence means 731,000?",
+            "options": [
+              "Bảy trăm ba một ngàn",
+              "Bảy trăm ba mốt ngàn",
+              "Bảy ba mốt ngàn"
+            ],
+            "answer": "Bảy trăm ba mốt ngàn"
+          }
         ]
       },
       {
         "id": "g4",
-        "title": "Hỏi giá tiền — Của + [danh xưng]",
-        "explanation": "Dùng khi hỏi tổng tiền của một người.",
-        "examples": [
-          "Của mình bao nhiêu tiền? - How much is mine?"
-        ]
-      },
-      {
-        "id": "g5",
-        "title": "Hỏi giá tiền — Cái này / Cái kia",
-        "explanation": "Dùng khi không biết hoặc không muốn nói tên món.",
-        "examples": [
-          "Cái này bao nhiêu tiền? - How much is this?",
-          "Cái kia bao nhiêu tiền? - How much is that?"
-        ]
-      },
-      {
-        "id": "g6",
-        "title": "Hỏi giá tiền — [Danh từ] + này",
-        "explanation": "",
-        "examples": [
-          "Cơm này bao nhiêu tiền? - How much is this rice dish?",
-          "Cà phê này bao nhiêu tiền? - How much is this coffee?",
-          "Bánh ngọt này bao nhiêu tiền? - How much is this cake?"
-        ]
-      },
-      {
-        "id": "g7",
-        "title": "Nói giá tiền — Của + [Danh xưng] + [X] ngàn (đồng)",
-        "explanation": "",
-        "examples": [
-          "Của anh bốn lăm ngàn - Yours is 45,000 dong",
-          "Của chị hai trăm ba tư ngàn đồng - Yours is 234,000 dong"
-        ]
-      },
-      {
-        "id": "g8",
-        "title": "Nói giá tiền — Cái/[Danh từ] + này + [X] ngàn (đồng)",
-        "explanation": "",
-        "examples": [
-          "Cái này tám mốt ngàn - This is 81,000 dong",
-          "Bánh này một trăm lẻ năm ngàn đồng - This cake is 105,000 dong"
+        "title": "Asking & Telling the Price",
+        "subsections": [
+          {
+            "subtitle": "Asking About Prices — Pattern 1",
+            "pattern": "Của + [Pronoun] + bao nhiêu tiền?",
+            "explanation": "Use this pattern to ask how much you need to pay. This is commonly used when paying at a restaurant or a shop.",
+            "examples": [
+              {
+                "vi": "Của mình bao nhiêu tiền?",
+                "en": "How much is mine?"
+              },
+              {
+                "vi": "Của em bao nhiêu tiền?",
+                "en": "How much do I need to pay?"
+              },
+              {
+                "vi": "Của anh bao nhiêu tiền?",
+                "en": "How much is his?"
+              }
+            ]
+          },
+          {
+            "subtitle": "Asking About Prices — Pattern 2",
+            "pattern": "Cái này / Cái kia + bao nhiêu tiền?",
+            "explanation": "Use this pattern when you don't know or don't want to say the name of the item.",
+            "examples": [
+              {
+                "vi": "Cái này bao nhiêu tiền?",
+                "en": "How much is this?"
+              },
+              {
+                "vi": "Cái kia bao nhiêu tiền?",
+                "en": "How much is that?"
+              }
+            ]
+          },
+          {
+            "subtitle": "Asking About Prices — Pattern 3",
+            "pattern": "[Noun] + này + bao nhiêu tiền?",
+            "explanation": "Use this pattern when you know the name of the item.",
+            "examples": [
+              {
+                "vi": "Cơm này bao nhiêu tiền?",
+                "en": "How much is this rice dish?"
+              },
+              {
+                "vi": "Cà phê này bao nhiêu tiền?",
+                "en": "How much is this coffee?"
+              },
+              {
+                "vi": "Bánh ngọt này bao nhiêu tiền?",
+                "en": "How much is this cake?"
+              }
+            ],
+            "extraTip": {
+              "label": "💡 Language Tip",
+              "text": "If you know the name of the item, use: [Noun] này bao nhiêu tiền? If you don't know the name, simply say: Cái này bao nhiêu tiền?",
+              "footer": "Both are very common in everyday Vietnamese."
+            }
+          },
+          {
+            "subtitle": "Telling the Price — Pattern 1",
+            "pattern": "Của + [Pronoun] + [Price] (ngàn/đồng).",
+            "explanation": "Use this pattern to tell someone how much they need to pay.",
+            "examples": [
+              {
+                "vi": "Của anh bốn lăm ngàn.",
+                "en": "Yours is 45,000 đồng."
+              },
+              {
+                "vi": "Của chị hai trăm ba tư ngàn đồng.",
+                "en": "Yours is 234,000 đồng."
+              },
+              {
+                "vi": "Của em tám mốt ngàn.",
+                "en": "Yours is 81,000 đồng."
+              }
+            ]
+          },
+          {
+            "subtitle": "Telling the Price — Pattern 2",
+            "pattern": "Cái này / [Noun] này + [Price] (ngàn/đồng).",
+            "explanation": "Use this pattern to tell the price of an item.",
+            "examples": [
+              {
+                "vi": "Cái này tám mốt ngàn.",
+                "en": "This one is 81,000 đồng."
+              },
+              {
+                "vi": "Bánh này một trăm lẻ năm ngàn đồng.",
+                "en": "This cake is 105,000 đồng."
+              },
+              {
+                "vi": "Cà phê này ba lăm ngàn.",
+                "en": "This coffee is 35,000 đồng."
+              }
+            ],
+            "extraTip": {
+              "label": "💡 Language Tip",
+              "text": "In everyday Vietnamese, people often leave out đồng because the currency is already understood. Compare:",
+              "examples": [
+                {
+                  "vi": "Bốn lăm ngàn.",
+                  "en": "45,000 đồng."
+                },
+                {
+                  "vi": "Một trăm lẻ năm ngàn.",
+                  "en": "105,000 đồng."
+                }
+              ],
+              "footer": "Both are natural, but adding đồng is a little more formal."
+            }
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Which sentence means \"How much is this?\"",
+            "options": [
+              "Cái này bao nhiêu tiền?",
+              "Cái này mấy tiền?",
+              "Của mình bao nhiêu?"
+            ],
+            "answer": "Cái này bao nhiêu tiền?"
+          },
+          {
+            "question": "Which sentence means \"How much is this coffee?\"",
+            "options": [
+              "Cà phê này bao nhiêu tiền?",
+              "Cà phê này mấy tiền?",
+              "Cà phê này mấy?"
+            ],
+            "answer": "Cà phê này bao nhiêu tiền?"
+          },
+          {
+            "question": "Which sentence asks how much you need to pay?",
+            "options": [
+              "Của mình bao nhiêu?",
+              "Của mình mấy?",
+              "Mình này bao nhiêu tiền?"
+            ],
+            "answer": "Của mình bao nhiêu?"
+          },
+          {
+            "question": "Which answer means \"Yours is 45,000 đồng.\"",
+            "options": [
+              "Của anh bốn lăm ngàn.",
+              "Anh của bốn lăm ngàn.",
+              "Bốn lăm ngàn của anh."
+            ],
+            "answer": "Của anh bốn lăm ngàn."
+          },
+          {
+            "question": "Which sentence means \"This cake is 105,000 dong.\"",
+            "options": [
+              "Bánh này một trăm lẻ lăm ngàn đồng.",
+              "Bánh này một trăm năm ngàn.",
+              "Bánh này một trăm lẻ năm ngàn đồng."
+            ],
+            "answer": "Bánh này một trăm lẻ năm ngàn đồng."
+          },
+          {
+            "question": "Which sentence is the most natural?",
+            "options": [
+              "Của em ba trăm ngàn tiền.",
+              "Em của hai trăm ba tư.",
+              "Của em hai trăm ba tư ngàn."
+            ],
+            "answer": "Của em hai trăm ba tư ngàn."
+          }
         ]
       }
     ]
