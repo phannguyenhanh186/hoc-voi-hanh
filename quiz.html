@@ -60,7 +60,7 @@
     function createResultsRing(total) {
       const svgNS = 'http://www.w3.org/2000/svg';
       const r = 42, c = 2 * Math.PI * r;
-      const wrap = el('div', 'results-summary');
+      const wrap = el('div', 'results-summary hidden');
       const ringWrap = el('div', 'results-ring-wrap');
       const svg = document.createElementNS(svgNS, 'svg');
       svg.setAttribute('viewBox', '0 0 100 100');
@@ -108,8 +108,9 @@
         rowWrong.count.textContent = incorrect + ' câu';
         rowSkip.count.textContent = skipped + ' câu';
       }
+      function reveal() { wrap.classList.remove('hidden'); }
       update(0, 0);
-      return { el: wrap, update: update };
+      return { el: wrap, update: update, reveal: reveal };
     }
 
     function renderQuiz(title, quiz) {
@@ -138,9 +139,6 @@
             }
             explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
             state[idx] = ok;
-            const correctCount = state.filter(function (s) { return s === true; }).length;
-            const wrongCount = state.filter(function (s) { return s === false; }).length;
-            ring.update(correctCount, wrongCount);
           });
           optWrap.appendChild(btn);
         });
@@ -151,6 +149,15 @@
       if (!quiz || !quiz.length) {
         box.appendChild(el('p', 'note', 'Chưa có câu hỏi cho phần này.'));
       } else {
+        const submitBtn = el('button', 'btn-purple btn-submit', 'Nộp bài ✓');
+        submitBtn.type = 'button';
+        submitBtn.addEventListener('click', function () {
+          const correctCount = state.filter(function (s) { return s === true; }).length;
+          const wrongCount = state.filter(function (s) { return s === false; }).length;
+          ring.update(correctCount, wrongCount);
+          ring.reveal();
+        });
+        box.appendChild(submitBtn);
         box.appendChild(ring.el);
       }
       body.appendChild(box);
