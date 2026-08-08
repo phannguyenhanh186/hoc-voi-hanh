@@ -1243,8 +1243,10 @@
         });
       });
       const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const tracker = trackQuizState(selects.length);
       checkBtn.addEventListener('click', function () {
-        selects.forEach(function (row) {
+        selects.forEach(function (row, idx) {
+          if (!row._select.value) { return; }
           const ok = row._select.value === row._select.dataset.answer;
           row._resultSlot.innerHTML = '';
           row._resultSlot.appendChild(checkRow(ok));
@@ -1252,9 +1254,11 @@
             const correctText = ex.answerBank.find(function (a) { return a.id === row._select.dataset.answer; });
             row._resultSlot.appendChild(el('span', 'correct-hint', correctText ? ' (' + correctText.text + ')' : ''));
           }
+          tracker.set(idx, ok);
         });
       });
       box.appendChild(checkBtn);
+      if (selects.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1284,15 +1288,19 @@
         box.appendChild(bank);
       }
       const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const tracker = trackQuizState(allInputs.length);
       checkBtn.addEventListener('click', function () {
-        allInputs.forEach(function (input) {
+        allInputs.forEach(function (input, idx) {
+          if (!input.value.trim()) { input.classList.remove('input-ok', 'input-bad'); return; }
           const ok = norm(input.value) === norm(input.dataset.answer);
           input.classList.remove('input-ok', 'input-bad');
           input.classList.add(ok ? 'input-ok' : 'input-bad');
           if (!ok) input.title = 'Đáp án: ' + input.dataset.answer;
+          tracker.set(idx, ok);
         });
       });
       box.appendChild(checkBtn);
+      if (allInputs.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1344,14 +1352,21 @@
       });
       const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
       const resultLine = el('p', 'ex-instruction');
+      const expectedWords = [];
+      (ex.categories || []).forEach(function (cat) { (cat.answers || []).forEach(function (w) { expectedWords.push({ word: w, catId: cat.id }); }); });
+      const tracker = trackQuizState(expectedWords.length);
       checkBtn.addEventListener('click', function () {
-        let correct = 0, total = 0;
-        (ex.categories || []).forEach(function (cat) {
-          (cat.answers || []).forEach(function (w) { total++; if (assignment[w] === cat.id) correct++; });
+        let correct = 0;
+        expectedWords.forEach(function (e, idx) {
+          if (!(e.word in assignment)) { return; }
+          const ok = assignment[e.word] === e.catId;
+          if (ok) correct++;
+          tracker.set(idx, ok);
         });
-        resultLine.textContent = 'Đúng ' + correct + '/' + total + '.';
+        resultLine.textContent = 'Đúng ' + correct + '/' + expectedWords.length + '.';
       });
       box.appendChild(checkBtn); box.appendChild(resetBtn); box.appendChild(resultLine);
+      if (expectedWords.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1359,7 +1374,9 @@
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
-      (ex.items || []).forEach(function (item) {
+      const items = ex.items || [];
+      const tracker = trackQuizState(items.length);
+      items.forEach(function (item, itemIdx) {
         const itemBox = el('div', 'scramble-item');
         itemBox.appendChild(el('p', 'match-prompt', item.prompt));
         const built = el('div', 'scramble-built');
@@ -1395,10 +1412,12 @@
           resultSlot.innerHTML = '';
           resultSlot.appendChild(checkRow(ok));
           if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+          tracker.set(itemIdx, ok);
         });
         itemBox.appendChild(checkBtn); itemBox.appendChild(resultSlot);
         box.appendChild(itemBox);
       });
+      if (items.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1429,15 +1448,19 @@
         box.appendChild(row);
       });
       const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const tracker = trackQuizState(rows.length);
       checkBtn.addEventListener('click', function () {
-        rows.forEach(function (r) {
+        rows.forEach(function (r, idx) {
+          if (!r.numInput.value.trim() && !r.orderInput.value.trim()) { r.resultSlot.innerHTML = ''; return; }
           const ok = norm(r.numInput.value) === norm(r.numInput.dataset.answer) &&
                      norm(r.orderInput.value) === norm(r.orderInput.dataset.answer);
           r.resultSlot.innerHTML = '';
           r.resultSlot.appendChild(checkRow(ok));
+          tracker.set(idx, ok);
         });
       });
       box.appendChild(checkBtn);
+      if (rows.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1517,19 +1540,23 @@
       });
       const resultSlot = el('span', 'result-slot dialogue-fill-result');
       const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const tracker = trackQuizState(selects.length);
       checkBtn.addEventListener('click', function () {
         let allOk = true;
-        selects.forEach(function (s) {
+        selects.forEach(function (s, idx) {
+          if (!s.value) { s.classList.remove('select-wrong', 'select-ok'); allOk = false; return; }
           const ok = s.value === s.dataset.answer;
           if (!ok) allOk = false;
-          s.classList.toggle('select-wrong', s.value !== '' && !ok);
+          s.classList.toggle('select-wrong', !ok);
           s.classList.toggle('select-ok', ok);
+          tracker.set(idx, ok);
         });
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(allOk));
       });
       box.appendChild(checkBtn);
       box.appendChild(resultSlot);
+      if (selects.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1559,21 +1586,25 @@
       });
       const resultSlot = el('span', 'result-slot dialogue-fill-result');
       const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const tracker = trackQuizState(inputs.length);
       checkBtn.addEventListener('click', function () {
         let allOk = true;
-        inputs.forEach(function (pair) {
+        inputs.forEach(function (pair, idx) {
           const inp = pair.input;
+          if (!inp.value.trim()) { inp.classList.remove('select-wrong', 'select-ok'); allOk = false; return; }
           const val = norm(inp.value);
           const ok = pair.accepted.some(function (a) { return norm(a) === val; });
           if (!ok) allOk = false;
-          inp.classList.toggle('select-wrong', inp.value !== '' && !ok);
+          inp.classList.toggle('select-wrong', !ok);
           inp.classList.toggle('select-ok', ok);
+          tracker.set(idx, ok);
         });
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(allOk));
       });
       box.appendChild(checkBtn);
       box.appendChild(resultSlot);
+      if (inputs.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1590,7 +1621,7 @@
       return pad;
     }
 
-    function renderNumberFillItem(item, withAudio) {
+    function renderNumberFillItem(item, withAudio, onResult) {
       const wrap = el('div', 'text-answer-item number-fill-item');
       if (withAudio) {
         const row = el('div', 'listen-row');
@@ -1616,6 +1647,7 @@
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(ok));
         if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+        if (onResult) onResult(ok);
       });
       wrap.appendChild(checkBtn); wrap.appendChild(resultSlot);
       return wrap;
@@ -1625,7 +1657,10 @@
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', nf.title || 'Điền số vào chỗ trống'));
       if (nf.instruction) box.appendChild(el('p', 'ex-instruction', nf.instruction));
-      (nf.items || []).forEach(function (item) { box.appendChild(renderNumberFillItem(item, true)); });
+      const items = nf.items || [];
+      const tracker = trackQuizState(items.length);
+      items.forEach(function (item, idx) { box.appendChild(renderNumberFillItem(item, true, function (ok) { tracker.set(idx, ok); })); });
+      if (items.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1633,7 +1668,10 @@
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
-      (ex.items || []).forEach(function (item) { box.appendChild(renderNumberFillItem(item, false)); });
+      const items = ex.items || [];
+      const tracker = trackQuizState(items.length);
+      items.forEach(function (item, idx) { box.appendChild(renderNumberFillItem(item, false, function (ok) { tracker.set(idx, ok); })); });
+      if (items.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1681,13 +1719,17 @@
 
       const resultSlot = el('span', 'result-slot');
       const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const tracker = trackQuizState(1);
       checkBtn.addEventListener('click', function () {
+        if (!order.length) return;
         const ok = order.length === turns.length && order.every(function (idx, pos) { return idx === pos; });
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(ok));
+        tracker.set(0, ok);
       });
       box.appendChild(checkBtn);
       box.appendChild(resultSlot);
+      if (turns.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
