@@ -1,0 +1,325 @@
+{
+  "id": "b13",
+  "num": 13,
+  "title": "Bạn đang ở đâu?",
+  "vocab": {
+    "items": []
+  },
+  "grammar": {
+    "points": [
+      {
+        "id": "g1",
+        "title": "Asking Where Someone or Something Is",
+        "pattern": "[Subject] + ở đâu?",
+        "explanation": "Use this pattern to ask where someone or something is. You can also use ở đâu to ask where an activity takes place.",
+        "examples": [
+          {
+            "vi": "Bạn ở đâu?",
+            "en": "Where are you?"
+          },
+          {
+            "vi": "Nhà chị ấy ở đâu?",
+            "en": "Where is her house?"
+          },
+          {
+            "vi": "Bây giờ em đang ở đâu?",
+            "en": "Where are you now?"
+          },
+          {
+            "vi": "Nhà vệ sinh ở đâu?",
+            "en": "Where is the restroom?"
+          },
+          {
+            "vi": "Chị đi chơi ở đâu?",
+            "en": "Where did you go to hang out?"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "How do you ask \"Where are you?\"",
+            "options": [
+              "Bạn ở gì?",
+              "Bạn ở đâu?",
+              "Bạn là đâu?",
+              "Bạn đâu ở?"
+            ],
+            "answer": "Bạn ở đâu?"
+          },
+          {
+            "question": "Which sentence means \"Where is her house?\"",
+            "options": [
+              "Nhà ở chị ấy đâu?",
+              "Nhà chị ấy ở đâu?",
+              "Chị ấy ở nhà đâu?"
+            ],
+            "answer": "Nhà ở chị ấy đâu?"
+          },
+          {
+            "question": "Complete the sentence: Nhà vệ sinh ở ______?",
+            "options": [
+              "gì",
+              "đâu",
+              "thế nào"
+            ],
+            "answer": "đâu"
+          },
+          {
+            "question": "Which sentence means \"Where are you now?\"",
+            "options": [
+              "Hôm qua em ở gì?",
+              "Hôm nay em ở đâu?",
+              "Bây giờ em đang ở đâu?"
+            ],
+            "answer": "Bây giờ em đang ở đâu?"
+          },
+          {
+            "question": "Which question asks where someone went to hang out?",
+            "options": [
+              "Chị đi chơi ở đâu?",
+              "Chị đi chơi khi nào?",
+              "Chị thích đi chơi không?",
+              "Chị đang đi chơi gì?"
+            ],
+            "answer": "Chị đi chơi ở đâu?"
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "title": "Saying Where Someone or Something Is",
+        "pattern": "[Subject] + ở + [Place]",
+        "explanation": "Use this pattern to say where someone or something is. You can also use ở to say where an activity takes place.",
+        "examples": [
+          {
+            "vi": "Mình ở nhà.",
+            "en": "I'm at home."
+          },
+          {
+            "vi": "Nhà chị ấy ở Sài Gòn.",
+            "en": "Her house is in Saigon."
+          },
+          {
+            "vi": "Bây giờ em đang ở văn phòng.",
+            "en": "I'm at the office now."
+          },
+          {
+            "vi": "Nhà vệ sinh ở bên phải.",
+            "en": "The restroom is on the right."
+          },
+          {
+            "vi": "Chị đi chơi ở trung tâm.",
+            "en": "She went out in the city center."
+          }
+        ],
+        "extraTip": {
+          "label": "💡 Language Tip",
+          "text": "Ở is used to talk about location. Depending on the context, it can mean at, in, or on in English.",
+          "examples": [
+            {
+              "vi": "ở nhà",
+              "en": "at home"
+            },
+            {
+              "vi": "ở Sài Gòn",
+              "en": "in Saigon"
+            },
+            {
+              "vi": "ở văn phòng",
+              "en": "at the office"
+            },
+            {
+              "vi": "ở bên phải",
+              "en": "on the right"
+            }
+          ],
+          "footer": "The English preposition changes depending on the location, but Vietnamese simply uses ở."
+        },
+        "quiz": [
+          {
+            "question": "Which sentence means \"I'm at home.\"",
+            "options": [
+              "Mình ở nhà.",
+              "Mình nhà ở.",
+              "Mình ở đâu."
+            ],
+            "answer": "Mình ở nhà."
+          },
+          {
+            "question": "Reorder the provided words to form a complete sentence: ấy/chị/Sài Gòn/ở/nhà",
+            "options": [
+              "Chị ấy nhà ở Sài Gòn.",
+              "Nhà chị ấy ở Sài Gòn.",
+              "Sài Gòn ở nhà chị ấy."
+            ],
+            "answer": "Nhà chị ấy ở Sài Gòn."
+          },
+          {
+            "question": "Which sentence means \"I'm at the office now.\"",
+            "options": [
+              "Bây giờ em đang văn phòng.",
+              "Bây giờ em văn phòng.",
+              "Bây giờ em đang ở văn phòng."
+            ],
+            "answer": "Bây giờ em đang ở văn phòng."
+          },
+          {
+            "question": "Which sentence means \"The restroom is on the right.\"",
+            "options": [
+              "Nhà vệ sinh bên phải.",
+              "Nhà vệ sinh ở bên phải.",
+              "Nhà vệ sinh là bên phải."
+            ],
+            "answer": "Nhà vệ sinh ở bên phải."
+          },
+          {
+            "question": "Which sentence means \"She went out in the city center.\"",
+            "options": [
+              "Chị đi chơi trung tâm.",
+              "Chị đi chơi ở trung tâm.",
+              "Chị đi trung tâm ở chơi."
+            ],
+            "answer": "Chị đi chơi trung tâm."
+          }
+        ]
+      },
+      {
+        "id": "g3",
+        "title": "Quiz tổng",
+        "quiz": [
+          {
+            "question": "How do you ask \"Where are you?\"",
+            "options": [
+              "Bạn làm gì?",
+              "Bạn ở đâu?",
+              "Bạn ở gì?"
+            ],
+            "answer": "Bạn ở đâu?"
+          },
+          {
+            "question": "Which sentence means \"Where is the restroom?\"",
+            "options": [
+              "Nhà vệ sinh đâu?",
+              "Nhà vệ sinh ở đâu?",
+              "Nhà vệ sinh đâu ở?"
+            ],
+            "answer": "Nhà vệ sinh ở đâu?"
+          },
+          {
+            "question": "Which sentence means \"My house is in Saigon.\"",
+            "options": [
+              "Nhà mình Sài Gòn.",
+              "Nhà mình là Sài Gòn.",
+              "Nhà mình ở Sài Gòn.",
+              "Mình ở nhà Sài Gòn."
+            ],
+            "answer": "Nhà mình ở Sài Gòn."
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Bạn đang ở đâu?\nB: Mình đang làm việc.",
+              "A: Cửa hàng tiện lợi ở đâu?\nB: Mình đang ở nhà.",
+              "A: Chị đang đi ăn ở đâu?\nB: Chị thường ăn ở nhà.",
+              "A: Anh của bạn ở đâu?\nB: Anh ấy đang ở Hà Nội."
+            ],
+            "answer": "A: Anh của bạn ở đâu?\nB: Anh ấy đang ở Hà Nội."
+          },
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "Văn phòng bên phải.",
+              "Bên phải ở văn phòng.",
+              "Văn phòng ở bên phải.",
+              "Ở bên phải văn phòng."
+            ],
+            "answer": "Văn phòng ở bên phải."
+          },
+          {
+            "question": "Which sentence means \"You usually cook at home right?\"",
+            "options": [
+              "Anh nấu ăn nhà đúng không?",
+              "Anh thường nấu ăn nhà đúng không?",
+              "Anh thường nấu ăn ở nhà đúng không?",
+              "Anh nấu ăn thường ở nhà đúng không?"
+            ],
+            "answer": "Anh thường nấu ăn ở nhà đúng không?"
+          },
+          {
+            "question": "Which sentence means \"She went out in the city center.\"",
+            "options": [
+              "Chị đi chơi ở trung tâm.",
+              "Chị ở trung tâm đi chơi.",
+              "Chị đi ở trung tâm chơi.",
+              "Chị trung tâm ở đi chơi."
+            ],
+            "answer": "Chị đi chơi ở trung tâm."
+          },
+          {
+            "question": "Which question asks where someone is right now?",
+            "options": [
+              "Anh ấy đang làm gì?",
+              "Anh ấy đang ở đâu?",
+              "Anh ấy ở đâu?",
+              "Anh ấy thường ở đâu?"
+            ],
+            "answer": "Anh ấy ở đâu?"
+          },
+          {
+            "question": "Which answer best completes the conversation?\nA: Nhà vệ sinh ở đâu?",
+            "options": [
+              "Nhà vệ sinh ở bên phải.",
+              "Nhà vệ sinh màu trắng.",
+              "Nhà vệ sinh ngon lắm.",
+              "Nhà vệ sinh bao nhiêu tiền?"
+            ],
+            "answer": "Nhà vệ sinh ở bên phải."
+          },
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "Bây giờ mình đang ở nhà.",
+              "Bây giờ mình ở đang nhà.",
+              "Bây giờ mình đang nhà ở.",
+              "Bây giờ ở mình đang nhà."
+            ],
+            "answer": "Bây giờ mình đang ở nhà."
+          },
+          {
+            "question": "Which conversation is correct?",
+            "options": [
+              "A: Mẹ của bạn đang ở đâu?\nB: Mình của mình nấu ăn.",
+              "A: Nhà chị ấy ở đâu?\nB: Nhà chị ấy ở Sài Gòn.",
+              "A: Hôm qua bạn ở đâu?\nB: Mình đang ở văn phòng.",
+              "A: Anh đang đi ăn ở đâu?\nB: Nhà anh ở Việt Nam."
+            ],
+            "answer": "A: Nhà chị ấy ở đâu?\nB: Nhà chị ấy ở Sài Gòn."
+          },
+          {
+            "question": "Which sentence means \"You're in Korea right?\"",
+            "options": [
+              "Em Hàn không đúng?",
+              "Em Hàn đúng không?",
+              "Em ở Hàn không đúng?",
+              "Em đang ở Hàn đúng không?"
+            ],
+            "answer": "Em đang ở Hàn đúng không?"
+          }
+        ]
+      }
+    ]
+  },
+  "listening": {
+    "instruction": "",
+    "groups": []
+  },
+  "reading": {
+    "passages": []
+  },
+  "preClass": {
+    "note": "",
+    "flows": []
+  },
+  "postClass": {
+    "exercises": []
+  }
+}
