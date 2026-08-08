@@ -396,9 +396,84 @@
       return wrap;
     }
 
+    // ========================================================
+    // VÒNG TRÒN KẾT QUẢ (Đúng / Sai / Bỏ qua) — dùng chung cho mọi loại quiz
+    // ========================================================
+    function createResultsRing(total) {
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const r = 42, c = 2 * Math.PI * r;
+      const wrap = el('div', 'results-summary');
+      const ringWrap = el('div', 'results-ring-wrap');
+      const svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('viewBox', '0 0 100 100');
+      svg.setAttribute('class', 'results-ring-svg');
+      const bg = document.createElementNS(svgNS, 'circle');
+      bg.setAttribute('cx', '50'); bg.setAttribute('cy', '50'); bg.setAttribute('r', String(r));
+      bg.setAttribute('class', 'ring-bg');
+      const correctArc = document.createElementNS(svgNS, 'circle');
+      correctArc.setAttribute('cx', '50'); correctArc.setAttribute('cy', '50'); correctArc.setAttribute('r', String(r));
+      correctArc.setAttribute('class', 'ring-correct');
+      const wrongArc = document.createElementNS(svgNS, 'circle');
+      wrongArc.setAttribute('cx', '50'); wrongArc.setAttribute('cy', '50'); wrongArc.setAttribute('r', String(r));
+      wrongArc.setAttribute('class', 'ring-wrong');
+      svg.appendChild(bg); svg.appendChild(correctArc); svg.appendChild(wrongArc);
+      const center = el('div', 'ring-center');
+      ringWrap.appendChild(svg);
+      ringWrap.appendChild(center);
+
+      function legendRow(cls, label) {
+        const row = el('div', 'legend-row');
+        const dot = el('span', 'legend-dot ' + cls);
+        const lbl = el('span', 'legend-label', label + ':');
+        const count = el('span', 'legend-count', '0 câu');
+        row.appendChild(dot); row.appendChild(lbl); row.appendChild(count);
+        return { row: row, count: count };
+      }
+      const rowCorrect = legendRow('dot-correct', 'Đúng');
+      const rowWrong = legendRow('dot-wrong', 'Sai');
+      const rowSkip = legendRow('dot-skip', 'Bỏ qua');
+      const legend = el('div', 'results-legend');
+      legend.appendChild(rowCorrect.row);
+      legend.appendChild(rowWrong.row);
+      legend.appendChild(rowSkip.row);
+
+      wrap.appendChild(ringWrap);
+      wrap.appendChild(legend);
+
+      function update(correct, incorrect) {
+        const skipped = Math.max(0, total - correct - incorrect);
+        const correctLen = total ? (correct / total) * c : 0;
+        const wrongLen = total ? (incorrect / total) * c : 0;
+        correctArc.setAttribute('stroke-dasharray', correctLen + ' ' + (c - correctLen));
+        correctArc.setAttribute('stroke-dashoffset', '0');
+        wrongArc.setAttribute('stroke-dasharray', wrongLen + ' ' + (c - wrongLen));
+        wrongArc.setAttribute('stroke-dashoffset', String(-correctLen));
+        center.innerHTML = '<div class="ring-score">' + correct + '/' + total + '</div><div class="ring-label">câu đúng</div>';
+        rowCorrect.count.textContent = correct + ' câu';
+        rowWrong.count.textContent = incorrect + ' câu';
+        rowSkip.count.textContent = skipped + ' câu';
+      }
+      update(0, 0);
+      return { el: wrap, update: update };
+    }
+
+    // Tiện ích: theo dõi 1 mảng trạng thái (true/false/null) và cập nhật ring tương ứng
+    function trackQuizState(total) {
+      const state = new Array(total).fill(null);
+      const ring = createResultsRing(total);
+      function set(idx, ok) {
+        state[idx] = ok;
+        const correctCount = state.filter(function (s) { return s === true; }).length;
+        const wrongCount = state.filter(function (s) { return s === false; }).length;
+        ring.update(correctCount, wrongCount);
+      }
+      return { ring: ring, set: set };
+    }
+
     function renderQuizToggle(quiz, label) {
       return makeToggleSection(label || 'Small quiz', function () {
         const wrap = el('div');
+        const tracker = trackQuizState(quiz.length);
         quiz.forEach(function (q, idx) {
           const qBox = el('div', 'reasoning-item');
           qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
@@ -411,12 +486,14 @@
               Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
               obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
               if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+              tracker.set(idx, ok);
             });
             optWrap.appendChild(obtn);
           });
           qBox.appendChild(optWrap);
           wrap.appendChild(qBox);
         });
+        wrap.appendChild(tracker.ring.el);
         return wrap;
       });
     }
@@ -710,7 +787,7 @@
       draw();
     }
 
-    function renderDictationLine(line) {
+    function renderDictationLine(line, onResult) {
       const wrap = el('div', 'dictation-item');
       const row = el('div', 'listen-row');
       row.appendChild(playBtn(line.audio));
@@ -762,6 +839,7 @@
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(ok));
         if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + line.text + ')'));
+        if (onResult) onResult(ok);
       });
       wrap.appendChild(checkBtn);
       return wrap;
@@ -793,13 +871,21 @@
       // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank — hiện từng đoạn 1, xong mới qua đoạn sau
       if (groups.length) {
         const wrap = el('div', 'exercise');
+        const totalLines = groups.reduce(function (s, g) { return s + (g.lines || []).length; }, 0);
+        const tracker = trackQuizState(totalLines);
+        const lineOffsets = [];
+        let acc = 0;
+        groups.forEach(function (g) { lineOffsets.push(acc); acc += (g.lines || []).length; });
         buildStepper(wrap, groups, function (g, gi) {
           const box = el('div');
           box.appendChild(el('h3', 'ex-title', g.title || ('Đoạn hội thoại ' + (gi + 1))));
-          (g.lines || []).forEach(function (line) { box.appendChild(renderDictationLine(line)); });
+          (g.lines || []).forEach(function (line, li) {
+            box.appendChild(renderDictationLine(line, function (ok) { tracker.set(lineOffsets[gi] + li, ok); }));
+          });
           return box;
         }, { lastLabel: 'Xong bài nghe 🎉' });
         panel.appendChild(wrap);
+        if (totalLines) panel.appendChild(tracker.ring.el);
       }
 
       // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
@@ -1368,7 +1454,9 @@
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
       if (ex.image) { const img = document.createElement('img'); img.src = ex.image; img.className = 'choice-quiz-shared-img'; box.appendChild(img); }
-      (ex.items || []).forEach(function (q) {
+      const items = ex.items || [];
+      const tracker = trackQuizState(items.length);
+      items.forEach(function (q, qIdx) {
         const qBox = el('div', 'reasoning-item');
         if (q.image) { const img = document.createElement('img'); img.src = q.image; img.className = 'choice-quiz-img'; qBox.appendChild(img); }
         if (q.context) qBox.appendChild(renderChoiceContext(q.context));
@@ -1385,6 +1473,7 @@
               Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
             }
             explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+            tracker.set(qIdx, ok);
           });
           optWrap.appendChild(btn);
         });
@@ -1392,6 +1481,7 @@
         qBox.appendChild(explainSlot);
         box.appendChild(qBox);
       });
+      if (items.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
@@ -1620,7 +1710,9 @@
         });
         box.appendChild(bankRow);
       }
-      (ex.items || []).forEach(function (item) {
+      const items = ex.items || [];
+      const tracker = trackQuizState(items.length);
+      items.forEach(function (item, itemIdx) {
         const row = el('div', 'text-answer-item');
         row.appendChild(el('p', 'match-prompt', item.prompt));
         const input = document.createElement('input');
@@ -1647,10 +1739,12 @@
           resultSlot.innerHTML = '';
           resultSlot.appendChild(checkRow(ok));
           if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+          tracker.set(itemIdx, ok);
         });
         row.appendChild(checkBtn); row.appendChild(resultSlot);
         box.appendChild(row);
       });
+      if (items.length) box.appendChild(tracker.ring.el);
       return box;
     }
 
