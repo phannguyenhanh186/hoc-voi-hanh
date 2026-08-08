@@ -806,6 +806,8 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .grammar-notes { margin: 0 0 10px; padding-left: 20px; color: var(--muted); font-size: .95rem; }
 .grammar-notes li { margin-bottom: 4px; }
 .results-summary { display: flex; align-items: center; gap: 24px; padding: 16px 4px 4px; flex-wrap: wrap; }
+.results-summary.hidden { display: none; }
+.btn-submit { margin-top: 14px; }
 .results-ring-wrap { position: relative; width: 108px; height: 108px; flex: none; }
 .results-ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .ring-bg { fill: none; stroke: #e7e7e7; stroke-width: 10; }
