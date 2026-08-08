@@ -57,12 +57,69 @@
       return wrap;
     }
 
+    function createResultsRing(total) {
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const r = 42, c = 2 * Math.PI * r;
+      const wrap = el('div', 'results-summary');
+      const ringWrap = el('div', 'results-ring-wrap');
+      const svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('viewBox', '0 0 100 100');
+      svg.setAttribute('class', 'results-ring-svg');
+      const bg = document.createElementNS(svgNS, 'circle');
+      bg.setAttribute('cx', '50'); bg.setAttribute('cy', '50'); bg.setAttribute('r', String(r));
+      bg.setAttribute('class', 'ring-bg');
+      const correctArc = document.createElementNS(svgNS, 'circle');
+      correctArc.setAttribute('cx', '50'); correctArc.setAttribute('cy', '50'); correctArc.setAttribute('r', String(r));
+      correctArc.setAttribute('class', 'ring-correct');
+      const wrongArc = document.createElementNS(svgNS, 'circle');
+      wrongArc.setAttribute('cx', '50'); wrongArc.setAttribute('cy', '50'); wrongArc.setAttribute('r', String(r));
+      wrongArc.setAttribute('class', 'ring-wrong');
+      svg.appendChild(bg); svg.appendChild(correctArc); svg.appendChild(wrongArc);
+      const center = el('div', 'ring-center');
+      ringWrap.appendChild(svg);
+      ringWrap.appendChild(center);
+      function legendRow(cls, label) {
+        const row = el('div', 'legend-row');
+        const dot = el('span', 'legend-dot ' + cls);
+        const lbl = el('span', 'legend-label', label + ':');
+        const count = el('span', 'legend-count', '0 câu');
+        row.appendChild(dot); row.appendChild(lbl); row.appendChild(count);
+        return { row: row, count: count };
+      }
+      const rowCorrect = legendRow('dot-correct', 'Đúng');
+      const rowWrong = legendRow('dot-wrong', 'Sai');
+      const rowSkip = legendRow('dot-skip', 'Bỏ qua');
+      const legend = el('div', 'results-legend');
+      legend.appendChild(rowCorrect.row);
+      legend.appendChild(rowWrong.row);
+      legend.appendChild(rowSkip.row);
+      wrap.appendChild(ringWrap);
+      wrap.appendChild(legend);
+      function update(correct, incorrect) {
+        const skipped = Math.max(0, total - correct - incorrect);
+        const correctLen = total ? (correct / total) * c : 0;
+        const wrongLen = total ? (incorrect / total) * c : 0;
+        correctArc.setAttribute('stroke-dasharray', correctLen + ' ' + (c - correctLen));
+        correctArc.setAttribute('stroke-dashoffset', '0');
+        wrongArc.setAttribute('stroke-dasharray', wrongLen + ' ' + (c - wrongLen));
+        wrongArc.setAttribute('stroke-dashoffset', String(-correctLen));
+        center.innerHTML = '<div class="ring-score">' + correct + '/' + total + '</div><div class="ring-label">câu đúng</div>';
+        rowCorrect.count.textContent = correct + ' câu';
+        rowWrong.count.textContent = incorrect + ' câu';
+        rowSkip.count.textContent = skipped + ' câu';
+      }
+      update(0, 0);
+      return { el: wrap, update: update };
+    }
+
     function renderQuiz(title, quiz) {
       document.title = 'Quiz: ' + title + ' — hoc voi hanh';
       document.getElementById('title').textContent = 'Quiz: ' + title;
       const body = document.getElementById('quiz-body');
       body.innerHTML = '';
       const box = el('div', 'input-card');
+      const state = new Array((quiz || []).length).fill(null);
+      const ring = createResultsRing((quiz || []).length);
       (quiz || []).forEach(function (q, idx) {
         const qBox = el('div', 'reasoning-item');
         qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + (q.question || '')));
@@ -80,6 +137,10 @@
               Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
             }
             explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+            state[idx] = ok;
+            const correctCount = state.filter(function (s) { return s === true; }).length;
+            const wrongCount = state.filter(function (s) { return s === false; }).length;
+            ring.update(correctCount, wrongCount);
           });
           optWrap.appendChild(btn);
         });
@@ -87,7 +148,11 @@
         qBox.appendChild(explainSlot);
         box.appendChild(qBox);
       });
-      if (!quiz || !quiz.length) box.appendChild(el('p', 'note', 'Chưa có câu hỏi cho phần này.'));
+      if (!quiz || !quiz.length) {
+        box.appendChild(el('p', 'note', 'Chưa có câu hỏi cho phần này.'));
+      } else {
+        box.appendChild(ring.el);
+      }
       body.appendChild(box);
     }
 
