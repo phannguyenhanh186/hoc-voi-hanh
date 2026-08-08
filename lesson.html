@@ -402,7 +402,7 @@
     function createResultsRing(total) {
       const svgNS = 'http://www.w3.org/2000/svg';
       const r = 42, c = 2 * Math.PI * r;
-      const wrap = el('div', 'results-summary');
+      const wrap = el('div', 'results-summary hidden');
       const ringWrap = el('div', 'results-ring-wrap');
       const svg = document.createElementNS(svgNS, 'svg');
       svg.setAttribute('viewBox', '0 0 100 100');
@@ -453,21 +453,32 @@
         rowWrong.count.textContent = incorrect + ' câu';
         rowSkip.count.textContent = skipped + ' câu';
       }
+      function reveal() { wrap.classList.remove('hidden'); }
       update(0, 0);
-      return { el: wrap, update: update };
+      return { el: wrap, update: update, reveal: reveal };
     }
 
-    // Tiện ích: theo dõi 1 mảng trạng thái (true/false/null) và cập nhật ring tương ứng
+    // Tiện ích: theo dõi 1 mảng trạng thái (true/false/null); chỉ tính & hiện ring khi finalize() (bấm Nộp bài)
     function trackQuizState(total) {
       const state = new Array(total).fill(null);
       const ring = createResultsRing(total);
-      function set(idx, ok) {
-        state[idx] = ok;
+      function set(idx, ok) { state[idx] = ok; }
+      function finalize() {
         const correctCount = state.filter(function (s) { return s === true; }).length;
         const wrongCount = state.filter(function (s) { return s === false; }).length;
         ring.update(correctCount, wrongCount);
+        ring.reveal();
       }
-      return { ring: ring, set: set };
+      return { ring: ring, set: set, finalize: finalize };
+    }
+
+    // Thêm nút "Nộp bài" cuối 1 bài — bấm vào mới tính & hiện vòng tròn kết quả
+    function appendSubmitAndRing(container, tracker) {
+      const submitBtn = el('button', 'btn-check btn-submit', 'Nộp bài ✓');
+      submitBtn.type = 'button';
+      submitBtn.addEventListener('click', function () { tracker.finalize(); });
+      container.appendChild(submitBtn);
+      container.appendChild(tracker.ring.el);
     }
 
     function renderQuizToggle(quiz, label) {
@@ -493,7 +504,7 @@
           qBox.appendChild(optWrap);
           wrap.appendChild(qBox);
         });
-        wrap.appendChild(tracker.ring.el);
+        appendSubmitAndRing(wrap, tracker);
         return wrap;
       });
     }
@@ -885,7 +896,7 @@
           return box;
         }, { lastLabel: 'Xong bài nghe 🎉' });
         panel.appendChild(wrap);
-        if (totalLines) panel.appendChild(tracker.ring.el);
+        if (totalLines) appendSubmitAndRing(panel, tracker);
       }
 
       // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
@@ -1258,7 +1269,7 @@
         });
       });
       box.appendChild(checkBtn);
-      if (selects.length) box.appendChild(tracker.ring.el);
+      if (selects.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1300,7 +1311,7 @@
         });
       });
       box.appendChild(checkBtn);
-      if (allInputs.length) box.appendChild(tracker.ring.el);
+      if (allInputs.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1366,7 +1377,7 @@
         resultLine.textContent = 'Đúng ' + correct + '/' + expectedWords.length + '.';
       });
       box.appendChild(checkBtn); box.appendChild(resetBtn); box.appendChild(resultLine);
-      if (expectedWords.length) box.appendChild(tracker.ring.el);
+      if (expectedWords.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1417,7 +1428,7 @@
         itemBox.appendChild(checkBtn); itemBox.appendChild(resultSlot);
         box.appendChild(itemBox);
       });
-      if (items.length) box.appendChild(tracker.ring.el);
+      if (items.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1460,7 +1471,7 @@
         });
       });
       box.appendChild(checkBtn);
-      if (rows.length) box.appendChild(tracker.ring.el);
+      if (rows.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1504,7 +1515,7 @@
         qBox.appendChild(explainSlot);
         box.appendChild(qBox);
       });
-      if (items.length) box.appendChild(tracker.ring.el);
+      if (items.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1556,7 +1567,7 @@
       });
       box.appendChild(checkBtn);
       box.appendChild(resultSlot);
-      if (selects.length) box.appendChild(tracker.ring.el);
+      if (selects.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1604,7 +1615,7 @@
       });
       box.appendChild(checkBtn);
       box.appendChild(resultSlot);
-      if (inputs.length) box.appendChild(tracker.ring.el);
+      if (inputs.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1660,7 +1671,7 @@
       const items = nf.items || [];
       const tracker = trackQuizState(items.length);
       items.forEach(function (item, idx) { box.appendChild(renderNumberFillItem(item, true, function (ok) { tracker.set(idx, ok); })); });
-      if (items.length) box.appendChild(tracker.ring.el);
+      if (items.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1671,7 +1682,7 @@
       const items = ex.items || [];
       const tracker = trackQuizState(items.length);
       items.forEach(function (item, idx) { box.appendChild(renderNumberFillItem(item, false, function (ok) { tracker.set(idx, ok); })); });
-      if (items.length) box.appendChild(tracker.ring.el);
+      if (items.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1729,7 +1740,7 @@
       });
       box.appendChild(checkBtn);
       box.appendChild(resultSlot);
-      if (turns.length) box.appendChild(tracker.ring.el);
+      if (turns.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
@@ -1786,7 +1797,7 @@
         row.appendChild(checkBtn); row.appendChild(resultSlot);
         box.appendChild(row);
       });
-      if (items.length) box.appendChild(tracker.ring.el);
+      if (items.length) appendSubmitAndRing(box, tracker);
       return box;
     }
 
