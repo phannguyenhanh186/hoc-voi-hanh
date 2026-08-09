@@ -39,9 +39,21 @@
 
     function el(tag, cls) { const n = document.createElement(tag); if (cls) n.className = cls; return n; }
 
+    function readLessonProgress(level, id) {
+      try {
+        const saved = JSON.parse(localStorage.getItem('progress:' + level + ':' + id) || 'null');
+        if (saved && typeof saved === 'object') {
+          const total = saved.total || 0;
+          const done = saved.done ? Object.keys(saved.done).filter(function (k) { return saved.done[k]; }).length : 0;
+          return { done: Math.min(done, total || done), total: total };
+        }
+      } catch (e) {}
+      return { done: 0, total: 0 };
+    }
+
     function makeSectionCard(opts) {
-      // opts: { eyebrow, title, ready, total, href, sample, mascot }
-      const isActive = opts.ready > 0;
+      // opts: { eyebrow, title, locked, href, sample, mascot, progress: {done, total} }
+      const isActive = !opts.locked;
       const card = el('a', 'section-card ' + (isActive ? 'section-active' : 'section-todo'));
       card.href = isActive ? opts.href : '#';
 
@@ -49,15 +61,22 @@
       const eyebrow = el('span', 'section-eyebrow'); eyebrow.textContent = opts.eyebrow; main.appendChild(eyebrow);
       const h2 = el('h3', 'section-title'); h2.textContent = opts.title; main.appendChild(h2);
 
-      if (opts.total) {
+      if (!isActive) {
+        const count = el('div', 'section-count');
+        count.style.marginTop = '8px';
+        count.textContent = '🔒 Sắp ra mắt';
+        main.appendChild(count);
+      } else if (opts.progress) {
+        const p = opts.progress;
+        const pct = p.total ? Math.round((p.done / p.total) * 100) : 0;
         const bar = el('div', 'progress-bar');
         const fill = el('div', 'progress-fill');
-        fill.style.width = Math.round((opts.ready / opts.total) * 100) + '%';
+        fill.style.width = pct + '%';
         bar.appendChild(fill);
         main.appendChild(bar);
         const count = el('div', 'section-count');
         count.style.marginTop = '8px';
-        count.textContent = (isActive ? '' : '🔒 ') + opts.ready + '/' + opts.total + ' bài đã có';
+        count.textContent = p.total ? ('Tiến độ: ' + p.done + '/' + p.total + ' (' + pct + '%)') : 'Chưa bắt đầu học';
         main.appendChild(count);
       }
 
@@ -84,9 +103,9 @@
         cards.innerHTML = '';
 
         (data.selfStudy || []).forEach(s => {
-          const ready = s.status !== 'todo';
+          const locked = s.status === 'todo';
           const card = makeSectionCard({
-            eyebrow: 'Tự học', title: s.title, ready: ready ? 1 : 0, total: 1,
+            eyebrow: 'Tự học', title: s.title, locked: locked,
             href: s.id === 'tones' ? 'tones.html' : ('lesson.html?id=' + encodeURIComponent(s.id) + '&level=' + encodeURIComponent(activeLevel)),
             sample: s.titleEn || '', mascot: '📖'
           });
@@ -97,11 +116,12 @@
         if (!lessons.length) { cards.innerHTML += '<p class="note">Chưa có bài nào ở cấp này.</p>'; return; }
 
         lessons.forEach(function (b) {
-          const ready = b.status !== 'todo' ? 1 : 0;
+          const locked = b.status === 'todo';
           cards.appendChild(makeSectionCard({
             eyebrow: 'Bài ' + b.num,
             title: b.title,
-            ready: ready, total: 1,
+            locked: locked,
+            progress: locked ? null : readLessonProgress(activeLevel, b.id),
             href: 'lesson.html?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel),
             mascot: LEVEL_MASCOT[activeLevel] || '🌱'
           }));
