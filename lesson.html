@@ -273,6 +273,8 @@
       const wrap = el('div', 'quiz-wrap');
       const order = shuffle(items);
       let i = 0, correct = 0, answered = false;
+      const progressKeyForThis = nextProgressKey();
+      let progressMarked = false;
       const body = el('div', 'quiz-body');
       const foot = el('div', 'quiz-foot');
       function nextQuestion() {
@@ -280,6 +282,7 @@
         body.innerHTML = '';
         if (i >= order.length) {
           body.appendChild(el('p', 'quiz-score', 'Xong! Đúng ' + correct + '/' + order.length + ' câu.'));
+          if (!progressMarked) { progressMarked = true; markProgressDone(progressKeyForThis); }
           const retry = el('button', 'btn-check', 'Làm lại');
           retry.type = 'button';
           retry.addEventListener('click', function () { i = 0; correct = 0; nextQuestion(); });
@@ -472,11 +475,15 @@
       return { ring: ring, set: set, finalize: finalize };
     }
 
-    // Thêm nút "Nộp bài" cuối 1 bài — bấm vào mới tính & hiện vòng tròn kết quả
+    // Thêm nút "Nộp bài" cuối 1 bài — bấm vào mới tính & hiện vòng tròn kết quả; đồng thời tính là đã hoàn thành phần này
     function appendSubmitAndRing(container, tracker) {
+      const progressKeyForThis = nextProgressKey();
       const submitBtn = el('button', 'btn-check btn-submit', 'Nộp bài ✓');
       submitBtn.type = 'button';
-      submitBtn.addEventListener('click', function () { tracker.finalize(); });
+      submitBtn.addEventListener('click', function () {
+        tracker.finalize();
+        markProgressDone(progressKeyForThis);
+      });
       container.appendChild(submitBtn);
       container.appendChild(tracker.ring.el);
     }
@@ -677,6 +684,7 @@
           box.appendChild(el('h3', 'ex-title', g.title));
           box.appendChild(renderPronounContent(g.pronounContent));
           if (g.quiz && g.quiz.length) {
+            nextProgressKey('grammar:' + g.id);
             const actions = el('div', 'grammar-actions');
             const quizBtn = document.createElement('a');
             quizBtn.className = 'btn-purple';
@@ -712,6 +720,7 @@
           return;
         }
         if (g.quiz && g.quiz.length && !g.pattern && !g.subsections && !g.pronounContent && !g.refInput) {
+          nextProgressKey('grammar:' + g.id);
           box.appendChild(el('h3', 'ex-title', g.title));
           const actions = el('div', 'grammar-actions');
           const quizBtn = document.createElement('a');
@@ -737,6 +746,7 @@
           readBtn.textContent = 'Đọc →';
           actions.appendChild(readBtn);
           if (g.quiz && g.quiz.length) {
+            nextProgressKey('grammar:' + g.id);
             const quizBtn = document.createElement('a');
             quizBtn.className = 'btn-purple';
             quizBtn.href = 'quiz.html?id=' + encodeURIComponent(itemId) +
@@ -930,6 +940,18 @@
         (String(p.text || '').split(/\n+/)).forEach(function (para) {
           if (para.trim()) box.appendChild(el('p', 'reading-para', para.trim()));
         });
+        const hasQuizLike = (p.questions && p.questions.length) || (p.textQuestions && p.textQuestions.length) || (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length);
+        if (!hasQuizLike) {
+          const pKey = nextProgressKey();
+          const doneBtn = el('button', 'btn-check', 'Đã đọc xong ✓');
+          doneBtn.type = 'button';
+          doneBtn.addEventListener('click', function () {
+            markProgressDone(pKey);
+            doneBtn.textContent = 'Đã hoàn thành ✓';
+            doneBtn.disabled = true;
+          });
+          box.appendChild(doneBtn);
+        }
         panel.appendChild(box);
         if (p.questions && p.questions.length) {
           panel.appendChild(renderChoiceQuiz({ title: 'Câu hỏi', items: p.questions }));
@@ -1218,6 +1240,15 @@
           });
           box.appendChild(dbox);
         });
+        const preKey = nextProgressKey();
+        const doneBtn = el('button', 'btn-check', 'Đã nghe xong ✓');
+        doneBtn.type = 'button';
+        doneBtn.addEventListener('click', function () {
+          markProgressDone(preKey);
+          doneBtn.textContent = 'Đã hoàn thành ✓';
+          doneBtn.disabled = true;
+        });
+        box.appendChild(doneBtn);
         panel.appendChild(box);
       }
     }
@@ -1849,6 +1880,29 @@
       });
     }
 
+    // ---------- Tiến độ học (lưu localStorage, dùng cho thanh progress ở trang danh sách bài) ----------
+    const progressKey = 'progress:' + level + ':' + itemId;
+    let progressCounter = 0;
+    let progressState = { total: 0, done: {} };
+    try {
+      const saved = JSON.parse(localStorage.getItem(progressKey) || 'null');
+      if (saved && typeof saved === 'object') progressState.done = saved.done || {};
+    } catch (e) {}
+    function saveProgress() {
+      try { localStorage.setItem(progressKey, JSON.stringify(progressState)); } catch (e) {}
+    }
+    function nextProgressKey(explicitKey) {
+      const k = explicitKey || ('ex' + progressCounter);
+      progressCounter++;
+      if (progressState.total < progressCounter) progressState.total = progressCounter;
+      return k;
+    }
+    function markProgressDone(key) {
+      if (progressState.done[key]) return;
+      progressState.done[key] = true;
+      saveProgress();
+    }
+
     // ---------- Load ----------
     (async function () {
       $backLink.href = 'lessons.html?level=' + encodeURIComponent(level);
@@ -1868,6 +1922,7 @@
         renderReadingTab(item);
         renderPreClassTab(item);
         renderPostClassTab(item);
+        saveProgress();
       } catch (err) {
         console.error(err);
         $title.textContent = 'Không tải được bài học';
