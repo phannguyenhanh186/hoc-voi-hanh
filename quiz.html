@@ -42,6 +42,18 @@
     }
     document.getElementById('back-btn-top').addEventListener('click', goBack);
 
+    function markLessonProgressDone(unitKey) {
+      const storeKey = 'progress:' + level + ':' + lessonId;
+      let state = { total: 0, done: {} };
+      try {
+        const saved = JSON.parse(localStorage.getItem(storeKey) || 'null');
+        if (saved && typeof saved === 'object') state = saved;
+        if (!state.done) state.done = {};
+      } catch (e) {}
+      state.done[unitKey] = true;
+      try { localStorage.setItem(storeKey, JSON.stringify(state)); } catch (e) {}
+    }
+
     function el(tag, cls, txt) {
       const n = document.createElement(tag);
       if (cls) n.className = cls;
@@ -156,6 +168,7 @@
           const wrongCount = state.filter(function (s) { return s === false; }).length;
           ring.update(correctCount, wrongCount);
           ring.reveal();
+          markLessonProgressDone('grammar:' + pointId);
         });
         box.appendChild(submitBtn);
         box.appendChild(ring.el);
