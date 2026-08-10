@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bài học — hoc voi hanh</title>
+  <title>Lesson — hoc voi hanh</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -15,7 +15,7 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" id="back-link" href="lessons.html">← quay lại</a>
+          <a class="back-link" id="back-link" href="lessons.html">← Back</a>
         </div>
       </nav>
     </div>
@@ -24,26 +24,26 @@
   <main class="wrap">
     <div class="lesson-head">
       <div class="meta-badges" id="meta-badges"></div>
-      <h1 id="title">Đang tải…</h1>
+      <h1 id="title">Loading…</h1>
     </div>
 
     <div class="toolbar">
       <div class="tabs tabs-6" id="tabs">
-        <button class="tab-btn active" data-tab="vocab">Từ vựng</button>
-        <button class="tab-btn" data-tab="grammar">Ngữ pháp</button>
-        <button class="tab-btn" data-tab="listening">Nghe</button>
-        <button class="tab-btn" data-tab="reading">Đọc</button>
-        <button class="tab-btn" data-tab="preclass">Chuẩn bị</button>
-        <button class="tab-btn" data-tab="postclass">Ôn tập</button>
+        <button class="tab-btn active" data-tab="vocab">Vocabulary</button>
+        <button class="tab-btn" data-tab="grammar">Grammar</button>
+        <button class="tab-btn" data-tab="listening">Listening</button>
+        <button class="tab-btn" data-tab="reading">Reading</button>
+        <button class="tab-btn" data-tab="preclass">Preparation</button>
+        <button class="tab-btn" data-tab="postclass">Review</button>
       </div>
     </div>
 
-    <section class="tab-panel" id="panel-vocab"><p class="note">Đang tải…</p></section>
-    <section class="tab-panel" id="panel-grammar" hidden><p class="note">Đang tải…</p></section>
-    <section class="tab-panel" id="panel-listening" hidden><p class="note">Đang tải…</p></section>
-    <section class="tab-panel" id="panel-reading" hidden><p class="note">Đang tải…</p></section>
-    <section class="tab-panel" id="panel-preclass" hidden><p class="note">Đang tải…</p></section>
-    <section class="tab-panel" id="panel-postclass" hidden><p class="note">Đang tải…</p></section>
+    <section class="tab-panel" id="panel-vocab"><p class="note">Loading…</p></section>
+    <section class="tab-panel" id="panel-grammar" hidden><p class="note">Loading…</p></section>
+    <section class="tab-panel" id="panel-listening" hidden><p class="note">Loading…</p></section>
+    <section class="tab-panel" id="panel-reading" hidden><p class="note">Loading…</p></section>
+    <section class="tab-panel" id="panel-preclass" hidden><p class="note">Loading…</p></section>
+    <section class="tab-panel" id="panel-postclass" hidden><p class="note">Loading…</p></section>
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
@@ -79,7 +79,7 @@
       const pr = player.play();
       if (pr && pr.catch) pr.catch(function (e) {
         if (currentEl) currentEl.classList.remove('playing');
-        console.warn('Không phát được audio:', src, e && e.message);
+        console.warn('Could not play audio:', src, e && e.message);
       });
     }
 
@@ -100,7 +100,7 @@
 
       const btn = el('button', 'audio-play-btn', '▶');
       btn.type = 'button';
-      btn.setAttribute('aria-label', 'Phát / tạm dừng');
+      btn.setAttribute('aria-label', 'Play / pause');
 
       const seek = document.createElement('input');
       seek.type = 'range'; seek.min = '0'; seek.max = '0'; seek.value = '0'; seek.step = '0.1';
@@ -126,7 +126,7 @@
           try { player.pause(); } catch (e) {}
           customAudios.forEach(function (a) { if (a !== audio) { try { a.pause(); } catch (e) {} } });
           const pr = audio.play();
-          if (pr && pr.catch) pr.catch(function (e) { console.warn('Không phát được audio:', src, e && e.message); });
+          if (pr && pr.catch) pr.catch(function (e) { console.warn('Could not play audio:', src, e && e.message); });
         } else {
           audio.pause();
         }
@@ -149,7 +149,7 @@
     function playBtn(src) {
       const b = el('button', 'play-sentence');
       b.type = 'button';
-      b.setAttribute('aria-label', 'Phát audio');
+      b.setAttribute('aria-label', 'Play audio');
       b.innerHTML = '▶';
       if (src) { b.addEventListener('click', function () { play(resolveAudio(src), b); }); }
       else { b.disabled = true; }
@@ -222,7 +222,7 @@
         row.appendChild(main);
         const actions = el('div', 'vocab-row-actions');
         const star = el('button', 'icon-btn star-btn' + (isSaved(w) ? ' starred' : ''));
-        star.type = 'button'; star.innerHTML = '★'; star.setAttribute('aria-label', 'Lưu từ');
+        star.type = 'button'; star.innerHTML = '★'; star.setAttribute('aria-label', 'Save word');
         star.addEventListener('click', function () { toggleSaved(w, star); });
         actions.appendChild(star);
         actions.appendChild(playBtn(w.audio));
@@ -249,9 +249,9 @@
 
       const card = el('div', 'flash-card-simple');
       const ctrlRow = el('div', 'flash-controls-row');
-      const forgetBtn = el('button', 'flash-ctrl-btn flash-ctrl-forget', 'Chưa nhớ');
-      const nextBtn = el('button', 'flash-ctrl-btn flash-ctrl-skip', 'Tiếp');
-      const rememberBtn = el('button', 'flash-ctrl-btn flash-ctrl-remember', 'Đã nhớ');
+      const forgetBtn = el('button', 'flash-ctrl-btn flash-ctrl-forget', 'Not remember');
+      const nextBtn = el('button', 'flash-ctrl-btn flash-ctrl-skip', 'Next');
+      const rememberBtn = el('button', 'flash-ctrl-btn flash-ctrl-remember', 'Remembered');
       forgetBtn.type = 'button'; nextBtn.type = 'button'; rememberBtn.type = 'button';
 
       const progressWrap = el('div', 'flash-progress-wrap');
@@ -287,7 +287,7 @@
         starBtnEl.addEventListener('click', function (e) { e.stopPropagation(); toggleSaved(w, starBtnEl); });
         iconRow.appendChild(starBtnEl);
         card.appendChild(iconRow);
-        card.appendChild(el('span', 'flash-corner-prompt', 'Xem nghĩa ›'));
+        card.appendChild(el('span', 'flash-corner-prompt', 'Show meaning ›'));
         updateProgress();
       }
 
@@ -299,11 +299,11 @@
         card.appendChild(el('div', 'flash-word-simple', w.meaning));
         if (w.example) {
           const ex = el('div', 'flash-example-box');
-          ex.appendChild(el('div', 'flash-example-label', 'Ví dụ:'));
+          ex.appendChild(el('div', 'flash-example-label', 'Example:'));
           ex.appendChild(el('div', 'flash-example-text', w.example));
           card.appendChild(ex);
         }
-        card.appendChild(el('span', 'flash-corner-prompt', '‹ Lật lại'));
+        card.appendChild(el('span', 'flash-corner-prompt', '‹ Flip back'));
         play(resolveAudio(w.audio));
       }
 
@@ -317,13 +317,13 @@
         card.className = 'flash-card-simple';
         card.innerHTML = '';
         const done = el('div', 'flash-complete');
-        done.appendChild(el('div', 'flash-complete-title', '🎉 Xong bộ thẻ!'));
-        done.appendChild(el('p', 'flash-complete-stats', 'Đã nhớ ' + rememberedCount + ' từ · Chưa nhớ ' + notRememberedCount + ' lượt.'));
-        const quizBtn = el('button', 'btn-purple', 'Làm quiz kiểm tra →');
+        done.appendChild(el('div', 'flash-complete-title', '🎉 Deck complete!'));
+        done.appendChild(el('p', 'flash-complete-stats', 'Remembered ' + rememberedCount + ' words · Forgot ' + notRememberedCount + ' times.'));
+        const quizBtn = el('button', 'btn-purple', 'Take the quiz →');
         quizBtn.type = 'button';
         quizBtn.addEventListener('click', function () { if (onFinished) onFinished(); });
         done.appendChild(quizBtn);
-        const retryBtn = el('button', 'btn-check', 'Học lại bộ thẻ');
+        const retryBtn = el('button', 'btn-check', 'Restart deck');
         retryBtn.type = 'button';
         retryBtn.addEventListener('click', function () {
           queue = items.slice(); i = 0; rememberedCount = 0; notRememberedCount = 0;
@@ -378,9 +378,9 @@
         answered = false;
         body.innerHTML = '';
         if (i >= order.length) {
-          body.appendChild(el('p', 'quiz-score', 'Xong! Đúng ' + correct + '/' + order.length + ' câu.'));
+          body.appendChild(el('p', 'quiz-score', 'Done! ' + correct + '/' + order.length + ' correct.'));
           if (!progressMarked) { progressMarked = true; markProgressDone(progressKeyForThis); }
-          const retry = el('button', 'btn-check', 'Làm lại');
+          const retry = el('button', 'btn-check', 'Retry');
           retry.type = 'button';
           retry.addEventListener('click', function () { i = 0; correct = 0; nextQuestion(); });
           body.appendChild(retry);
@@ -388,7 +388,7 @@
           return;
         }
         const w = order[i];
-        foot.textContent = 'Câu ' + (i + 1) + '/' + order.length;
+        foot.textContent = 'Question ' + (i + 1) + '/' + order.length;
         const qHead = el('div', 'quiz-q-head');
         qHead.appendChild(el('span', 'quiz-word', w.word));
         qHead.appendChild(playBtn(w.audio));
@@ -411,7 +411,7 @@
                 if (c.textContent === w.meaning) c.classList.add('opt-correct');
               });
             } else { correct++; }
-            const nextBtn = el('button', 'btn-check', i + 1 >= order.length ? 'Xem kết quả →' : 'Câu tiếp →');
+            const nextBtn = el('button', 'btn-check', i + 1 >= order.length ? 'See results →' : 'Next question →');
             nextBtn.type = 'button';
             nextBtn.style.marginTop = '14px';
             nextBtn.addEventListener('click', function () { i++; nextQuestion(); });
@@ -431,10 +431,10 @@
       const panel = document.getElementById('panel-vocab');
       panel.innerHTML = '';
       const items = (item.vocab && item.vocab.items) || [];
-      if (!items.length) { panel.appendChild(emptyNote('Từ vựng đang được cập nhật.')); return; }
+      if (!items.length) { panel.appendChild(emptyNote('Vocabulary is being updated.')); return; }
 
       const modeBar = el('div', 'mode-bar');
-      const modes = [['flashcards', 'Flashcards'], ['quiz', 'Trắc nghiệm'], ['list', 'Danh sách']];
+      const modes = [['flashcards', 'Flashcards'], ['quiz', 'Quiz'], ['list', 'List']];
       const content = el('div', 'vocab-content');
       let activeMode = 'flashcards';
       function setMode(m) {
@@ -527,13 +527,13 @@
         const row = el('div', 'legend-row');
         const dot = el('span', 'legend-dot ' + cls);
         const lbl = el('span', 'legend-label', label + ':');
-        const count = el('span', 'legend-count', '0 câu');
+        const count = el('span', 'legend-count', '0 questions');
         row.appendChild(dot); row.appendChild(lbl); row.appendChild(count);
         return { row: row, count: count };
       }
-      const rowCorrect = legendRow('dot-correct', 'Đúng');
+      const rowCorrect = legendRow('dot-correct', 'Correct');
       const rowWrong = legendRow('dot-wrong', 'Sai');
-      const rowSkip = legendRow('dot-skip', 'Bỏ qua');
+      const rowSkip = legendRow('dot-skip', 'Skipped');
       const legend = el('div', 'results-legend');
       legend.appendChild(rowCorrect.row);
       legend.appendChild(rowWrong.row);
@@ -550,10 +550,10 @@
         correctArc.setAttribute('stroke-dashoffset', '0');
         wrongArc.setAttribute('stroke-dasharray', wrongLen + ' ' + (c - wrongLen));
         wrongArc.setAttribute('stroke-dashoffset', String(-correctLen));
-        center.innerHTML = '<div class="ring-score">' + correct + '/' + total + '</div><div class="ring-label">câu đúng</div>';
-        rowCorrect.count.textContent = correct + ' câu';
-        rowWrong.count.textContent = incorrect + ' câu';
-        rowSkip.count.textContent = skipped + ' câu';
+        center.innerHTML = '<div class="ring-score">' + correct + '/' + total + '</div><div class="ring-label">correct</div>';
+        rowCorrect.count.textContent = correct + ' questions';
+        rowWrong.count.textContent = incorrect + ' questions';
+        rowSkip.count.textContent = skipped + ' questions';
       }
       function reveal() { wrap.classList.remove('hidden'); }
       update(0, 0);
@@ -577,7 +577,7 @@
     // Thêm nút "Nộp bài" cuối 1 bài — bấm vào mới tính & hiện vòng tròn kết quả; đồng thời tính là đã hoàn thành phần này
     function appendSubmitAndRing(container, tracker) {
       const progressKeyForThis = nextProgressKey();
-      const submitBtn = el('button', 'btn-check btn-submit', 'Nộp bài ✓');
+      const submitBtn = el('button', 'btn-check btn-submit', 'Submit ✓');
       submitBtn.type = 'button';
       submitBtn.addEventListener('click', function () {
         tracker.finalize();
@@ -776,7 +776,7 @@
       const panel = document.getElementById('panel-grammar');
       panel.innerHTML = '';
       const points = (item.grammar && item.grammar.points) || [];
-      if (!points.length) { panel.appendChild(emptyNote('Ngữ pháp đang được cập nhật.')); return; }
+      if (!points.length) { panel.appendChild(emptyNote('Grammar is being updated.')); return; }
       points.forEach(function (g) {
         const box = el('div', 'exercise');
         if (g.pronounContent) {
@@ -842,7 +842,7 @@
             '&level=' + encodeURIComponent(level) +
             '&lesson=' + encodeURIComponent(itemId) +
             '&point=' + encodeURIComponent(g.id);
-          readBtn.textContent = 'Đọc →';
+          readBtn.textContent = 'Read →';
           actions.appendChild(readBtn);
           if (g.quiz && g.quiz.length) {
             nextProgressKey('grammar:' + g.id);
@@ -894,10 +894,10 @@
 
         nav.innerHTML = '';
         const isLast = i >= steps.length - 1;
-        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        const prev = el('button', 'btn-check btn-secondary', '← Back'); prev.type = 'button';
         prev.style.visibility = i === 0 ? 'hidden' : 'visible';
         prev.addEventListener('click', function () { i--; draw(); });
-        const next = el('button', 'btn-check', isLast ? (opts.lastLabel || 'Hoàn tất ✓') : 'Tiếp →'); next.type = 'button';
+        const next = el('button', 'btn-check', isLast ? (opts.lastLabel || 'Done ✓') : 'Next →'); next.type = 'button';
         next.addEventListener('click', function () {
           if (!isLast) { i++; draw(); }
           else if (opts.onFinish) { opts.onFinish(); }
@@ -924,7 +924,7 @@
       function refreshBuilt() {
         built.innerHTML = '';
         if (!chosen.length) {
-          built.appendChild(el('span', 'dictation-placeholder', 'Bấm vào từ bên dưới để ghép câu…'));
+          built.appendChild(el('span', 'dictation-placeholder', 'Tap the words below to build the sentence…'));
         }
         chosen.forEach(function (idx) {
           const chip = el('span', 'chip chip-placed', bankWords[idx]);
@@ -951,7 +951,7 @@
       wrap.appendChild(built);
       if (bankWords.length) wrap.appendChild(bank);
 
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra');
+      const checkBtn = el('button', 'btn-check', 'Check');
       checkBtn.type = 'button';
       checkBtn.addEventListener('click', function () {
         const builtStr = chosen.map(function (i) { return bankWords[i]; }).join(' ');
@@ -975,12 +975,12 @@
       const hasNumberFill = numberFill && numberFill.items && numberFill.items.length;
       const dialogueFill = listening.dialogueFill;
       const hasDialogueFill = dialogueFill && dialogueFill.lines && dialogueFill.lines.length;
-      if (!groups.length && !entries.length && !hasNumberFill && !hasDialogueFill) { panel.appendChild(emptyNote('Bài nghe đang được cập nhật.')); return; }
+      if (!groups.length && !entries.length && !hasNumberFill && !hasDialogueFill) { panel.appendChild(emptyNote('Listening is being updated.')); return; }
       if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
 
       // Điền từ vào chỗ trống (word bank)
       if (hasDialogueFill) {
-        panel.appendChild(renderDialogueFill(Object.assign({ title: 'Điền từ vào chỗ trống' }, dialogueFill)));
+        panel.appendChild(renderDialogueFill(Object.assign({ title: 'Fill in the Blanks' }, dialogueFill)));
       }
 
       // Điền số vào chỗ trống bằng bàn phím số
@@ -998,12 +998,12 @@
         groups.forEach(function (g) { lineOffsets.push(acc); acc += (g.lines || []).length; });
         buildStepper(wrap, groups, function (g, gi) {
           const box = el('div');
-          box.appendChild(el('h3', 'ex-title', g.title || ('Đoạn hội thoại ' + (gi + 1))));
+          box.appendChild(el('h3', 'ex-title', g.title || ('Dialogue ' + (gi + 1))));
           (g.lines || []).forEach(function (line, li) {
             box.appendChild(renderDictationLine(line, function (ok) { tracker.set(lineOffsets[gi] + li, ok); }));
           });
           return box;
-        }, { lastLabel: 'Xong bài nghe 🎉' });
+        }, { lastLabel: 'Listening complete 🎉' });
         panel.appendChild(wrap);
         if (totalLines) appendSubmitAndRing(panel, tracker);
       }
@@ -1014,7 +1014,7 @@
         entries.forEach(function (it, i) {
           const row = el('div', 'listen-row');
           row.appendChild(playBtn(it.audio));
-          row.appendChild(el('span', 'match-prompt', it.title || ('Đoạn ' + (i + 1))));
+          row.appendChild(el('span', 'match-prompt', it.title || ('Part ' + (i + 1))));
           if (it.transcript) row.appendChild(el('span', 'order-label', it.transcript));
           box.appendChild(row);
         });
@@ -1029,7 +1029,7 @@
       const panel = document.getElementById('panel-reading');
       panel.innerHTML = '';
       const passages = (item.reading && item.reading.passages) || [];
-      if (!passages.length) { panel.appendChild(emptyNote('Bài đọc đang được cập nhật.')); return; }
+      if (!passages.length) { panel.appendChild(emptyNote('Reading is being updated.')); return; }
       passages.forEach(function (p) {
         const box = el('div', 'exercise reading-passage');
         const head = el('div', 'dialogue-head');
@@ -1042,24 +1042,24 @@
         const hasQuizLike = (p.questions && p.questions.length) || (p.textQuestions && p.textQuestions.length) || (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length);
         if (!hasQuizLike) {
           const pKey = nextProgressKey();
-          const doneBtn = el('button', 'btn-check', 'Đã đọc xong ✓');
+          const doneBtn = el('button', 'btn-check', 'Done reading ✓');
           doneBtn.type = 'button';
           doneBtn.addEventListener('click', function () {
             markProgressDone(pKey);
-            doneBtn.textContent = 'Đã hoàn thành ✓';
+            doneBtn.textContent = 'Completed ✓';
             doneBtn.disabled = true;
           });
           box.appendChild(doneBtn);
         }
         panel.appendChild(box);
         if (p.questions && p.questions.length) {
-          panel.appendChild(renderChoiceQuiz({ title: 'Câu hỏi', items: p.questions }));
+          panel.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions }));
         }
         if (p.textQuestions && p.textQuestions.length) {
-          panel.appendChild(renderTextAnswer({ title: 'Câu hỏi đọc hiểu', items: p.textQuestions }));
+          panel.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions }));
         }
         if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
-          panel.appendChild(renderFillBlanksText(Object.assign({ title: 'Điền vào chỗ trống' }, p.fillBlanks)));
+          panel.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks' }, p.fillBlanks)));
         }
       });
     }
@@ -1077,7 +1077,7 @@
 
       function drawPreview() {
         stage.innerHTML = '';
-        stage.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+        stage.appendChild(el('h3', 'ex-title', 'Vocabulary with pictures'));
         if (vp.instruction) stage.appendChild(el('p', 'ex-instruction', vp.instruction));
 
         const it = items[i];
@@ -1102,11 +1102,11 @@
         stage.appendChild(dots);
 
         const nav = el('div', 'step-nav');
-        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        const prev = el('button', 'btn-check btn-secondary', '← Back'); prev.type = 'button';
         prev.style.visibility = i === 0 ? 'hidden' : 'visible';
         prev.addEventListener('click', function () { i--; drawPreview(); });
         const isLast = i >= items.length - 1;
-        const next = el('button', 'btn-check', (isLast && im) ? 'Bắt đầu kiểm tra →' : 'Tiếp →'); next.type = 'button';
+        const next = el('button', 'btn-check', (isLast && im) ? 'Start the quiz →' : 'Next →'); next.type = 'button';
         next.addEventListener('click', function () {
           if (!isLast) { i++; drawPreview(); }
           else if (im) { drawQuiz(); }
@@ -1120,9 +1120,9 @@
         stage.appendChild(renderImageMatch(im));
         if (rq) {
           const nav = el('div', 'step-nav');
-          const back = el('button', 'btn-check btn-secondary', '← Trước'); back.type = 'button';
+          const back = el('button', 'btn-check btn-secondary', '← Back'); back.type = 'button';
           back.addEventListener('click', function () { drawPreview(); });
-          const next = el('button', 'btn-check', 'Tiếp →'); next.type = 'button';
+          const next = el('button', 'btn-check', 'Next →'); next.type = 'button';
           next.addEventListener('click', function () { drawReasoning(); });
           nav.appendChild(back); nav.appendChild(next);
           stage.appendChild(nav);
@@ -1133,7 +1133,7 @@
         stage.innerHTML = '';
         stage.appendChild(renderReasoningQuiz(rq));
         const nav = el('div', 'step-nav');
-        const back = el('button', 'btn-check btn-secondary', '← Trước'); back.type = 'button';
+        const back = el('button', 'btn-check btn-secondary', '← Back'); back.type = 'button';
         back.addEventListener('click', function () { drawQuiz(); });
         nav.appendChild(back);
         stage.appendChild(nav);
@@ -1147,7 +1147,7 @@
 
     function renderVocabPreview(vp) {
       const box = el('div', 'exercise');
-      box.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+      box.appendChild(el('h3', 'ex-title', 'Vocabulary with pictures'));
       if (vp.instruction) box.appendChild(el('p', 'ex-instruction', vp.instruction));
       const grid = el('div', 'image-vocab-grid');
       (vp.items || []).forEach(function (it) {
@@ -1180,7 +1180,7 @@
         }
         const select = document.createElement('select');
         select.className = 'answer-select';
-        const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+        const optEmpty = el('option', null, '— choose —'); optEmpty.value = ''; select.appendChild(optEmpty);
         (ex.answerBank || []).forEach(function (a) { const opt = el('option', null, a); opt.value = a; select.appendChild(opt); });
         select.dataset.answer = it.answer;
         row.appendChild(select);
@@ -1189,7 +1189,7 @@
         rows.push({ select: select, resultSlot: resultSlot });
         box.appendChild(row);
       });
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       checkBtn.addEventListener('click', function () {
         rows.forEach(function (r) {
           const ok = r.select.value === r.select.dataset.answer;
@@ -1201,7 +1201,7 @@
       return box;
     }
 
-    function personLabel(p) { return p ? p.name + ' (' + p.age + ' tuổi)' : ''; }
+    function personLabel(p) { return p ? p.name + ' (' + p.age + ' years old)' : ''; }
 
     function renderReasoningQuiz(ex) {
       const box = el('div', 'exercise');
@@ -1211,7 +1211,7 @@
         const qBox = el('div', 'reasoning-item');
         const head = el('div', 'reasoning-head');
         if (q.personA && q.personA.image) { const img = document.createElement('img'); img.src = q.personA.image; img.className = 'reasoning-avatar'; head.appendChild(img); }
-        head.appendChild(el('span', 'match-prompt', personLabel(q.personA) + ' gọi ' + personLabel(q.personB) + ' là gì?'));
+        head.appendChild(el('span', 'match-prompt', 'What does ' + personLabel(q.personA) + ' call ' + personLabel(q.personB) + '?'));
         if (q.personB && q.personB.image) { const img2 = document.createElement('img'); img2.src = q.personB.image; img2.className = 'reasoning-avatar'; head.appendChild(img2); }
         qBox.appendChild(head);
         const optWrap = el('div', 'quiz-options');
@@ -1247,7 +1247,7 @@
 
       function drawPreview() {
         stage.innerHTML = '';
-        stage.appendChild(el('h3', 'ex-title', 'Từ vựng có hình'));
+        stage.appendChild(el('h3', 'ex-title', 'Vocabulary with pictures'));
         if (vp.instruction) stage.appendChild(el('p', 'ex-instruction', vp.instruction));
 
         const it = items[i];
@@ -1270,11 +1270,11 @@
         stage.appendChild(dots);
 
         const nav = el('div', 'step-nav');
-        const prev = el('button', 'btn-check btn-secondary', '← Trước'); prev.type = 'button';
+        const prev = el('button', 'btn-check btn-secondary', '← Back'); prev.type = 'button';
         prev.style.visibility = i === 0 ? 'hidden' : 'visible';
         prev.addEventListener('click', function () { i--; drawPreview(); });
         const isLast = i >= items.length - 1;
-        const label = (isLast && quiz) ? 'Bắt đầu kiểm tra →' : (isLast ? 'Hoàn tất ✓' : 'Tiếp →');
+        const label = (isLast && quiz) ? 'Start the quiz →' : (isLast ? 'Done ✓' : 'Next →');
         const next = el('button', 'btn-check', label); next.type = 'button';
         if (isLast && !quiz) next.disabled = true;
         next.addEventListener('click', function () {
@@ -1290,7 +1290,7 @@
         stage.appendChild(quiz.type === 'text_answer' ? renderTextAnswer(quiz) : renderChoiceQuiz(quiz));
         if (items.length) {
           const nav = el('div', 'step-nav');
-          const back = el('button', 'btn-check btn-secondary', '← Xem lại từ vựng'); back.type = 'button';
+          const back = el('button', 'btn-check btn-secondary', '← Review vocabulary'); back.type = 'button';
           back.addEventListener('click', function () { i = 0; drawPreview(); });
           nav.appendChild(back);
           stage.appendChild(nav);
@@ -1312,7 +1312,7 @@
       const hasNew = hasLegacyFlow || flows.length;
       if (pre.note) panel.appendChild(el('p', 'note', pre.note));
       if (!dialogues.length && !hasNew) {
-        if (!pre.note) panel.appendChild(emptyNote('Nội dung chuẩn bị trước buổi học đang được cập nhật.'));
+        if (!pre.note) panel.appendChild(emptyNote('Pre-class content is being updated.'));
         return;
       }
 
@@ -1324,12 +1324,12 @@
 
       if (dialogues.length) {
         const box = el('div', 'exercise');
-        box.appendChild(el('h3', 'ex-title', 'Nghe trước ở nhà'));
+        box.appendChild(el('h3', 'ex-title', 'Listen before class'));
         dialogues.forEach(function (d) {
           const dbox = el('div', 'dialogue');
           const head = el('div', 'dialogue-head');
           head.appendChild(playBtn(d.audio));
-          head.appendChild(el('span', 'dialogue-label', 'Nghe cả đoạn'));
+          head.appendChild(el('span', 'dialogue-label', 'Listen to the whole passage'));
           dbox.appendChild(head);
           (d.turns || []).forEach(function (t) {
             const row = el('div', 'turn');
@@ -1340,11 +1340,11 @@
           box.appendChild(dbox);
         });
         const preKey = nextProgressKey();
-        const doneBtn = el('button', 'btn-check', 'Đã nghe xong ✓');
+        const doneBtn = el('button', 'btn-check', 'Done listening ✓');
         doneBtn.type = 'button';
         doneBtn.addEventListener('click', function () {
           markProgressDone(preKey);
-          doneBtn.textContent = 'Đã hoàn thành ✓';
+          doneBtn.textContent = 'Completed ✓';
           doneBtn.disabled = true;
         });
         box.appendChild(doneBtn);
@@ -1370,7 +1370,7 @@
           row.appendChild(el('span', 'match-prompt', p.text));
           const select = document.createElement('select');
           select.className = 'answer-select';
-          const optEmpty = el('option', null, '— chọn —'); optEmpty.value = ''; select.appendChild(optEmpty);
+          const optEmpty = el('option', null, '— choose —'); optEmpty.value = ''; select.appendChild(optEmpty);
           ex.answerBank.forEach(function (a) {
             const opt = el('option', null, a.text); opt.value = a.id; select.appendChild(opt);
           });
@@ -1383,7 +1383,7 @@
           box.appendChild(row);
         });
       });
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const tracker = trackQuizState(selects.length);
       checkBtn.addEventListener('click', function () {
         selects.forEach(function (row, idx) {
@@ -1424,11 +1424,11 @@
       });
       if (ex.wordBank) {
         const bank = el('div', 'word-bank');
-        bank.appendChild(el('span', 'word-bank-label', 'Ngân hàng từ: '));
+        bank.appendChild(el('span', 'word-bank-label', 'Word bank: '));
         ex.wordBank.forEach(function (w) { bank.appendChild(el('span', 'chip chip-bank', w)); });
         box.appendChild(bank);
       }
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const tracker = trackQuizState(allInputs.length);
       checkBtn.addEventListener('click', function () {
         allInputs.forEach(function (input, idx) {
@@ -1436,7 +1436,7 @@
           const ok = norm(input.value) === norm(input.dataset.answer);
           input.classList.remove('input-ok', 'input-bad');
           input.classList.add(ok ? 'input-ok' : 'input-bad');
-          if (!ok) input.title = 'Đáp án: ' + input.dataset.answer;
+          if (!ok) input.title = 'Answer: ' + input.dataset.answer;
           tracker.set(idx, ok);
         });
       });
@@ -1484,14 +1484,14 @@
         catsWrap.appendChild(catBox);
       });
       box.appendChild(catsWrap);
-      const resetBtn = el('button', 'btn-check btn-secondary', 'Làm lại'); resetBtn.type = 'button';
+      const resetBtn = el('button', 'btn-check btn-secondary', 'Retry'); resetBtn.type = 'button';
       resetBtn.addEventListener('click', function () {
         Object.keys(assignment).forEach(function (k) { delete assignment[k]; });
         catsWrap.querySelectorAll('.sort-dropzone').forEach(function (z) { z.innerHTML = ''; });
         Object.values(chipEls).forEach(function (c) { c.classList.remove('chip-used', 'chip-selected'); });
         selectedChip = null;
       });
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const resultLine = el('p', 'ex-instruction');
       const expectedWords = [];
       (ex.categories || []).forEach(function (cat) { (cat.answers || []).forEach(function (w) { expectedWords.push({ word: w, catId: cat.id }); }); });
@@ -1504,7 +1504,7 @@
           if (ok) correct++;
           tracker.set(idx, ok);
         });
-        resultLine.textContent = 'Đúng ' + correct + '/' + expectedWords.length + '.';
+        resultLine.textContent = 'Correct ' + correct + '/' + expectedWords.length + '.';
       });
       box.appendChild(checkBtn); box.appendChild(resetBtn); box.appendChild(resultLine);
       if (expectedWords.length) appendSubmitAndRing(box, tracker);
@@ -1546,7 +1546,7 @@
         refreshBuilt(); refreshBank();
         itemBox.appendChild(built); itemBox.appendChild(bank);
         const resultSlot = el('span', 'result-slot');
-        const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+        const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
         checkBtn.addEventListener('click', function () {
           const builtStr = order.map(function (i) { return item.tokens[i]; }).join(' ');
           const ok = norm(builtStr) === norm(item.answer);
@@ -1578,7 +1578,7 @@
         numInput.dataset.answer = item.answer;
         row.appendChild(numInput);
         row.appendChild(el('span', null, parts[1] || ''));
-        row.appendChild(el('span', 'order-label', ' — thứ tự nghe:'));
+        row.appendChild(el('span', 'order-label', ' — listening order:'));
         const orderInput = document.createElement('input');
         orderInput.type = 'text'; orderInput.className = 'blank-input blank-input-sm';
         orderInput.dataset.answer = String(item.order);
@@ -1588,7 +1588,7 @@
         rows.push({ numInput: numInput, orderInput: orderInput, resultSlot: resultSlot });
         box.appendChild(row);
       });
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const tracker = trackQuizState(rows.length);
       checkBtn.addEventListener('click', function () {
         rows.forEach(function (r, idx) {
@@ -1680,7 +1680,7 @@
         box.appendChild(row);
       });
       const resultSlot = el('span', 'result-slot dialogue-fill-result');
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const tracker = trackQuizState(selects.length);
       checkBtn.addEventListener('click', function () {
         let allOk = true;
@@ -1726,7 +1726,7 @@
         box.appendChild(row);
       });
       const resultSlot = el('span', 'result-slot dialogue-fill-result');
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const tracker = trackQuizState(inputs.length);
       checkBtn.addEventListener('click', function () {
         let allOk = true;
@@ -1782,7 +1782,7 @@
       );
       wrap.appendChild(pad);
       const resultSlot = el('span', 'result-slot');
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       checkBtn.addEventListener('click', function () {
         const ok = val.replace(/\D/g, '') === String(item.answer).replace(/\D/g, '');
         resultSlot.innerHTML = '';
@@ -1796,7 +1796,7 @@
 
     function renderNumberFillListening(nf) {
       const box = el('div', 'exercise');
-      box.appendChild(el('h3', 'ex-title', nf.title || 'Điền số vào chỗ trống'));
+      box.appendChild(el('h3', 'ex-title', nf.title || 'Fill in the Numbers'));
       if (nf.instruction) box.appendChild(el('p', 'ex-instruction', nf.instruction));
       const items = nf.items || [];
       const tracker = trackQuizState(items.length);
@@ -1823,10 +1823,10 @@
       const turns = ex.turns || [];
       function turnLabel(t) { return t.speaker + ': ' + t.text; }
 
-      box.appendChild(el('p', 'ex-instruction', 'Đã sắp xếp:'));
+      box.appendChild(el('p', 'ex-instruction', 'Your order:'));
       const built = el('div', 'dialogue-order-built');
       box.appendChild(built);
-      box.appendChild(el('p', 'ex-instruction', 'Bấm theo đúng thứ tự:'));
+      box.appendChild(el('p', 'ex-instruction', 'Tap in the correct order:'));
       const bank = el('div', 'dialogue-order-bank');
       box.appendChild(bank);
 
@@ -1859,7 +1859,7 @@
       refreshBuilt(); refreshBank();
 
       const resultSlot = el('span', 'result-slot');
-      const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const tracker = trackQuizState(1);
       checkBtn.addEventListener('click', function () {
         if (!order.length) return;
@@ -1900,7 +1900,7 @@
         row.appendChild(el('p', 'match-prompt', item.prompt));
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'blank-input text-answer-input';
-        input.placeholder = 'Viết bằng chữ…';
+        input.placeholder = 'Write it out…';
         input.addEventListener('focus', function () { activeInput = input; });
         if (item.wordBank && item.wordBank.length) {
           const itemBank = el('div', 'scramble-bank');
@@ -1916,7 +1916,7 @@
         }
         row.appendChild(input);
         const resultSlot = el('span', 'result-slot');
-        const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+        const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
         checkBtn.addEventListener('click', function () {
           const ok = norm(input.value) === norm(item.answer);
           resultSlot.innerHTML = '';
@@ -1951,14 +1951,14 @@
       if (post.reviewNote) panel.appendChild(el('p', 'note', post.reviewNote));
       const exercises = post.exercises || [];
       if (!exercises.length) {
-        if (!post.reviewNote) panel.appendChild(emptyNote('Bài ôn tập đang được cập nhật.'));
+        if (!post.reviewNote) panel.appendChild(emptyNote('Review is being updated.'));
         return;
       }
       const wrap = el('div', 'postclass-wrap');
       buildStepper(wrap, exercises, function (ex) {
         const renderer = EX_RENDERERS[ex.type];
-        return renderer ? renderer(ex) : emptyNote('Chưa hỗ trợ loại bài tập: ' + ex.type);
-      }, { lastLabel: 'Xong bài ôn tập 🎉' });
+        return renderer ? renderer(ex) : emptyNote('Unsupported exercise type: ' + ex.type);
+      }, { lastLabel: 'Review complete 🎉' });
       panel.appendChild(wrap);
     }
 
@@ -1969,10 +1969,10 @@
       const wrap = document.getElementById('meta-badges');
       wrap.innerHTML = '';
       const counts = [
-        ['🔤', ((item.vocab && item.vocab.items) || []).length + ' từ'],
-        ['📖', ((item.grammar && item.grammar.points) || []).length + ' ngữ pháp'],
-        ['🎧', ((item.listening && item.listening.items) || []).length + ' bài nghe'],
-        ['📄', ((item.reading && item.reading.passages) || []).length + ' bài đọc']
+        ['🔤', ((item.vocab && item.vocab.items) || []).length + ' words'],
+        ['📖', ((item.grammar && item.grammar.points) || []).length + ' grammar'],
+        ['🎧', ((item.listening && item.listening.items) || []).length + ' listening'],
+        ['📄', ((item.reading && item.reading.passages) || []).length + ' reading']
       ];
       counts.forEach(function (c) {
         wrap.appendChild(el('span', 'meta-badge', c[0] + ' ' + c[1]));
@@ -2012,7 +2012,7 @@
         const item = await res.json();
 
         document.title = (item.title || itemId) + ' — hoc voi hanh';
-        $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
+        $title.textContent = 'Lesson ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
 
         renderMetaBadges(item);
         renderVocabTab(item);
@@ -2024,8 +2024,8 @@
         saveProgress();
       } catch (err) {
         console.error(err);
-        $title.textContent = 'Không tải được bài học';
-        document.getElementById('panel-vocab').innerHTML = '<p class="note">Không tìm thấy file bài học. Kiểm tra đường dẫn <code>' + level + '/items/' + itemId + '.json</code>.</p>';
+        $title.textContent = 'Could not load the lesson';
+        document.getElementById('panel-vocab').innerHTML = '<p class="note">Lesson file not found. Check the path <code>' + level + '/items/' + itemId + '.json</code>.</p>';
       }
     })();
 
