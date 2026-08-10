@@ -232,40 +232,137 @@
       return wrap;
     }
 
-    function renderVocabFlashcards(items) {
-      const wrap = el('div', 'flash-wrap');
-      let i = 0, flipped = false;
-      const card = el('div', 'flash-card');
-      const progress = el('div', 'flash-progress');
-      function draw() {
-        flipped = false;
-        card.classList.remove('flipped');
-        const w = items[i];
-        card.innerHTML = '';
-        const front = el('div', 'flash-face flash-front', w.word);
-        const back = el('div', 'flash-face flash-back');
-        if (w.ipa) back.appendChild(el('div', 'flash-ipa', w.ipa));
-        back.appendChild(el('div', 'flash-meaning', w.meaning));
-        card.appendChild(front); card.appendChild(back);
-        progress.textContent = (i + 1) + ' / ' + items.length;
+    let flashKeydownHandler = null;
+    function detachFlashKeydown() {
+      if (flashKeydownHandler) { document.removeEventListener('keydown', flashKeydownHandler); flashKeydownHandler = null; }
+    }
+
+    function renderVocabFlashcards(items, onFinished) {
+      const wrap = el('div', 'flash-wrap-simple');
+      let queue = items.slice();
+      let i = 0;
+      let revealed = false;
+      let rememberedCount = 0;
+      let notRememberedCount = 0;
+      const progressKeyForThis = nextProgressKey();
+      let progressMarked = false;
+
+      const card = el('div', 'flash-card-simple');
+      const ctrlRow = el('div', 'flash-controls-row');
+      const forgetBtn = el('button', 'flash-ctrl-btn flash-ctrl-forget', 'Chưa nhớ');
+      const nextBtn = el('button', 'flash-ctrl-btn flash-ctrl-skip', 'Tiếp');
+      const rememberBtn = el('button', 'flash-ctrl-btn flash-ctrl-remember', 'Đã nhớ');
+      forgetBtn.type = 'button'; nextBtn.type = 'button'; rememberBtn.type = 'button';
+
+      const progressWrap = el('div', 'flash-progress-wrap');
+      const progressLabel = el('div', 'flash-progress-label');
+      const progressTrack = el('div', 'flash-progress-track');
+      const progressFill = el('div', 'flash-progress-fill-grad');
+      const progressPct = el('div', 'flash-progress-pct');
+      progressTrack.appendChild(progressFill);
+      progressWrap.appendChild(progressLabel); progressWrap.appendChild(progressTrack); progressWrap.appendChild(progressPct);
+
+      function currentWord() { return queue[i]; }
+
+      function updateProgress() {
+        const total = queue.length;
+        const pos = Math.min(i + 1, total);
+        const pct = total ? Math.round((pos / total) * 100) : 0;
+        progressLabel.textContent = pos + '/' + total;
+        progressFill.style.width = pct + '%';
+        progressPct.textContent = pct + '%';
       }
-      card.addEventListener('click', function () {
-        flipped = !flipped;
-        card.classList.toggle('flipped', flipped);
-        if (flipped) play(resolveAudio(items[i].audio));
-      });
-      const nav = el('div', 'flash-nav');
-      const prev = el('button', 'btn-check btn-secondary', '← Trước');
-      const next = el('button', 'btn-check', 'Tiếp →');
-      prev.type = 'button'; next.type = 'button';
-      prev.addEventListener('click', function () { i = (i - 1 + items.length) % items.length; draw(); });
-      next.addEventListener('click', function () { i = (i + 1) % items.length; draw(); });
-      draw();
-      wrap.appendChild(progress);
+
+      function renderFront() {
+        revealed = false;
+        card.className = 'flash-card-simple';
+        card.innerHTML = '';
+        const w = currentWord();
+        card.appendChild(el('div', 'flash-word-simple', w.word));
+        const iconRow = el('div', 'flash-icon-row');
+        const playBtnEl = el('button', 'flash-round-btn'); playBtnEl.type = 'button'; playBtnEl.innerHTML = '▶';
+        playBtnEl.addEventListener('click', function (e) { e.stopPropagation(); play(resolveAudio(w.audio)); });
+        iconRow.appendChild(playBtnEl);
+        const starBtnEl = el('button', 'flash-round-btn' + (isSaved(w) ? ' starred' : '')); starBtnEl.type = 'button'; starBtnEl.innerHTML = '★';
+        starBtnEl.addEventListener('click', function (e) { e.stopPropagation(); toggleSaved(w, starBtnEl); });
+        iconRow.appendChild(starBtnEl);
+        card.appendChild(iconRow);
+        card.appendChild(el('span', 'flash-corner-prompt', 'Xem nghĩa ›'));
+        updateProgress();
+      }
+
+      function renderBack() {
+        revealed = true;
+        const w = currentWord();
+        card.className = 'flash-card-simple flash-card-back';
+        card.innerHTML = '';
+        card.appendChild(el('div', 'flash-word-simple', w.meaning));
+        if (w.example) {
+          const ex = el('div', 'flash-example-box');
+          ex.appendChild(el('div', 'flash-example-label', 'Ví dụ:'));
+          ex.appendChild(el('div', 'flash-example-text', w.example));
+          card.appendChild(ex);
+        }
+        card.appendChild(el('span', 'flash-corner-prompt', '‹ Lật lại'));
+        play(resolveAudio(w.audio));
+      }
+
+      function toggleFlip() {
+        if (i >= queue.length) return;
+        if (revealed) renderFront(); else renderBack();
+      }
+
+      function showComplete() {
+        detachFlashKeydown();
+        card.className = 'flash-card-simple';
+        card.innerHTML = '';
+        const done = el('div', 'flash-complete');
+        done.appendChild(el('div', 'flash-complete-title', '🎉 Xong bộ thẻ!'));
+        done.appendChild(el('p', 'flash-complete-stats', 'Đã nhớ ' + rememberedCount + ' từ · Chưa nhớ ' + notRememberedCount + ' lượt.'));
+        const quizBtn = el('button', 'btn-purple', 'Làm quiz kiểm tra →');
+        quizBtn.type = 'button';
+        quizBtn.addEventListener('click', function () { if (onFinished) onFinished(); });
+        done.appendChild(quizBtn);
+        const retryBtn = el('button', 'btn-check', 'Học lại bộ thẻ');
+        retryBtn.type = 'button';
+        retryBtn.addEventListener('click', function () {
+          queue = items.slice(); i = 0; rememberedCount = 0; notRememberedCount = 0;
+          renderFront(); ctrlRow.style.display = ''; progressWrap.style.display = '';
+        });
+        done.appendChild(retryBtn);
+        card.appendChild(done);
+        ctrlRow.style.display = 'none';
+        if (!progressMarked) { progressMarked = true; markProgressDone(progressKeyForThis); }
+      }
+
+      function goNext(judgement) {
+        if (i >= queue.length) return;
+        if (judgement === 'remember') { rememberedCount++; }
+        else if (judgement === 'forget') { notRememberedCount++; queue.push(queue[i]); }
+        i++;
+        if (i >= queue.length) { showComplete(); } else { renderFront(); }
+      }
+
+      card.addEventListener('click', toggleFlip);
+      forgetBtn.addEventListener('click', function () { goNext('forget'); });
+      nextBtn.addEventListener('click', function () { goNext('skip'); });
+      rememberBtn.addEventListener('click', function () { goNext('remember'); });
+      ctrlRow.appendChild(forgetBtn); ctrlRow.appendChild(nextBtn); ctrlRow.appendChild(rememberBtn);
+
+      detachFlashKeydown();
+      flashKeydownHandler = function (e) {
+        if (i >= queue.length) return;
+        if (e.code === 'Space') { e.preventDefault(); toggleFlip(); }
+        else if (e.key === '1') { goNext('forget'); }
+        else if (e.key === '2') { goNext('remember'); }
+        else if (e.key === 'ArrowRight') { goNext('skip'); }
+      };
+      document.addEventListener('keydown', flashKeydownHandler);
+
+      renderFront();
       wrap.appendChild(card);
-      wrap.appendChild(el('p', 'ex-instruction', 'Bấm vào thẻ để lật xem nghĩa (tự phát âm khi lật).'));
-      nav.appendChild(prev); nav.appendChild(next);
-      wrap.appendChild(nav);
+      wrap.appendChild(ctrlRow);
+      wrap.appendChild(progressWrap);
       return wrap;
     }
 
@@ -337,24 +434,26 @@
       if (!items.length) { panel.appendChild(emptyNote('Từ vựng đang được cập nhật.')); return; }
 
       const modeBar = el('div', 'mode-bar');
-      const modes = [['list', 'Danh sách'], ['flashcards', 'Flashcards'], ['quiz', 'Trắc nghiệm']];
+      const modes = [['flashcards', 'Flashcards'], ['quiz', 'Trắc nghiệm'], ['list', 'Danh sách']];
       const content = el('div', 'vocab-content');
-      let activeMode = 'list';
+      let activeMode = 'flashcards';
+      function setMode(m) {
+        activeMode = m;
+        modeBar.querySelectorAll('.mode-btn').forEach(function (x) { x.classList.toggle('active', x.dataset.mode === m); });
+        draw();
+      }
       function draw() {
+        detachFlashKeydown();
         content.innerHTML = '';
         if (activeMode === 'list') content.appendChild(renderVocabList(items));
-        else if (activeMode === 'flashcards') content.appendChild(renderVocabFlashcards(items));
+        else if (activeMode === 'flashcards') content.appendChild(renderVocabFlashcards(items, function () { setMode('quiz'); }));
         else content.appendChild(renderVocabQuiz(items));
       }
       modes.forEach(function (m) {
         const b = el('button', 'mode-btn' + (m[0] === activeMode ? ' active' : ''), m[1]);
         b.type = 'button';
-        b.addEventListener('click', function () {
-          activeMode = m[0];
-          modeBar.querySelectorAll('.mode-btn').forEach(function (x) { x.classList.remove('active'); });
-          b.classList.add('active');
-          draw();
-        });
+        b.dataset.mode = m[0];
+        b.addEventListener('click', function () { setMode(m[0]); });
         modeBar.appendChild(b);
       });
       panel.appendChild(modeBar);
