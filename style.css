@@ -504,6 +504,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .result-panel p { color: var(--ink); max-width: 52ch; margin: 0 auto 26px; line-height: 1.6; }
 
 /* ============================================================
+/* ============================================================
    Lesson grid (lessons.html) — colorful pattern tiles that
    rotate through a color palette and a pattern set independently
    ============================================================ */
@@ -540,6 +541,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .lesson-tile-btn-secondary { background: rgba(255, 255, 255, .55); }
 .lesson-tile-btn-disabled { background: rgba(255, 255, 255, .55); color: var(--ink); opacity: .75; cursor: default; pointer-events: none; }
 .lesson-tile-locked { opacity: .82; }
+
 
 /* ============================================================
    lesson.html — tabs (Bài học / BTVN) + các loại bài tập
@@ -763,20 +765,48 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 }
 .star-btn.starred { color: var(--yellow-border); }
 
-.flash-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 10px 0 6px; }
-.flash-progress { color: var(--muted); font-weight: 700; font-size: .88rem; }
-.flash-card {
-  width: 100%; max-width: 340px; min-height: 180px; border: 2px solid var(--stroke); border-radius: 20px;
-  background: var(--surface); box-shadow: 6px 6px 0 0 var(--stroke); cursor: pointer;
-  position: relative; display: flex; align-items: center; justify-content: center; padding: 24px;
+.flash-wrap-simple { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 10px 0 6px; max-width: 480px; margin: 0 auto; }
+.flash-card-simple {
+  width: 100%; min-height: 190px; border-radius: 22px; cursor: pointer;
+  background: #7A63EE; color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  position: relative; padding: 28px 24px; box-shadow: 0 8px 22px rgba(122, 99, 238, .28);
+  transition: background .15s ease;
 }
-.flash-face { display: none; text-align: center; }
-.flash-front { display: flex; font-family: var(--font-display); font-weight: 700; font-size: 1.7rem; color: var(--ink); }
-.flash-card.flipped .flash-front { display: none; }
-.flash-card.flipped .flash-back { display: flex; flex-direction: column; gap: 8px; align-items: center; }
-.flash-ipa { color: var(--muted); font-style: italic; }
-.flash-meaning { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--ink); }
-.flash-nav { display: flex; gap: 10px; }
+.flash-card-simple.flash-card-back { background: #2E1F6E; box-shadow: 0 8px 22px rgba(46, 31, 110, .35); }
+.flash-word-simple { font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; text-align: center; line-height: 1.25; }
+.flash-icon-row { display: flex; gap: 12px; }
+.flash-round-btn {
+  width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(255, 255, 255, .22);
+  color: #fff; font-size: .95rem; display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.flash-round-btn:hover { background: rgba(255, 255, 255, .34); }
+.flash-round-btn.starred { background: #fff; color: #F7B749; }
+.flash-corner-prompt { position: absolute; right: 18px; bottom: 14px; font-size: .8rem; color: rgba(255, 255, 255, .8); font-weight: 600; }
+.flash-example-box { background: rgba(255, 255, 255, .12); border-radius: 12px; padding: 10px 16px; text-align: center; max-width: 90%; }
+.flash-example-label { font-size: .78rem; color: rgba(255, 255, 255, .7); margin-bottom: 2px; }
+.flash-example-text { font-size: .92rem; }
+.flash-complete { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.flash-complete-title { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; }
+.flash-complete-stats { color: rgba(255, 255, 255, .85); margin: 0; }
+.flash-complete .btn-purple, .flash-complete .btn-check { margin-top: 4px; }
+
+.flash-controls-row { display: flex; gap: 10px; width: 100%; }
+.flash-ctrl-btn {
+  flex: 1; padding: 13px 10px; border-radius: 14px; border: none; font-weight: 700; font-size: .92rem;
+  cursor: pointer; color: var(--ink); transition: transform .1s ease;
+}
+.flash-ctrl-btn:hover { transform: translateY(-1px); }
+.flash-ctrl-forget { background: #F3A6A4; }
+.flash-ctrl-skip { background: #C9E39A; }
+.flash-ctrl-remember { background: #F2C98B; }
+
+.flash-progress-wrap { display: flex; align-items: center; gap: 10px; width: 100%; }
+.flash-progress-label { font-size: .82rem; color: var(--muted); font-weight: 700; flex: none; }
+.flash-progress-track { flex: 1; height: 8px; border-radius: 999px; background: var(--tint); border: 1.5px solid var(--stroke); overflow: hidden; }
+.flash-progress-fill-grad { height: 100%; background: #7A63EE; }
+.flash-progress-pct { font-size: .82rem; color: var(--ink); font-weight: 700; flex: none; }
+
 
 .quiz-wrap { max-width: 460px; }
 .quiz-foot { color: var(--muted); font-size: .85rem; font-weight: 700; margin-bottom: 10px; }
