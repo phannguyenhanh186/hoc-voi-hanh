@@ -301,104 +301,224 @@
     ]
   },
   "grammar": {
-    "points": [
+    "sections": [
       {
-        "id": "g1",
-        "title": "Personal Pronouns in Vietnamese",
-        "pronounContent": {
-          "intro": [
-            "Unlike English, Vietnamese does not always use the same words for \"I\" and \"you.\"",
-            "Instead, the words change depending on the age of the person you are talking to.",
-            "Don't worry—you only need to remember three common situations to start speaking Vietnamese."
-          ],
-          "table": {
-            "headers": ["The other person is...", "Call them", "Call yourself"],
-            "rows": [
-              ["Older than you", "anh (male) / chị (female)", "em"],
-              ["Younger than you", "em", "anh / chị"],
-              ["About the same age or you don't know their age", "bạn", "mình"]
-            ]
-          },
-          "tip": "If you're not sure how old someone is, bạn is usually the safest choice.",
-          "exampleGroups": [
-            {
-              "heading": "Talking to someone older (male)",
-              "lines": [
-                { "vi": "Chào anh.", "en": "Hello." },
-                { "vi": "Anh khỏe không?", "en": "How are you?" },
-                { "vi": "Em khỏe.", "en": "I'm fine." }
-              ]
-            },
-            {
-              "heading": "Talking to someone older (female)",
-              "lines": [
-                { "vi": "Cảm ơn chị.", "en": "Thank you." },
-                { "vi": "Xin lỗi chị.", "en": "Sorry." }
-              ]
-            },
-            {
-              "heading": "Talking to someone younger",
-              "lines": [
-                { "vi": "Chào em.", "en": "Hello." },
-                { "vi": "Xin lỗi em.", "en": "Sorry." }
-              ]
-            },
-            {
-              "heading": "Talking to someone your age",
-              "lines": [
-                { "vi": "Cảm ơn bạn.", "en": "Thank you." },
-                { "vi": "Bạn khỏe không?", "en": "How are you?" },
-                { "vi": "Mình khỏe.", "en": "I'm fine." }
-              ]
-            }
-          ],
-          "specialRule": {
-            "heading": "A Special Rule",
-            "text": "In Vietnamese, people often repeat the same pronoun instead of saying \"I.\" For example:",
-            "examples": [
-              {
-                "lines": [
-                  { "vi": "Anh khỏe không?", "en": "How are you?" },
-                  { "vi": "Anh khỏe.", "en": "I'm fine." }
+        "id": "pronouns",
+        "titleVi": "Đại từ nhân xưng",
+        "titleEn": "Personal Pronouns",
+        "intro": [
+          "Vietnamese personal pronouns are different from English. Instead of using only I, you, he, she, Vietnamese often uses words that show the relationship, age, or social position between speakers.",
+          "The same person can use different pronouns in different situations."
+        ],
+        "subtopics": [
+          {
+            "id": "pronouns",
+            "label": "Đại từ nhân xưng",
+            "pronounContent": {
+              "intro": [
+                "Unlike English, Vietnamese does not always use the same words for \"I\" and \"you.\"",
+                "Instead, the words change depending on the age of the person you are talking to.",
+                "Don't worry—you only need to remember three common situations to start speaking Vietnamese."
+              ],
+              "table": {
+                "headers": [
+                  "The other person is...",
+                  "Call them",
+                  "Call yourself"
                 ],
-                "note": "Here, anh means \"you\" in the question, but \"I\" in the answer. This sounds completely natural in Vietnamese."
+                "rows": [
+                  [
+                    "Older than you",
+                    "anh (male) / chị (female)",
+                    "em"
+                  ],
+                  [
+                    "Younger than you",
+                    "em",
+                    "anh / chị"
+                  ],
+                  [
+                    "About the same age or you don't know their age",
+                    "bạn",
+                    "mình"
+                  ]
+                ]
+              },
+              "tip": "If you're not sure how old someone is, bạn is usually the safest choice.",
+              "exampleGroups": [
+                {
+                  "heading": "Talking to someone older (male)",
+                  "lines": [
+                    {
+                      "vi": "Chào anh.",
+                      "en": "Hello."
+                    },
+                    {
+                      "vi": "Anh khỏe không?",
+                      "en": "How are you?"
+                    },
+                    {
+                      "vi": "Em khỏe.",
+                      "en": "I'm fine."
+                    }
+                  ]
+                },
+                {
+                  "heading": "Talking to someone older (female)",
+                  "lines": [
+                    {
+                      "vi": "Cảm ơn chị.",
+                      "en": "Thank you."
+                    },
+                    {
+                      "vi": "Xin lỗi chị.",
+                      "en": "Sorry."
+                    }
+                  ]
+                },
+                {
+                  "heading": "Talking to someone younger",
+                  "lines": [
+                    {
+                      "vi": "Chào em.",
+                      "en": "Hello."
+                    },
+                    {
+                      "vi": "Xin lỗi em.",
+                      "en": "Sorry."
+                    }
+                  ]
+                },
+                {
+                  "heading": "Talking to someone your age",
+                  "lines": [
+                    {
+                      "vi": "Cảm ơn bạn.",
+                      "en": "Thank you."
+                    },
+                    {
+                      "vi": "Bạn khỏe không?",
+                      "en": "How are you?"
+                    },
+                    {
+                      "vi": "Mình khỏe.",
+                      "en": "I'm fine."
+                    }
+                  ]
+                }
+              ],
+              "specialRule": {
+                "heading": "A Special Rule",
+                "text": "In Vietnamese, people often repeat the same pronoun instead of saying \"I.\" For example:",
+                "examples": [
+                  {
+                    "lines": [
+                      {
+                        "vi": "Anh khỏe không?",
+                        "en": "How are you?"
+                      },
+                      {
+                        "vi": "Anh khỏe.",
+                        "en": "I'm fine."
+                      }
+                    ],
+                    "note": "Here, anh means \"you\" in the question, but \"I\" in the answer. This sounds completely natural in Vietnamese."
+                  },
+                  {
+                    "lines": [
+                      {
+                        "vi": "Chị thích cà phê không?",
+                        "en": "Do you like coffee?"
+                      },
+                      {
+                        "vi": "Chị thích.",
+                        "en": "Yes, I do."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "remember": {
+                "heading": "Remember",
+                "text": "You don't need to memorize every Vietnamese pronoun at the beginning. For now, just remember these three pairs:",
+                "pairs": [
+                  "anh/chị ↔ em",
+                  "em ↔ anh/chị",
+                  "bạn ↔ mình"
+                ],
+                "footer": "These are enough for most everyday conversations with Vietnamese speakers."
+              },
+              "cultureNote": "Vietnamese pronouns show respect and closeness, not just who is speaking. Using the right pronouns makes your Vietnamese sound much more natural, even if your grammar is still simple. Many Vietnamese people appreciate the effort, and they will often help you choose the correct pronouns if you're unsure."
+            },
+            "quiz": [
+              {
+                "context": "Hoàng: _____ tên là gì?\nPhương: Mình tên là Phương.",
+                "options": [
+                  "mình",
+                  "bạn",
+                  "em"
+                ],
+                "answer": "bạn"
               },
               {
-                "lines": [
-                  { "vi": "Chị thích cà phê không?", "en": "Do you like coffee?" },
-                  { "vi": "Chị thích.", "en": "Yes, I do." }
-                ]
+                "context": "Minh: Chào chị.\nHà: Chào ______.",
+                "options": [
+                  "chị",
+                  "anh",
+                  "em"
+                ],
+                "answer": "em"
+              },
+              {
+                "context": "Lan: Em tên là Lan. Còn _____?\nHuy: Anh tên là Huy.",
+                "options": [
+                  "anh",
+                  "chị",
+                  "em"
+                ],
+                "answer": "anh"
+              },
+              {
+                "context": "Kiên: Số điện thoại của bạn là gì?\nPhong: Số điện thoại của _____ là 083 123 456.",
+                "options": [
+                  "bạn",
+                  "mình",
+                  "em"
+                ],
+                "answer": "mình"
               }
             ]
-          },
-          "remember": {
-            "heading": "Remember",
-            "text": "You don't need to memorize every Vietnamese pronoun at the beginning. For now, just remember these three pairs:",
-            "pairs": ["anh/chị ↔ em", "em ↔ anh/chị", "bạn ↔ mình"],
-            "footer": "These are enough for most everyday conversations with Vietnamese speakers."
-          },
-          "cultureNote": "Vietnamese pronouns show respect and closeness, not just who is speaking. Using the right pronouns makes your Vietnamese sound much more natural, even if your grammar is still simple. Many Vietnamese people appreciate the effort, and they will often help you choose the correct pronouns if you're unsure."
-        },
-        "quiz": [
+          }
+        ]
+      },
+      {
+        "id": "greetings",
+        "titleVi": "Chào hỏi",
+        "titleEn": "Greetings",
+        "subtopics": [
           {
-            "context": "Hoàng: _____ tên là gì?\nPhương: Mình tên là Phương.",
-            "options": ["mình", "bạn", "em"],
-            "answer": "bạn"
-          },
-          {
-            "context": "Minh: Chào chị.\nHà: Chào ______.",
-            "options": ["chị", "anh", "em"],
-            "answer": "em"
+            "id": "chao",
+            "label": "Chào",
+            "subHeadingVi": "Chào",
+            "subHeadingEn": "Hello & Goodbye"
           },
           {
-            "context": "Lan: Em tên là Lan. Còn _____?\nHuy: Anh tên là Huy.",
-            "options": ["anh", "chị", "em"],
-            "answer": "anh"
+            "id": "camon",
+            "label": "Cảm ơn",
+            "subHeadingVi": "Cảm ơn",
+            "subHeadingEn": "Thank You"
           },
           {
-            "context": "Kiên: Số điện thoại của bạn là gì?\nPhong: Số điện thoại của _____ là 083 123 456.",
-            "options": ["bạn", "mình", "em"],
-            "answer": "mình"
+            "id": "xinloi",
+            "label": "Xin lỗi",
+            "subHeadingVi": "Xin lỗi",
+            "subHeadingEn": "Sorry"
+          },
+          {
+            "id": "khoe",
+            "label": "Khoẻ không?",
+            "subHeadingVi": "Khoẻ không?/Khoẻ",
+            "subHeadingEn": "How are you?/Fine"
           }
         ]
       }
