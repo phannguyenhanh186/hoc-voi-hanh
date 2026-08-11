@@ -542,6 +542,79 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .lesson-tile-btn-disabled { background: rgba(255, 255, 255, .55); color: var(--ink); opacity: .75; cursor: default; pointer-events: none; }
 .lesson-tile-locked { opacity: .82; }
 
+/* ============================================================
+   Grammar tab v2 — sidebar (sections/subtopics) + content panel
+   ============================================================ */
+.gram2-shell { display: flex; flex-direction: column; gap: 18px; }
+.gram2-topbar { display: flex; align-items: center; gap: 12px; }
+.gram2-back-btn {
+  width: 44px; height: 44px; flex: none; border-radius: 12px; border: 1.5px solid var(--stroke);
+  background: var(--surface); font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.gram2-back-btn:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 var(--stroke); }
+.gram2-tab-pill {
+  font-family: var(--font-display); font-weight: 700; font-size: 1rem; border: 1.5px solid var(--stroke);
+  border-radius: 12px; padding: 10px 22px; background: var(--surface);
+}
+
+.gram2-body { display: grid; grid-template-columns: 260px 1fr; gap: 20px; align-items: start; }
+@media (max-width: 720px) { .gram2-body { grid-template-columns: 1fr; } }
+
+.gram2-sidebar {
+  border: 1.5px solid var(--stroke); border-radius: 20px; padding: 14px; background: var(--surface);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.gram2-section { border-radius: 14px; overflow: hidden; }
+.gram2-section:nth-of-type(1) { background: #F1CDDE; }
+.gram2-section:nth-of-type(2) { background: #BDE5F9; }
+.gram2-section:nth-of-type(3) { background: #FAE79B; }
+.gram2-section:nth-of-type(4) { background: #C9E39A; }
+.gram2-section:nth-of-type(5) { background: #F8C670; }
+.gram2-section-header {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  background: transparent; border: none; padding: 12px 14px; cursor: pointer; text-align: left; font: inherit;
+}
+.gram2-section-titles { display: flex; flex-direction: column; gap: 2px; }
+.gram2-section-title-vi { font-family: var(--font-display); font-weight: 800; font-size: .82rem; letter-spacing: .01em; color: var(--ink); }
+.gram2-section-title-en { font-size: .74rem; color: var(--ink); opacity: .65; }
+.gram2-chevron { font-size: .8rem; color: var(--ink); opacity: .7; flex: none; transition: transform .15s ease; }
+.gram2-subtopic-list { display: flex; flex-direction: column; gap: 6px; padding: 0 10px 12px; }
+.gram2-subtopic-list.gram2-collapsed { display: none; }
+.gram2-subtopic-btn {
+  font: inherit; text-align: left; border: 1.5px solid transparent; border-radius: 10px; padding: 9px 12px;
+  background: rgba(255, 255, 255, .55); color: var(--ink); font-weight: 600; font-size: .88rem; cursor: pointer;
+}
+.gram2-subtopic-btn:hover { background: rgba(255, 255, 255, .8); }
+.gram2-subtopic-btn.active { background: #fff; border-color: var(--stroke); font-weight: 800; }
+
+.gram2-content {
+  border: 1.5px solid var(--stroke); border-radius: 20px; padding: 26px 28px; background: var(--surface);
+}
+.gram2-content-title { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; letter-spacing: .01em; margin: 0 0 12px; }
+.gram2-intro { color: var(--muted); font-size: .92rem; line-height: 1.6; margin: 0 0 8px; }
+.gram2-toggle-row { display: flex; gap: 10px; margin: 16px 0 20px; }
+.gram2-toggle-btn {
+  font-family: inherit; font-weight: 700; font-size: .9rem; border: 1.5px solid var(--stroke); border-radius: 10px;
+  padding: 9px 20px; background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.gram2-toggle-btn.active { background: var(--accent-deep); color: #fff; border-color: var(--accent-deep); }
+.gram2-toggle-btn:hover:not(.active) { background: var(--tint); }
+.gram2-sub-heading { font-family: var(--font-display); font-weight: 800; font-size: .95rem; margin: 4px 0 10px; }
+.gram2-table-caption { font-family: var(--font-display); font-weight: 800; font-size: .8rem; letter-spacing: .03em; margin: 18px 0 10px; }
+.gram2-chip-row { display: flex; flex-direction: column; gap: 10px; margin: 14px 0; }
+.gram2-chip-item { display: flex; align-items: center; gap: 10px; }
+.gram2-chip-label {
+  font-family: var(--font-display); font-weight: 700; font-size: .82rem; color: var(--ink);
+  background: #C9E39A; border: 1.5px solid var(--stroke); border-radius: 8px; padding: 6px 12px;
+}
+.gram2-chip {
+  font-weight: 700; font-size: .88rem; color: var(--ink);
+  background: #F8C670; border: 1.5px solid var(--stroke); border-radius: 8px; padding: 7px 14px;
+}
+.gram2-examples-label { font-family: var(--font-display); font-weight: 800; font-size: .85rem; margin: 16px 0 8px; }
+.gram2-examples-list { margin: 0; padding-left: 20px; }
+.gram2-examples-list li { font-size: .9rem; line-height: 1.7; color: var(--ink); }
+
 
 /* ============================================================
    lesson.html — tabs (Bài học / BTVN) + các loại bài tập
