@@ -587,31 +587,35 @@
       container.appendChild(tracker.ring.el);
     }
 
+    function buildQuizBlock(quiz) {
+      const wrap = el('div');
+      const tracker = trackQuizState(quiz.length);
+      quiz.forEach(function (q, idx) {
+        const qBox = el('div', 'reasoning-item');
+        qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
+        const optWrap = el('div', 'quiz-options');
+        (q.options || []).forEach(function (opt) {
+          const obtn = el('button', 'quiz-option', opt);
+          obtn.type = 'button';
+          obtn.addEventListener('click', function () {
+            const ok = opt === q.answer;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+            tracker.set(idx, ok);
+          });
+          optWrap.appendChild(obtn);
+        });
+        qBox.appendChild(optWrap);
+        wrap.appendChild(qBox);
+      });
+      appendSubmitAndRing(wrap, tracker);
+      return wrap;
+    }
+
     function renderQuizToggle(quiz, label) {
       return makeToggleSection(label || 'Small quiz', function () {
-        const wrap = el('div');
-        const tracker = trackQuizState(quiz.length);
-        quiz.forEach(function (q, idx) {
-          const qBox = el('div', 'reasoning-item');
-          qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
-          const optWrap = el('div', 'quiz-options');
-          (q.options || []).forEach(function (opt) {
-            const obtn = el('button', 'quiz-option', opt);
-            obtn.type = 'button';
-            obtn.addEventListener('click', function () {
-              const ok = opt === q.answer;
-              Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
-              obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
-              if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
-              tracker.set(idx, ok);
-            });
-            optWrap.appendChild(obtn);
-          });
-          qBox.appendChild(optWrap);
-          wrap.appendChild(qBox);
-        });
-        appendSubmitAndRing(wrap, tracker);
-        return wrap;
+        return buildQuizBlock(quiz);
       });
     }
 
@@ -772,7 +776,163 @@
     // ========================================================
     // NGỮ PHÁP
     // ========================================================
+    // ========================================================
+    // NGỮ PHÁP KIỂU MỚI — sidebar 2 cấp + nội dung Theory/Practice
+    // (dùng khi item.grammar.sections tồn tại; không ảnh hưởng bài dùng "points")
+    // ========================================================
+    function toggleToolbar(show) {
+      const bar = document.querySelector('.toolbar');
+      if (bar) bar.hidden = !show;
+    }
+
+    function buildSimpleTheory(sub, container) {
+      (sub.paragraphs || []).forEach(function (p) { container.appendChild(el('p', 'gram2-intro', p)); });
+      if (sub.table) {
+        if (sub.table.caption) container.appendChild(el('div', 'gram2-table-caption', sub.table.caption.toUpperCase()));
+        const table = document.createElement('table');
+        table.className = 'grammar-table';
+        const thead = document.createElement('thead');
+        const headRow = document.createElement('tr');
+        sub.table.headers.forEach(function (h) { const th = document.createElement('th'); th.textContent = h; headRow.appendChild(th); });
+        thead.appendChild(headRow); table.appendChild(thead);
+        const tbody = document.createElement('tbody');
+        sub.table.rows.forEach(function (r) {
+          const tr = document.createElement('tr');
+          r.forEach(function (cell) { const td = document.createElement('td'); td.textContent = cell; tr.appendChild(td); });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        container.appendChild(table);
+      }
+      if (sub.chips && sub.chips.length) {
+        const chipRow = el('div', 'gram2-chip-row');
+        sub.chips.forEach(function (c) {
+          const item = el('div', 'gram2-chip-item');
+          if (c.label) item.appendChild(el('span', 'gram2-chip-label', c.label));
+          item.appendChild(el('span', 'gram2-chip', c.pattern));
+          chipRow.appendChild(item);
+        });
+        container.appendChild(chipRow);
+      }
+      if (sub.examples && sub.examples.length) {
+        container.appendChild(el('div', 'gram2-examples-label', 'Examples'));
+        const ul = document.createElement('ul');
+        ul.className = 'gram2-examples-list';
+        sub.examples.forEach(function (e) { const li = document.createElement('li'); li.textContent = e; ul.appendChild(li); });
+        container.appendChild(ul);
+      }
+    }
+
+    function renderGrammarTabSidebar(item, sections) {
+      const panel = document.getElementById('panel-grammar');
+      panel.innerHTML = '';
+      toggleToolbar(false);
+
+      const shell = el('div', 'gram2-shell');
+      const topbar = el('div', 'gram2-topbar');
+      const backBtn = el('button', 'gram2-back-btn', '←'); backBtn.type = 'button';
+      backBtn.addEventListener('click', function () {
+        toggleToolbar(true);
+        setActiveTab('vocab');
+        try { sessionStorage.setItem(tabMemoKey, 'vocab'); } catch (e) {}
+      });
+      topbar.appendChild(backBtn);
+      topbar.appendChild(el('div', 'gram2-tab-pill', 'Grammar'));
+      shell.appendChild(topbar);
+
+      const body = el('div', 'gram2-body');
+      const sidebar = el('aside', 'gram2-sidebar');
+      const content = el('div', 'gram2-content');
+      body.appendChild(sidebar);
+      body.appendChild(content);
+      shell.appendChild(body);
+      panel.appendChild(shell);
+
+      let firstEntry = null;
+
+      function renderContent(section, sub, showSubHeading) {
+        content.innerHTML = '';
+        content.appendChild(el('h2', 'gram2-content-title', section.titleVi.toUpperCase() + ' - ' + section.titleEn.toUpperCase()));
+        (section.intro || []).forEach(function (p) { content.appendChild(el('p', 'gram2-intro', p)); });
+
+        const toggleRow = el('div', 'gram2-toggle-row');
+        const theoryBtn = el('button', 'gram2-toggle-btn active', 'Theory'); theoryBtn.type = 'button';
+        const practiceBtn = el('button', 'gram2-toggle-btn', 'Practice'); practiceBtn.type = 'button';
+        toggleRow.appendChild(theoryBtn); toggleRow.appendChild(practiceBtn);
+        content.appendChild(toggleRow);
+
+        const theoryPanel = el('div', 'gram2-theory-panel');
+        const practicePanel = el('div', 'gram2-practice-panel');
+        practicePanel.hidden = true;
+
+        if (showSubHeading) {
+          const hVi = sub.subHeadingVi || sub.label;
+          const hEn = sub.subHeadingEn;
+          theoryPanel.appendChild(el('h3', 'gram2-sub-heading', hVi.toUpperCase() + (hEn ? ' - ' + hEn.toUpperCase() : '')));
+        }
+
+        if (sub.pronounContent) {
+          theoryPanel.appendChild(renderPronounContent(sub.pronounContent));
+        } else {
+          buildSimpleTheory(sub, theoryPanel);
+        }
+
+        if (sub.quiz && sub.quiz.length) practicePanel.appendChild(buildQuizBlock(sub.quiz));
+        else practicePanel.appendChild(el('p', 'note', 'Practice exercises coming soon.'));
+
+        content.appendChild(theoryPanel);
+        content.appendChild(practicePanel);
+
+        theoryBtn.addEventListener('click', function () {
+          theoryBtn.classList.add('active'); practiceBtn.classList.remove('active');
+          theoryPanel.hidden = false; practicePanel.hidden = true;
+        });
+        practiceBtn.addEventListener('click', function () {
+          practiceBtn.classList.add('active'); theoryBtn.classList.remove('active');
+          practicePanel.hidden = false; theoryPanel.hidden = true;
+        });
+      }
+
+      sections.forEach(function (section, si) {
+        const secBox = el('div', 'gram2-section');
+        const header = el('button', 'gram2-section-header'); header.type = 'button';
+        const titles = el('div', 'gram2-section-titles');
+        titles.appendChild(el('div', 'gram2-section-title-vi', (si + 1) + '. ' + section.titleVi.toUpperCase()));
+        titles.appendChild(el('div', 'gram2-section-title-en', section.titleEn));
+        header.appendChild(titles);
+        const chevron = el('span', 'gram2-chevron', '▾');
+        header.appendChild(chevron);
+        secBox.appendChild(header);
+
+        const list = el('div', 'gram2-subtopic-list');
+        const multi = (section.subtopics || []).length > 1;
+        (section.subtopics || []).forEach(function (sub) {
+          const btn = el('button', 'gram2-subtopic-btn', sub.label); btn.type = 'button';
+          btn.addEventListener('click', function () {
+            sidebar.querySelectorAll('.gram2-subtopic-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            renderContent(section, sub, multi);
+          });
+          list.appendChild(btn);
+          if (!firstEntry) firstEntry = { btn: btn, section: section, sub: sub, multi: multi };
+        });
+        secBox.appendChild(list);
+        header.addEventListener('click', function () {
+          const collapsed = list.classList.toggle('gram2-collapsed');
+          chevron.textContent = collapsed ? '▸' : '▾';
+        });
+        sidebar.appendChild(secBox);
+      });
+
+      if (firstEntry) {
+        firstEntry.btn.classList.add('active');
+        renderContent(firstEntry.section, firstEntry.sub, firstEntry.multi);
+      }
+    }
+
     function renderGrammarTab(item) {
+      const sections = item.grammar && item.grammar.sections;
+      if (sections && sections.length) { renderGrammarTabSidebar(item, sections); return; }
       const panel = document.getElementById('panel-grammar');
       panel.innerHTML = '';
       const points = (item.grammar && item.grammar.points) || [];
