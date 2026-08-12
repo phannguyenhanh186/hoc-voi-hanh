@@ -702,6 +702,10 @@
       return box;
     }
 
+    function boldMarkup(text) {
+      return String(text).replace(/\*\*(.*?)\*\*/g, '<strong class="pronoun-hl">$1</strong>');
+    }
+
     function renderPronounContent(pc) {
       const box = el('div', 'pronoun-content');
       (pc.intro || []).forEach(function (p) {
@@ -724,7 +728,7 @@
           const tr = document.createElement('tr');
           r.forEach(function (cell) {
             const td = document.createElement('td');
-            td.textContent = cell;
+            td.innerHTML = boldMarkup(cell);
             tr.appendChild(td);
           });
           tbody.appendChild(tr);
