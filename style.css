@@ -643,6 +643,8 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .gram2-quiz-option.opt-correct { background: #EAF7EE; border-color: #2E8B4F; }
 .gram2-quiz-option.opt-wrong { background: #FBEAEA; border-color: #C0392B; }
 .gram2-quiz-next { margin-top: 6px; }
+.gram2-quiz-result-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.gram2-quiz-result-actions .gram2-quiz-next { margin-top: 0; flex: 1 1 auto; }
 
 
 /* ============================================================
