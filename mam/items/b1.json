@@ -521,17 +521,17 @@
                   "Chào bạn!",
                   "Chào chị!"
                 ],
-                "answer": "Chào anh!"
+                "answer": "Chào em!"
               },
               {
                 "question": "Choose the most natural response for \"Chị khoẻ không?\"",
                 "options": [
                   "Em khoẻ.",
                   "Anh khoẻ.",
-                  "Con khoẻ.",
+                  "Chị khoẻ.",
                   "Bạn khoẻ."
                 ],
-                "answer": "Em khoẻ."
+                "answer": "Chị khoẻ."
               }
             ]
           }
