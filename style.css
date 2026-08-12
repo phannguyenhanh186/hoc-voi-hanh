@@ -621,6 +621,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   background: #FDECC8; color: #6B6558; font-size: .72rem; font-weight: 700;
   border-radius: 11px; padding: 8px 14px; width: 100%; box-sizing: border-box;
 }
+.gram2-quiz-progress-frac { font-size: .82rem; font-weight: 700; color: var(--muted); }
 .gram2-quiz-progress-track {
   width: 100%; height: 6px; border-radius: 999px; border: 1px solid var(--stroke);
   background: #fff; overflow: hidden;
@@ -635,6 +636,8 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   padding: 10px 14px; cursor: pointer; font: inherit; color: var(--ink);
 }
 .gram2-quiz-option:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 var(--stroke); }
+.gram2-quiz-option.gram2-quiz-disabled { pointer-events: none; opacity: .85; }
+.gram2-quiz-option.gram2-quiz-disabled:hover { transform: none; box-shadow: none; }
 .gram2-quiz-badge {
   flex: none; width: 28px; height: 28px; border-radius: 6px; background: #FFD27A;
   display: flex; align-items: center; justify-content: center; font-weight: 700; color: #000; font-size: .85rem;
