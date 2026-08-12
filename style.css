@@ -299,8 +299,8 @@ a { color: var(--accent-deep); text-decoration: none; }
 .example:first-of-type { padding-top: 2px; }
 .example:last-child { border-bottom: none; padding-bottom: 0; }
 .ex-context { font-size: .85rem; font-weight: 600; color: var(--accent-deep); margin-bottom: 3px; }
-.ex-vi { font-size: 1.12rem; font-weight: 600; line-height: 1.4; white-space: pre-line; }
-.ex-en { color: var(--muted); font-style: italic; font-size: .95rem; white-space: pre-line; }
+.ex-vi { font-size: .92rem; font-weight: 600; line-height: 1.5; white-space: pre-line; }
+.ex-en { color: var(--muted); font-style: italic; font-size: .82rem; white-space: pre-line; }
 
 .back-row { padding: 4px 0 64px; }
 
