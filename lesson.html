@@ -870,10 +870,7 @@
       }
       if (sub.examples && sub.examples.length) {
         container.appendChild(el('div', 'gram2-examples-label', 'Examples'));
-        const ul = document.createElement('ul');
-        ul.className = 'gram2-examples-list';
-        sub.examples.forEach(function (e) { const li = document.createElement('li'); li.textContent = e; ul.appendChild(li); });
-        container.appendChild(ul);
+        container.appendChild(renderExampleLines(sub.examples));
       }
     }
 
@@ -932,8 +929,9 @@
           buildSimpleTheory(sub, theoryPanel);
         }
 
-        if (sub.quiz && sub.quiz.length) {
-          practicePanel.appendChild(buildQuizBlock(sub.quiz, function () {
+        const quizToUse = (sub.quiz && sub.quiz.length) ? sub.quiz : section.quiz;
+        if (quizToUse && quizToUse.length) {
+          practicePanel.appendChild(buildQuizBlock(quizToUse, function () {
             theoryBtn.classList.add('active'); practiceBtn.classList.remove('active');
             theoryPanel.hidden = false; practicePanel.hidden = true;
           }));
