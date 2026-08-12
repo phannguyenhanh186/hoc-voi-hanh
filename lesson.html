@@ -587,7 +587,7 @@
       container.appendChild(tracker.ring.el);
     }
 
-    function buildQuizBlock(quiz) {
+    function buildQuizBlock(quiz, onReviewTheory) {
       const wrap = el('div', 'gram2-quiz-wrap');
       wrap.appendChild(el('div', 'gram2-quiz-banner', 'Choose the correct answers.'));
 
@@ -599,7 +599,7 @@
       const qSlot = el('div', 'gram2-quiz-item');
       wrap.appendChild(qSlot);
 
-      const tracker = trackQuizState(quiz.length);
+      let tracker = trackQuizState(quiz.length);
       const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
       let i = 0;
 
@@ -615,6 +615,21 @@
           tracker.finalize();
           markProgressDone(nextProgressKey());
           qSlot.appendChild(tracker.ring.el);
+
+          const actionsRow = el('div', 'gram2-quiz-result-actions');
+          const retryBtn = el('button', 'btn-check btn-secondary gram2-quiz-next', '↺ Try again'); retryBtn.type = 'button';
+          retryBtn.addEventListener('click', function () {
+            i = 0;
+            tracker = trackQuizState(quiz.length);
+            renderQuestion();
+          });
+          actionsRow.appendChild(retryBtn);
+          if (onReviewTheory) {
+            const reviewBtn = el('button', 'btn-purple gram2-quiz-next', 'Review theory →'); reviewBtn.type = 'button';
+            reviewBtn.addEventListener('click', function () { onReviewTheory(); });
+            actionsRow.appendChild(reviewBtn);
+          }
+          qSlot.appendChild(actionsRow);
           return;
         }
         const q = quiz[i];
@@ -917,7 +932,12 @@
           buildSimpleTheory(sub, theoryPanel);
         }
 
-        if (sub.quiz && sub.quiz.length) practicePanel.appendChild(buildQuizBlock(sub.quiz));
+        if (sub.quiz && sub.quiz.length) {
+          practicePanel.appendChild(buildQuizBlock(sub.quiz, function () {
+            theoryBtn.classList.add('active'); practiceBtn.classList.remove('active');
+            theoryPanel.hidden = false; practicePanel.hidden = true;
+          }));
+        }
         else practicePanel.appendChild(el('p', 'note', 'Practice exercises coming soon.'));
 
         content.appendChild(theoryPanel);
