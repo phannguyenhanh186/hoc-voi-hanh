@@ -588,23 +588,45 @@
     }
 
     function buildQuizBlock(quiz) {
-      const wrap = el('div');
+      const wrap = el('div', 'gram2-quiz-wrap');
+      wrap.appendChild(el('div', 'gram2-quiz-banner', 'Choose the correct answers.'));
+
+      const progressTrack = el('div', 'gram2-quiz-progress-track');
+      const progressFill = el('div', 'gram2-quiz-progress-fill');
+      progressTrack.appendChild(progressFill);
+      wrap.appendChild(progressTrack);
+
+      const answeredIdx = {};
+      function updateAnsweredProgress() {
+        const answeredCount = Object.keys(answeredIdx).length;
+        const pct = quiz.length ? Math.round((answeredCount / quiz.length) * 100) : 0;
+        progressFill.style.width = pct + '%';
+      }
+
       const tracker = trackQuizState(quiz.length);
+      const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
       quiz.forEach(function (q, idx) {
-        const qBox = el('div', 'reasoning-item');
-        qBox.appendChild(el('p', 'ex-instruction', (idx + 1) + '. ' + q.question));
-        const optWrap = el('div', 'quiz-options');
-        (q.options || []).forEach(function (opt) {
-          const obtn = el('button', 'quiz-option', opt);
-          obtn.type = 'button';
-          obtn.addEventListener('click', function () {
+        const qBox = el('div', 'gram2-quiz-item');
+        qBox.appendChild(el('p', 'gram2-quiz-question', (idx + 1) + '. ' + q.question));
+        const optWrap = el('div', 'gram2-quiz-options');
+        (q.options || []).forEach(function (opt, oi) {
+          const card = el('button', 'gram2-quiz-option'); card.type = 'button';
+          card.appendChild(el('span', 'gram2-quiz-badge', letters[oi] || ''));
+          card.appendChild(el('span', 'gram2-quiz-option-text', opt));
+          card.addEventListener('click', function () {
             const ok = opt === q.answer;
             Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
-            obtn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
-            if (!ok) Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+            card.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) {
+              Array.from(optWrap.children).forEach(function (b) {
+                if (b.querySelector('.gram2-quiz-option-text').textContent === q.answer) b.classList.add('opt-correct');
+              });
+            }
             tracker.set(idx, ok);
+            answeredIdx[idx] = true;
+            updateAnsweredProgress();
           });
-          optWrap.appendChild(obtn);
+          optWrap.appendChild(card);
         });
         qBox.appendChild(optWrap);
         wrap.appendChild(qBox);
