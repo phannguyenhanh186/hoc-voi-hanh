@@ -315,11 +315,6 @@
             "id": "pronouns",
             "label": "Đại từ nhân xưng",
             "pronounContent": {
-              "intro": [
-                "Unlike English, Vietnamese does not always use the same words for \"I\" and \"you.\"",
-                "Instead, the words change depending on the age of the person you are talking to.",
-                "Don't worry—you only need to remember three common situations to start speaking Vietnamese."
-              ],
               "table": {
                 "headers": [
                   "Situation",
