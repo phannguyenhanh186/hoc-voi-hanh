@@ -661,6 +661,88 @@
               }
             ]
           }
+        ],
+        "quiz": [
+          {
+            "question": "What is the best expression to use when you meet your friend in the morning?",
+            "options": [
+              "Chào bạn.",
+              "Cảm ơn chị.",
+              "Xin lỗi anh.",
+              "Bạn khỏe không?"
+            ],
+            "answer": "Chào bạn."
+          },
+          {
+            "question": "What is the best expression to use when you want to ask your friend how they are?",
+            "options": [
+              "Chào chị.",
+              "Cảm ơn em.",
+              "Xin lỗi bạn.",
+              "Bạn khỏe không?"
+            ],
+            "answer": "Bạn khỏe không?"
+          },
+          {
+            "question": "What is the best expression to use when a man helps you carry your bag?",
+            "options": [
+              "Cảm ơn chị.",
+              "Cảm ơn anh.",
+              "Xin lỗi chị.",
+              "Xin lỗi anh."
+            ],
+            "answer": "Cảm ơn anh."
+          },
+          {
+            "question": "What is the best expression to use when you accidentally step on a woman's foot?",
+            "options": [
+              "Cảm ơn chị.",
+              "Cảm ơn anh.",
+              "Xin lỗi chị.",
+              "Xin lỗi anh."
+            ],
+            "answer": "Xin lỗi chị."
+          },
+          {
+            "question": "What is the best expression to use when you want to say goodbye to someone younger than you?",
+            "options": [
+              "Chào em.",
+              "Cảm ơn anh.",
+              "Xin lỗi bạn.",
+              "Chị khỏe không?"
+            ],
+            "answer": "Chào em."
+          },
+          {
+            "question": "What is the best expression to complete the conversation?\nA: Chào bạn!\nB: Mình khỏe.",
+            "options": [
+              "Cảm ơn em.",
+              "Em khỏe không?",
+              "Bạn khỏe không?",
+              "Chào anh."
+            ],
+            "answer": "Bạn khỏe không?"
+          },
+          {
+            "question": "What is the best expression to complete the conversation?\nA: ______\nB: Không sao!",
+            "options": [
+              "Chào bạn.",
+              "Cảm ơn cô.",
+              "Xin lỗi em.",
+              "Chú khỏe không?"
+            ],
+            "answer": "Xin lỗi em."
+          },
+          {
+            "question": "What is the best expression to complete the conversation?\nA: Chào em! Em khỏe không?\nB: ______",
+            "options": [
+              "Chào chị. Cảm ơn chị.",
+              "Em khỏe. Cảm ơn chị.",
+              "Anh khỏe. Cảm ơn em.",
+              "Chào cô. Cảm ơn cô."
+            ],
+            "answer": "Em khỏe. Cảm ơn chị."
+          }
         ]
       }
     ]
