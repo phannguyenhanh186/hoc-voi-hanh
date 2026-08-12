@@ -322,25 +322,47 @@
               ],
               "table": {
                 "headers": [
-                  "The other person is...",
-                  "Call them",
-                  "Call yourself"
+                  "Situation",
+                  "I / Me",
+                  "You",
+                  "Example"
                 ],
                 "rows": [
                   [
-                    "Older than you",
-                    "anh (male) / chị (female)",
-                    "em"
-                  ],
-                  [
-                    "Younger than you",
-                    "em",
-                    "anh / chị"
-                  ],
-                  [
-                    "About the same age or you don't know their age",
+                    "Same age / friends",
+                    "mình",
                     "bạn",
-                    "mình"
+                    "**Mình** là Hạnh. → **Bạn** là ai?"
+                  ],
+                  [
+                    "Older male → younger person",
+                    "anh",
+                    "em",
+                    "**Anh** là Nam. → **Em** tên gì?"
+                  ],
+                  [
+                    "Older female → younger person",
+                    "chị",
+                    "em",
+                    "**Chị** là Lan. → **Em** tên gì?"
+                  ],
+                  [
+                    "Younger person → older male",
+                    "em",
+                    "anh",
+                    "**Em** là Minh. → **Anh** tên gì?"
+                  ],
+                  [
+                    "Younger person → older female",
+                    "em",
+                    "chị",
+                    "**Em** là Mai. → **Chị** tên gì?"
+                  ],
+                  [
+                    "Younger person → older adult",
+                    "con",
+                    "cô / chú / bác / ông / bà",
+                    "**Con** là Nam. → **Cô** tên gì?"
                   ]
                 ]
               },
@@ -354,12 +376,12 @@
                       "en": "Hello."
                     },
                     {
-                      "vi": "Anh khỏe không?",
+                      "vi": "Anh khoẻ không?",
                       "en": "How are you?"
                     },
                     {
-                      "vi": "Em khỏe.",
-                      "en": "I'm fine."
+                      "vi": "→ Anh khoẻ.",
+                      "en": "I'm good."
                     }
                   ]
                 },
@@ -367,8 +389,8 @@
                   "heading": "Talking to someone older (female)",
                   "lines": [
                     {
-                      "vi": "Cảm ơn chị.",
-                      "en": "Thank you."
+                      "vi": "Cám ơn chị.",
+                      "en": "Thank you"
                     },
                     {
                       "vi": "Xin lỗi chị.",
@@ -384,8 +406,12 @@
                       "en": "Hello."
                     },
                     {
-                      "vi": "Xin lỗi em.",
-                      "en": "Sorry."
+                      "vi": "Em khoẻ không?",
+                      "en": "How are you?"
+                    },
+                    {
+                      "vi": "→ Em khoẻ.",
+                      "en": "I'm good."
                     }
                   ]
                 },
@@ -393,16 +419,12 @@
                   "heading": "Talking to someone your age",
                   "lines": [
                     {
-                      "vi": "Cảm ơn bạn.",
-                      "en": "Thank you."
+                      "vi": "Chào bạn. Bạn khoẻ không?",
+                      "en": "Hi. How are you?"
                     },
                     {
-                      "vi": "Bạn khỏe không?",
-                      "en": "How are you?"
-                    },
-                    {
-                      "vi": "Mình khỏe.",
-                      "en": "I'm fine."
+                      "vi": "→ Mình khoẻ. Cám ơn bạn.",
+                      "en": "I'm fine. Thank you."
                     }
                   ]
                 }
