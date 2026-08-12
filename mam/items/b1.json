@@ -474,40 +474,64 @@
             },
             "quiz": [
               {
-                "context": "Hoàng: _____ tên là gì?\nPhương: Mình tên là Phương.",
+                "question": "You are talking to a friend who is about the same age as you. Which pair is most natural?",
                 "options": [
-                  "mình",
-                  "bạn",
-                  "em"
+                  "anh - em",
+                  "chị - em",
+                  "bạn - mình",
+                  "cô - con"
                 ],
-                "answer": "bạn"
+                "answer": "bạn - mình"
               },
               {
-                "context": "Minh: Chào chị.\nHà: Chào ______.",
+                "question": "An older man is talking to a younger person. Which pair does he normally use?",
                 "options": [
-                  "chị",
-                  "anh",
-                  "em"
+                  "anh - em",
+                  "bạn - mình",
+                  "con - chú",
+                  "con - cô"
                 ],
-                "answer": "em"
+                "answer": "con - chú"
               },
               {
-                "context": "Lan: Em tên là Lan. Còn _____?\nHuy: Anh tên là Huy.",
+                "question": "You are introducing yourself as Lan to a person the same age as you: ____ là Lan.",
                 "options": [
-                  "anh",
-                  "chị",
-                  "em"
+                  "Mình",
+                  "Chị",
+                  "Cô",
+                  "Em"
                 ],
-                "answer": "anh"
+                "answer": "Mình"
               },
               {
-                "context": "Kiên: Số điện thoại của bạn là gì?\nPhong: Số điện thoại của _____ là 083 123 456.",
+                "question": "A younger person is talking to an older woman: ____ là Mai. ____ tên gì?",
                 "options": [
-                  "bạn",
-                  "mình",
-                  "em"
+                  "Chị / Em",
+                  "Cô / Con",
+                  "Mình / Bạn",
+                  "Con / Cô"
                 ],
-                "answer": "mình"
+                "answer": "Con / Cô"
+              },
+              {
+                "question": "Choose the most natural response for \"Chào anh!\"",
+                "options": [
+                  "Chào anh!",
+                  "Chào em!",
+                  "Chào bạn!",
+                  "Chào chị!"
+                ],
+                "answer": "Chào anh!"
+              },
+              {
+                "question": "Choose the most natural response for \"Chị khoẻ không?\"",
+                "options": [
+                  "Em khoẻ.",
+                  "Anh khoẻ.",
+                  "Con khoẻ.",
+                  "Bạn khoẻ."
+                ],
+                "answer": "Em khoẻ."
               }
             ]
           }
