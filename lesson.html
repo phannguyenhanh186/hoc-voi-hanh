@@ -746,9 +746,6 @@
 
     function renderPronounContent(pc) {
       const box = el('div', 'pronoun-content');
-      (pc.intro || []).forEach(function (p) {
-        box.appendChild(el('p', 'ex-instruction', p));
-      });
       if (pc.table) {
         const table = document.createElement('table');
         table.className = 'grammar-table';
@@ -895,7 +892,6 @@
       function renderContent(section, sub, showSubHeading) {
         content.innerHTML = '';
         content.appendChild(el('h2', 'gram2-content-title', section.titleVi.toUpperCase() + ' - ' + section.titleEn.toUpperCase()));
-        (section.intro || []).forEach(function (p) { content.appendChild(el('p', 'gram2-intro', p)); });
 
         const toggleRow = el('div', 'gram2-toggle-row');
         const theoryBtn = el('button', 'gram2-toggle-btn active', 'Theory'); theoryBtn.type = 'button';
@@ -906,6 +902,8 @@
         const theoryPanel = el('div', 'gram2-theory-panel');
         const practicePanel = el('div', 'gram2-practice-panel');
         practicePanel.hidden = true;
+
+        (section.intro || []).forEach(function (p) { theoryPanel.appendChild(el('p', 'gram2-intro', p)); });
 
         if (showSubHeading) {
           const hVi = sub.subHeadingVi || sub.label;
