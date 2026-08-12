@@ -927,10 +927,11 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .legend-label { color: var(--muted); }
 .legend-count { font-weight: 700; min-width: 46px; }
 .pronoun-content { margin-top: 8px; }
-.grammar-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .95rem; }
-.grammar-table th, .grammar-table td { border: 1.5px solid var(--stroke); padding: 8px 10px; text-align: left; }
-.grammar-table th { background: var(--tint); font-weight: 700; }
+.grammar-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .95rem; border-radius: 12px; overflow: hidden; }
+.grammar-table th, .grammar-table td { border: 1.5px solid var(--stroke); padding: 12px 14px; text-align: left; }
+.grammar-table th { background: var(--accent-deep); color: #fff; font-weight: 700; font-family: var(--font-display); }
 .grammar-table td:nth-child(2), .grammar-table td:nth-child(3) { font-weight: 700; color: var(--accent-deep); }
+.pronoun-hl { color: var(--accent-deep); font-weight: 700; }
 .grammar-callout {
   background: var(--yellow); border: 1.5px solid var(--stroke); border-radius: 10px;
   padding: 10px 14px; margin: 12px 0; font-size: .95rem;
