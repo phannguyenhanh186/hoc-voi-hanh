@@ -540,26 +540,126 @@
           {
             "id": "chao",
             "label": "Chào",
-            "subHeadingVi": "Chào",
-            "subHeadingEn": "Hello & Goodbye"
+            "subHeadingVi": "Saying Hello and Goodbye",
+            "subHeadingEn": "Chào",
+            "paragraphs": [
+              "Use chào to greet someone when you meet them. Vietnamese also commonly uses chào when saying goodbye.",
+              "Unlike English, where hello and goodbye are different words, Vietnamese can use chào for both situations.",
+              "The pronoun you use depends on the relationship between the speaker and the listener."
+            ],
+            "chips": [
+              {
+                "pattern": "Chào + [Pronoun]"
+              }
+            ],
+            "examples": [
+              {
+                "vi": "Chào bạn.",
+                "en": "Hi. / Hello."
+              },
+              {
+                "vi": "Chào anh.",
+                "en": "Hello. / Hi."
+              },
+              {
+                "vi": "Chào chị.",
+                "en": "Hello. / Hi."
+              },
+              {
+                "vi": "Chào em.",
+                "en": "Hello. / Hi."
+              }
+            ]
           },
           {
             "id": "camon",
             "label": "Cảm ơn",
-            "subHeadingVi": "Cảm ơn",
-            "subHeadingEn": "Thank You"
+            "subHeadingVi": "Saying Thank You",
+            "subHeadingEn": "Cám ơn",
+            "paragraphs": [
+              "Use cám ơn to thank someone.",
+              "The pronoun after cám ơn tells you who you are thanking."
+            ],
+            "chips": [
+              {
+                "pattern": "Cám ơn + [Pronoun]"
+              }
+            ],
+            "examples": [
+              {
+                "vi": "Cám ơn cô."
+              },
+              {
+                "vi": "Cám ơn em."
+              },
+              {
+                "vi": "Cám ơn bác."
+              }
+            ]
           },
           {
             "id": "xinloi",
             "label": "Xin lỗi",
-            "subHeadingVi": "Xin lỗi",
-            "subHeadingEn": "Sorry"
+            "subHeadingVi": "Saying Sorry",
+            "subHeadingEn": "Xin lỗi",
+            "paragraphs": [
+              "Use xin lỗi to apologize or to politely get someone's attention.",
+              "Xin lỗi can mean both “I'm sorry” and “Excuse me.”",
+              "“Không sao” is a common response to apologies, which means “It's OK”."
+            ],
+            "chips": [
+              {
+                "label": "Q",
+                "pattern": "Xin lỗi + [Pronoun]"
+              },
+              {
+                "label": "A",
+                "pattern": "Không sao"
+              }
+            ],
+            "examples": [
+              {
+                "vi": "Xin lỗi bạn. → Không sao."
+              },
+              {
+                "vi": "Xin lỗi ông. → Không sao."
+              },
+              {
+                "vi": "Xin lỗi bà. → Không sao."
+              }
+            ]
           },
           {
             "id": "khoe",
             "label": "Khoẻ không?",
-            "subHeadingVi": "Khoẻ không?/Khoẻ",
-            "subHeadingEn": "How are you?/Fine"
+            "subHeadingVi": "How are you?/Fine",
+            "subHeadingEn": "Khoẻ không?/Khoẻ",
+            "paragraphs": [
+              "Use “khỏe không?” to ask someone how they are.",
+              "Literally, khỏe means healthy / well, but in this expression, [Pronoun] + khỏe không? is a common way to ask “How are you?”.",
+              "A simple answer is: “[Pronoun] + khoẻ.”"
+            ],
+            "chips": [
+              {
+                "label": "Q",
+                "pattern": "[Pronoun] + khoẻ không?"
+              },
+              {
+                "label": "A",
+                "pattern": "[Pronoun] + khoẻ."
+              }
+            ],
+            "examples": [
+              {
+                "vi": "Bạn khoẻ không? → Mình khoẻ."
+              },
+              {
+                "vi": "Em khoẻ không? → Em khoẻ."
+              },
+              {
+                "vi": "Cô khoẻ không? → Cô khoẻ."
+              }
+            ]
           }
         ]
       }
