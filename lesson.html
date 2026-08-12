@@ -589,49 +589,89 @@
 
     function buildQuizBlock(quiz) {
       const wrap = el('div', 'gram2-quiz-wrap');
-      wrap.appendChild(el('div', 'gram2-quiz-banner', 'Choose the correct answers.'));
+      wrap.appendChild(el('div', 'gram2-quiz-banner', 'Choose an answer to see if it’s correct, then continue.'));
 
+      const progressFrac = el('div', 'gram2-quiz-progress-frac', '1/' + quiz.length);
+      wrap.appendChild(progressFrac);
       const progressTrack = el('div', 'gram2-quiz-progress-track');
       const progressFill = el('div', 'gram2-quiz-progress-fill');
       progressTrack.appendChild(progressFill);
       wrap.appendChild(progressTrack);
 
-      const answeredIdx = {};
-      function updateAnsweredProgress() {
-        const answeredCount = Object.keys(answeredIdx).length;
-        const pct = quiz.length ? Math.round((answeredCount / quiz.length) * 100) : 0;
-        progressFill.style.width = pct + '%';
+      const stage = el('div');
+      wrap.appendChild(stage);
+
+      const progressKeyForThis = nextProgressKey();
+      const ring = createResultsRing(quiz.length);
+      const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+      let idx = 0, correctCount = 0, wrongCount = 0, answeredCount = 0;
+
+      function updateProgress() {
+        progressFrac.textContent = Math.min(idx + 1, quiz.length) + '/' + quiz.length;
+        progressFill.style.width = (quiz.length ? Math.round((answeredCount / quiz.length) * 100) : 0) + '%';
       }
 
-      const tracker = trackQuizState(quiz.length);
-      const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
-      quiz.forEach(function (q, idx) {
+      function drawQuestion() {
+        stage.innerHTML = '';
+        updateProgress();
+        const q = quiz[idx];
         const qBox = el('div', 'gram2-quiz-item');
         qBox.appendChild(el('p', 'gram2-quiz-question', (idx + 1) + '. ' + q.question));
         const optWrap = el('div', 'gram2-quiz-options');
+
+        const nextBtn = el('button', 'btn-check', idx === quiz.length - 1 ? 'See results →' : 'Next question →');
+        nextBtn.type = 'button';
+        nextBtn.hidden = true;
+        nextBtn.style.marginTop = '4px';
+        nextBtn.addEventListener('click', function () {
+          if (idx === quiz.length - 1) { showResults(); } else { idx++; drawQuestion(); }
+        });
+
+        let answered = false;
         (q.options || []).forEach(function (opt, oi) {
           const card = el('button', 'gram2-quiz-option'); card.type = 'button';
           card.appendChild(el('span', 'gram2-quiz-badge', letters[oi] || ''));
           card.appendChild(el('span', 'gram2-quiz-option-text', opt));
           card.addEventListener('click', function () {
+            if (answered) return;
+            answered = true;
+            answeredCount++;
             const ok = opt === q.answer;
-            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            if (ok) correctCount++; else wrongCount++;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.add('gram2-quiz-disabled'); });
             card.classList.add(ok ? 'opt-correct' : 'opt-wrong');
             if (!ok) {
               Array.from(optWrap.children).forEach(function (b) {
                 if (b.querySelector('.gram2-quiz-option-text').textContent === q.answer) b.classList.add('opt-correct');
               });
             }
-            tracker.set(idx, ok);
-            answeredIdx[idx] = true;
-            updateAnsweredProgress();
+            updateProgress();
+            nextBtn.hidden = false;
           });
           optWrap.appendChild(card);
         });
         qBox.appendChild(optWrap);
-        wrap.appendChild(qBox);
-      });
-      appendSubmitAndRing(wrap, tracker);
+        stage.appendChild(qBox);
+        stage.appendChild(nextBtn);
+      }
+
+      function showResults() {
+        stage.innerHTML = '';
+        ring.update(correctCount, wrongCount);
+        ring.reveal();
+        stage.appendChild(ring.el);
+        markProgressDone(progressKeyForThis);
+        const retryBtn = el('button', 'btn-check btn-secondary', '↺ Try again');
+        retryBtn.type = 'button';
+        retryBtn.style.marginTop = '10px';
+        retryBtn.addEventListener('click', function () {
+          idx = 0; correctCount = 0; wrongCount = 0; answeredCount = 0;
+          drawQuestion();
+        });
+        stage.appendChild(retryBtn);
+      }
+
+      drawQuestion();
       return wrap;
     }
 
