@@ -616,6 +616,33 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .gram2-examples-list { margin: 0; padding-left: 20px; }
 .gram2-examples-list li { font-size: .9rem; line-height: 1.7; color: var(--ink); }
 
+.gram2-quiz-wrap { display: flex; flex-direction: column; gap: 16px; }
+.gram2-quiz-banner {
+  background: #FDECC8; color: #6B6558; font-size: .72rem; font-weight: 700;
+  border-radius: 11px; padding: 8px 14px; width: 100%; box-sizing: border-box;
+}
+.gram2-quiz-progress-track {
+  width: 100%; height: 6px; border-radius: 999px; border: 1px solid var(--stroke);
+  background: #fff; overflow: hidden;
+}
+.gram2-quiz-progress-fill { height: 100%; width: 0%; background: #FFD27A; border-radius: inherit; transition: width .2s ease; }
+.gram2-quiz-item { display: flex; flex-direction: column; gap: 10px; }
+.gram2-quiz-question { font-weight: 600; font-size: .98rem; line-height: 1.45; text-align: left; margin: 0; }
+.gram2-quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.gram2-quiz-option {
+  display: flex; align-items: center; gap: 11px; width: 100%; text-align: left;
+  background: var(--surface); border: 1.5px solid var(--stroke); border-radius: 12px;
+  padding: 10px 14px; cursor: pointer; font: inherit; color: var(--ink);
+}
+.gram2-quiz-option:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 var(--stroke); }
+.gram2-quiz-badge {
+  flex: none; width: 28px; height: 28px; border-radius: 6px; background: #FFD27A;
+  display: flex; align-items: center; justify-content: center; font-weight: 700; color: #000; font-size: .85rem;
+}
+.gram2-quiz-option-text { flex: 1; }
+.gram2-quiz-option.opt-correct { background: #EAF7EE; border-color: #2E8B4F; }
+.gram2-quiz-option.opt-wrong { background: #FBEAEA; border-color: #C0392B; }
+
 
 /* ============================================================
    lesson.html — tabs (Bài học / BTVN) + các loại bài tập
