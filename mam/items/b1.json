@@ -554,20 +554,13 @@
             ],
             "examples": [
               {
-                "vi": "Chào bạn.",
-                "en": "Hi. / Hello."
+                "vi": "A: Chào bạn. → B: Chào bạn."
               },
               {
-                "vi": "Chào anh.",
-                "en": "Hello. / Hi."
+                "vi": "A: Chào anh. → B: Chào em."
               },
               {
-                "vi": "Chào chị.",
-                "en": "Hello. / Hi."
-              },
-              {
-                "vi": "Chào em.",
-                "en": "Hello. / Hi."
+                "vi": "A: Chào chị. → B: Chào em."
               }
             ]
           },
@@ -619,13 +612,13 @@
             ],
             "examples": [
               {
-                "vi": "Xin lỗi bạn. → Không sao."
+                "vi": "Xin lỗi bạn."
               },
               {
-                "vi": "Xin lỗi ông. → Không sao."
+                "vi": "Xin lỗi ông."
               },
               {
-                "vi": "Xin lỗi bà. → Không sao."
+                "vi": "Xin lỗi bà."
               }
             ]
           },
