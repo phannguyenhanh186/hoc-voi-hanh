@@ -554,13 +554,20 @@
             ],
             "examples": [
               {
-                "vi": "A: Chào bạn. → B: Chào bạn."
+                "vi": "Chào bạn.",
+                "en": "Hi. / Hello."
               },
               {
-                "vi": "A: Chào anh. → B: Chào em."
+                "vi": "Chào anh.",
+                "en": "Hello. / Hi."
               },
               {
-                "vi": "A: Chào chị. → B: Chào em."
+                "vi": "Chào chị.",
+                "en": "Hello. / Hi."
+              },
+              {
+                "vi": "Chào em.",
+                "en": "Hello. / Hi."
               }
             ]
           },
@@ -612,13 +619,13 @@
             ],
             "examples": [
               {
-                "vi": "Xin lỗi bạn."
+                "vi": "Xin lỗi bạn. → Không sao."
               },
               {
-                "vi": "Xin lỗi ông."
+                "vi": "Xin lỗi ông. → Không sao."
               },
               {
-                "vi": "Xin lỗi bà."
+                "vi": "Xin lỗi bà. → Không sao."
               }
             ]
           },
@@ -972,7 +979,9 @@
         "id": "r1",
         "title": "Cách xưng hô",
         "audio": "audio/b1/{voice}/reading_r1.mp3",
-        "text": "Người Việt thường dùng anh, chị, em hoặc bạn để nói chuyện với người khác. Nếu người kia lớn tuổi hơn bạn, bạn có thể gọi họ là anh (nếu họ là nam) hoặc chị (nếu họ là nữ). Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là em. Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng bạn hoặc mình khi nói chuyện. Cách xưng hô này giúp cuộc nói chuyện thân thiện và lịch sự hơn. Khi không biết nên gọi là gì, nhiều người thường dùng bạn trước. Sau khi biết tuổi, mọi người có thể đổi cách xưng hô cho đúng."
+        "text": "Người Việt thường dùng anh, chị, em hoặc bạn để nói chuyện với người khác. Nếu người kia lớn tuổi hơn bạn, bạn có thể gọi họ là anh (nếu họ là nam) hoặc chị (nếu họ là nữ). Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là em. Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng bạn hoặc mình khi nói chuyện. Cách xưng hô này giúp cuộc nói chuyện thân thiện và lịch sự hơn. Khi không biết nên gọi là gì, nhiều người thường dùng bạn trước. Sau khi biết tuổi, mọi người có thể đổi cách xưng hô cho đúng.",
+        "titleEn": "Vietnamese Forms of Address",
+        "textEn": "Vietnamese people commonly use “anh”, “chị”, “em” or bạn when talking to other people. If the other person is older than you, you can call them “anh” (if they are male) or “chị” (if they are female). If the other person is younger than you, you can call them “em”. If two people are the same age or close in age, many people use “bạn” or “mình” when talking to each other.\nThese forms of address make conversations sound friendlier and more polite. When you are not sure what to call someone, many people use “bạn” at first. After finding out the person's age, they may change the way they address each other."
       }
     ]
   },
