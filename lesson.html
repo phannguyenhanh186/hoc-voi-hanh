@@ -186,6 +186,8 @@
       if (!btn) return;
       const tab = btn.dataset.tab;
       setActiveTab(tab);
+      const hideForThis = tab === 'reading' || (tab === 'grammar' && usesSectionsGrammar);
+      toggleToolbar(!hideForThis);
       try { sessionStorage.setItem(tabMemoKey, tab); } catch (e) {}
     });
     (function () {
@@ -834,6 +836,7 @@
     // NGỮ PHÁP KIỂU MỚI — sidebar 2 cấp + nội dung Theory/Practice
     // (dùng khi item.grammar.sections tồn tại; không ảnh hưởng bài dùng "points")
     // ========================================================
+    let usesSectionsGrammar = false;
     function toggleToolbar(show) {
       const bar = document.querySelector('.toolbar');
       if (bar) bar.hidden = !show;
@@ -877,7 +880,8 @@
     function renderGrammarTabSidebar(item, sections) {
       const panel = document.getElementById('panel-grammar');
       panel.innerHTML = '';
-      toggleToolbar(false);
+      usesSectionsGrammar = true;
+      if (!panel.hidden) toggleToolbar(false);
 
       const shell = el('div', 'gram2-shell');
       const topbar = el('div', 'gram2-topbar');
@@ -1243,43 +1247,96 @@
     // ========================================================
     // ĐỌC
     // ========================================================
+    function makeSplitDraggable(container, leftPane, divider) {
+      let dragging = false;
+      divider.addEventListener('pointerdown', function (e) {
+        dragging = true;
+        divider.setPointerCapture(e.pointerId);
+      });
+      divider.addEventListener('pointermove', function (e) {
+        if (!dragging) return;
+        const rect = container.getBoundingClientRect();
+        let pct = ((e.clientX - rect.left) / rect.width) * 100;
+        pct = Math.min(80, Math.max(20, pct));
+        leftPane.style.flexBasis = pct + '%';
+      });
+      function endDrag() { dragging = false; }
+      divider.addEventListener('pointerup', endDrag);
+      divider.addEventListener('pointercancel', endDrag);
+    }
+ 
     function renderReadingTab(item) {
       const panel = document.getElementById('panel-reading');
       panel.innerHTML = '';
       const passages = (item.reading && item.reading.passages) || [];
       if (!passages.length) { panel.appendChild(emptyNote('Reading is being updated.')); return; }
+ 
+      if (!panel.hidden) toggleToolbar(false);
+      const shell = el('div', 'gram2-shell');
+      const topbar = el('div', 'gram2-topbar');
+      const backBtn = el('button', 'gram2-back-btn', '←'); backBtn.type = 'button';
+      backBtn.addEventListener('click', function () {
+        toggleToolbar(true);
+        setActiveTab('vocab');
+        try { sessionStorage.setItem(tabMemoKey, 'vocab'); } catch (e) {}
+      });
+      topbar.appendChild(backBtn);
+      topbar.appendChild(el('div', 'gram2-tab-pill', 'Reading'));
+      shell.appendChild(topbar);
+ 
       passages.forEach(function (p) {
-        const box = el('div', 'exercise reading-passage');
-        const head = el('div', 'dialogue-head');
-        head.appendChild(el('h3', 'ex-title', p.title || ''));
-        box.appendChild(head);
-        if (p.audio) box.appendChild(renderAudioPlayer(p.audio));
+        if (p.audio) shell.appendChild(renderAudioPlayer(p.audio));
+ 
+        const split = el('div', 'read2-split');
+        const leftPane = el('div', 'read2-pane');
+        leftPane.appendChild(el('h3', 'ex-title', p.title || ''));
         (String(p.text || '').split(/\n+/)).forEach(function (para) {
-          if (para.trim()) box.appendChild(el('p', 'reading-para', para.trim()));
+          if (para.trim()) leftPane.appendChild(el('p', 'reading-para', para.trim()));
         });
+ 
+        const divider = el('div', 'read2-divider');
+ 
+        const rightPane = el('div', 'read2-pane');
+        if (p.titleEn || p.textEn) {
+          rightPane.appendChild(el('h3', 'ex-title', p.titleEn || ''));
+          (String(p.textEn || '').split(/\n+/)).forEach(function (para) {
+            if (para.trim()) rightPane.appendChild(el('p', 'reading-para', para.trim()));
+          });
+        } else {
+          rightPane.appendChild(el('p', 'note', 'English translation coming soon.'));
+        }
+ 
+        split.appendChild(leftPane);
+        split.appendChild(divider);
+        split.appendChild(rightPane);
+        shell.appendChild(split);
+        makeSplitDraggable(split, leftPane, divider);
+ 
         const hasQuizLike = (p.questions && p.questions.length) || (p.textQuestions && p.textQuestions.length) || (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length);
         if (!hasQuizLike) {
           const pKey = nextProgressKey();
           const doneBtn = el('button', 'btn-check', 'Done reading ✓');
           doneBtn.type = 'button';
+          doneBtn.style.marginTop = '16px';
           doneBtn.addEventListener('click', function () {
             markProgressDone(pKey);
             doneBtn.textContent = 'Completed ✓';
             doneBtn.disabled = true;
           });
-          box.appendChild(doneBtn);
+          shell.appendChild(doneBtn);
         }
-        panel.appendChild(box);
         if (p.questions && p.questions.length) {
-          panel.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions }));
+          shell.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions }));
         }
         if (p.textQuestions && p.textQuestions.length) {
-          panel.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions }));
+          shell.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions }));
         }
         if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
-          panel.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks' }, p.fillBlanks)));
+          shell.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks' }, p.fillBlanks)));
         }
       });
+ 
+      panel.appendChild(shell);
     }
 
     // ========================================================
