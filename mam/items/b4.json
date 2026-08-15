@@ -301,250 +301,449 @@
     ]
   },
   "grammar": {
-    "points": [
+    "sections": [
       {
         "id": "g1",
-        "title": "Talking About Time",
-        "pattern": "[Hour] giờ ([Minute] phút) + sáng / trưa / chiều / tối",
-        "explanation": "Use this pattern to tell the time in Vietnamese.",
-        "notes": [
-          "Start with the hour.",
-          "Add the minutes if needed.",
-          "Finish with the time of day: sáng, trưa, chiều, or tối."
-        ],
-        "examples": [
-          { "vi": "Chín giờ sáng.", "en": "9:00 a.m." },
-          { "vi": "Mười một giờ mười lăm phút trưa.", "en": "11:15 a.m." },
-          { "vi": "Ba giờ ba mươi phút chiều.", "en": "3:30 p.m." },
-          { "vi": "Bảy giờ năm phút tối.", "en": "7:05 p.m." }
-        ],
-        "tipBlocks": [
+        "titleVi": "Giờ",
+        "titleEn": "Talking About Time",
+        "intro": [],
+        "subtopics": [
           {
-            "tip": "If there are no minutes, simply say: [Hour] giờ + time of day",
+            "id": "g1",
+            "label": "Giờ - Talking About Time",
+            "subHeadingVi": "Giờ",
+            "subHeadingEn": "Talking About Time",
+            "paragraphs": [
+              "Use this pattern to tell the time in Vietnamese."
+            ],
+            "chips": [
+              {
+                "pattern": "[Hour] giờ ([Minute] phút) + sáng / trưa / chiều / tối"
+              }
+            ],
+            "notes": [
+              "Start with the hour.",
+              "Add the minutes if needed.",
+              "Finish with the time of day: sáng, trưa, chiều, or tối."
+            ],
             "examples": [
-              { "vi": "Sáu giờ sáng.", "en": "6:00 a.m." },
-              { "vi": "Tám giờ tối.", "en": "8:00 p.m." }
-            ]
-          },
-          {
-            "tip": "If there are minutes, add them after giờ.",
-            "examples": [
-              { "vi": "Hai giờ hai mươi phút chiều.", "en": "2:20 p.m." },
-              { "vi": "Chín giờ bốn mươi lăm phút sáng.", "en": "9:45 a.m." }
+              {
+                "vi": "Chín giờ sáng.",
+                "en": "9:00 a.m."
+              },
+              {
+                "vi": "Mười một giờ mười lăm phút trưa.",
+                "en": "11:15 a.m."
+              },
+              {
+                "vi": "Ba giờ ba mươi phút chiều.",
+                "en": "3:30 p.m."
+              },
+              {
+                "vi": "Bảy giờ năm phút tối.",
+                "en": "7:05 p.m."
+              }
+            ],
+            "tipBlocks": [
+              {
+                "tip": "If there are no minutes, simply say: [Hour] giờ + time of day",
+                "examples": [
+                  {
+                    "vi": "Sáu giờ sáng.",
+                    "en": "6:00 a.m."
+                  },
+                  {
+                    "vi": "Tám giờ tối.",
+                    "en": "8:00 p.m."
+                  }
+                ]
+              },
+              {
+                "tip": "If there are minutes, add them after giờ.",
+                "examples": [
+                  {
+                    "vi": "Hai giờ hai mươi phút chiều.",
+                    "en": "2:20 p.m."
+                  },
+                  {
+                    "vi": "Chín giờ bốn mươi lăm phút sáng.",
+                    "en": "9:45 a.m."
+                  }
+                ]
+              }
+            ],
+            "quiz": [
+              {
+                "question": "Which sentence means \"3:30 p.m.\"?",
+                "options": [
+                  "Ba giờ sáng.",
+                  "Ba giờ ba mươi phút chiều.",
+                  "Ba giờ tối.",
+                  "Ba mươi giờ chiều."
+                ],
+                "answer": "Ba giờ ba mươi phút chiều."
+              },
+              {
+                "question": "Choose the correct order.",
+                "options": [
+                  "Sáng chín giờ.",
+                  "Chín sáng giờ.",
+                  "Chín giờ sáng.",
+                  "Giờ chín sáng."
+                ],
+                "answer": "Chín giờ sáng."
+              },
+              {
+                "question": "Complete the sentence: Bảy giờ mười lăm ______",
+                "options": [
+                  "phút",
+                  "tối",
+                  "giờ",
+                  "buổi"
+                ],
+                "answer": "tối"
+              },
+              {
+                "question": "Which sentence means \"11:15 a.m.\"?",
+                "options": [
+                  "Mười một giờ mười lăm phút trưa.",
+                  "Mười một phút mười lăm giờ.",
+                  "Trưa mười một giờ.",
+                  "Mười một giờ tối."
+                ],
+                "answer": "Mười một giờ mười lăm phút trưa."
+              },
+              {
+                "question": "Which sentence is correct?",
+                "options": [
+                  "Hai giờ chiều hai mươi phút.",
+                  "Hai chiều giờ hai mươi.",
+                  "Hai giờ hai mươi phút chiều.",
+                  "Hai phút hai mươi giờ chiều."
+                ],
+                "answer": "Hai giờ hai mươi phút chiều."
+              }
             ]
           }
-        ],
-        "quiz": [
-          {
-            "question": "Which sentence means \"3:30 p.m.\"?",
-            "options": ["Ba giờ sáng.", "Ba giờ ba mươi phút chiều.", "Ba giờ tối.", "Ba mươi giờ chiều."],
-            "answer": "Ba giờ ba mươi phút chiều."
-          },
-          {
-            "question": "Choose the correct order.",
-            "options": ["Sáng chín giờ.", "Chín sáng giờ.", "Chín giờ sáng.", "Giờ chín sáng."],
-            "answer": "Chín giờ sáng."
-          },
-          {
-            "question": "Complete the sentence: Bảy giờ mười lăm ______",
-            "options": ["phút", "tối", "giờ", "buổi"],
-            "answer": "tối"
-          },
-          {
-            "question": "Which sentence means \"11:15 a.m.\"?",
-            "options": ["Mười một giờ mười lăm phút trưa.", "Mười một phút mười lăm giờ.", "Trưa mười một giờ.", "Mười một giờ tối."],
-            "answer": "Mười một giờ mười lăm phút trưa."
-          },
-          {
-            "question": "Which sentence is correct?",
-            "options": ["Hai giờ chiều hai mươi phút.", "Hai chiều giờ hai mươi.", "Hai giờ hai mươi phút chiều.", "Hai phút hai mươi giờ chiều."],
-            "answer": "Hai giờ hai mươi phút chiều."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Optional Language Tip (Everyday Vietnamese)",
-          "text": "In everyday conversations, Vietnamese speakers often leave out phút when the meaning is clear. For example:",
-          "examples": [
-            { "vi": "Ba giờ ba mươi chiều.", "en": "3:30 p.m." },
-            { "vi": "Bảy giờ năm tối.", "en": "7:05 p.m." }
-          ],
-          "footer": "However, beginners should say phút until they become more comfortable with Vietnamese. This makes your sentences clearer and easier to understand."
-        }
+        ]
       },
       {
         "id": "g2",
-        "title": "Asking and Telling the Time",
-        "pattern": "Bây giờ là mấy giờ?\n→ Bây giờ là + [Hour] giờ ([Minute] phút).",
-        "explanation": "Use Bây giờ là mấy giờ? to ask what time it is. To answer, use: Bây giờ là + time. You can include the minutes if needed, or simply say the hour.",
-        "examples": [
-          { "vi": "Bây giờ là mấy giờ?\n→ Bây giờ là tám giờ mười lăm phút.", "en": "What time is it now?\nIt's 8:15." },
-          { "vi": "Bây giờ là mấy giờ?\n→ Bây giờ là mười hai giờ trưa.", "en": "What time is it now?\nIt's 12:00 noon." },
-          { "vi": "Bây giờ là mấy giờ?\n→ Bây giờ là sáu giờ tối.", "en": "What time is it now?\nIt's 6:00 p.m." }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "When answering, Vietnamese speakers often leave out bây giờ là if the question is already clear. For example:",
-          "dialogue": ["A: Bây giờ là mấy giờ?", "B: Tám giờ mười lăm phút."],
-          "footer": "This is very common in everyday conversations."
-        },
-        "quiz": [
+        "titleVi": "Mấy giờ rồi?",
+        "titleEn": "Asking and Telling the Time",
+        "intro": [],
+        "subtopics": [
           {
-            "question": "How do you ask \"What time is it?\"",
-            "options": ["Mấy giờ bạn?", "Bây giờ là mấy giờ?", "Mấy giờ là bây giờ?", "Giờ là bạn?"],
-            "answer": "Bây giờ là mấy giờ?"
-          },
-          {
-            "question": "Which answer means \"It's 8:15.\"",
-            "options": ["Bây giờ là tám giờ mười lăm phút.", "Bây giờ tám mười lăm.", "Tám phút mười lăm giờ.", "Bây giờ là tám phút."],
-            "answer": "Bây giờ là tám giờ mười lăm phút."
-          },
-          {
-            "question": "Complete the sentence: Bây giờ là ______ giờ trưa.",
-            "options": ["mười hai", "trưa", "phút", "mấy"],
-            "answer": "mười hai"
-          },
-          {
-            "question": "Which conversation is correct?",
-            "options": [
-              "Bây giờ là mấy giờ?\nBây giờ là bảy giờ tối.",
-              "Bây giờ là gì?\nBây giờ là bảy giờ tối.",
-              "Mấy giờ là bây giờ?\nBảy giờ tối là bây giờ.",
-              "Bây giờ là giờ mấy?\nBây giờ là bảy giờ tối."
+            "id": "g2",
+            "label": "Mấy giờ rồi? - Asking and Telling the Time",
+            "subHeadingVi": "Mấy giờ rồi?",
+            "subHeadingEn": "Asking and Telling the Time",
+            "paragraphs": [
+              "Use Bây giờ là mấy giờ? to ask what time it is. To answer, use: Bây giờ là + time. You can include the minutes if needed, or simply say the hour."
             ],
-            "answer": "Bây giờ là mấy giờ?\nBây giờ là bảy giờ tối."
+            "chips": [
+              {
+                "pattern": "Bây giờ là mấy giờ?\n→ Bây giờ là + [Hour] giờ ([Minute] phút)."
+              }
+            ],
+            "examples": [
+              {
+                "vi": "Bây giờ là mấy giờ?\n→ Bây giờ là tám giờ mười lăm phút.",
+                "en": "What time is it now?\nIt's 8:15."
+              },
+              {
+                "vi": "Bây giờ là mấy giờ?\n→ Bây giờ là mười hai giờ trưa.",
+                "en": "What time is it now?\nIt's 12:00 noon."
+              },
+              {
+                "vi": "Bây giờ là mấy giờ?\n→ Bây giờ là sáu giờ tối.",
+                "en": "What time is it now?\nIt's 6:00 p.m."
+              }
+            ],
+            "quiz": [
+              {
+                "question": "How do you ask \"What time is it?\"",
+                "options": [
+                  "Mấy giờ bạn?",
+                  "Bây giờ là mấy giờ?",
+                  "Mấy giờ là bây giờ?",
+                  "Giờ là bạn?"
+                ],
+                "answer": "Bây giờ là mấy giờ?"
+              },
+              {
+                "question": "Which answer means \"It's 8:15.\"",
+                "options": [
+                  "Bây giờ là tám giờ mười lăm phút.",
+                  "Bây giờ tám mười lăm.",
+                  "Tám phút mười lăm giờ.",
+                  "Bây giờ là tám phút."
+                ],
+                "answer": "Bây giờ là tám giờ mười lăm phút."
+              },
+              {
+                "question": "Complete the sentence: Bây giờ là ______ giờ trưa.",
+                "options": [
+                  "mười hai",
+                  "trưa",
+                  "phút",
+                  "mấy"
+                ],
+                "answer": "mười hai"
+              },
+              {
+                "question": "Which conversation is correct?",
+                "options": [
+                  "Bây giờ là mấy giờ?\nBây giờ là bảy giờ tối.",
+                  "Bây giờ là gì?\nBây giờ là bảy giờ tối.",
+                  "Mấy giờ là bây giờ?\nBảy giờ tối là bây giờ.",
+                  "Bây giờ là giờ mấy?\nBây giờ là bảy giờ tối."
+                ],
+                "answer": "Bây giờ là mấy giờ?\nBây giờ là bảy giờ tối."
+              }
+            ]
           }
         ]
       },
       {
         "id": "g3",
-        "title": "Asking What Time Someone Does Something",
-        "pattern": "[Subject] + [Verb] + lúc mấy giờ?\n→ [Subject] + [Verb] + lúc + [Hour] giờ ([Minute] phút).",
-        "explanation": "Use this pattern to ask what time someone does something. To answer, say: [Subject] + [Verb] + lúc + time. If the subject is already clear, you can simply answer with the time.",
-        "examples": [
-          { "vi": "Bạn ăn sáng lúc mấy giờ?\n→ Mình ăn sáng lúc bảy giờ.", "en": "What time do you eat breakfast?\nI eat breakfast at 7:00." },
-          { "vi": "Chị ấy thường đi làm lúc mấy giờ?\n→ Chị ấy thường đi làm lúc tám giờ sáng.", "en": "What time does she usually go to work?\nShe usually goes to work at 8:00 a.m." },
-          { "vi": "Hôm qua bạn đi ngủ lúc mấy giờ?\n→ Mười một giờ rưỡi.", "en": "What time did you go to bed yesterday?\nAt 11:30." }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "The word lúc means \"at\" when talking about time. Compare:",
-          "examples": [
-            { "vi": "Mình ăn sáng lúc bảy giờ.", "en": "I eat breakfast at 7:00." },
-            { "vi": "Anh ấy về nhà lúc sáu giờ tối.", "en": "He goes home at 6:00 p.m." }
-          ],
-          "footer": "If the question already tells us who and what action, it's natural to answer with only the time.\nFor example:\nA: Bạn đi ngủ lúc mấy giờ?\nB: Mười một giờ rưỡi."
-        },
-        "quiz": [
+        "titleVi": "Lúc mấy giờ?",
+        "titleEn": "Asking What Time Someone Does Something",
+        "intro": [],
+        "subtopics": [
           {
-            "question": "How do you ask \"What time do you go to work?\"",
-            "options": ["Bạn đi làm vào mấy giờ?", "Bạn đi làm lúc mấy giờ?", "Mấy giờ bạn đi làm lúc?", "Bạn lúc đi làm là mấy giờ?"],
-            "answer": "Bạn đi làm lúc mấy giờ?"
-          },
-          {
-            "question": "Complete the sentence: Mình học tiếng Việt ______ bảy giờ tối.",
-            "options": ["vào", "lúc", "là", "ở"],
-            "answer": "lúc"
-          },
-          {
-            "question": "Which answer means \"I go to bed at 11:30.\"",
-            "options": ["Mình đi ngủ lúc mười một giờ rưỡi.", "Mình đi ngủ mười một rưỡi lúc.", "Mình lúc đi ngủ mười một giờ ba mươi.", "Mình đi ngủ mười một giờ mười ba."],
-            "answer": "Mình đi ngủ lúc mười một giờ rưỡi."
-          },
-          {
-            "question": "Which conversation is correct?",
-            "options": [
-              "A: Bạn ăn trưa lúc mấy giờ?\nB: Mình ăn trưa lúc mười hai giờ.",
-              "A: Bạn ăn trưa vào mấy giờ?\nB: Mình ăn trưa vào mười hai giờ.",
-              "A: Bạn lúc mấy giờ ăn trưa?\nB: Mình mười hai giờ ăn trưa.",
-              "A: Mấy giờ bạn ăn trưa lúc?\nB: Mình ăn trưa lúc mười hai giờ."
+            "id": "g3",
+            "label": "Lúc mấy giờ? - Asking What Time Someone Does Something",
+            "subHeadingVi": "Lúc mấy giờ?",
+            "subHeadingEn": "Asking What Time Someone Does Something",
+            "paragraphs": [
+              "Use this pattern to ask what time someone does something. To answer, say: [Subject] + [Verb] + lúc + time. If the subject is already clear, you can simply answer with the time."
             ],
-            "answer": "A: Bạn ăn trưa lúc mấy giờ?\nB: Mình ăn trưa lúc mười hai giờ."
+            "chips": [
+              {
+                "pattern": "[Subject] + [Verb] + lúc mấy giờ?\n→ [Subject] + [Verb] + lúc + [Hour] giờ ([Minute] phút)."
+              }
+            ],
+            "examples": [
+              {
+                "vi": "Bạn ăn sáng lúc mấy giờ?\n→ Mình ăn sáng lúc bảy giờ.",
+                "en": "What time do you eat breakfast?\nI eat breakfast at 7:00."
+              },
+              {
+                "vi": "Chị ấy thường đi làm lúc mấy giờ?\n→ Chị ấy thường đi làm lúc tám giờ sáng.",
+                "en": "What time does she usually go to work?\nShe usually goes to work at 8:00 a.m."
+              },
+              {
+                "vi": "Hôm qua bạn đi ngủ lúc mấy giờ?\n→ Mười một giờ rưỡi.",
+                "en": "What time did you go to bed yesterday?\nAt 11:30."
+              }
+            ],
+            "quiz": [
+              {
+                "question": "How do you ask \"What time do you go to work?\"",
+                "options": [
+                  "Bạn đi làm vào mấy giờ?",
+                  "Bạn đi làm lúc mấy giờ?",
+                  "Mấy giờ bạn đi làm lúc?",
+                  "Bạn lúc đi làm là mấy giờ?"
+                ],
+                "answer": "Bạn đi làm lúc mấy giờ?"
+              },
+              {
+                "question": "Complete the sentence: Mình học tiếng Việt ______ bảy giờ tối.",
+                "options": [
+                  "vào",
+                  "lúc",
+                  "là",
+                  "ở"
+                ],
+                "answer": "lúc"
+              },
+              {
+                "question": "Which answer means \"I go to bed at 11:30.\"",
+                "options": [
+                  "Mình đi ngủ lúc mười một giờ rưỡi.",
+                  "Mình đi ngủ mười một rưỡi lúc.",
+                  "Mình lúc đi ngủ mười một giờ ba mươi.",
+                  "Mình đi ngủ mười một giờ mười ba."
+                ],
+                "answer": "Mình đi ngủ lúc mười một giờ rưỡi."
+              },
+              {
+                "question": "Which conversation is correct?",
+                "options": [
+                  "A: Bạn ăn trưa lúc mấy giờ?\nB: Mình ăn trưa lúc mười hai giờ.",
+                  "A: Bạn ăn trưa vào mấy giờ?\nB: Mình ăn trưa vào mười hai giờ.",
+                  "A: Bạn lúc mấy giờ ăn trưa?\nB: Mình mười hai giờ ăn trưa.",
+                  "A: Mấy giờ bạn ăn trưa lúc?\nB: Mình ăn trưa lúc mười hai giờ."
+                ],
+                "answer": "A: Bạn ăn trưa lúc mấy giờ?\nB: Mình ăn trưa lúc mười hai giờ."
+              }
+            ]
           }
         ]
       },
       {
-        "id": "g4",
-        "title": "Grammar Review",
-        "quiz": [
+        "id": "review",
+        "titleVi": "Ôn tập tổng hợp",
+        "titleEn": "Review",
+        "intro": [],
+        "subtopics": [
           {
-            "question": "Which sentence means \"9:00 a.m.\"?",
-            "options": ["Chín giờ sáng.", "Chín giờ tối.", "Chín phút sáng.", "Sáng chín phút."],
-            "answer": "Chín giờ sáng."
-          },
-          {
-            "question": "Which sentence means \"2:20 p.m.\"?",
-            "options": ["Hai giờ chiều hai mươi phút.", "Hai giờ hai mươi phút chiều.", "Hai mươi giờ chiều.", "Hai giờ hai mươi chiều phút."],
-            "answer": "Hai giờ hai mươi phút chiều."
-          },
-          {
-            "question": "Complete the sentence: Bây giờ là sáu giờ ______.",
-            "options": ["phút", "tối", "lúc", "mấy"],
-            "answer": "tối"
-          },
-          {
-            "question": "How do you ask \"What time is it?\"",
-            "options": ["Bạn mấy giờ?", "Mấy giờ bạn?", "Bây giờ là mấy giờ?", "Giờ là bạn?"],
-            "answer": "Bây giờ là mấy giờ?"
-          },
-          {
-            "question": "Which answer means \"It's 8:15.\"",
-            "options": ["Tám giờ mười lăm phút.", "Tám giờ mười năm phút.", "Tám giờ năm mươi phút.", "Mười lăm giờ tám phút."],
-            "answer": "Tám giờ mười lăm phút."
-          },
-          {
-            "question": "Choose the correct conversation.",
-            "options": [
-              "A: Bây giờ là mấy giờ?\nB: Chín giờ sáng.",
-              "A: Bây giờ là giờ mấy?\nB: Chín giờ sáng.",
-              "A: Mấy giờ là bây giờ?\nB: Chín giờ là bây giờ.",
-              "A: Bây giờ là mấy giờ\nB: Lúc chín giờ sáng."
-            ],
-            "answer": "A: Bây giờ là mấy giờ?\nB: Chín giờ sáng."
-          },
-          {
-            "question": "Complete the sentence: Mình đi làm ______ tám giờ sáng.",
-            "options": ["vào", "lúc", "gì", "ở"],
-            "answer": "lúc"
-          },
-          {
-            "question": "Which question means \"What time do you eat breakfast?\"",
-            "options": ["Bạn ăn sáng vào mấy giờ?", "Bạn ăn sáng lúc mấy giờ?", "Bạn có ăn sáng lúc mấy giờ không?", "Bạn mấy giờ lúc ăn sáng?"],
-            "answer": "Bạn ăn sáng lúc mấy giờ?"
-          },
-          {
-            "question": "Choose the correct answer: Bạn ăn sáng lúc mấy giờ?",
-            "options": ["Mình ăn sáng lúc bảy giờ.", "Mình ăn sáng vào buổi sáng.", "Bây giờ là bảy giờ.", "Mình lúc bảy giờ ăn sáng."],
-            "answer": "Mình ăn sáng lúc bảy giờ."
-          },
-          {
-            "question": "Choose the correct answer: Bây giờ là mấy giờ?",
-            "options": ["Mình ngủ dậy lúc năm giờ sáng.", "Mình ngủ dậy vào năm giờ sáng.", "Năm giờ sáng là bây giờ.", "Bây giờ là năm giờ."],
-            "answer": "Bây giờ là năm giờ."
-          },
-          {
-            "question": "How do you ask \"What time did you go to bed yesterday?\"",
-            "options": ["Hôm qua bạn đi ngủ gì?", "Hôm qua bạn đi ngủ lúc mấy giờ?", "Hôm qua lúc mấy giờ bạn đi?", "Bạn đi ngủ hôm qua mấy giờ?"],
-            "answer": "Hôm qua bạn đi ngủ lúc mấy giờ?"
-          },
-          {
-            "question": "Which answer is natural? — Hôm qua bạn đi ngủ lúc mấy giờ?",
-            "options": ["Mười một giờ rưỡi.", "Mình ngủ vào mười một.", "Bây giờ là mười một giờ.", "Mình đi ngủ lúc mười một."],
-            "answer": "Mười một giờ rưỡi."
-          },
-          {
-            "question": "Choose the correct sentence.",
-            "options": ["Mình học lúc tiếng Việt bảy giờ.", "Mình học tiếng Việt bảy lúc giờ tối.", "Mình lúc học tiếng Việt bảy giờ.", "Mình học tiếng Việt lúc bảy giờ tối."],
-            "answer": "Mình học tiếng Việt lúc bảy giờ tối."
-          },
-          {
-            "question": "Which sentence means \"He goes home at 6:00 p.m.\"",
-            "options": ["Anh ấy về nhà vào sáu giờ tối.", "Anh ấy về nhà sáu tối lúc.", "Anh ấy về nhà lúc sáu giờ tối.", "Sáu giờ tối lúc anh ấy về nhà."],
-            "answer": "Anh ấy về nhà lúc sáu giờ tối."
-          },
-          {
-            "question": "Choose the best response: Chị ấy thường đi làm lúc mấy giờ?",
-            "options": ["Chị ấy thường đi làm vào tám giờ sáng.", "Chị ấy thường đi làm lúc tám giờ sáng.", "Tám giờ sáng chị ấy đi làm.", "Chị ấy thường đi làm lúc tám sáng."],
-            "answer": "Chị ấy thường đi làm lúc tám giờ sáng."
+            "id": "review",
+            "label": "Review",
+            "quiz": [
+              {
+                "question": "Which sentence means \"9:00 a.m.\"?",
+                "options": [
+                  "Chín giờ sáng.",
+                  "Chín giờ tối.",
+                  "Chín phút sáng.",
+                  "Sáng chín phút."
+                ],
+                "answer": "Chín giờ sáng."
+              },
+              {
+                "question": "Which sentence means \"2:20 p.m.\"?",
+                "options": [
+                  "Hai giờ chiều hai mươi phút.",
+                  "Hai giờ hai mươi phút chiều.",
+                  "Hai mươi giờ chiều.",
+                  "Hai giờ hai mươi chiều phút."
+                ],
+                "answer": "Hai giờ hai mươi phút chiều."
+              },
+              {
+                "question": "Complete the sentence: Bây giờ là sáu giờ ______.",
+                "options": [
+                  "phút",
+                  "tối",
+                  "lúc",
+                  "mấy"
+                ],
+                "answer": "tối"
+              },
+              {
+                "question": "How do you ask \"What time is it?\"",
+                "options": [
+                  "Bạn mấy giờ?",
+                  "Mấy giờ bạn?",
+                  "Bây giờ là mấy giờ?",
+                  "Giờ là bạn?"
+                ],
+                "answer": "Bây giờ là mấy giờ?"
+              },
+              {
+                "question": "Which answer means \"It's 8:15.\"",
+                "options": [
+                  "Tám giờ mười lăm phút.",
+                  "Tám giờ mười năm phút.",
+                  "Tám giờ năm mươi phút.",
+                  "Mười lăm giờ tám phút."
+                ],
+                "answer": "Tám giờ mười lăm phút."
+              },
+              {
+                "question": "Choose the correct conversation.",
+                "options": [
+                  "A: Bây giờ là mấy giờ?\nB: Chín giờ sáng.",
+                  "A: Bây giờ là giờ mấy?\nB: Chín giờ sáng.",
+                  "A: Mấy giờ là bây giờ?\nB: Chín giờ là bây giờ.",
+                  "A: Bây giờ là mấy giờ\nB: Lúc chín giờ sáng."
+                ],
+                "answer": "A: Bây giờ là mấy giờ?\nB: Chín giờ sáng."
+              },
+              {
+                "question": "Complete the sentence: Mình đi làm ______ tám giờ sáng.",
+                "options": [
+                  "vào",
+                  "lúc",
+                  "gì",
+                  "ở"
+                ],
+                "answer": "lúc"
+              },
+              {
+                "question": "Which question means \"What time do you eat breakfast?\"",
+                "options": [
+                  "Bạn ăn sáng vào mấy giờ?",
+                  "Bạn ăn sáng lúc mấy giờ?",
+                  "Bạn có ăn sáng lúc mấy giờ không?",
+                  "Bạn mấy giờ lúc ăn sáng?"
+                ],
+                "answer": "Bạn ăn sáng lúc mấy giờ?"
+              },
+              {
+                "question": "Choose the correct answer: Bạn ăn sáng lúc mấy giờ?",
+                "options": [
+                  "Mình ăn sáng lúc bảy giờ.",
+                  "Mình ăn sáng vào buổi sáng.",
+                  "Bây giờ là bảy giờ.",
+                  "Mình lúc bảy giờ ăn sáng."
+                ],
+                "answer": "Mình ăn sáng lúc bảy giờ."
+              },
+              {
+                "question": "Choose the correct answer: Bây giờ là mấy giờ?",
+                "options": [
+                  "Mình ngủ dậy lúc năm giờ sáng.",
+                  "Mình ngủ dậy vào năm giờ sáng.",
+                  "Năm giờ sáng là bây giờ.",
+                  "Bây giờ là năm giờ."
+                ],
+                "answer": "Bây giờ là năm giờ."
+              },
+              {
+                "question": "How do you ask \"What time did you go to bed yesterday?\"",
+                "options": [
+                  "Hôm qua bạn đi ngủ gì?",
+                  "Hôm qua bạn đi ngủ lúc mấy giờ?",
+                  "Hôm qua lúc mấy giờ bạn đi?",
+                  "Bạn đi ngủ hôm qua mấy giờ?"
+                ],
+                "answer": "Hôm qua bạn đi ngủ lúc mấy giờ?"
+              },
+              {
+                "question": "Which answer is natural? — Hôm qua bạn đi ngủ lúc mấy giờ?",
+                "options": [
+                  "Mười một giờ rưỡi.",
+                  "Mình ngủ vào mười một.",
+                  "Bây giờ là mười một giờ.",
+                  "Mình đi ngủ lúc mười một."
+                ],
+                "answer": "Mười một giờ rưỡi."
+              },
+              {
+                "question": "Choose the correct sentence.",
+                "options": [
+                  "Mình học lúc tiếng Việt bảy giờ.",
+                  "Mình học tiếng Việt bảy lúc giờ tối.",
+                  "Mình lúc học tiếng Việt bảy giờ.",
+                  "Mình học tiếng Việt lúc bảy giờ tối."
+                ],
+                "answer": "Mình học tiếng Việt lúc bảy giờ tối."
+              },
+              {
+                "question": "Which sentence means \"He goes home at 6:00 p.m.\"",
+                "options": [
+                  "Anh ấy về nhà vào sáu giờ tối.",
+                  "Anh ấy về nhà sáu tối lúc.",
+                  "Anh ấy về nhà lúc sáu giờ tối.",
+                  "Sáu giờ tối lúc anh ấy về nhà."
+                ],
+                "answer": "Anh ấy về nhà lúc sáu giờ tối."
+              },
+              {
+                "question": "Choose the best response: Chị ấy thường đi làm lúc mấy giờ?",
+                "options": [
+                  "Chị ấy thường đi làm vào tám giờ sáng.",
+                  "Chị ấy thường đi làm lúc tám giờ sáng.",
+                  "Tám giờ sáng chị ấy đi làm.",
+                  "Chị ấy thường đi làm lúc tám sáng."
+                ],
+                "answer": "Chị ấy thường đi làm lúc tám giờ sáng."
+              }
+            ]
           }
         ]
       }
