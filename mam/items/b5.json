@@ -331,570 +331,609 @@
     ]
   },
   "grammar": {
-    "points": [
+    "sections": [
       {
         "id": "g0",
-        "title": "Reading Numbers from 21 to 99",
-        "pattern": "[Tens] + [Ones]",
-        "explanation": "Numbers from 21 to 99 are read by saying the tens first, followed by the ones.",
-        "examples": [
+        "titleVi": "Số 21-99",
+        "titleEn": "Reading Numbers from 21 to 99",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Hai mươi",
-            "en": "20"
-          },
-          {
-            "vi": "Bốn ba",
-            "en": "43"
-          },
-          {
-            "vi": "Bảy bảy",
-            "en": "77"
-          }
-        ],
-        "tipBlocks": [
-          {
-            "tip": "Language Tip 1: When 1 is the last digit of a number from 21 to 99, it is usually pronounced mốt instead of một.",
+            "id": "g0",
+            "label": "Số 21-99 - Reading Numbers from 21 to 99",
+            "subHeadingVi": "Số 21-99",
+            "subHeadingEn": "Reading Numbers from 21 to 99",
+            "paragraphs": [
+              "Numbers from 21 to 99 are read by saying the tens first, followed by the ones."
+            ],
+            "chips": [
+              {
+                "pattern": "[Tens] + [Ones]"
+              }
+            ],
             "examples": [
               {
-                "vi": "Hai mốt",
-                "en": "21"
+                "vi": "Hai mươi",
+                "en": "20"
               },
               {
-                "vi": "Sáu mốt",
-                "en": "61"
-              }
-            ]
-          },
-          {
-            "tip": "Language Tip 2: When 4 is the last digit of a number from 20 to 99, it can be pronounced bốn or tư. Both are correct.",
-            "examples": [
-              {
-                "vi": "Bốn bốn / Bốn tư",
-                "en": "44"
+                "vi": "Bốn ba",
+                "en": "43"
               },
               {
-                "vi": "Tám bốn / Tám tư",
-                "en": "84"
+                "vi": "Bảy bảy",
+                "en": "77"
               }
-            ]
-          },
-          {
-            "tip": "Language Tip 3: When 5 is the last digit of a number from 10 to 99, it is usually pronounced lăm instead of năm.",
-            "examples": [
+            ],
+            "tipBlocks": [
               {
-                "vi": "Mười lăm",
-                "en": "15"
+                "tip": "Language Tip 1: When 1 is the last digit of a number from 21 to 99, it is usually pronounced mốt instead of một.",
+                "examples": [
+                  {
+                    "vi": "Hai mốt",
+                    "en": "21"
+                  },
+                  {
+                    "vi": "Sáu mốt",
+                    "en": "61"
+                  }
+                ]
               },
               {
-                "vi": "Ba lăm",
-                "en": "35"
+                "tip": "Language Tip 2: When 4 is the last digit of a number from 20 to 99, it can be pronounced bốn or tư. Both are correct.",
+                "examples": [
+                  {
+                    "vi": "Bốn bốn / Bốn tư",
+                    "en": "44"
+                  },
+                  {
+                    "vi": "Tám bốn / Tám tư",
+                    "en": "84"
+                  }
+                ]
+              },
+              {
+                "tip": "Language Tip 3: When 5 is the last digit of a number from 10 to 99, it is usually pronounced lăm instead of năm.",
+                "examples": [
+                  {
+                    "vi": "Mười lăm",
+                    "en": "15"
+                  },
+                  {
+                    "vi": "Ba lăm",
+                    "en": "35"
+                  }
+                ]
+              }
+            ],
+            "quiz": [
+              {
+                "question": "Which is the natural way to read 21?",
+                "options": [
+                  "Hai một",
+                  "Hai mốt",
+                  "Một hai",
+                  "Mốt hai"
+                ],
+                "answer": "Hai mốt"
+              },
+              {
+                "question": "Which is the natural way to read 61?",
+                "options": [
+                  "Sáu một",
+                  "Sáu mốt",
+                  "Một sáu",
+                  "Mốt sáu"
+                ],
+                "answer": "Sáu mốt"
+              },
+              {
+                "question": "Which two readings are both correct for 44?",
+                "options": [
+                  "Bốn một",
+                  "Bốn hai",
+                  "Bốn ba",
+                  "Bốn tư"
+                ],
+                "answer": "Bốn tư"
+              },
+              {
+                "question": "Which is the natural way to read 35?",
+                "options": [
+                  "Ba năm",
+                  "Ba lăm",
+                  "Năm ba",
+                  "Lăm ba"
+                ],
+                "answer": "Ba lăm"
+              },
+              {
+                "question": "Which is the natural way to read 84?",
+                "options": [
+                  "Tám mốt",
+                  "Tám bốn",
+                  "Tám lăm",
+                  "Tám tám"
+                ],
+                "answer": "Tám bốn"
+              },
+              {
+                "question": "Which sentence is NOT the natural pronunciation?",
+                "options": [
+                  "Hai mốt",
+                  "Sáu lăm",
+                  "Ba năm",
+                  "Tám tư"
+                ],
+                "answer": "Ba năm"
               }
             ]
-          }
-        ],
-        "quiz": [
-          {
-            "question": "Which is the natural way to read 21?",
-            "options": [
-              "Hai một",
-              "Hai mốt",
-              "Một hai",
-              "Mốt hai"
-            ],
-            "answer": "Hai mốt"
-          },
-          {
-            "question": "Which is the natural way to read 61?",
-            "options": [
-              "Sáu một",
-              "Sáu mốt",
-              "Một sáu",
-              "Mốt sáu"
-            ],
-            "answer": "Sáu mốt"
-          },
-          {
-            "question": "Which two readings are both correct for 44?",
-            "options": [
-              "Bốn một",
-              "Bốn hai",
-              "Bốn ba",
-              "Bốn tư"
-            ],
-            "answer": "Bốn tư"
-          },
-          {
-            "question": "Which is the natural way to read 35?",
-            "options": [
-              "Ba năm",
-              "Ba lăm",
-              "Năm ba",
-              "Lăm ba"
-            ],
-            "answer": "Ba lăm"
-          },
-          {
-            "question": "Which is the natural way to read 84?",
-            "options": [
-              "Tám mốt",
-              "Tám bốn",
-              "Tám lăm",
-              "Tám tám"
-            ],
-            "answer": "Tám bốn"
-          },
-          {
-            "question": "Which sentence is NOT the natural pronunciation?",
-            "options": [
-              "Hai mốt",
-              "Sáu lăm",
-              "Ba năm",
-              "Tám tư"
-            ],
-            "answer": "Ba năm"
           }
         ]
       },
       {
         "id": "g1",
-        "title": "Talking About Dates",
-        "pattern": "Ngày + [Day]\nTháng + [Month]",
-        "explanation": "Use ngày followed by a number to say the day of the month. Use tháng followed by a number to say the month of the year. For April, you can say either tháng tư or tháng bốn. Both are correct.",
-        "examples": [
+        "titleVi": "Ngày & Tháng",
+        "titleEn": "Talking About Dates",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Ngày mười.",
-            "en": "The 10th."
-          },
-          {
-            "vi": "Tháng hai.",
-            "en": "February."
-          },
-          {
-            "vi": "Ngày ba mươi tháng tư.",
-            "en": "April 30th."
-          },
-          {
-            "vi": "Ngày hai mốt tháng mười một.",
-            "en": "November 21st."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "When saying a full date in Vietnamese, the day comes before the month. Compare:",
-          "examples": [
-            {
-              "vi": "Ngày mười lăm tháng tư",
-              "en": "April 15th"
-            },
-            {
-              "vi": "Ngày hai tư tháng mười một",
-              "en": "November 24th"
-            }
-          ]
-        },
-        "quiz": [
-          {
-            "question": "Which phrase means \"February\"?",
-            "options": [
-              "Ngày hai",
-              "Ngày ba",
-              "Tháng hai",
-              "Ngày ba"
+            "id": "g1",
+            "label": "Ngày & Tháng - Talking About Dates",
+            "subHeadingVi": "Ngày & Tháng",
+            "subHeadingEn": "Talking About Dates",
+            "paragraphs": [
+              "Use ngày followed by a number to say the day of the month. Use tháng followed by a number to say the month of the year. For April, you can say either tháng tư or tháng bốn. Both are correct."
             ],
-            "answer": "Tháng hai"
-          },
-          {
-            "question": "Which phrase means \"the 10th\"?",
-            "options": [
-              "Tháng mười",
-              "Tháng mươi",
-              "Ngày mười",
-              "Mười ngày"
+            "chips": [
+              {
+                "pattern": "Ngày + [Day]\nTháng + [Month]"
+              }
             ],
-            "answer": "Ngày mười"
-          },
-          {
-            "question": "Which sentence means \"April 30th\"?",
-            "options": [
-              "Tháng ba mươi ngày tư",
-              "Ngày ba mươi tháng tư",
-              "Ba mươi tháng tư ngày",
-              "Ngày tư tháng ba mươi"
+            "examples": [
+              {
+                "vi": "Ngày mười.",
+                "en": "The 10th."
+              },
+              {
+                "vi": "Tháng hai.",
+                "en": "February."
+              },
+              {
+                "vi": "Ngày ba mươi tháng tư.",
+                "en": "April 30th."
+              },
+              {
+                "vi": "Ngày hai mốt tháng mười một.",
+                "en": "November 21st."
+              }
             ],
-            "answer": "Ngày ba mươi tháng tư"
-          },
-          {
-            "question": "Which two words can both be used for April?",
-            "options": [
-              "Tháng mười / Tháng mươi",
-              "Tháng tư / Tháng bốn",
-              "Tháng năm / Tháng lăm",
-              "Tháng một / Tháng mốt"
-            ],
-            "answer": "Tháng tư / Tháng bốn"
-          },
-          {
-            "question": "Which sentence means \"July 20th\"?",
-            "options": [
-              "Ngày hai mươi tháng bảy",
-              "Tháng hai mươi ngày bảy",
-              "Tháng bảy ngày hai",
-              "Ngày bảy tháng hai mươi"
-            ],
-            "answer": "Ngày hai mươi tháng bảy"
+            "quiz": [
+              {
+                "question": "Which phrase means \"February\"?",
+                "options": [
+                  "Ngày hai",
+                  "Ngày ba",
+                  "Tháng hai",
+                  "Ngày ba"
+                ],
+                "answer": "Tháng hai"
+              },
+              {
+                "question": "Which phrase means \"the 10th\"?",
+                "options": [
+                  "Tháng mười",
+                  "Tháng mươi",
+                  "Ngày mười",
+                  "Mười ngày"
+                ],
+                "answer": "Ngày mười"
+              },
+              {
+                "question": "Which sentence means \"April 30th\"?",
+                "options": [
+                  "Tháng ba mươi ngày tư",
+                  "Ngày ba mươi tháng tư",
+                  "Ba mươi tháng tư ngày",
+                  "Ngày tư tháng ba mươi"
+                ],
+                "answer": "Ngày ba mươi tháng tư"
+              },
+              {
+                "question": "Which two words can both be used for April?",
+                "options": [
+                  "Tháng mười / Tháng mươi",
+                  "Tháng tư / Tháng bốn",
+                  "Tháng năm / Tháng lăm",
+                  "Tháng một / Tháng mốt"
+                ],
+                "answer": "Tháng tư / Tháng bốn"
+              },
+              {
+                "question": "Which sentence means \"July 20th\"?",
+                "options": [
+                  "Ngày hai mươi tháng bảy",
+                  "Tháng hai mươi ngày bảy",
+                  "Tháng bảy ngày hai",
+                  "Ngày bảy tháng hai mươi"
+                ],
+                "answer": "Ngày hai mươi tháng bảy"
+              }
+            ]
           }
         ]
       },
       {
         "id": "g2",
-        "title": "Asking About the Day of the Week",
-        "pattern": "Hôm nay / Hôm qua / Ngày mai là thứ mấy?\n→ ... là thứ ...",
-        "explanation": "Use this pattern to ask what day of the week it is. You can ask about today, yesterday, or tomorrow. To answer, use: ... là + day of the week.",
-        "examples": [
+        "titleVi": "Thứ mấy?",
+        "titleEn": "Asking About the Day of the Week",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Hôm nay là thứ mấy?\n→ Hôm nay là thứ Ba.",
-            "en": "What day is it today?\nToday is Tuesday."
-          },
-          {
-            "vi": "Hôm qua là thứ mấy?\n→ Hôm qua là Chủ Nhật.",
-            "en": "What day was it yesterday?\nYesterday was Sunday."
-          },
-          {
-            "vi": "Ngày mai là thứ mấy?\n→ Ngày mai là thứ Sáu.",
-            "en": "What day is it tomorrow?\nTomorrow is Friday."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "Use these words to talk about different days:",
-          "dialogue": [
-            "Hôm nay = today",
-            "Hôm qua = yesterday",
-            "Ngày mai = tomorrow"
-          ],
-          "footer": "When answering, simply say:\nHôm nay là thứ Hai.\nNgày mai là Chủ Nhật."
-        },
-        "quiz": [
-          {
-            "question": "How do you ask \"What day is it today?\"",
-            "options": [
-              "Hôm nay là năm mấy?",
-              "Hôm nay là thứ mấy?",
-              "Hôm nay là mấy giờ?",
-              "Hôm nay là tháng mấy?"
+            "id": "g2",
+            "label": "Thứ mấy? - Asking About the Day of the Week",
+            "subHeadingVi": "Thứ mấy?",
+            "subHeadingEn": "Asking About the Day of the Week",
+            "paragraphs": [
+              "Use this pattern to ask what day of the week it is. You can ask about today, yesterday, or tomorrow. To answer, use: ... là + day of the week."
             ],
-            "answer": "Hôm nay là thứ mấy?"
-          },
-          {
-            "question": "Which answer means \"Today is Tuesday.\"",
-            "options": [
-              "Hôm nay là thứ Ba.",
-              "Hôm nay là ngày ba.",
-              "Hôm nay là tháng ba.",
-              "Hôm nay là ba giờ."
+            "chips": [
+              {
+                "pattern": "Hôm nay / Hôm qua / Ngày mai là thứ mấy?\n→ ... là thứ ..."
+              }
             ],
-            "answer": "Hôm nay là thứ Ba."
-          },
-          {
-            "question": "Complete the sentence: Hôm qua là ______.",
-            "options": [
-              "mười ngày",
-              "Chủ Nhật",
-              "tháng hai",
-              "bảy giờ"
+            "examples": [
+              {
+                "vi": "Hôm nay là thứ mấy?\n→ Hôm nay là thứ Ba.",
+                "en": "What day is it today?\nToday is Tuesday."
+              },
+              {
+                "vi": "Hôm qua là thứ mấy?\n→ Hôm qua là Chủ Nhật.",
+                "en": "What day was it yesterday?\nYesterday was Sunday."
+              },
+              {
+                "vi": "Ngày mai là thứ mấy?\n→ Ngày mai là thứ Sáu.",
+                "en": "What day is it tomorrow?\nTomorrow is Friday."
+              }
             ],
-            "answer": "Chủ Nhật"
-          },
-          {
-            "question": "Which question asks about tomorrow's date?",
-            "options": [
-              "Hôm qua là thứ mấy?",
-              "Hôm nay là thứ mấy?",
-              "Ngày mai là ngày mấy?",
-              "Ngày mai là tháng mấy?"
-            ],
-            "answer": "Ngày mai là ngày mấy?"
-          },
-          {
-            "question": "Which conversation is correct?",
-            "options": [
-              "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu.",
-              "A: Ngày mai là ngày mấy?\nB: Thứ Sáu là ngày mai.",
-              "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
-              "A: Hôm qua là tháng mấy?\nB: Hôm qua là Chủ Nhật."
-            ],
-            "answer": "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu."
+            "quiz": [
+              {
+                "question": "How do you ask \"What day is it today?\"",
+                "options": [
+                  "Hôm nay là năm mấy?",
+                  "Hôm nay là thứ mấy?",
+                  "Hôm nay là mấy giờ?",
+                  "Hôm nay là tháng mấy?"
+                ],
+                "answer": "Hôm nay là thứ mấy?"
+              },
+              {
+                "question": "Which answer means \"Today is Tuesday.\"",
+                "options": [
+                  "Hôm nay là thứ Ba.",
+                  "Hôm nay là ngày ba.",
+                  "Hôm nay là tháng ba.",
+                  "Hôm nay là ba giờ."
+                ],
+                "answer": "Hôm nay là thứ Ba."
+              },
+              {
+                "question": "Complete the sentence: Hôm qua là ______.",
+                "options": [
+                  "mười ngày",
+                  "Chủ Nhật",
+                  "tháng hai",
+                  "bảy giờ"
+                ],
+                "answer": "Chủ Nhật"
+              },
+              {
+                "question": "Which question asks about tomorrow's date?",
+                "options": [
+                  "Hôm qua là thứ mấy?",
+                  "Hôm nay là thứ mấy?",
+                  "Ngày mai là ngày mấy?",
+                  "Ngày mai là tháng mấy?"
+                ],
+                "answer": "Ngày mai là ngày mấy?"
+              },
+              {
+                "question": "Which conversation is correct?",
+                "options": [
+                  "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu.",
+                  "A: Ngày mai là ngày mấy?\nB: Thứ Sáu là ngày mai.",
+                  "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
+                  "A: Hôm qua là tháng mấy?\nB: Hôm qua là Chủ Nhật."
+                ],
+                "answer": "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu."
+              }
+            ]
           }
         ]
       },
       {
         "id": "g3",
-        "title": "Asking About Dates",
-        "pattern": "Hôm nay / Sinh nhật của bạn là ngày mấy / tháng mấy?\n→ ... là ngày [Day] (tháng [Month] năm [Year]).",
-        "explanation": "Use this pattern to ask for a specific date. You can ask about the day of the month, the month, or the full date (day, month, and year). To answer, simply say: ... là ngày... You can include the month and year if needed.",
-        "examples": [
+        "titleVi": "Ngày mấy?",
+        "titleEn": "Asking About Dates",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày ba mốt.",
-            "en": "What is today's date?\nToday is the 31st."
-          },
-          {
-            "vi": "Sinh nhật của bạn là tháng mấy?\n→ Sinh nhật của mình là tháng tám.",
-            "en": "Which month is your birthday in?\nMy birthday is in August."
-          },
-          {
-            "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày hai mươi tháng ba.",
-            "en": "What is today's date?\nToday is March 20th."
-          },
-          {
-            "vi": "Sinh nhật của chị Liên là ngày mấy?\n→ Ngày mười một tháng tư.",
-            "en": "What is Liên's birthday?\nApril 11th."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "If the question already tells us what you are talking about, you can answer with only the date. For example:",
-          "dialogue": [
-            "A: Sinh nhật của bạn là ngày mấy?",
-            "B: Ngày hai mươi tháng tám."
-          ],
-          "footer": "You don't need to repeat \"Sinh nhật của mình là...\" every time."
-        },
-        "quiz": [
-          {
-            "question": "How do you ask \"What is today's date?\"",
-            "options": [
-              "Hôm nay là năm mấy?",
-              "Hôm nay là ngày mấy?",
-              "Hôm nay là tháng mấy?",
-              "Hôm nay mấy giờ?"
+            "id": "g3",
+            "label": "Ngày mấy? - Asking About Dates",
+            "subHeadingVi": "Ngày mấy?",
+            "subHeadingEn": "Asking About Dates",
+            "paragraphs": [
+              "Use this pattern to ask for a specific date. You can ask about the day of the month, the month, or the full date (day, month, and year). To answer, simply say: ... là ngày... You can include the month and year if needed."
             ],
-            "answer": "Hôm nay là ngày mấy?"
-          },
-          {
-            "question": "Which answer means \"Today is March 20th.\"",
-            "options": [
-              "Hôm nay là ngày hai mươi tháng ba.",
-              "Hôm nay là thứ Ba ngày hai mươi.",
-              "Hôm nay là tháng ba ngày hai.",
-              "Hôm nay là thứ hai ngày ba mươi."
+            "chips": [
+              {
+                "pattern": "Hôm nay / Sinh nhật của bạn là ngày mấy / tháng mấy?\n→ ... là ngày [Day] (tháng [Month] năm [Year])."
+              }
             ],
-            "answer": "Hôm nay là ngày hai mươi tháng ba."
-          },
-          {
-            "question": "How do you ask \"Which month is your birthday in?\"",
-            "options": [
-              "Sinh nhật của bạn là ngày mấy?",
-              "Sinh nhật của bạn là tháng mấy?",
-              "Bạn sinh nhật mấy giờ?",
-              "Tháng của bạn là tháng mấy?"
+            "examples": [
+              {
+                "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày ba mốt.",
+                "en": "What is today's date?\nToday is the 31st."
+              },
+              {
+                "vi": "Sinh nhật của bạn là tháng mấy?\n→ Sinh nhật của mình là tháng tám.",
+                "en": "Which month is your birthday in?\nMy birthday is in August."
+              },
+              {
+                "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày hai mươi tháng ba.",
+                "en": "What is today's date?\nToday is March 20th."
+              },
+              {
+                "vi": "Sinh nhật của chị Liên là ngày mấy?\n→ Ngày mười một tháng tư.",
+                "en": "What is Liên's birthday?\nApril 11th."
+              }
             ],
-            "answer": "Sinh nhật của bạn là tháng mấy?"
-          },
-          {
-            "question": "Which answer means \"My birthday is in August.\"",
-            "options": [
-              "Sinh nhật của mình là tháng tám.",
-              "Sinh nhật của mình là ngày tám.",
-              "Tháng tám là của sinh nhật mình.",
-              "Tháng tám của mình là sinh nhật."
-            ],
-            "answer": "Sinh nhật của mình là tháng tám."
-          },
-          {
-            "question": "Which conversation is correct?",
-            "options": [
-              "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư.",
-              "A: Sinh nhật của chị Liên là thứ mấy?\nB: Ngày mười một tháng tư.",
-              "A: Sinh nhật của chị Liên là mấy giờ?\nB: Ngày mười một tháng tư.",
-              "A: Sinh nhật của chị Liên là tháng gì?\nB: Tháng tư."
-            ],
-            "answer": "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư."
+            "quiz": [
+              {
+                "question": "How do you ask \"What is today's date?\"",
+                "options": [
+                  "Hôm nay là năm mấy?",
+                  "Hôm nay là ngày mấy?",
+                  "Hôm nay là tháng mấy?",
+                  "Hôm nay mấy giờ?"
+                ],
+                "answer": "Hôm nay là ngày mấy?"
+              },
+              {
+                "question": "Which answer means \"Today is March 20th.\"",
+                "options": [
+                  "Hôm nay là ngày hai mươi tháng ba.",
+                  "Hôm nay là thứ Ba ngày hai mươi.",
+                  "Hôm nay là tháng ba ngày hai.",
+                  "Hôm nay là thứ hai ngày ba mươi."
+                ],
+                "answer": "Hôm nay là ngày hai mươi tháng ba."
+              },
+              {
+                "question": "How do you ask \"Which month is your birthday in?\"",
+                "options": [
+                  "Sinh nhật của bạn là ngày mấy?",
+                  "Sinh nhật của bạn là tháng mấy?",
+                  "Bạn sinh nhật mấy giờ?",
+                  "Tháng của bạn là tháng mấy?"
+                ],
+                "answer": "Sinh nhật của bạn là tháng mấy?"
+              },
+              {
+                "question": "Which answer means \"My birthday is in August.\"",
+                "options": [
+                  "Sinh nhật của mình là tháng tám.",
+                  "Sinh nhật của mình là ngày tám.",
+                  "Tháng tám là của sinh nhật mình.",
+                  "Tháng tám của mình là sinh nhật."
+                ],
+                "answer": "Sinh nhật của mình là tháng tám."
+              },
+              {
+                "question": "Which conversation is correct?",
+                "options": [
+                  "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư.",
+                  "A: Sinh nhật của chị Liên là thứ mấy?\nB: Ngày mười một tháng tư.",
+                  "A: Sinh nhật của chị Liên là mấy giờ?\nB: Ngày mười một tháng tư.",
+                  "A: Sinh nhật của chị Liên là tháng gì?\nB: Tháng tư."
+                ],
+                "answer": "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư."
+              }
+            ]
           }
         ]
       },
       {
-        "id": "g4",
-        "title": "Quiz tổng",
-        "quiz": [
+        "id": "review",
+        "titleVi": "Ôn tập tổng hợp",
+        "titleEn": "Review",
+        "intro": [],
+        "subtopics": [
           {
-            "question": "Which is the natural way to read 21?",
-            "options": [
-              "Hai một",
-              "Hai mốt",
-              "Một hai",
-              "Mốt hai"
-            ],
-            "answer": "Hai mốt"
-          },
-          {
-            "question": "Which number is read naturally?",
-            "options": [
-              "Ba năm",
-              "Sáu mười",
-              "Bốn tư",
-              "Hai một"
-            ],
-            "answer": "Bốn tư"
-          },
-          {
-            "question": "How do you ask \"What day is it today?\"",
-            "options": [
-              "Hôm nay là năm mấy?",
-              "Hôm nay là thứ mấy?",
-              "Hôm nay là tháng mấy?",
-              "Hôm nay mấy giờ?"
-            ],
-            "answer": "Hôm nay là thứ mấy?"
-          },
-          {
-            "question": "Which answer means \"Today is Tuesday.\"",
-            "options": [
-              "Hôm nay là ngày ba.",
-              "Hôm nay là tháng ba.",
-              "Hôm nay là thứ Ba.",
-              "Hôm nay là ba giờ."
-            ],
-            "answer": "Hôm nay là thứ Ba."
-          },
-          {
-            "question": "How do you ask \"What is today's date?\"",
-            "options": [
-              "Hôm nay là thứ mấy?",
-              "Hôm nay là ngày mấy?",
-              "Hôm nay là tháng mấy?",
-              "Hôm nay mấy giờ?"
-            ],
-            "answer": "Hôm nay là ngày mấy?"
-          },
-          {
-            "question": "Which answer means \"Today is April 11th.\"",
-            "options": [
-              "Hôm nay là ngày mười mốt tháng tư.",
-              "Hôm nay là ngày mười mốt tháng bốn.",
-              "Hôm nay là ngày mười một tháng tư.",
-              "Hôm nay là ngày bốn tháng mười một."
-            ],
-            "answer": "Hôm nay là ngày mười mốt tháng bốn."
-          },
-          {
-            "question": "Complete the sentence: Hôm qua là ______.",
-            "options": [
-              "ngày mai",
-              "Chủ Nhật",
-              "tháng tám",
-              "tám giờ"
-            ],
-            "answer": "Chủ Nhật"
-          },
-          {
-            "question": "Which question asks about someone's birthday month?",
-            "options": [
-              "Sinh nhật của bạn là ngày mấy?",
-              "Sinh nhật của bạn là tháng mấy?",
-              "Sinh nhật của bạn là thứ mấy?",
-              "Sinh nhật của bạn là mấy giờ?"
-            ],
-            "answer": "Sinh nhật của bạn là tháng mấy?"
-          },
-          {
-            "question": "Which answer means \"My birthday is in December.\"",
-            "options": [
-              "Sinh nhật của mình là ngày mười hai.",
-              "Sinh nhật của mình là tháng mười hai.",
-              "Hôm nay là tháng mười hai.",
-              "Tháng mười hai là hôm nay."
-            ],
-            "answer": "Sinh nhật của mình là tháng mười hai."
-          },
-          {
-            "question": "Choose the correct date.",
-            "options": [
-              "Ngày ba mươi tháng tư.",
-              "Tháng ba mươi ngày tư.",
-              "Ba mươi tháng tư ngày.",
-              "Ngày tư tháng ba mươi."
-            ],
-            "answer": "Ngày ba mươi tháng tư."
-          },
-          {
-            "question": "Which sentence means \"Yesterday was Sunday the 25th.\"",
-            "options": [
-              "Hôm nay là thứ Bảy ngày hai lăm.",
-              "Hôm nay là Chủ Nhật ngày hai năm.",
-              "Hôm qua là thứ Bảy ngày hai năm.",
-              "Hôm qua là Chủ Nhật ngày hai lăm."
-            ],
-            "answer": "Hôm qua là Chủ Nhật ngày hai lăm."
-          },
-          {
-            "question": "Which sentence is correct?",
-            "options": [
-              "Ngày hai mươi tháng bảy.",
-              "Tháng hai mươi ngày bảy.",
-              "Ngày bảy tháng hai mươi.",
-              "Hai mươi ngày tháng bảy."
-            ],
-            "answer": "Ngày hai mươi tháng bảy."
-          },
-          {
-            "question": "Choose the correct conversation.",
-            "options": [
-              "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu.",
-              "A: Sinh nhật của bạn là tháng mấy?\nB: Sinh nhật của mình là thứ Sáu.",
-              "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
-              "A: Hôm qua là thứ mấy?\nB: Hôm nay là thứ Sáu."
-            ],
-            "answer": "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu."
-          },
-          {
-            "question": "Choose the correct conversation.",
-            "options": [
-              "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám.",
-              "A: Sinh nhật của bạn là thứ mấy?\nB: Ngày bảy tháng hai.",
-              "A: Sinh nhật của bạn là tháng mấy?\nB: Thứ năm.",
-              "A: Sinh nhật của bạn là mấy giờ?\nB: Thứ sáu ngày mười tám."
-            ],
-            "answer": "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám."
-          },
-          {
-            "question": "Which sentence is NOT natural?",
-            "options": [
-              "Hai mốt",
-              "Ba lăm",
-              "Bốn bốn",
-              "Tám năm"
-            ],
-            "answer": "Tám năm"
-          },
-          {
-            "question": "Complete the sentence: Hôm nay là ngày ______ tháng tư.",
-            "options": [
-              "ba mươi",
-              "Chủ Nhật",
-              "thứ Ba",
-              "tám giờ"
-            ],
-            "answer": "ba mươi"
-          },
-          {
-            "question": "Which question asks about tomorrow's day of the week?",
-            "options": [
-              "Ngày mai là ngày mấy?",
-              "Ngày mai là tháng mấy?",
-              "Ngày mai là thứ mấy?",
-              "Ngày mai mấy giờ?"
-            ],
-            "answer": "Ngày mai là thứ mấy?"
-          },
-          {
-            "question": "Choose the best response: Ngày mai là thứ mấy?",
-            "options": [
-              "Ngày mai là thứ Hai.",
-              "Ngày mai là ngày hai.",
-              "Ngày mai là tháng hai.",
-              "Ngày mai là hai giờ."
-            ],
-            "answer": "Ngày mai là thứ Hai."
+            "id": "review",
+            "label": "Review",
+            "quiz": [
+              {
+                "question": "Which is the natural way to read 21?",
+                "options": [
+                  "Hai một",
+                  "Hai mốt",
+                  "Một hai",
+                  "Mốt hai"
+                ],
+                "answer": "Hai mốt"
+              },
+              {
+                "question": "Which number is read naturally?",
+                "options": [
+                  "Ba năm",
+                  "Sáu mười",
+                  "Bốn tư",
+                  "Hai một"
+                ],
+                "answer": "Bốn tư"
+              },
+              {
+                "question": "How do you ask \"What day is it today?\"",
+                "options": [
+                  "Hôm nay là năm mấy?",
+                  "Hôm nay là thứ mấy?",
+                  "Hôm nay là tháng mấy?",
+                  "Hôm nay mấy giờ?"
+                ],
+                "answer": "Hôm nay là thứ mấy?"
+              },
+              {
+                "question": "Which answer means \"Today is Tuesday.\"",
+                "options": [
+                  "Hôm nay là ngày ba.",
+                  "Hôm nay là tháng ba.",
+                  "Hôm nay là thứ Ba.",
+                  "Hôm nay là ba giờ."
+                ],
+                "answer": "Hôm nay là thứ Ba."
+              },
+              {
+                "question": "How do you ask \"What is today's date?\"",
+                "options": [
+                  "Hôm nay là thứ mấy?",
+                  "Hôm nay là ngày mấy?",
+                  "Hôm nay là tháng mấy?",
+                  "Hôm nay mấy giờ?"
+                ],
+                "answer": "Hôm nay là ngày mấy?"
+              },
+              {
+                "question": "Which answer means \"Today is April 11th.\"",
+                "options": [
+                  "Hôm nay là ngày mười mốt tháng tư.",
+                  "Hôm nay là ngày mười mốt tháng bốn.",
+                  "Hôm nay là ngày mười một tháng tư.",
+                  "Hôm nay là ngày bốn tháng mười một."
+                ],
+                "answer": "Hôm nay là ngày mười mốt tháng bốn."
+              },
+              {
+                "question": "Complete the sentence: Hôm qua là ______.",
+                "options": [
+                  "ngày mai",
+                  "Chủ Nhật",
+                  "tháng tám",
+                  "tám giờ"
+                ],
+                "answer": "Chủ Nhật"
+              },
+              {
+                "question": "Which question asks about someone's birthday month?",
+                "options": [
+                  "Sinh nhật của bạn là ngày mấy?",
+                  "Sinh nhật của bạn là tháng mấy?",
+                  "Sinh nhật của bạn là thứ mấy?",
+                  "Sinh nhật của bạn là mấy giờ?"
+                ],
+                "answer": "Sinh nhật của bạn là tháng mấy?"
+              },
+              {
+                "question": "Which answer means \"My birthday is in December.\"",
+                "options": [
+                  "Sinh nhật của mình là ngày mười hai.",
+                  "Sinh nhật của mình là tháng mười hai.",
+                  "Hôm nay là tháng mười hai.",
+                  "Tháng mười hai là hôm nay."
+                ],
+                "answer": "Sinh nhật của mình là tháng mười hai."
+              },
+              {
+                "question": "Choose the correct date.",
+                "options": [
+                  "Ngày ba mươi tháng tư.",
+                  "Tháng ba mươi ngày tư.",
+                  "Ba mươi tháng tư ngày.",
+                  "Ngày tư tháng ba mươi."
+                ],
+                "answer": "Ngày ba mươi tháng tư."
+              },
+              {
+                "question": "Which sentence means \"Yesterday was Sunday the 25th.\"",
+                "options": [
+                  "Hôm nay là thứ Bảy ngày hai lăm.",
+                  "Hôm nay là Chủ Nhật ngày hai năm.",
+                  "Hôm qua là thứ Bảy ngày hai năm.",
+                  "Hôm qua là Chủ Nhật ngày hai lăm."
+                ],
+                "answer": "Hôm qua là Chủ Nhật ngày hai lăm."
+              },
+              {
+                "question": "Which sentence is correct?",
+                "options": [
+                  "Ngày hai mươi tháng bảy.",
+                  "Tháng hai mươi ngày bảy.",
+                  "Ngày bảy tháng hai mươi.",
+                  "Hai mươi ngày tháng bảy."
+                ],
+                "answer": "Ngày hai mươi tháng bảy."
+              },
+              {
+                "question": "Choose the correct conversation.",
+                "options": [
+                  "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu.",
+                  "A: Sinh nhật của bạn là tháng mấy?\nB: Sinh nhật của mình là thứ Sáu.",
+                  "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
+                  "A: Hôm qua là thứ mấy?\nB: Hôm nay là thứ Sáu."
+                ],
+                "answer": "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu."
+              },
+              {
+                "question": "Choose the correct conversation.",
+                "options": [
+                  "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám.",
+                  "A: Sinh nhật của bạn là thứ mấy?\nB: Ngày bảy tháng hai.",
+                  "A: Sinh nhật của bạn là tháng mấy?\nB: Thứ năm.",
+                  "A: Sinh nhật của bạn là mấy giờ?\nB: Thứ sáu ngày mười tám."
+                ],
+                "answer": "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám."
+              },
+              {
+                "question": "Which sentence is NOT natural?",
+                "options": [
+                  "Hai mốt",
+                  "Ba lăm",
+                  "Bốn bốn",
+                  "Tám năm"
+                ],
+                "answer": "Tám năm"
+              },
+              {
+                "question": "Complete the sentence: Hôm nay là ngày ______ tháng tư.",
+                "options": [
+                  "ba mươi",
+                  "Chủ Nhật",
+                  "thứ Ba",
+                  "tám giờ"
+                ],
+                "answer": "ba mươi"
+              },
+              {
+                "question": "Which question asks about tomorrow's day of the week?",
+                "options": [
+                  "Ngày mai là ngày mấy?",
+                  "Ngày mai là tháng mấy?",
+                  "Ngày mai là thứ mấy?",
+                  "Ngày mai mấy giờ?"
+                ],
+                "answer": "Ngày mai là thứ mấy?"
+              },
+              {
+                "question": "Choose the best response: Ngày mai là thứ mấy?",
+                "options": [
+                  "Ngày mai là thứ Hai.",
+                  "Ngày mai là ngày hai.",
+                  "Ngày mai là tháng hai.",
+                  "Ngày mai là hai giờ."
+                ],
+                "answer": "Ngày mai là thứ Hai."
+              }
+            ]
           }
         ]
       }
