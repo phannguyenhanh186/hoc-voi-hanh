@@ -214,13 +214,13 @@
     "sections": [
       {
         "id": "g1",
-        "titleVi": "Time Markers - Vào",
+        "titleVi": "Vào",
         "titleEn": "Time Markers",
         "intro": [],
         "subtopics": [
           {
             "id": "g1",
-            "label": "Vào",
+            "label": "Time Markers - Vào",
             "subHeadingVi": "Vào",
             "subHeadingEn": "Time Markers",
             "paragraphs": [
@@ -291,8 +291,8 @@
       },
       {
         "id": "g2",
-        "titleVi": "Habits - Thường",
-        "titleEn": "",
+        "titleVi": "Thường",
+        "titleEn": "Often",
         "intro": [],
         "subtopics": [
           {
