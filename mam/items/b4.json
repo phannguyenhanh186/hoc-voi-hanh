@@ -304,8 +304,8 @@
     "sections": [
       {
         "id": "g1",
-        "titleVi": "Hour/Minute - Giờ/Phút",
-        "titleEn": "",
+        "titleVi": "Giờ/Phút",
+        "titleEn": "Hour/Minute",
         "intro": [],
         "subtopics": [
           {
@@ -429,8 +429,8 @@
       },
       {
         "id": "g2",
-        "titleVi": "What time is it? - Mấy giờ rồi?",
-        "titleEn": "",
+        "titleVi": "Mấy giờ rồi?",
+        "titleEn": "What time is it?",
         "intro": [],
         "subtopics": [
           {
@@ -507,8 +507,8 @@
       },
       {
         "id": "g3",
-        "titleVi": "At what time - Lúc mấy giờ?",
-        "titleEn": "",
+        "titleVi": "Lúc mấy giờ?",
+        "titleEn": "At what time?",
         "intro": [],
         "subtopics": [
           {
