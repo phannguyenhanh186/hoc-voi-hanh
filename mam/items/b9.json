@@ -217,470 +217,484 @@
     ]
   },
   "grammar": {
-    "points": [
+    "sections": [
       {
         "id": "g1",
-        "title": "Talking About Things You Must Do",
-        "pattern": "[Subject] + phải + [Verb]",
-        "explanation": "Use phải to say that someone must, has to, or needs to do something. This pattern is commonly used to talk about rules, laws, or obligations.",
-        "examples": [
+        "titleVi": "Phải",
+        "titleEn": "Talking About Things You Must Do",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Ở Việt Nam, bạn phải đội nón bảo hiểm khi ra đường.",
-            "en": "In Vietnam, you must wear a helmet when you go out."
-          },
-          {
-            "vi": "Em phải mặc áo khoác vì trời lạnh.",
-            "en": "I have to wear a jacket because it's cold."
-          },
-          {
-            "vi": "Mình phải đi làm lúc tám giờ.",
-            "en": "I have to go to work at 8:00."
-          },
-          {
-            "vi": "Chị phải mang hộ chiếu.",
-            "en": "She has to bring her passport."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "Phải comes before the verb. Compare:",
-          "examples": [
-            {
-              "vi": "Mình đi làm.",
-              "en": "I go to work."
-            },
-            {
-              "vi": "Mình phải đi làm.",
-              "en": "I have to go to work."
-            }
-          ]
-        },
-        "quiz": [
-          {
-            "question": "What does phải mean?",
-            "options": [
-              "can",
-              "must",
-              "want to"
+            "id": "g1",
+            "label": "Phải - Talking About Things You Must Do",
+            "subHeadingVi": "Phải",
+            "subHeadingEn": "Talking About Things You Must Do",
+            "paragraphs": [
+              "Use phải to say that someone must, has to, or needs to do something. This pattern is commonly used to talk about rules, laws, or obligations."
             ],
-            "answer": "must"
-          },
-          {
-            "question": "Which sentence means \"You must wear a helmet.\"",
-            "options": [
-              "Bạn đội nón bảo hiểm.",
-              "Bạn phải đội nón bảo hiểm.",
-              "Bạn thường đội nón bảo hiểm."
+            "chips": [
+              {
+                "pattern": "[Subject] + phải + [Verb]"
+              }
             ],
-            "answer": "Bạn phải đội nón bảo hiểm."
-          },
-          {
-            "question": "Complete the sentence which means \"I must wear a jacket.\": Em ______ mặc áo khoác.",
-            "options": [
-              "phải",
-              "đang",
-              "không"
+            "examples": [
+              {
+                "vi": "Ở Việt Nam, bạn phải đội nón bảo hiểm khi ra đường.",
+                "en": "In Vietnam, you must wear a helmet when you go out."
+              },
+              {
+                "vi": "Em phải mặc áo khoác vì trời lạnh.",
+                "en": "I have to wear a jacket because it's cold."
+              },
+              {
+                "vi": "Mình phải đi làm lúc tám giờ.",
+                "en": "I have to go to work at 8:00."
+              },
+              {
+                "vi": "Chị phải mang hộ chiếu.",
+                "en": "She has to bring her passport."
+              }
             ],
-            "answer": "phải"
-          },
-          {
-            "question": "Which sentence means \"I have to go to work.\"",
-            "options": [
-              "Mình đi làm.",
-              "Mình phải đi làm.",
-              "Mình đang đi làm."
-            ],
-            "answer": "Mình phải đi làm."
+            "quiz": [
+              {
+                "question": "What does phải mean?",
+                "options": [
+                  "can",
+                  "must",
+                  "want to"
+                ],
+                "answer": "must"
+              },
+              {
+                "question": "Which sentence means \"You must wear a helmet.\"",
+                "options": [
+                  "Bạn đội nón bảo hiểm.",
+                  "Bạn phải đội nón bảo hiểm.",
+                  "Bạn thường đội nón bảo hiểm."
+                ],
+                "answer": "Bạn phải đội nón bảo hiểm."
+              },
+              {
+                "question": "Complete the sentence which means \"I must wear a jacket.\": Em ______ mặc áo khoác.",
+                "options": [
+                  "phải",
+                  "đang",
+                  "không"
+                ],
+                "answer": "phải"
+              },
+              {
+                "question": "Which sentence means \"I have to go to work.\"",
+                "options": [
+                  "Mình đi làm.",
+                  "Mình phải đi làm.",
+                  "Mình đang đi làm."
+                ],
+                "answer": "Mình phải đi làm."
+              }
+            ]
           }
         ]
       },
       {
         "id": "g2",
-        "title": "Talking About Things You Don't Have to Do",
-        "pattern": "[Subject] + không phải + [Verb]",
-        "explanation": "Use không phải to say that someone doesn't have to do something. This means the action is not necessary.",
-        "examples": [
+        "titleVi": "Không phải",
+        "titleEn": "Talking About Things You Don't Have to Do",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Hôm nay em ấy không phải đi học vì trời mưa.",
-            "en": "Today, he doesn't have to go to school because it's raining."
-          },
-          {
-            "vi": "Ở Đức, bạn không phải đội nón bảo hiểm khi đi xe.",
-            "en": "In Germany, you don't have to wear a helmet when riding a bicycle."
-          },
-          {
-            "vi": "Mình không phải đi làm hôm nay.",
-            "en": "I don't have to work today."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "Don't confuse: Không phải + Verb (don't have to) vs. Không + Verb (don't do / doesn't do). Compare:",
-          "examples": [
-            {
-              "vi": "Mình không phải đi làm hôm nay.",
-              "en": "I don't have to work today."
-            },
-            {
-              "vi": "Mình không đi làm hôm nay.",
-              "en": "I'm not going to work today."
-            }
-          ],
-          "footer": "These sentences have different meanings."
-        },
-        "quiz": [
-          {
-            "question": "What does không phải + verb mean?",
-            "options": [
-              "must",
-              "don't have to",
-              "usually"
+            "id": "g2",
+            "label": "Không phải - Talking About Things You Don't Have to Do",
+            "subHeadingVi": "Không phải",
+            "subHeadingEn": "Talking About Things You Don't Have to Do",
+            "paragraphs": [
+              "Use không phải to say that someone doesn't have to do something. This means the action is not necessary."
             ],
-            "answer": "don't have to"
-          },
-          {
-            "question": "Which sentence means \"I don't have to work today.\"",
-            "options": [
-              "Mình không đi làm hôm nay.",
-              "Mình không phải đi làm hôm nay.",
-              "Mình không đang đi làm hôm nay."
+            "chips": [
+              {
+                "pattern": "[Subject] + không phải + [Verb]"
+              }
             ],
-            "answer": "Mình không phải đi làm hôm nay."
-          },
-          {
-            "question": "Complete the sentence: Hôm nay mình ______ phải đi học.",
-            "options": [
-              "không",
-              "đang",
-              "thường"
+            "examples": [
+              {
+                "vi": "Hôm nay em ấy không phải đi học vì trời mưa.",
+                "en": "Today, he doesn't have to go to school because it's raining."
+              },
+              {
+                "vi": "Ở Đức, bạn không phải đội nón bảo hiểm khi đi xe.",
+                "en": "In Germany, you don't have to wear a helmet when riding a bicycle."
+              },
+              {
+                "vi": "Mình không phải đi làm hôm nay.",
+                "en": "I don't have to work today."
+              }
             ],
-            "answer": "không"
-          },
-          {
-            "question": "Which sentence is correct?",
-            "options": [
-              "Bạn không phải đội nón bảo hiểm.",
-              "Bạn đội không phải nón bảo hiểm.",
-              "Bạn phải không đội nón bảo hiểm."
-            ],
-            "answer": "Bạn không phải đội nón bảo hiểm."
+            "quiz": [
+              {
+                "question": "What does không phải + verb mean?",
+                "options": [
+                  "must",
+                  "don't have to",
+                  "usually"
+                ],
+                "answer": "don't have to"
+              },
+              {
+                "question": "Which sentence means \"I don't have to work today.\"",
+                "options": [
+                  "Mình không đi làm hôm nay.",
+                  "Mình không phải đi làm hôm nay.",
+                  "Mình không đang đi làm hôm nay."
+                ],
+                "answer": "Mình không phải đi làm hôm nay."
+              },
+              {
+                "question": "Complete the sentence: Hôm nay mình ______ phải đi học.",
+                "options": [
+                  "không",
+                  "đang",
+                  "thường"
+                ],
+                "answer": "không"
+              },
+              {
+                "question": "Which sentence is correct?",
+                "options": [
+                  "Bạn không phải đội nón bảo hiểm.",
+                  "Bạn đội không phải nón bảo hiểm.",
+                  "Bạn phải không đội nón bảo hiểm."
+                ],
+                "answer": "Bạn không phải đội nón bảo hiểm."
+              }
+            ]
           }
         ]
       },
       {
         "id": "g3",
-        "title": "Asking What Someone Must Wear or Bring",
-        "pattern": "[Subject] + phải + [Verb] + gì?",
-        "explanation": "Use this pattern to ask what someone must wear, bring, or do.",
-        "notes": [
-          "mặc (wear clothes)",
-          "đội (wear a hat/helmet)",
-          "đeo (wear glasses, a mask, jewelry)",
-          "mang (bring)",
-          "đi (go)"
-        ],
-        "examples": [
+        "titleVi": "Phải...gì?",
+        "titleEn": "Asking What Someone Must Wear or Bring",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Mình phải đeo gì?",
-            "en": "What do I have to wear?"
-          },
-          {
-            "vi": "Đi làm chị phải mặc áo gì?",
-            "en": "What clothes do you have to wear to work?"
-          },
-          {
-            "vi": "Bạn phải mang gì?",
-            "en": "What do you have to bring?"
-          },
-          {
-            "vi": "Khi đi xe máy, mình phải đội gì?",
-            "en": "What do I have to wear when riding a motorbike?"
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "The word gì means what. Simply replace gì with the correct answer. Compare:",
-          "examples": [
-            {
-              "vi": "Bạn phải mang gì?",
-              "en": "What do you have to bring?"
-            },
-            {
-              "vi": "Mình phải mang hộ chiếu.",
-              "en": "I have to bring my passport."
-            }
-          ]
-        },
-        "quiz": [
-          {
-            "question": "How do you ask \"What do I have to wear?\"",
-            "options": [
-              "Mình phải mặc gì?",
-              "Mình mặc gì?",
-              "Mình đang mặc gì?"
+            "id": "g3",
+            "label": "Phải...gì? - Asking What Someone Must Wear or Bring",
+            "subHeadingVi": "Phải...gì?",
+            "subHeadingEn": "Asking What Someone Must Wear or Bring",
+            "paragraphs": [
+              "Use this pattern to ask what someone must wear, bring, or do."
             ],
-            "answer": "Mình phải mặc gì?"
-          },
-          {
-            "question": "Which answer fits? — Mình phải mang gì?",
-            "options": [
-              "Bạn phải mang hộ chiếu.",
-              "Bạn không mang hộ chiếu.",
-              "Bạn đang mang hộ chiếu."
+            "chips": [
+              {
+                "pattern": "[Subject] + phải + [Verb] + gì?"
+              }
             ],
-            "answer": "Bạn phải mang hộ chiếu."
-          },
-          {
-            "question": "Complete the sentence which means \"What do I have to wear?\": Chị ______ gì?",
-            "options": [
-              "phải",
-              "phải mặc",
-              "phải làm"
+            "notes": [
+              "mặc (wear clothes)",
+              "đội (wear a hat/helmet)",
+              "đeo (wear glasses, a mask, jewelry)",
+              "mang (bring)",
+              "đi (go)"
             ],
-            "answer": "phải mặc"
-          },
-          {
-            "question": "Which question suits the answer \"Mình phải đội nón bảo hiểm khi đi xe máy.\"",
-            "options": [
-              "Bạn phải đội nón bảo hiểm khi đi xe máy?",
-              "Bạn phải đội gì khi đi xe máy?",
-              "Bạn phải có gì khi đi xe máy không?"
+            "examples": [
+              {
+                "vi": "Mình phải đeo gì?",
+                "en": "What do I have to wear?"
+              },
+              {
+                "vi": "Đi làm chị phải mặc áo gì?",
+                "en": "What clothes do you have to wear to work?"
+              },
+              {
+                "vi": "Bạn phải mang gì?",
+                "en": "What do you have to bring?"
+              },
+              {
+                "vi": "Khi đi xe máy, mình phải đội gì?",
+                "en": "What do I have to wear when riding a motorbike?"
+              }
             ],
-            "answer": "Bạn phải đội gì khi đi xe máy?"
+            "quiz": [
+              {
+                "question": "How do you ask \"What do I have to wear?\"",
+                "options": [
+                  "Mình phải mặc gì?",
+                  "Mình mặc gì?",
+                  "Mình đang mặc gì?"
+                ],
+                "answer": "Mình phải mặc gì?"
+              },
+              {
+                "question": "Which answer fits? — Mình phải mang gì?",
+                "options": [
+                  "Bạn phải mang hộ chiếu.",
+                  "Bạn không mang hộ chiếu.",
+                  "Bạn đang mang hộ chiếu."
+                ],
+                "answer": "Bạn phải mang hộ chiếu."
+              },
+              {
+                "question": "Complete the sentence which means \"What do I have to wear?\": Chị ______ gì?",
+                "options": [
+                  "phải",
+                  "phải mặc",
+                  "phải làm"
+                ],
+                "answer": "phải mặc"
+              },
+              {
+                "question": "Which question suits the answer \"Mình phải đội nón bảo hiểm khi đi xe máy.\"",
+                "options": [
+                  "Bạn phải đội nón bảo hiểm khi đi xe máy?",
+                  "Bạn phải đội gì khi đi xe máy?",
+                  "Bạn phải có gì khi đi xe máy không?"
+                ],
+                "answer": "Bạn phải đội gì khi đi xe máy?"
+              }
+            ]
           }
         ]
       },
       {
         "id": "g4",
-        "title": "Asking If Someone Has to Do Something",
-        "pattern": "[Subject] + có phải + [Verb] + không?",
-        "explanation": "Use this pattern to ask whether someone has to do something. This is a Yes/No question.",
-        "notes": [
-          "To answer: Có. / [Pronoun] + có.",
-          "Or: Không. / [Pronoun] + không.",
-          "Or answer in a full sentence."
-        ],
-        "examples": [
+        "titleVi": "Có phải...không?",
+        "titleEn": "Asking If Someone Has to Do Something",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Trời nắng anh có phải mặc áo khoác không?",
-            "en": "Do you have to wear a jacket when it's sunny?"
-          },
-          {
-            "vi": "Bạn có phải đội nón bảo hiểm ở Mỹ không?",
-            "en": "Do you have to wear a helmet in the US?"
-          },
-          {
-            "vi": "Chị có phải mang hộ chiếu không?",
-            "en": "Do you have to bring your passport?"
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "You can answer briefly:",
-          "examples": [
-            {
-              "vi": "Có. / Mình có.",
-              "en": "Yes."
-            },
-            {
-              "vi": "Không. / Mình không.",
-              "en": "No."
-            }
-          ],
-          "footer": "Or use a complete sentence:\nCó, mình phải mang hộ chiếu.\nKhông, mình không phải mang hộ chiếu."
-        },
-        "quiz": [
-          {
-            "question": "Which sentence means \"Do you have to wear a helmet?\"",
-            "options": [
-              "Bạn phải đội nón bảo hiểm?",
-              "Bạn có phải đội nón bảo hiểm không?",
-              "Bạn đội nón bảo hiểm không phải?"
+            "id": "g4",
+            "label": "Có phải...không? - Asking If Someone Has to Do Something",
+            "subHeadingVi": "Có phải...không?",
+            "subHeadingEn": "Asking If Someone Has to Do Something",
+            "paragraphs": [
+              "Use this pattern to ask whether someone has to do something. This is a Yes/No question."
             ],
-            "answer": "Bạn có phải đội nón bảo hiểm không?"
-          },
-          {
-            "question": "Which answer means \"No, I don't have to.\"",
-            "options": [
-              "Không, mình.",
-              "Không, mình phải.",
-              "Mình không."
+            "chips": [
+              {
+                "pattern": "[Subject] + có phải + [Verb] + không?"
+              }
             ],
-            "answer": "Mình không."
-          },
-          {
-            "question": "Complete the question: Bạn có phải đi làm ______?",
-            "options": [
-              "gì",
-              "không",
-              "thế nào"
+            "notes": [
+              "To answer: Có. / [Pronoun] + có.",
+              "Or: Không. / [Pronoun] + không.",
+              "Or answer in a full sentence."
             ],
-            "answer": "không"
-          },
-          {
-            "question": "Which conversation is correct?",
-            "options": [
-              "A: Bạn có phải mang hộ chiếu?\nB: Có, mình phải mang hộ chiếu.",
-              "A: Bạn có phải mang hộ chiếu không?\nB: Mình có hộ chiếu.",
-              "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
+            "examples": [
+              {
+                "vi": "Trời nắng anh có phải mặc áo khoác không?",
+                "en": "Do you have to wear a jacket when it's sunny?"
+              },
+              {
+                "vi": "Bạn có phải đội nón bảo hiểm ở Mỹ không?",
+                "en": "Do you have to wear a helmet in the US?"
+              },
+              {
+                "vi": "Chị có phải mang hộ chiếu không?",
+                "en": "Do you have to bring your passport?"
+              }
             ],
-            "answer": "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
+            "quiz": [
+              {
+                "question": "Which sentence means \"Do you have to wear a helmet?\"",
+                "options": [
+                  "Bạn phải đội nón bảo hiểm?",
+                  "Bạn có phải đội nón bảo hiểm không?",
+                  "Bạn đội nón bảo hiểm không phải?"
+                ],
+                "answer": "Bạn có phải đội nón bảo hiểm không?"
+              },
+              {
+                "question": "Which answer means \"No, I don't have to.\"",
+                "options": [
+                  "Không, mình.",
+                  "Không, mình phải.",
+                  "Mình không."
+                ],
+                "answer": "Mình không."
+              },
+              {
+                "question": "Complete the question: Bạn có phải đi làm ______?",
+                "options": [
+                  "gì",
+                  "không",
+                  "thế nào"
+                ],
+                "answer": "không"
+              },
+              {
+                "question": "Which conversation is correct?",
+                "options": [
+                  "A: Bạn có phải mang hộ chiếu?\nB: Có, mình phải mang hộ chiếu.",
+                  "A: Bạn có phải mang hộ chiếu không?\nB: Mình có hộ chiếu.",
+                  "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
+                ],
+                "answer": "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
+              }
+            ]
           }
         ]
       },
       {
-        "id": "g5",
-        "title": "Quiz tổng",
-        "quiz": [
+        "id": "review",
+        "titleVi": "Ôn tập tổng hợp",
+        "titleEn": "Review",
+        "intro": [],
+        "subtopics": [
           {
-            "question": "What does phải mean?",
-            "options": [
-              "can",
-              "must",
-              "want to",
-              "like to"
-            ],
-            "answer": "must"
-          },
-          {
-            "question": "Which sentence means \"You must wear a helmet.\"",
-            "options": [
-              "Bạn đội nón bảo hiểm.",
-              "Bạn đang đội nón bảo hiểm.",
-              "Bạn phải đội nón bảo hiểm.",
-              "Bạn thường đội nón bảo hiểm."
-            ],
-            "answer": "Bạn phải đội nón bảo hiểm."
-          },
-          {
-            "question": "Which sentence means \"I don't have to go to work today.\"",
-            "options": [
-              "Anh không đi làm hôm nay.",
-              "Anh không phải đi làm hôm nay.",
-              "Anh đang không đi làm.",
-              "Anh thường không đi làm."
-            ],
-            "answer": "Anh không phải đi làm hôm nay."
-          },
-          {
-            "question": "Complete the sentence: Em ______ mặc áo khoác vì trời lạnh.",
-            "options": [
-              "đang",
-              "phải",
-              "thường",
-              "có"
-            ],
-            "answer": "phải"
-          },
-          {
-            "question": "Which sentence is correct?",
-            "options": [
-              "Bạn phải không đội nón bảo hiểm.",
-              "Bạn không phải đội nón bảo hiểm.",
-              "Bạn đội không phải nón bảo hiểm.",
-              "Không bạn phải đội nón bảo hiểm."
-            ],
-            "answer": "Bạn không phải đội nón bảo hiểm."
-          },
-          {
-            "question": "How do you ask \"What do I have to wear?\"",
-            "options": [
-              "Chị mặc gì?",
-              "Chị đang mặc gì?",
-              "Chị phải mặc gì?",
-              "Chị có mặc gì không?"
-            ],
-            "answer": "Chị phải mặc gì?"
-          },
-          {
-            "question": "Which answer best completes the conversation?\nA: Bạn phải mang gì?\nB: ______",
-            "options": [
-              "Mình phải mang hộ chiếu.",
-              "Mình mang hôm qua.",
-              "Mình đang mang.",
-              "Mình thích hộ chiếu."
-            ],
-            "answer": "Mình phải mang hộ chiếu."
-          },
-          {
-            "question": "Complete the question that means \"What do I have to wear?\": Chị _______ gì?",
-            "options": [
-              "phải",
-              "phải đeo",
-              "đang đeo",
-              "đeo"
-            ],
-            "answer": "phải đeo"
-          },
-          {
-            "question": "How do you ask \"Do you have to bring your phone?\"",
-            "options": [
-              "Bạn phải mang điện thoại?",
-              "Bạn có mang điện thoại không?",
-              "Bạn có phải mang điện thoại không?",
-              "Bạn có đang mang điện thoại không?"
-            ],
-            "answer": "Bạn có phải mang điện thoại không?"
-          },
-          {
-            "question": "Which is the best answer?\nA: Bạn có phải đi làm hôm nay không?",
-            "options": [
-              "Có, mình phải đi làm.",
-              "Có mình.",
-              "Có, mình phải.",
-              "Mình đi làm."
-            ],
-            "answer": "Có, mình phải đi làm."
-          },
-          {
-            "question": "Which conversation is correct?",
-            "options": [
-              "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo.",
-              "A: Bạn có phải đeo khẩu trang không?\nB: Không đeo khẩu trang",
-              "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình đeo.",
-              "A: Bạn có phải đeo khẩu trang không?\nB: Mình phải có."
-            ],
-            "answer": "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo."
-          },
-          {
-            "question": "Which sentence means \"What do you have to bring to work?\"",
-            "options": [
-              "Đi làm bạn mặc gì?",
-              "Đi làm bạn phải mặc gì?",
-              "Đi làm bạn có mặc gì?",
-              "Đi làm bạn có phải mặc gì?"
-            ],
-            "answer": "Đi làm bạn phải mặc gì?"
-          },
-          {
-            "question": "Which sentence is the most natural?",
-            "options": [
-              "Ở Việt Nam, phải bạn đội nón bảo hiểm.",
-              "Ở Việt Nam, bạn đội phải nón bảo hiểm.",
-              "Ở Việt Nam, bạn phải đội nón bảo hiểm.",
-              "Ở Việt Nam, bạn nón bảo hiểm phải đội."
-            ],
-            "answer": "Ở Việt Nam, bạn phải đội nón bảo hiểm."
-          },
-          {
-            "question": "Which conversation is correct?",
-            "options": [
-              "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi.",
-              "A: Đi làm chị phải mặc áo gì?\nB: Chị mặc quần đùi.",
-              "A: Đi làm chị phải mặc áo gì?\nB: Chị đang mặc áo sơ mi.",
-              "A: Đi làm chị phải mặc áo gì?\nB: Chị không phải đi giày"
-            ],
-            "answer": "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi."
-          },
-          {
-            "question": "Choose the best conversation.",
-            "options": [
-              "A: Bạn phải mặc gì?\nB: Có, mình phải mặc áo.",
-              "A: Bạn phải đeo gì?\nB: Mình có.",
-              "A: Bạn có phải đeo kính không?\nB: Mình phải có.",
-              "A: Bạn có phải đeo kính không?\nB: Mình có."
-            ],
-            "answer": "A: Bạn có phải đeo kính không?\nB: Mình có."
+            "id": "review",
+            "label": "Review",
+            "quiz": [
+              {
+                "question": "What does phải mean?",
+                "options": [
+                  "can",
+                  "must",
+                  "want to",
+                  "like to"
+                ],
+                "answer": "must"
+              },
+              {
+                "question": "Which sentence means \"You must wear a helmet.\"",
+                "options": [
+                  "Bạn đội nón bảo hiểm.",
+                  "Bạn đang đội nón bảo hiểm.",
+                  "Bạn phải đội nón bảo hiểm.",
+                  "Bạn thường đội nón bảo hiểm."
+                ],
+                "answer": "Bạn phải đội nón bảo hiểm."
+              },
+              {
+                "question": "Which sentence means \"I don't have to go to work today.\"",
+                "options": [
+                  "Anh không đi làm hôm nay.",
+                  "Anh không phải đi làm hôm nay.",
+                  "Anh đang không đi làm.",
+                  "Anh thường không đi làm."
+                ],
+                "answer": "Anh không phải đi làm hôm nay."
+              },
+              {
+                "question": "Complete the sentence: Em ______ mặc áo khoác vì trời lạnh.",
+                "options": [
+                  "đang",
+                  "phải",
+                  "thường",
+                  "có"
+                ],
+                "answer": "phải"
+              },
+              {
+                "question": "Which sentence is correct?",
+                "options": [
+                  "Bạn phải không đội nón bảo hiểm.",
+                  "Bạn không phải đội nón bảo hiểm.",
+                  "Bạn đội không phải nón bảo hiểm.",
+                  "Không bạn phải đội nón bảo hiểm."
+                ],
+                "answer": "Bạn không phải đội nón bảo hiểm."
+              },
+              {
+                "question": "How do you ask \"What do I have to wear?\"",
+                "options": [
+                  "Chị mặc gì?",
+                  "Chị đang mặc gì?",
+                  "Chị phải mặc gì?",
+                  "Chị có mặc gì không?"
+                ],
+                "answer": "Chị phải mặc gì?"
+              },
+              {
+                "question": "Which answer best completes the conversation?\nA: Bạn phải mang gì?\nB: ______",
+                "options": [
+                  "Mình phải mang hộ chiếu.",
+                  "Mình mang hôm qua.",
+                  "Mình đang mang.",
+                  "Mình thích hộ chiếu."
+                ],
+                "answer": "Mình phải mang hộ chiếu."
+              },
+              {
+                "question": "Complete the question that means \"What do I have to wear?\": Chị _______ gì?",
+                "options": [
+                  "phải",
+                  "phải đeo",
+                  "đang đeo",
+                  "đeo"
+                ],
+                "answer": "phải đeo"
+              },
+              {
+                "question": "How do you ask \"Do you have to bring your phone?\"",
+                "options": [
+                  "Bạn phải mang điện thoại?",
+                  "Bạn có mang điện thoại không?",
+                  "Bạn có phải mang điện thoại không?",
+                  "Bạn có đang mang điện thoại không?"
+                ],
+                "answer": "Bạn có phải mang điện thoại không?"
+              },
+              {
+                "question": "Which is the best answer?\nA: Bạn có phải đi làm hôm nay không?",
+                "options": [
+                  "Có, mình phải đi làm.",
+                  "Có mình.",
+                  "Có, mình phải.",
+                  "Mình đi làm."
+                ],
+                "answer": "Có, mình phải đi làm."
+              },
+              {
+                "question": "Which conversation is correct?",
+                "options": [
+                  "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo.",
+                  "A: Bạn có phải đeo khẩu trang không?\nB: Không đeo khẩu trang",
+                  "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình đeo.",
+                  "A: Bạn có phải đeo khẩu trang không?\nB: Mình phải có."
+                ],
+                "answer": "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo."
+              },
+              {
+                "question": "Which sentence means \"What do you have to bring to work?\"",
+                "options": [
+                  "Đi làm bạn mặc gì?",
+                  "Đi làm bạn phải mặc gì?",
+                  "Đi làm bạn có mặc gì?",
+                  "Đi làm bạn có phải mặc gì?"
+                ],
+                "answer": "Đi làm bạn phải mặc gì?"
+              },
+              {
+                "question": "Which sentence is the most natural?",
+                "options": [
+                  "Ở Việt Nam, phải bạn đội nón bảo hiểm.",
+                  "Ở Việt Nam, bạn đội phải nón bảo hiểm.",
+                  "Ở Việt Nam, bạn phải đội nón bảo hiểm.",
+                  "Ở Việt Nam, bạn nón bảo hiểm phải đội."
+                ],
+                "answer": "Ở Việt Nam, bạn phải đội nón bảo hiểm."
+              },
+              {
+                "question": "Which conversation is correct?",
+                "options": [
+                  "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi.",
+                  "A: Đi làm chị phải mặc áo gì?\nB: Chị mặc quần đùi.",
+                  "A: Đi làm chị phải mặc áo gì?\nB: Chị đang mặc áo sơ mi.",
+                  "A: Đi làm chị phải mặc áo gì?\nB: Chị không phải đi giày"
+                ],
+                "answer": "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi."
+              },
+              {
+                "question": "Choose the best conversation.",
+                "options": [
+                  "A: Bạn phải mặc gì?\nB: Có, mình phải mặc áo.",
+                  "A: Bạn phải đeo gì?\nB: Mình có.",
+                  "A: Bạn có phải đeo kính không?\nB: Mình phải có.",
+                  "A: Bạn có phải đeo kính không?\nB: Mình có."
+                ],
+                "answer": "A: Bạn có phải đeo kính không?\nB: Mình có."
+              }
+            ]
           }
         ]
       }
