@@ -193,408 +193,416 @@
     ]
   },
   "grammar": {
-    "points": [
+    "sections": [
       {
         "id": "g1",
-        "title": "Making Polite Requests",
-        "pattern": "Cho + [Pronoun] + [Noun / Verb]",
-        "explanation": "Use cho to make a polite request. You can use this pattern to ask for something (noun) or ask someone to do something (verb). This is one of the most common expressions when ordering food, shopping, or asking for help.",
-        "examples": [
+        "titleVi": "Cho...",
+        "titleEn": "Making Polite Requests",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Cho em một trà đá.",
-            "en": "I'd like an iced tea, please."
-          },
-          {
-            "vi": "Cho em tính tiền.",
-            "en": "The bill, please."
-          },
-          {
-            "vi": "Cho em coi menu.",
-            "en": "May I see the menu, please?"
-          },
-          {
-            "vi": "Chị ơi, cho em thêm một cái muỗng.",
-            "en": "Excuse me, could I have another spoon, please?"
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "Cho can be translated as \"please\", \"I'd like...\", or \"Can I have...\", depending on the situation. Compare:",
-          "examples": [
-            {
-              "vi": "Cho em một cà phê.",
-              "en": "I'd like a coffee, please."
-            },
-            {
-              "vi": "Cho em coi menu.",
-              "en": "May I see the menu?"
-            },
-            {
-              "vi": "Cho em tính tiền.",
-              "en": "The bill, please."
-            }
-          ]
-        },
-        "quiz": [
-          {
-            "question": "Which sentence means \"I'd like an iced tea, please.\"",
-            "options": [
-              "Cho em một trà đá.",
-              "Một trà đá cho em.",
-              "Em cho một trà đá."
+            "id": "g1",
+            "label": "Cho... - Making Polite Requests",
+            "subHeadingVi": "Cho...",
+            "subHeadingEn": "Making Polite Requests",
+            "paragraphs": [
+              "Use cho to make a polite request. You can use this pattern to ask for something (noun) or ask someone to do something (verb). This is one of the most common expressions when ordering food, shopping, or asking for help."
             ],
-            "answer": "Cho em một trà đá."
-          },
-          {
-            "question": "Which sentence would you say when you want to pay?",
-            "options": [
-              "Cho em coi menu.",
-              "Cho em tính tiền.",
-              "Cho em một phở."
+            "chips": [
+              {
+                "pattern": "Cho + [Pronoun] + [Noun / Verb]"
+              }
             ],
-            "answer": "Cho em tính tiền."
-          },
-          {
-            "question": "Which sentence asks to see the menu?",
-            "options": [
-              "Cho em tính tiền.",
-              "Cho em coi menu.",
-              "Cho em thêm nước."
+            "examples": [
+              {
+                "vi": "Cho em một trà đá.",
+                "en": "I'd like an iced tea, please."
+              },
+              {
+                "vi": "Cho em tính tiền.",
+                "en": "The bill, please."
+              },
+              {
+                "vi": "Cho em coi menu.",
+                "en": "May I see the menu, please?"
+              },
+              {
+                "vi": "Chị ơi, cho em thêm một cái muỗng.",
+                "en": "Excuse me, could I have another spoon, please?"
+              }
             ],
-            "answer": "Cho em coi menu."
-          },
-          {
-            "question": "Which sentence is correct?",
-            "options": [
-              "Một trà đá cho em chị ơi.",
-              "Chị ơi cho em một trà đá.",
-              "Chị ơi một trà đá cho em."
-            ],
-            "answer": "Chị ơi cho em một trà đá."
+            "quiz": [
+              {
+                "question": "Which sentence means \"I'd like an iced tea, please.\"",
+                "options": [
+                  "Cho em một trà đá.",
+                  "Một trà đá cho em.",
+                  "Em cho một trà đá."
+                ],
+                "answer": "Cho em một trà đá."
+              },
+              {
+                "question": "Which sentence would you say when you want to pay?",
+                "options": [
+                  "Cho em coi menu.",
+                  "Cho em tính tiền.",
+                  "Cho em một phở."
+                ],
+                "answer": "Cho em tính tiền."
+              },
+              {
+                "question": "Which sentence asks to see the menu?",
+                "options": [
+                  "Cho em tính tiền.",
+                  "Cho em coi menu.",
+                  "Cho em thêm nước."
+                ],
+                "answer": "Cho em coi menu."
+              },
+              {
+                "question": "Which sentence is correct?",
+                "options": [
+                  "Một trà đá cho em chị ơi.",
+                  "Chị ơi cho em một trà đá.",
+                  "Chị ơi một trà đá cho em."
+                ],
+                "answer": "Chị ơi cho em một trà đá."
+              }
+            ]
           }
         ]
       },
       {
         "id": "g2",
-        "title": "Asking for More",
-        "pattern": "Thêm + [Number] + [Noun]",
-        "explanation": "Use thêm to ask for more of something. You can use it to order one more item or a larger quantity. This pattern is commonly used in restaurants and cafés.",
-        "examples": [
+        "titleVi": "Thêm",
+        "titleEn": "Asking for More",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Cho em thêm một phở.",
-            "en": "I'd like one more bowl of phở, please."
-          },
-          {
-            "vi": "Cho anh thêm hai cà phê sữa.",
-            "en": "Two more milk coffees, please."
-          },
-          {
-            "vi": "Cho em thêm một chai nước.",
-            "en": "One more bottle of water, please."
-          },
-          {
-            "vi": "Cho mình thêm ba cái ly.",
-            "en": "Three more glasses, please."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "Thêm means \"more\" or \"another.\" Compare:",
-          "examples": [
-            {
-              "vi": "Cho em một trà đá.",
-              "en": "I'd like one iced tea."
-            },
-            {
-              "vi": "Cho em thêm một trà đá.",
-              "en": "I'd like one more iced tea."
-            }
-          ],
-          "footer": "Use thêm only when you want an additional item, not your first order."
-        },
-        "quiz": [
-          {
-            "question": "What does thêm mean?",
-            "options": [
-              "less",
-              "more",
-              "no"
+            "id": "g2",
+            "label": "Thêm - Asking for More",
+            "subHeadingVi": "Thêm",
+            "subHeadingEn": "Asking for More",
+            "paragraphs": [
+              "Use thêm to ask for more of something. You can use it to order one more item or a larger quantity. This pattern is commonly used in restaurants and cafés."
             ],
-            "answer": "more"
-          },
-          {
-            "question": "Which sentence means \"One more bowl of phở, please.\"",
-            "options": [
-              "Cho em một phở.",
-              "Cho em thêm một phở.",
-              "Em cho thêm một phở."
+            "chips": [
+              {
+                "pattern": "Thêm + [Number] + [Noun]"
+              }
             ],
-            "answer": "Cho em thêm một phở."
-          },
-          {
-            "question": "Complete the sentence: Cho anh ______ hai cà phê sữa.",
-            "options": [
-              "thêm",
-              "một",
-              "cho"
+            "examples": [
+              {
+                "vi": "Cho em thêm một phở.",
+                "en": "I'd like one more bowl of phở, please."
+              },
+              {
+                "vi": "Cho anh thêm hai cà phê sữa.",
+                "en": "Two more milk coffees, please."
+              },
+              {
+                "vi": "Cho em thêm một chai nước.",
+                "en": "One more bottle of water, please."
+              },
+              {
+                "vi": "Cho mình thêm ba cái ly.",
+                "en": "Three more glasses, please."
+              }
             ],
-            "answer": "thêm"
-          },
-          {
-            "question": "Which sentence is correct?",
-            "options": [
-              "Cho mình thêm ba cái ly.",
-              "Cho thêm mình ba cái ly.",
-              "Mình thêm cho ba cái ly."
-            ],
-            "answer": "Cho mình thêm ba cái ly."
+            "quiz": [
+              {
+                "question": "What does thêm mean?",
+                "options": [
+                  "less",
+                  "more",
+                  "no"
+                ],
+                "answer": "more"
+              },
+              {
+                "question": "Which sentence means \"One more bowl of phở, please.\"",
+                "options": [
+                  "Cho em một phở.",
+                  "Cho em thêm một phở.",
+                  "Em cho thêm một phở."
+                ],
+                "answer": "Cho em thêm một phở."
+              },
+              {
+                "question": "Complete the sentence: Cho anh ______ hai cà phê sữa.",
+                "options": [
+                  "thêm",
+                  "một",
+                  "cho"
+                ],
+                "answer": "thêm"
+              },
+              {
+                "question": "Which sentence is correct?",
+                "options": [
+                  "Cho mình thêm ba cái ly.",
+                  "Cho thêm mình ba cái ly.",
+                  "Mình thêm cho ba cái ly."
+                ],
+                "answer": "Cho mình thêm ba cái ly."
+              }
+            ]
           }
         ]
       },
       {
         "id": "g3",
-        "title": "Customizing Your Food and Drinks",
-        "pattern": "Ít / Nhiều / Không + [Ingredient]",
-        "explanation": "Use ít, nhiều, or không to tell someone how much of an ingredient you want in your food or drink. This pattern is commonly used when ordering food and drinks.",
-        "notes": [
-          "ít = a few, a little",
-          "nhiều = lots of",
-          "không = no / without"
-        ],
-        "examples": [
+        "titleVi": "Ít / Nhiều / Không",
+        "titleEn": "Customizing Your Food and Drinks",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Cho em một cà phê đen không đường.",
-            "en": "I'd like a black coffee with no sugar."
-          },
-          {
-            "vi": "Cho chị thêm một bún bò không ớt, nhiều rau.",
-            "en": "One more bowl of bún bò, no chili, lots of vegetables, please."
-          },
-          {
-            "vi": "Cho em một cơm gà ít cơm.",
-            "en": "I'd like a chicken rice with little rice."
-          },
-          {
-            "vi": "Cho mình một trà sữa ít đá.",
-            "en": "I'd like a milk tea with little ice."
-          }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "You can combine more than one expression in the same order. For example:",
-          "examples": [
-            {
-              "vi": "Không đường, ít đá.",
-              "en": "No sugar, little ice."
-            },
-            {
-              "vi": "Ít ớt, nhiều rau.",
-              "en": "Little chili, lots of vegetables."
-            }
-          ],
-          "footer": "This is a natural and common way to customize your order in Vietnam."
-        },
-        "quiz": [
-          {
-            "question": "What does \"ít\" mean?",
-            "options": [
-              "a lot",
-              "little, few",
-              "no"
+            "id": "g3",
+            "label": "Ít / Nhiều / Không - Customizing Your Food and Drinks",
+            "subHeadingVi": "Ít / Nhiều / Không",
+            "subHeadingEn": "Customizing Your Food and Drinks",
+            "paragraphs": [
+              "Use ít, nhiều, or không to tell someone how much of an ingredient you want in your food or drink. This pattern is commonly used when ordering food and drinks."
             ],
-            "answer": "little, few"
-          },
-          {
-            "question": "Which sentence means \"No sugar.\"",
-            "options": [
-              "Nhiều đường.",
-              "Ít đường.",
-              "Không đường."
+            "chips": [
+              {
+                "pattern": "Ít / Nhiều / Không + [Ingredient]"
+              }
             ],
-            "answer": "Không đường."
-          },
-          {
-            "question": "Which sentence means \"Lots of vegetables.\"",
-            "options": [
-              "Không rau.",
-              "Ít rau.",
-              "Nhiều rau."
+            "notes": [
+              "ít = a few, a little",
+              "nhiều = lots of",
+              "không = no / without"
             ],
-            "answer": "Nhiều rau."
-          },
-          {
-            "question": "Which sentence means \"I'd like one coffee with lots of milk and little ice\"",
-            "options": [
-              "Cho em một cà phê không sữa, nhiều đá.",
-              "Cho em một cà phê ít sữa nhiều đá.",
-              "Cho em một cà phê nhiều sữa, ít đá."
+            "examples": [
+              {
+                "vi": "Cho em một cà phê đen không đường.",
+                "en": "I'd like a black coffee with no sugar."
+              },
+              {
+                "vi": "Cho chị thêm một bún bò không ớt, nhiều rau.",
+                "en": "One more bowl of bún bò, no chili, lots of vegetables, please."
+              },
+              {
+                "vi": "Cho em một cơm gà ít cơm.",
+                "en": "I'd like a chicken rice with little rice."
+              },
+              {
+                "vi": "Cho mình một trà sữa ít đá.",
+                "en": "I'd like a milk tea with little ice."
+              }
             ],
-            "answer": "Cho em một cà phê nhiều sữa, ít đá."
-          },
-          {
-            "question": "Which sentence means \"I'd like a bowl of phở with no chili and lots of vegetables\"",
-            "options": [
-              "Cho em một phở ít ớt, nhiều rau.",
-              "Cho em một phở không ớt, nhiều rau.",
-              "Cho em một phở không ớt, ít rau."
-            ],
-            "answer": "Cho em một phở không ớt, nhiều rau."
+            "quiz": [
+              {
+                "question": "What does \"ít\" mean?",
+                "options": [
+                  "a lot",
+                  "little, few",
+                  "no"
+                ],
+                "answer": "little, few"
+              },
+              {
+                "question": "Which sentence means \"No sugar.\"",
+                "options": [
+                  "Nhiều đường.",
+                  "Ít đường.",
+                  "Không đường."
+                ],
+                "answer": "Không đường."
+              },
+              {
+                "question": "Which sentence means \"Lots of vegetables.\"",
+                "options": [
+                  "Không rau.",
+                  "Ít rau.",
+                  "Nhiều rau."
+                ],
+                "answer": "Nhiều rau."
+              },
+              {
+                "question": "Which sentence means \"I'd like one coffee with lots of milk and little ice\"",
+                "options": [
+                  "Cho em một cà phê không sữa, nhiều đá.",
+                  "Cho em một cà phê ít sữa nhiều đá.",
+                  "Cho em một cà phê nhiều sữa, ít đá."
+                ],
+                "answer": "Cho em một cà phê nhiều sữa, ít đá."
+              },
+              {
+                "question": "Which sentence means \"I'd like a bowl of phở with no chili and lots of vegetables\"",
+                "options": [
+                  "Cho em một phở ít ớt, nhiều rau.",
+                  "Cho em một phở không ớt, nhiều rau.",
+                  "Cho em một phở không ớt, ít rau."
+                ],
+                "answer": "Cho em một phở không ớt, nhiều rau."
+              }
+            ]
           }
         ]
       },
       {
-        "id": "g4",
-        "title": "Quiz tổng",
-        "quiz": [
+        "id": "review",
+        "titleVi": "Ôn tập tổng hợp",
+        "titleEn": "Review",
+        "intro": [],
+        "subtopics": [
           {
-            "question": "Which sentence means \"I'd like a bowl of phở, please.\"",
-            "options": [
-              "Cho em một phở.",
-              "Một phở cho em.",
-              "Em cho một phở.",
-              "Một phở em cho"
-            ],
-            "answer": "Cho em một phở."
-          },
-          {
-            "question": "You have already finished your coffee and want another one. What should you say?",
-            "options": [
-              "Cho em một ít cà phê.",
-              "Cho em thêm một cà phê.",
-              "Cho em không thêm cà phê.",
-              "Cho em hai cà phê."
-            ],
-            "answer": "Cho em thêm một cà phê."
-          },
-          {
-            "question": "Which sentence asks to see the menu?",
-            "options": [
-              "Cho em tính tiền.",
-              "Cho em coi menu.",
-              "Cho em thêm nước.",
-              "Cho em một phở."
-            ],
-            "answer": "Cho em coi menu."
-          },
-          {
-            "question": "Choose the correct order.",
-            "options": [
-              "Chị ơi cho em thêm một trà sữa.",
-              "Chị ơi thêm cho em một trà sữa.",
-              "Một trà sữa cho em thêm chị ơi.",
-              "Thêm một trà sữa cho em chị ơi."
-            ],
-            "answer": "Chị ơi cho em thêm một trà sữa."
-          },
-          {
-            "question": "Which sentence means \"I'd like a black coffee with no sugar.\"",
-            "options": [
-              "Cho em một cà phê đen nhiều đường.",
-              "Cho em một cà phê đen không đường.",
-              "Cho em một cà phê đen ít đường.",
-              "Cho em không cà phê đường."
-            ],
-            "answer": "Cho em một cà phê đen không đường."
-          },
-          {
-            "question": "Which sentence means \"I'd like two milk tea with little ice.\"",
-            "options": [
-              "Cho em một trà sữa nhiều đá.",
-              "Cho em hai trà sữa không đá.",
-              "Cho em hai trà sữa ít đá.",
-              "Cho em thêm trà sữa ít đá."
-            ],
-            "answer": "Cho em hai trà sữa ít đá."
-          },
-          {
-            "question": "Which sentence means \"One more bottle of water, please.\"",
-            "options": [
-              "Cho em một thêm chai nước.",
-              "Cho em thêm một chai nước.",
-              "Cho em một chai nước thêm.",
-              "Một chai nước thêm cho em."
-            ],
-            "answer": "Cho em thêm một chai nước."
-          },
-          {
-            "question": "Complete the sentence: Cho em ______ hai cà phê sữa.",
-            "options": [
-              "thêm",
-              "nhiều",
-              "không",
-              "ít"
-            ],
-            "answer": "thêm"
-          },
-          {
-            "question": "Which sentence means \"I'd like three bowls of phở with no chili and lots of vegetables.\"",
-            "options": [
-              "Cho em ba phở không ớt, nhiều rau.",
-              "Cho em một phở ít ớt, nhiều rau.",
-              "Cho em thêm hai phở không rau, nhiều ớt.",
-              "Cho em hai phở nhiều ớt, không rau."
-            ],
-            "answer": "Cho em ba phở không ớt, nhiều rau."
-          },
-          {
-            "question": "You want to pay. What do you say?",
-            "options": [
-              "Cho em coi menu.",
-              "Cho em thêm nước.",
-              "Cho em tính tiền.",
-              "Cho em một phở."
-            ],
-            "answer": "Cho em tính tiền."
-          },
-          {
-            "question": "Which sentence is correct?",
-            "options": [
-              "Cho em một cơm gà ít cơm.",
-              "Cho em ít một cơm gà.",
-              "Ít cơm cho em một gà.",
-              "Cho em cơm gà một ít."
-            ],
-            "answer": "Cho em một cơm gà ít cơm."
-          },
-          {
-            "question": "Choose the best response.\nA: Chị ơi!\nB: Dạ, chị muốn ăn gì?\nA: ______",
-            "options": [
-              "Cho em tính tiền.",
-              "Cho em nhiều bò.",
-              "Chị ơi cho em coi menu.",
-              "Cho em một phở ít rau."
-            ],
-            "answer": "Cho em một phở ít rau."
-          },
-          {
-            "question": "Which sentence is the most natural?",
-            "options": [
-              "Cho em một trà sữa thêm rau, ít đường.",
-              "Cho em thêm một trà sữa không đường, ít đá.",
-              "Cho em ít đá thêm trà sữa.",
-              "Cho em một phở nhiều đá, ít đường."
-            ],
-            "answer": "Cho em một trà sữa thêm rau, ít đường."
-          },
-          {
-            "question": "Which sentence means \"I'd like two more milk coffees.\"",
-            "options": [
-              "Cho anh hai cà phê sữa.",
-              "Cho anh thêm hai cà phê sữa.",
-              "Hai cà phê sữa cho anh thêm.",
-              "Cho thêm anh cà phê sữa hai."
-            ],
-            "answer": "Cho anh thêm hai cà phê sữa."
-          },
-          {
-            "question": "Which sentence means \"I'd like a bowl of phở with little beef.\"",
-            "options": [
-              "Cho em một phở nhiều rau.",
-              "Cho em một phở nhiều ớt.",
-              "Cho em một trà ít bò.",
-              "Cho em một phở ít gà."
-            ],
-            "answer": "Cho em một trà ít bò."
+            "id": "review",
+            "label": "Review",
+            "quiz": [
+              {
+                "question": "Which sentence means \"I'd like a bowl of phở, please.\"",
+                "options": [
+                  "Cho em một phở.",
+                  "Một phở cho em.",
+                  "Em cho một phở.",
+                  "Một phở em cho"
+                ],
+                "answer": "Cho em một phở."
+              },
+              {
+                "question": "You have already finished your coffee and want another one. What should you say?",
+                "options": [
+                  "Cho em một ít cà phê.",
+                  "Cho em thêm một cà phê.",
+                  "Cho em không thêm cà phê.",
+                  "Cho em hai cà phê."
+                ],
+                "answer": "Cho em thêm một cà phê."
+              },
+              {
+                "question": "Which sentence asks to see the menu?",
+                "options": [
+                  "Cho em tính tiền.",
+                  "Cho em coi menu.",
+                  "Cho em thêm nước.",
+                  "Cho em một phở."
+                ],
+                "answer": "Cho em coi menu."
+              },
+              {
+                "question": "Choose the correct order.",
+                "options": [
+                  "Chị ơi cho em thêm một trà sữa.",
+                  "Chị ơi thêm cho em một trà sữa.",
+                  "Một trà sữa cho em thêm chị ơi.",
+                  "Thêm một trà sữa cho em chị ơi."
+                ],
+                "answer": "Chị ơi cho em thêm một trà sữa."
+              },
+              {
+                "question": "Which sentence means \"I'd like a black coffee with no sugar.\"",
+                "options": [
+                  "Cho em một cà phê đen nhiều đường.",
+                  "Cho em một cà phê đen không đường.",
+                  "Cho em một cà phê đen ít đường.",
+                  "Cho em không cà phê đường."
+                ],
+                "answer": "Cho em một cà phê đen không đường."
+              },
+              {
+                "question": "Which sentence means \"I'd like two milk tea with little ice.\"",
+                "options": [
+                  "Cho em một trà sữa nhiều đá.",
+                  "Cho em hai trà sữa không đá.",
+                  "Cho em hai trà sữa ít đá.",
+                  "Cho em thêm trà sữa ít đá."
+                ],
+                "answer": "Cho em hai trà sữa ít đá."
+              },
+              {
+                "question": "Which sentence means \"One more bottle of water, please.\"",
+                "options": [
+                  "Cho em một thêm chai nước.",
+                  "Cho em thêm một chai nước.",
+                  "Cho em một chai nước thêm.",
+                  "Một chai nước thêm cho em."
+                ],
+                "answer": "Cho em thêm một chai nước."
+              },
+              {
+                "question": "Complete the sentence: Cho em ______ hai cà phê sữa.",
+                "options": [
+                  "thêm",
+                  "nhiều",
+                  "không",
+                  "ít"
+                ],
+                "answer": "thêm"
+              },
+              {
+                "question": "Which sentence means \"I'd like three bowls of phở with no chili and lots of vegetables.\"",
+                "options": [
+                  "Cho em ba phở không ớt, nhiều rau.",
+                  "Cho em một phở ít ớt, nhiều rau.",
+                  "Cho em thêm hai phở không rau, nhiều ớt.",
+                  "Cho em hai phở nhiều ớt, không rau."
+                ],
+                "answer": "Cho em ba phở không ớt, nhiều rau."
+              },
+              {
+                "question": "You want to pay. What do you say?",
+                "options": [
+                  "Cho em coi menu.",
+                  "Cho em thêm nước.",
+                  "Cho em tính tiền.",
+                  "Cho em một phở."
+                ],
+                "answer": "Cho em tính tiền."
+              },
+              {
+                "question": "Which sentence is correct?",
+                "options": [
+                  "Cho em một cơm gà ít cơm.",
+                  "Cho em ít một cơm gà.",
+                  "Ít cơm cho em một gà.",
+                  "Cho em cơm gà một ít."
+                ],
+                "answer": "Cho em một cơm gà ít cơm."
+              },
+              {
+                "question": "Choose the best response.\nA: Chị ơi!\nB: Dạ, chị muốn ăn gì?\nA: ______",
+                "options": [
+                  "Cho em tính tiền.",
+                  "Cho em nhiều bò.",
+                  "Chị ơi cho em coi menu.",
+                  "Cho em một phở ít rau."
+                ],
+                "answer": "Cho em một phở ít rau."
+              },
+              {
+                "question": "Which sentence is the most natural?",
+                "options": [
+                  "Cho em một trà sữa thêm rau, ít đường.",
+                  "Cho em thêm một trà sữa không đường, ít đá.",
+                  "Cho em ít đá thêm trà sữa.",
+                  "Cho em một phở nhiều đá, ít đường."
+                ],
+                "answer": "Cho em một trà sữa thêm rau, ít đường."
+              },
+              {
+                "question": "Which sentence means \"I'd like two more milk coffees.\"",
+                "options": [
+                  "Cho anh hai cà phê sữa.",
+                  "Cho anh thêm hai cà phê sữa.",
+                  "Hai cà phê sữa cho anh thêm.",
+                  "Cho thêm anh cà phê sữa hai."
+                ],
+                "answer": "Cho anh thêm hai cà phê sữa."
+              },
+              {
+                "question": "Which sentence means \"I'd like a bowl of phở with little beef.\"",
+                "options": [
+                  "Cho em một phở nhiều rau.",
+                  "Cho em một phở nhiều ớt.",
+                  "Cho em một trà ít bò.",
+                  "Cho em một phở ít gà."
+                ],
+                "answer": "Cho em một trà ít bò."
+              }
+            ]
           }
         ]
       }
