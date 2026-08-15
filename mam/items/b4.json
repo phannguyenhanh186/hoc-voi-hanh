@@ -310,7 +310,7 @@
         "subtopics": [
           {
             "id": "g1",
-            "label": "Giờ",
+            "label": "Giờ/Phút",
             "subHeadingVi": "Giờ/Phút",
             "subHeadingEn": "Talking About Time",
             "paragraphs": [
@@ -435,7 +435,7 @@
         "subtopics": [
           {
             "id": "g2",
-            "label": "Mấy giờ rồi?",
+            "label": "What time is it? - Mấy giờ rồi?",
             "subHeadingVi": "Mấy giờ rồi?",
             "subHeadingEn": "Asking and Telling the Time",
             "paragraphs": [
@@ -507,7 +507,7 @@
       },
       {
         "id": "g3",
-        "titleVi": "Lúc mấy giờ?",
+        "titleVi": "At what time - Lúc mấy giờ?",
         "titleEn": "",
         "intro": [],
         "subtopics": [
