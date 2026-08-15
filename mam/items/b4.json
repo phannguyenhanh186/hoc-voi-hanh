@@ -304,14 +304,14 @@
     "sections": [
       {
         "id": "g1",
-        "titleVi": "Giờ",
+        "titleVi": "Giờ/Phút",
         "titleEn": "",
         "intro": [],
         "subtopics": [
           {
             "id": "g1",
             "label": "Giờ",
-            "subHeadingVi": "Giờ",
+            "subHeadingVi": "Hour/Minute - Giờ/Phút",
             "subHeadingEn": "Talking About Time",
             "paragraphs": [
               "Use this pattern to tell the time in Vietnamese."
