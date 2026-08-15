@@ -479,7 +479,7 @@
         "subtopics": [
           {
             "id": "g1",
-            "label": "Ngày & Tháng - Talking About Dates",
+            "label": "Ngày & Tháng - Day & Month",
             "subHeadingVi": "Ngày & Tháng",
             "subHeadingEn": "Talking About Dates",
             "paragraphs": [
@@ -571,9 +571,9 @@
         "subtopics": [
           {
             "id": "g2",
-            "label": "Thứ mấy? - Asking About the Day of the Week",
+            "label": "Thứ mấy?",
             "subHeadingVi": "Thứ mấy?",
-            "subHeadingEn": "Asking About the Day of the Week",
+            "subHeadingEn": "Which Day of the Week?",
             "paragraphs": [
               "Use this pattern to ask what day of the week it is. You can ask about today, yesterday, or tomorrow. To answer, use: ... là + day of the week."
             ],
@@ -659,9 +659,9 @@
         "subtopics": [
           {
             "id": "g3",
-            "label": "Ngày mấy? - Asking About Dates",
+            "label": "Ngày mấy?",
             "subHeadingVi": "Ngày mấy?",
-            "subHeadingEn": "Asking About Dates",
+            "subHeadingEn": "Which Date?",
             "paragraphs": [
               "Use this pattern to ask for a specific date. You can ask about the day of the month, the month, or the full date (day, month, and year). To answer, simply say: ... là ngày... You can include the month and year if needed."
             ],
