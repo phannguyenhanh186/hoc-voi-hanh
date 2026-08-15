@@ -844,6 +844,16 @@
 
     function buildSimpleTheory(sub, container) {
       (sub.paragraphs || []).forEach(function (p) { container.appendChild(el('p', 'gram2-intro', p)); });
+      if (sub.notes && sub.notes.length) {
+        const ul = document.createElement('ul');
+        ul.className = 'grammar-notes';
+        sub.notes.forEach(function (n) {
+          const li = document.createElement('li');
+          li.textContent = n;
+          ul.appendChild(li);
+        });
+        container.appendChild(ul);
+      }
       if (sub.table) {
         if (sub.table.caption) container.appendChild(el('div', 'gram2-table-caption', sub.table.caption.toUpperCase()));
         const table = document.createElement('table');
@@ -875,6 +885,30 @@
         container.appendChild(el('div', 'gram2-examples-label', 'Examples'));
         container.appendChild(renderExampleLines(sub.examples));
       }
+      if (sub.tip) {
+        const tipBox = el('div', 'grammar-callout');
+        tipBox.appendChild(el('p', '', sub.tip.label ? (sub.tip.label + (sub.tip.text ? ': ' + sub.tip.text : '')) : ('💡 ' + sub.tip)));
+        if (sub.tip.correct) tipBox.appendChild(el('p', 'tip-correct', '✅ ' + sub.tip.correct));
+        if (sub.tip.incorrect) tipBox.appendChild(el('p', 'tip-incorrect', '❌ ' + sub.tip.incorrect));
+        container.appendChild(tipBox);
+      }
+      if (sub.tipBlocks && sub.tipBlocks.length) {
+        sub.tipBlocks.forEach(function (tb) {
+          if (tb.tip) container.appendChild(el('p', 'grammar-callout', '💡 ' + tb.tip));
+          if (tb.examples && tb.examples.length) {
+            container.appendChild(el('div', 'gram2-examples-label', 'Examples'));
+            container.appendChild(renderExampleLines(tb.examples));
+          }
+        });
+      }
+      if (sub.answerNote) {
+        container.appendChild(el('p', 'gram2-intro', sub.answerNote));
+        if (sub.answerExamples && sub.answerExamples.length) {
+          container.appendChild(el('div', 'gram2-examples-label', 'Examples'));
+          container.appendChild(renderExampleLines(sub.answerExamples));
+        }
+      }
+      if (sub.cultureNote) container.appendChild(el('p', 'grammar-callout', '💡 Culture Note: ' + sub.cultureNote));
     }
 
     function renderGrammarTabSidebar(item, sections) {
@@ -907,7 +941,7 @@
 
       function renderContent(section, sub, showSubHeading) {
         content.innerHTML = '';
-        content.appendChild(el('h2', 'gram2-content-title', section.titleVi.toUpperCase() + ' - ' + section.titleEn.toUpperCase()));
+        content.appendChild(el('h2', 'gram2-content-title', section.titleVi.toUpperCase() + (section.titleEn ? ' - ' + section.titleEn.toUpperCase() : '')));
 
         const toggleRow = el('div', 'gram2-toggle-row');
         const theoryBtn = el('button', 'gram2-toggle-btn active', 'Theory'); theoryBtn.type = 'button';
@@ -960,7 +994,7 @@
         const header = el('button', 'gram2-section-header'); header.type = 'button';
         const titles = el('div', 'gram2-section-titles');
         titles.appendChild(el('div', 'gram2-section-title-vi', (si + 1) + '. ' + section.titleVi.toUpperCase()));
-        titles.appendChild(el('div', 'gram2-section-title-en', section.titleEn));
+        if (section.titleEn) titles.appendChild(el('div', 'gram2-section-title-en', section.titleEn));
         header.appendChild(titles);
         const chevron = el('span', 'gram2-chevron', '▾');
         header.appendChild(chevron);
