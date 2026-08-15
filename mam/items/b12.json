@@ -6,57 +6,65 @@
     "items": []
   },
   "grammar": {
-    "points": [
+    "sections": [
       {
         "id": "g1",
-        "title": "Asking for Confirmation with đúng không?",
-        "pattern": "[Statement] + đúng không?",
-        "explanation": "Use đúng không? at the end of a statement when you want to check or confirm information. It is similar to \"right?\", \"is that correct?\", or \"...?\" in English, depending on the context. The sentence keeps the same word order as a normal statement. Simply add đúng không? at the end.",
-        "examples": [
+        "titleVi": "Đúng không?",
+        "titleEn": "Asking for Confirmation with đúng không?",
+        "intro": [],
+        "subtopics": [
           {
-            "vi": "Bạn là người Việt đúng không?",
-            "en": "You're Vietnamese, right?"
-          },
-          {
-            "vi": "Chị là giáo viên đúng không?",
-            "en": "You're a teacher, right?"
-          },
-          {
-            "vi": "Anh 25 tuổi đúng không?",
-            "en": "You're 25 years old, right?"
-          },
-          {
-            "vi": "Hôm nay là thứ Ba đúng không?",
-            "en": "Today is Tuesday, right?"
-          },
-          {
-            "vi": "Cái này tám mươi ngàn đúng không?",
-            "en": "This is 80,000 dong, right?"
+            "id": "g1",
+            "label": "Đúng không? - Asking for Confirmation with đúng không?",
+            "subHeadingVi": "Đúng không?",
+            "subHeadingEn": "Asking for Confirmation with đúng không?",
+            "paragraphs": [
+              "Use đúng không? at the end of a statement when you want to check or confirm information. It is similar to \"right?\", \"is that correct?\", or \"...?\" in English, depending on the context. The sentence keeps the same word order as a normal statement. Simply add đúng không? at the end."
+            ],
+            "chips": [
+              {
+                "pattern": "[Statement] + đúng không?"
+              }
+            ],
+            "examples": [
+              {
+                "vi": "Bạn là người Việt đúng không?",
+                "en": "You're Vietnamese, right?"
+              },
+              {
+                "vi": "Chị là giáo viên đúng không?",
+                "en": "You're a teacher, right?"
+              },
+              {
+                "vi": "Anh 25 tuổi đúng không?",
+                "en": "You're 25 years old, right?"
+              },
+              {
+                "vi": "Hôm nay là thứ Ba đúng không?",
+                "en": "Today is Tuesday, right?"
+              },
+              {
+                "vi": "Cái này tám mươi ngàn đúng không?",
+                "en": "This is 80,000 dong, right?"
+              }
+            ]
           }
-        ],
-        "extraTip": {
-          "label": "💡 Language Tip",
-          "text": "Đúng không? always comes at the end of the sentence. Compare:",
-          "examples": [
-            {
-              "vi": "Bạn là giáo viên.",
-              "en": "You are a teacher."
-            },
-            {
-              "vi": "Bạn là giáo viên đúng không?",
-              "en": "You are a teacher, right?"
-            }
-          ],
-          "footer": "You do not need to change the sentence structure when adding đúng không?"
-        }
+        ]
       },
       {
         "id": "g2",
-        "title": "Answering with Đúng rồi or Không",
-        "subsections": [
+        "titleVi": "Đúng rồi / Không",
+        "titleEn": "Answering with Đúng rồi or Không",
+        "intro": [],
+        "subtopics": [
           {
-            "subtitle": "1. Đúng rồi — Yes, that's right.",
-            "explanation": "Use đúng rồi when the information is correct.",
+            "id": "g2-0",
+            "label": "Đúng rồi",
+            "subHeadingVi": "Đúng rồi",
+            "subHeadingEn": "Yes, that's right",
+            "paragraphs": [
+              "Use đúng rồi when the information is correct."
+            ],
             "examples": [
               {
                 "vi": "A: Bạn là người Việt đúng không?\nB: Đúng rồi.",
@@ -69,8 +77,13 @@
             ]
           },
           {
-            "subtitle": "2. Không — No.",
-            "explanation": "Use không when the information is incorrect.",
+            "id": "g2-1",
+            "label": "Không",
+            "subHeadingVi": "Không",
+            "subHeadingEn": "No",
+            "paragraphs": [
+              "Use không when the information is incorrect."
+            ],
             "examples": [
               {
                 "vi": "A: Bạn là người Việt đúng không?\nB: Không.",
@@ -85,181 +98,159 @@
               }
             ]
           }
-        ],
-        "extraTips": [
-          {
-            "label": "💡 Language Tip",
-            "text": "For beginners, remember this simple pattern: Question: [Statement] + đúng không? → Yes: Đúng rồi. → No: Không. For example:",
-            "examples": [
-              {
-                "vi": "A: Anh đang uống cà phê đúng không?\nB: Đúng rồi.",
-                "en": "A: You're drinking coffee, right?\nB: That's right."
-              },
-              {
-                "vi": "A: Chị đang uống cà phê đúng không?\nB: Không. Chị đang uống trà.",
-                "en": "A: You're drinking coffee, right?\nB: No. I'm drinking tea."
-              }
-            ]
-          },
-          {
-            "label": "💡 Compare with có...không?",
-            "text": "You can also ask Yes/No questions with có...không?, but the two patterns have a slightly different function.",
-            "examples": [
-              {
-                "vi": "Đúng không? (checking/confirming information): Trời đang mưa đúng không?",
-                "en": "It's raining, right?"
-              },
-              {
-                "vi": "Có...không? (asking whether something is true): Trời có đang mưa không?",
-                "en": "Is it raining?"
-              }
-            ]
-          }
         ]
       },
       {
-        "id": "g3",
-        "title": "Quiz tổng",
-        "quiz": [
+        "id": "review",
+        "titleVi": "Ôn tập tổng hợp",
+        "titleEn": "Review",
+        "intro": [],
+        "subtopics": [
           {
-            "question": "Which sentence means \"You are Vietnamese, right?\"",
-            "options": [
-              "Bạn có là người Việt không?",
-              "Bạn là người Việt không?",
-              "Bạn là người Việt đúng không?",
-              "Bạn là người Việt không đúng?"
-            ],
-            "answer": "Bạn là người Việt đúng không?"
-          },
-          {
-            "question": "Which answer is the best response?\nA: Anh 30 tuổi đúng không?\nB: ______",
-            "options": [
-              "Anh có.",
-              "Anh không.",
-              "Đúng rồi.",
-              "Rồi."
-            ],
-            "answer": "Đúng rồi."
-          },
-          {
-            "question": "Which sentence means \"Do you like coffee?\"",
-            "options": [
-              "Bạn có thích cà phê không?",
-              "Bạn thích cà phê có không?",
-              "Bạn thích cà phê đúng không?",
-              "Bạn có cà phê thích không?"
-            ],
-            "answer": "Bạn có thích cà phê không?"
-          },
-          {
-            "question": "Which question means \"Is it sunny?\"",
-            "options": [
-              "Trời nắng không đúng?",
-              "Trời nắng đúng không?",
-              "Trời có nắng không?",
-              "Trời có nắng?"
-            ],
-            "answer": "Trời có nắng không?"
-          },
-          {
-            "question": "Choose the best answer.\nA: Bạn có thích phở không?\nB: ______",
-            "options": [
-              "Đúng rồi.",
-              "Mình có.",
-              "Đúng không.",
-              "Có thích phở."
-            ],
-            "answer": "Mình có."
-          },
-          {
-            "question": "Which question is asking the speaker to confirm information?",
-            "options": [
-              "Bạn có uống cà phê không?",
-              "Bạn uống cà phê không?",
-              "Bạn uống cà phê không đúng?",
-              "Bạn uống cà phê đúng không?"
-            ],
-            "answer": "Bạn uống cà phê đúng không?"
-          },
-          {
-            "question": "Which sentence means \"Today is Sunday, right?\"",
-            "options": [
-              "Hôm nay Chủ Nhật không?",
-              "Hôm nay có Chủ Nhật không?",
-              "Hôm nay là Chủ Nhật có không?",
-              "Hôm nay là Chủ Nhật đúng không?"
-            ],
-            "answer": "Hôm nay là Chủ Nhật đúng không?"
-          },
-          {
-            "question": "Choose the best response.\nA: Cái này tám mươi ngàn đúng không?\nB: ______",
-            "options": [
-              "Có.",
-              "Mình có.",
-              "Mình không.",
-              "Đúng rồi."
-            ],
-            "answer": "Đúng rồi."
-          },
-          {
-            "question": "Which sentence means \"Do you usually drink coffee?\"",
-            "options": [
-              "Bạn thường uống cà phê đúng không?",
-              "Bạn có thường uống cà phê không đúng?",
-              "Bạn có thường uống cà phê không?",
-              "Bạn thường có uống cà phê không?"
-            ],
-            "answer": "Bạn có thường uống cà phê không?"
-          },
-          {
-            "question": "Which sentence means \"You're studying, right?\"",
-            "options": [
-              "Bạn có đang học không đúng?",
-              "Bạn đang có học đúng không?",
-              "Bạn đang học đúng không?",
-              "Bạn đang có học không?"
-            ],
-            "answer": "Bạn đang học đúng không?"
-          },
-          {
-            "question": "Choose the best response.\nA: Chị đang uống cà phê đen đúng không?\nB: Không. ______",
-            "options": [
-              "Chị đang uống cà phê.",
-              "Chị đang uống cà phê sữa.",
-              "Đúng rồi.",
-              "Chị thường uống nước."
-            ],
-            "answer": "Chị đang uống cà phê sữa."
-          },
-          {
-            "question": "Which question asks \"Do you have to wear a helmet?\"",
-            "options": [
-              "Bạn phải đội nón bảo hiểm đúng không?",
-              "Bạn có phải đội nón bảo hiểm không?",
-              "Bạn phải có đội nón bảo hiểm không?",
-              "Bạn đội nón bảo hiểm phải không?"
-            ],
-            "answer": "Bạn có phải đội nón bảo hiểm không?"
-          },
-          {
-            "question": "Choose the correct conversation.",
-            "options": [
-              "A: Bạn là giáo viên đúng không?\nB: Mình có.",
-              "A: Bạn có phải là giáo viên không?\nB: Đúng không.",
-              "A: Bạn là giáo viên đúng không?\nB: Đúng rồi.",
-              "A: Bạn là giáo viên đúng không?\nB: Mình đúng."
-            ],
-            "answer": "A: Bạn là giáo viên đúng không?\nB: Đúng rồi."
-          },
-          {
-            "question": "Which pair correctly matches the question and answer?",
-            "options": [
-              "Bạn thích cà phê đúng không? → Có.",
-              "Bạn có thích cà phê không? → Đúng rồi.",
-              "Bạn thích cà phê đúng không? → Đúng rồi.",
-              "Bạn có thích cà phê không? → Không đúng."
-            ],
-            "answer": "Bạn thích cà phê đúng không? → Đúng rồi."
+            "id": "review",
+            "label": "Review",
+            "quiz": [
+              {
+                "question": "Which sentence means \"You are Vietnamese, right?\"",
+                "options": [
+                  "Bạn có là người Việt không?",
+                  "Bạn là người Việt không?",
+                  "Bạn là người Việt đúng không?",
+                  "Bạn là người Việt không đúng?"
+                ],
+                "answer": "Bạn là người Việt đúng không?"
+              },
+              {
+                "question": "Which answer is the best response?\nA: Anh 30 tuổi đúng không?\nB: ______",
+                "options": [
+                  "Anh có.",
+                  "Anh không.",
+                  "Đúng rồi.",
+                  "Rồi."
+                ],
+                "answer": "Đúng rồi."
+              },
+              {
+                "question": "Which sentence means \"Do you like coffee?\"",
+                "options": [
+                  "Bạn có thích cà phê không?",
+                  "Bạn thích cà phê có không?",
+                  "Bạn thích cà phê đúng không?",
+                  "Bạn có cà phê thích không?"
+                ],
+                "answer": "Bạn có thích cà phê không?"
+              },
+              {
+                "question": "Which question means \"Is it sunny?\"",
+                "options": [
+                  "Trời nắng không đúng?",
+                  "Trời nắng đúng không?",
+                  "Trời có nắng không?",
+                  "Trời có nắng?"
+                ],
+                "answer": "Trời có nắng không?"
+              },
+              {
+                "question": "Choose the best answer.\nA: Bạn có thích phở không?\nB: ______",
+                "options": [
+                  "Đúng rồi.",
+                  "Mình có.",
+                  "Đúng không.",
+                  "Có thích phở."
+                ],
+                "answer": "Mình có."
+              },
+              {
+                "question": "Which question is asking the speaker to confirm information?",
+                "options": [
+                  "Bạn có uống cà phê không?",
+                  "Bạn uống cà phê không?",
+                  "Bạn uống cà phê không đúng?",
+                  "Bạn uống cà phê đúng không?"
+                ],
+                "answer": "Bạn uống cà phê đúng không?"
+              },
+              {
+                "question": "Which sentence means \"Today is Sunday, right?\"",
+                "options": [
+                  "Hôm nay Chủ Nhật không?",
+                  "Hôm nay có Chủ Nhật không?",
+                  "Hôm nay là Chủ Nhật có không?",
+                  "Hôm nay là Chủ Nhật đúng không?"
+                ],
+                "answer": "Hôm nay là Chủ Nhật đúng không?"
+              },
+              {
+                "question": "Choose the best response.\nA: Cái này tám mươi ngàn đúng không?\nB: ______",
+                "options": [
+                  "Có.",
+                  "Mình có.",
+                  "Mình không.",
+                  "Đúng rồi."
+                ],
+                "answer": "Đúng rồi."
+              },
+              {
+                "question": "Which sentence means \"Do you usually drink coffee?\"",
+                "options": [
+                  "Bạn thường uống cà phê đúng không?",
+                  "Bạn có thường uống cà phê không đúng?",
+                  "Bạn có thường uống cà phê không?",
+                  "Bạn thường có uống cà phê không?"
+                ],
+                "answer": "Bạn có thường uống cà phê không?"
+              },
+              {
+                "question": "Which sentence means \"You're studying, right?\"",
+                "options": [
+                  "Bạn có đang học không đúng?",
+                  "Bạn đang có học đúng không?",
+                  "Bạn đang học đúng không?",
+                  "Bạn đang có học không?"
+                ],
+                "answer": "Bạn đang học đúng không?"
+              },
+              {
+                "question": "Choose the best response.\nA: Chị đang uống cà phê đen đúng không?\nB: Không. ______",
+                "options": [
+                  "Chị đang uống cà phê.",
+                  "Chị đang uống cà phê sữa.",
+                  "Đúng rồi.",
+                  "Chị thường uống nước."
+                ],
+                "answer": "Chị đang uống cà phê sữa."
+              },
+              {
+                "question": "Which question asks \"Do you have to wear a helmet?\"",
+                "options": [
+                  "Bạn phải đội nón bảo hiểm đúng không?",
+                  "Bạn có phải đội nón bảo hiểm không?",
+                  "Bạn phải có đội nón bảo hiểm không?",
+                  "Bạn đội nón bảo hiểm phải không?"
+                ],
+                "answer": "Bạn có phải đội nón bảo hiểm không?"
+              },
+              {
+                "question": "Choose the correct conversation.",
+                "options": [
+                  "A: Bạn là giáo viên đúng không?\nB: Mình có.",
+                  "A: Bạn có phải là giáo viên không?\nB: Đúng không.",
+                  "A: Bạn là giáo viên đúng không?\nB: Đúng rồi.",
+                  "A: Bạn là giáo viên đúng không?\nB: Mình đúng."
+                ],
+                "answer": "A: Bạn là giáo viên đúng không?\nB: Đúng rồi."
+              },
+              {
+                "question": "Which pair correctly matches the question and answer?",
+                "options": [
+                  "Bạn thích cà phê đúng không? → Có.",
+                  "Bạn có thích cà phê không? → Đúng rồi.",
+                  "Bạn thích cà phê đúng không? → Đúng rồi.",
+                  "Bạn có thích cà phê không? → Không đúng."
+                ],
+                "answer": "Bạn thích cà phê đúng không? → Đúng rồi."
+              }
+            ]
           }
         ]
       }
