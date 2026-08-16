@@ -107,14 +107,14 @@
       {
         "id": "g1",
         "titleVi": "Đang",
-        "titleEn": "Talking About Actions Happening Now",
+        "titleEn": "Something is Happening Now",
         "intro": [],
         "subtopics": [
           {
             "id": "g1",
             "label": "Đang",
             "subHeadingVi": "Đang",
-            "subHeadingEn": "Something Happening Now",
+            "subHeadingEn": "Something is Happening Now",
             "paragraphs": [
               "Use đang to talk about an action that is happening now, at the moment of speaking. It is similar to the present continuous in English (be + verb-ing)."
             ],
@@ -192,7 +192,7 @@
             "id": "g2",
             "label": "Đang làm gì?",
             "subHeadingVi": "Đang làm gì?",
-            "subHeadingEn": "Asking What Someone Is Doing",
+            "subHeadingEn": "What Someone Is Doing",
             "paragraphs": [
               "Use this pattern to ask what someone is doing right now. To answer, use: [Subject] + đang + [Verb]."
             ],
