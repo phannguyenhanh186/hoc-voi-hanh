@@ -114,7 +114,7 @@
             "id": "g1",
             "label": "Đang",
             "subHeadingVi": "Đang",
-            "subHeadingEn": "Talking About Actions Happening Now",
+            "subHeadingEn": "Something Happening Now",
             "paragraphs": [
               "Use đang to talk about an action that is happening now, at the moment of speaking. It is similar to the present continuous in English (be + verb-ing)."
             ],
@@ -185,7 +185,7 @@
       {
         "id": "g2",
         "titleVi": "Đang làm gì?",
-        "titleEn": "Asking What Someone Is Doing",
+        "titleEn": "What Someone Is Doing",
         "intro": [],
         "subtopics": [
           {
@@ -266,7 +266,7 @@
             "id": "g3",
             "label": "Thời tiết thế nào?",
             "subHeadingVi": "Thời tiết thế nào?",
-            "subHeadingEn": "Asking About the Weather",
+            "subHeadingEn": "How is the Weather",
             "paragraphs": [
               "Use this pattern to ask what the weather is like. You can ask about now, today, or yesterday. To answer, simply describe the weather."
             ],
