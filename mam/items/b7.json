@@ -138,7 +138,7 @@
             "id": "g1",
             "label": "Số hàng trăm",
             "subHeadingVi": "Số hàng trăm",
-            "subHeadingEn": "Reading Numbers from 100 to 999",
+            "subHeadingEn": "Numbers 100-999",
             "paragraphs": [
               "Numbers from 100 to 999 are read by saying the hundreds, the tens, and the ones."
             ],
@@ -222,7 +222,7 @@
       {
         "id": "g2",
         "titleVi": "Trăm lẻ",
-        "titleEn": "Reading Numbers with Zero Tens",
+        "titleEn": "Numbers with Zero Tens",
         "intro": [],
         "subtopics": [
           {
@@ -316,7 +316,7 @@
             "id": "g3",
             "label": "Ngàn",
             "subHeadingVi": "Ngàn",
-            "subHeadingEn": "Reading Thousands",
+            "subHeadingEn": "Thousands",
             "paragraphs": [
               "To say numbers in the thousands, add ngàn after the number. The number before ngàn can be one digit, two digits, or three digits."
             ],
