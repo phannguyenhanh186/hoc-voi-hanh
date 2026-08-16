@@ -131,7 +131,7 @@
       {
         "id": "g1",
         "titleVi": "Số hàng trăm",
-        "titleEn": "Reading Numbers from 100 to 999",
+        "titleEn": "Numbers 100-99",
         "intro": [],
         "subtopics": [
           {
@@ -229,7 +229,7 @@
             "id": "g2",
             "label": "Trăm lẻ",
             "subHeadingVi": "Trăm lẻ",
-            "subHeadingEn": "Reading Numbers with Zero Tens",
+            "subHeadingEn": "Numbers with Zero Tens",
             "paragraphs": [
               "When the tens digit is 0, use lẻ before the last digit."
             ],
@@ -309,7 +309,7 @@
       {
         "id": "g3",
         "titleVi": "Ngàn",
-        "titleEn": "Reading Thousands",
+        "titleEn": "Thousands",
         "intro": [],
         "subtopics": [
           {
