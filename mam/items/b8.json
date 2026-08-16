@@ -114,7 +114,7 @@
             "id": "g1",
             "label": "Đang",
             "subHeadingVi": "Đang",
-            "subHeadingEn": "Somthing is Happening Now",
+            "subHeadingEn": "Talking About Actions Happening Now",
             "paragraphs": [
               "Use đang to talk about an action that is happening now, at the moment of speaking. It is similar to the present continuous in English (be + verb-ing)."
             ],
@@ -192,7 +192,7 @@
             "id": "g2",
             "label": "Đang làm gì?",
             "subHeadingVi": "Đang làm gì?",
-            "subHeadingEn": "What Someone is Doing",
+            "subHeadingEn": "Asking What Someone Is Doing",
             "paragraphs": [
               "Use this pattern to ask what someone is doing right now. To answer, use: [Subject] + đang + [Verb]."
             ],
@@ -266,7 +266,7 @@
             "id": "g3",
             "label": "Thời tiết thế nào?",
             "subHeadingVi": "Thời tiết thế nào?",
-            "subHeadingEn": "How is the Weather",
+            "subHeadingEn": "Asking About the Weather",
             "paragraphs": [
               "Use this pattern to ask what the weather is like. You can ask about now, today, or yesterday. To answer, simply describe the weather."
             ],
@@ -342,7 +342,7 @@
         "subtopics": [
           {
             "id": "review",
-            "label": "Review",
+            "label": "Ôn tập tổng hợp",
             "quiz": [
               {
                 "question": "Which sentence means \"I am eating.\"",
