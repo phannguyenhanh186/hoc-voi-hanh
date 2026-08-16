@@ -120,7 +120,7 @@
             "id": "g1",
             "label": "Màu gì?",
             "subHeadingVi": "Màu gì?",
-            "subHeadingEn": "What is the Color",
+            "subHeadingEn": "Asking About Colors",
             "paragraphs": [
               "Use this pattern to ask what color something is or what color someone likes, wears, or wants. To answer, simply say: [Noun] + màu + [Color]."
             ],
@@ -227,7 +227,7 @@
       {
         "id": "g2",
         "titleVi": "Lắm",
-        "titleEn": "Emphasizing Intensity",
+        "titleEn": "Emphasizing with lắm",
         "intro": [],
         "subtopics": [
           {
@@ -304,7 +304,7 @@
         "subtopics": [
           {
             "id": "review",
-            "label": "Review",
+            "label": "Ôn tập tổng hợp",
             "quiz": [
               {
                 "question": "How do you ask \"What color is your motorbike?\"",
