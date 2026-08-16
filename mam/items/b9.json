@@ -221,7 +221,7 @@
       {
         "id": "g1",
         "titleVi": "Phải",
-        "titleEn": "Talking About Things You Must Do",
+        "titleEn": "Must",
         "intro": [],
         "subtopics": [
           {
@@ -299,14 +299,14 @@
       {
         "id": "g2",
         "titleVi": "Không phải",
-        "titleEn": "Talking About Things You Don't Have to Do",
+        "titleEn": "Don't Have to",
         "intro": [],
         "subtopics": [
           {
             "id": "g2",
             "label": "Không phải",
             "subHeadingVi": "Không phải",
-            "subHeadingEn": "Don't Have to Do",
+            "subHeadingEn": "Don't Have to",
             "paragraphs": [
               "Use không phải to say that someone doesn't have to do something. This means the action is not necessary."
             ],
