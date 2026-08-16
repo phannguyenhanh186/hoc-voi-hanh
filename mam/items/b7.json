@@ -130,15 +130,15 @@
     "sections": [
       {
         "id": "g1",
-        "titleVi": "Số 100-999",
+        "titleVi": "Số hàng trăm",
         "titleEn": "Reading Numbers from 100 to 999",
         "intro": [],
         "subtopics": [
           {
             "id": "g1",
-            "label": "Số 100-999",
-            "subHeadingVi": "Số 100-999",
-            "subHeadingEn": "Numbers from 100 to 999",
+            "label": "Số hàng trăm",
+            "subHeadingVi": "Số hàng trăm",
+            "subHeadingEn": "Reading Numbers from 100 to 999",
             "paragraphs": [
               "Numbers from 100 to 999 are read by saying the hundreds, the tens, and the ones."
             ],
@@ -229,7 +229,7 @@
             "id": "g2",
             "label": "Trăm lẻ",
             "subHeadingVi": "Trăm lẻ",
-            "subHeadingEn": "Numbers with Zero Tens",
+            "subHeadingEn": "Reading Numbers with Zero Tens",
             "paragraphs": [
               "When the tens digit is 0, use lẻ before the last digit."
             ],
@@ -316,7 +316,7 @@
             "id": "g3",
             "label": "Ngàn",
             "subHeadingVi": "Ngàn",
-            "subHeadingEn": "Thousands",
+            "subHeadingEn": "Reading Thousands",
             "paragraphs": [
               "To say numbers in the thousands, add ngàn after the number. The number before ngàn can be one digit, two digits, or three digits."
             ],
@@ -553,7 +553,7 @@
         "subtopics": [
           {
             "id": "review",
-            "label": "Review",
+            "label": "Ôn tập tổng hợp",
             "quiz": [
               {
                 "question": "Which number is 264?",
