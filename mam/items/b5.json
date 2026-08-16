@@ -474,7 +474,7 @@
       {
         "id": "g1",
         "titleVi": "Ngày & Tháng",
-        "titleEn": "Talking About Dates",
+        "titleEn": "Days & Months",
         "intro": [],
         "subtopics": [
           {
@@ -566,7 +566,7 @@
       {
         "id": "g2",
         "titleVi": "Thứ mấy?",
-        "titleEn": "Asking About the Day of the Week",
+        "titleEn": "Which Day of the Week?",
         "intro": [],
         "subtopics": [
           {
@@ -654,14 +654,14 @@
       {
         "id": "g3",
         "titleVi": "Ngày mấy?",
-        "titleEn": "Asking About Dates",
+        "titleEn": "Which Day?",
         "intro": [],
         "subtopics": [
           {
             "id": "g3",
             "label": "Ngày mấy?",
             "subHeadingVi": "Ngày mấy?",
-            "subHeadingEn": "Which Dates?",
+            "subHeadingEn": "Which Day?",
             "paragraphs": [
               "Use this pattern to ask for a specific date. You can ask about the day of the month, the month, or the full date (day, month, and year). To answer, simply say: ... là ngày... You can include the month and year if needed."
             ],
