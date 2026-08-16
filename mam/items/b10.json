@@ -118,9 +118,9 @@
         "subtopics": [
           {
             "id": "g1",
-            "label": "Màu gì? - Asking About Colors",
+            "label": "Màu gì?",
             "subHeadingVi": "Màu gì?",
-            "subHeadingEn": "Asking About Colors",
+            "subHeadingEn": "What is the Color",
             "paragraphs": [
               "Use this pattern to ask what color something is or what color someone likes, wears, or wants. To answer, simply say: [Noun] + màu + [Color]."
             ],
@@ -227,7 +227,7 @@
       {
         "id": "g2",
         "titleVi": "Lắm",
-        "titleEn": "Emphasizing with lắm",
+        "titleEn": "Emphasizing Intensity",
         "intro": [],
         "subtopics": [
           {
