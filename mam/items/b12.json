@@ -10,14 +10,14 @@
       {
         "id": "g1",
         "titleVi": "Đúng không?",
-        "titleEn": "Asking for Confirmation",
+        "titleEn": "Asking for Confirmation with đúng không?",
         "intro": [],
         "subtopics": [
           {
             "id": "g1",
             "label": "Đúng không?",
             "subHeadingVi": "Đúng không?",
-            "subHeadingEn": "Right?",
+            "subHeadingEn": "Asking for Confirmation with đúng không?",
             "paragraphs": [
               "Use đúng không? at the end of a statement when you want to check or confirm information. It is similar to \"right?\", \"is that correct?\", or \"...?\" in English, depending on the context. The sentence keeps the same word order as a normal statement. Simply add đúng không? at the end."
             ],
@@ -108,7 +108,7 @@
         "subtopics": [
           {
             "id": "review",
-            "label": "Review",
+            "label": "Ôn tập tổng hợp",
             "quiz": [
               {
                 "question": "Which sentence means \"You are Vietnamese, right?\"",
