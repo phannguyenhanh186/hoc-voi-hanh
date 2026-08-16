@@ -342,7 +342,7 @@
             "id": "g0",
             "label": "Số 21-99",
             "subHeadingVi": "Số 21-99",
-            "subHeadingEn": "Reading Numbers from 21 to 99",
+            "subHeadingEn": "Numbers 21-99",
             "paragraphs": [
               "Numbers from 21 to 99 are read by saying the tens first, followed by the ones."
             ],
@@ -479,9 +479,9 @@
         "subtopics": [
           {
             "id": "g1",
-            "label": "Ngày/Tháng - Day/Month",
+            "label": "Ngày & Tháng",
             "subHeadingVi": "Ngày & Tháng",
-            "subHeadingEn": "Talking About Dates",
+            "subHeadingEn": "Days & Months",
             "paragraphs": [
               "Use ngày followed by a number to say the day of the month. Use tháng followed by a number to say the month of the year. For April, you can say either tháng tư or tháng bốn. Both are correct."
             ],
@@ -573,7 +573,7 @@
             "id": "g2",
             "label": "Thứ mấy?",
             "subHeadingVi": "Thứ mấy?",
-            "subHeadingEn": "Asking About the Day of the Week",
+            "subHeadingEn": "Which Day of the Week?",
             "paragraphs": [
               "Use this pattern to ask what day of the week it is. You can ask about today, yesterday, or tomorrow. To answer, use: ... là + day of the week."
             ],
@@ -661,7 +661,7 @@
             "id": "g3",
             "label": "Ngày mấy?",
             "subHeadingVi": "Ngày mấy?",
-            "subHeadingEn": "Asking About Dates",
+            "subHeadingEn": "Which Dates?",
             "paragraphs": [
               "Use this pattern to ask for a specific date. You can ask about the day of the month, the month, or the full date (day, month, and year). To answer, simply say: ... là ngày... You can include the month and year if needed."
             ],
