@@ -226,9 +226,9 @@
         "subtopics": [
           {
             "id": "g1",
-            "label": "Phải - Talking About Things You Must Do",
+            "label": "Phải",
             "subHeadingVi": "Phải",
-            "subHeadingEn": "Talking About Things You Must Do",
+            "subHeadingEn": "Must",
             "paragraphs": [
               "Use phải to say that someone must, has to, or needs to do something. This pattern is commonly used to talk about rules, laws, or obligations."
             ],
@@ -304,9 +304,9 @@
         "subtopics": [
           {
             "id": "g2",
-            "label": "Không phải - Talking About Things You Don't Have to Do",
+            "label": "Không phải",
             "subHeadingVi": "Không phải",
-            "subHeadingEn": "Talking About Things You Don't Have to Do",
+            "subHeadingEn": "Don't Have to",
             "paragraphs": [
               "Use không phải to say that someone doesn't have to do something. This means the action is not necessary."
             ],
@@ -373,14 +373,14 @@
       {
         "id": "g3",
         "titleVi": "Phải...gì?",
-        "titleEn": "Asking What Someone Must Wear or Bring",
+        "titleEn": "Asking What Someone Must Do",
         "intro": [],
         "subtopics": [
           {
             "id": "g3",
-            "label": "Phải...gì? - Asking What Someone Must Wear or Bring",
+            "label": "Phải...gì?",
             "subHeadingVi": "Phải...gì?",
-            "subHeadingEn": "Asking What Someone Must Wear or Bring",
+            "subHeadingEn": "What Someone Must Do",
             "paragraphs": [
               "Use this pattern to ask what someone must wear, bring, or do."
             ],
