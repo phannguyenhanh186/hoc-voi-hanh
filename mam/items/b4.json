@@ -922,6 +922,8 @@
         "title": "Một ngày của Minh",
         "audio": "audio/b4/{voice}/reading_r1.mp3",
         "text": "Minh là sinh viên. Hôm nay Minh có lớp vào buổi sáng.\nSáng nay, Minh ngủ dậy lúc bảy giờ sáng. Sau đó, Minh đánh răng, rửa mặt và pha cà phê. Minh ăn sáng lúc bảy giờ ba mươi phút rồi đi học.\nTrưa nay, Minh ăn trưa lúc mười hai giờ với bạn. Sau khi ăn trưa, Minh học đến năm giờ chiều. Sau đó, Minh về nhà. Ở nhà, Minh giặt đồ và gội đầu.\nTối nay, Minh ăn tối lúc bảy giờ tối. Sau khi ăn tối, Minh nghe nhạc, chơi game hoặc coi phim. Minh thường đi ngủ lúc mười rưỡi tối. Nhưng tối nay Minh ngủ trễ tại vì Minh không có lớp vào sáng mai.",
+        "titleEn": "A day in Minh's life",
+        "textEn": "Minh is a student. Today, Minh has class in the morning./nThis morning, Minh woke up at seven o'clock. After that, Minh brushed his teeth, washed his face, and made coffee. Minh had breakfast at seven thirty and then went to class./nAt noon, Minh had lunch with a friend at twelve o'clock. After lunch, Minh studied until five in the afternoon. Then, Minh went home. At home, Minh did the laundry and washed his hair./nTonight, Minh had dinner at seven o'clock. After dinner, Minh listened to music, played games, or watched a movie. Minh usually goes to bed at ten thirty. But tonight, Minh will go to bed late because he doesn't have class tomorrow morning.",
         "questions": [
           {
             "id": "rq1",
