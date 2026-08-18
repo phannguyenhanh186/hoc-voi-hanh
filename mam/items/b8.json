@@ -664,8 +664,8 @@
         "title": "Thời tiết ở miền Bắc và miền Nam",
         "audio": "audio/b8/{voice}/reading_r1.mp3",
         "text": "Thời tiết ở miền Bắc và miền Nam rất khác nhau. Ở miền Bắc, có bốn mùa: xuân, hè, thu và đông. Mùa hè thường từ tháng 5 đến tháng 8. Lúc này, trời thường nắng to và nóng. Mùa đông thường từ tháng 11 tới tháng 2, và trời thường rất lạnh.\nMiền Nam không có mùa đông. Miền Nam có hai mùa là mùa khô và mùa mưa. Mùa khô thường từ tháng 12 đến tháng 4. Thời tiết thường nắng và nóng. Mùa mưa thường từ tháng 5 tới tháng 11. Trời thường mưa to, nhất là vào buổi chiều. Sau khi mưa, trời thường mát hơn.",
-        "titleEn": "Weather in Northern and Southern Vietnam",
-        "textEn": "The weather in Northern and Southern Vietnam is very different. In Northern Vietnam, there are four seasons: spring, summer, autumn, and winter. Summer usually lasts from May to August. During this time, it is usually very sunny and hot. Winter usually lasts from November to February, and it is often very cold.\nSouthern Vietnam does not have winter. There are two seasons: the dry season and the rainy season. The dry season usually lasts from December to April. The weather is usually sunny and hot. The rainy season usually lasts from May to November. It often rains heavily, especially in the afternoon. After it rains, the weather is usually cooler.",
+        "titleEn": "Weather in the North and the South",
+        "textEn": "The weather in the North and the South is very different. In the North, there are four seasons: spring, summer, autumn, and winter. Summer usually lasts from May to August. During this time, it is usually very sunny and hot. Winter usually lasts from November to February, and it is often very cold.\nThe South does not have winter. There are two seasons: the dry season and the rainy season. The dry season usually lasts from December to April. The weather is usually sunny and hot. The rainy season usually lasts from May to November. It often rains heavily, especially in the afternoon. After it rains, the weather is usually cooler.",
         "fillBlanks": {
           "instruction": "Trả lời câu hỏi.",
           "lines": [
