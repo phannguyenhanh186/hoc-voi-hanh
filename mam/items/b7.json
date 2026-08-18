@@ -746,8 +746,8 @@
         "title": "Giá cả ở Việt Nam",
         "audio": "audio/b7/{voice}/reading_r1.mp3",
         "text": "Ở Việt Nam, giá món ăn và đồ uống tùy vào quán và khu vực. Ở thành phố lớn như Sài Gòn và Hà Nội, giá thường cao hơn những nơi khác.\nGiá một tô phở bò thường có giá từ bốn mươi ngàn tới sáu mươi ngàn đồng. Giá một tô bún bò cũng thường từ bốn mươi ngàn tới sáu mươi ngàn đồng.\nNếu muốn uống cà phê, bạn có nhiều lựa chọn. Giá một cốc cà phê đen thường từ ba mươi ngàn tới năm mươi ngàn đồng, còn giá một cốc cà phê sữa thường có giá từ bốn mươi ngàn tới sáu mươi ngàn đồng.",
-        "titleEN": "Prices in Vietnam",
-        "textEN": "In Vietnam, the prices of food and drinks depend on the restaurant and the area. In big cities like Saigon and Hanoi, prices are usually higher than in other places.\nA bowl of beef pho usually costs between 40,000 and 60,000 VND. A bowl of beef noodle soup also usually costs between 40,000 and 60,000 VND.\nIf you want to drink coffee, you have many options. A cup of black coffee usually costs between 30,000 and 50,000 VND, while a cup of Vietnamese iced coffee with condensed milk usually costs between 40,000 and 60,000 VND.",
+        "titleEn": "Prices in Vietnam",
+        "textEn": "In Vietnam, the prices of food and drinks depend on the restaurant and the area. In big cities like Saigon and Hanoi, prices are usually higher than in other places.\nA bowl of beef pho usually costs between 40,000 and 60,000 VND. A bowl of beef noodle soup also usually costs between 40,000 and 60,000 VND.\nIf you want to drink coffee, you have many options. A cup of black coffee usually costs between 30,000 and 50,000 VND, while a cup of Vietnamese iced coffee with condensed milk usually costs between 40,000 and 60,000 VND.",
         "fillBlanks": {
           "instruction": "Điền số vào chỗ trống.",
           "lines": [
