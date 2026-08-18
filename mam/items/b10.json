@@ -517,6 +517,8 @@
         "title": "Quần áo của Huy",
         "audio": "audio/b10/{voice}/reading_r1.mp3",
         "text": "Mình tên là Huy. Mình có nhiều quần áo. Mình thích mặc áo khoác màu đen và áo thun màu xanh dương. Mình không thích áo màu đỏ lắm. Bạn mình, Kiên, thích mặc áo sơ mi màu trắng. Kiên cũng thích mặc với quần màu xám, nhưng Kiên không thích quần đùi lắm. Ba của mình thích mặc áo màu đen, còn mẹ của mình thích mặc áo màu vàng.",
+        "titleEn": "Huy's Clothes",
+        "textEn": "My name is Huy. I have a lot of clothes. I like wearing a black jacket and a blue T-shirt. I don't really like red clothes. My friend Kien likes wearing a white shirt. Kien also likes wearing gray pants, but he doesn't really like shorts. My father likes wearing black clothes, while my mother likes wearing yellow clothes.",
         "textQuestions": [
           {
             "prompt": "Huy thích mặc áo màu gì?",
