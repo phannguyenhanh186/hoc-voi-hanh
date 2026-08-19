@@ -174,8 +174,7 @@
             title: b.title,
             locked: locked,
             progress: locked ? null : readLessonProgress(activeLevel, b.id),
-            href: base,
-            hrefReview: base + '&tab=postclass'
+            href: base
           }));
         });
       } catch (e) { cards.innerHTML = '<p class="note">Could not load the lesson list.</p>'; }
