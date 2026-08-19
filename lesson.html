@@ -28,13 +28,11 @@
     </div>
 
     <div class="toolbar">
-      <div class="tabs tabs-6" id="tabs">
+      <div class="tabs" id="tabs">
         <button class="tab-btn active" data-tab="vocab">Vocabulary</button>
         <button class="tab-btn" data-tab="grammar">Grammar</button>
         <button class="tab-btn" data-tab="listening">Listening</button>
         <button class="tab-btn" data-tab="reading">Reading</button>
-        <button class="tab-btn" data-tab="preclass">Preparation</button>
-        <button class="tab-btn" data-tab="postclass">Review</button>
       </div>
     </div>
 
@@ -42,8 +40,6 @@
     <section class="tab-panel" id="panel-grammar" hidden><p class="note">Loading…</p></section>
     <section class="tab-panel" id="panel-listening" hidden><p class="note">Loading…</p></section>
     <section class="tab-panel" id="panel-reading" hidden><p class="note">Loading…</p></section>
-    <section class="tab-panel" id="panel-preclass" hidden><p class="note">Loading…</p></section>
-    <section class="tab-panel" id="panel-postclass" hidden><p class="note">Loading…</p></section>
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
@@ -56,7 +52,7 @@
     const $title = document.getElementById('title');
     const $backLink = document.getElementById('back-link');
     const $tabs = document.getElementById('tabs');
-    const PANELS = ['vocab', 'grammar', 'listening', 'reading', 'preclass', 'postclass'];
+    const PANELS = ['vocab', 'grammar', 'listening', 'reading'];
 
     let voice = 'nam';
     try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
@@ -2328,8 +2324,6 @@
         renderGrammarTab(item);
         renderListeningTab(item);
         renderReadingTab(item);
-        renderPreClassTab(item);
-        renderPostClassTab(item);
         saveProgress();
       } catch (err) {
         console.error(err);
