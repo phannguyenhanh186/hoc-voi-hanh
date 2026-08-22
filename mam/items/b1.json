@@ -979,9 +979,39 @@
         "id": "r1",
         "title": "Cách xưng hô",
         "audio": "audio/b1/{voice}/reading_r1.mp3",
-        "text": "Người Việt thường dùng anh, chị, em hoặc bạn để nói chuyện với người khác. Nếu người kia lớn tuổi hơn bạn, bạn có thể gọi họ là anh (nếu họ là nam) hoặc chị (nếu họ là nữ). Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là em. Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng bạn hoặc mình khi nói chuyện. Cách xưng hô này giúp cuộc nói chuyện thân thiện và lịch sự hơn. Khi không biết nên gọi là gì, nhiều người thường dùng bạn trước. Sau khi biết tuổi, mọi người có thể đổi cách xưng hô cho đúng.",
+        "text": "Người Việt thường dùng \"anh\", \"chị\", \"em\" hoặc \"bạn\" để nói chuyện với người khác. Nếu người kia lớn hơn bạn, bạn có thể gọi họ là \"anh\" (nếu họ là nam) hoặc \"chị\" (nếu họ là nữ). Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là \"em\". Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng \"bạn\" và \"mình\" khi nói chuyện. Cách xưng hô này giúp cuộc nói chuyện thân thiện và lịch sự hơn. Khi không biết nên gọi là gì, nhiều người thường dùng \"bạn\" trước. Sau khi biết tuổi, mọi người có thể đổi cách xưng hô cho đúng.",
         "titleEn": "Vietnamese Forms of Address",
-        "textEn": "Vietnamese people commonly use “anh”, “chị”, “em” or bạn when talking to other people. If the other person is older than you, you can call them “anh” (if they are male) or “chị” (if they are female). If the other person is younger than you, you can call them “em”. If two people are the same age or close in age, many people use “bạn” or “mình” when talking to each other.\nThese forms of address make conversations sound friendlier and more polite. When you are not sure what to call someone, many people use “bạn” at first. After finding out the person's age, they may change the way they address each other."
+        "textEn": "Vietnamese people commonly use “anh”, “chị”, “em” or “bạn” when talking to other people. If the other person is older than you, you can call them “anh” (if they are male) or “chị” (if they are female). If the other person is younger than you, you can call them “em”. If two people are the same age or close in age, many people use “bạn” or “mình” when talking to each other.\nThese forms of address make conversations sound friendlier and more polite. When you are not sure what to call someone, many people use “bạn” at first. After finding out the person's age, they may change the way they address each other.",
+        "fillBlanks": {
+          "instruction": "Fill in the gap with words from the article.",
+          "lines": [
+            {
+              "parts": [
+                "Nếu người kia lớn tuổi hơn bạn, bạn có thể gọi họ là \"",
+                { "blank": ["anh", "chị"] },
+                "\" hoặc \"",
+                { "blank": ["anh", "chị"] },
+                "\"."
+              ]
+            },
+            {
+              "parts": [
+                "Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là \"",
+                { "blank": ["em"] },
+                "\"."
+              ]
+            },
+            {
+              "parts": [
+                "Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng \"",
+                { "blank": ["bạn", "mình"] },
+                "\" và \"",
+                { "blank": ["bạn", "mình"] },
+                "\" khi nói chuyện."
+              ]
+            }
+          ]
+        }
       }
     ]
   },
