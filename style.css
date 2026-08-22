@@ -640,6 +640,12 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   .read2-pane { flex-basis: auto !important; max-height: none; }
   .read2-divider { display: none; }
 }
+.read2-solo {
+  border: 1.5px solid var(--stroke); border-radius: 20px; margin-top: 18px; background: var(--surface);
+}
+.reading-passage { margin-bottom: 24px; }
+.reading-actions { display: flex; align-items: center; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.reading-actions .btn-check { margin-top: 0; }
 
 .gram2-quiz-wrap { display: flex; flex-direction: column; gap: 16px; }
 .gram2-quiz-banner {
