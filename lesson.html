@@ -1376,17 +1376,28 @@
       const shell = buildSectionShell('Reading', backToTabs);
 
       passages.forEach(function (p) {
-        if (p.audio) shell.appendChild(renderAudioPlayer(p.audio));
- 
+        const passageBox = el('div', 'reading-passage');
+        if (p.audio) passageBox.appendChild(renderAudioPlayer(p.audio));
+
+        // Bước 1: chỉ hiện bản tiếng Việt trước
+        const soloPane = el('div', 'read2-pane read2-solo');
+        soloPane.appendChild(el('h3', 'ex-title', p.title || ''));
+        (String(p.text || '').split(/\n+/)).forEach(function (para) {
+          if (para.trim()) soloPane.appendChild(el('p', 'reading-para', para.trim()));
+        });
+        passageBox.appendChild(soloPane);
+
+        // Bản song ngữ (side by side) — dựng sẵn nhưng ẩn đi, chỉ hiện khi bấm "Show Translation"
         const split = el('div', 'read2-split');
+        split.style.display = 'none';
         const leftPane = el('div', 'read2-pane');
         leftPane.appendChild(el('h3', 'ex-title', p.title || ''));
         (String(p.text || '').split(/\n+/)).forEach(function (para) {
           if (para.trim()) leftPane.appendChild(el('p', 'reading-para', para.trim()));
         });
- 
+
         const divider = el('div', 'read2-divider');
- 
+
         const rightPane = el('div', 'read2-pane');
         if (p.titleEn || p.textEn) {
           rightPane.appendChild(el('h3', 'ex-title', p.titleEn || ''));
@@ -1396,35 +1407,47 @@
         } else {
           rightPane.appendChild(el('p', 'note', 'English translation coming soon.'));
         }
- 
+
         split.appendChild(leftPane);
         split.appendChild(divider);
         split.appendChild(rightPane);
-        shell.appendChild(split);
+        passageBox.appendChild(split);
         makeSplitDraggable(split, leftPane, divider);
- 
-        const hasQuizLike = (p.questions && p.questions.length) || (p.textQuestions && p.textQuestions.length) || (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length);
-        if (!hasQuizLike) {
-          const pKey = nextProgressKey();
-          const doneBtn = el('button', 'btn-check', 'Done reading ✓');
-          doneBtn.type = 'button';
-          doneBtn.style.marginTop = '16px';
-          doneBtn.addEventListener('click', function () {
-            markProgressDone(pKey);
-            doneBtn.textContent = 'Completed ✓';
-            doneBtn.disabled = true;
-          });
-          shell.appendChild(doneBtn);
-        }
+
         if (p.questions && p.questions.length) {
-          shell.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions }));
+          passageBox.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions }));
         }
         if (p.textQuestions && p.textQuestions.length) {
-          shell.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions }));
+          passageBox.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions }));
         }
         if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
-          shell.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks' }, p.fillBlanks)));
+          passageBox.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks' }, p.fillBlanks)));
         }
+
+        // Bước 2: làm xong (và câu hỏi nếu có) -> bấm "Done reading" -> hiện kết quả + nút Show Translation
+        const pKey = nextProgressKey();
+        const actionsRow = el('div', 'reading-actions');
+        const doneBtn = el('button', 'btn-check', 'Done reading ✓');
+        doneBtn.type = 'button';
+        const showTransBtn = el('button', 'btn-check btn-secondary', 'Show Translation');
+        showTransBtn.type = 'button';
+        showTransBtn.style.display = 'none';
+        doneBtn.addEventListener('click', function () {
+          markProgressDone(pKey);
+          doneBtn.textContent = 'Completed ✓';
+          doneBtn.disabled = true;
+          showTransBtn.style.display = '';
+        });
+        showTransBtn.addEventListener('click', function () {
+          soloPane.style.display = 'none';
+          split.style.display = '';
+          showTransBtn.style.display = 'none';
+        });
+        actionsRow.appendChild(doneBtn);
+        actionsRow.appendChild(showTransBtn);
+        passageBox.appendChild(actionsRow);
+
+        shell.appendChild(passageBox);
       });
  
       panel.appendChild(shell);
