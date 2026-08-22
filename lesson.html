@@ -869,11 +869,12 @@
       shell.appendChild(topbar);
       return shell;
     }
-    // Back về màn hình chọn phần (hub)
-    // Nút "←" có sẵn trong từng phần: quay lại trang hub bằng lịch sử trình duyệt
-    // (vì bấm vào thẻ trên hub giờ là chuyển trang thật, không phải chuyển panel trong cùng 1 trang).
+    // Back về màn hình chọn phần (hub / landing page của bài)
+    // Nút "←" có sẵn trong từng phần: điều hướng THẲNG về URL hub (không phải tab nào),
+    // thay vì history.back() — để luôn về đúng landing page dù học viên vào tab này
+    // bằng cách nào (từ hub, mở link trực tiếp, bookmark, v.v.), không phụ thuộc lịch sử trình duyệt.
     function backToTabs() {
-      history.back();
+      location.href = hubUrl();
     }
 
     function buildSimpleTheory(sub, container) {
