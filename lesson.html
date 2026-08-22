@@ -2131,12 +2131,17 @@
       );
       wrap.appendChild(pad);
       const resultSlot = el('span', 'result-slot');
-      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
+      const checkBtn = el('button', 'btn-check', 'Submit'); checkBtn.type = 'button';
+      let locked = false;
       checkBtn.addEventListener('click', function () {
+        if (locked) return;
+        locked = true;
         const ok = val.replace(/\D/g, '') === String(item.answer).replace(/\D/g, '');
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(ok));
         if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+        checkBtn.disabled = true;
+        pad.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
         if (onResult) onResult(ok);
       });
       wrap.appendChild(checkBtn); wrap.appendChild(resultSlot);
@@ -2145,11 +2150,15 @@
 
     function renderNumberFillListening(nf) {
       const box = el('div', 'exercise');
-      box.appendChild(el('h3', 'ex-title', nf.title || 'Fill in the Numbers'));
-      if (nf.instruction) box.appendChild(el('p', 'ex-instruction', nf.instruction));
+      if (nf.instruction) box.appendChild(el('div', 'gram2-quiz-banner', nf.instruction));
       const items = nf.items || [];
       const tracker = trackQuizState(items.length);
-      items.forEach(function (item, idx) { box.appendChild(renderNumberFillItem(item, true, function (ok) { tracker.set(idx, ok); })); });
+      buildStepper(box, items, function (item, idx, markAnswered) {
+        return renderNumberFillItem(item, true, function (ok) {
+          tracker.set(idx, ok);
+          markAnswered();
+        });
+      }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true });
       if (items.length) appendSubmitAndRing(box, tracker);
       return box;
     }
