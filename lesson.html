@@ -27,16 +27,26 @@
       <h1 id="title">Loading…</h1>
     </div>
 
-    <div class="toolbar">
-      <div class="tabs" id="tabs">
-        <button class="tab-btn active" data-tab="vocab">Vocabulary</button>
-        <button class="tab-btn" data-tab="grammar">Grammar</button>
-        <button class="tab-btn" data-tab="listening">Listening</button>
-        <button class="tab-btn" data-tab="reading">Reading</button>
-      </div>
+    <div class="lesson-hub" id="lesson-hub">
+      <button class="hub-card hub-vocab" type="button" data-tab="vocab">
+        <span class="hub-card-title">Vocabulary</span>
+        <span class="hub-card-sub" id="hub-stat-vocab">…</span>
+      </button>
+      <button class="hub-card hub-grammar" type="button" data-tab="grammar">
+        <span class="hub-card-title">Grammar</span>
+        <span class="hub-card-sub" id="hub-stat-grammar">…</span>
+      </button>
+      <button class="hub-card hub-reading" type="button" data-tab="reading">
+        <span class="hub-card-title">Reading</span>
+        <span class="hub-card-sub" id="hub-stat-reading">…</span>
+      </button>
+      <button class="hub-card hub-listening" type="button" data-tab="listening">
+        <span class="hub-card-title">Listening</span>
+        <span class="hub-card-sub" id="hub-stat-listening">…</span>
+      </button>
     </div>
 
-    <section class="tab-panel" id="panel-vocab"><p class="note">Loading…</p></section>
+    <section class="tab-panel" id="panel-vocab" hidden><p class="note">Loading…</p></section>
     <section class="tab-panel" id="panel-grammar" hidden><p class="note">Loading…</p></section>
     <section class="tab-panel" id="panel-listening" hidden><p class="note">Loading…</p></section>
     <section class="tab-panel" id="panel-reading" hidden><p class="note">Loading…</p></section>
@@ -51,7 +61,6 @@
 
     const $title = document.getElementById('title');
     const $backLink = document.getElementById('back-link');
-    const $tabs = document.getElementById('tabs');
     const PANELS = ['vocab', 'grammar', 'listening', 'reading'];
 
     let voice = 'nam';
@@ -168,29 +177,29 @@
       return a;
     }
 
-    // ---------- Tabs ----------
+    // ---------- Hub (màn hình chọn phần) / Tabs ----------
+    const $hub = document.getElementById('lesson-hub');
     const tabMemoKey = 'lastTab:' + level + ':' + itemId;
     function setActiveTab(tab) {
       if (PANELS.indexOf(tab) === -1) return;
-      document.querySelectorAll('#tabs .tab-btn').forEach(function (b) {
-        b.classList.toggle('active', b.dataset.tab === tab);
-      });
+      $hub.hidden = true;
       PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = (p !== tab); });
     }
-    $tabs.addEventListener('click', function (e) {
-      const btn = e.target.closest('.tab-btn');
-      if (!btn) return;
-      const tab = btn.dataset.tab;
+    function showHub() {
+      PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = true; });
+      $hub.hidden = false;
+      refreshHubStats();
+    }
+    $hub.addEventListener('click', function (e) {
+      const card = e.target.closest('.hub-card');
+      if (!card) return;
+      const tab = card.dataset.tab;
       setActiveTab(tab);
-      toggleToolbar(false);
       try { sessionStorage.setItem(tabMemoKey, tab); } catch (e) {}
     });
     (function () {
-      let initialTab = params.get('tab');
-      if (!initialTab) {
-        try { initialTab = sessionStorage.getItem(tabMemoKey); } catch (e) {}
-      }
-      if (initialTab && initialTab !== 'vocab') setActiveTab(initialTab);
+      const initialTab = params.get('tab');
+      if (initialTab && PANELS.indexOf(initialTab) !== -1) setActiveTab(initialTab);
     })();
 
     // ========================================================
@@ -334,7 +343,7 @@
 
       function goNext(judgement) {
         if (i >= queue.length) return;
-        if (judgement === 'remember') { rememberedCount++; }
+        if (judgement === 'remember') { rememberedCount++; markWordLearned(queue[i].id); }
         else if (judgement === 'forget') { notRememberedCount++; queue.push(queue[i]); }
         i++;
         if (i >= queue.length) { showComplete(); } else { renderFront(); }
@@ -430,7 +439,6 @@
       const items = (item.vocab && item.vocab.items) || [];
       if (!items.length) { panel.appendChild(emptyNote('Vocabulary is being updated.')); return; }
 
-      if (!panel.hidden) toggleToolbar(false);
       const shell = buildSectionShell('Vocabulary', function () {
         location.href = $backLink.href;
       });
@@ -578,13 +586,14 @@
     }
 
     // Thêm nút "Nộp bài" cuối 1 bài — bấm vào mới tính & hiện vòng tròn kết quả; đồng thời tính là đã hoàn thành phần này
-    function appendSubmitAndRing(container, tracker) {
+    function appendSubmitAndRing(container, tracker, onSubmit) {
       const progressKeyForThis = nextProgressKey();
       const submitBtn = el('button', 'btn-check btn-submit', 'Submit ✓');
       submitBtn.type = 'button';
       submitBtn.addEventListener('click', function () {
         tracker.finalize();
         markProgressDone(progressKeyForThis);
+        if (onSubmit) onSubmit();
       });
       container.appendChild(submitBtn);
       container.appendChild(tracker.ring.el);
@@ -851,11 +860,6 @@
     // NGỮ PHÁP KIỂU MỚI — sidebar 2 cấp + nội dung Theory/Practice
     // (dùng khi item.grammar.sections tồn tại; không ảnh hưởng bài dùng "points")
     // ========================================================
-    function toggleToolbar(show) {
-      const bar = document.querySelector('.toolbar');
-      if (bar) bar.hidden = !show;
-    }
-
     // ---------- Section shell dùng chung: thanh trên cùng có tên phần + mũi tên back ----------
     function buildSectionShell(labelText, onBack) {
       const shell = el('div', 'gram2-shell');
@@ -868,11 +872,9 @@
       shell.appendChild(topbar);
       return shell;
     }
-    // Back về màn hình chọn phần (hiện lại toolbar, không phần nào được chọn sẵn)
+    // Back về màn hình chọn phần (hub)
     function backToTabs() {
-      toggleToolbar(true);
-      setActiveTab('vocab');
-      try { sessionStorage.setItem(tabMemoKey, 'vocab'); } catch (e) {}
+      showHub();
     }
 
     function buildSimpleTheory(sub, container) {
@@ -947,7 +949,6 @@
     function renderGrammarTabSidebar(item, sections) {
       const panel = document.getElementById('panel-grammar');
       panel.innerHTML = '';
-      if (!panel.hidden) toggleToolbar(false);
 
       const shell = buildSectionShell('Grammar', backToTabs);
 
@@ -1056,7 +1057,6 @@
       const points = (item.grammar && item.grammar.points) || [];
       if (!points.length) { panel.appendChild(emptyNote('Grammar is being updated.')); return; }
 
-      if (!panel.hidden) toggleToolbar(false);
       const shell = buildSectionShell('Grammar', backToTabs);
       panel.appendChild(shell);
       const gPanel = el('div', 'gram2-legacy-content');
@@ -1289,7 +1289,6 @@
       const hasDialogueFill = dialogueFill && dialogueFill.lines && dialogueFill.lines.length;
       if (!groups.length && !entries.length && !hasNumberFill && !hasDialogueFill) { panel.appendChild(emptyNote('Listening is being updated.')); return; }
 
-      if (!panel.hidden) toggleToolbar(false);
       const shell = buildSectionShell('Listening', backToTabs);
       panel.appendChild(shell);
 
@@ -1372,7 +1371,6 @@
       const passages = (item.reading && item.reading.passages) || [];
       if (!passages.length) { panel.appendChild(emptyNote('Reading is being updated.')); return; }
  
-      if (!panel.hidden) toggleToolbar(false);
       const shell = buildSectionShell('Reading', backToTabs);
 
       passages.forEach(function (p) {
@@ -1414,36 +1412,45 @@
         passageBox.appendChild(split);
         makeSplitDraggable(split, leftPane, divider);
 
-        if (p.questions && p.questions.length) {
-          passageBox.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions }));
-        }
-        if (p.textQuestions && p.textQuestions.length) {
-          passageBox.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions }));
-        }
-        if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
-          passageBox.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks' }, p.fillBlanks)));
-        }
-
-        // Bước 2: làm xong (và câu hỏi nếu có) -> bấm "Done reading" -> hiện kết quả + nút Show Translation
-        const pKey = nextProgressKey();
+        // "Show Translation" — hiện ra ngay khi làm xong (bấm Submit ở câu hỏi, hoặc bấm "Done reading" nếu không có câu hỏi)
         const actionsRow = el('div', 'reading-actions');
-        const doneBtn = el('button', 'btn-check', 'Done reading ✓');
-        doneBtn.type = 'button';
         const showTransBtn = el('button', 'btn-check btn-secondary', 'Show Translation');
         showTransBtn.type = 'button';
         showTransBtn.style.display = 'none';
-        doneBtn.addEventListener('click', function () {
-          markProgressDone(pKey);
-          doneBtn.textContent = 'Completed ✓';
-          doneBtn.disabled = true;
-          showTransBtn.style.display = '';
-        });
         showTransBtn.addEventListener('click', function () {
           soloPane.style.display = 'none';
           split.style.display = '';
           showTransBtn.style.display = 'none';
         });
-        actionsRow.appendChild(doneBtn);
+        function revealShowTranslation() {
+          showTransBtn.style.display = '';
+        }
+
+        const hasQuizLike = (p.questions && p.questions.length) || (p.textQuestions && p.textQuestions.length) || (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length);
+
+        if (p.questions && p.questions.length) {
+          passageBox.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions, onFinish: revealShowTranslation }));
+        }
+        if (p.textQuestions && p.textQuestions.length) {
+          passageBox.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions, onFinish: revealShowTranslation }));
+        }
+        if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
+          passageBox.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks', onFinish: revealShowTranslation }, p.fillBlanks)));
+        }
+
+        // Không có câu hỏi nào -> vẫn cần nút "Done reading" để xác nhận đã đọc xong trước khi hiện Show Translation
+        if (!hasQuizLike) {
+          const pKey = nextProgressKey();
+          const doneBtn = el('button', 'btn-check', 'Done reading ✓');
+          doneBtn.type = 'button';
+          doneBtn.addEventListener('click', function () {
+            markProgressDone(pKey);
+            doneBtn.textContent = 'Completed ✓';
+            doneBtn.disabled = true;
+            revealShowTranslation();
+          });
+          actionsRow.appendChild(doneBtn);
+        }
         actionsRow.appendChild(showTransBtn);
         passageBox.appendChild(actionsRow);
 
@@ -2034,10 +2041,9 @@
         qBox.appendChild(explainSlot);
         box.appendChild(qBox);
       });
-      if (items.length) appendSubmitAndRing(box, tracker);
+      if (items.length) appendSubmitAndRing(box, tracker, ex.onFinish);
       return box;
     }
-
     function renderDialogueFill(ex) {
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
@@ -2129,6 +2135,7 @@
         });
         submitBtn.disabled = true;
         if (resultsRing) resultsRing.finish();
+        if (ex.onFinish) ex.onFinish();
       });
       box.appendChild(submitBtn);
       if (resultsRing) box.appendChild(resultsRing.ringEl);
@@ -2324,7 +2331,7 @@
         row.appendChild(checkBtn); row.appendChild(resultSlot);
         box.appendChild(row);
       });
-      if (items.length) appendSubmitAndRing(box, tracker);
+      if (items.length) appendSubmitAndRing(box, tracker, ex.onFinish);
       return box;
     }
 
@@ -2387,16 +2394,64 @@
     function saveProgress() {
       try { localStorage.setItem(progressKey, JSON.stringify(progressState)); } catch (e) {}
     }
+    // Theo dõi tiến độ theo TỪNG phần (vocab/grammar/listening/reading) để hiện ở màn hub.
+    // currentProgressSection được set trong lúc render mỗi tab bên dưới; mọi key đăng ký
+    // trong lúc đó sẽ được gắn vào đúng phần, kể cả khi việc "đánh dấu done" xảy ra ở trang khác (quiz.html).
+    let currentProgressSection = null;
+    const keyToSection = {};
+    const sectionTotals = { vocab: 0, grammar: 0, listening: 0, reading: 0 };
     function nextProgressKey(explicitKey) {
       const k = explicitKey || ('ex' + progressCounter);
       progressCounter++;
       if (progressState.total < progressCounter) progressState.total = progressCounter;
+      if (currentProgressSection && sectionTotals.hasOwnProperty(currentProgressSection)) {
+        sectionTotals[currentProgressSection]++;
+        keyToSection[k] = currentProgressSection;
+      }
       return k;
     }
     function markProgressDone(key) {
       if (progressState.done[key]) return;
       progressState.done[key] = true;
       saveProgress();
+    }
+    function sectionDoneCount(section) {
+      let n = 0;
+      Object.keys(progressState.done).forEach(function (k) {
+        if (progressState.done[k] && keyToSection[k] === section) n++;
+      });
+      return n;
+    }
+
+    // ---------- Từ đã học (Vocabulary) — đánh dấu khi bấm "Remembered" ở flashcards ----------
+    const learnedWordsKey = 'learnedWords:' + level + ':' + itemId;
+    let learnedWords = {};
+    try {
+      const savedLearned = JSON.parse(localStorage.getItem(learnedWordsKey) || 'null');
+      if (savedLearned && typeof savedLearned === 'object') learnedWords = savedLearned;
+    } catch (e) {}
+    function markWordLearned(wordId) {
+      if (!wordId || learnedWords[wordId]) return;
+      learnedWords[wordId] = true;
+      try { localStorage.setItem(learnedWordsKey, JSON.stringify(learnedWords)); } catch (e) {}
+    }
+    function learnedWordsCount() {
+      return Object.keys(learnedWords).filter(function (k) { return learnedWords[k]; }).length;
+    }
+
+    // ---------- Hub stats ----------
+    let currentItem = null;
+    function setHubStat(section, text) {
+      const node = document.getElementById('hub-stat-' + section);
+      if (node) node.textContent = text;
+    }
+    function refreshHubStats() {
+      const vocabTotal = (currentItem && currentItem.vocab && currentItem.vocab.items) ? currentItem.vocab.items.length : 0;
+      const vocabDone = Math.min(learnedWordsCount(), vocabTotal);
+      setHubStat('vocab', vocabDone + '/' + vocabTotal + ' words learned');
+      ['grammar', 'listening', 'reading'].forEach(function (sec) {
+        setHubStat(sec, sectionDoneCount(sec) + '/' + sectionTotals[sec] + ' quizzes done');
+      });
     }
 
     // ---------- Load ----------
@@ -2407,16 +2462,19 @@
         const res = await fetch(level + '/items/' + itemId + '.json', { cache: 'no-cache' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const item = await res.json();
+        currentItem = item;
 
         document.title = (item.title || itemId) + ' — hoc voi hanh';
         $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
 
         renderMetaBadges(item);
-        renderVocabTab(item);
-        renderGrammarTab(item);
-        renderListeningTab(item);
-        renderReadingTab(item);
+        currentProgressSection = 'vocab'; renderVocabTab(item);
+        currentProgressSection = 'grammar'; renderGrammarTab(item);
+        currentProgressSection = 'listening'; renderListeningTab(item);
+        currentProgressSection = 'reading'; renderReadingTab(item);
+        currentProgressSection = null;
         saveProgress();
+        refreshHubStats();
       } catch (err) {
         console.error(err);
         $title.textContent = 'Could not load the lesson';
