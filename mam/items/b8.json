@@ -501,7 +501,7 @@
     ]
   },
   "listening": {
-    "instruction": "Nghe và gõ lại câu bạn nghe được. Bấm vào từ trong ngân hàng từ bên dưới nếu cần trợ giúp.",
+    "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
     "dialogueFill": {
       "instruction": "Điền từ vào chỗ trống.",
       "wordBank": [
