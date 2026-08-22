@@ -315,6 +315,82 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
         }
         const q = quiz[i];
         qSlot.appendChild(el('p', 'gram2-quiz-question', (i + 1) + '. ' + q.question));
+
+        function goNext() {
+          const nextBtn = el('button', 'btn-purple gram2-quiz-next', i === quiz.length - 1 ? 'Xem kết quả →' : 'Câu tiếp theo →');
+          nextBtn.type = 'button';
+          nextBtn.addEventListener('click', function () { i++; updateProgress(); renderQuestion(); });
+          qSlot.appendChild(nextBtn);
+        }
+
+        if (q.type === 'scramble') {
+          // Sắp xếp từ có sẵn (word bank) thành câu đúng — bấm để chọn/bỏ chọn, giống bài Listening.
+          const wordBank = q.wordBank || [];
+          const built = el('div', 'scramble-built');
+          const bank = el('div', 'scramble-bank');
+          const displayOrder = shuffle(wordBank.map(function (_, idx) { return idx; }));
+          let chosen = [];
+          let locked = false;
+
+          function refreshBuilt() {
+            built.innerHTML = '';
+            if (!chosen.length) {
+              built.appendChild(el('span', 'dictation-placeholder', 'Bấm vào các từ bên dưới để sắp xếp thành câu…'));
+            }
+            chosen.forEach(function (idx) {
+              const chip = el('span', 'chip chip-placed', wordBank[idx]);
+              if (locked) {
+                chip.classList.add('chip-locked');
+              } else {
+                chip.addEventListener('click', function () {
+                  chosen = chosen.filter(function (x) { return x !== idx; });
+                  refreshBuilt(); refreshBank();
+                });
+              }
+              built.appendChild(chip);
+            });
+          }
+          function refreshBank() {
+            bank.innerHTML = '';
+            displayOrder.forEach(function (idx) {
+              if (chosen.indexOf(idx) !== -1) return;
+              const chip = el('span', 'chip chip-pickable', wordBank[idx]);
+              if (locked) {
+                chip.classList.add('chip-locked');
+              } else {
+                chip.addEventListener('click', function () {
+                  chosen.push(idx);
+                  refreshBuilt(); refreshBank();
+                });
+              }
+              bank.appendChild(chip);
+            });
+          }
+          refreshBuilt(); refreshBank();
+          qSlot.appendChild(built);
+          if (wordBank.length) qSlot.appendChild(bank);
+
+          const resultSlot = el('span', 'result-slot');
+          const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+          checkBtn.addEventListener('click', function () {
+            if (locked || !chosen.length) return;
+            locked = true;
+            const builtStr = chosen.map(function (idx) { return wordBank[idx]; }).join(' ');
+            const ok = norm(builtStr) === norm(q.answer);
+            resultSlot.innerHTML = '';
+            resultSlot.appendChild(checkRow(ok));
+            if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + q.answer + ')'));
+            checkBtn.disabled = true;
+            refreshBuilt(); refreshBank();
+            tracker.set(i, ok);
+            goNext();
+          });
+          qSlot.appendChild(checkBtn);
+          qSlot.appendChild(resultSlot);
+          updateProgress();
+          return;
+        }
+
         const optWrap = el('div', 'gram2-quiz-options');
         let answered = false;
         (q.options || []).forEach(function (opt, oi) {
@@ -332,10 +408,7 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
               });
             }
             tracker.set(i, ok);
-            const nextBtn = el('button', 'btn-purple gram2-quiz-next', i === quiz.length - 1 ? 'Xem kết quả →' : 'Câu tiếp theo →');
-            nextBtn.type = 'button';
-            nextBtn.addEventListener('click', function () { i++; updateProgress(); renderQuestion(); });
-            qSlot.appendChild(nextBtn);
+            goNext();
           });
           optWrap.appendChild(card);
         });
