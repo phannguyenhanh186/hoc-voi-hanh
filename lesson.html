@@ -2114,27 +2114,24 @@
         row.appendChild(textSpan);
         box.appendChild(row);
       });
-      const resultSlot = el('span', 'result-slot dialogue-fill-result');
-      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
       const tracker = trackQuizState(inputs.length);
-      checkBtn.addEventListener('click', function () {
-        let allOk = true;
+      const resultsRing = inputs.length ? createResultsRingReveal(tracker) : null;
+      const submitBtn = el('button', 'btn-check', 'Submit'); submitBtn.type = 'button';
+      submitBtn.addEventListener('click', function () {
         inputs.forEach(function (pair, idx) {
           const inp = pair.input;
-          if (!inp.value.trim()) { inp.classList.remove('select-wrong', 'select-ok'); allOk = false; return; }
           const val = norm(inp.value);
-          const ok = pair.accepted.some(function (a) { return norm(a) === val; });
-          if (!ok) allOk = false;
+          const ok = !!inp.value.trim() && pair.accepted.some(function (a) { return norm(a) === val; });
           inp.classList.toggle('select-wrong', !ok);
           inp.classList.toggle('select-ok', ok);
+          inp.disabled = true;
           tracker.set(idx, ok);
         });
-        resultSlot.innerHTML = '';
-        resultSlot.appendChild(checkRow(allOk));
+        submitBtn.disabled = true;
+        if (resultsRing) resultsRing.finish();
       });
-      box.appendChild(checkBtn);
-      box.appendChild(resultSlot);
-      if (inputs.length) appendSubmitAndRing(box, tracker);
+      box.appendChild(submitBtn);
+      if (resultsRing) box.appendChild(resultsRing.ringEl);
       return box;
     }
 
