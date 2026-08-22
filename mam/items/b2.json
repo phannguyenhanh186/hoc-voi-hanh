@@ -282,6 +282,36 @@
                   "gì"
                 ],
                 "answer": "thích"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"I like pork\"",
+                "wordBank": [
+                  "bò",
+                  "thích",
+                  "không",
+                  "thịt",
+                  "gì",
+                  "mình",
+                  "heo",
+                  "có"
+                ],
+                "answer": "Mình thích thịt heo"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"Hà likes watching TV\"",
+                "wordBank": [
+                  "tivi",
+                  "Hà",
+                  "làm",
+                  "mình",
+                  "không",
+                  "coi",
+                  "ngủ",
+                  "thích"
+                ],
+                "answer": "Hà thích coi tivi"
               }
             ]
           },
@@ -360,6 +390,37 @@
                   "là"
                 ],
                 "answer": "gì"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"What does Mai like to eat?\"",
+                "wordBank": [
+                  "thích",
+                  "không",
+                  "uống",
+                  "gì",
+                  "Mai",
+                  "ăn",
+                  "có",
+                  "?"
+                ],
+                "answer": "Mai thích ăn gì ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"What do you like to do?\"",
+                "wordBank": [
+                  "mình",
+                  "thích",
+                  "có",
+                  "ăn",
+                  "không",
+                  "bạn",
+                  "gì",
+                  "làm",
+                  "?"
+                ],
+                "answer": "Bạn thích làm gì ?"
               }
             ]
           },
@@ -426,6 +487,36 @@
                   "ăn"
                 ],
                 "answer": "không"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"I don't like green tea\"",
+                "wordBank": [
+                  "thích",
+                  "không",
+                  "uống",
+                  "cà phê",
+                  "anh",
+                  "ăn",
+                  "có",
+                  "trà xanh"
+                ],
+                "answer": "Anh không thích trà xanh"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"Phương doesn't like traveling\"",
+                "wordBank": [
+                  "không",
+                  "ngủ",
+                  "thích",
+                  "du lịch",
+                  "không",
+                  "bạn",
+                  "Phương",
+                  "đi ăn"
+                ],
+                "answer": "Phương không thích du lịch"
               }
             ]
           }
@@ -581,17 +672,29 @@
         "questions": [
           {
             "context": "Câu 1: Người Việt thích ăn cơm với thịt, rau với _____",
-            "options": ["phở", "bún", "canh"],
+            "options": [
+              "phở",
+              "bún",
+              "canh"
+            ],
             "answer": "canh"
           },
           {
             "context": "Câu 2: Ngoài cà phê, một số người thích uống _____",
-            "options": ["bạc xỉu", "trà xanh", "trái cây"],
+            "options": [
+              "bạc xỉu",
+              "trà xanh",
+              "trái cây"
+            ],
             "answer": "trà xanh"
           },
           {
             "context": "Câu 3: Có người thích đi ăn nhưng có người thích _____ ở nhà.",
-            "options": ["coi ti vi", "du lịch", "làm việc"],
+            "options": [
+              "coi ti vi",
+              "du lịch",
+              "làm việc"
+            ],
             "answer": "coi ti vi"
           }
         ]
