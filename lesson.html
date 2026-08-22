@@ -1279,7 +1279,7 @@
       const shell = buildSectionShell('Listening', backToTabs);
       panel.appendChild(shell);
 
-      if (listening.instruction) shell.appendChild(el('p', 'note', listening.instruction));
+      if (listening.instruction) shell.appendChild(el('div', 'gram2-quiz-banner', listening.instruction));
 
       // Điền từ vào chỗ trống (word bank)
       if (hasDialogueFill) {
@@ -1294,7 +1294,6 @@
       // Kiểu mới: chép chính tả — mỗi lần hiện 1 câu, bấm Submit chấm ngay, khoá lại rồi mới qua câu sau
       if (groups.length) {
         const wrap = el('div', 'exercise');
-        wrap.appendChild(el('div', 'gram2-quiz-banner', 'Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.'));
         const flatSteps = [];
         groups.forEach(function (g, gi) {
           (g.lines || []).forEach(function (line) {
