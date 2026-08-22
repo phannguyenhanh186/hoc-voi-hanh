@@ -394,14 +394,14 @@
                 "answer": "Chín giờ sáng."
               },
               {
-                "question": "Complete the sentence: Bảy giờ mười lăm ______",
+                "question": "Which sentence means \"7:15pm\"?",
                 "options": [
-                  "phút",
-                  "tối",
-                  "giờ",
-                  "buổi"
+                  "Bảy giờ mười lăm tối.",
+                  "Năm giờ năm mươi chiều.",
+                  "Bảy giờ năm mươi tối.",
+                  "Năm giờ mười bảy chiều."
                 ],
-                "answer": "tối"
+                "answer": "Bảy giờ mười lăm tối."
               },
               {
                 "question": "Which sentence means \"11:15 a.m.\"?",
@@ -462,17 +462,22 @@
             ],
             "quiz": [
               {
-                "question": "How do you ask \"What time is it?\"",
-                "options": [
-                  "Mấy giờ bạn?",
-                  "Bây giờ là mấy giờ?",
-                  "Mấy giờ là bây giờ?",
-                  "Giờ là bạn?"
+                "type": "scramble",
+                "question": "How do you ask \"What time is it now?\"",
+                "wordBank": [
+                  "mấy",
+                  "bây",
+                  "gì",
+                  "giờ",
+                  "giờ",
+                  "nay",
+                  "là",
+                  "?"
                 ],
-                "answer": "Bây giờ là mấy giờ?"
+                "answer": "Bây giờ là mấy giờ ?"
               },
               {
-                "question": "Which answer means \"It's 8:15.\"",
+                "question": "Which answer means \"It's 8:15 now.\"",
                 "options": [
                   "Bây giờ là tám giờ mười lăm phút.",
                   "Bây giờ tám mười lăm.",
@@ -482,14 +487,14 @@
                 "answer": "Bây giờ là tám giờ mười lăm phút."
               },
               {
-                "question": "Complete the sentence: Bây giờ là ______ giờ trưa.",
+                "question": "Complete the sentence: Bây giờ là ______.",
                 "options": [
-                  "mười hai",
-                  "trưa",
-                  "phút",
-                  "mấy"
+                  "mười hai giờ sáng",
+                  "mười hai giờ trưa",
+                  "trưa mười hai giờ",
+                  "mười hai giờ phút"
                 ],
-                "answer": "mười hai"
+                "answer": "mười hai giờ trưa"
               },
               {
                 "question": "Which conversation is correct?",
@@ -500,6 +505,21 @@
                   "Bây giờ là giờ mấy?\nBây giờ là bảy giờ tối."
                 ],
                 "answer": "Bây giờ là mấy giờ?\nBây giờ là bảy giờ tối."
+              },
+              {
+                "type": "scramble",
+                "question": "Which sentence means \"It's 2:30pm now\"",
+                "wordBank": [
+                  "chiều",
+                  "bây",
+                  "giờ",
+                  "sáng",
+                  "rưỡi",
+                  "hai",
+                  "giờ",
+                  "là"
+                ],
+                "answer": "Bây giờ là hai giờ rưỡi chiều"
               }
             ]
           }
@@ -578,6 +598,24 @@
                   "A: Mấy giờ bạn ăn trưa lúc?\nB: Mình ăn trưa lúc mười hai giờ."
                 ],
                 "answer": "A: Bạn ăn trưa lúc mấy giờ?\nB: Mình ăn trưa lúc mười hai giờ."
+              },
+              {
+                "type": "scramble",
+                "question": "How do you answer the question \"What time do you have lunch?\"",
+                "wordBank": [
+                  "ăn",
+                  "vào",
+                  "mười hai",
+                  "trưa",
+                  "mấy",
+                  "mình",
+                  "lúc",
+                  "giờ",
+                  "bạn",
+                  "sáng",
+                  "?"
+                ],
+                "answer": "Mình ăn trưa lúc mười hai giờ"
               }
             ]
           }
