@@ -1149,6 +1149,7 @@
     function buildStepper(container, steps, renderStepFn, opts) {
       opts = opts || {};
       let i = 0;
+      let answeredForStep = false;
       const stage = el('div', opts.stageClass || '');
       const dots = el('div', 'step-dots');
       const nav = el('div', 'step-nav');
@@ -1156,24 +1157,37 @@
       container.appendChild(dots);
       container.appendChild(nav);
 
+      function markAnswered() {
+        answeredForStep = true;
+        if (nextBtnRef) nextBtnRef.disabled = false;
+      }
+
+      let nextBtnRef = null;
+
       function draw() {
+        answeredForStep = false;
         stage.innerHTML = '';
-        stage.appendChild(renderStepFn(steps[i], i));
+        stage.appendChild(renderStepFn(steps[i], i, markAnswered));
 
         dots.innerHTML = '';
         steps.forEach(function (_, idx) { dots.appendChild(el('span', 'step-dot' + (idx === i ? ' active' : ''))); });
 
         nav.innerHTML = '';
         const isLast = i >= steps.length - 1;
-        const prev = el('button', 'btn-check btn-secondary', '← Back'); prev.type = 'button';
-        prev.style.visibility = i === 0 ? 'hidden' : 'visible';
-        prev.addEventListener('click', function () { i--; draw(); });
+        if (!opts.noBack) {
+          const prev = el('button', 'btn-check btn-secondary', '← Back'); prev.type = 'button';
+          prev.style.visibility = i === 0 ? 'hidden' : 'visible';
+          prev.addEventListener('click', function () { i--; draw(); });
+          nav.appendChild(prev);
+        }
         const next = el('button', 'btn-check', isLast ? (opts.lastLabel || 'Done ✓') : 'Next →'); next.type = 'button';
+        if (opts.requireAnswer) next.disabled = !answeredForStep;
         next.addEventListener('click', function () {
           if (!isLast) { i++; draw(); }
           else if (opts.onFinish) { opts.onFinish(); }
         });
-        nav.appendChild(prev); nav.appendChild(next);
+        nav.appendChild(next);
+        nextBtnRef = next;
       }
       draw();
     }
@@ -1191,6 +1205,7 @@
       const bank = el('div', 'scramble-bank');
       const displayOrder = shuffle(bankWords.map(function (_, i) { return i; }));
       let chosen = [];
+      let locked = false;
 
       function refreshBuilt() {
         built.innerHTML = '';
@@ -1199,10 +1214,14 @@
         }
         chosen.forEach(function (idx) {
           const chip = el('span', 'chip chip-placed', bankWords[idx]);
-          chip.addEventListener('click', function () {
-            chosen = chosen.filter(function (i) { return i !== idx; });
-            refreshBuilt(); refreshBank();
-          });
+          if (locked) {
+            chip.classList.add('chip-locked');
+          } else {
+            chip.addEventListener('click', function () {
+              chosen = chosen.filter(function (i) { return i !== idx; });
+              refreshBuilt(); refreshBank();
+            });
+          }
           built.appendChild(chip);
         });
       }
@@ -1211,10 +1230,14 @@
         displayOrder.forEach(function (idx) {
           if (chosen.indexOf(idx) !== -1) return;
           const chip = el('span', 'chip chip-pickable', bankWords[idx]);
-          chip.addEventListener('click', function () {
-            chosen.push(idx);
-            refreshBuilt(); refreshBank();
-          });
+          if (locked) {
+            chip.classList.add('chip-locked');
+          } else {
+            chip.addEventListener('click', function () {
+              chosen.push(idx);
+              refreshBuilt(); refreshBank();
+            });
+          }
           bank.appendChild(chip);
         });
       }
@@ -1222,14 +1245,18 @@
       wrap.appendChild(built);
       if (bankWords.length) wrap.appendChild(bank);
 
-      const checkBtn = el('button', 'btn-check', 'Check');
+      const checkBtn = el('button', 'btn-check', 'Submit');
       checkBtn.type = 'button';
       checkBtn.addEventListener('click', function () {
+        if (locked) return;
+        locked = true;
         const builtStr = chosen.map(function (i) { return bankWords[i]; }).join(' ');
         const ok = norm(builtStr) === norm(line.text);
         resultSlot.innerHTML = '';
         resultSlot.appendChild(checkRow(ok));
         if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + line.text + ')'));
+        checkBtn.disabled = true;
+        refreshBuilt(); refreshBank();
         if (onResult) onResult(ok);
       });
       wrap.appendChild(checkBtn);
@@ -1264,24 +1291,27 @@
         shell.appendChild(renderNumberFillListening(numberFill));
       }
 
-      // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank — hiện từng đoạn 1, xong mới qua đoạn sau
+      // Kiểu mới: chép chính tả — mỗi lần hiện 1 câu, bấm Submit chấm ngay, khoá lại rồi mới qua câu sau
       if (groups.length) {
         const wrap = el('div', 'exercise');
-        const totalLines = groups.reduce(function (s, g) { return s + (g.lines || []).length; }, 0);
-        const tracker = trackQuizState(totalLines);
-        const lineOffsets = [];
-        let acc = 0;
-        groups.forEach(function (g) { lineOffsets.push(acc); acc += (g.lines || []).length; });
-        buildStepper(wrap, groups, function (g, gi) {
-          const box = el('div');
-          box.appendChild(el('h3', 'ex-title', g.title || ('Dialogue ' + (gi + 1))));
-          (g.lines || []).forEach(function (line, li) {
-            box.appendChild(renderDictationLine(line, function (ok) { tracker.set(lineOffsets[gi] + li, ok); }));
+        const flatSteps = [];
+        groups.forEach(function (g, gi) {
+          (g.lines || []).forEach(function (line) {
+            flatSteps.push({ line: line, groupTitle: g.title || ('Dialogue ' + (gi + 1)) });
           });
+        });
+        const tracker = trackQuizState(flatSteps.length);
+        buildStepper(wrap, flatSteps, function (step, idx, markAnswered) {
+          const box = el('div');
+          box.appendChild(el('h3', 'ex-title', step.groupTitle));
+          box.appendChild(renderDictationLine(step.line, function (ok) {
+            tracker.set(idx, ok);
+            markAnswered();
+          }));
           return box;
-        }, { lastLabel: 'Listening complete 🎉' });
+        }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true });
         shell.appendChild(wrap);
-        if (totalLines) appendSubmitAndRing(shell, tracker);
+        if (flatSteps.length) appendSubmitAndRing(shell, tracker);
       }
 
       // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
