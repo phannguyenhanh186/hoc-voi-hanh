@@ -590,6 +590,20 @@
       container.appendChild(tracker.ring.el);
     }
 
+    // Chỉ tạo vòng tròn kết quả (không có nút Submit riêng) — dùng khi từng câu đã tự chấm ngay lúc làm,
+    // và kết quả tổng sẽ tự hiện ra khi làm xong câu cuối (thông qua opts.onFinish của buildStepper).
+    // Không tự appendChild — để caller tự chèn ringEl vào đúng vị trí (thường là sau khối câu hỏi).
+    function createResultsRingReveal(tracker) {
+      const progressKeyForThis = nextProgressKey();
+      return {
+        ringEl: tracker.ring.el,
+        finish: function () {
+          tracker.finalize();
+          markProgressDone(progressKeyForThis);
+        }
+      };
+    }
+
     function buildQuizBlock(quiz, onReviewTheory) {
       const wrap = el('div', 'gram2-quiz-wrap');
       wrap.appendChild(el('div', 'gram2-quiz-banner', 'Choose the correct answers.'));
@@ -1300,18 +1314,21 @@
             flatSteps.push({ line: line, groupTitle: g.title || ('Dialogue ' + (gi + 1)) });
           });
         });
-        const tracker = trackQuizState(flatSteps.length);
-        buildStepper(wrap, flatSteps, function (step, idx, markAnswered) {
-          const box = el('div');
-          box.appendChild(el('h3', 'ex-title', step.groupTitle));
-          box.appendChild(renderDictationLine(step.line, function (ok) {
-            tracker.set(idx, ok);
-            markAnswered();
-          }));
-          return box;
-        }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true });
-        shell.appendChild(wrap);
-        if (flatSteps.length) appendSubmitAndRing(shell, tracker);
+        if (flatSteps.length) {
+          const tracker = trackQuizState(flatSteps.length);
+          const resultsRing = createResultsRingReveal(tracker);
+          buildStepper(wrap, flatSteps, function (step, idx, markAnswered) {
+            const box = el('div');
+            box.appendChild(el('h3', 'ex-title', step.groupTitle));
+            box.appendChild(renderDictationLine(step.line, function (ok) {
+              tracker.set(idx, ok);
+              markAnswered();
+            }));
+            return box;
+          }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true, onFinish: resultsRing.finish });
+          shell.appendChild(wrap);
+          shell.appendChild(resultsRing.ringEl);
+        }
       }
 
       // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
@@ -2152,14 +2169,16 @@
       const box = el('div', 'exercise');
       if (nf.instruction) box.appendChild(el('div', 'gram2-quiz-banner', nf.instruction));
       const items = nf.items || [];
+      if (!items.length) return box;
       const tracker = trackQuizState(items.length);
+      const resultsRing = createResultsRingReveal(tracker);
       buildStepper(box, items, function (item, idx, markAnswered) {
         return renderNumberFillItem(item, true, function (ok) {
           tracker.set(idx, ok);
           markAnswered();
         });
-      }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true });
-      if (items.length) appendSubmitAndRing(box, tracker);
+      }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true, onFinish: resultsRing.finish });
+      box.appendChild(resultsRing.ringEl);
       return box;
     }
 
