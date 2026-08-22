@@ -261,11 +261,11 @@
               {
                 "question": "Which sentence means \"on Monday\"?",
                 "options": [
-                  "Vào buổi sáng.",
                   "Ở thứ Hai.",
+                  "Vào thứ Hai.",
                   "Là Thứ Hai."
                 ],
-                "answer": "Ở thứ Hai."
+                "answer": "Vào thứ Hai."
               },
               {
                 "question": "Complete the sentence: Mình đi làm ______ buổi sáng.",
@@ -280,10 +280,42 @@
                 "question": "Which sentence means \"I go home in the evening.\"",
                 "options": [
                   "Mình về nhà ở buổi chiều.",
-                  "Mình về nhà vào buổi trưa.",
+                  "Mình về nhà ở buổi tối.",
                   "Mình về nhà vào buổi tối."
                 ],
                 "answer": "Mình về nhà vào buổi tối."
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"Huy exercises in the afternoon\"",
+                "wordBank": [
+                  "vào",
+                  "đi",
+                  "thể",
+                  "Huy",
+                  "buổi",
+                  "ở",
+                  "tối",
+                  "dục",
+                  "không",
+                  "tập",
+                  "chiều"
+                ],
+                "answer": "Huy tập thể dục vào buổi chiều"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"I stay at home on Sunday\"",
+                "wordBank": [
+                  "ở",
+                  "Chủ Nhật",
+                  "mình",
+                  "không",
+                  "ngủ",
+                  "vào",
+                  "nhà"
+                ],
+                "answer": "Mình ở nhà vào Chủ Nhật"
               }
             ]
           }
@@ -355,6 +387,41 @@
                   "Anh thường ngủ vào buổi trưa."
                 ],
                 "answer": "Anh thường ngủ vào buổi trưa."
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"I often eat out on Friday night\"",
+                "wordBank": [
+                  "bạn",
+                  "sáng",
+                  "vào",
+                  "thứ",
+                  "không",
+                  "thường",
+                  "Sáu",
+                  "đi",
+                  "tối",
+                  "mình",
+                  "ăn",
+                  "buổi"
+                ],
+                "answer": "Mình thường đi ăn vào buổi tối thứ Sáu"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"Phong often goes to bed late on Saturday\"",
+                "wordBank": [
+                  "thường",
+                  "thứ",
+                  "vào",
+                  "đi",
+                  "Phong",
+                  "ngủ",
+                  "Hai",
+                  "trễ",
+                  "Bảy"
+                ],
+                "answer": "Phong thường đi ngủ trễ vào thứ Bảy"
               }
             ]
           },
@@ -412,6 +479,42 @@
                   "Bạn uống gì ở buổi sáng?"
                 ],
                 "answer": "Bạn thường uống gì vào buổi sáng?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"What do you often do on Monday?\"",
+                "wordBank": [
+                  "mình",
+                  "làm",
+                  "vào",
+                  "thứ",
+                  "gì",
+                  "thường",
+                  "Hai",
+                  "sáng",
+                  "bạn",
+                  "ăn",
+                  "?"
+                ],
+                "answer": "Bạn thường làm gì vào thứ Hai ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"What does Yến often eat in the evening?\"",
+                "wordBank": [
+                  "thường",
+                  "Yến",
+                  "chiều",
+                  "vào",
+                  "đi",
+                  "bạn",
+                  "gì",
+                  "buổi",
+                  "thứ",
+                  "tối",
+                  "?"
+                ],
+                "answer": "Yến thường ăn gì vào buổi tối ?"
               }
             ]
           },
@@ -474,6 +577,47 @@
                   "Em có đi ngủ sớm không?"
                 ],
                 "answer": "Em có thường đi ngủ sớm không?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"Does An often go to work on Wednesday?\"",
+                "wordBank": [
+                  "An",
+                  "Hai",
+                  "đi",
+                  "thường",
+                  "buổi",
+                  "vào",
+                  "Tư",
+                  "làm",
+                  "gì",
+                  "không",
+                  "có",
+                  "thứ",
+                  "?"
+                ],
+                "answer": "An có thường đi làm vào thứ Tư không ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"Do you often wake up early in the morning?\"",
+                "wordBank": [
+                  "bạn",
+                  "không",
+                  "thường",
+                  "vào",
+                  "có",
+                  "gì",
+                  "buổi",
+                  "ngủ",
+                  "sáng",
+                  "thứ",
+                  "làm",
+                  "dậy",
+                  "sớm",
+                  "?"
+                ],
+                "answer": "Bạn có thường ngủ dậy sớm vào buổi sáng không ?"
               }
             ]
           }
@@ -772,17 +916,29 @@
         "questions": [
           {
             "context": "Câu 1: Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để làm gì?",
-            "options": ["ăn sáng và đi chơi", "ăn sáng và đi làm", "ăn trưa và đi làm"],
+            "options": [
+              "ăn sáng và đi chơi",
+              "ăn sáng và đi làm",
+              "ăn trưa và đi làm"
+            ],
             "answer": "ăn sáng và đi làm"
           },
           {
             "context": "Câu 2: Vào buổi trưa, họ thường làm gì?",
-            "options": ["tập thể dục với đồng nghiệp", "đi ăn với gia đình", "đi ăn với đồng nghiệp"],
+            "options": [
+              "tập thể dục với đồng nghiệp",
+              "đi ăn với gia đình",
+              "đi ăn với đồng nghiệp"
+            ],
             "answer": "đi ăn với đồng nghiệp"
           },
           {
             "context": "Câu 3: Nhân viên văn phòng thường làm gì sau khi về nhà vào buổi chiều?",
-            "options": ["ăn tối", "dọn nhà", "lướt điện thoại"],
+            "options": [
+              "ăn tối",
+              "dọn nhà",
+              "lướt điện thoại"
+            ],
             "answer": "ăn tối"
           }
         ]
