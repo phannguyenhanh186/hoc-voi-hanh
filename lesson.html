@@ -178,24 +178,23 @@
     }
 
     // ---------- Hub (màn hình chọn phần) / Tabs ----------
+    // Bấm vào 1 thẻ trên hub sẽ chuyển sang URL riêng (lesson.html?...&tab=X) — một trang thật sự,
+    // có trong lịch sử trình duyệt. Quay lại hub dùng nút back có sẵn (mũi tên "←" trong từng phần),
+    // nút này gọi history.back() để quay lại đúng trang hub vừa rồi.
     const $hub = document.getElementById('lesson-hub');
-    const tabMemoKey = 'lastTab:' + level + ':' + itemId;
     function setActiveTab(tab) {
       if (PANELS.indexOf(tab) === -1) return;
       $hub.hidden = true;
       PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = (p !== tab); });
     }
-    function showHub() {
-      PANELS.forEach(function (p) { document.getElementById('panel-' + p).hidden = true; });
-      $hub.hidden = false;
-      refreshHubStats();
+    function hubUrl() {
+      return 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
     }
     $hub.addEventListener('click', function (e) {
       const card = e.target.closest('.hub-card');
       if (!card) return;
       const tab = card.dataset.tab;
-      setActiveTab(tab);
-      try { sessionStorage.setItem(tabMemoKey, tab); } catch (e) {}
+      location.href = hubUrl() + '&tab=' + encodeURIComponent(tab);
     });
     (function () {
       const initialTab = params.get('tab');
@@ -439,9 +438,7 @@
       const items = (item.vocab && item.vocab.items) || [];
       if (!items.length) { panel.appendChild(emptyNote('Vocabulary is being updated.')); return; }
 
-      const shell = buildSectionShell('Vocabulary', function () {
-        location.href = $backLink.href;
-      });
+      const shell = buildSectionShell('Vocabulary', backToTabs);
       panel.appendChild(shell);
 
       const modeBar = el('div', 'mode-bar');
@@ -873,8 +870,10 @@
       return shell;
     }
     // Back về màn hình chọn phần (hub)
+    // Nút "←" có sẵn trong từng phần: quay lại trang hub bằng lịch sử trình duyệt
+    // (vì bấm vào thẻ trên hub giờ là chuyển trang thật, không phải chuyển panel trong cùng 1 trang).
     function backToTabs() {
-      showHub();
+      history.back();
     }
 
     function buildSimpleTheory(sub, container) {
