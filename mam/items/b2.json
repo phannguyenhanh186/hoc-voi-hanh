@@ -573,11 +573,28 @@
     "passages": [
       {
         "id": "r1",
-        "title": "Người Việt và cà phê",
+        "title": "Sở thích của người Việt",
         "audio": "audio/b2/{voice}/reading_r1.mp3",
-        "text": "Nhiều người Việt Nam thích cà phê. Mọi người thường uống cà phê trước khi đi làm. Có người thích ngồi ở quán cà phê. Có người thích làm việc hoặc thích học ở quán cà phê. Nhiều người trẻ cũng thích gặp bạn ở quán cà phê.\nKhông phải ai cũng thích cà phê. Một số người không thích uống cà phê. Họ thích trà hoặc nước trái cây. Có người không thích ngồi ở quán đông người. Họ thích pha và uống cà phê ở nhà.",
-        "titleEn": "Vietnamese People and Coffee",
-        "textEn": "Many Vietnamese people like coffee. People often drink coffee before going to work. Some people like sitting at coffee shops. Some people like working or studying at coffee shops. Many young people also like meeting friends at coffee shops.\nNot everyone likes coffee. Some people don't like drinking coffee. They prefer tea or fruit juice. Some people don't like sitting in crowded coffee shops. They prefer making and drinking coffee at home."
+        "text": "Người Việt thích ăn cơm với thịt gà, thịt bò, rau với canh.\nNgười Việt thích uống cà phê. Nhiều người thích cà phê sữa và bạc xỉu. Một số người thích cà phê đen. Ngoài cà phê, nhiều người cũng thích uống trà, đặc biệt là trà xanh.\nCó người thích đi ăn vào cuối tuần, nhưng có người cũng thích nấu ăn hoặc coi tivi ở nhà. Một số người thích du lịch khi có thời gian. Mỗi người có sở thích khác nhau.",
+        "titleEn": "Vietnamese People's Preferences",
+        "textEn": "Vietnamese people like to eat rice with chicken, beef, vegetables and soup.\nVietnamese people like to drink coffee. Many people like milk coffee and bạc xỉu. Some people like black coffee. Besides coffee, many people also like to drink tea, especially green tea.\nSome people like eating out on the weekend, but some people also like cooking or watching TV at home. Some people like traveling when they have time. Everyone has different interests.",
+        "questions": [
+          {
+            "context": "Câu 1: Người Việt thích ăn cơm với thịt, rau với _____",
+            "options": ["phở", "bún", "canh"],
+            "answer": "canh"
+          },
+          {
+            "context": "Câu 2: Ngoài cà phê, một số người thích uống _____",
+            "options": ["bạc xỉu", "trà xanh", "trái cây"],
+            "answer": "trà xanh"
+          },
+          {
+            "context": "Câu 3: Có người thích đi ăn nhưng có người thích _____ ở nhà.",
+            "options": ["coi ti vi", "du lịch", "làm việc"],
+            "answer": "coi ti vi"
+          }
+        ]
       }
     ]
   },
