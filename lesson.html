@@ -182,8 +182,7 @@
       if (!btn) return;
       const tab = btn.dataset.tab;
       setActiveTab(tab);
-      const hideForThis = tab === 'reading' || (tab === 'grammar' && usesSectionsGrammar);
-      toggleToolbar(!hideForThis);
+      toggleToolbar(false);
       try { sessionStorage.setItem(tabMemoKey, tab); } catch (e) {}
     });
     (function () {
@@ -431,6 +430,12 @@
       const items = (item.vocab && item.vocab.items) || [];
       if (!items.length) { panel.appendChild(emptyNote('Vocabulary is being updated.')); return; }
 
+      if (!panel.hidden) toggleToolbar(false);
+      const shell = buildSectionShell('Vocabulary', function () {
+        location.href = $backLink.href;
+      });
+      panel.appendChild(shell);
+
       const modeBar = el('div', 'mode-bar');
       const modes = [['flashcards', 'Flashcards'], ['quiz', 'Quiz'], ['list', 'List']];
       const content = el('div', 'vocab-content');
@@ -454,8 +459,8 @@
         b.addEventListener('click', function () { setMode(m[0]); });
         modeBar.appendChild(b);
       });
-      panel.appendChild(modeBar);
-      panel.appendChild(content);
+      shell.appendChild(modeBar);
+      shell.appendChild(content);
       draw();
     }
 
@@ -832,10 +837,28 @@
     // NGỮ PHÁP KIỂU MỚI — sidebar 2 cấp + nội dung Theory/Practice
     // (dùng khi item.grammar.sections tồn tại; không ảnh hưởng bài dùng "points")
     // ========================================================
-    let usesSectionsGrammar = false;
     function toggleToolbar(show) {
       const bar = document.querySelector('.toolbar');
       if (bar) bar.hidden = !show;
+    }
+
+    // ---------- Section shell dùng chung: thanh trên cùng có tên phần + mũi tên back ----------
+    function buildSectionShell(labelText, onBack) {
+      const shell = el('div', 'gram2-shell');
+      const topbar = el('div', 'gram2-topbar');
+      const backBtn = el('button', 'gram2-back-btn', '←'); backBtn.type = 'button';
+      backBtn.setAttribute('aria-label', 'Back');
+      backBtn.addEventListener('click', onBack);
+      topbar.appendChild(backBtn);
+      topbar.appendChild(el('div', 'gram2-tab-pill', labelText));
+      shell.appendChild(topbar);
+      return shell;
+    }
+    // Back về màn hình chọn phần (hiện lại toolbar, không phần nào được chọn sẵn)
+    function backToTabs() {
+      toggleToolbar(true);
+      setActiveTab('vocab');
+      try { sessionStorage.setItem(tabMemoKey, 'vocab'); } catch (e) {}
     }
 
     function buildSimpleTheory(sub, container) {
@@ -910,20 +933,9 @@
     function renderGrammarTabSidebar(item, sections) {
       const panel = document.getElementById('panel-grammar');
       panel.innerHTML = '';
-      usesSectionsGrammar = true;
       if (!panel.hidden) toggleToolbar(false);
 
-      const shell = el('div', 'gram2-shell');
-      const topbar = el('div', 'gram2-topbar');
-      const backBtn = el('button', 'gram2-back-btn', '←'); backBtn.type = 'button';
-      backBtn.addEventListener('click', function () {
-        toggleToolbar(true);
-        setActiveTab('vocab');
-        try { sessionStorage.setItem(tabMemoKey, 'vocab'); } catch (e) {}
-      });
-      topbar.appendChild(backBtn);
-      topbar.appendChild(el('div', 'gram2-tab-pill', 'Grammar'));
-      shell.appendChild(topbar);
+      const shell = buildSectionShell('Grammar', backToTabs);
 
       const body = el('div', 'gram2-body');
       const sidebar = el('aside', 'gram2-sidebar');
@@ -1029,6 +1041,13 @@
       panel.innerHTML = '';
       const points = (item.grammar && item.grammar.points) || [];
       if (!points.length) { panel.appendChild(emptyNote('Grammar is being updated.')); return; }
+
+      if (!panel.hidden) toggleToolbar(false);
+      const shell = buildSectionShell('Grammar', backToTabs);
+      panel.appendChild(shell);
+      const gPanel = el('div', 'gram2-legacy-content');
+      shell.appendChild(gPanel);
+
       points.forEach(function (g) {
         const box = el('div', 'exercise');
         if (g.pronounContent) {
@@ -1046,7 +1065,7 @@
             actions.appendChild(quizBtn);
             box.appendChild(actions);
           }
-          panel.appendChild(box);
+          gPanel.appendChild(box);
           return;
         }
         if (g.subsections && g.subsections.length) {
@@ -1061,13 +1080,13 @@
             g.extraTips.forEach(function (et) { box.appendChild(renderTipBox(et)); });
           }
           if (g.quiz && g.quiz.length) box.appendChild(renderQuizToggle(g.quiz));
-          panel.appendChild(box);
+          gPanel.appendChild(box);
           return;
         }
         if (g.pattern) {
           box.appendChild(el('h3', 'ex-title', g.title));
           renderPatternBody(box, g);
-          panel.appendChild(box);
+          gPanel.appendChild(box);
           return;
         }
         if (g.quiz && g.quiz.length && !g.pattern && !g.subsections && !g.pronounContent && !g.refInput) {
@@ -1082,7 +1101,7 @@
           quizBtn.textContent = 'Quiz →';
           actions.appendChild(quizBtn);
           box.appendChild(actions);
-          panel.appendChild(box);
+          gPanel.appendChild(box);
           return;
         }
         if (g.refInput) {
@@ -1107,7 +1126,7 @@
             actions.appendChild(quizBtn);
           }
           box.appendChild(actions);
-          panel.appendChild(box);
+          gPanel.appendChild(box);
           return;
         }
         const headRow = el('div', 'grammar-head');
@@ -1119,7 +1138,7 @@
           row.appendChild(el('span', 'turn-text', ex));
           box.appendChild(row);
         });
-        panel.appendChild(box);
+        gPanel.appendChild(box);
       });
     }
 
@@ -1228,16 +1247,21 @@
       const dialogueFill = listening.dialogueFill;
       const hasDialogueFill = dialogueFill && dialogueFill.lines && dialogueFill.lines.length;
       if (!groups.length && !entries.length && !hasNumberFill && !hasDialogueFill) { panel.appendChild(emptyNote('Listening is being updated.')); return; }
-      if (listening.instruction) panel.appendChild(el('p', 'note', listening.instruction));
+
+      if (!panel.hidden) toggleToolbar(false);
+      const shell = buildSectionShell('Listening', backToTabs);
+      panel.appendChild(shell);
+
+      if (listening.instruction) shell.appendChild(el('p', 'note', listening.instruction));
 
       // Điền từ vào chỗ trống (word bank)
       if (hasDialogueFill) {
-        panel.appendChild(renderDialogueFill(Object.assign({ title: 'Fill in the Blanks' }, dialogueFill)));
+        shell.appendChild(renderDialogueFill(Object.assign({ title: 'Fill in the Blanks' }, dialogueFill)));
       }
 
       // Điền số vào chỗ trống bằng bàn phím số
       if (hasNumberFill) {
-        panel.appendChild(renderNumberFillListening(numberFill));
+        shell.appendChild(renderNumberFillListening(numberFill));
       }
 
       // Kiểu mới: chép chính tả theo từng đoạn hội thoại, có word bank — hiện từng đoạn 1, xong mới qua đoạn sau
@@ -1256,8 +1280,8 @@
           });
           return box;
         }, { lastLabel: 'Listening complete 🎉' });
-        panel.appendChild(wrap);
-        if (totalLines) appendSubmitAndRing(panel, tracker);
+        shell.appendChild(wrap);
+        if (totalLines) appendSubmitAndRing(shell, tracker);
       }
 
       // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
@@ -1270,7 +1294,7 @@
           if (it.transcript) row.appendChild(el('span', 'order-label', it.transcript));
           box.appendChild(row);
         });
-        panel.appendChild(box);
+        shell.appendChild(box);
       }
     }
 
@@ -1302,18 +1326,8 @@
       if (!passages.length) { panel.appendChild(emptyNote('Reading is being updated.')); return; }
  
       if (!panel.hidden) toggleToolbar(false);
-      const shell = el('div', 'gram2-shell');
-      const topbar = el('div', 'gram2-topbar');
-      const backBtn = el('button', 'gram2-back-btn', '←'); backBtn.type = 'button';
-      backBtn.addEventListener('click', function () {
-        toggleToolbar(true);
-        setActiveTab('vocab');
-        try { sessionStorage.setItem(tabMemoKey, 'vocab'); } catch (e) {}
-      });
-      topbar.appendChild(backBtn);
-      topbar.appendChild(el('div', 'gram2-tab-pill', 'Reading'));
-      shell.appendChild(topbar);
- 
+      const shell = buildSectionShell('Reading', backToTabs);
+
       passages.forEach(function (p) {
         if (p.audio) shell.appendChild(renderAudioPlayer(p.audio));
  
