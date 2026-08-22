@@ -391,11 +391,23 @@
             sidebar.querySelectorAll('.gram2-subtopic-btn').forEach(function (b) { b.classList.remove('active'); });
             btn.classList.add('active');
             renderContent(section, sub, multi);
+            // Trên mobile (sidebar + content xếp chồng dọc), nội dung nằm khuất bên dưới
+            // toàn bộ danh sách các mục — cuộn tới đó để người học thấy ngay kết quả.
+            if (window.matchMedia('(max-width: 720px)').matches) {
+              window.requestAnimationFrame(function () {
+                const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 0;
+                const y = content.getBoundingClientRect().top + window.scrollY - headerH - 12;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              });
+            }
           });
           list.appendChild(btn);
           if (!firstEntry) firstEntry = { btn: btn, section: section, sub: sub, multi: multi };
         });
         secBox.appendChild(list);
+        // Mặc định chỉ mở mục đầu tiên; các mục còn lại thu gọn sẵn để sidebar không
+        // quá dài, tránh đẩy phần nội dung (Theory/Practice) xuống khuất bên dưới.
+        if (si !== 0) { list.classList.add('gram2-collapsed'); chevron.textContent = '▸'; }
         header.addEventListener('click', function () {
           const collapsed = list.classList.toggle('gram2-collapsed');
           chevron.textContent = collapsed ? '▸' : '▾';
