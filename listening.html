@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Listening — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="lesson.html">← Back</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <div class="meta-badges" id="meta-badges"></div>
+      <h1 id="title">Loading…</h1>
+    </div>
+
+    <section class="tab-panel" id="panel-listening"></section>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script src="lesson-shared.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || '';
+    let level = params.get('level') || 'mam';
+
+    const $title = document.getElementById('title');
+    const $backLink = document.getElementById('back-link');
+
+    // Back về landing page (trang chọn kỹ năng) của đúng bài + cấp hiện tại
+    $backLink.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
+    function backToTabs() { location.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level); }
+
+    // Tiến độ của riêng phần "Listening" (localStorage tách theo từng kỹ năng)
+    const progress = createProgressTracker('progress:' + level + ':' + itemId + ':listening');
+    function nextProgressKey(k) { return progress.nextProgressKey(k); }
+    function markProgressDone(k) { return progress.markProgressDone(k); }
+
+    function renderDictationLine(line, onResult) {
+      const wrap = el('div', 'dictation-item');
+      const row = el('div', 'listen-row');
+      row.appendChild(playBtn(line.audio));
+      const resultSlot = el('span', 'result-slot');
+      row.appendChild(resultSlot);
+      wrap.appendChild(row);
+
+      const bankWords = line.wordBank || [];
+      const built = el('div', 'scramble-built');
+      const bank = el('div', 'scramble-bank');
+      const displayOrder = shuffle(bankWords.map(function (_, i) { return i; }));
+      let chosen = [];
+      let locked = false;
+
+      function refreshBuilt() {
+        built.innerHTML = '';
+        if (!chosen.length) {
+          built.appendChild(el('span', 'dictation-placeholder', 'Tap the words below to build the sentence…'));
+        }
+        chosen.forEach(function (idx) {
+          const chip = el('span', 'chip chip-placed', bankWords[idx]);
+          if (locked) {
+            chip.classList.add('chip-locked');
+          } else {
+            chip.addEventListener('click', function () {
+              chosen = chosen.filter(function (i) { return i !== idx; });
+              refreshBuilt(); refreshBank();
+            });
+          }
+          built.appendChild(chip);
+        });
+      }
+      function refreshBank() {
+        bank.innerHTML = '';
+        displayOrder.forEach(function (idx) {
+          if (chosen.indexOf(idx) !== -1) return;
+          const chip = el('span', 'chip chip-pickable', bankWords[idx]);
+          if (locked) {
+            chip.classList.add('chip-locked');
+          } else {
+            chip.addEventListener('click', function () {
+              chosen.push(idx);
+              refreshBuilt(); refreshBank();
+            });
+          }
+          bank.appendChild(chip);
+        });
+      }
+      refreshBuilt(); refreshBank();
+      wrap.appendChild(built);
+      if (bankWords.length) wrap.appendChild(bank);
+
+      const checkBtn = el('button', 'btn-check', 'Submit');
+      checkBtn.type = 'button';
+      checkBtn.addEventListener('click', function () {
+        if (locked) return;
+        locked = true;
+        const builtStr = chosen.map(function (i) { return bankWords[i]; }).join(' ');
+        const ok = norm(builtStr) === norm(line.text);
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+        if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + line.text + ')'));
+        checkBtn.disabled = true;
+        refreshBuilt(); refreshBank();
+        if (onResult) onResult(ok);
+      });
+      wrap.appendChild(checkBtn);
+      return wrap;
+    }
+
+
+    function renderListeningTab(item) {
+      const panel = document.getElementById('panel-listening');
+      panel.innerHTML = '';
+      const listening = item.listening || {};
+      const groups = listening.groups || [];
+      const entries = listening.items || [];
+      const numberFill = listening.numberFill;
+      const hasNumberFill = numberFill && numberFill.items && numberFill.items.length;
+      const dialogueFill = listening.dialogueFill;
+      const hasDialogueFill = dialogueFill && dialogueFill.lines && dialogueFill.lines.length;
+      if (!groups.length && !entries.length && !hasNumberFill && !hasDialogueFill) { panel.appendChild(emptyNote('Listening is being updated.')); return; }
+
+      const shell = buildSectionShell('Listening', backToTabs);
+      panel.appendChild(shell);
+
+      if (listening.instruction) shell.appendChild(el('div', 'gram2-quiz-banner', listening.instruction));
+
+      // Điền từ vào chỗ trống (word bank)
+      if (hasDialogueFill) {
+        shell.appendChild(renderDialogueFill(Object.assign({ title: 'Fill in the Blanks' }, dialogueFill)));
+      }
+
+      // Điền số vào chỗ trống bằng bàn phím số
+      if (hasNumberFill) {
+        shell.appendChild(renderNumberFillListening(numberFill));
+      }
+
+      // Kiểu mới: chép chính tả — mỗi lần hiện 1 câu, bấm Submit chấm ngay, khoá lại rồi mới qua câu sau
+      if (groups.length) {
+        const wrap = el('div', 'exercise');
+        const flatSteps = [];
+        groups.forEach(function (g, gi) {
+          (g.lines || []).forEach(function (line) {
+            flatSteps.push({ line: line, groupTitle: g.title || ('Dialogue ' + (gi + 1)) });
+          });
+        });
+        if (flatSteps.length) {
+          const tracker = trackQuizState(flatSteps.length);
+          const resultsRing = createResultsRingReveal(tracker);
+          buildStepper(wrap, flatSteps, function (step, idx, markAnswered) {
+            const box = el('div');
+            box.appendChild(el('h3', 'ex-title', step.groupTitle));
+            box.appendChild(renderDictationLine(step.line, function (ok) {
+              tracker.set(idx, ok);
+              markAnswered();
+            }));
+            return box;
+          }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true, onFinish: resultsRing.finish });
+          shell.appendChild(wrap);
+          shell.appendChild(resultsRing.ringEl);
+        }
+      }
+
+      // Kiểu cũ: danh sách audio + transcript đơn giản (vẫn hỗ trợ để không hỏng bài cũ)
+      if (entries.length) {
+        const box = el('div', 'exercise');
+        entries.forEach(function (it, i) {
+          const row = el('div', 'listen-row');
+          row.appendChild(playBtn(it.audio));
+          row.appendChild(el('span', 'match-prompt', it.title || ('Part ' + (i + 1))));
+          if (it.transcript) row.appendChild(el('span', 'order-label', it.transcript));
+          box.appendChild(row);
+        });
+        shell.appendChild(box);
+      }
+    }
+
+    // ========================================================
+    // ĐỌC
+    // ========================================================
+
+
+    function renderDialogueFill(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      if (ex.wordBank && ex.wordBank.length) {
+        const bankRow = el('div', 'scramble-bank');
+        ex.wordBank.forEach(function (w) { bankRow.appendChild(el('span', 'chip chip-given', w)); });
+        box.appendChild(bankRow);
+      }
+      const selects = [];
+      (ex.lines || []).forEach(function (line) {
+        const row = el('div', 'turn dialogue-fill-line');
+        if (line.speaker) row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
+        const textSpan = el('span', 'turn-text');
+        (line.parts || []).forEach(function (part) {
+          if (typeof part === 'string') {
+            textSpan.appendChild(document.createTextNode(part));
+          } else if (part && part.blank) {
+            const select = document.createElement('select');
+            select.className = 'answer-select blank-select';
+            const optEmpty = el('option', null, '…'); optEmpty.value = ''; select.appendChild(optEmpty);
+            (ex.wordBank || []).forEach(function (w) { const opt = el('option', null, w); opt.value = w; select.appendChild(opt); });
+            select.dataset.answer = part.blank;
+            selects.push(select);
+            textSpan.appendChild(select);
+          }
+        });
+        row.appendChild(textSpan);
+        box.appendChild(row);
+      });
+      const resultSlot = el('span', 'result-slot dialogue-fill-result');
+      const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
+      const tracker = trackQuizState(selects.length);
+      checkBtn.addEventListener('click', function () {
+        let allOk = true;
+        selects.forEach(function (s, idx) {
+          if (!s.value) { s.classList.remove('select-wrong', 'select-ok'); allOk = false; return; }
+          const ok = s.value === s.dataset.answer;
+          if (!ok) allOk = false;
+          s.classList.toggle('select-wrong', !ok);
+          s.classList.toggle('select-ok', ok);
+          tracker.set(idx, ok);
+        });
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(allOk));
+      });
+      box.appendChild(checkBtn);
+      box.appendChild(resultSlot);
+      if (selects.length) appendSubmitAndRing(box, tracker);
+      return box;
+    }
+
+
+    function renderKeypad(onDigit, onBackspace) {
+      const pad = el('div', 'number-keypad');
+      ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].forEach(function (d) {
+        const b = el('button', 'key-btn', d); b.type = 'button';
+        b.addEventListener('click', function () { onDigit(d); });
+        pad.appendChild(b);
+      });
+      const back = el('button', 'key-btn key-back', '⌫'); back.type = 'button';
+      back.addEventListener('click', onBackspace);
+      pad.appendChild(back);
+      return pad;
+    }
+
+
+    function renderNumberFillItem(item, withAudio, onResult) {
+      const wrap = el('div', 'text-answer-item number-fill-item');
+      if (withAudio) {
+        const row = el('div', 'listen-row');
+        if (item.audio) row.appendChild(playBtn(item.audio));
+        row.appendChild(el('span', 'match-prompt', item.context));
+        wrap.appendChild(row);
+      } else {
+        wrap.appendChild(el('p', 'match-prompt', item.prompt));
+      }
+      const display = el('div', 'number-display', '—');
+      wrap.appendChild(display);
+      let val = '';
+      function updateDisplay() { display.textContent = val || '—'; }
+      const pad = renderKeypad(
+        function (d) { val += d; updateDisplay(); },
+        function () { val = val.slice(0, -1); updateDisplay(); }
+      );
+      wrap.appendChild(pad);
+      const resultSlot = el('span', 'result-slot');
+      const checkBtn = el('button', 'btn-check', 'Submit'); checkBtn.type = 'button';
+      let locked = false;
+      checkBtn.addEventListener('click', function () {
+        if (locked) return;
+        locked = true;
+        const ok = val.replace(/\D/g, '') === String(item.answer).replace(/\D/g, '');
+        resultSlot.innerHTML = '';
+        resultSlot.appendChild(checkRow(ok));
+        if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+        checkBtn.disabled = true;
+        pad.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
+        if (onResult) onResult(ok);
+      });
+      wrap.appendChild(checkBtn); wrap.appendChild(resultSlot);
+      return wrap;
+    }
+
+
+    function renderNumberFillListening(nf) {
+      const box = el('div', 'exercise');
+      if (nf.instruction) box.appendChild(el('div', 'gram2-quiz-banner', nf.instruction));
+      const items = nf.items || [];
+      if (!items.length) return box;
+      const tracker = trackQuizState(items.length);
+      const resultsRing = createResultsRingReveal(tracker);
+      buildStepper(box, items, function (item, idx, markAnswered) {
+        return renderNumberFillItem(item, true, function (ok) {
+          tracker.set(idx, ok);
+          markAnswered();
+        });
+      }, { lastLabel: 'Listening complete 🎉', requireAnswer: true, noBack: true, onFinish: resultsRing.finish });
+      box.appendChild(resultsRing.ringEl);
+      return box;
+    }
+
+
+    // ---------- Load ----------
+    (async function () {
+      try {
+        const res = await fetch(level + '/items/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+        document.title = (item.title || itemId) + ' — hoc voi hanh';
+        $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
+        renderListeningTab(item);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Could not load the lesson';
+        document.getElementById('panel-listening').innerHTML = '<p class="note">Lesson file not found. Check the path <code>' + level + '/items/' + itemId + '.json</code>.</p>';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+  <script src="pomodoro.js" defer></script>
+</body>
+</html>

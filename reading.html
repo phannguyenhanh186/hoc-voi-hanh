@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reading — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="lesson.html">← Back</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <div class="meta-badges" id="meta-badges"></div>
+      <h1 id="title">Loading…</h1>
+    </div>
+
+    <section class="tab-panel" id="panel-reading"></section>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script src="lesson-shared.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || '';
+    let level = params.get('level') || 'mam';
+
+    const $title = document.getElementById('title');
+    const $backLink = document.getElementById('back-link');
+
+    // Back về landing page (trang chọn kỹ năng) của đúng bài + cấp hiện tại
+    $backLink.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
+    function backToTabs() { location.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level); }
+
+    // Tiến độ của riêng phần "Reading" (localStorage tách theo từng kỹ năng)
+    const progress = createProgressTracker('progress:' + level + ':' + itemId + ':reading');
+    function nextProgressKey(k) { return progress.nextProgressKey(k); }
+    function markProgressDone(k) { return progress.markProgressDone(k); }
+
+    function makeSplitDraggable(container, leftPane, divider) {
+      let dragging = false;
+      divider.addEventListener('pointerdown', function (e) {
+        dragging = true;
+        divider.setPointerCapture(e.pointerId);
+      });
+      divider.addEventListener('pointermove', function (e) {
+        if (!dragging) return;
+        const rect = container.getBoundingClientRect();
+        let pct = ((e.clientX - rect.left) / rect.width) * 100;
+        pct = Math.min(80, Math.max(20, pct));
+        leftPane.style.flexBasis = pct + '%';
+      });
+      function endDrag() { dragging = false; }
+      divider.addEventListener('pointerup', endDrag);
+      divider.addEventListener('pointercancel', endDrag);
+    }
+ 
+
+
+    function renderReadingTab(item) {
+      const panel = document.getElementById('panel-reading');
+      panel.innerHTML = '';
+      const passages = (item.reading && item.reading.passages) || [];
+      if (!passages.length) { panel.appendChild(emptyNote('Reading is being updated.')); return; }
+ 
+      const shell = buildSectionShell('Reading', backToTabs);
+
+      passages.forEach(function (p) {
+        const passageBox = el('div', 'reading-passage');
+        if (p.audio) passageBox.appendChild(renderAudioPlayer(p.audio));
+
+        // Bước 1: chỉ hiện bản tiếng Việt trước
+        const soloPane = el('div', 'read2-pane read2-solo');
+        soloPane.appendChild(el('h3', 'ex-title', p.title || ''));
+        (String(p.text || '').split(/\n+/)).forEach(function (para) {
+          if (para.trim()) soloPane.appendChild(el('p', 'reading-para', para.trim()));
+        });
+        passageBox.appendChild(soloPane);
+
+        // Bản song ngữ (side by side) — dựng sẵn nhưng ẩn đi, chỉ hiện khi bấm "Show Translation"
+        const split = el('div', 'read2-split');
+        split.style.display = 'none';
+        const leftPane = el('div', 'read2-pane');
+        leftPane.appendChild(el('h3', 'ex-title', p.title || ''));
+        (String(p.text || '').split(/\n+/)).forEach(function (para) {
+          if (para.trim()) leftPane.appendChild(el('p', 'reading-para', para.trim()));
+        });
+
+        const divider = el('div', 'read2-divider');
+
+        const rightPane = el('div', 'read2-pane');
+        if (p.titleEn || p.textEn) {
+          rightPane.appendChild(el('h3', 'ex-title', p.titleEn || ''));
+          (String(p.textEn || '').split(/\n+/)).forEach(function (para) {
+            if (para.trim()) rightPane.appendChild(el('p', 'reading-para', para.trim()));
+          });
+        } else {
+          rightPane.appendChild(el('p', 'note', 'English translation coming soon.'));
+        }
+
+        split.appendChild(leftPane);
+        split.appendChild(divider);
+        split.appendChild(rightPane);
+        passageBox.appendChild(split);
+        makeSplitDraggable(split, leftPane, divider);
+
+        // "Show Translation" — hiện ra ngay khi làm xong (bấm Submit ở câu hỏi, hoặc bấm "Done reading" nếu không có câu hỏi)
+        const actionsRow = el('div', 'reading-actions');
+        const showTransBtn = el('button', 'btn-check btn-secondary', 'Show Translation');
+        showTransBtn.type = 'button';
+        showTransBtn.style.display = 'none';
+        showTransBtn.addEventListener('click', function () {
+          soloPane.style.display = 'none';
+          split.style.display = '';
+          showTransBtn.style.display = 'none';
+        });
+        function revealShowTranslation() {
+          showTransBtn.style.display = '';
+        }
+
+        const hasQuizLike = (p.questions && p.questions.length) || (p.textQuestions && p.textQuestions.length) || (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length);
+
+        if (p.questions && p.questions.length) {
+          passageBox.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions, onFinish: revealShowTranslation }));
+        }
+        if (p.textQuestions && p.textQuestions.length) {
+          passageBox.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions, onFinish: revealShowTranslation }));
+        }
+        if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
+          passageBox.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks', onFinish: revealShowTranslation }, p.fillBlanks)));
+        }
+
+        // Không có câu hỏi nào -> vẫn cần nút "Done reading" để xác nhận đã đọc xong trước khi hiện Show Translation
+        if (!hasQuizLike) {
+          const pKey = nextProgressKey();
+          const doneBtn = el('button', 'btn-check', 'Done reading ✓');
+          doneBtn.type = 'button';
+          doneBtn.addEventListener('click', function () {
+            markProgressDone(pKey);
+            doneBtn.textContent = 'Completed ✓';
+            doneBtn.disabled = true;
+            revealShowTranslation();
+          });
+          actionsRow.appendChild(doneBtn);
+        }
+        actionsRow.appendChild(showTransBtn);
+        passageBox.appendChild(actionsRow);
+
+        shell.appendChild(passageBox);
+      });
+ 
+      panel.appendChild(shell);
+    }
+
+    // ========================================================
+    // CHUẨN BỊ (pre-class)
+    // ========================================================
+
+
+    function renderChoiceContext(text) {
+      const wrap = el('div', 'choice-context');
+      (String(text || '').split(/\n+/)).forEach(function (line) {
+        if (line.trim()) wrap.appendChild(el('p', 'choice-line', line.trim()));
+      });
+      return wrap;
+    }
+
+
+    function renderChoiceQuiz(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      if (ex.image) { const img = document.createElement('img'); img.src = ex.image; img.className = 'choice-quiz-shared-img'; box.appendChild(img); }
+      const items = ex.items || [];
+      const tracker = trackQuizState(items.length);
+      items.forEach(function (q, qIdx) {
+        const qBox = el('div', 'reasoning-item');
+        if (q.image) { const img = document.createElement('img'); img.src = q.image; img.className = 'choice-quiz-img'; qBox.appendChild(img); }
+        if (q.context) qBox.appendChild(renderChoiceContext(q.context));
+        const optWrap = el('div', 'quiz-options');
+        const explainSlot = el('p', 'ex-instruction reasoning-explain');
+        (q.options || []).forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            const ok = opt === q.answer;
+            Array.from(optWrap.children).forEach(function (b) { b.classList.remove('opt-correct', 'opt-wrong'); });
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) {
+              Array.from(optWrap.children).forEach(function (b) { if (b.textContent === q.answer) b.classList.add('opt-correct'); });
+            }
+            explainSlot.textContent = (q.explanations && q.explanations[opt]) || '';
+            tracker.set(qIdx, ok);
+          });
+          optWrap.appendChild(btn);
+        });
+        qBox.appendChild(optWrap);
+        qBox.appendChild(explainSlot);
+        box.appendChild(qBox);
+      });
+      if (items.length) appendSubmitAndRing(box, tracker, ex.onFinish);
+      return box;
+    }
+
+
+    function renderFillBlanksText(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      const inputs = [];
+      (ex.lines || []).forEach(function (line) {
+        const row = el('div', 'turn dialogue-fill-line');
+        if (line.speaker) row.appendChild(el('span', 'turn-speaker', line.speaker + ':'));
+        const textSpan = el('span', 'turn-text');
+        (line.parts || []).forEach(function (part) {
+          if (typeof part === 'string') {
+            textSpan.appendChild(document.createTextNode(part));
+          } else if (part && part.blank) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'blank-input fill-blank-input';
+            const accepted = Array.isArray(part.blank) ? part.blank : [part.blank];
+            inputs.push({ input: input, accepted: accepted });
+            textSpan.appendChild(input);
+          }
+        });
+        row.appendChild(textSpan);
+        box.appendChild(row);
+      });
+      const tracker = trackQuizState(inputs.length);
+      const resultsRing = inputs.length ? createResultsRingReveal(tracker) : null;
+      const submitBtn = el('button', 'btn-check', 'Submit'); submitBtn.type = 'button';
+      submitBtn.addEventListener('click', function () {
+        inputs.forEach(function (pair, idx) {
+          const inp = pair.input;
+          const val = norm(inp.value);
+          const ok = !!inp.value.trim() && pair.accepted.some(function (a) { return norm(a) === val; });
+          inp.classList.toggle('select-wrong', !ok);
+          inp.classList.toggle('select-ok', ok);
+          inp.disabled = true;
+          tracker.set(idx, ok);
+        });
+        submitBtn.disabled = true;
+        if (resultsRing) resultsRing.finish();
+        if (ex.onFinish) ex.onFinish();
+      });
+      box.appendChild(submitBtn);
+      if (resultsRing) box.appendChild(resultsRing.ringEl);
+      return box;
+    }
+
+
+    function renderTextAnswer(ex) {
+      const box = el('div', 'exercise');
+      box.appendChild(el('h3', 'ex-title', ex.title));
+      if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
+      var activeInput = null;
+      if (ex.wordBank && ex.wordBank.length) {
+        const bankRow = el('div', 'scramble-bank');
+        ex.wordBank.forEach(function (w) {
+          const chip = el('span', 'chip chip-pickable', w);
+          chip.addEventListener('click', function () {
+            const target = activeInput || box.querySelector('.text-answer-input');
+            if (!target) return;
+            target.value = (target.value ? target.value + ' ' : '') + w;
+            target.focus();
+          });
+          bankRow.appendChild(chip);
+        });
+        box.appendChild(bankRow);
+      }
+      const items = ex.items || [];
+      const tracker = trackQuizState(items.length);
+      items.forEach(function (item, itemIdx) {
+        const row = el('div', 'text-answer-item');
+        row.appendChild(el('p', 'match-prompt', item.prompt));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'blank-input text-answer-input';
+        input.placeholder = 'Write it out…';
+        input.addEventListener('focus', function () { activeInput = input; });
+        if (item.wordBank && item.wordBank.length) {
+          const itemBank = el('div', 'scramble-bank');
+          item.wordBank.forEach(function (w) {
+            const chip = el('span', 'chip chip-pickable', w);
+            chip.addEventListener('click', function () {
+              input.value = (input.value ? input.value + ' ' : '') + w;
+              input.focus();
+            });
+            itemBank.appendChild(chip);
+          });
+          row.appendChild(itemBank);
+        }
+        row.appendChild(input);
+        const resultSlot = el('span', 'result-slot');
+        const checkBtn = el('button', 'btn-check', 'Check'); checkBtn.type = 'button';
+        checkBtn.addEventListener('click', function () {
+          const ok = norm(input.value) === norm(item.answer);
+          resultSlot.innerHTML = '';
+          resultSlot.appendChild(checkRow(ok));
+          if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + item.answer + ')'));
+          tracker.set(itemIdx, ok);
+        });
+        row.appendChild(checkBtn); row.appendChild(resultSlot);
+        box.appendChild(row);
+      });
+      if (items.length) appendSubmitAndRing(box, tracker, ex.onFinish);
+      return box;
+    }
+
+    const EX_RENDERERS = {
+      matching: renderMatching,
+      rime_table_fill: renderRimeTableFill,
+      sort: renderSort,
+      scramble: renderScramble,
+      listen_order_fill: renderListenOrderFill,
+      choice: renderChoiceQuiz,
+      dialogue_fill: renderDialogueFill,
+      text_answer: renderTextAnswer,
+      number_fill: renderNumberFillExercise,
+      dialogue_order: renderDialogueOrder
+    };
+
+
+    // ---------- Load ----------
+    (async function () {
+      try {
+        const res = await fetch(level + '/items/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+        document.title = (item.title || itemId) + ' — hoc voi hanh';
+        $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
+        renderReadingTab(item);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Could not load the lesson';
+        document.getElementById('panel-reading').innerHTML = '<p class="note">Lesson file not found. Check the path <code>' + level + '/items/' + itemId + '.json</code>.</p>';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+  <script src="pomodoro.js" defer></script>
+</body>
+</html>

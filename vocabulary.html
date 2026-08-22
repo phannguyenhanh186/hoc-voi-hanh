@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vocabulary — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" id="back-link" href="lesson.html">← Back</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <div class="meta-badges" id="meta-badges"></div>
+      <h1 id="title">Loading…</h1>
+    </div>
+
+    <section class="tab-panel" id="panel-vocab"></section>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <script src="lesson-shared.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || '';
+    let level = params.get('level') || 'mam';
+
+    const $title = document.getElementById('title');
+    const $backLink = document.getElementById('back-link');
+
+    // Back về landing page (trang chọn kỹ năng) của đúng bài + cấp hiện tại
+    $backLink.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
+    function backToTabs() { location.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level); }
+
+    // Tiến độ của riêng phần "Vocabulary" (localStorage tách theo từng kỹ năng)
+    const progress = createProgressTracker('progress:' + level + ':' + itemId + ':vocab');
+    function nextProgressKey(k) { return progress.nextProgressKey(k); }
+    function markProgressDone(k) { return progress.markProgressDone(k); }
+
+    function savedKey(w) { return 'saved:' + level + ':' + itemId + ':' + w.id; }
+
+
+    function isSaved(w) { try { return localStorage.getItem(savedKey(w)) === '1'; } catch (e) { return false; } }
+
+
+    function toggleSaved(w, starEl) {
+      try {
+        const now = !isSaved(w);
+        localStorage.setItem(savedKey(w), now ? '1' : '0');
+        starEl.classList.toggle('starred', now);
+      } catch (e) {}
+    }
+
+
+    function renderVocabList(items) {
+      const wrap = el('div', 'vocab-list');
+      items.forEach(function (w, i) {
+        const row = el('div', 'vocab-row');
+        row.appendChild(el('span', 'vocab-idx', String(i + 1) + '.'));
+        const main = el('div', 'vocab-row-main');
+        main.appendChild(el('span', 'vocab-row-word', w.word));
+        if (w.ipa) main.appendChild(el('span', 'vocab-row-ipa', w.ipa));
+        main.appendChild(el('span', 'vocab-row-sep', '—'));
+        main.appendChild(el('span', 'vocab-row-meaning', w.meaning));
+        row.appendChild(main);
+        const actions = el('div', 'vocab-row-actions');
+        const star = el('button', 'icon-btn star-btn' + (isSaved(w) ? ' starred' : ''));
+        star.type = 'button'; star.innerHTML = '★'; star.setAttribute('aria-label', 'Save word');
+        star.addEventListener('click', function () { toggleSaved(w, star); });
+        actions.appendChild(star);
+        actions.appendChild(playBtn(w.audio));
+        row.appendChild(actions);
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    let flashKeydownHandler = null;
+
+
+    function detachFlashKeydown() {
+      if (flashKeydownHandler) { document.removeEventListener('keydown', flashKeydownHandler); flashKeydownHandler = null; }
+    }
+
+
+    function renderVocabFlashcards(items, onFinished) {
+      const wrap = el('div', 'flash-wrap-simple');
+      let queue = items.slice();
+      let i = 0;
+      let revealed = false;
+      let rememberedCount = 0;
+      let notRememberedCount = 0;
+      const progressKeyForThis = nextProgressKey();
+      let progressMarked = false;
+
+      const card = el('div', 'flash-card-simple');
+      const ctrlRow = el('div', 'flash-controls-row');
+      const forgetBtn = el('button', 'flash-ctrl-btn flash-ctrl-forget', 'Not remember');
+      const nextBtn = el('button', 'flash-ctrl-btn flash-ctrl-skip', 'Next');
+      const rememberBtn = el('button', 'flash-ctrl-btn flash-ctrl-remember', 'Remembered');
+      forgetBtn.type = 'button'; nextBtn.type = 'button'; rememberBtn.type = 'button';
+
+      const progressWrap = el('div', 'flash-progress-wrap');
+      const progressLabel = el('div', 'flash-progress-label');
+      const progressTrack = el('div', 'flash-progress-track');
+      const progressFill = el('div', 'flash-progress-fill-grad');
+      const progressPct = el('div', 'flash-progress-pct');
+      progressTrack.appendChild(progressFill);
+      progressWrap.appendChild(progressLabel); progressWrap.appendChild(progressTrack); progressWrap.appendChild(progressPct);
+
+      function currentWord() { return queue[i]; }
+
+      function updateProgress() {
+        const total = queue.length;
+        const pos = Math.min(i + 1, total);
+        const pct = total ? Math.round((pos / total) * 100) : 0;
+        progressLabel.textContent = pos + '/' + total;
+        progressFill.style.width = pct + '%';
+        progressPct.textContent = pct + '%';
+      }
+
+      function renderFront() {
+        revealed = false;
+        card.className = 'flash-card-simple';
+        card.innerHTML = '';
+        const w = currentWord();
+        card.appendChild(el('div', 'flash-word-simple', w.word));
+        const iconRow = el('div', 'flash-icon-row');
+        const playBtnEl = el('button', 'flash-round-btn'); playBtnEl.type = 'button'; playBtnEl.innerHTML = '▶';
+        playBtnEl.addEventListener('click', function (e) { e.stopPropagation(); play(resolveAudio(w.audio)); });
+        iconRow.appendChild(playBtnEl);
+        const starBtnEl = el('button', 'flash-round-btn' + (isSaved(w) ? ' starred' : '')); starBtnEl.type = 'button'; starBtnEl.innerHTML = '★';
+        starBtnEl.addEventListener('click', function (e) { e.stopPropagation(); toggleSaved(w, starBtnEl); });
+        iconRow.appendChild(starBtnEl);
+        card.appendChild(iconRow);
+        card.appendChild(el('span', 'flash-corner-prompt', 'Show meaning ›'));
+        updateProgress();
+      }
+
+      function renderBack() {
+        revealed = true;
+        const w = currentWord();
+        card.className = 'flash-card-simple flash-card-back';
+        card.innerHTML = '';
+        card.appendChild(el('div', 'flash-word-simple', w.meaning));
+        if (w.example) {
+          const ex = el('div', 'flash-example-box');
+          ex.appendChild(el('div', 'flash-example-label', 'Example:'));
+          ex.appendChild(el('div', 'flash-example-text', w.example));
+          card.appendChild(ex);
+        }
+        card.appendChild(el('span', 'flash-corner-prompt', '‹ Flip back'));
+        play(resolveAudio(w.audio));
+      }
+
+      function toggleFlip() {
+        if (i >= queue.length) return;
+        if (revealed) renderFront(); else renderBack();
+      }
+
+      function showComplete() {
+        detachFlashKeydown();
+        card.className = 'flash-card-simple';
+        card.innerHTML = '';
+        const done = el('div', 'flash-complete');
+        done.appendChild(el('div', 'flash-complete-title', '🎉 Deck complete!'));
+        done.appendChild(el('p', 'flash-complete-stats', 'Remembered ' + rememberedCount + ' words · Forgot ' + notRememberedCount + ' times.'));
+        const quizBtn = el('button', 'btn-purple', 'Take the quiz →');
+        quizBtn.type = 'button';
+        quizBtn.addEventListener('click', function () { if (onFinished) onFinished(); });
+        done.appendChild(quizBtn);
+        const retryBtn = el('button', 'btn-check', 'Restart deck');
+        retryBtn.type = 'button';
+        retryBtn.addEventListener('click', function () {
+          queue = items.slice(); i = 0; rememberedCount = 0; notRememberedCount = 0;
+          renderFront(); ctrlRow.style.display = ''; progressWrap.style.display = '';
+        });
+        done.appendChild(retryBtn);
+        card.appendChild(done);
+        ctrlRow.style.display = 'none';
+        if (!progressMarked) { progressMarked = true; markProgressDone(progressKeyForThis); }
+      }
+
+      function goNext(judgement) {
+        if (i >= queue.length) return;
+        if (judgement === 'remember') { rememberedCount++; markWordLearned(queue[i].id); }
+        else if (judgement === 'forget') { notRememberedCount++; queue.push(queue[i]); }
+        i++;
+        if (i >= queue.length) { showComplete(); } else { renderFront(); }
+      }
+
+      card.addEventListener('click', toggleFlip);
+      forgetBtn.addEventListener('click', function () { goNext('forget'); });
+      nextBtn.addEventListener('click', function () { goNext('skip'); });
+      rememberBtn.addEventListener('click', function () { goNext('remember'); });
+      ctrlRow.appendChild(forgetBtn); ctrlRow.appendChild(nextBtn); ctrlRow.appendChild(rememberBtn);
+
+      detachFlashKeydown();
+      flashKeydownHandler = function (e) {
+        if (i >= queue.length) return;
+        if (e.code === 'Space') { e.preventDefault(); toggleFlip(); }
+        else if (e.key === '1') { goNext('forget'); }
+        else if (e.key === '2') { goNext('remember'); }
+        else if (e.key === 'ArrowRight') { goNext('skip'); }
+      };
+      document.addEventListener('keydown', flashKeydownHandler);
+
+      renderFront();
+      wrap.appendChild(card);
+      wrap.appendChild(ctrlRow);
+      wrap.appendChild(progressWrap);
+      return wrap;
+    }
+
+
+    function renderVocabQuiz(items) {
+      const wrap = el('div', 'quiz-wrap');
+      const order = shuffle(items);
+      let i = 0, correct = 0, answered = false;
+      const progressKeyForThis = nextProgressKey();
+      let progressMarked = false;
+      const body = el('div', 'quiz-body');
+      const foot = el('div', 'quiz-foot');
+      function nextQuestion() {
+        answered = false;
+        body.innerHTML = '';
+        if (i >= order.length) {
+          body.appendChild(el('p', 'quiz-score', 'Done! ' + correct + '/' + order.length + ' correct.'));
+          if (!progressMarked) { progressMarked = true; markProgressDone(progressKeyForThis); }
+          const retry = el('button', 'btn-check', 'Retry');
+          retry.type = 'button';
+          retry.addEventListener('click', function () { i = 0; correct = 0; nextQuestion(); });
+          body.appendChild(retry);
+          foot.textContent = '';
+          return;
+        }
+        const w = order[i];
+        foot.textContent = 'Question ' + (i + 1) + '/' + order.length;
+        const qHead = el('div', 'quiz-q-head');
+        qHead.appendChild(el('span', 'quiz-word', w.word));
+        qHead.appendChild(playBtn(w.audio));
+        body.appendChild(qHead);
+        if (w.ipa) body.appendChild(el('p', 'vocab-row-ipa', w.ipa));
+
+        const distractors = shuffle(items.filter(function (x) { return x.id !== w.id; })).slice(0, 3);
+        const options = shuffle([w].concat(distractors));
+        const optWrap = el('div', 'quiz-options');
+        options.forEach(function (opt) {
+          const btn = el('button', 'quiz-option', opt.meaning);
+          btn.type = 'button';
+          btn.addEventListener('click', function () {
+            if (answered) return;
+            answered = true;
+            const ok = opt.id === w.id;
+            btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            if (!ok) {
+              Array.from(optWrap.children).forEach(function (c) {
+                if (c.textContent === w.meaning) c.classList.add('opt-correct');
+              });
+            } else { correct++; }
+            const nextBtn = el('button', 'btn-check', i + 1 >= order.length ? 'See results →' : 'Next question →');
+            nextBtn.type = 'button';
+            nextBtn.style.marginTop = '14px';
+            nextBtn.addEventListener('click', function () { i++; nextQuestion(); });
+            body.appendChild(nextBtn);
+          });
+          optWrap.appendChild(btn);
+        });
+        body.appendChild(optWrap);
+      }
+      nextQuestion();
+      wrap.appendChild(foot);
+      wrap.appendChild(body);
+      return wrap;
+    }
+
+
+    function renderVocabTab(item) {
+      const panel = document.getElementById('panel-vocab');
+      panel.innerHTML = '';
+      const items = (item.vocab && item.vocab.items) || [];
+      if (!items.length) { panel.appendChild(emptyNote('Vocabulary is being updated.')); return; }
+
+      const shell = buildSectionShell('Vocabulary', backToTabs);
+      panel.appendChild(shell);
+
+      const modeBar = el('div', 'mode-bar');
+      const modes = [['flashcards', 'Flashcards'], ['quiz', 'Quiz'], ['list', 'List']];
+      const content = el('div', 'vocab-content');
+      let activeMode = 'flashcards';
+      function setMode(m) {
+        activeMode = m;
+        modeBar.querySelectorAll('.mode-btn').forEach(function (x) { x.classList.toggle('active', x.dataset.mode === m); });
+        draw();
+      }
+      function draw() {
+        detachFlashKeydown();
+        content.innerHTML = '';
+        if (activeMode === 'list') content.appendChild(renderVocabList(items));
+        else if (activeMode === 'flashcards') content.appendChild(renderVocabFlashcards(items, function () { setMode('quiz'); }));
+        else content.appendChild(renderVocabQuiz(items));
+      }
+      modes.forEach(function (m) {
+        const b = el('button', 'mode-btn' + (m[0] === activeMode ? ' active' : ''), m[1]);
+        b.type = 'button';
+        b.dataset.mode = m[0];
+        b.addEventListener('click', function () { setMode(m[0]); });
+        modeBar.appendChild(b);
+      });
+      shell.appendChild(modeBar);
+      shell.appendChild(content);
+      draw();
+    }
+
+    // ========================================================
+    // TOGGLE (dùng cho Ví dụ / Quiz nhỏ trong Ngữ pháp)
+    // ========================================================
+
+
+    function markWordLearned(wordId) {
+      if (!wordId || learnedWords[wordId]) return;
+      learnedWords[wordId] = true;
+      try { localStorage.setItem(learnedWordsKey, JSON.stringify(learnedWords)); } catch (e) {}
+    }
+
+
+    function learnedWordsCount() {
+      return Object.keys(learnedWords).filter(function (k) { return learnedWords[k]; }).length;
+    }
+
+    // ---------- Hub stats ----------
+    let currentItem = null;
+
+
+    // ---------- Load ----------
+    (async function () {
+      try {
+        const res = await fetch(level + '/items/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+        document.title = (item.title || itemId) + ' — hoc voi hanh';
+        $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
+        renderVocabTab(item);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Could not load the lesson';
+        document.getElementById('panel-vocab').innerHTML = '<p class="note">Lesson file not found. Check the path <code>' + level + '/items/' + itemId + '.json</code>.</p>';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+  <script src="pomodoro.js" defer></script>
+</body>
+</html>
