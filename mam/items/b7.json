@@ -714,7 +714,7 @@
   "listening": {
     "numberFill": {
       "title": "Điền số vào chỗ trống",
-      "instruction": "Nghe rồi điền số bằng bàn phím bên dưới.",
+      "instruction": "Listen, then fill in the number using the keypad below.",
       "items": [
         {
           "audio": "audio/b7/{voice}/listen_nf_01.mp3",
