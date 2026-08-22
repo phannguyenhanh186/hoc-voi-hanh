@@ -768,7 +768,24 @@
         "audio": "audio/b3/{voice}/reading_r1.mp3",
         "text": "Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để ăn sáng và đi làm. Có người thường ăn phở bò. Có người thường ăn bún bò hoặc bánh mì. Một số người thường tập thể dục trước khi đi làm.\nVào buổi trưa, họ thường đi ăn với đồng nghiệp. Sau khi ăn trưa xong, họ ngủ trưa hoặc quay lại làm việc.\nNhân viên văn phòng ở Việt Nam không thường đi chơi hay đi ăn sau khi về nhà vào buổi chiều. Họ thường ăn tối với gia đình hoặc một mình. Sau đó, họ thường dọn nhà, đánh răng, lướt điện thoại và đi ngủ.",
         "titleEn": "A Day in the Life of an Office Worker",
-        "textEn": "Office workers in Vietnam usually get up early in the morning to have breakfast and go to work. Some people usually have beef pho. Others usually have beef noodle soup or banh mi. Some people usually exercise before going to work.\nAt lunchtime, they usually go out to eat with their colleagues. After lunch, they take a nap or go back to work.\nOffice workers in Vietnam do not usually go out or eat out after coming home in the afternoon. They usually have dinner with their family or by themselves. After that, they usually clean the house, brush their teeth, scroll on their phones, and go to bed."
+        "textEn": "Office workers in Vietnam usually get up early in the morning to have breakfast and go to work. Some people usually have beef pho. Others usually have beef noodle soup or banh mi. Some people usually exercise before going to work.\nAt lunchtime, they usually go out to eat with their colleagues. After lunch, they take a nap or go back to work.\nOffice workers in Vietnam do not usually go out or eat out after coming home in the afternoon. They usually have dinner with their family or by themselves. After that, they usually clean the house, brush their teeth, scroll on their phones, and go to bed.",
+        "questions": [
+          {
+            "context": "Câu 1: Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để làm gì?",
+            "options": ["ăn sáng và đi chơi", "ăn sáng và đi làm", "ăn trưa và đi làm"],
+            "answer": "ăn sáng và đi làm"
+          },
+          {
+            "context": "Câu 2: Vào buổi trưa, họ thường làm gì?",
+            "options": ["tập thể dục với đồng nghiệp", "đi ăn với gia đình", "đi ăn với đồng nghiệp"],
+            "answer": "đi ăn với đồng nghiệp"
+          },
+          {
+            "context": "Câu 3: Nhân viên văn phòng thường làm gì sau khi về nhà vào buổi chiều?",
+            "options": ["ăn tối", "dọn nhà", "lướt điện thoại"],
+            "answer": "ăn tối"
+          }
+        ]
       }
     ]
   },
