@@ -54,6 +54,24 @@
       try { localStorage.setItem(storeKey, JSON.stringify(state)); } catch (e) {}
     }
 
+    // Lưu / đọc / xoá KẾT QUẢ bài quiz (để hiện lại khi user quay lại đúng quiz này)
+    const resultKey = 'grammar:' + level + ':' + lessonId + ':' + pointId;
+    function saveQuizResult(correct, total) {
+      try { localStorage.setItem('qresult:' + resultKey, JSON.stringify({ correct: correct, total: total, savedAt: Date.now() })); } catch (e) {}
+    }
+    function loadQuizResult() {
+      try {
+        const raw = localStorage.getItem('qresult:' + resultKey);
+        if (!raw) return null;
+        const obj = JSON.parse(raw);
+        if (obj && typeof obj.correct === 'number' && typeof obj.total === 'number' && obj.total > 0) return obj;
+      } catch (e) {}
+      return null;
+    }
+    function clearQuizResult() {
+      try { localStorage.removeItem('qresult:' + resultKey); } catch (e) {}
+    }
+
     function el(tag, cls, txt) {
       const n = document.createElement(tag);
       if (cls) n.className = cls;
@@ -125,11 +143,42 @@
       return { el: wrap, update: update, reveal: reveal };
     }
 
-    function renderQuiz(title, quiz) {
+    function renderSavedResultCard(saved, quizLen) {
+      const box = el('div', 'input-card');
+      box.appendChild(el('p', 'ex-instruction', 'Bạn đã hoàn thành quiz này. Đây là kết quả lần gần nhất:'));
+      const ring = createResultsRing(quizLen);
+      ring.update(saved.correct, Math.max(0, quizLen - saved.correct));
+      ring.reveal();
+      box.appendChild(ring.el);
+      const actionsRow = el('div', 'gram2-quiz-result-actions');
+      const retryBtn = el('button', 'btn-check btn-secondary gram2-quiz-next', '↺ Làm lại'); retryBtn.type = 'button';
+      retryBtn.addEventListener('click', function () {
+        clearQuizResult();
+        renderQuiz(currentTitle, currentQuiz, true);
+      });
+      actionsRow.appendChild(retryBtn);
+      const reviewBtn = el('button', 'btn-purple gram2-quiz-next', 'Xem lại lý thuyết →'); reviewBtn.type = 'button';
+      reviewBtn.addEventListener('click', goBack);
+      actionsRow.appendChild(reviewBtn);
+      box.appendChild(actionsRow);
+      return box;
+    }
+
+    let currentTitle = '', currentQuiz = null;
+
+    function renderQuiz(title, quiz, forceFresh) {
+      currentTitle = title; currentQuiz = quiz;
       document.title = 'Quiz: ' + title + ' — hoc voi hanh';
       document.getElementById('title').textContent = 'Quiz: ' + title;
       const body = document.getElementById('quiz-body');
       body.innerHTML = '';
+
+      const savedResult = !forceFresh ? loadQuizResult() : null;
+      if (savedResult && quiz && quiz.length) {
+        body.appendChild(renderSavedResultCard(savedResult, quiz.length));
+        return;
+      }
+
       const box = el('div', 'input-card');
       const state = new Array((quiz || []).length).fill(null);
       const ring = createResultsRing((quiz || []).length);
@@ -169,6 +218,7 @@
           ring.update(correctCount, wrongCount);
           ring.reveal();
           markLessonProgressDone('grammar:' + pointId);
+          saveQuizResult(correctCount, (quiz || []).length);
         });
         box.appendChild(submitBtn);
         box.appendChild(ring.el);
