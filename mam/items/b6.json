@@ -251,13 +251,18 @@
                 "answer": "Cho em tính tiền."
               },
               {
-                "question": "Which sentence asks to see the menu?",
-                "options": [
-                  "Cho em tính tiền.",
-                  "Cho em coi menu.",
-                  "Cho em thêm nước."
+                "type": "scramble",
+                "question": "Make a sentence to ask to see the menu",
+                "wordBank": [
+                  "tính",
+                  "em",
+                  "menu",
+                  "cho",
+                  "tiền",
+                  "một",
+                  "coi"
                 ],
-                "answer": "Cho em coi menu."
+                "answer": "Cho em coi menu"
               },
               {
                 "question": "Which sentence is correct?",
@@ -267,6 +272,20 @@
                   "Chị ơi một trà đá cho em."
                 ],
                 "answer": "Chị ơi cho em một trà đá."
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"Can I have two chicken rice\"",
+                "wordBank": [
+                  "cơm",
+                  "bạn",
+                  "gà",
+                  "coi",
+                  "em",
+                  "hai",
+                  "cho"
+                ],
+                "answer": "Cho em hai cơm gà"
               }
             ]
           }
@@ -345,6 +364,37 @@
                   "Mình thêm cho ba cái ly."
                 ],
                 "answer": "Cho mình thêm ba cái ly."
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence that means \"Can I have three more iced tea\"",
+                "wordBank": [
+                  "thêm",
+                  "anh",
+                  "hai",
+                  "trà",
+                  "cho",
+                  "ba",
+                  "đá",
+                  "coi"
+                ],
+                "answer": "Cho anh thêm ba trà đá"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence to ask for one more milk coffee",
+                "wordBank": [
+                  "thêm",
+                  "ba",
+                  "sữa",
+                  "tính",
+                  "cho",
+                  "một",
+                  "chị",
+                  "coi",
+                  "cà phê"
+                ],
+                "answer": "Cho chị thêm ba cà phê sữa"
               }
             ]
           }
