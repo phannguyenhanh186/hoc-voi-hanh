@@ -1,902 +1,768 @@
 {
-  "id": "b10",
-  "num": 10,
-  "title": "Mình thích áo khoác màu đen",
-  "vocab": {
-    "items": [
-      {
-        "id": "v1",
-        "word": "màu",
-        "meaning": "color",
-        "audio": "audio/b10/{voice}/vocab_mau.mp3"
-      },
-      {
-        "id": "v2",
-        "word": "màu trắng",
-        "meaning": "white color",
-        "audio": "audio/b10/{voice}/vocab_mau_trang.mp3"
-      },
-      {
-        "id": "v3",
-        "word": "màu đen",
-        "meaning": "black color",
-        "audio": "audio/b10/{voice}/vocab_mau_den.mp3"
-      },
-      {
-        "id": "v4",
-        "word": "màu xanh dương",
-        "meaning": "blue color",
-        "audio": "audio/b10/{voice}/vocab_mau_xanh_duong.mp3"
-      },
-      {
-        "id": "v5",
-        "word": "màu xanh lá",
-        "meaning": "green color",
-        "audio": "audio/b10/{voice}/vocab_mau_xanh_la.mp3"
-      },
-      {
-        "id": "v6",
-        "word": "màu đỏ",
-        "meaning": "red color",
-        "audio": "audio/b10/{voice}/vocab_mau_do.mp3"
-      },
-      {
-        "id": "v7",
-        "word": "màu vàng",
-        "meaning": "yellow color",
-        "audio": "audio/b10/{voice}/vocab_mau_vang.mp3"
-      },
-      {
-        "id": "v8",
-        "word": "màu cam",
-        "meaning": "orange color",
-        "audio": "audio/b10/{voice}/vocab_mau_cam.mp3"
-      },
-      {
-        "id": "v9",
-        "word": "màu xám",
-        "meaning": "grey color",
-        "audio": "audio/b10/{voice}/vocab_mau_xam.mp3"
-      },
-      {
-        "id": "v10",
-        "word": "màu nâu",
-        "meaning": "brown color",
-        "audio": "audio/b10/{voice}/vocab_mau_nau.mp3"
-      },
-      {
-        "id": "v11",
-        "word": "tóc",
-        "meaning": "hair",
-        "audio": "audio/b10/{voice}/vocab_toc.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "quần đùi",
-        "meaning": "shorts",
-        "audio": "audio/b10/{voice}/vocab_quan_dui.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "áo sơ mi",
-        "meaning": "shirt",
-        "audio": "audio/b10/{voice}/vocab_ao_so_mi.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "áo thun",
-        "meaning": "T-shirt",
-        "audio": "audio/b10/{voice}/vocab_ao_thun.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "váy",
-        "meaning": "skirt",
-        "audio": "audio/b10/{voice}/vocab_vay.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "xe buýt",
-        "meaning": "bus",
-        "audio": "audio/b10/{voice}/vocab_xe_buyt.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "ô tô",
-        "meaning": "car",
-        "audio": "audio/b10/{voice}/vocab_o_to.mp3"
-      }
-    ]
-  },
-  "grammar": {
-    "sections": [
-      {
-        "id": "g1",
-        "titleVi": "Màu gì?",
-        "titleEn": "What Color?",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g1",
-            "label": "Màu gì?",
-            "subHeadingVi": "Màu gì?",
-            "subHeadingEn": "What Color?",
-            "paragraphs": [
-              "Use this pattern to ask what color something is or what color someone likes, wears, or wants. To answer, simply say: [Noun] + màu + [Color]."
-            ],
-            "chips": [
-              {
-                "pattern": "[Noun] + màu gì?\n→ [Noun] + màu + [Color]."
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Xe máy của bạn màu gì?\n→ Xe máy của mình màu trắng.",
-                "en": "What color is your motorbike?\nMy motorbike is white."
-              },
-              {
-                "vi": "Chị ấy không thích màu gì?\n→ Chị ấy không thích màu xanh dương.",
-                "en": "What color doesn't she like?\nShe doesn't like blue."
-              },
-              {
-                "vi": "Anh ấy thích điện thoại màu gì?\n→ Anh ấy thích điện thoại màu đen.",
-                "en": "What color phone does he like?\nHe likes a black phone."
-              },
-              {
-                "vi": "Em đang mặc áo màu gì?\n→ Em đang mặc áo màu xám.",
-                "en": "What color shirt are you wearing?\nI'm wearing a gray shirt."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "How do you ask \"What color is your motorbike?\"",
-                "options": [
-                  "Xe máy của bạn là gì?",
-                  "Xe máy của bạn màu gì?",
-                  "Xe máy của bạn màu thế nào?"
-                ],
-                "answer": "Xe máy của bạn màu gì?"
-              },
-              {
-                "question": "Which answer means \"My motorbike is white.\"",
-                "options": [
-                  "Xe máy của mình trắng.",
-                  "Xe máy của mình trắng màu.",
-                  "Xe máy của mình màu trắng."
-                ],
-                "answer": "Xe máy của mình màu trắng."
-              },
-              {
-                "question": "Which question means \"What color shirt are you wearing?\"",
-                "options": [
-                  "Em mặc áo gì?",
-                  "Em đang mặc áo màu gì?",
-                  "Em đang mặc màu gì?"
-                ],
-                "answer": "Em đang mặc áo màu gì?"
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Kính của bạn màu gì?\nB: Kính của mình màu đỏ.",
-                  "A: Điện thoại của bạn màu gì?\nB: Điện thoại của mình đỏ màu.",
-                  "A: Bạn thích áo màu gì?\nB: Mình đang mặc quần màu đen."
-                ],
-                "answer": "A: Kính của bạn màu gì?\nB: Kính của mình màu đỏ."
-              },
-              {
-                "question": "Which sentence means \"What color is this shirt?\"",
-                "options": [
-                  "Áo màu gì?",
-                  "Áo này màu gì?",
-                  "Áo này là màu gì?"
-                ],
-                "answer": "Áo này màu gì?"
-              },
-              {
-                "question": "Which answer means \"It's black.\"",
-                "options": [
-                  "Màu vàng.",
-                  "Màu xanh.",
-                  "Màu đen."
-                ],
-                "answer": "Màu đen."
-              },
-              {
-                "question": "Which question asks about someone's favorite car color?",
-                "options": [
-                  "Anh ấy có ô tô màu gì?",
-                  "Anh ấy thích ô tô màu gì?",
-                  "Anh ấy có ô tô màu đen không?"
-                ],
-                "answer": "Anh ấy thích ô tô màu gì?"
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Em đang mặc áo màu gì?\nB: Em đang có màu trắng.",
-                  "A: Anh đang mặc áo màu gì?\nB: Anh đang mặc áo màu trắng.",
-                  "A: Chị ấy đang mặc áo màu gì?\nB: Chị ấy thích màu trắng."
-                ],
-                "answer": "A: Anh đang mặc áo màu gì?\nB: Anh đang mặc áo màu trắng."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g2",
-        "titleVi": "Lắm",
-        "titleEn": "Very / Really",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g2-0",
-            "label": "Khẳng định",
-            "subHeadingVi": "Khẳng định",
-            "subHeadingEn": "Affirmative",
-            "paragraphs": [
-              "Use lắm to emphasize the meaning of the word before it. With affirmative sentences, lắm means very or a lot. This pattern is commonly used with adjectives and verbs of feeling or preference, such as thích (like)."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + [Verb / Adjective] + lắm."
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Phở này ngon lắm.",
-                "en": "This phở is very delicious."
-              },
-              {
-                "vi": "Em thích cà phê lắm.",
-                "en": "I like coffee a lot."
-              },
-              {
-                "vi": "Hôm nay trời nóng lắm.",
-                "en": "It's very hot today."
-              },
-              {
-                "vi": "Cảm ơn anh nhiều lắm.",
-                "en": "Thank you very much."
-              }
-            ]
-          },
-          {
-            "id": "g2-1",
-            "label": "Phủ định",
-            "subHeadingVi": "Phủ định",
-            "subHeadingEn": "Negative",
-            "paragraphs": [
-              "With negative sentences, không ... lắm means not very or not ... very much."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + không + [Verb / Adjective] + lắm."
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Gà này không ngon lắm.",
-                "en": "This chicken isn't very delicious."
-              },
-              {
-                "vi": "Anh không thích ở nhà lắm.",
-                "en": "He doesn't like staying at home very much."
-              },
-              {
-                "vi": "Hôm nay trời không lạnh lắm.",
-                "en": "It isn't very cold today."
-              },
-              {
-                "vi": "Mình không mệt lắm.",
-                "en": "I'm not very tired."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "review",
-        "titleVi": "Ôn tập tổng hợp",
-        "titleEn": "Review",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "review",
-            "label": "Ôn tập tổng hợp",
-            "quiz": [
-              {
-                "question": "How do you ask \"What color is your motorbike?\"",
-                "options": [
-                  "Xe máy của bạn là màu gì?",
-                  "Xe máy của bạn màu gì?",
-                  "Xe máy của bạn màu thế nào?",
-                  "Xe máy của bạn có màu không?"
-                ],
-                "answer": "Xe máy của bạn màu gì?"
-              },
-              {
-                "question": "Which answer means \"My motorbike is white.\"",
-                "options": [
-                  "Xe máy của mình trắng.",
-                  "Xe máy của mình là trắng.",
-                  "Xe máy của mình màu trắng.",
-                  "Xe máy mình trắng màu."
-                ],
-                "answer": "Xe máy của mình màu trắng."
-              },
-              {
-                "question": "Which sentence means \"What color shirt are you wearing?\"",
-                "options": [
-                  "Em mặc áo gì?",
-                  "Em thích áo màu gì?",
-                  "Em đang mặc áo màu gì?",
-                  "Em thường mặc áo màu gì?"
-                ],
-                "answer": "Em đang mặc áo màu gì?"
-              },
-              {
-                "question": "Complete the sentence which means \"He likes a black phone.\": Anh ấy thích điện thoại _________.",
-                "options": [
-                  "xanh.",
-                  "màu đen.",
-                  "xám màu.",
-                  "là nâu."
-                ],
-                "answer": "màu đen."
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Xe máy của bạn màu gì?\nB: Xe máy của mình màu đỏ.",
-                  "A: Xe máy của bạn màu gì?\nB: Xe máy của mình đỏ màu.",
-                  "A: Xe máy của bạn màu gì?\nB: Của mình đỏ.",
-                  "A: Xe máy của bạn màu gì?\nB: Xe máy đỏ mình."
-                ],
-                "answer": "A: Xe máy của bạn màu gì?\nB: Xe máy của mình màu đỏ."
-              },
-              {
-                "question": "Which sentence that means \"This morning I was very tired.\"",
-                "options": [
-                  "Sáng qua mình vui lắm.",
-                  "Hôm nay mình mệt.",
-                  "Bây giờ mình không vui lắm.",
-                  "Sáng nay mình mệt lắm."
-                ],
-                "answer": "Sáng qua mình vui lắm."
-              },
-              {
-                "question": "Which sentence means \"This phở is very delicious.\"",
-                "options": [
-                  "Phở này ngon.",
-                  "Phở này ngon lắm.",
-                  "Phở này không ngon.",
-                  "Phở này có ngon."
-                ],
-                "answer": "Phở này ngon lắm."
-              },
-              {
-                "question": "Which sentence means \"I don't like coffee very much.\"",
-                "options": [
-                  "Mình không thích cà phê.",
-                  "Mình thích cà phê.",
-                  "Mình không thích cà phê lắm.",
-                  "Mình thích cà phê lắm."
-                ],
-                "answer": "Mình không thích cà phê lắm."
-              },
-              {
-                "question": "Which sentence expresses the strongest liking?",
-                "options": [
-                  "Mình không thích cà phê.",
-                  "Mình không thích cà phê lắm.",
-                  "Mình thích cà phê.",
-                  "Mình thích cà phê lắm."
-                ],
-                "answer": "Mình thích cà phê lắm."
-              },
-              {
-                "question": "Which sentence means \"I'm not very tired.\"",
-                "options": [
-                  "Mình mệt lắm.",
-                  "Mình đang mệt.",
-                  "Mình không mệt lắm.",
-                  "Mình thường mệt."
-                ],
-                "answer": "Mình không mệt lắm."
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Anh ấy thích màu gì?\nB: Mình thích màu đen lắm.",
-                  "A: Bạn thích màu gì?\nB: Mình màu đen lắm.",
-                  "A: Bạn có thích màu đen không?\nB: Mình không. Mình thích màu trắng.",
-                  "A: Bạn thích màu gì?\nB: Mình màu thích đen."
-                ],
-                "answer": "A: Bạn có thích màu đen không?\nB: Mình không. Mình thích màu trắng."
-              },
-              {
-                "question": "Which sentence means \"She likes white very much.\"",
-                "options": [
-                  "Chị ấy màu trắng lắm.",
-                  "Chị ấy thích màu trắng.",
-                  "Chị ấy thích màu trắng lắm.",
-                  "Chị ấy đang màu trắng."
-                ],
-                "answer": "Chị ấy thích màu trắng lắm."
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "listening": {
-    "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
-    "groups": [
-      {
-        "id": "d1",
-        "title": "Chép chính tả",
-        "lines": [
-          {
-            "audio": "audio/b10/{voice}/listen_d1_01.mp3",
-            "text": "Anh Minh không thích mặc áo thun màu đỏ.",
-            "wordBank": [
-              "màu",
-              "không",
-              "anh",
-              "áo thun",
-              "màu",
-              "đen",
-              "mặc",
-              "thích",
-              "là",
-              "Minh",
-              "đỏ"
-            ]
-          },
-          {
-            "audio": "audio/b10/{voice}/listen_d1_02.mp3",
-            "text": "Chị Mai thích nón bảo hiểm màu vàng lắm.",
-            "wordBank": [
-              "màu",
-              "nón bảo hiểm",
-              "Mai",
-              "bạn",
-              "đỏ",
-              "lắm",
-              "vàng",
-              "thích",
-              "chị",
-              "không"
-            ]
-          },
-          {
-            "audio": "audio/b10/{voice}/listen_d1_03.mp3",
-            "text": "Phong không thích mặc quần đùi lắm.",
-            "wordBank": [
-              "quần đùi",
-              "không",
-              "Phong",
-              "lắm",
-              "anh",
-              "đeo",
-              "thích",
-              "mặc"
-            ]
-          },
-          {
-            "audio": "audio/b10/{voice}/listen_d1_04.mp3",
-            "text": "Phở bò ngon lắm, nhưng ba của mình không thích lắm.",
-            "wordBank": [
-              "ngon",
-              "mặc",
-              "bạn",
-              "lắm",
-              "màu",
-              "ba",
-              "không",
-              "mình",
-              "lắm",
-              "thích",
-              "nhưng",
-              "phở",
-              "của",
-              "bò"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "reading": {
-    "passages": [
-      {
-        "id": "r1",
-        "title": "Quần áo của Huy",
-        "audio": "audio/b10/{voice}/reading_r1.mp3",
-        "text": "Mình tên là Huy. Mình có nhiều quần áo. Mình thích mặc áo khoác màu đen và áo thun màu xanh dương. Mình không thích áo màu đỏ lắm. Bạn mình, Kiên, thích mặc áo sơ mi màu trắng. Kiên cũng thích mặc với quần màu xám, nhưng Kiên không thích quần đùi lắm. Ba của mình thích mặc áo màu đen, còn mẹ của mình thích mặc áo màu vàng.",
-        "titleEn": "Huy's Clothes",
-        "textEn": "My name is Huy. I have a lot of clothes. I like wearing a black jacket and a blue T-shirt. I don't really like red clothes. My friend Kien likes wearing a white shirt. Kien also likes wearing gray pants, but he doesn't really like shorts. My father likes wearing black clothes, while my mother likes wearing yellow clothes.",
-        "textQuestions": [
-          {
-            "prompt": "Huy thích mặc áo màu gì?",
-            "wordBank": [
-              "trắng",
-              "đen",
-              "xanh dương",
-              "xanh lá",
-              "đỏ",
-              "vàng",
-              "cam",
-              "xám",
-              "nâu"
-            ],
-            "answer": "đen và xanh dương"
-          },
-          {
-            "prompt": "Huy có thích áo màu đỏ lắm không?",
-            "wordBank": [
-              "có",
-              "không"
-            ],
-            "answer": "không"
-          },
-          {
-            "prompt": "Kiên thích mặc áo gì?",
-            "wordBank": [
-              "áo sơ mi",
-              "áo thun",
-              "áo khoác"
-            ],
-            "answer": "áo sơ mi"
-          },
-          {
-            "prompt": "Ba của Huy thích mặc áo màu gì?",
-            "wordBank": [
-              "trắng",
-              "đen",
-              "xanh dương",
-              "xanh lá",
-              "đỏ",
-              "vàng",
-              "cam",
-              "xám",
-              "nâu"
-            ],
-            "answer": "đen"
-          },
-          {
-            "prompt": "Mẹ của Huy thích mặc áo màu gì?",
-            "wordBank": [
-              "trắng",
-              "đen",
-              "xanh dương",
-              "xanh lá",
-              "đỏ",
-              "vàng",
-              "cam",
-              "xám",
-              "nâu"
-            ],
-            "answer": "vàng"
-          }
-        ]
-      }
-    ]
-  },
-  "preClass": {
-    "note": "Xem hình rồi nối từ.",
-    "vocabPreview": {
-      "instruction": "Xem màu và bấm vào từ để nghe phát âm.",
-      "items": [
-        {
-          "word": "màu trắng",
-          "color": "#FFFFFF",
-          "audio": "audio/b10/{voice}/vocab_mau_trang.mp3"
-        },
-        {
-          "word": "màu đen",
-          "color": "#1B1B28",
-          "audio": "audio/b10/{voice}/vocab_mau_den.mp3"
-        },
-        {
-          "word": "màu xanh dương",
-          "color": "#77D2FD",
-          "audio": "audio/b10/{voice}/vocab_mau_xanh_duong.mp3"
-        },
-        {
-          "word": "màu xanh lá",
-          "color": "#9BFAB9",
-          "audio": "audio/b10/{voice}/vocab_mau_xanh_la.mp3"
-        },
-        {
-          "word": "màu đỏ",
-          "color": "#FA4141",
-          "audio": "audio/b10/{voice}/vocab_mau_do.mp3"
-        },
-        {
-          "word": "màu vàng",
-          "color": "#FAE79B",
-          "audio": "audio/b10/{voice}/vocab_mau_vang.mp3"
-        },
-        {
-          "word": "màu cam",
-          "color": "#FA6141",
-          "audio": "audio/b10/{voice}/vocab_mau_cam.mp3"
-        },
-        {
-          "word": "màu xám",
-          "color": "#D6D1D1",
-          "audio": "audio/b10/{voice}/vocab_mau_xam.mp3"
-        },
-        {
-          "word": "màu nâu",
-          "color": "#613938",
-          "audio": "audio/b10/{voice}/vocab_mau_nau.mp3"
-        }
-      ]
-    },
-    "imageMatch": {
-      "title": "Nối từ với màu",
-      "instruction": "Chọn đúng từ cho mỗi màu.",
-      "items": [
-        {
-          "id": "im1",
-          "color": "#FFFFFF",
-          "answer": "màu trắng"
-        },
-        {
-          "id": "im2",
-          "color": "#1B1B28",
-          "answer": "màu đen"
-        },
-        {
-          "id": "im3",
-          "color": "#77D2FD",
-          "answer": "màu xanh dương"
-        },
-        {
-          "id": "im4",
-          "color": "#9BFAB9",
-          "answer": "màu xanh lá"
-        },
-        {
-          "id": "im5",
-          "color": "#FA4141",
-          "answer": "màu đỏ"
-        },
-        {
-          "id": "im6",
-          "color": "#FAE79B",
-          "answer": "màu vàng"
-        },
-        {
-          "id": "im7",
-          "color": "#FA6141",
-          "answer": "màu cam"
-        },
-        {
-          "id": "im8",
-          "color": "#D6D1D1",
-          "answer": "màu xám"
-        },
-        {
-          "id": "im9",
-          "color": "#613938",
-          "answer": "màu nâu"
-        }
+ "id": "b10",
+ "num": 10,
+ "title": "Mình thích áo khoác màu đen",
+ "vocab": {
+  "items": [
+   {
+    "id": "v1",
+    "word": "màu",
+    "meaning": "color",
+    "audio": "audio/b10/{voice}/vocab_mau.mp3"
+   },
+   {
+    "id": "v2",
+    "word": "màu trắng",
+    "meaning": "white color",
+    "audio": "audio/b10/{voice}/vocab_mau_trang.mp3"
+   },
+   {
+    "id": "v3",
+    "word": "màu đen",
+    "meaning": "black color",
+    "audio": "audio/b10/{voice}/vocab_mau_den.mp3"
+   },
+   {
+    "id": "v4",
+    "word": "màu xanh dương",
+    "meaning": "blue color",
+    "audio": "audio/b10/{voice}/vocab_mau_xanh_duong.mp3"
+   },
+   {
+    "id": "v5",
+    "word": "màu xanh lá",
+    "meaning": "green color",
+    "audio": "audio/b10/{voice}/vocab_mau_xanh_la.mp3"
+   },
+   {
+    "id": "v6",
+    "word": "màu đỏ",
+    "meaning": "red color",
+    "audio": "audio/b10/{voice}/vocab_mau_do.mp3"
+   },
+   {
+    "id": "v7",
+    "word": "màu vàng",
+    "meaning": "yellow color",
+    "audio": "audio/b10/{voice}/vocab_mau_vang.mp3"
+   },
+   {
+    "id": "v8",
+    "word": "màu cam",
+    "meaning": "orange color",
+    "audio": "audio/b10/{voice}/vocab_mau_cam.mp3"
+   },
+   {
+    "id": "v9",
+    "word": "màu xám",
+    "meaning": "grey color",
+    "audio": "audio/b10/{voice}/vocab_mau_xam.mp3"
+   },
+   {
+    "id": "v10",
+    "word": "màu nâu",
+    "meaning": "brown color",
+    "audio": "audio/b10/{voice}/vocab_mau_nau.mp3"
+   },
+   {
+    "id": "v11",
+    "word": "tóc",
+    "meaning": "hair",
+    "audio": "audio/b10/{voice}/vocab_toc.mp3"
+   },
+   {
+    "id": "v12",
+    "word": "quần đùi",
+    "meaning": "shorts",
+    "audio": "audio/b10/{voice}/vocab_quan_dui.mp3"
+   },
+   {
+    "id": "v13",
+    "word": "áo sơ mi",
+    "meaning": "shirt",
+    "audio": "audio/b10/{voice}/vocab_ao_so_mi.mp3"
+   },
+   {
+    "id": "v14",
+    "word": "áo thun",
+    "meaning": "T-shirt",
+    "audio": "audio/b10/{voice}/vocab_ao_thun.mp3"
+   },
+   {
+    "id": "v15",
+    "word": "váy",
+    "meaning": "skirt",
+    "audio": "audio/b10/{voice}/vocab_vay.mp3"
+   },
+   {
+    "id": "v16",
+    "word": "xe buýt",
+    "meaning": "bus",
+    "audio": "audio/b10/{voice}/vocab_xe_buyt.mp3"
+   },
+   {
+    "id": "v17",
+    "word": "ô tô",
+    "meaning": "car",
+    "audio": "audio/b10/{voice}/vocab_o_to.mp3"
+   }
+  ]
+ },
+ "grammar": {
+  "sections": [
+   {
+    "id": "g1",
+    "titleVi": "Màu gì?",
+    "titleEn": "What Color?",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g1",
+      "label": "Màu gì?",
+      "subHeadingVi": "Màu gì?",
+      "subHeadingEn": "What Color?",
+      "paragraphs": [
+       "Use this pattern to ask what color something is or what color someone likes, wears, or wants. To answer, simply say: [Noun] + màu + [Color]."
       ],
-      "answerBank": [
-        "màu trắng",
-        "màu đen",
-        "màu xanh dương",
-        "màu xanh lá",
-        "màu đỏ",
-        "màu vàng",
-        "màu cam",
-        "màu xám",
-        "màu nâu"
+      "chips": [
+       {
+        "pattern": "[Noun] + màu gì?\n→ [Noun] + màu + [Color]."
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Xe máy của bạn màu gì?\n→ Xe máy của mình màu trắng.",
+        "en": "What color is your motorbike?\nMy motorbike is white."
+       },
+       {
+        "vi": "Chị ấy không thích màu gì?\n→ Chị ấy không thích màu xanh dương.",
+        "en": "What color doesn't she like?\nShe doesn't like blue."
+       },
+       {
+        "vi": "Anh ấy thích điện thoại màu gì?\n→ Anh ấy thích điện thoại màu đen.",
+        "en": "What color phone does he like?\nHe likes a black phone."
+       },
+       {
+        "vi": "Em đang mặc áo màu gì?\n→ Em đang mặc áo màu xám.",
+        "en": "What color shirt are you wearing?\nI'm wearing a gray shirt."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How do you ask \"What color is your motorbike?\"",
+        "options": [
+         "Xe máy của bạn là gì?",
+         "Xe máy của bạn màu gì?",
+         "Xe máy của bạn màu thế nào?"
+        ],
+        "answer": "Xe máy của bạn màu gì?"
+       },
+       {
+        "question": "Which answer means \"My motorbike is white.\"",
+        "options": [
+         "Xe máy của mình trắng.",
+         "Xe máy của mình trắng màu.",
+         "Xe máy của mình màu trắng."
+        ],
+        "answer": "Xe máy của mình màu trắng."
+       },
+       {
+        "question": "Which question means \"What color shirt are you wearing?\"",
+        "options": [
+         "Em mặc áo gì?",
+         "Em đang mặc áo màu gì?",
+         "Em đang mặc màu gì?"
+        ],
+        "answer": "Em đang mặc áo màu gì?"
+       },
+       {
+        "question": "Which conversation is correct?",
+        "options": [
+         "A: Kính của bạn màu gì?\nB: Kính của mình màu đỏ.",
+         "A: Điện thoại của bạn màu gì?\nB: Điện thoại của mình đỏ màu.",
+         "A: Bạn thích áo màu gì?\nB: Mình đang mặc quần màu đen."
+        ],
+        "answer": "A: Kính của bạn màu gì?\nB: Kính của mình màu đỏ."
+       },
+       {
+        "question": "Which sentence means \"What color is this shirt?\"",
+        "options": [
+         "Áo màu gì?",
+         "Áo này màu gì?",
+         "Áo này là màu gì?"
+        ],
+        "answer": "Áo này màu gì?"
+       },
+       {
+        "question": "Which answer means \"It's black.\"",
+        "options": [
+         "Màu vàng.",
+         "Màu xanh.",
+         "Màu đen."
+        ],
+        "answer": "Màu đen."
+       },
+       {
+        "question": "Which question asks about someone's favorite car color?",
+        "options": [
+         "Anh ấy có ô tô màu gì?",
+         "Anh ấy thích ô tô màu gì?",
+         "Anh ấy có ô tô màu đen không?"
+        ],
+        "answer": "Anh ấy thích ô tô màu gì?"
+       },
+       {
+        "question": "Which conversation is correct?",
+        "options": [
+         "A: Em đang mặc áo màu gì?\nB: Em đang có màu trắng.",
+         "A: Anh đang mặc áo màu gì?\nB: Anh đang mặc áo màu trắng.",
+         "A: Chị ấy đang mặc áo màu gì?\nB: Chị ấy thích màu trắng."
+        ],
+        "answer": "A: Anh đang mặc áo màu gì?\nB: Anh đang mặc áo màu trắng."
+       }
       ]
-    }
-  },
-  "postClass": {
-    "exercises": [
-      {
-        "type": "scramble",
-        "title": "1. Sắp xếp câu.",
-        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
-        "items": [
-          {
-            "prompt": "Câu 1",
-            "tokens": [
-              "màu",
-              "gì?",
-              "này",
-              "áo"
-            ],
-            "answer": "Áo này màu gì?"
-          },
-          {
-            "prompt": "Câu 2",
-            "tokens": [
-              "thích",
-              "mình",
-              "màu",
-              "lắm",
-              "đen"
-            ],
-            "answer": "Mình thích màu đen lắm."
-          },
-          {
-            "prompt": "Câu 3",
-            "tokens": [
-              "trắng",
-              "xe",
-              "này",
-              "buýt",
-              "màu"
-            ],
-            "answer": "Xe buýt này màu trắng."
-          },
-          {
-            "prompt": "Câu 4",
-            "tokens": [
-              "không",
-              "chị",
-              "màu",
-              "thích",
-              "đỏ",
-              "lắm"
-            ],
-            "answer": "Chị không thích màu đỏ lắm."
-          },
-          {
-            "prompt": "Câu 5",
-            "tokens": [
-              "mặc",
-              "em",
-              "áo",
-              "đang",
-              "cam",
-              "thun",
-              "màu"
-            ],
-            "answer": "Em đang mặc áo thun màu cam."
-          }
-        ]
-      },
-      {
-        "type": "choice",
-        "title": "2. Chọn câu trả lời phù hợp.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Áo sơ mi của bạn màu gì?",
-            "options": [
-              "Áo của mình màu đen.",
-              "Mình thích áo thun.",
-              "Áo sơ mi này đẹp lắm."
-            ],
-            "answer": "Áo của mình màu đen."
-          },
-          {
-            "id": "2",
-            "context": "Bạn thích màu gì?",
-            "options": [
-              "Mình thích màu xanh dương.",
-              "Mình đang mặc áo màu trắng.",
-              "Mình không thích màu xanh lá lắm."
-            ],
-            "answer": "Mình thích màu xanh dương."
-          },
-          {
-            "id": "3",
-            "context": "Chị ấy thích váy màu gì?",
-            "options": [
-              "Chị ấy thích mặc áo thun lắm.",
-              "Chị ấy thích mặc váy màu đỏ.",
-              "Chị ấy đang mặc quần màu đen."
-            ],
-            "answer": "Chị ấy thích mặc váy màu đỏ."
-          },
-          {
-            "id": "4",
-            "context": "Bạn có thích cà phê không?",
-            "options": [
-              "Có, mình thích lắm.",
-              "Mình đang uống cà phê đen.",
-              "Không, mình không thích trà."
-            ],
-            "answer": "Có, mình thích lắm."
-          }
-        ]
-      },
-      {
-        "type": "text_answer",
-        "title": "3. Dịch sang tiếng Việt.",
-        "instruction": "Dịch các câu sau sang tiếng Việt. Dùng word bank nếu cần.",
-        "items": [
-          {
-            "prompt": "I like the black jacket very much.",
-            "wordBank": [
-              "áo",
-              "xanh",
-              "đen",
-              "lắm",
-              "thun",
-              "mình",
-              "màu",
-              "khoác",
-              "thích"
-            ],
-            "answer": "Mình thích áo khoác màu đen lắm."
-          },
-          {
-            "prompt": "What color is your T-shirt?",
-            "wordBank": [
-              "màu",
-              "quần",
-              "áo",
-              "bạn",
-              "không",
-              "gì",
-              "của",
-              "thun",
-              "?"
-            ],
-            "answer": "Áo thun của bạn màu gì?"
-          },
-          {
-            "prompt": "My car is white.",
-            "wordBank": [
-              "mình",
-              "trắng",
-              "xe",
-              "màu",
-              "đen",
-              "ô tô",
-              "của",
-              "buýt"
-            ],
-            "answer": "Ô tô của mình màu trắng."
-          },
-          {
-            "prompt": "My older sister doesn't like blue very much.",
-            "wordBank": [
-              "của",
-              "màu",
-              "lắm",
-              "không",
-              "chị",
-              "thích",
-              "xanh dương",
-              "mình",
-              "xanh lá"
-            ],
-            "answer": "Chị của mình không thích màu xanh dương lắm."
-          },
-          {
-            "prompt": "He is wearing a gray shirt.",
-            "wordBank": [
-              "ấy",
-              "xám",
-              "trắng",
-              "không",
-              "đeo",
-              "áo",
-              "đang",
-              "anh",
-              "mặc",
-              "sơ mi",
-              "màu",
-              "gì"
-            ],
-            "answer": "Anh ấy đang mặc áo sơ mi màu xám."
-          }
-        ]
-      }
+     }
     ]
+   },
+   {
+    "id": "g2",
+    "titleVi": "Lắm",
+    "titleEn": "Very / Really",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g2-0",
+      "label": "Khẳng định",
+      "subHeadingVi": "Khẳng định",
+      "subHeadingEn": "Affirmative",
+      "paragraphs": [
+       "Use lắm to emphasize the meaning of the word before it. With affirmative sentences, lắm means very or a lot. This pattern is commonly used with adjectives and verbs of feeling or preference, such as thích (like)."
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + [Verb / Adjective] + lắm."
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Phở này ngon lắm.",
+        "en": "This phở is very delicious."
+       },
+       {
+        "vi": "Em thích cà phê lắm.",
+        "en": "I like coffee a lot."
+       },
+       {
+        "vi": "Hôm nay trời nóng lắm.",
+        "en": "It's very hot today."
+       },
+       {
+        "vi": "Cảm ơn anh nhiều lắm.",
+        "en": "Thank you very much."
+       }
+      ]
+     },
+     {
+      "id": "g2-1",
+      "label": "Phủ định",
+      "subHeadingVi": "Phủ định",
+      "subHeadingEn": "Negative",
+      "paragraphs": [
+       "With negative sentences, không ... lắm means not very or not ... very much."
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + không + [Verb / Adjective] + lắm."
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Gà này không ngon lắm.",
+        "en": "This chicken isn't very delicious."
+       },
+       {
+        "vi": "Anh không thích ở nhà lắm.",
+        "en": "He doesn't like staying at home very much."
+       },
+       {
+        "vi": "Hôm nay trời không lạnh lắm.",
+        "en": "It isn't very cold today."
+       },
+       {
+        "vi": "Mình không mệt lắm.",
+        "en": "I'm not very tired."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "listening": {
+  "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
+  "groups": [
+   {
+    "id": "d1",
+    "title": "Chép chính tả",
+    "lines": [
+     {
+      "audio": "audio/b10/{voice}/listen_d1_01.mp3",
+      "text": "Anh Minh không thích mặc áo thun màu đỏ.",
+      "wordBank": [
+       "màu",
+       "không",
+       "anh",
+       "áo thun",
+       "màu",
+       "đen",
+       "mặc",
+       "thích",
+       "là",
+       "Minh",
+       "đỏ"
+      ]
+     },
+     {
+      "audio": "audio/b10/{voice}/listen_d1_02.mp3",
+      "text": "Chị Mai thích nón bảo hiểm màu vàng lắm.",
+      "wordBank": [
+       "màu",
+       "nón bảo hiểm",
+       "Mai",
+       "bạn",
+       "đỏ",
+       "lắm",
+       "vàng",
+       "thích",
+       "chị",
+       "không"
+      ]
+     },
+     {
+      "audio": "audio/b10/{voice}/listen_d1_03.mp3",
+      "text": "Phong không thích mặc quần đùi lắm.",
+      "wordBank": [
+       "quần đùi",
+       "không",
+       "Phong",
+       "lắm",
+       "anh",
+       "đeo",
+       "thích",
+       "mặc"
+      ]
+     },
+     {
+      "audio": "audio/b10/{voice}/listen_d1_04.mp3",
+      "text": "Phở bò ngon lắm, nhưng ba của mình không thích lắm.",
+      "wordBank": [
+       "ngon",
+       "mặc",
+       "bạn",
+       "lắm",
+       "màu",
+       "ba",
+       "không",
+       "mình",
+       "lắm",
+       "thích",
+       "nhưng",
+       "phở",
+       "của",
+       "bò"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "reading": {
+  "passages": [
+   {
+    "id": "r1",
+    "title": "Quần áo của Huy",
+    "audio": "audio/b10/{voice}/reading_r1.mp3",
+    "text": "Mình tên là Huy. Mình có nhiều quần áo. Mình thích mặc áo khoác màu đen và áo thun màu xanh dương. Mình không thích áo màu đỏ lắm. Bạn mình, Kiên, thích mặc áo sơ mi màu trắng. Kiên cũng thích mặc với quần màu xám, nhưng Kiên không thích quần đùi lắm. Ba của mình thích mặc áo màu đen, còn mẹ của mình thích mặc áo màu vàng.",
+    "titleEn": "Huy's Clothes",
+    "textEn": "My name is Huy. I have a lot of clothes. I like wearing a black jacket and a blue T-shirt. I don't really like red clothes. My friend Kien likes wearing a white shirt. Kien also likes wearing gray pants, but he doesn't really like shorts. My father likes wearing black clothes, while my mother likes wearing yellow clothes.",
+    "textQuestions": [
+     {
+      "prompt": "Huy thích mặc áo màu gì?",
+      "wordBank": [
+       "trắng",
+       "đen",
+       "xanh dương",
+       "xanh lá",
+       "đỏ",
+       "vàng",
+       "cam",
+       "xám",
+       "nâu"
+      ],
+      "answer": "đen và xanh dương"
+     },
+     {
+      "prompt": "Huy có thích áo màu đỏ lắm không?",
+      "wordBank": [
+       "có",
+       "không"
+      ],
+      "answer": "không"
+     },
+     {
+      "prompt": "Kiên thích mặc áo gì?",
+      "wordBank": [
+       "áo sơ mi",
+       "áo thun",
+       "áo khoác"
+      ],
+      "answer": "áo sơ mi"
+     },
+     {
+      "prompt": "Ba của Huy thích mặc áo màu gì?",
+      "wordBank": [
+       "trắng",
+       "đen",
+       "xanh dương",
+       "xanh lá",
+       "đỏ",
+       "vàng",
+       "cam",
+       "xám",
+       "nâu"
+      ],
+      "answer": "đen"
+     },
+     {
+      "prompt": "Mẹ của Huy thích mặc áo màu gì?",
+      "wordBank": [
+       "trắng",
+       "đen",
+       "xanh dương",
+       "xanh lá",
+       "đỏ",
+       "vàng",
+       "cam",
+       "xám",
+       "nâu"
+      ],
+      "answer": "vàng"
+     }
+    ]
+   }
+  ]
+ },
+ "preClass": {
+  "note": "Xem hình rồi nối từ.",
+  "vocabPreview": {
+   "instruction": "Xem màu và bấm vào từ để nghe phát âm.",
+   "items": [
+    {
+     "word": "màu trắng",
+     "color": "#FFFFFF",
+     "audio": "audio/b10/{voice}/vocab_mau_trang.mp3"
+    },
+    {
+     "word": "màu đen",
+     "color": "#1B1B28",
+     "audio": "audio/b10/{voice}/vocab_mau_den.mp3"
+    },
+    {
+     "word": "màu xanh dương",
+     "color": "#77D2FD",
+     "audio": "audio/b10/{voice}/vocab_mau_xanh_duong.mp3"
+    },
+    {
+     "word": "màu xanh lá",
+     "color": "#9BFAB9",
+     "audio": "audio/b10/{voice}/vocab_mau_xanh_la.mp3"
+    },
+    {
+     "word": "màu đỏ",
+     "color": "#FA4141",
+     "audio": "audio/b10/{voice}/vocab_mau_do.mp3"
+    },
+    {
+     "word": "màu vàng",
+     "color": "#FAE79B",
+     "audio": "audio/b10/{voice}/vocab_mau_vang.mp3"
+    },
+    {
+     "word": "màu cam",
+     "color": "#FA6141",
+     "audio": "audio/b10/{voice}/vocab_mau_cam.mp3"
+    },
+    {
+     "word": "màu xám",
+     "color": "#D6D1D1",
+     "audio": "audio/b10/{voice}/vocab_mau_xam.mp3"
+    },
+    {
+     "word": "màu nâu",
+     "color": "#613938",
+     "audio": "audio/b10/{voice}/vocab_mau_nau.mp3"
+    }
+   ]
+  },
+  "imageMatch": {
+   "title": "Nối từ với màu",
+   "instruction": "Chọn đúng từ cho mỗi màu.",
+   "items": [
+    {
+     "id": "im1",
+     "color": "#FFFFFF",
+     "answer": "màu trắng"
+    },
+    {
+     "id": "im2",
+     "color": "#1B1B28",
+     "answer": "màu đen"
+    },
+    {
+     "id": "im3",
+     "color": "#77D2FD",
+     "answer": "màu xanh dương"
+    },
+    {
+     "id": "im4",
+     "color": "#9BFAB9",
+     "answer": "màu xanh lá"
+    },
+    {
+     "id": "im5",
+     "color": "#FA4141",
+     "answer": "màu đỏ"
+    },
+    {
+     "id": "im6",
+     "color": "#FAE79B",
+     "answer": "màu vàng"
+    },
+    {
+     "id": "im7",
+     "color": "#FA6141",
+     "answer": "màu cam"
+    },
+    {
+     "id": "im8",
+     "color": "#D6D1D1",
+     "answer": "màu xám"
+    },
+    {
+     "id": "im9",
+     "color": "#613938",
+     "answer": "màu nâu"
+    }
+   ],
+   "answerBank": [
+    "màu trắng",
+    "màu đen",
+    "màu xanh dương",
+    "màu xanh lá",
+    "màu đỏ",
+    "màu vàng",
+    "màu cam",
+    "màu xám",
+    "màu nâu"
+   ]
   }
+ },
+ "postClass": {
+  "exercises": [
+   {
+    "type": "scramble",
+    "title": "1. Sắp xếp câu.",
+    "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+    "items": [
+     {
+      "prompt": "Câu 1",
+      "tokens": [
+       "màu",
+       "gì?",
+       "này",
+       "áo"
+      ],
+      "answer": "Áo này màu gì?"
+     },
+     {
+      "prompt": "Câu 2",
+      "tokens": [
+       "thích",
+       "mình",
+       "màu",
+       "lắm",
+       "đen"
+      ],
+      "answer": "Mình thích màu đen lắm."
+     },
+     {
+      "prompt": "Câu 3",
+      "tokens": [
+       "trắng",
+       "xe",
+       "này",
+       "buýt",
+       "màu"
+      ],
+      "answer": "Xe buýt này màu trắng."
+     },
+     {
+      "prompt": "Câu 4",
+      "tokens": [
+       "không",
+       "chị",
+       "màu",
+       "thích",
+       "đỏ",
+       "lắm"
+      ],
+      "answer": "Chị không thích màu đỏ lắm."
+     },
+     {
+      "prompt": "Câu 5",
+      "tokens": [
+       "mặc",
+       "em",
+       "áo",
+       "đang",
+       "cam",
+       "thun",
+       "màu"
+      ],
+      "answer": "Em đang mặc áo thun màu cam."
+     }
+    ]
+   },
+   {
+    "type": "choice",
+    "title": "2. Chọn câu trả lời phù hợp.",
+    "items": [
+     {
+      "id": "1",
+      "context": "Áo sơ mi của bạn màu gì?",
+      "options": [
+       "Áo của mình màu đen.",
+       "Mình thích áo thun.",
+       "Áo sơ mi này đẹp lắm."
+      ],
+      "answer": "Áo của mình màu đen."
+     },
+     {
+      "id": "2",
+      "context": "Bạn thích màu gì?",
+      "options": [
+       "Mình thích màu xanh dương.",
+       "Mình đang mặc áo màu trắng.",
+       "Mình không thích màu xanh lá lắm."
+      ],
+      "answer": "Mình thích màu xanh dương."
+     },
+     {
+      "id": "3",
+      "context": "Chị ấy thích váy màu gì?",
+      "options": [
+       "Chị ấy thích mặc áo thun lắm.",
+       "Chị ấy thích mặc váy màu đỏ.",
+       "Chị ấy đang mặc quần màu đen."
+      ],
+      "answer": "Chị ấy thích mặc váy màu đỏ."
+     },
+     {
+      "id": "4",
+      "context": "Bạn có thích cà phê không?",
+      "options": [
+       "Có, mình thích lắm.",
+       "Mình đang uống cà phê đen.",
+       "Không, mình không thích trà."
+      ],
+      "answer": "Có, mình thích lắm."
+     }
+    ]
+   },
+   {
+    "type": "text_answer",
+    "title": "3. Dịch sang tiếng Việt.",
+    "instruction": "Dịch các câu sau sang tiếng Việt. Dùng word bank nếu cần.",
+    "items": [
+     {
+      "prompt": "I like the black jacket very much.",
+      "wordBank": [
+       "áo",
+       "xanh",
+       "đen",
+       "lắm",
+       "thun",
+       "mình",
+       "màu",
+       "khoác",
+       "thích"
+      ],
+      "answer": "Mình thích áo khoác màu đen lắm."
+     },
+     {
+      "prompt": "What color is your T-shirt?",
+      "wordBank": [
+       "màu",
+       "quần",
+       "áo",
+       "bạn",
+       "không",
+       "gì",
+       "của",
+       "thun",
+       "?"
+      ],
+      "answer": "Áo thun của bạn màu gì?"
+     },
+     {
+      "prompt": "My car is white.",
+      "wordBank": [
+       "mình",
+       "trắng",
+       "xe",
+       "màu",
+       "đen",
+       "ô tô",
+       "của",
+       "buýt"
+      ],
+      "answer": "Ô tô của mình màu trắng."
+     },
+     {
+      "prompt": "My older sister doesn't like blue very much.",
+      "wordBank": [
+       "của",
+       "màu",
+       "lắm",
+       "không",
+       "chị",
+       "thích",
+       "xanh dương",
+       "mình",
+       "xanh lá"
+      ],
+      "answer": "Chị của mình không thích màu xanh dương lắm."
+     },
+     {
+      "prompt": "He is wearing a gray shirt.",
+      "wordBank": [
+       "ấy",
+       "xám",
+       "trắng",
+       "không",
+       "đeo",
+       "áo",
+       "đang",
+       "anh",
+       "mặc",
+       "sơ mi",
+       "màu",
+       "gì"
+      ],
+      "answer": "Anh ấy đang mặc áo sơ mi màu xám."
+     }
+    ]
+   }
+  ]
+ }
 }
