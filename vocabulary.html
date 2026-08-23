@@ -226,7 +226,8 @@
     }
 
 
-    function renderVocabQuiz(items) {
+    function renderVocabQuiz(items, onReviewList) {
+      const resultKey = progress.storageKey + ':quiz';
       const wrap = el('div', 'quiz-wrap');
       const order = shuffle(items);
       let i = 0, correct = 0, answered = false;
@@ -234,15 +235,32 @@
       let progressMarked = false;
       const body = el('div', 'quiz-body');
       const foot = el('div', 'quiz-foot');
+      function showSavedResult(saved) {
+        body.innerHTML = '';
+        body.appendChild(el('p', 'quiz-score', 'Bạn đã làm quiz này rồi: ' + saved.correct + '/' + saved.total + ' correct.'));
+        const retry = el('button', 'btn-check', '↺ Retry');
+        retry.type = 'button';
+        retry.addEventListener('click', function () { clearQuizResult(resultKey); i = 0; correct = 0; nextQuestion(); });
+        body.appendChild(retry);
+        if (onReviewList) {
+          const reviewBtn = el('button', 'btn-purple', 'Xem danh sách từ vựng →');
+          reviewBtn.type = 'button';
+          reviewBtn.style.marginLeft = '8px';
+          reviewBtn.addEventListener('click', onReviewList);
+          body.appendChild(reviewBtn);
+        }
+        foot.textContent = '';
+      }
       function nextQuestion() {
         answered = false;
         body.innerHTML = '';
         if (i >= order.length) {
           body.appendChild(el('p', 'quiz-score', 'Done! ' + correct + '/' + order.length + ' correct.'));
           if (!progressMarked) { progressMarked = true; markProgressDone(progressKeyForThis); }
+          saveQuizResult(resultKey, correct, order.length);
           const retry = el('button', 'btn-check', 'Retry');
           retry.type = 'button';
-          retry.addEventListener('click', function () { i = 0; correct = 0; nextQuestion(); });
+          retry.addEventListener('click', function () { clearQuizResult(resultKey); i = 0; correct = 0; nextQuestion(); });
           body.appendChild(retry);
           foot.textContent = '';
           return;
@@ -281,7 +299,8 @@
         });
         body.appendChild(optWrap);
       }
-      nextQuestion();
+      const savedResult = loadQuizResult(resultKey);
+      if (savedResult) { showSavedResult(savedResult); } else { nextQuestion(); }
       wrap.appendChild(foot);
       wrap.appendChild(body);
       return wrap;
@@ -311,7 +330,7 @@
         content.innerHTML = '';
         if (activeMode === 'list') content.appendChild(renderVocabList(items));
         else if (activeMode === 'flashcards') content.appendChild(renderVocabFlashcards(items, function () { setMode('quiz'); }));
-        else content.appendChild(renderVocabQuiz(items));
+        else content.appendChild(renderVocabQuiz(items, function () { setMode('list'); }));
       }
       modes.forEach(function (m) {
         const b = el('button', 'mode-btn' + (m[0] === activeMode ? ' active' : ''), m[1]);
