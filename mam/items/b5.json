@@ -1,1386 +1,1192 @@
 {
-  "id": "b5",
-  "num": 5,
-  "title": "Sinh nhật của bạn là ngày mấy?",
-  "vocab": {
+ "id": "b5",
+ "num": 5,
+ "title": "Sinh nhật của bạn là ngày mấy?",
+ "vocab": {
+  "items": [
+   {
+    "id": "v1",
+    "word": "hai mốt",
+    "meaning": "21",
+    "audio": "audio/b5/{voice}/vocab_hai_mot.mp3"
+   },
+   {
+    "id": "v2",
+    "word": "hai hai",
+    "meaning": "22",
+    "audio": "audio/b5/{voice}/vocab_hai_hai.mp3"
+   },
+   {
+    "id": "v3",
+    "word": "hai ba",
+    "meaning": "23",
+    "audio": "audio/b5/{voice}/vocab_hai_ba.mp3"
+   },
+   {
+    "id": "v4",
+    "word": "hai bốn",
+    "meaning": "24",
+    "audio": "audio/b5/{voice}/vocab_hai_bon.mp3"
+   },
+   {
+    "id": "v5",
+    "word": "hai tư",
+    "meaning": "24",
+    "audio": "audio/b5/{voice}/vocab_hai_tu.mp3"
+   },
+   {
+    "id": "v6",
+    "word": "hai lăm",
+    "meaning": "25",
+    "audio": "audio/b5/{voice}/vocab_hai_lam.mp3"
+   },
+   {
+    "id": "v7",
+    "word": "hai sáu",
+    "meaning": "26",
+    "audio": "audio/b5/{voice}/vocab_hai_sau.mp3"
+   },
+   {
+    "id": "v8",
+    "word": "hai bảy",
+    "meaning": "27",
+    "audio": "audio/b5/{voice}/vocab_hai_bay.mp3"
+   },
+   {
+    "id": "v9",
+    "word": "hai tám",
+    "meaning": "28",
+    "audio": "audio/b5/{voice}/vocab_hai_tam.mp3"
+   },
+   {
+    "id": "v10",
+    "word": "hai chín",
+    "meaning": "29",
+    "audio": "audio/b5/{voice}/vocab_hai_chin.mp3"
+   },
+   {
+    "id": "v11",
+    "word": "ba mươi",
+    "meaning": "30",
+    "audio": "audio/b5/{voice}/vocab_ba_muoi.mp3"
+   },
+   {
+    "id": "v12",
+    "word": "ba mốt",
+    "meaning": "31",
+    "audio": "audio/b5/{voice}/vocab_ba_mot.mp3"
+   },
+   {
+    "id": "v13",
+    "word": "ba tư",
+    "meaning": "34",
+    "audio": "audio/b5/{voice}/vocab_ba_tu.mp3"
+   },
+   {
+    "id": "v14",
+    "word": "ba lăm",
+    "meaning": "35",
+    "audio": "audio/b5/{voice}/vocab_ba_lam.mp3"
+   },
+   {
+    "id": "v15",
+    "word": "bốn mươi",
+    "meaning": "40",
+    "audio": "audio/b5/{voice}/vocab_bon_muoi.mp3"
+   },
+   {
+    "id": "v16",
+    "word": "bốn mốt",
+    "meaning": "41",
+    "audio": "audio/b5/{voice}/vocab_bon_mot.mp3"
+   },
+   {
+    "id": "v17",
+    "word": "bốn tư",
+    "meaning": "44",
+    "audio": "audio/b5/{voice}/vocab_bon_tu.mp3"
+   },
+   {
+    "id": "v18",
+    "word": "bốn lăm",
+    "meaning": "45",
+    "audio": "audio/b5/{voice}/vocab_bon_lam.mp3"
+   },
+   {
+    "id": "v19",
+    "word": "năm mươi",
+    "meaning": "50",
+    "audio": "audio/b5/{voice}/vocab_nam_muoi.mp3"
+   },
+   {
+    "id": "v20",
+    "word": "năm mốt",
+    "meaning": "51",
+    "audio": "audio/b5/{voice}/vocab_nam_mot.mp3"
+   },
+   {
+    "id": "v21",
+    "word": "năm tư",
+    "meaning": "54",
+    "audio": "audio/b5/{voice}/vocab_nam_tu.mp3"
+   },
+   {
+    "id": "v22",
+    "word": "năm lăm",
+    "meaning": "55",
+    "audio": "audio/b5/{voice}/vocab_nam_lam.mp3"
+   },
+   {
+    "id": "v23",
+    "word": "sáu mươi",
+    "meaning": "60",
+    "audio": "audio/b5/{voice}/vocab_sau_muoi.mp3"
+   },
+   {
+    "id": "v24",
+    "word": "sáu mốt",
+    "meaning": "61",
+    "audio": "audio/b5/{voice}/vocab_sau_mot.mp3"
+   },
+   {
+    "id": "v25",
+    "word": "sáu tư",
+    "meaning": "64",
+    "audio": "audio/b5/{voice}/vocab_sau_tu.mp3"
+   },
+   {
+    "id": "v26",
+    "word": "sáu lăm",
+    "meaning": "65",
+    "audio": "audio/b5/{voice}/vocab_sau_lam.mp3"
+   },
+   {
+    "id": "v27",
+    "word": "bảy mươi",
+    "meaning": "70",
+    "audio": "audio/b5/{voice}/vocab_bay_muoi.mp3"
+   },
+   {
+    "id": "v28",
+    "word": "bảy mốt",
+    "meaning": "71",
+    "audio": "audio/b5/{voice}/vocab_bay_mot.mp3"
+   },
+   {
+    "id": "v29",
+    "word": "bảy tư",
+    "meaning": "74",
+    "audio": "audio/b5/{voice}/vocab_bay_tu.mp3"
+   },
+   {
+    "id": "v30",
+    "word": "bảy lăm",
+    "meaning": "75",
+    "audio": "audio/b5/{voice}/vocab_bay_lam.mp3"
+   },
+   {
+    "id": "v31",
+    "word": "tám mươi",
+    "meaning": "80",
+    "audio": "audio/b5/{voice}/vocab_tam_muoi.mp3"
+   },
+   {
+    "id": "v32",
+    "word": "tám mốt",
+    "meaning": "81",
+    "audio": "audio/b5/{voice}/vocab_tam_mot.mp3"
+   },
+   {
+    "id": "v33",
+    "word": "tám tư",
+    "meaning": "84",
+    "audio": "audio/b5/{voice}/vocab_tam_tu.mp3"
+   },
+   {
+    "id": "v34",
+    "word": "tám lăm",
+    "meaning": "85",
+    "audio": "audio/b5/{voice}/vocab_tam_lam.mp3"
+   },
+   {
+    "id": "v35",
+    "word": "chín mươi",
+    "meaning": "90",
+    "audio": "audio/b5/{voice}/vocab_chin_muoi.mp3"
+   },
+   {
+    "id": "v36",
+    "word": "chín mốt",
+    "meaning": "91",
+    "audio": "audio/b5/{voice}/vocab_chin_mot.mp3"
+   },
+   {
+    "id": "v37",
+    "word": "chín tư",
+    "meaning": "94",
+    "audio": "audio/b5/{voice}/vocab_chin_tu.mp3"
+   },
+   {
+    "id": "v38",
+    "word": "chín lăm",
+    "meaning": "95",
+    "audio": "audio/b5/{voice}/vocab_chin_lam.mp3"
+   },
+   {
+    "id": "v39",
+    "word": "thứ",
+    "meaning": "day of the week",
+    "audio": "audio/b5/{voice}/vocab_thu.mp3"
+   },
+   {
+    "id": "v40",
+    "word": "ngày",
+    "meaning": "day",
+    "audio": "audio/b5/{voice}/vocab_ngay.mp3"
+   },
+   {
+    "id": "v41",
+    "word": "tuần",
+    "meaning": "week",
+    "audio": "audio/b5/{voice}/vocab_tuan.mp3"
+   },
+   {
+    "id": "v42",
+    "word": "tháng",
+    "meaning": "month",
+    "audio": "audio/b5/{voice}/vocab_thang.mp3"
+   },
+   {
+    "id": "v43",
+    "word": "năm",
+    "meaning": "year",
+    "audio": "audio/b5/{voice}/vocab_nam.mp3"
+   },
+   {
+    "id": "v44",
+    "word": "sinh nhật",
+    "meaning": "birthday, day of birth",
+    "audio": "audio/b5/{voice}/vocab_sinh_nhat.mp3"
+   },
+   {
+    "id": "v45",
+    "word": "hình như",
+    "meaning": "apparently",
+    "audio": "audio/b5/{voice}/vocab_hinh_nhu.mp3"
+   },
+   {
+    "id": "v46",
+    "word": "chính xác",
+    "meaning": "exact, exactly",
+    "audio": "audio/b5/{voice}/vocab_chinh_xac.mp3"
+   },
+   {
+    "id": "v47",
+    "word": "nhà hàng",
+    "meaning": "restaurant",
+    "audio": "audio/b5/{voice}/vocab_nha_hang.mp3"
+   },
+   {
+    "id": "v48",
+    "word": "người lớn tuổi",
+    "meaning": "elderly people",
+    "audio": "audio/b5/{voice}/vocab_nguoi_lon_tuoi.mp3"
+   },
+   {
+    "id": "v49",
+    "word": "người trẻ",
+    "meaning": "young people",
+    "audio": "audio/b5/{voice}/vocab_nguoi_tre.mp3"
+   },
+   {
+    "id": "v50",
+    "word": "tổ chức",
+    "meaning": "organize",
+    "audio": "audio/b5/{voice}/vocab_to_chuc.mp3"
+   },
+   {
+    "id": "v51",
+    "word": "gặp nhau",
+    "meaning": "meet each other",
+    "audio": "audio/b5/{voice}/vocab_gap_nhau.mp3"
+   },
+   {
+    "id": "v52",
+    "word": "ăn uống",
+    "meaning": "eat and drink",
+    "audio": "audio/b5/{voice}/vocab_an_uong.mp3"
+   },
+   {
+    "id": "v53",
+    "word": "nói chuyện",
+    "meaning": "talk, chat",
+    "audio": "audio/b5/{voice}/vocab_noi_chuyen.mp3"
+   },
+   {
+    "id": "v54",
+    "word": "một số",
+    "meaning": "some, several",
+    "audio": "audio/b5/{voice}/vocab_mot_so.mp3"
+   }
+  ]
+ },
+ "grammar": {
+  "sections": [
+   {
+    "id": "g0",
+    "titleVi": "Số 21-99",
+    "titleEn": "Reading Numbers from 21 to 99",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g0",
+      "label": "Số 21-99",
+      "subHeadingVi": "Số 21-99",
+      "subHeadingEn": "Numbers 21-99",
+      "paragraphs": [
+       "Numbers from 21 to 99 are read by saying the tens first, followed by the ones."
+      ],
+      "chips": [
+       {
+        "pattern": "[Tens] + [Ones]"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Hai mươi",
+        "en": "20"
+       },
+       {
+        "vi": "Bốn ba",
+        "en": "43"
+       },
+       {
+        "vi": "Bảy bảy",
+        "en": "77"
+       }
+      ],
+      "tipBlocks": [
+       {
+        "tip": "Language Tip 1: When 1 is the last digit of a number from 21 to 99, it is usually pronounced mốt instead of một.",
+        "examples": [
+         {
+          "vi": "Hai mốt",
+          "en": "21"
+         },
+         {
+          "vi": "Sáu mốt",
+          "en": "61"
+         }
+        ]
+       },
+       {
+        "tip": "Language Tip 2: When 4 is the last digit of a number from 20 to 99, it can be pronounced bốn or tư. Both are correct.",
+        "examples": [
+         {
+          "vi": "Bốn bốn / Bốn tư",
+          "en": "44"
+         },
+         {
+          "vi": "Tám bốn / Tám tư",
+          "en": "84"
+         }
+        ]
+       },
+       {
+        "tip": "Language Tip 3: When 5 is the last digit of a number from 10 to 99, it is usually pronounced lăm instead of năm.",
+        "examples": [
+         {
+          "vi": "Mười lăm",
+          "en": "15"
+         },
+         {
+          "vi": "Ba lăm",
+          "en": "35"
+         }
+        ]
+       }
+      ],
+      "quiz": [
+       {
+        "question": "Which is the natural way to read 21?",
+        "options": [
+         "Hai một",
+         "Hai mốt",
+         "Một hai",
+         "Mốt hai"
+        ],
+        "answer": "Hai mốt"
+       },
+       {
+        "question": "Which is the natural way to read 61?",
+        "options": [
+         "Sáu một",
+         "Sáu mốt",
+         "Một sáu",
+         "Mốt sáu"
+        ],
+        "answer": "Sáu mốt"
+       },
+       {
+        "question": "Which reading is correct for 44?",
+        "options": [
+         "Bốn một",
+         "Bốn hai",
+         "Bốn ba",
+         "Bốn tư"
+        ],
+        "answer": "Bốn tư"
+       },
+       {
+        "question": "Which is the natural way to read 35?",
+        "options": [
+         "Ba năm",
+         "Ba lăm",
+         "Năm ba",
+         "Lăm ba"
+        ],
+        "answer": "Ba lăm"
+       },
+       {
+        "question": "Which is the natural way to read 84?",
+        "options": [
+         "Tám mốt",
+         "Tám bốn",
+         "Tám lăm",
+         "Tám tám"
+        ],
+        "answer": "Tám bốn"
+       },
+       {
+        "question": "Which sentence is NOT the natural pronunciation?",
+        "options": [
+         "Hai mốt",
+         "Sáu lăm",
+         "Ba năm",
+         "Tám tư"
+        ],
+        "answer": "Ba năm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g1",
+    "titleVi": "Ngày & Tháng",
+    "titleEn": "Days & Months",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g1",
+      "label": "Ngày & Tháng",
+      "subHeadingVi": "Ngày & Tháng",
+      "subHeadingEn": "Days & Months",
+      "paragraphs": [
+       "Use ngày followed by a number to say the day of the month. Use tháng followed by a number to say the month of the year. For April, you can say either tháng tư or tháng bốn. Both are correct."
+      ],
+      "chips": [
+       {
+        "pattern": "Ngày + [Day]\nTháng + [Month]"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Ngày mười.",
+        "en": "The 10th."
+       },
+       {
+        "vi": "Tháng hai.",
+        "en": "February."
+       },
+       {
+        "vi": "Ngày ba mươi tháng tư.",
+        "en": "April 30th."
+       },
+       {
+        "vi": "Ngày hai mốt tháng mười một.",
+        "en": "November 21st."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "Which phrase means \"February\"?",
+        "options": [
+         "Ngày hai",
+         "Ngày ba",
+         "Tháng hai",
+         "Ngày ba"
+        ],
+        "answer": "Tháng hai"
+       },
+       {
+        "question": "Which phrase means \"the 10th\"?",
+        "options": [
+         "Tháng mười",
+         "Tháng mươi",
+         "Ngày mười",
+         "Mười ngày"
+        ],
+        "answer": "Ngày mười"
+       },
+       {
+        "question": "Which sentence means \"April 30th\"?",
+        "options": [
+         "Tháng ba mươi ngày tư",
+         "Ngày ba mươi tháng tư",
+         "Ba mươi tháng tư ngày",
+         "Ngày tư tháng ba mươi"
+        ],
+        "answer": "Ngày ba mươi tháng tư"
+       },
+       {
+        "question": "Which two words can both be used for April?",
+        "options": [
+         "Tháng mười / Tháng mươi",
+         "Tháng tư / Tháng bốn",
+         "Tháng năm / Tháng lăm",
+         "Tháng một / Tháng mốt"
+        ],
+        "answer": "Tháng tư / Tháng bốn"
+       },
+       {
+        "question": "Which sentence means \"July 20th\"?",
+        "options": [
+         "Ngày hai mươi tháng bảy",
+         "Tháng hai mươi ngày bảy",
+         "Tháng bảy ngày hai",
+         "Ngày bảy tháng hai mươi"
+        ],
+        "answer": "Ngày hai mươi tháng bảy"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g2",
+    "titleVi": "Thứ mấy?",
+    "titleEn": "Which Day of the Week?",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g2",
+      "label": "Thứ mấy?",
+      "subHeadingVi": "Thứ mấy?",
+      "subHeadingEn": "Which Day of the Week?",
+      "paragraphs": [
+       "Use this pattern to ask what day of the week it is. You can ask about today, yesterday, or tomorrow. To answer, use: ... là + day of the week."
+      ],
+      "chips": [
+       {
+        "pattern": "Hôm nay / Hôm qua / Ngày mai là thứ mấy?\n→ ... là thứ ..."
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Hôm nay là thứ mấy?\n→ Hôm nay là thứ Ba.",
+        "en": "What day is it today?\nToday is Tuesday."
+       },
+       {
+        "vi": "Hôm qua là thứ mấy?\n→ Hôm qua là Chủ Nhật.",
+        "en": "What day was it yesterday?\nYesterday was Sunday."
+       },
+       {
+        "vi": "Ngày mai là thứ mấy?\n→ Ngày mai là thứ Sáu.",
+        "en": "What day is it tomorrow?\nTomorrow is Friday."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How do you ask \"What day is it today?\"",
+        "options": [
+         "Hôm nay là năm mấy?",
+         "Hôm nay là thứ mấy?",
+         "Hôm nay là mấy giờ?",
+         "Hôm nay là tháng mấy?"
+        ],
+        "answer": "Hôm nay là thứ mấy?"
+       },
+       {
+        "question": "Which answer means \"Today is Tuesday.\"",
+        "options": [
+         "Hôm nay là thứ Ba.",
+         "Hôm nay là ngày ba.",
+         "Hôm nay là tháng ba.",
+         "Hôm nay là ba giờ."
+        ],
+        "answer": "Hôm nay là thứ Ba."
+       },
+       {
+        "question": "Complete the sentence: Hôm qua là ______.",
+        "options": [
+         "mười ngày",
+         "Chủ Nhật",
+         "tháng hai",
+         "bảy giờ"
+        ],
+        "answer": "Chủ Nhật"
+       },
+       {
+        "question": "Which question asks about tomorrow's date?",
+        "options": [
+         "Hôm qua là thứ mấy?",
+         "Hôm nay là thứ mấy?",
+         "Ngày mai là ngày mấy?",
+         "Ngày mai là tháng mấy?"
+        ],
+        "answer": "Ngày mai là ngày mấy?"
+       },
+       {
+        "question": "Which conversation is correct?",
+        "options": [
+         "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu.",
+         "A: Ngày mai là ngày mấy?\nB: Thứ Sáu là ngày mai.",
+         "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
+         "A: Hôm qua là tháng mấy?\nB: Hôm qua là Chủ Nhật."
+        ],
+        "answer": "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g3",
+    "titleVi": "Ngày mấy?",
+    "titleEn": "Which Day?",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g3",
+      "label": "Ngày mấy?",
+      "subHeadingVi": "Ngày mấy?",
+      "subHeadingEn": "Which Day?",
+      "paragraphs": [
+       "Use this pattern to ask for a specific date. You can ask about the day of the month, the month, or the full date (day, month, and year). To answer, simply say: ... là ngày... You can include the month and year if needed."
+      ],
+      "chips": [
+       {
+        "pattern": "Hôm nay / Sinh nhật của bạn là ngày mấy / tháng mấy?\n→ ... là ngày [Day] (tháng [Month] năm [Year])."
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày ba mốt.",
+        "en": "What is today's date?\nToday is the 31st."
+       },
+       {
+        "vi": "Sinh nhật của bạn là tháng mấy?\n→ Sinh nhật của mình là tháng tám.",
+        "en": "Which month is your birthday in?\nMy birthday is in August."
+       },
+       {
+        "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày hai mươi tháng ba.",
+        "en": "What is today's date?\nToday is March 20th."
+       },
+       {
+        "vi": "Sinh nhật của chị Liên là ngày mấy?\n→ Ngày mười một tháng tư.",
+        "en": "What is Liên's birthday?\nApril 11th."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How do you ask \"What is today's date?\"",
+        "options": [
+         "Hôm nay là năm mấy?",
+         "Hôm nay là ngày mấy?",
+         "Hôm nay là tháng mấy?",
+         "Hôm nay mấy giờ?"
+        ],
+        "answer": "Hôm nay là ngày mấy?"
+       },
+       {
+        "question": "Which answer means \"Today is March 20th.\"",
+        "options": [
+         "Hôm nay là ngày hai mươi tháng ba.",
+         "Hôm nay là thứ Ba ngày hai mươi.",
+         "Hôm nay là tháng ba ngày hai.",
+         "Hôm nay là thứ hai ngày ba mươi."
+        ],
+        "answer": "Hôm nay là ngày hai mươi tháng ba."
+       },
+       {
+        "question": "How do you ask \"Which month is your birthday in?\"",
+        "options": [
+         "Sinh nhật của bạn là ngày mấy?",
+         "Sinh nhật của bạn là tháng mấy?",
+         "Bạn sinh nhật mấy giờ?",
+         "Tháng của bạn là tháng mấy?"
+        ],
+        "answer": "Sinh nhật của bạn là tháng mấy?"
+       },
+       {
+        "question": "Which answer means \"My birthday is in August.\"",
+        "options": [
+         "Sinh nhật của mình là tháng tám.",
+         "Sinh nhật của mình là ngày tám.",
+         "Tháng tám là của sinh nhật mình.",
+         "Tháng tám của mình là sinh nhật."
+        ],
+        "answer": "Sinh nhật của mình là tháng tám."
+       },
+       {
+        "question": "Which conversation is correct?",
+        "options": [
+         "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư.",
+         "A: Sinh nhật của chị Liên là thứ mấy?\nB: Ngày mười một tháng tư.",
+         "A: Sinh nhật của chị Liên là mấy giờ?\nB: Ngày mười một tháng tư.",
+         "A: Sinh nhật của chị Liên là tháng gì?\nB: Tháng tư."
+        ],
+        "answer": "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "listening": {
+  "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
+  "groups": [
+   {
+    "id": "d1",
+    "title": "Hội thoại 1: Sinh nhật của bạn",
+    "lines": [
+     {
+      "audio": "audio/b5/{voice}/listen_d1_01.mp3",
+      "text": "Sinh nhật của bạn là ngày mấy?",
+      "wordBank": [
+       "ngày",
+       "của",
+       "làm",
+       "sinh nhật",
+       "tháng",
+       "mấy?",
+       "là",
+       "bạn"
+      ]
+     },
+     {
+      "audio": "audio/b5/{voice}/listen_d1_02.mp3",
+      "text": "Sinh nhật của mình là ngày mười ba tháng tư. Còn bạn?",
+      "wordBank": [
+       "tháng",
+       "làm",
+       "của",
+       "năm",
+       "mười ba",
+       "tư",
+       "sinh nhật",
+       "mình",
+       "là",
+       "ngày",
+       "còn",
+       "bạn?"
+      ]
+     },
+     {
+      "audio": "audio/b5/{voice}/listen_d1_03.mp3",
+      "text": "Sinh nhật của mình cũng là tháng tư, nhưng ngày hai mốt.",
+      "wordBank": [
+       "nhưng",
+       "tháng",
+       "hai mốt",
+       "mình",
+       "ngày",
+       "sinh nhật",
+       "của",
+       "cũng",
+       "còn",
+       "là",
+       "tháng",
+       "làm",
+       "tư"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d2",
+    "title": "Hội thoại 2: Sinh nhật của Phong",
+    "lines": [
+     {
+      "audio": "audio/b5/{voice}/listen_d2_01.mp3",
+      "text": "Sinh nhật của Phong là ngày mấy?",
+      "wordBank": [
+       "mấy?",
+       "bạn",
+       "của",
+       "năm",
+       "là",
+       "Phong",
+       "tháng",
+       "sinh nhật",
+       "ngày"
+      ]
+     },
+     {
+      "audio": "audio/b5/{voice}/listen_d2_02.mp3",
+      "text": "Mình không biết. Hình như là tháng chín.",
+      "wordBank": [
+       "tháng",
+       "biết",
+       "mình",
+       "hình như",
+       "không",
+       "làm",
+       "chín",
+       "ngày",
+       "là",
+       "mấy"
+      ]
+     },
+     {
+      "audio": "audio/b5/{voice}/listen_d2_03.mp3",
+      "text": "Mình cũng không biết. Còn sinh nhật của bạn là ngày mấy?",
+      "wordBank": [
+       "sinh nhật",
+       "gì",
+       "không",
+       "mình",
+       "còn",
+       "biết",
+       "mấy?",
+       "tháng",
+       "hai",
+       "bạn",
+       "của",
+       "cũng",
+       "là",
+       "ngày"
+      ]
+     },
+     {
+      "audio": "audio/b5/{voice}/listen_d2_04.mp3",
+      "text": "Ngày hai lăm tháng năm.",
+      "wordBank": [
+       "tháng",
+       "mấy",
+       "là",
+       "không",
+       "năm",
+       "hai lăm",
+       "ngày"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "reading": {
+  "passages": [
+   {
+    "id": "r1",
+    "title": "Sinh nhật ở Việt Nam",
+    "audio": "audio/b5/{voice}/reading_r1.mp3",
+    "text": "Ở Việt Nam, nhiều người thích sinh nhật. Sinh nhật là một ngày đặc biệt trong năm. Vào ngày này, mọi người thường ăn uống với gia đình hoặc bạn. Có người tổ chức sinh nhật ở nhà. Có người tổ chức ở nhà hàng hoặc quán cà phê.\nNhiều người Việt biết ngày, tháng và năm sinh của mình. Tuy nhiên, một số người lớn tuổi không biết chính xác sinh nhật.\nNgày nay, nhiều người trẻ thường tổ chức sinh nhật mỗi năm với gia đình và bạn. Sinh nhật là ngày để mọi người gặp nhau, ăn uống và nói chuyện.",
+    "titleEn": "Birthdays in Vietnam",
+    "textEn": "In Vietnam, many people like birthdays. A birthday is a special day of the year. On this day, people usually eat and drink with their family or friends. Some people celebrate their birthday at home. Others celebrate at a restaurant or a café.\nMany Vietnamese people know their date of birth. However, some older people do not know their exact birthday.\nNowadays, many young people usually celebrate their birthdays every year with their family and friends. A birthday is a day for people to get together, eat, and talk.\n",
+    "questions": [
+     {
+      "id": "rq1",
+      "context": "Vào ngày sinh nhật, mọi người thường ăn uống với _____.",
+      "options": [
+       "Bạn thân",
+       "Gia đình hoặc bạn",
+       "Đồng nghiệp hoặc bạn"
+      ],
+      "answer": "Gia đình hoặc bạn"
+     },
+     {
+      "id": "rq2",
+      "context": "Mọi người thường tổ chức sinh nhật ở nhà, _____.",
+      "options": [
+       "nhà hàng hoặc quán cà phê",
+       "công ty hoặc nhà hàng",
+       "nhà hàng hoặc chợ"
+      ],
+      "answer": "nhà hàng hoặc quán cà phê"
+     },
+     {
+      "id": "rq3",
+      "context": "Một số _____ thường không biết chính xác ngày sinh.",
+      "options": [
+       "Trẻ con",
+       "Người trẻ",
+       "Người lớn tuổi"
+      ],
+      "answer": "Người lớn tuổi"
+     }
+    ]
+   }
+  ]
+ },
+ "preClass": {
+  "note": "Xem ngày/tháng rồi tập nói bằng chữ để luyện phản xạ.",
+  "flows": [
+   {
+    "title": "Luyện phản xạ: Đọc ngày tháng",
+    "vocabPreview": {
+     "instruction": "Xem ngày/tháng, thử nói bằng chữ, rồi bấm nghe để kiểm tra.",
+     "items": [
+      {
+       "word": "ngày hai tháng chín",
+       "number": "September 2",
+       "audio": "audio/b5/{voice}/date_02_09.mp3"
+      },
+      {
+       "word": "ngày mười tám tháng năm",
+       "number": "May 18",
+       "audio": "audio/b5/{voice}/date_18_05.mp3"
+      },
+      {
+       "word": "ngày mười tháng tư",
+       "number": "April 10",
+       "audio": "audio/b5/{voice}/date_10_04.mp3"
+      },
+      {
+       "word": "ngày hai lăm tháng sáu",
+       "number": "June 25",
+       "audio": "audio/b5/{voice}/date_25_06.mp3"
+      },
+      {
+       "word": "ngày bảy tháng mười một",
+       "number": "November 7",
+       "audio": "audio/b5/{voice}/date_07_11.mp3"
+      },
+      {
+       "word": "ngày ba mốt tháng ba",
+       "number": "March 31",
+       "audio": "audio/b5/{voice}/date_31_03.mp3"
+      }
+     ]
+    },
+    "quiz": {
+     "type": "text_answer",
+     "title": "Test lại: đọc ngày tháng bằng chữ",
+     "instruction": "Viết ngày tháng dưới đây bằng chữ.",
+     "wordBank": [
+      "một",
+      "hai",
+      "ba",
+      "bốn",
+      "năm",
+      "sáu",
+      "bảy",
+      "tám",
+      "chín",
+      "mười",
+      "mươi",
+      "mốt",
+      "tư",
+      "lăm",
+      "ngày",
+      "tháng"
+     ],
+     "items": [
+      {
+       "prompt": "March 3",
+       "answer": "ngày ba tháng ba"
+      },
+      {
+       "prompt": "July 20",
+       "answer": "ngày hai mươi tháng bảy"
+      },
+      {
+       "prompt": "December 12",
+       "answer": "ngày mười hai tháng mười hai"
+      },
+      {
+       "prompt": "January 9",
+       "answer": "ngày chín tháng một"
+      },
+      {
+       "prompt": "October 28",
+       "answer": "ngày hai tám tháng mười"
+      },
+      {
+       "prompt": "February 14",
+       "answer": "ngày mười bốn tháng hai"
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "postClass": {
+  "exercises": [
+   {
+    "type": "choice",
+    "title": "1. Chọn đáp án đúng.",
     "items": [
-      {
-        "id": "v1",
-        "word": "hai mốt",
-        "meaning": "21",
-        "audio": "audio/b5/{voice}/vocab_hai_mot.mp3"
-      },
-      {
-        "id": "v2",
-        "word": "hai hai",
-        "meaning": "22",
-        "audio": "audio/b5/{voice}/vocab_hai_hai.mp3"
-      },
-      {
-        "id": "v3",
-        "word": "hai ba",
-        "meaning": "23",
-        "audio": "audio/b5/{voice}/vocab_hai_ba.mp3"
-      },
-      {
-        "id": "v4",
-        "word": "hai bốn",
-        "meaning": "24",
-        "audio": "audio/b5/{voice}/vocab_hai_bon.mp3"
-      },
-      {
-        "id": "v5",
-        "word": "hai tư",
-        "meaning": "24",
-        "audio": "audio/b5/{voice}/vocab_hai_tu.mp3"
-      },
-      {
-        "id": "v6",
-        "word": "hai lăm",
-        "meaning": "25",
-        "audio": "audio/b5/{voice}/vocab_hai_lam.mp3"
-      },
-      {
-        "id": "v7",
-        "word": "hai sáu",
-        "meaning": "26",
-        "audio": "audio/b5/{voice}/vocab_hai_sau.mp3"
-      },
-      {
-        "id": "v8",
-        "word": "hai bảy",
-        "meaning": "27",
-        "audio": "audio/b5/{voice}/vocab_hai_bay.mp3"
-      },
-      {
-        "id": "v9",
-        "word": "hai tám",
-        "meaning": "28",
-        "audio": "audio/b5/{voice}/vocab_hai_tam.mp3"
-      },
-      {
-        "id": "v10",
-        "word": "hai chín",
-        "meaning": "29",
-        "audio": "audio/b5/{voice}/vocab_hai_chin.mp3"
-      },
-      {
-        "id": "v11",
-        "word": "ba mươi",
-        "meaning": "30",
-        "audio": "audio/b5/{voice}/vocab_ba_muoi.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "ba mốt",
-        "meaning": "31",
-        "audio": "audio/b5/{voice}/vocab_ba_mot.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "ba tư",
-        "meaning": "34",
-        "audio": "audio/b5/{voice}/vocab_ba_tu.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "ba lăm",
-        "meaning": "35",
-        "audio": "audio/b5/{voice}/vocab_ba_lam.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "bốn mươi",
-        "meaning": "40",
-        "audio": "audio/b5/{voice}/vocab_bon_muoi.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "bốn mốt",
-        "meaning": "41",
-        "audio": "audio/b5/{voice}/vocab_bon_mot.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "bốn tư",
-        "meaning": "44",
-        "audio": "audio/b5/{voice}/vocab_bon_tu.mp3"
-      },
-      {
-        "id": "v18",
-        "word": "bốn lăm",
-        "meaning": "45",
-        "audio": "audio/b5/{voice}/vocab_bon_lam.mp3"
-      },
-      {
-        "id": "v19",
-        "word": "năm mươi",
-        "meaning": "50",
-        "audio": "audio/b5/{voice}/vocab_nam_muoi.mp3"
-      },
-      {
-        "id": "v20",
-        "word": "năm mốt",
-        "meaning": "51",
-        "audio": "audio/b5/{voice}/vocab_nam_mot.mp3"
-      },
-      {
-        "id": "v21",
-        "word": "năm tư",
-        "meaning": "54",
-        "audio": "audio/b5/{voice}/vocab_nam_tu.mp3"
-      },
-      {
-        "id": "v22",
-        "word": "năm lăm",
-        "meaning": "55",
-        "audio": "audio/b5/{voice}/vocab_nam_lam.mp3"
-      },
-      {
-        "id": "v23",
-        "word": "sáu mươi",
-        "meaning": "60",
-        "audio": "audio/b5/{voice}/vocab_sau_muoi.mp3"
-      },
-      {
-        "id": "v24",
-        "word": "sáu mốt",
-        "meaning": "61",
-        "audio": "audio/b5/{voice}/vocab_sau_mot.mp3"
-      },
-      {
-        "id": "v25",
-        "word": "sáu tư",
-        "meaning": "64",
-        "audio": "audio/b5/{voice}/vocab_sau_tu.mp3"
-      },
-      {
-        "id": "v26",
-        "word": "sáu lăm",
-        "meaning": "65",
-        "audio": "audio/b5/{voice}/vocab_sau_lam.mp3"
-      },
-      {
-        "id": "v27",
-        "word": "bảy mươi",
-        "meaning": "70",
-        "audio": "audio/b5/{voice}/vocab_bay_muoi.mp3"
-      },
-      {
-        "id": "v28",
-        "word": "bảy mốt",
-        "meaning": "71",
-        "audio": "audio/b5/{voice}/vocab_bay_mot.mp3"
-      },
-      {
-        "id": "v29",
-        "word": "bảy tư",
-        "meaning": "74",
-        "audio": "audio/b5/{voice}/vocab_bay_tu.mp3"
-      },
-      {
-        "id": "v30",
-        "word": "bảy lăm",
-        "meaning": "75",
-        "audio": "audio/b5/{voice}/vocab_bay_lam.mp3"
-      },
-      {
-        "id": "v31",
-        "word": "tám mươi",
-        "meaning": "80",
-        "audio": "audio/b5/{voice}/vocab_tam_muoi.mp3"
-      },
-      {
-        "id": "v32",
-        "word": "tám mốt",
-        "meaning": "81",
-        "audio": "audio/b5/{voice}/vocab_tam_mot.mp3"
-      },
-      {
-        "id": "v33",
-        "word": "tám tư",
-        "meaning": "84",
-        "audio": "audio/b5/{voice}/vocab_tam_tu.mp3"
-      },
-      {
-        "id": "v34",
-        "word": "tám lăm",
-        "meaning": "85",
-        "audio": "audio/b5/{voice}/vocab_tam_lam.mp3"
-      },
-      {
-        "id": "v35",
-        "word": "chín mươi",
-        "meaning": "90",
-        "audio": "audio/b5/{voice}/vocab_chin_muoi.mp3"
-      },
-      {
-        "id": "v36",
-        "word": "chín mốt",
-        "meaning": "91",
-        "audio": "audio/b5/{voice}/vocab_chin_mot.mp3"
-      },
-      {
-        "id": "v37",
-        "word": "chín tư",
-        "meaning": "94",
-        "audio": "audio/b5/{voice}/vocab_chin_tu.mp3"
-      },
-      {
-        "id": "v38",
-        "word": "chín lăm",
-        "meaning": "95",
-        "audio": "audio/b5/{voice}/vocab_chin_lam.mp3"
-      },
-      {
-        "id": "v39",
-        "word": "thứ",
-        "meaning": "day of the week",
-        "audio": "audio/b5/{voice}/vocab_thu.mp3"
-      },
-      {
-        "id": "v40",
-        "word": "ngày",
-        "meaning": "day",
-        "audio": "audio/b5/{voice}/vocab_ngay.mp3"
-      },
-      {
-        "id": "v41",
-        "word": "tuần",
-        "meaning": "week",
-        "audio": "audio/b5/{voice}/vocab_tuan.mp3"
-      },
-      {
-        "id": "v42",
-        "word": "tháng",
-        "meaning": "month",
-        "audio": "audio/b5/{voice}/vocab_thang.mp3"
-      },
-      {
-        "id": "v43",
-        "word": "năm",
-        "meaning": "year",
-        "audio": "audio/b5/{voice}/vocab_nam.mp3"
-      },
-      {
-        "id": "v44",
-        "word": "sinh nhật",
-        "meaning": "birthday, day of birth",
-        "audio": "audio/b5/{voice}/vocab_sinh_nhat.mp3"
-      },
-      {
-        "id": "v45",
-        "word": "hình như",
-        "meaning": "apparently",
-        "audio": "audio/b5/{voice}/vocab_hinh_nhu.mp3"
-      },
-      {
-        "id": "v46",
-        "word": "chính xác",
-        "meaning": "exact, exactly",
-        "audio": "audio/b5/{voice}/vocab_chinh_xac.mp3"
-      },
-      {
-        "id": "v47",
-        "word": "nhà hàng",
-        "meaning": "restaurant",
-        "audio": "audio/b5/{voice}/vocab_nha_hang.mp3"
-      },
-      {
-        "id": "v48",
-        "word": "người lớn tuổi",
-        "meaning": "elderly people",
-        "audio": "audio/b5/{voice}/vocab_nguoi_lon_tuoi.mp3"
-      },
-      {
-        "id": "v49",
-        "word": "người trẻ",
-        "meaning": "young people",
-        "audio": "audio/b5/{voice}/vocab_nguoi_tre.mp3"
-      },
-      {
-        "id": "v50",
-        "word": "tổ chức",
-        "meaning": "organize",
-        "audio": "audio/b5/{voice}/vocab_to_chuc.mp3"
-      },
-      {
-        "id": "v51",
-        "word": "gặp nhau",
-        "meaning": "meet each other",
-        "audio": "audio/b5/{voice}/vocab_gap_nhau.mp3"
-      },
-      {
-        "id": "v52",
-        "word": "ăn uống",
-        "meaning": "eat and drink",
-        "audio": "audio/b5/{voice}/vocab_an_uong.mp3"
-      },
-      {
-        "id": "v53",
-        "word": "nói chuyện",
-        "meaning": "talk, chat",
-        "audio": "audio/b5/{voice}/vocab_noi_chuyen.mp3"
-      },
-      {
-        "id": "v54",
-        "word": "một số",
-        "meaning": "some, several",
-        "audio": "audio/b5/{voice}/vocab_mot_so.mp3"
-      }
+     {
+      "id": "1",
+      "context": "Hôm nay là ngày ________?",
+      "options": [
+       "mấy",
+       "tại",
+       "tháng"
+      ],
+      "answer": "mấy"
+     },
+     {
+      "id": "2",
+      "context": "Sinh nhật của bạn là ________?",
+      "options": [
+       "thứ mấy",
+       "ngày mấy",
+       "tuần mấy"
+      ],
+      "answer": "ngày mấy"
+     },
+     {
+      "id": "3",
+      "context": "Hôm nay là ngày hai sáu, hôm qua là ngày ________.",
+      "options": [
+       "hai lăm",
+       "hai năm",
+       "hai bảy"
+      ],
+      "answer": "hai lăm"
+     },
+     {
+      "id": "4",
+      "context": "Một số người lớn tuổi không biết ________ sinh nhật.",
+      "options": [
+       "hình như",
+       "chính xác",
+       "ngày mấy"
+      ],
+      "answer": "chính xác"
+     }
     ]
-  },
-  "grammar": {
-    "sections": [
-      {
-        "id": "g0",
-        "titleVi": "Số 21-99",
-        "titleEn": "Reading Numbers from 21 to 99",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g0",
-            "label": "Số 21-99",
-            "subHeadingVi": "Số 21-99",
-            "subHeadingEn": "Numbers 21-99",
-            "paragraphs": [
-              "Numbers from 21 to 99 are read by saying the tens first, followed by the ones."
-            ],
-            "chips": [
-              {
-                "pattern": "[Tens] + [Ones]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Hai mươi",
-                "en": "20"
-              },
-              {
-                "vi": "Bốn ba",
-                "en": "43"
-              },
-              {
-                "vi": "Bảy bảy",
-                "en": "77"
-              }
-            ],
-            "tipBlocks": [
-              {
-                "tip": "Language Tip 1: When 1 is the last digit of a number from 21 to 99, it is usually pronounced mốt instead of một.",
-                "examples": [
-                  {
-                    "vi": "Hai mốt",
-                    "en": "21"
-                  },
-                  {
-                    "vi": "Sáu mốt",
-                    "en": "61"
-                  }
-                ]
-              },
-              {
-                "tip": "Language Tip 2: When 4 is the last digit of a number from 20 to 99, it can be pronounced bốn or tư. Both are correct.",
-                "examples": [
-                  {
-                    "vi": "Bốn bốn / Bốn tư",
-                    "en": "44"
-                  },
-                  {
-                    "vi": "Tám bốn / Tám tư",
-                    "en": "84"
-                  }
-                ]
-              },
-              {
-                "tip": "Language Tip 3: When 5 is the last digit of a number from 10 to 99, it is usually pronounced lăm instead of năm.",
-                "examples": [
-                  {
-                    "vi": "Mười lăm",
-                    "en": "15"
-                  },
-                  {
-                    "vi": "Ba lăm",
-                    "en": "35"
-                  }
-                ]
-              }
-            ],
-            "quiz": [
-              {
-                "question": "Which is the natural way to read 21?",
-                "options": [
-                  "Hai một",
-                  "Hai mốt",
-                  "Một hai",
-                  "Mốt hai"
-                ],
-                "answer": "Hai mốt"
-              },
-              {
-                "question": "Which is the natural way to read 61?",
-                "options": [
-                  "Sáu một",
-                  "Sáu mốt",
-                  "Một sáu",
-                  "Mốt sáu"
-                ],
-                "answer": "Sáu mốt"
-              },
-              {
-                "question": "Which reading is correct for 44?",
-                "options": [
-                  "Bốn một",
-                  "Bốn hai",
-                  "Bốn ba",
-                  "Bốn tư"
-                ],
-                "answer": "Bốn tư"
-              },
-              {
-                "question": "Which is the natural way to read 35?",
-                "options": [
-                  "Ba năm",
-                  "Ba lăm",
-                  "Năm ba",
-                  "Lăm ba"
-                ],
-                "answer": "Ba lăm"
-              },
-              {
-                "question": "Which is the natural way to read 84?",
-                "options": [
-                  "Tám mốt",
-                  "Tám bốn",
-                  "Tám lăm",
-                  "Tám tám"
-                ],
-                "answer": "Tám bốn"
-              },
-              {
-                "question": "Which sentence is NOT the natural pronunciation?",
-                "options": [
-                  "Hai mốt",
-                  "Sáu lăm",
-                  "Ba năm",
-                  "Tám tư"
-                ],
-                "answer": "Ba năm"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g1",
-        "titleVi": "Ngày & Tháng",
-        "titleEn": "Days & Months",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g1",
-            "label": "Ngày & Tháng",
-            "subHeadingVi": "Ngày & Tháng",
-            "subHeadingEn": "Days & Months",
-            "paragraphs": [
-              "Use ngày followed by a number to say the day of the month. Use tháng followed by a number to say the month of the year. For April, you can say either tháng tư or tháng bốn. Both are correct."
-            ],
-            "chips": [
-              {
-                "pattern": "Ngày + [Day]\nTháng + [Month]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Ngày mười.",
-                "en": "The 10th."
-              },
-              {
-                "vi": "Tháng hai.",
-                "en": "February."
-              },
-              {
-                "vi": "Ngày ba mươi tháng tư.",
-                "en": "April 30th."
-              },
-              {
-                "vi": "Ngày hai mốt tháng mười một.",
-                "en": "November 21st."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "Which phrase means \"February\"?",
-                "options": [
-                  "Ngày hai",
-                  "Ngày ba",
-                  "Tháng hai",
-                  "Ngày ba"
-                ],
-                "answer": "Tháng hai"
-              },
-              {
-                "question": "Which phrase means \"the 10th\"?",
-                "options": [
-                  "Tháng mười",
-                  "Tháng mươi",
-                  "Ngày mười",
-                  "Mười ngày"
-                ],
-                "answer": "Ngày mười"
-              },
-              {
-                "question": "Which sentence means \"April 30th\"?",
-                "options": [
-                  "Tháng ba mươi ngày tư",
-                  "Ngày ba mươi tháng tư",
-                  "Ba mươi tháng tư ngày",
-                  "Ngày tư tháng ba mươi"
-                ],
-                "answer": "Ngày ba mươi tháng tư"
-              },
-              {
-                "question": "Which two words can both be used for April?",
-                "options": [
-                  "Tháng mười / Tháng mươi",
-                  "Tháng tư / Tháng bốn",
-                  "Tháng năm / Tháng lăm",
-                  "Tháng một / Tháng mốt"
-                ],
-                "answer": "Tháng tư / Tháng bốn"
-              },
-              {
-                "question": "Which sentence means \"July 20th\"?",
-                "options": [
-                  "Ngày hai mươi tháng bảy",
-                  "Tháng hai mươi ngày bảy",
-                  "Tháng bảy ngày hai",
-                  "Ngày bảy tháng hai mươi"
-                ],
-                "answer": "Ngày hai mươi tháng bảy"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g2",
-        "titleVi": "Thứ mấy?",
-        "titleEn": "Which Day of the Week?",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g2",
-            "label": "Thứ mấy?",
-            "subHeadingVi": "Thứ mấy?",
-            "subHeadingEn": "Which Day of the Week?",
-            "paragraphs": [
-              "Use this pattern to ask what day of the week it is. You can ask about today, yesterday, or tomorrow. To answer, use: ... là + day of the week."
-            ],
-            "chips": [
-              {
-                "pattern": "Hôm nay / Hôm qua / Ngày mai là thứ mấy?\n→ ... là thứ ..."
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Hôm nay là thứ mấy?\n→ Hôm nay là thứ Ba.",
-                "en": "What day is it today?\nToday is Tuesday."
-              },
-              {
-                "vi": "Hôm qua là thứ mấy?\n→ Hôm qua là Chủ Nhật.",
-                "en": "What day was it yesterday?\nYesterday was Sunday."
-              },
-              {
-                "vi": "Ngày mai là thứ mấy?\n→ Ngày mai là thứ Sáu.",
-                "en": "What day is it tomorrow?\nTomorrow is Friday."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "How do you ask \"What day is it today?\"",
-                "options": [
-                  "Hôm nay là năm mấy?",
-                  "Hôm nay là thứ mấy?",
-                  "Hôm nay là mấy giờ?",
-                  "Hôm nay là tháng mấy?"
-                ],
-                "answer": "Hôm nay là thứ mấy?"
-              },
-              {
-                "question": "Which answer means \"Today is Tuesday.\"",
-                "options": [
-                  "Hôm nay là thứ Ba.",
-                  "Hôm nay là ngày ba.",
-                  "Hôm nay là tháng ba.",
-                  "Hôm nay là ba giờ."
-                ],
-                "answer": "Hôm nay là thứ Ba."
-              },
-              {
-                "question": "Complete the sentence: Hôm qua là ______.",
-                "options": [
-                  "mười ngày",
-                  "Chủ Nhật",
-                  "tháng hai",
-                  "bảy giờ"
-                ],
-                "answer": "Chủ Nhật"
-              },
-              {
-                "question": "Which question asks about tomorrow's date?",
-                "options": [
-                  "Hôm qua là thứ mấy?",
-                  "Hôm nay là thứ mấy?",
-                  "Ngày mai là ngày mấy?",
-                  "Ngày mai là tháng mấy?"
-                ],
-                "answer": "Ngày mai là ngày mấy?"
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu.",
-                  "A: Ngày mai là ngày mấy?\nB: Thứ Sáu là ngày mai.",
-                  "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
-                  "A: Hôm qua là tháng mấy?\nB: Hôm qua là Chủ Nhật."
-                ],
-                "answer": "A: Ngày mai là thứ mấy?\nB: Ngày mai là thứ Sáu."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g3",
-        "titleVi": "Ngày mấy?",
-        "titleEn": "Which Day?",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g3",
-            "label": "Ngày mấy?",
-            "subHeadingVi": "Ngày mấy?",
-            "subHeadingEn": "Which Day?",
-            "paragraphs": [
-              "Use this pattern to ask for a specific date. You can ask about the day of the month, the month, or the full date (day, month, and year). To answer, simply say: ... là ngày... You can include the month and year if needed."
-            ],
-            "chips": [
-              {
-                "pattern": "Hôm nay / Sinh nhật của bạn là ngày mấy / tháng mấy?\n→ ... là ngày [Day] (tháng [Month] năm [Year])."
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày ba mốt.",
-                "en": "What is today's date?\nToday is the 31st."
-              },
-              {
-                "vi": "Sinh nhật của bạn là tháng mấy?\n→ Sinh nhật của mình là tháng tám.",
-                "en": "Which month is your birthday in?\nMy birthday is in August."
-              },
-              {
-                "vi": "Hôm nay là ngày mấy?\n→ Hôm nay là ngày hai mươi tháng ba.",
-                "en": "What is today's date?\nToday is March 20th."
-              },
-              {
-                "vi": "Sinh nhật của chị Liên là ngày mấy?\n→ Ngày mười một tháng tư.",
-                "en": "What is Liên's birthday?\nApril 11th."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "How do you ask \"What is today's date?\"",
-                "options": [
-                  "Hôm nay là năm mấy?",
-                  "Hôm nay là ngày mấy?",
-                  "Hôm nay là tháng mấy?",
-                  "Hôm nay mấy giờ?"
-                ],
-                "answer": "Hôm nay là ngày mấy?"
-              },
-              {
-                "question": "Which answer means \"Today is March 20th.\"",
-                "options": [
-                  "Hôm nay là ngày hai mươi tháng ba.",
-                  "Hôm nay là thứ Ba ngày hai mươi.",
-                  "Hôm nay là tháng ba ngày hai.",
-                  "Hôm nay là thứ hai ngày ba mươi."
-                ],
-                "answer": "Hôm nay là ngày hai mươi tháng ba."
-              },
-              {
-                "question": "How do you ask \"Which month is your birthday in?\"",
-                "options": [
-                  "Sinh nhật của bạn là ngày mấy?",
-                  "Sinh nhật của bạn là tháng mấy?",
-                  "Bạn sinh nhật mấy giờ?",
-                  "Tháng của bạn là tháng mấy?"
-                ],
-                "answer": "Sinh nhật của bạn là tháng mấy?"
-              },
-              {
-                "question": "Which answer means \"My birthday is in August.\"",
-                "options": [
-                  "Sinh nhật của mình là tháng tám.",
-                  "Sinh nhật của mình là ngày tám.",
-                  "Tháng tám là của sinh nhật mình.",
-                  "Tháng tám của mình là sinh nhật."
-                ],
-                "answer": "Sinh nhật của mình là tháng tám."
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư.",
-                  "A: Sinh nhật của chị Liên là thứ mấy?\nB: Ngày mười một tháng tư.",
-                  "A: Sinh nhật của chị Liên là mấy giờ?\nB: Ngày mười một tháng tư.",
-                  "A: Sinh nhật của chị Liên là tháng gì?\nB: Tháng tư."
-                ],
-                "answer": "A: Sinh nhật của chị Liên là ngày mấy?\nB: Ngày mười một tháng tư."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "review",
-        "titleVi": "Ôn tập tổng hợp",
-        "titleEn": "Review",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "review",
-            "label": "Review",
-            "quiz": [
-              {
-                "question": "Which is the natural way to read 21?",
-                "options": [
-                  "Hai một",
-                  "Hai mốt",
-                  "Một hai",
-                  "Mốt hai"
-                ],
-                "answer": "Hai mốt"
-              },
-              {
-                "question": "Which number is read naturally?",
-                "options": [
-                  "Ba năm",
-                  "Sáu mười",
-                  "Bốn tư",
-                  "Hai một"
-                ],
-                "answer": "Bốn tư"
-              },
-              {
-                "question": "How do you ask \"What day is it today?\"",
-                "options": [
-                  "Hôm nay là năm mấy?",
-                  "Hôm nay là thứ mấy?",
-                  "Hôm nay là tháng mấy?",
-                  "Hôm nay mấy giờ?"
-                ],
-                "answer": "Hôm nay là thứ mấy?"
-              },
-              {
-                "question": "Which answer means \"Today is Tuesday.\"",
-                "options": [
-                  "Hôm nay là ngày ba.",
-                  "Hôm nay là tháng ba.",
-                  "Hôm nay là thứ Ba.",
-                  "Hôm nay là ba giờ."
-                ],
-                "answer": "Hôm nay là thứ Ba."
-              },
-              {
-                "question": "How do you ask \"What is today's date?\"",
-                "options": [
-                  "Hôm nay là thứ mấy?",
-                  "Hôm nay là ngày mấy?",
-                  "Hôm nay là tháng mấy?",
-                  "Hôm nay mấy giờ?"
-                ],
-                "answer": "Hôm nay là ngày mấy?"
-              },
-              {
-                "question": "Which answer means \"Today is April 11th.\"",
-                "options": [
-                  "Hôm nay là ngày mười mốt tháng tư.",
-                  "Hôm nay là ngày mười mốt tháng bốn.",
-                  "Hôm nay là ngày mười một tháng tư.",
-                  "Hôm nay là ngày bốn tháng mười một."
-                ],
-                "answer": "Hôm nay là ngày mười mốt tháng bốn."
-              },
-              {
-                "question": "Complete the sentence: Hôm qua là ______.",
-                "options": [
-                  "ngày mai",
-                  "Chủ Nhật",
-                  "tháng tám",
-                  "tám giờ"
-                ],
-                "answer": "Chủ Nhật"
-              },
-              {
-                "question": "Which question asks about someone's birthday month?",
-                "options": [
-                  "Sinh nhật của bạn là ngày mấy?",
-                  "Sinh nhật của bạn là tháng mấy?",
-                  "Sinh nhật của bạn là thứ mấy?",
-                  "Sinh nhật của bạn là mấy giờ?"
-                ],
-                "answer": "Sinh nhật của bạn là tháng mấy?"
-              },
-              {
-                "question": "Which answer means \"My birthday is in December.\"",
-                "options": [
-                  "Sinh nhật của mình là ngày mười hai.",
-                  "Sinh nhật của mình là tháng mười hai.",
-                  "Hôm nay là tháng mười hai.",
-                  "Tháng mười hai là hôm nay."
-                ],
-                "answer": "Sinh nhật của mình là tháng mười hai."
-              },
-              {
-                "question": "Choose the correct date.",
-                "options": [
-                  "Ngày ba mươi tháng tư.",
-                  "Tháng ba mươi ngày tư.",
-                  "Ba mươi tháng tư ngày.",
-                  "Ngày tư tháng ba mươi."
-                ],
-                "answer": "Ngày ba mươi tháng tư."
-              },
-              {
-                "question": "Which sentence means \"Yesterday was Sunday the 25th.\"",
-                "options": [
-                  "Hôm nay là thứ Bảy ngày hai lăm.",
-                  "Hôm nay là Chủ Nhật ngày hai năm.",
-                  "Hôm qua là thứ Bảy ngày hai năm.",
-                  "Hôm qua là Chủ Nhật ngày hai lăm."
-                ],
-                "answer": "Hôm qua là Chủ Nhật ngày hai lăm."
-              },
-              {
-                "question": "Which sentence is correct?",
-                "options": [
-                  "Ngày hai mươi tháng bảy.",
-                  "Tháng hai mươi ngày bảy.",
-                  "Ngày bảy tháng hai mươi.",
-                  "Hai mươi ngày tháng bảy."
-                ],
-                "answer": "Ngày hai mươi tháng bảy."
-              },
-              {
-                "question": "Choose the correct conversation.",
-                "options": [
-                  "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu.",
-                  "A: Sinh nhật của bạn là tháng mấy?\nB: Sinh nhật của mình là thứ Sáu.",
-                  "A: Hôm nay là mấy giờ?\nB: Hôm nay là thứ Sáu.",
-                  "A: Hôm qua là thứ mấy?\nB: Hôm nay là thứ Sáu."
-                ],
-                "answer": "A: Hôm nay là thứ mấy?\nB: Hôm nay là thứ Sáu."
-              },
-              {
-                "question": "Choose the correct conversation.",
-                "options": [
-                  "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám.",
-                  "A: Sinh nhật của bạn là thứ mấy?\nB: Ngày bảy tháng hai.",
-                  "A: Sinh nhật của bạn là tháng mấy?\nB: Thứ năm.",
-                  "A: Sinh nhật của bạn là mấy giờ?\nB: Thứ sáu ngày mười tám."
-                ],
-                "answer": "A: Sinh nhật của bạn là ngày mấy?\nB: Ngày hai mươi tháng tám."
-              },
-              {
-                "question": "Which sentence is NOT natural?",
-                "options": [
-                  "Hai mốt",
-                  "Ba lăm",
-                  "Bốn bốn",
-                  "Tám năm"
-                ],
-                "answer": "Tám năm"
-              },
-              {
-                "question": "Complete the sentence: Hôm nay là ngày ______ tháng tư.",
-                "options": [
-                  "ba mươi",
-                  "Chủ Nhật",
-                  "thứ Ba",
-                  "tám giờ"
-                ],
-                "answer": "ba mươi"
-              },
-              {
-                "question": "Which question asks about tomorrow's day of the week?",
-                "options": [
-                  "Ngày mai là ngày mấy?",
-                  "Ngày mai là tháng mấy?",
-                  "Ngày mai là thứ mấy?",
-                  "Ngày mai mấy giờ?"
-                ],
-                "answer": "Ngày mai là thứ mấy?"
-              },
-              {
-                "question": "Choose the best response: Ngày mai là thứ mấy?",
-                "options": [
-                  "Ngày mai là thứ Hai.",
-                  "Ngày mai là ngày hai.",
-                  "Ngày mai là tháng hai.",
-                  "Ngày mai là hai giờ."
-                ],
-                "answer": "Ngày mai là thứ Hai."
-              }
-            ]
-          }
-        ]
-      }
+   },
+   {
+    "type": "matching",
+    "title": "2. Ghép câu hỏi với câu trả lời.",
+    "instruction": "Chọn câu trả lời đúng cho mỗi câu hỏi.",
+    "prompts": [
+     {
+      "text": "Hôm nay là thứ mấy?",
+      "answer": "b"
+     },
+     {
+      "text": "Hôm nay là ngày mấy?",
+      "answer": "a"
+     },
+     {
+      "text": "Sinh nhật của bạn là ngày mấy?",
+      "answer": "d"
+     },
+     {
+      "text": "Sinh nhật của bạn là tháng mấy?",
+      "answer": "c"
+     }
+    ],
+    "answerBank": [
+     {
+      "id": "a",
+      "text": "Ngày mười tám tháng năm."
+     },
+     {
+      "id": "b",
+      "text": "Thứ Tư."
+     },
+     {
+      "id": "c",
+      "text": "Tháng tám."
+     },
+     {
+      "id": "d",
+      "text": "Ngày hai lăm tháng sáu."
+     }
     ]
-  },
-  "listening": {
-    "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
-    "groups": [
-      {
-        "id": "d1",
-        "title": "Hội thoại 1: Sinh nhật của bạn",
-        "lines": [
-          {
-            "audio": "audio/b5/{voice}/listen_d1_01.mp3",
-            "text": "Sinh nhật của bạn là ngày mấy?",
-            "wordBank": [
-              "ngày",
-              "của",
-              "làm",
-              "sinh nhật",
-              "tháng",
-              "mấy?",
-              "là",
-              "bạn"
-            ]
-          },
-          {
-            "audio": "audio/b5/{voice}/listen_d1_02.mp3",
-            "text": "Sinh nhật của mình là ngày mười ba tháng tư. Còn bạn?",
-            "wordBank": [
-              "tháng",
-              "làm",
-              "của",
-              "năm",
-              "mười ba",
-              "tư",
-              "sinh nhật",
-              "mình",
-              "là",
-              "ngày",
-              "còn",
-              "bạn?"
-            ]
-          },
-          {
-            "audio": "audio/b5/{voice}/listen_d1_03.mp3",
-            "text": "Sinh nhật của mình cũng là tháng tư, nhưng ngày hai mốt.",
-            "wordBank": [
-              "nhưng",
-              "tháng",
-              "hai mốt",
-              "mình",
-              "ngày",
-              "sinh nhật",
-              "của",
-              "cũng",
-              "còn",
-              "là",
-              "tháng",
-              "làm",
-              "tư"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "d2",
-        "title": "Hội thoại 2: Sinh nhật của Phong",
-        "lines": [
-          {
-            "audio": "audio/b5/{voice}/listen_d2_01.mp3",
-            "text": "Sinh nhật của Phong là ngày mấy?",
-            "wordBank": [
-              "mấy?",
-              "bạn",
-              "của",
-              "năm",
-              "là",
-              "Phong",
-              "tháng",
-              "sinh nhật",
-              "ngày"
-            ]
-          },
-          {
-            "audio": "audio/b5/{voice}/listen_d2_02.mp3",
-            "text": "Mình không biết. Hình như là tháng chín.",
-            "wordBank": [
-              "tháng",
-              "biết",
-              "mình",
-              "hình như",
-              "không",
-              "làm",
-              "chín",
-              "ngày",
-              "là",
-              "mấy"
-            ]
-          },
-          {
-            "audio": "audio/b5/{voice}/listen_d2_03.mp3",
-            "text": "Mình cũng không biết. Còn sinh nhật của bạn là ngày mấy?",
-            "wordBank": [
-              "sinh nhật",
-              "gì",
-              "không",
-              "mình",
-              "còn",
-              "biết",
-              "mấy?",
-              "tháng",
-              "hai",
-              "bạn",
-              "của",
-              "cũng",
-              "là",
-              "ngày"
-            ]
-          },
-          {
-            "audio": "audio/b5/{voice}/listen_d2_04.mp3",
-            "text": "Ngày hai lăm tháng năm.",
-            "wordBank": [
-              "tháng",
-              "mấy",
-              "là",
-              "không",
-              "năm",
-              "hai lăm",
-              "ngày"
-            ]
-          }
-        ]
-      }
+   },
+   {
+    "type": "text_answer",
+    "title": "3. Viết ngày đúng.",
+    "instruction": "Viết bằng chữ.",
+    "items": [
+     {
+      "prompt": "02/09",
+      "answer": "Ngày hai tháng chín."
+     },
+     {
+      "prompt": "18/05",
+      "answer": "Ngày mười tám tháng năm."
+     },
+     {
+      "prompt": "10/04",
+      "answer": "Ngày mười tháng tư."
+     },
+     {
+      "prompt": "25/06",
+      "answer": "Ngày hai lăm tháng sáu."
+     },
+     {
+      "prompt": "07/11",
+      "answer": "Ngày bảy tháng mười một."
+     },
+     {
+      "prompt": "31/03",
+      "answer": "Ngày ba mốt tháng ba."
+     }
     ]
-  },
-  "reading": {
-    "passages": [
-      {
-        "id": "r1",
-        "title": "Sinh nhật ở Việt Nam",
-        "audio": "audio/b5/{voice}/reading_r1.mp3",
-        "text": "Ở Việt Nam, nhiều người thích sinh nhật. Sinh nhật là một ngày đặc biệt trong năm. Vào ngày này, mọi người thường ăn uống với gia đình hoặc bạn. Có người tổ chức sinh nhật ở nhà. Có người tổ chức ở nhà hàng hoặc quán cà phê.\nNhiều người Việt biết ngày, tháng và năm sinh của mình. Tuy nhiên, một số người lớn tuổi không biết chính xác sinh nhật.\nNgày nay, nhiều người trẻ thường tổ chức sinh nhật mỗi năm với gia đình và bạn. Sinh nhật là ngày để mọi người gặp nhau, ăn uống và nói chuyện.",
-        "titleEn": "Birthdays in Vietnam",
-        "textEn": "In Vietnam, many people like birthdays. A birthday is a special day of the year. On this day, people usually eat and drink with their family or friends. Some people celebrate their birthday at home. Others celebrate at a restaurant or a café.\nMany Vietnamese people know their date of birth. However, some older people do not know their exact birthday.\nNowadays, many young people usually celebrate their birthdays every year with their family and friends. A birthday is a day for people to get together, eat, and talk.\n",
-        "questions": [
-          {
-            "id": "rq1",
-            "context": "Vào ngày sinh nhật, mọi người thường ăn uống với _____.",
-            "options": [
-              "Bạn thân",
-              "Gia đình hoặc bạn",
-              "Đồng nghiệp hoặc bạn"
-            ],
-            "answer": "Gia đình hoặc bạn"
-          },
-          {
-            "id": "rq2",
-            "context": "Mọi người thường tổ chức sinh nhật ở nhà, _____.",
-            "options": [
-              "nhà hàng hoặc quán cà phê",
-              "công ty hoặc nhà hàng",
-              "nhà hàng hoặc chợ"
-            ],
-            "answer": "nhà hàng hoặc quán cà phê"
-          },
-          {
-            "id": "rq3",
-            "context": "Một số _____ thường không biết chính xác ngày sinh.",
-            "options": [
-              "Trẻ con",
-              "Người trẻ",
-              "Người lớn tuổi"
-            ],
-            "answer": "Người lớn tuổi"
-          }
-        ]
-      }
+   },
+   {
+    "type": "dialogue_fill",
+    "title": "4. Điền từ thích hợp.",
+    "instruction": "Điền từ thích hợp.",
+    "wordBank": [
+     "thứ",
+     "ngày",
+     "tháng",
+     "mấy",
+     "sinh nhật",
+     "chính xác"
+    ],
+    "lines": [
+     {
+      "parts": [
+       "Hôm nay là ",
+       {
+        "blank": "ngày"
+       },
+       " hai ba ",
+       {
+        "blank": "tháng"
+       },
+       " mười hai."
+      ]
+     },
+     {
+      "parts": [
+       "Sinh nhật của mẹ bạn là ngày ",
+       {
+        "blank": "mấy"
+       },
+       "?"
+      ]
+     },
+     {
+      "parts": [
+       {
+        "blank": "sinh nhật"
+       },
+       " của mình là ngày mười ba tháng tư."
+      ]
+     },
+     {
+      "parts": [
+       "Một số người lớn tuổi không biết ",
+       {
+        "blank": "chính xác"
+       },
+       " sinh nhật."
+      ]
+     }
     ]
-  },
-  "preClass": {
-    "note": "Xem ngày/tháng rồi tập nói bằng chữ để luyện phản xạ.",
-    "flows": [
-      {
-        "title": "Luyện phản xạ: Đọc ngày tháng",
-        "vocabPreview": {
-          "instruction": "Xem ngày/tháng, thử nói bằng chữ, rồi bấm nghe để kiểm tra.",
-          "items": [
-            {
-              "word": "ngày hai tháng chín",
-              "number": "September 2",
-              "audio": "audio/b5/{voice}/date_02_09.mp3"
-            },
-            {
-              "word": "ngày mười tám tháng năm",
-              "number": "May 18",
-              "audio": "audio/b5/{voice}/date_18_05.mp3"
-            },
-            {
-              "word": "ngày mười tháng tư",
-              "number": "April 10",
-              "audio": "audio/b5/{voice}/date_10_04.mp3"
-            },
-            {
-              "word": "ngày hai lăm tháng sáu",
-              "number": "June 25",
-              "audio": "audio/b5/{voice}/date_25_06.mp3"
-            },
-            {
-              "word": "ngày bảy tháng mười một",
-              "number": "November 7",
-              "audio": "audio/b5/{voice}/date_07_11.mp3"
-            },
-            {
-              "word": "ngày ba mốt tháng ba",
-              "number": "March 31",
-              "audio": "audio/b5/{voice}/date_31_03.mp3"
-            }
-          ]
-        },
-        "quiz": {
-          "type": "text_answer",
-          "title": "Test lại: đọc ngày tháng bằng chữ",
-          "instruction": "Viết ngày tháng dưới đây bằng chữ.",
-          "wordBank": [
-            "một",
-            "hai",
-            "ba",
-            "bốn",
-            "năm",
-            "sáu",
-            "bảy",
-            "tám",
-            "chín",
-            "mười",
-            "mươi",
-            "mốt",
-            "tư",
-            "lăm",
-            "ngày",
-            "tháng"
-          ],
-          "items": [
-            {
-              "prompt": "March 3",
-              "answer": "ngày ba tháng ba"
-            },
-            {
-              "prompt": "July 20",
-              "answer": "ngày hai mươi tháng bảy"
-            },
-            {
-              "prompt": "December 12",
-              "answer": "ngày mười hai tháng mười hai"
-            },
-            {
-              "prompt": "January 9",
-              "answer": "ngày chín tháng một"
-            },
-            {
-              "prompt": "October 28",
-              "answer": "ngày hai tám tháng mười"
-            },
-            {
-              "prompt": "February 14",
-              "answer": "ngày mười bốn tháng hai"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "postClass": {
-    "exercises": [
-      {
-        "type": "choice",
-        "title": "1. Chọn đáp án đúng.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Hôm nay là ngày ________?",
-            "options": [
-              "mấy",
-              "tại",
-              "tháng"
-            ],
-            "answer": "mấy"
-          },
-          {
-            "id": "2",
-            "context": "Sinh nhật của bạn là ________?",
-            "options": [
-              "thứ mấy",
-              "ngày mấy",
-              "tuần mấy"
-            ],
-            "answer": "ngày mấy"
-          },
-          {
-            "id": "3",
-            "context": "Hôm nay là ngày hai sáu, hôm qua là ngày ________.",
-            "options": [
-              "hai lăm",
-              "hai năm",
-              "hai bảy"
-            ],
-            "answer": "hai lăm"
-          },
-          {
-            "id": "4",
-            "context": "Một số người lớn tuổi không biết ________ sinh nhật.",
-            "options": [
-              "hình như",
-              "chính xác",
-              "ngày mấy"
-            ],
-            "answer": "chính xác"
-          }
-        ]
-      },
-      {
-        "type": "matching",
-        "title": "2. Ghép câu hỏi với câu trả lời.",
-        "instruction": "Chọn câu trả lời đúng cho mỗi câu hỏi.",
-        "prompts": [
-          {
-            "text": "Hôm nay là thứ mấy?",
-            "answer": "b"
-          },
-          {
-            "text": "Hôm nay là ngày mấy?",
-            "answer": "a"
-          },
-          {
-            "text": "Sinh nhật của bạn là ngày mấy?",
-            "answer": "d"
-          },
-          {
-            "text": "Sinh nhật của bạn là tháng mấy?",
-            "answer": "c"
-          }
-        ],
-        "answerBank": [
-          {
-            "id": "a",
-            "text": "Ngày mười tám tháng năm."
-          },
-          {
-            "id": "b",
-            "text": "Thứ Tư."
-          },
-          {
-            "id": "c",
-            "text": "Tháng tám."
-          },
-          {
-            "id": "d",
-            "text": "Ngày hai lăm tháng sáu."
-          }
-        ]
-      },
-      {
-        "type": "text_answer",
-        "title": "3. Viết ngày đúng.",
-        "instruction": "Viết bằng chữ.",
-        "items": [
-          {
-            "prompt": "02/09",
-            "answer": "Ngày hai tháng chín."
-          },
-          {
-            "prompt": "18/05",
-            "answer": "Ngày mười tám tháng năm."
-          },
-          {
-            "prompt": "10/04",
-            "answer": "Ngày mười tháng tư."
-          },
-          {
-            "prompt": "25/06",
-            "answer": "Ngày hai lăm tháng sáu."
-          },
-          {
-            "prompt": "07/11",
-            "answer": "Ngày bảy tháng mười một."
-          },
-          {
-            "prompt": "31/03",
-            "answer": "Ngày ba mốt tháng ba."
-          }
-        ]
-      },
-      {
-        "type": "dialogue_fill",
-        "title": "4. Điền từ thích hợp.",
-        "instruction": "Điền từ thích hợp.",
-        "wordBank": [
-          "thứ",
-          "ngày",
-          "tháng",
-          "mấy",
-          "sinh nhật",
-          "chính xác"
-        ],
-        "lines": [
-          {
-            "parts": [
-              "Hôm nay là ",
-              {
-                "blank": "ngày"
-              },
-              " hai ba ",
-              {
-                "blank": "tháng"
-              },
-              " mười hai."
-            ]
-          },
-          {
-            "parts": [
-              "Sinh nhật của mẹ bạn là ngày ",
-              {
-                "blank": "mấy"
-              },
-              "?"
-            ]
-          },
-          {
-            "parts": [
-              {
-                "blank": "sinh nhật"
-              },
-              " của mình là ngày mười ba tháng tư."
-            ]
-          },
-          {
-            "parts": [
-              "Một số người lớn tuổi không biết ",
-              {
-                "blank": "chính xác"
-              },
-              " sinh nhật."
-            ]
-          }
-        ]
-      }
-    ]
-  }
+   }
+  ]
+ }
 }
