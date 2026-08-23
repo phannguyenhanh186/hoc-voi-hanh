@@ -275,13 +275,20 @@
         "answer": "Bạn phải đội nón bảo hiểm."
        },
        {
-        "question": "Complete the sentence which means \"I must wear a jacket.\": Em ______ mặc áo khoác.",
-        "options": [
+        "type": "scramble",
+        "question": "How to say \"I must wear glasses when riding a motorbike\"",
+        "wordBank": [
          "phải",
-         "đang",
-         "không"
+         "xe",
+         "mình",
+         "không",
+         "kính",
+         "khi",
+         "máy",
+         "đi",
+         "đeo"
         ],
-        "answer": "phải"
+        "answer": "mình phải đeo kính khi đi xe máy"
        },
        {
         "question": "Which sentence means \"I have to go to work.\"",
@@ -291,6 +298,22 @@
          "Mình đang đi làm."
         ],
         "answer": "Mình phải đi làm."
+       },
+       {
+        "type": "scramble",
+        "question": "How to say \"Minh must wear shoes when going to work\"",
+        "wordBank": [
+         "phải",
+         "Minh",
+         "đi",
+         "giày",
+         "lúc",
+         "làm",
+         "khi",
+         "đeo",
+         "đi"
+        ],
+        "answer": "Minh phải đi giày khi đi làm"
        }
       ]
      }
@@ -349,13 +372,24 @@
         "answer": "Mình không phải đi làm hôm nay."
        },
        {
-        "question": "Complete the sentence: Hôm nay mình ______ phải đi học.",
-        "options": [
+        "type": "scramble",
+        "question": "How to say \"Hiền doesn't have to wear a raincoat today\"",
+        "wordBank": [
+         "phải",
+         "áo",
+         "hôm",
+         "Hiền",
          "không",
-         "đang",
-         "thường"
+         "qua",
+         "đeo",
+         "nay",
+         "mặc",
+         "mưa"
         ],
-        "answer": "không"
+        "answers": [
+         "Hiền không phải mặc áo mưa hôm nay",
+         "Hôm nay Hiền không phải mặc áo mưa"
+        ]
        },
        {
         "question": "Which sentence is correct?",
@@ -365,6 +399,25 @@
          "Bạn phải không đội nón bảo hiểm."
         ],
         "answer": "Bạn không phải đội nón bảo hiểm."
+       },
+       {
+        "type": "scramble",
+        "question": "How to say: \"Yesterday I didn't have to cook\"",
+        "wordBank": [
+         "không",
+         "đi",
+         "chị",
+         "hôm",
+         "nấu",
+         "phải",
+         "ăn",
+         "qua",
+         "nay"
+        ],
+        "answers": [
+         "Hôm qua chị không phải nấu ăn",
+         "Chị không phải nấu ăn hôm qua"
+        ]
        }
       ]
      }
@@ -450,6 +503,24 @@
          "Bạn phải có gì khi đi xe máy không?"
         ],
         "answer": "Bạn phải đội gì khi đi xe máy?"
+       },
+       {
+        "type": "scramble",
+        "question": "How to say: \"What do I have to learn tomorrow?\"",
+        "wordBank": [
+         "học",
+         "phải",
+         "mai",
+         "hôm",
+         "gì",
+         "em",
+         "ngày",
+         "?"
+        ],
+        "answers": [
+         "Ngày mai em phải học gì?",
+         "Em phải học gì ngày mai?"
+        ]
        }
       ]
      }
@@ -524,11 +595,32 @@
        {
         "question": "Which conversation is correct?",
         "options": [
-         "A: Bạn có phải mang hộ chiếu?\nB: Có, mình phải mang hộ chiếu.",
+         "A: Bạn có phải hộ chiếu không?\nB: Có, mình có phải mang.",
          "A: Bạn có phải mang hộ chiếu không?\nB: Mình có hộ chiếu.",
          "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
         ],
         "answer": "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
+       },
+       {
+        "type": "scramble",
+        "question": "How to ask \"Did you have to go to work today?\"",
+        "wordBank": [
+         "có",
+         "hôm",
+         "việc",
+         "chị",
+         "làm",
+         "mai",
+         "phải",
+         "không",
+         "đi",
+         "nay",
+         "?"
+        ],
+        "answers": [
+         "Hôm nay chị có phải đi làm không?",
+         "Chị có phải đi làm hôm nay không?"
+        ]
        }
       ]
      }
