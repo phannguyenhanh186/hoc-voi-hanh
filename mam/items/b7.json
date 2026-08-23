@@ -513,39 +513,119 @@
      },
      {
       "id": "g4-1",
-      "label": "Hỏi giá — Mẫu 2",
-      "subHeadingVi": "Hỏi giá — Mẫu 2",
-      "subHeadingEn": "Asking About Prices — Pattern 2",
+      "label": "Hỏi/Nói giá — Mẫu 2",
+      "subHeadingVi": "Hỏi/Nói giá với \"Cái này / Cái kia\"",
+      "subHeadingEn": "Asking & Telling Prices with \"Cái này / Cái kia\"",
       "paragraphs": [
-       "Use this pattern when you don't know or don't want to say the name of the item."
+       "Use this pattern when you don't know or don't want to say the name of the item — pointing at it instead. \"Cái này\" (this one) is for something near you; \"Cái kia\" (that one) is for something farther away."
       ],
       "chips": [
        {
+        "label": "Question",
         "pattern": "Cái này / Cái kia + bao nhiêu tiền?"
+       },
+       {
+        "label": "Answer",
+        "pattern": "Cái này / Cái kia + [Price] (ngàn đồng)."
        }
       ],
       "examples": [
        {
         "vi": "Cái này bao nhiêu tiền?",
-        "en": "How much is this?"
+        "en": "How much is this one?"
        },
        {
         "vi": "Cái kia bao nhiêu tiền?",
-        "en": "How much is that?"
+        "en": "How much is that one?"
+       },
+       {
+        "vi": "Cái này tám mốt ngàn.",
+        "en": "This one is 81,000 đồng."
+       },
+       {
+        "vi": "Cái kia sáu lăm ngàn đồng.",
+        "en": "That one is 65,000 đồng."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How to ask \"How much is this one?\"",
+        "options": [
+         "Cái bao nhiêu tiền?",
+         "Cái này bao nhiêu tiền?",
+         "Cái kia bao nhiêu tiền?",
+         "Cái kia bao nhiêu đồng?"
+        ],
+        "answer": "Cái này bao nhiêu tiền?"
+       },
+       {
+        "type": "scramble",
+        "question": "How to ask for the price of an object two meters away from you?",
+        "wordBank": [
+         "kia",
+         "tiền",
+         "nhiêu",
+         "này",
+         "là",
+         "cái",
+         "bao",
+         "?"
+        ],
+        "answer": "cái kia bao nhiêu tiền?"
+       },
+       {
+        "question": "Which sentence means \"That one is 65,000 dong.\"",
+        "options": [
+         "Cái này sáu năm ngàn đồng.",
+         "Cái kia sáu năm ngàn tiền.",
+         "Cái này sáu lăm ngàn tiền.",
+         "Cái kia sáu lăm ngàn đồng."
+        ],
+        "answer": "Cái kia sáu lăm ngàn đồng."
+       },
+       {
+        "type": "scramble",
+        "question": "How to answer the question \"How much is that one?\"",
+        "wordBank": [
+         "ngàn",
+         "ba",
+         "kia",
+         "năm trăm",
+         "là",
+         "cái",
+         "lẻ",
+         "đồng"
+        ],
+        "answer": "cái kia năm trăm lẻ ba đồng"
+       },
+       {
+        "question": "Which sentence is correct?",
+        "options": [
+         "Cái tám mươi ngàn lăm.",
+         "Cái kia tám ngàn lăm.",
+         "Cái này tám lăm ngàn.",
+         "Cái kia tám lẻ lăm ngàn."
+        ],
+        "answer": "Cái này tám lăm ngàn."
        }
       ]
      },
      {
       "id": "g4-2",
-      "label": "Hỏi giá — Mẫu 3",
-      "subHeadingVi": "Hỏi giá — Mẫu 3",
-      "subHeadingEn": "Asking About Prices — Pattern 3",
+      "label": "Hỏi/Nói giá — Mẫu 3",
+      "subHeadingVi": "Hỏi/Nói giá với \"[Noun] này / kia\"",
+      "subHeadingEn": "Asking & Telling Prices with a Named Item (\"này / kia\")",
       "paragraphs": [
-       "Use this pattern when you know the name of the item."
+       "Use this pattern when you know (and want to say) the name of the item — add này (this) or kia (that) right after the noun."
       ],
       "chips": [
        {
-        "pattern": "[Noun] + này + bao nhiêu tiền?"
+        "label": "Question",
+        "pattern": "[Noun] + này/kia + bao nhiêu tiền?"
+       },
+       {
+        "label": "Answer",
+        "pattern": "[Noun] + này/kia + [Price] (ngàn đồng)."
        }
       ],
       "examples": [
@@ -560,26 +640,6 @@
        {
         "vi": "Bánh ngọt này bao nhiêu tiền?",
         "en": "How much is this cake?"
-       }
-      ]
-     },
-     {
-      "id": "g4-4",
-      "label": "Nói giá — Mẫu 2",
-      "subHeadingVi": "Nói giá — Mẫu 2",
-      "subHeadingEn": "Telling the Price — Pattern 2",
-      "paragraphs": [
-       "Use this pattern to tell the price of an item."
-      ],
-      "chips": [
-       {
-        "pattern": "Cái này / [Noun] này + [Price] (ngàn/đồng)."
-       }
-      ],
-      "examples": [
-       {
-        "vi": "Cái này tám mốt ngàn.",
-        "en": "This one is 81,000 đồng."
        },
        {
         "vi": "Bánh này một trăm lẻ năm ngàn đồng.",
@@ -588,6 +648,79 @@
        {
         "vi": "Cà phê này ba lăm ngàn.",
         "en": "This coffee is 35,000 đồng."
+       },
+       {
+        "vi": "Áo kia hai trăm ngàn.",
+        "en": "That shirt is 200,000 đồng."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How to ask \"How much is this milk coffee?\"",
+        "options": [
+         "Áo này bao nhiêu tiền?",
+         "Cà phê này bao nhiêu tiền?",
+         "Cà phê sữa này bao nhiêu tiền?",
+         "Cà phê đen kia bao nhiêu tiền?"
+        ],
+        "answer": "Cà phê sữa này bao nhiêu tiền?"
+       },
+       {
+        "question": "How to answer the question \"Áo kia bao nhiêu tiền?\"",
+        "options": [
+         "Áo hai trăm ngàn.",
+         "Áo kia hai trăm ngàn.",
+         "Áo kia trăm tiền.",
+         "Áo trăm ngàn."
+        ],
+        "answer": "Áo kia hai trăm ngàn."
+       },
+       {
+        "type": "scramble",
+        "question": "How to say \"This fruit juice is 55,000.\"",
+        "wordBank": [
+         "kia",
+         "cái",
+         "ngàn",
+         "năm",
+         "là",
+         "trái cây",
+         "lăm",
+         "nước",
+         "này"
+        ],
+        "answer": "nước trái cây này năm lăm ngàn"
+       },
+       {
+        "type": "scramble",
+        "question": "How to ask \"How much is that phone?\"",
+        "wordBank": [
+         "cái",
+         "nhiêu",
+         "ngàn",
+         "điện thoại",
+         "này",
+         "bao",
+         "tiền",
+         "kia",
+         "?"
+        ],
+        "answer": "điện thoại kia bao nhiêu tiền?"
+       },
+       {
+        "type": "scramble",
+        "question": "How to say \"That bread is 15,000\"",
+        "wordBank": [
+         "mười",
+         "bánh",
+         "này",
+         "ngàn",
+         "mì",
+         "kia",
+         "đồng",
+         "lăm"
+        ],
+        "answer": "bánh mì kia mười lăm ngàn đồng"
        }
       ]
      }
