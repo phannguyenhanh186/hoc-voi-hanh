@@ -15,7 +15,7 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" id="back-link" href="index.html">← home</a>
+          <a class="back-link" id="back-link" href="lesson.html">← back</a>
         </div>
       </nav>
     </div>
@@ -40,6 +40,7 @@
 
     const $title = document.getElementById('title');
     const $backLink = document.getElementById('back-link');
+    $backLink.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
 
     // Back về landing page (trang chọn kỹ năng) của đúng bài + cấp hiện tại
         function backToTabs() { location.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level); }
