@@ -50,6 +50,11 @@
     function nextProgressKey(k) { return progress.nextProgressKey(k); }
     function markProgressDone(k) { return progress.markProgressDone(k); }
 
+    // Khoá lưu KẾT QUẢ bài quiz nhỏ trong Grammar — ghép theo vị trí/tên của quiz đó
+    // để mỗi quiz có kết quả riêng, ổn định giữa các lần tải trang.
+    function slugify(s) { return (s || '').toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-+|-+$)/g, ''); }
+    function quizResultKey(suffix) { return progress.storageKey + ':quiz:' + slugify(String(suffix)); }
+
     function renderExampleLines(lines) {
       const wrap = el('div', 'grammar-examples');
       (lines || []).forEach(function (ln) {
@@ -70,7 +75,7 @@
     // ========================================================
 
 
-    function renderPatternBody(container, g) {
+    function renderPatternBody(container, g, quizKeyPrefix) {
       if (g.pattern) container.appendChild(el('div', 'grammar-pattern', g.pattern));
       if (g.explanation) container.appendChild(el('p', 'ex-instruction', g.explanation));
       if (g.notes && g.notes.length) {
@@ -107,7 +112,7 @@
           container.appendChild(makeToggleSection('Examples', function () { return renderExampleLines(g.answerExamples); }));
         }
       }
-      if (g.quiz && g.quiz.length) container.appendChild(renderQuizToggle(g.quiz));
+      if (g.quiz && g.quiz.length) container.appendChild(renderQuizToggle(g.quiz, undefined, quizResultKey(quizKeyPrefix || g.id || g.title)));
       if (g.extraTip) container.appendChild(renderTipBox(g.extraTip));
       if (g.extraTips && g.extraTips.length) {
         g.extraTips.forEach(function (et) { container.appendChild(renderTipBox(et)); });
@@ -352,10 +357,11 @@
 
         const quizToUse = (sub.quiz && sub.quiz.length) ? sub.quiz : section.quiz;
         if (quizToUse && quizToUse.length) {
+          const quizKey = quizResultKey((section.titleVi || '') + ':' + (sub.label || sub.subHeadingVi || ''));
           practicePanel.appendChild(buildQuizBlock(quizToUse, function () {
             theoryBtn.classList.add('active'); practiceBtn.classList.remove('active');
             theoryPanel.hidden = false; practicePanel.hidden = true;
-          }));
+          }, quizKey));
         }
         else practicePanel.appendChild(el('p', 'note', 'Practice exercises coming soon.'));
 
@@ -460,19 +466,19 @@
           g.subsections.forEach(function (sub, i) {
             const subBox = el('div', 'grammar-subsection');
             subBox.appendChild(el('h4', 'grammar-subhead grammar-subhead-purple', sub.subtitle));
-            renderPatternBody(subBox, sub);
+            renderPatternBody(subBox, sub, (g.id || g.title) + ':' + (sub.subtitle || i));
             box.appendChild(subBox);
           });
           if (g.extraTips && g.extraTips.length) {
             g.extraTips.forEach(function (et) { box.appendChild(renderTipBox(et)); });
           }
-          if (g.quiz && g.quiz.length) box.appendChild(renderQuizToggle(g.quiz));
+          if (g.quiz && g.quiz.length) box.appendChild(renderQuizToggle(g.quiz, undefined, quizResultKey((g.id || g.title) + ':main')));
           gPanel.appendChild(box);
           return;
         }
         if (g.pattern) {
           box.appendChild(el('h3', 'ex-title', g.title));
-          renderPatternBody(box, g);
+          renderPatternBody(box, g, g.id || g.title);
           gPanel.appendChild(box);
           return;
         }
