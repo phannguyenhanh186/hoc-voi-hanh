@@ -1,1198 +1,1034 @@
 {
-  "id": "b9",
-  "num": 9,
-  "title": "Đi xe máy phải đội nón bảo hiểm",
-  "vocab": {
-    "items": [
-      {
-        "id": "v1",
-        "word": "nón",
-        "meaning": "hat",
-        "audio": "audio/b9/{voice}/vocab_non.mp3"
-      },
-      {
-        "id": "v2",
-        "word": "nón bảo hiểm",
-        "meaning": "helmet",
-        "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3"
-      },
-      {
-        "id": "v3",
-        "word": "đội nón",
-        "meaning": "wear a hat",
-        "audio": "audio/b9/{voice}/vocab_doi_non.mp3"
-      },
-      {
-        "id": "v4",
-        "word": "đội nón bảo hiểm",
-        "meaning": "wear a helmet",
-        "audio": "audio/b9/{voice}/vocab_doi_non_bao_hiem.mp3"
-      },
-      {
-        "id": "v5",
-        "word": "áo",
-        "meaning": "shirt",
-        "audio": "audio/b9/{voice}/vocab_ao.mp3"
-      },
-      {
-        "id": "v6",
-        "word": "áo mưa",
-        "meaning": "raincoat",
-        "audio": "audio/b9/{voice}/vocab_ao_mua.mp3"
-      },
-      {
-        "id": "v7",
-        "word": "áo khoác",
-        "meaning": "jacket",
-        "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3"
-      },
-      {
-        "id": "v8",
-        "word": "quần",
-        "meaning": "pants",
-        "audio": "audio/b9/{voice}/vocab_quan.mp3"
-      },
-      {
-        "id": "v9",
-        "word": "mặc áo",
-        "meaning": "wear a shirt",
-        "audio": "audio/b9/{voice}/vocab_mac_ao.mp3"
-      },
-      {
-        "id": "v10",
-        "word": "mặc áo mưa",
-        "meaning": "wear a raincoat",
-        "audio": "audio/b9/{voice}/vocab_mac_ao_mua.mp3"
-      },
-      {
-        "id": "v10b",
-        "word": "mặc áo khoác",
-        "meaning": "wear a jacket",
-        "audio": "audio/b9/{voice}/vocab_mac_ao_khoac.mp3"
-      },
-      {
-        "id": "v11",
-        "word": "mặc quần",
-        "meaning": "wear pants",
-        "audio": "audio/b9/{voice}/vocab_mac_quan.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "khẩu trang",
-        "meaning": "mask",
-        "audio": "audio/b9/{voice}/vocab_khau_trang.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "kính",
-        "meaning": "glasses",
-        "audio": "audio/b9/{voice}/vocab_kinh.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "túi",
-        "meaning": "bag",
-        "audio": "audio/b9/{voice}/vocab_tui.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "đeo khẩu trang",
-        "meaning": "wear a mask",
-        "audio": "audio/b9/{voice}/vocab_deo_khau_trang.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "đeo kính",
-        "meaning": "wear glasses",
-        "audio": "audio/b9/{voice}/vocab_deo_kinh.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "đeo túi",
-        "meaning": "wear a bag",
-        "audio": "audio/b9/{voice}/vocab_deo_tui.mp3"
-      },
-      {
-        "id": "v18",
-        "word": "dép",
-        "meaning": "slippers",
-        "audio": "audio/b9/{voice}/vocab_dep.mp3"
-      },
-      {
-        "id": "v19",
-        "word": "giày",
-        "meaning": "sneakers",
-        "audio": "audio/b9/{voice}/vocab_giay.mp3"
-      },
-      {
-        "id": "v20",
-        "word": "đi dép",
-        "meaning": "wear slippers",
-        "audio": "audio/b9/{voice}/vocab_di_dep.mp3"
-      },
-      {
-        "id": "v21",
-        "word": "đi giày",
-        "meaning": "wear sneakers",
-        "audio": "audio/b9/{voice}/vocab_di_giay.mp3"
-      },
-      {
-        "id": "v22",
-        "word": "đường",
-        "meaning": "street",
-        "audio": "audio/b9/{voice}/vocab_duong.mp3"
-      },
-      {
-        "id": "v23",
-        "word": "ra đường",
-        "meaning": "go out and about",
-        "audio": "audio/b9/{voice}/vocab_ra_duong.mp3"
-      },
-      {
-        "id": "v24",
-        "word": "đông",
-        "meaning": "crowded",
-        "audio": "audio/b9/{voice}/vocab_dong.mp3"
-      },
-      {
-        "id": "v25",
-        "word": "nhỏ",
-        "meaning": "small",
-        "audio": "audio/b9/{voice}/vocab_nho.mp3"
-      },
-      {
-        "id": "v26",
-        "word": "đường đông",
-        "meaning": "crowded street",
-        "audio": "audio/b9/{voice}/vocab_duong_dong.mp3"
-      },
-      {
-        "id": "v27",
-        "word": "đông người",
-        "meaning": "crowded, lots of people",
-        "audio": "audio/b9/{voice}/vocab_dong_nguoi.mp3"
-      },
-      {
-        "id": "v28",
-        "word": "ít người",
-        "meaning": "a few people",
-        "audio": "audio/b9/{voice}/vocab_it_nguoi.mp3"
-      },
-      {
-        "id": "v29",
-        "word": "nhiều người",
-        "meaning": "a lot of people",
-        "audio": "audio/b9/{voice}/vocab_nhieu_nguoi.mp3"
-      },
-      {
-        "id": "v30",
-        "word": "xe máy",
-        "meaning": "motorbike",
-        "audio": "audio/b9/{voice}/vocab_xe_may.mp3"
-      },
-      {
-        "id": "v31",
-        "word": "đi lại",
-        "meaning": "walk around, get around",
-        "audio": "audio/b9/{voice}/vocab_di_lai.mp3"
-      },
-      {
-        "id": "v32",
-        "word": "đi bộ",
-        "meaning": "go on foot, walk",
-        "audio": "audio/b9/{voice}/vocab_di_bo.mp3"
-      },
-      {
-        "id": "v33",
-        "word": "tiện",
-        "meaning": "convenient",
-        "audio": "audio/b9/{voice}/vocab_tien.mp3"
-      },
-      {
-        "id": "v34",
-        "word": "bằng",
-        "meaning": "by",
-        "audio": "audio/b9/{voice}/vocab_bang.mp3"
-      }
-    ]
-  },
-  "grammar": {
-    "sections": [
-      {
-        "id": "g1",
-        "titleVi": "Phải",
-        "titleEn": "Must",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g1",
-            "label": "Phải",
-            "subHeadingVi": "Phải",
-            "subHeadingEn": "Must",
-            "paragraphs": [
-              "Use phải to say that someone must, has to, or needs to do something. This pattern is commonly used to talk about rules, laws, or obligations."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + phải + [Verb]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Ở Việt Nam, bạn phải đội nón bảo hiểm khi ra đường.",
-                "en": "In Vietnam, you must wear a helmet when you go out."
-              },
-              {
-                "vi": "Em phải mặc áo khoác vì trời lạnh.",
-                "en": "I have to wear a jacket because it's cold."
-              },
-              {
-                "vi": "Mình phải đi làm lúc tám giờ.",
-                "en": "I have to go to work at 8:00."
-              },
-              {
-                "vi": "Chị phải mang hộ chiếu.",
-                "en": "She has to bring her passport."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "What does phải mean?",
-                "options": [
-                  "can",
-                  "must",
-                  "want to"
-                ],
-                "answer": "must"
-              },
-              {
-                "question": "Which sentence means \"You must wear a helmet.\"",
-                "options": [
-                  "Bạn đội nón bảo hiểm.",
-                  "Bạn phải đội nón bảo hiểm.",
-                  "Bạn thường đội nón bảo hiểm."
-                ],
-                "answer": "Bạn phải đội nón bảo hiểm."
-              },
-              {
-                "question": "Complete the sentence which means \"I must wear a jacket.\": Em ______ mặc áo khoác.",
-                "options": [
-                  "phải",
-                  "đang",
-                  "không"
-                ],
-                "answer": "phải"
-              },
-              {
-                "question": "Which sentence means \"I have to go to work.\"",
-                "options": [
-                  "Mình đi làm.",
-                  "Mình phải đi làm.",
-                  "Mình đang đi làm."
-                ],
-                "answer": "Mình phải đi làm."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g2",
-        "titleVi": "Không phải",
-        "titleEn": "Don't Have to",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g2",
-            "label": "Không phải",
-            "subHeadingVi": "Không phải",
-            "subHeadingEn": "Don't Have to",
-            "paragraphs": [
-              "Use không phải to say that someone doesn't have to do something. This means the action is not necessary."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + không phải + [Verb]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Hôm nay em ấy không phải đi học vì trời mưa.",
-                "en": "Today, he doesn't have to go to school because it's raining."
-              },
-              {
-                "vi": "Ở Đức, bạn không phải đội nón bảo hiểm khi đi xe.",
-                "en": "In Germany, you don't have to wear a helmet when riding a bicycle."
-              },
-              {
-                "vi": "Mình không phải đi làm hôm nay.",
-                "en": "I don't have to work today."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "What does không phải + verb mean?",
-                "options": [
-                  "must",
-                  "don't have to",
-                  "usually"
-                ],
-                "answer": "don't have to"
-              },
-              {
-                "question": "Which sentence means \"I don't have to work today.\"",
-                "options": [
-                  "Mình không đi làm hôm nay.",
-                  "Mình không phải đi làm hôm nay.",
-                  "Mình không đang đi làm hôm nay."
-                ],
-                "answer": "Mình không phải đi làm hôm nay."
-              },
-              {
-                "question": "Complete the sentence: Hôm nay mình ______ phải đi học.",
-                "options": [
-                  "không",
-                  "đang",
-                  "thường"
-                ],
-                "answer": "không"
-              },
-              {
-                "question": "Which sentence is correct?",
-                "options": [
-                  "Bạn không phải đội nón bảo hiểm.",
-                  "Bạn đội không phải nón bảo hiểm.",
-                  "Bạn phải không đội nón bảo hiểm."
-                ],
-                "answer": "Bạn không phải đội nón bảo hiểm."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g3",
-        "titleVi": "Phải...gì?",
-        "titleEn": "Asking What Someone Must Wear or Bring",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g3",
-            "label": "Phải...gì?",
-            "subHeadingVi": "Phải...gì?",
-            "subHeadingEn": "Must Do What?",
-            "paragraphs": [
-              "Use this pattern to ask what someone must wear, bring, or do."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + phải + [Verb] + gì?"
-              }
-            ],
-            "notes": [
-              "mặc (wear clothes)",
-              "đội (wear a hat/helmet)",
-              "đeo (wear glasses, a mask, jewelry)",
-              "mang (bring)",
-              "đi (go)"
-            ],
-            "examples": [
-              {
-                "vi": "Mình phải đeo gì?",
-                "en": "What do I have to wear?"
-              },
-              {
-                "vi": "Đi làm chị phải mặc áo gì?",
-                "en": "What clothes do you have to wear to work?"
-              },
-              {
-                "vi": "Bạn phải mang gì?",
-                "en": "What do you have to bring?"
-              },
-              {
-                "vi": "Khi đi xe máy, mình phải đội gì?",
-                "en": "What do I have to wear when riding a motorbike?"
-              }
-            ],
-            "quiz": [
-              {
-                "question": "How do you ask \"What do I have to wear?\"",
-                "options": [
-                  "Mình phải mặc gì?",
-                  "Mình mặc gì?",
-                  "Mình đang mặc gì?"
-                ],
-                "answer": "Mình phải mặc gì?"
-              },
-              {
-                "question": "Which answer fits? — Mình phải mang gì?",
-                "options": [
-                  "Bạn phải mang hộ chiếu.",
-                  "Bạn không mang hộ chiếu.",
-                  "Bạn đang mang hộ chiếu."
-                ],
-                "answer": "Bạn phải mang hộ chiếu."
-              },
-              {
-                "question": "Complete the sentence which means \"What do I have to wear?\": Chị ______ gì?",
-                "options": [
-                  "phải",
-                  "phải mặc",
-                  "phải làm"
-                ],
-                "answer": "phải mặc"
-              },
-              {
-                "question": "Which question suits the answer \"Mình phải đội nón bảo hiểm khi đi xe máy.\"",
-                "options": [
-                  "Bạn phải đội nón bảo hiểm khi đi xe máy?",
-                  "Bạn phải đội gì khi đi xe máy?",
-                  "Bạn phải có gì khi đi xe máy không?"
-                ],
-                "answer": "Bạn phải đội gì khi đi xe máy?"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g4",
-        "titleVi": "Có phải...không?",
-        "titleEn": "Asking If Someone Has to Do Something",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g4",
-            "label": "Có phải...không?",
-            "subHeadingVi": "Có phải...không?",
-            "subHeadingEn": "Does Someone Have to Do Something?",
-            "paragraphs": [
-              "Use this pattern to ask whether someone has to do something. This is a Yes/No question."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + có phải + [Verb] + không?"
-              }
-            ],
-            "notes": [
-              "To answer: Có. / [Pronoun] + có.",
-              "Or: Không. / [Pronoun] + không.",
-              "Or answer in a full sentence."
-            ],
-            "examples": [
-              {
-                "vi": "Trời nắng anh có phải mặc áo khoác không?",
-                "en": "Do you have to wear a jacket when it's sunny?"
-              },
-              {
-                "vi": "Bạn có phải đội nón bảo hiểm ở Mỹ không?",
-                "en": "Do you have to wear a helmet in the US?"
-              },
-              {
-                "vi": "Chị có phải mang hộ chiếu không?",
-                "en": "Do you have to bring your passport?"
-              }
-            ],
-            "quiz": [
-              {
-                "question": "Which sentence means \"Do you have to wear a helmet?\"",
-                "options": [
-                  "Bạn phải đội nón bảo hiểm?",
-                  "Bạn có phải đội nón bảo hiểm không?",
-                  "Bạn đội nón bảo hiểm không phải?"
-                ],
-                "answer": "Bạn có phải đội nón bảo hiểm không?"
-              },
-              {
-                "question": "Which answer means \"No, I don't have to.\"",
-                "options": [
-                  "Không, mình.",
-                  "Không, mình phải.",
-                  "Mình không."
-                ],
-                "answer": "Mình không."
-              },
-              {
-                "question": "Complete the question: Bạn có phải đi làm ______?",
-                "options": [
-                  "gì",
-                  "không",
-                  "thế nào"
-                ],
-                "answer": "không"
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Bạn có phải mang hộ chiếu?\nB: Có, mình phải mang hộ chiếu.",
-                  "A: Bạn có phải mang hộ chiếu không?\nB: Mình có hộ chiếu.",
-                  "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
-                ],
-                "answer": "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "review",
-        "titleVi": "Ôn tập tổng hợp",
-        "titleEn": "Review",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "review",
-            "label": "Ôn tập tổng hợp",
-            "quiz": [
-              {
-                "question": "What does phải mean?",
-                "options": [
-                  "can",
-                  "must",
-                  "want to",
-                  "like to"
-                ],
-                "answer": "must"
-              },
-              {
-                "question": "Which sentence means \"You must wear a helmet.\"",
-                "options": [
-                  "Bạn đội nón bảo hiểm.",
-                  "Bạn đang đội nón bảo hiểm.",
-                  "Bạn phải đội nón bảo hiểm.",
-                  "Bạn thường đội nón bảo hiểm."
-                ],
-                "answer": "Bạn phải đội nón bảo hiểm."
-              },
-              {
-                "question": "Which sentence means \"I don't have to go to work today.\"",
-                "options": [
-                  "Anh không đi làm hôm nay.",
-                  "Anh không phải đi làm hôm nay.",
-                  "Anh đang không đi làm.",
-                  "Anh thường không đi làm."
-                ],
-                "answer": "Anh không phải đi làm hôm nay."
-              },
-              {
-                "question": "Complete the sentence: Em ______ mặc áo khoác vì trời lạnh.",
-                "options": [
-                  "đang",
-                  "phải",
-                  "thường",
-                  "có"
-                ],
-                "answer": "phải"
-              },
-              {
-                "question": "Which sentence is correct?",
-                "options": [
-                  "Bạn phải không đội nón bảo hiểm.",
-                  "Bạn không phải đội nón bảo hiểm.",
-                  "Bạn đội không phải nón bảo hiểm.",
-                  "Không bạn phải đội nón bảo hiểm."
-                ],
-                "answer": "Bạn không phải đội nón bảo hiểm."
-              },
-              {
-                "question": "How do you ask \"What do I have to wear?\"",
-                "options": [
-                  "Chị mặc gì?",
-                  "Chị đang mặc gì?",
-                  "Chị phải mặc gì?",
-                  "Chị có mặc gì không?"
-                ],
-                "answer": "Chị phải mặc gì?"
-              },
-              {
-                "question": "Which answer best completes the conversation?\nA: Bạn phải mang gì?\nB: ______",
-                "options": [
-                  "Mình phải mang hộ chiếu.",
-                  "Mình mang hôm qua.",
-                  "Mình đang mang.",
-                  "Mình thích hộ chiếu."
-                ],
-                "answer": "Mình phải mang hộ chiếu."
-              },
-              {
-                "question": "Complete the question that means \"What do I have to wear?\": Chị _______ gì?",
-                "options": [
-                  "phải",
-                  "phải đeo",
-                  "đang đeo",
-                  "đeo"
-                ],
-                "answer": "phải đeo"
-              },
-              {
-                "question": "How do you ask \"Do you have to bring your phone?\"",
-                "options": [
-                  "Bạn phải mang điện thoại?",
-                  "Bạn có mang điện thoại không?",
-                  "Bạn có phải mang điện thoại không?",
-                  "Bạn có đang mang điện thoại không?"
-                ],
-                "answer": "Bạn có phải mang điện thoại không?"
-              },
-              {
-                "question": "Which is the best answer?\nA: Bạn có phải đi làm hôm nay không?",
-                "options": [
-                  "Có, mình phải đi làm.",
-                  "Có mình.",
-                  "Có, mình phải.",
-                  "Mình đi làm."
-                ],
-                "answer": "Có, mình phải đi làm."
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo.",
-                  "A: Bạn có phải đeo khẩu trang không?\nB: Không đeo khẩu trang",
-                  "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình đeo.",
-                  "A: Bạn có phải đeo khẩu trang không?\nB: Mình phải có."
-                ],
-                "answer": "A: Bạn có phải đeo khẩu trang không?\nB: Không, mình không phải đeo."
-              },
-              {
-                "question": "Which sentence means \"What do you have to bring to work?\"",
-                "options": [
-                  "Đi làm bạn mặc gì?",
-                  "Đi làm bạn phải mặc gì?",
-                  "Đi làm bạn có mặc gì?",
-                  "Đi làm bạn có phải mặc gì?"
-                ],
-                "answer": "Đi làm bạn phải mặc gì?"
-              },
-              {
-                "question": "Which sentence is the most natural?",
-                "options": [
-                  "Ở Việt Nam, phải bạn đội nón bảo hiểm.",
-                  "Ở Việt Nam, bạn đội phải nón bảo hiểm.",
-                  "Ở Việt Nam, bạn phải đội nón bảo hiểm.",
-                  "Ở Việt Nam, bạn nón bảo hiểm phải đội."
-                ],
-                "answer": "Ở Việt Nam, bạn phải đội nón bảo hiểm."
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi.",
-                  "A: Đi làm chị phải mặc áo gì?\nB: Chị mặc quần đùi.",
-                  "A: Đi làm chị phải mặc áo gì?\nB: Chị đang mặc áo sơ mi.",
-                  "A: Đi làm chị phải mặc áo gì?\nB: Chị không phải đi giày"
-                ],
-                "answer": "A: Đi làm chị phải mặc áo gì?\nB: Chị phải mặc áo sơ mi."
-              },
-              {
-                "question": "Choose the best conversation.",
-                "options": [
-                  "A: Bạn phải mặc gì?\nB: Có, mình phải mặc áo.",
-                  "A: Bạn phải đeo gì?\nB: Mình có.",
-                  "A: Bạn có phải đeo kính không?\nB: Mình phải có.",
-                  "A: Bạn có phải đeo kính không?\nB: Mình có."
-                ],
-                "answer": "A: Bạn có phải đeo kính không?\nB: Mình có."
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "listening": {
-    "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
-    "groups": [
-      {
-        "id": "d1",
-        "title": "Chép chính tả",
-        "lines": [
-          {
-            "audio": "audio/b9/{voice}/listen_d1_01.mp3",
-            "text": "Mình phải mặc áo khoác tại vì trời nắng to.",
-            "wordBank": [
-              "nắng",
-              "phải",
-              "áo mưa",
-              "mình",
-              "tại vì",
-              "to",
-              "trời",
-              "áo khoác",
-              "không",
-              "mặc"
-            ]
-          },
-          {
-            "audio": "audio/b9/{voice}/listen_d1_02.mp3",
-            "text": "Anh Phong thường đội nón và đi giày khi ra đường.",
-            "wordBank": [
-              "khi",
-              "đi",
-              "và",
-              "anh",
-              "phải",
-              "ra đường",
-              "thường",
-              "đội",
-              "giày",
-              "Phong",
-              "đeo",
-              "nón"
-            ]
-          },
-          {
-            "audio": "audio/b9/{voice}/listen_d1_03.mp3",
-            "text": "Tại vì hôm nay trời không mưa, chị không phải mặc áo mưa.",
-            "wordBank": [
-              "mưa",
-              "không",
-              "trời",
-              "hôm nay",
-              "chị",
-              "tại vì",
-              "không",
-              "áo mưa",
-              "đeo",
-              "mặc",
-              "phải"
-            ]
-          },
-          {
-            "audio": "audio/b9/{voice}/listen_d1_04.mp3",
-            "text": "Hôm qua bạn có phải đi làm không?",
-            "wordBank": [
-              "đi làm",
-              "đi ngủ",
-              "có",
-              "hôm nay",
-              "phải",
-              "không?",
-              "bạn",
-              "hôm qua"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "reading": {
-    "passages": [
-      {
-        "id": "r1",
-        "title": "Văn hóa đi lại ở Việt Nam",
-        "audio": "audio/b9/{voice}/reading_r1.mp3",
-        "text": "Ở Việt Nam, mọi người thường ra đường bằng xe máy. Xe máy rất tiện tại vì đường nhỏ và đông người. Khi đi xe máy, mọi người phải đội nón bảo hiểm. Tại vì ở đây trời rất nắng và nóng, họ phải đeo khẩu trang và đeo kính. Trời mưa, họ phải mặc áo mưa.\nBây giờ, nhiều người đi làm hoặc đi chơi bằng metro hoặc xe buýt. Ít người đi bộ, tại vì ở Việt Nam trời thường nắng và nóng, và đường cũng rất đông xe.\nTrong tuần, mọi người đến công ty làm việc vào buổi sáng và về nhà ăn cơm với gia đình vào buổi tối. Cuối tuần, mọi người thường đi ăn với gia đình hoặc đi ăn với bạn ở quán ăn. Họ cũng rất thích uống cà phê và trà.",
-        "titleEn": "Transportation culture in Vietnam",
-        "textEn": "In Vietnam, people usually travel by motorbike. Motorbikes are very convenient because the roads are small and crowded. When riding a motorbike, people have to wear helmets. Because it is very sunny and hot here, they also wear masks and sunglasses. When it rains, they have to wear raincoats.\nNowadays, many people go to work or go out by metro or bus. Few people walk because it is often sunny and hot in Vietnam, and the roads are also very crowded with vehicles.\nDuring the week, people go to work at the company in the morning and go home to have dinner with their families in the evening. On weekends, people usually go out to eat with their family or friends at restaurants. They also really enjoy drinking coffee and tea.",
-        "questions": [
-          {
-            "id": "rq1",
-            "context": "Ở Việt Nam, mọi người thường đi bộ ra đường.",
-            "options": [
-              "Đúng",
-              "Sai"
-            ],
-            "answer": "Sai"
-          },
-          {
-            "id": "rq2",
-            "context": "Khi đi xe máy, mọi người không phải đội nón bảo hiểm.",
-            "options": [
-              "Đúng",
-              "Sai"
-            ],
-            "answer": "Sai"
-          },
-          {
-            "id": "rq3",
-            "context": "Bây giờ không nhiều người đi làm bằng tàu metro ở Việt Nam.",
-            "options": [
-              "Đúng",
-              "Sai"
-            ],
-            "answer": "Sai"
-          },
-          {
-            "id": "rq4",
-            "context": "Ở Việt Nam, nhiều người đi bộ tại vì trời mát.",
-            "options": [
-              "Đúng",
-              "Sai"
-            ],
-            "answer": "Sai"
-          },
-          {
-            "id": "rq5",
-            "context": "Người Việt Nam thích uống cà phê.",
-            "options": [
-              "Đúng",
-              "Sai"
-            ],
-            "answer": "Đúng"
-          }
-        ]
-      }
-    ]
-  },
-  "preClass": {
-    "note": "Xem hình rồi nối từ.",
-    "vocabPreview": {
-      "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
-      "items": [
-        {
-          "word": "nón",
-          "image": "images/b9/nghe/non.jpg",
-          "audio": "audio/b9/{voice}/vocab_non.mp3"
-        },
-        {
-          "word": "nón bảo hiểm",
-          "image": "images/b9/nghe/non_bao_hiem.jpg",
-          "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3"
-        },
-        {
-          "word": "áo",
-          "image": "images/b9/nghe/ao.jpg",
-          "audio": "audio/b9/{voice}/vocab_ao.mp3"
-        },
-        {
-          "word": "áo mưa",
-          "image": "images/b9/nghe/ao_mua.jpg",
-          "audio": "audio/b9/{voice}/vocab_ao_mua.mp3"
-        },
-        {
-          "word": "áo khoác",
-          "image": "images/b9/nghe/ao_khoac.jpg",
-          "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3"
-        },
-        {
-          "word": "dép",
-          "image": "images/b9/nghe/dep.jpg",
-          "audio": "audio/b9/{voice}/vocab_dep.mp3"
-        },
-        {
-          "word": "giày",
-          "image": "images/b9/nghe/giay.jpg",
-          "audio": "audio/b9/{voice}/vocab_giay.mp3"
-        },
-        {
-          "word": "kính",
-          "image": "images/b9/nghe/kinh.jpg",
-          "audio": "audio/b9/{voice}/vocab_kinh.mp3"
-        },
-        {
-          "word": "khẩu trang",
-          "image": "images/b9/nghe/khau_trang.jpg",
-          "audio": "audio/b9/{voice}/vocab_khau_trang.mp3"
-        },
-        {
-          "word": "túi",
-          "image": "images/b9/nghe/tui.jpg",
-          "audio": "audio/b9/{voice}/vocab_tui.mp3"
-        }
-      ]
-    },
-    "imageMatch": {
-      "title": "Nối từ với hình",
-      "instruction": "Chọn đúng từ cho mỗi hình.",
-      "items": [
-        {
-          "id": "im1",
-          "image": "images/b9/nghe/non.jpg",
-          "answer": "nón"
-        },
-        {
-          "id": "im2",
-          "image": "images/b9/nghe/non_bao_hiem.jpg",
-          "answer": "nón bảo hiểm"
-        },
-        {
-          "id": "im3",
-          "image": "images/b9/nghe/ao.jpg",
-          "answer": "áo"
-        },
-        {
-          "id": "im4",
-          "image": "images/b9/nghe/ao_mua.jpg",
-          "answer": "áo mưa"
-        },
-        {
-          "id": "im5",
-          "image": "images/b9/nghe/ao_khoac.jpg",
-          "answer": "áo khoác"
-        },
-        {
-          "id": "im6",
-          "image": "images/b9/nghe/dep.jpg",
-          "answer": "dép"
-        },
-        {
-          "id": "im7",
-          "image": "images/b9/nghe/giay.jpg",
-          "answer": "giày"
-        },
-        {
-          "id": "im8",
-          "image": "images/b9/nghe/kinh.jpg",
-          "answer": "kính"
-        },
-        {
-          "id": "im9",
-          "image": "images/b9/nghe/khau_trang.jpg",
-          "answer": "khẩu trang"
-        },
-        {
-          "id": "im10",
-          "image": "images/b9/nghe/tui.jpg",
-          "answer": "túi"
-        }
+ "id": "b9",
+ "num": 9,
+ "title": "Đi xe máy phải đội nón bảo hiểm",
+ "vocab": {
+  "items": [
+   {
+    "id": "v1",
+    "word": "nón",
+    "meaning": "hat",
+    "audio": "audio/b9/{voice}/vocab_non.mp3"
+   },
+   {
+    "id": "v2",
+    "word": "nón bảo hiểm",
+    "meaning": "helmet",
+    "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3"
+   },
+   {
+    "id": "v3",
+    "word": "đội nón",
+    "meaning": "wear a hat",
+    "audio": "audio/b9/{voice}/vocab_doi_non.mp3"
+   },
+   {
+    "id": "v4",
+    "word": "đội nón bảo hiểm",
+    "meaning": "wear a helmet",
+    "audio": "audio/b9/{voice}/vocab_doi_non_bao_hiem.mp3"
+   },
+   {
+    "id": "v5",
+    "word": "áo",
+    "meaning": "shirt",
+    "audio": "audio/b9/{voice}/vocab_ao.mp3"
+   },
+   {
+    "id": "v6",
+    "word": "áo mưa",
+    "meaning": "raincoat",
+    "audio": "audio/b9/{voice}/vocab_ao_mua.mp3"
+   },
+   {
+    "id": "v7",
+    "word": "áo khoác",
+    "meaning": "jacket",
+    "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3"
+   },
+   {
+    "id": "v8",
+    "word": "quần",
+    "meaning": "pants",
+    "audio": "audio/b9/{voice}/vocab_quan.mp3"
+   },
+   {
+    "id": "v9",
+    "word": "mặc áo",
+    "meaning": "wear a shirt",
+    "audio": "audio/b9/{voice}/vocab_mac_ao.mp3"
+   },
+   {
+    "id": "v10",
+    "word": "mặc áo mưa",
+    "meaning": "wear a raincoat",
+    "audio": "audio/b9/{voice}/vocab_mac_ao_mua.mp3"
+   },
+   {
+    "id": "v10b",
+    "word": "mặc áo khoác",
+    "meaning": "wear a jacket",
+    "audio": "audio/b9/{voice}/vocab_mac_ao_khoac.mp3"
+   },
+   {
+    "id": "v11",
+    "word": "mặc quần",
+    "meaning": "wear pants",
+    "audio": "audio/b9/{voice}/vocab_mac_quan.mp3"
+   },
+   {
+    "id": "v12",
+    "word": "khẩu trang",
+    "meaning": "mask",
+    "audio": "audio/b9/{voice}/vocab_khau_trang.mp3"
+   },
+   {
+    "id": "v13",
+    "word": "kính",
+    "meaning": "glasses",
+    "audio": "audio/b9/{voice}/vocab_kinh.mp3"
+   },
+   {
+    "id": "v14",
+    "word": "túi",
+    "meaning": "bag",
+    "audio": "audio/b9/{voice}/vocab_tui.mp3"
+   },
+   {
+    "id": "v15",
+    "word": "đeo khẩu trang",
+    "meaning": "wear a mask",
+    "audio": "audio/b9/{voice}/vocab_deo_khau_trang.mp3"
+   },
+   {
+    "id": "v16",
+    "word": "đeo kính",
+    "meaning": "wear glasses",
+    "audio": "audio/b9/{voice}/vocab_deo_kinh.mp3"
+   },
+   {
+    "id": "v17",
+    "word": "đeo túi",
+    "meaning": "wear a bag",
+    "audio": "audio/b9/{voice}/vocab_deo_tui.mp3"
+   },
+   {
+    "id": "v18",
+    "word": "dép",
+    "meaning": "slippers",
+    "audio": "audio/b9/{voice}/vocab_dep.mp3"
+   },
+   {
+    "id": "v19",
+    "word": "giày",
+    "meaning": "sneakers",
+    "audio": "audio/b9/{voice}/vocab_giay.mp3"
+   },
+   {
+    "id": "v20",
+    "word": "đi dép",
+    "meaning": "wear slippers",
+    "audio": "audio/b9/{voice}/vocab_di_dep.mp3"
+   },
+   {
+    "id": "v21",
+    "word": "đi giày",
+    "meaning": "wear sneakers",
+    "audio": "audio/b9/{voice}/vocab_di_giay.mp3"
+   },
+   {
+    "id": "v22",
+    "word": "đường",
+    "meaning": "street",
+    "audio": "audio/b9/{voice}/vocab_duong.mp3"
+   },
+   {
+    "id": "v23",
+    "word": "ra đường",
+    "meaning": "go out and about",
+    "audio": "audio/b9/{voice}/vocab_ra_duong.mp3"
+   },
+   {
+    "id": "v24",
+    "word": "đông",
+    "meaning": "crowded",
+    "audio": "audio/b9/{voice}/vocab_dong.mp3"
+   },
+   {
+    "id": "v25",
+    "word": "nhỏ",
+    "meaning": "small",
+    "audio": "audio/b9/{voice}/vocab_nho.mp3"
+   },
+   {
+    "id": "v26",
+    "word": "đường đông",
+    "meaning": "crowded street",
+    "audio": "audio/b9/{voice}/vocab_duong_dong.mp3"
+   },
+   {
+    "id": "v27",
+    "word": "đông người",
+    "meaning": "crowded, lots of people",
+    "audio": "audio/b9/{voice}/vocab_dong_nguoi.mp3"
+   },
+   {
+    "id": "v28",
+    "word": "ít người",
+    "meaning": "a few people",
+    "audio": "audio/b9/{voice}/vocab_it_nguoi.mp3"
+   },
+   {
+    "id": "v29",
+    "word": "nhiều người",
+    "meaning": "a lot of people",
+    "audio": "audio/b9/{voice}/vocab_nhieu_nguoi.mp3"
+   },
+   {
+    "id": "v30",
+    "word": "xe máy",
+    "meaning": "motorbike",
+    "audio": "audio/b9/{voice}/vocab_xe_may.mp3"
+   },
+   {
+    "id": "v31",
+    "word": "đi lại",
+    "meaning": "walk around, get around",
+    "audio": "audio/b9/{voice}/vocab_di_lai.mp3"
+   },
+   {
+    "id": "v32",
+    "word": "đi bộ",
+    "meaning": "go on foot, walk",
+    "audio": "audio/b9/{voice}/vocab_di_bo.mp3"
+   },
+   {
+    "id": "v33",
+    "word": "tiện",
+    "meaning": "convenient",
+    "audio": "audio/b9/{voice}/vocab_tien.mp3"
+   },
+   {
+    "id": "v34",
+    "word": "bằng",
+    "meaning": "by",
+    "audio": "audio/b9/{voice}/vocab_bang.mp3"
+   }
+  ]
+ },
+ "grammar": {
+  "sections": [
+   {
+    "id": "g1",
+    "titleVi": "Phải",
+    "titleEn": "Must",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g1",
+      "label": "Phải",
+      "subHeadingVi": "Phải",
+      "subHeadingEn": "Must",
+      "paragraphs": [
+       "Use phải to say that someone must, has to, or needs to do something. This pattern is commonly used to talk about rules, laws, or obligations."
       ],
-      "answerBank": [
-        "nón",
-        "nón bảo hiểm",
-        "áo",
-        "áo mưa",
-        "áo khoác",
-        "dép",
-        "giày",
-        "kính",
-        "khẩu trang",
-        "túi"
+      "chips": [
+       {
+        "pattern": "[Subject] + phải + [Verb]"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Ở Việt Nam, bạn phải đội nón bảo hiểm khi ra đường.",
+        "en": "In Vietnam, you must wear a helmet when you go out."
+       },
+       {
+        "vi": "Em phải mặc áo khoác vì trời lạnh.",
+        "en": "I have to wear a jacket because it's cold."
+       },
+       {
+        "vi": "Mình phải đi làm lúc tám giờ.",
+        "en": "I have to go to work at 8:00."
+       },
+       {
+        "vi": "Chị phải mang hộ chiếu.",
+        "en": "She has to bring her passport."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "What does phải mean?",
+        "options": [
+         "can",
+         "must",
+         "want to"
+        ],
+        "answer": "must"
+       },
+       {
+        "question": "Which sentence means \"You must wear a helmet.\"",
+        "options": [
+         "Bạn đội nón bảo hiểm.",
+         "Bạn phải đội nón bảo hiểm.",
+         "Bạn thường đội nón bảo hiểm."
+        ],
+        "answer": "Bạn phải đội nón bảo hiểm."
+       },
+       {
+        "question": "Complete the sentence which means \"I must wear a jacket.\": Em ______ mặc áo khoác.",
+        "options": [
+         "phải",
+         "đang",
+         "không"
+        ],
+        "answer": "phải"
+       },
+       {
+        "question": "Which sentence means \"I have to go to work.\"",
+        "options": [
+         "Mình đi làm.",
+         "Mình phải đi làm.",
+         "Mình đang đi làm."
+        ],
+        "answer": "Mình phải đi làm."
+       }
       ]
-    }
-  },
-  "postClass": {
-    "exercises": [
-      {
-        "type": "matching",
-        "title": "1. Nối từ.",
-        "instruction": "Nối động từ với đồ vật phù hợp.",
-        "prompts": [
-          {
-            "text": "Đội",
-            "answer": "c"
-          },
-          {
-            "text": "Mặc",
-            "answer": "d"
-          },
-          {
-            "text": "Đeo",
-            "answer": "b"
-          },
-          {
-            "text": "Đi",
-            "answer": "a"
-          }
-        ],
-        "answerBank": [
-          {
-            "id": "a",
-            "text": "giày"
-          },
-          {
-            "id": "b",
-            "text": "khẩu trang"
-          },
-          {
-            "id": "c",
-            "text": "nón bảo hiểm"
-          },
-          {
-            "id": "d",
-            "text": "áo khoác"
-          }
-        ]
-      },
-      {
-        "type": "choice",
-        "title": "2. Chọn đáp án đúng.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Trời mưa, mình phải ________.",
-            "options": [
-              "mặc áo mưa",
-              "đeo kính",
-              "đi dép"
-            ],
-            "answer": "mặc áo mưa"
-          },
-          {
-            "id": "2",
-            "context": "Khi đi xe máy ở Việt Nam, bạn phải ________.",
-            "options": [
-              "đội nón bảo hiểm",
-              "mặc áo khoác",
-              "đeo túi"
-            ],
-            "answer": "đội nón bảo hiểm"
-          },
-          {
-            "id": "3",
-            "context": "Mình phải mặc ________ tại vì trời mưa.",
-            "options": [
-              "áo khoác",
-              "dép",
-              "kính"
-            ],
-            "answer": "áo khoác"
-          },
-          {
-            "id": "4",
-            "context": "Anh Nam không phải đeo ________.",
-            "options": [
-              "dép",
-              "kính",
-              "nón"
-            ],
-            "answer": "kính"
-          },
-          {
-            "id": "5",
-            "context": "Mình phải đội ________ và đeo ________ trước khi ra đường.",
-            "options": [
-              "giày/kính",
-              "nón/kính",
-              "nón/giày"
-            ],
-            "answer": "nón/kính"
-          }
-        ]
-      },
-      {
-        "type": "dialogue_fill",
-        "title": "3. Điền từ vào chỗ trống.",
-        "instruction": "Điền từ thích hợp.",
-        "wordBank": [
-          "nón",
-          "kính",
-          "đi",
-          "phải",
-          "không phải",
-          "xe máy",
-          "ra đường"
-        ],
-        "lines": [
-          {
-            "parts": [
-              "Ở Việt Nam, bạn ",
-              {
-                "blank": "phải"
-              },
-              " đội nón bảo hiểm khi đi ",
-              {
-                "blank": "xe máy"
-              },
-              "."
-            ]
-          },
-          {
-            "parts": [
-              "Hôm nay trời không mưa, mình ",
-              {
-                "blank": "không phải"
-              },
-              " mặc áo mưa."
-            ]
-          },
-          {
-            "parts": [
-              "Khi ",
-              {
-                "blank": "ra đường"
-              },
-              ", nhiều người đeo khẩu trang."
-            ]
-          },
-          {
-            "parts": [
-              "Mình thường ",
-              {
-                "blank": "đi"
-              },
-              " giày khi đi làm."
-            ]
-          },
-          {
-            "parts": [
-              "Hôm qua mình phải đội ",
-              {
-                "blank": "nón"
-              },
-              " và đeo ",
-              {
-                "blank": "kính"
-              },
-              " vì trời nắng to."
-            ]
-          }
-        ]
-      },
-      {
-        "type": "scramble",
-        "title": "4. Sắp xếp câu.",
-        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
-        "items": [
-          {
-            "prompt": "Câu 1",
-            "tokens": [
-              "phải",
-              "đội",
-              "nón bảo hiểm",
-              "bạn"
-            ],
-            "answer": "Bạn phải đội nón bảo hiểm."
-          },
-          {
-            "prompt": "Câu 2",
-            "tokens": [
-              "trời",
-              "áo mưa",
-              "mặc",
-              "phải",
-              "vì",
-              "mưa",
-              "mình"
-            ],
-            "answer": "Mình phải mặc áo mưa vì trời mưa."
-          },
-          {
-            "prompt": "Câu 3",
-            "tokens": [
-              "phải",
-              "không",
-              "hôm nay",
-              "đi học",
-              "em",
-              "có"
-            ],
-            "answer": "Hôm nay em có phải đi học không?"
-          },
-          {
-            "prompt": "Câu 4",
-            "tokens": [
-              "đeo",
-              "gì",
-              "mình",
-              "phải"
-            ],
-            "answer": "Mình phải đeo gì?"
-          },
-          {
-            "prompt": "Câu 5",
-            "tokens": [
-              "đi",
-              "phải",
-              "bạn",
-              "giày",
-              "không",
-              "có"
-            ],
-            "answer": "Bạn có phải đi giày không?"
-          }
-        ]
-      }
+     }
     ]
+   },
+   {
+    "id": "g2",
+    "titleVi": "Không phải",
+    "titleEn": "Don't Have to",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g2",
+      "label": "Không phải",
+      "subHeadingVi": "Không phải",
+      "subHeadingEn": "Don't Have to",
+      "paragraphs": [
+       "Use không phải to say that someone doesn't have to do something. This means the action is not necessary."
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + không phải + [Verb]"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Hôm nay em ấy không phải đi học vì trời mưa.",
+        "en": "Today, he doesn't have to go to school because it's raining."
+       },
+       {
+        "vi": "Ở Đức, bạn không phải đội nón bảo hiểm khi đi xe.",
+        "en": "In Germany, you don't have to wear a helmet when riding a bicycle."
+       },
+       {
+        "vi": "Mình không phải đi làm hôm nay.",
+        "en": "I don't have to work today."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "What does không phải + verb mean?",
+        "options": [
+         "must",
+         "don't have to",
+         "usually"
+        ],
+        "answer": "don't have to"
+       },
+       {
+        "question": "Which sentence means \"I don't have to work today.\"",
+        "options": [
+         "Mình không đi làm hôm nay.",
+         "Mình không phải đi làm hôm nay.",
+         "Mình không đang đi làm hôm nay."
+        ],
+        "answer": "Mình không phải đi làm hôm nay."
+       },
+       {
+        "question": "Complete the sentence: Hôm nay mình ______ phải đi học.",
+        "options": [
+         "không",
+         "đang",
+         "thường"
+        ],
+        "answer": "không"
+       },
+       {
+        "question": "Which sentence is correct?",
+        "options": [
+         "Bạn không phải đội nón bảo hiểm.",
+         "Bạn đội không phải nón bảo hiểm.",
+         "Bạn phải không đội nón bảo hiểm."
+        ],
+        "answer": "Bạn không phải đội nón bảo hiểm."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g3",
+    "titleVi": "Phải...gì?",
+    "titleEn": "Asking What Someone Must Wear or Bring",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g3",
+      "label": "Phải...gì?",
+      "subHeadingVi": "Phải...gì?",
+      "subHeadingEn": "Must Do What?",
+      "paragraphs": [
+       "Use this pattern to ask what someone must wear, bring, or do."
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + phải + [Verb] + gì?"
+       }
+      ],
+      "notes": [
+       "mặc (wear clothes)",
+       "đội (wear a hat/helmet)",
+       "đeo (wear glasses, a mask, jewelry)",
+       "mang (bring)",
+       "đi (go)"
+      ],
+      "examples": [
+       {
+        "vi": "Mình phải đeo gì?",
+        "en": "What do I have to wear?"
+       },
+       {
+        "vi": "Đi làm chị phải mặc áo gì?",
+        "en": "What clothes do you have to wear to work?"
+       },
+       {
+        "vi": "Bạn phải mang gì?",
+        "en": "What do you have to bring?"
+       },
+       {
+        "vi": "Khi đi xe máy, mình phải đội gì?",
+        "en": "What do I have to wear when riding a motorbike?"
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How do you ask \"What do I have to wear?\"",
+        "options": [
+         "Mình phải mặc gì?",
+         "Mình mặc gì?",
+         "Mình đang mặc gì?"
+        ],
+        "answer": "Mình phải mặc gì?"
+       },
+       {
+        "question": "Which answer fits? — Mình phải mang gì?",
+        "options": [
+         "Bạn phải mang hộ chiếu.",
+         "Bạn không mang hộ chiếu.",
+         "Bạn đang mang hộ chiếu."
+        ],
+        "answer": "Bạn phải mang hộ chiếu."
+       },
+       {
+        "question": "Complete the sentence which means \"What do I have to wear?\": Chị ______ gì?",
+        "options": [
+         "phải",
+         "phải mặc",
+         "phải làm"
+        ],
+        "answer": "phải mặc"
+       },
+       {
+        "question": "Which question suits the answer \"Mình phải đội nón bảo hiểm khi đi xe máy.\"",
+        "options": [
+         "Bạn phải đội nón bảo hiểm khi đi xe máy?",
+         "Bạn phải đội gì khi đi xe máy?",
+         "Bạn phải có gì khi đi xe máy không?"
+        ],
+        "answer": "Bạn phải đội gì khi đi xe máy?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g4",
+    "titleVi": "Có phải...không?",
+    "titleEn": "Asking If Someone Has to Do Something",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g4",
+      "label": "Có phải...không?",
+      "subHeadingVi": "Có phải...không?",
+      "subHeadingEn": "Does Someone Have to Do Something?",
+      "paragraphs": [
+       "Use this pattern to ask whether someone has to do something. This is a Yes/No question."
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + có phải + [Verb] + không?"
+       }
+      ],
+      "notes": [
+       "To answer: Có. / [Pronoun] + có.",
+       "Or: Không. / [Pronoun] + không.",
+       "Or answer in a full sentence."
+      ],
+      "examples": [
+       {
+        "vi": "Trời nắng anh có phải mặc áo khoác không?",
+        "en": "Do you have to wear a jacket when it's sunny?"
+       },
+       {
+        "vi": "Bạn có phải đội nón bảo hiểm ở Mỹ không?",
+        "en": "Do you have to wear a helmet in the US?"
+       },
+       {
+        "vi": "Chị có phải mang hộ chiếu không?",
+        "en": "Do you have to bring your passport?"
+       }
+      ],
+      "quiz": [
+       {
+        "question": "Which sentence means \"Do you have to wear a helmet?\"",
+        "options": [
+         "Bạn phải đội nón bảo hiểm?",
+         "Bạn có phải đội nón bảo hiểm không?",
+         "Bạn đội nón bảo hiểm không phải?"
+        ],
+        "answer": "Bạn có phải đội nón bảo hiểm không?"
+       },
+       {
+        "question": "Which answer means \"No, I don't have to.\"",
+        "options": [
+         "Không, mình.",
+         "Không, mình phải.",
+         "Mình không."
+        ],
+        "answer": "Mình không."
+       },
+       {
+        "question": "Complete the question: Bạn có phải đi làm ______?",
+        "options": [
+         "gì",
+         "không",
+         "thế nào"
+        ],
+        "answer": "không"
+       },
+       {
+        "question": "Which conversation is correct?",
+        "options": [
+         "A: Bạn có phải mang hộ chiếu?\nB: Có, mình phải mang hộ chiếu.",
+         "A: Bạn có phải mang hộ chiếu không?\nB: Mình có hộ chiếu.",
+         "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
+        ],
+        "answer": "A: Bạn có phải mang hộ chiếu không?\nB: Mình có."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "listening": {
+  "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
+  "groups": [
+   {
+    "id": "d1",
+    "title": "Chép chính tả",
+    "lines": [
+     {
+      "audio": "audio/b9/{voice}/listen_d1_01.mp3",
+      "text": "Mình phải mặc áo khoác tại vì trời nắng to.",
+      "wordBank": [
+       "nắng",
+       "phải",
+       "áo mưa",
+       "mình",
+       "tại vì",
+       "to",
+       "trời",
+       "áo khoác",
+       "không",
+       "mặc"
+      ]
+     },
+     {
+      "audio": "audio/b9/{voice}/listen_d1_02.mp3",
+      "text": "Anh Phong thường đội nón và đi giày khi ra đường.",
+      "wordBank": [
+       "khi",
+       "đi",
+       "và",
+       "anh",
+       "phải",
+       "ra đường",
+       "thường",
+       "đội",
+       "giày",
+       "Phong",
+       "đeo",
+       "nón"
+      ]
+     },
+     {
+      "audio": "audio/b9/{voice}/listen_d1_03.mp3",
+      "text": "Tại vì hôm nay trời không mưa, chị không phải mặc áo mưa.",
+      "wordBank": [
+       "mưa",
+       "không",
+       "trời",
+       "hôm nay",
+       "chị",
+       "tại vì",
+       "không",
+       "áo mưa",
+       "đeo",
+       "mặc",
+       "phải"
+      ]
+     },
+     {
+      "audio": "audio/b9/{voice}/listen_d1_04.mp3",
+      "text": "Hôm qua bạn có phải đi làm không?",
+      "wordBank": [
+       "đi làm",
+       "đi ngủ",
+       "có",
+       "hôm nay",
+       "phải",
+       "không?",
+       "bạn",
+       "hôm qua"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "reading": {
+  "passages": [
+   {
+    "id": "r1",
+    "title": "Văn hóa đi lại ở Việt Nam",
+    "audio": "audio/b9/{voice}/reading_r1.mp3",
+    "text": "Ở Việt Nam, mọi người thường ra đường bằng xe máy. Xe máy rất tiện tại vì đường nhỏ và đông người. Khi đi xe máy, mọi người phải đội nón bảo hiểm. Tại vì ở đây trời rất nắng và nóng, họ phải đeo khẩu trang và đeo kính. Trời mưa, họ phải mặc áo mưa.\nBây giờ, nhiều người đi làm hoặc đi chơi bằng metro hoặc xe buýt. Ít người đi bộ, tại vì ở Việt Nam trời thường nắng và nóng, và đường cũng rất đông xe.\nTrong tuần, mọi người đến công ty làm việc vào buổi sáng và về nhà ăn cơm với gia đình vào buổi tối. Cuối tuần, mọi người thường đi ăn với gia đình hoặc đi ăn với bạn ở quán ăn. Họ cũng rất thích uống cà phê và trà.",
+    "titleEn": "Transportation culture in Vietnam",
+    "textEn": "In Vietnam, people usually travel by motorbike. Motorbikes are very convenient because the roads are small and crowded. When riding a motorbike, people have to wear helmets. Because it is very sunny and hot here, they also wear masks and sunglasses. When it rains, they have to wear raincoats.\nNowadays, many people go to work or go out by metro or bus. Few people walk because it is often sunny and hot in Vietnam, and the roads are also very crowded with vehicles.\nDuring the week, people go to work at the company in the morning and go home to have dinner with their families in the evening. On weekends, people usually go out to eat with their family or friends at restaurants. They also really enjoy drinking coffee and tea.",
+    "questions": [
+     {
+      "id": "rq1",
+      "context": "Ở Việt Nam, mọi người thường đi bộ ra đường.",
+      "options": [
+       "Đúng",
+       "Sai"
+      ],
+      "answer": "Sai"
+     },
+     {
+      "id": "rq2",
+      "context": "Khi đi xe máy, mọi người không phải đội nón bảo hiểm.",
+      "options": [
+       "Đúng",
+       "Sai"
+      ],
+      "answer": "Sai"
+     },
+     {
+      "id": "rq3",
+      "context": "Bây giờ không nhiều người đi làm bằng tàu metro ở Việt Nam.",
+      "options": [
+       "Đúng",
+       "Sai"
+      ],
+      "answer": "Sai"
+     },
+     {
+      "id": "rq4",
+      "context": "Ở Việt Nam, nhiều người đi bộ tại vì trời mát.",
+      "options": [
+       "Đúng",
+       "Sai"
+      ],
+      "answer": "Sai"
+     },
+     {
+      "id": "rq5",
+      "context": "Người Việt Nam thích uống cà phê.",
+      "options": [
+       "Đúng",
+       "Sai"
+      ],
+      "answer": "Đúng"
+     }
+    ]
+   }
+  ]
+ },
+ "preClass": {
+  "note": "Xem hình rồi nối từ.",
+  "vocabPreview": {
+   "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+   "items": [
+    {
+     "word": "nón",
+     "image": "images/b9/nghe/non.jpg",
+     "audio": "audio/b9/{voice}/vocab_non.mp3"
+    },
+    {
+     "word": "nón bảo hiểm",
+     "image": "images/b9/nghe/non_bao_hiem.jpg",
+     "audio": "audio/b9/{voice}/vocab_non_bao_hiem.mp3"
+    },
+    {
+     "word": "áo",
+     "image": "images/b9/nghe/ao.jpg",
+     "audio": "audio/b9/{voice}/vocab_ao.mp3"
+    },
+    {
+     "word": "áo mưa",
+     "image": "images/b9/nghe/ao_mua.jpg",
+     "audio": "audio/b9/{voice}/vocab_ao_mua.mp3"
+    },
+    {
+     "word": "áo khoác",
+     "image": "images/b9/nghe/ao_khoac.jpg",
+     "audio": "audio/b9/{voice}/vocab_ao_khoac.mp3"
+    },
+    {
+     "word": "dép",
+     "image": "images/b9/nghe/dep.jpg",
+     "audio": "audio/b9/{voice}/vocab_dep.mp3"
+    },
+    {
+     "word": "giày",
+     "image": "images/b9/nghe/giay.jpg",
+     "audio": "audio/b9/{voice}/vocab_giay.mp3"
+    },
+    {
+     "word": "kính",
+     "image": "images/b9/nghe/kinh.jpg",
+     "audio": "audio/b9/{voice}/vocab_kinh.mp3"
+    },
+    {
+     "word": "khẩu trang",
+     "image": "images/b9/nghe/khau_trang.jpg",
+     "audio": "audio/b9/{voice}/vocab_khau_trang.mp3"
+    },
+    {
+     "word": "túi",
+     "image": "images/b9/nghe/tui.jpg",
+     "audio": "audio/b9/{voice}/vocab_tui.mp3"
+    }
+   ]
+  },
+  "imageMatch": {
+   "title": "Nối từ với hình",
+   "instruction": "Chọn đúng từ cho mỗi hình.",
+   "items": [
+    {
+     "id": "im1",
+     "image": "images/b9/nghe/non.jpg",
+     "answer": "nón"
+    },
+    {
+     "id": "im2",
+     "image": "images/b9/nghe/non_bao_hiem.jpg",
+     "answer": "nón bảo hiểm"
+    },
+    {
+     "id": "im3",
+     "image": "images/b9/nghe/ao.jpg",
+     "answer": "áo"
+    },
+    {
+     "id": "im4",
+     "image": "images/b9/nghe/ao_mua.jpg",
+     "answer": "áo mưa"
+    },
+    {
+     "id": "im5",
+     "image": "images/b9/nghe/ao_khoac.jpg",
+     "answer": "áo khoác"
+    },
+    {
+     "id": "im6",
+     "image": "images/b9/nghe/dep.jpg",
+     "answer": "dép"
+    },
+    {
+     "id": "im7",
+     "image": "images/b9/nghe/giay.jpg",
+     "answer": "giày"
+    },
+    {
+     "id": "im8",
+     "image": "images/b9/nghe/kinh.jpg",
+     "answer": "kính"
+    },
+    {
+     "id": "im9",
+     "image": "images/b9/nghe/khau_trang.jpg",
+     "answer": "khẩu trang"
+    },
+    {
+     "id": "im10",
+     "image": "images/b9/nghe/tui.jpg",
+     "answer": "túi"
+    }
+   ],
+   "answerBank": [
+    "nón",
+    "nón bảo hiểm",
+    "áo",
+    "áo mưa",
+    "áo khoác",
+    "dép",
+    "giày",
+    "kính",
+    "khẩu trang",
+    "túi"
+   ]
   }
+ },
+ "postClass": {
+  "exercises": [
+   {
+    "type": "matching",
+    "title": "1. Nối từ.",
+    "instruction": "Nối động từ với đồ vật phù hợp.",
+    "prompts": [
+     {
+      "text": "Đội",
+      "answer": "c"
+     },
+     {
+      "text": "Mặc",
+      "answer": "d"
+     },
+     {
+      "text": "Đeo",
+      "answer": "b"
+     },
+     {
+      "text": "Đi",
+      "answer": "a"
+     }
+    ],
+    "answerBank": [
+     {
+      "id": "a",
+      "text": "giày"
+     },
+     {
+      "id": "b",
+      "text": "khẩu trang"
+     },
+     {
+      "id": "c",
+      "text": "nón bảo hiểm"
+     },
+     {
+      "id": "d",
+      "text": "áo khoác"
+     }
+    ]
+   },
+   {
+    "type": "choice",
+    "title": "2. Chọn đáp án đúng.",
+    "items": [
+     {
+      "id": "1",
+      "context": "Trời mưa, mình phải ________.",
+      "options": [
+       "mặc áo mưa",
+       "đeo kính",
+       "đi dép"
+      ],
+      "answer": "mặc áo mưa"
+     },
+     {
+      "id": "2",
+      "context": "Khi đi xe máy ở Việt Nam, bạn phải ________.",
+      "options": [
+       "đội nón bảo hiểm",
+       "mặc áo khoác",
+       "đeo túi"
+      ],
+      "answer": "đội nón bảo hiểm"
+     },
+     {
+      "id": "3",
+      "context": "Mình phải mặc ________ tại vì trời mưa.",
+      "options": [
+       "áo khoác",
+       "dép",
+       "kính"
+      ],
+      "answer": "áo khoác"
+     },
+     {
+      "id": "4",
+      "context": "Anh Nam không phải đeo ________.",
+      "options": [
+       "dép",
+       "kính",
+       "nón"
+      ],
+      "answer": "kính"
+     },
+     {
+      "id": "5",
+      "context": "Mình phải đội ________ và đeo ________ trước khi ra đường.",
+      "options": [
+       "giày/kính",
+       "nón/kính",
+       "nón/giày"
+      ],
+      "answer": "nón/kính"
+     }
+    ]
+   },
+   {
+    "type": "dialogue_fill",
+    "title": "3. Điền từ vào chỗ trống.",
+    "instruction": "Điền từ thích hợp.",
+    "wordBank": [
+     "nón",
+     "kính",
+     "đi",
+     "phải",
+     "không phải",
+     "xe máy",
+     "ra đường"
+    ],
+    "lines": [
+     {
+      "parts": [
+       "Ở Việt Nam, bạn ",
+       {
+        "blank": "phải"
+       },
+       " đội nón bảo hiểm khi đi ",
+       {
+        "blank": "xe máy"
+       },
+       "."
+      ]
+     },
+     {
+      "parts": [
+       "Hôm nay trời không mưa, mình ",
+       {
+        "blank": "không phải"
+       },
+       " mặc áo mưa."
+      ]
+     },
+     {
+      "parts": [
+       "Khi ",
+       {
+        "blank": "ra đường"
+       },
+       ", nhiều người đeo khẩu trang."
+      ]
+     },
+     {
+      "parts": [
+       "Mình thường ",
+       {
+        "blank": "đi"
+       },
+       " giày khi đi làm."
+      ]
+     },
+     {
+      "parts": [
+       "Hôm qua mình phải đội ",
+       {
+        "blank": "nón"
+       },
+       " và đeo ",
+       {
+        "blank": "kính"
+       },
+       " vì trời nắng to."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "scramble",
+    "title": "4. Sắp xếp câu.",
+    "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+    "items": [
+     {
+      "prompt": "Câu 1",
+      "tokens": [
+       "phải",
+       "đội",
+       "nón bảo hiểm",
+       "bạn"
+      ],
+      "answer": "Bạn phải đội nón bảo hiểm."
+     },
+     {
+      "prompt": "Câu 2",
+      "tokens": [
+       "trời",
+       "áo mưa",
+       "mặc",
+       "phải",
+       "vì",
+       "mưa",
+       "mình"
+      ],
+      "answer": "Mình phải mặc áo mưa vì trời mưa."
+     },
+     {
+      "prompt": "Câu 3",
+      "tokens": [
+       "phải",
+       "không",
+       "hôm nay",
+       "đi học",
+       "em",
+       "có"
+      ],
+      "answer": "Hôm nay em có phải đi học không?"
+     },
+     {
+      "prompt": "Câu 4",
+      "tokens": [
+       "đeo",
+       "gì",
+       "mình",
+       "phải"
+      ],
+      "answer": "Mình phải đeo gì?"
+     },
+     {
+      "prompt": "Câu 5",
+      "tokens": [
+       "đi",
+       "phải",
+       "bạn",
+       "giày",
+       "không",
+       "có"
+      ],
+      "answer": "Bạn có phải đi giày không?"
+     }
+    ]
+   }
+  ]
+ }
 }
