@@ -392,14 +392,16 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
 
           const resultSlot = el('span', 'result-slot');
           const checkBtn = el('button', 'btn-check', 'Kiểm tra'); checkBtn.type = 'button';
+          const acceptedAnswers = q.answers || (q.answer ? [q.answer] : []);
           checkBtn.addEventListener('click', function () {
             if (locked || !chosen.length) return;
             locked = true;
             const builtStr = chosen.map(function (idx) { return wordBank[idx]; }).join(' ');
-            const ok = norm(builtStr) === norm(q.answer);
+            const builtNorm = norm(builtStr);
+            const ok = acceptedAnswers.some(function (a) { return builtNorm === norm(a); });
             resultSlot.innerHTML = '';
             resultSlot.appendChild(checkRow(ok));
-            if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + q.answer + ')'));
+            if (!ok) resultSlot.appendChild(el('span', 'correct-hint', ' (' + acceptedAnswers.join(' / ') + ')'));
             checkBtn.disabled = true;
             refreshBuilt(); refreshBank();
             tracker.set(i, ok);
