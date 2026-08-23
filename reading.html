@@ -78,7 +78,8 @@
  
       const shell = buildSectionShell('Reading', backToTabs);
 
-      passages.forEach(function (p) {
+      passages.forEach(function (p, pIdx) {
+        const passageKeyBase = progress.storageKey + ':passage' + pIdx;
         const passageBox = el('div', 'reading-passage');
         if (p.audio) passageBox.appendChild(renderAudioPlayer(p.audio));
 
@@ -134,13 +135,13 @@
         const hasQuizLike = (p.questions && p.questions.length) || (p.textQuestions && p.textQuestions.length) || (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length);
 
         if (p.questions && p.questions.length) {
-          passageBox.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions, onFinish: revealShowTranslation }));
+          passageBox.appendChild(renderChoiceQuiz({ title: 'Questions', items: p.questions, onFinish: revealShowTranslation, resultKey: passageKeyBase + ':questions' }));
         }
         if (p.textQuestions && p.textQuestions.length) {
-          passageBox.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions, onFinish: revealShowTranslation }));
+          passageBox.appendChild(renderTextAnswer({ title: 'Comprehension Questions', items: p.textQuestions, onFinish: revealShowTranslation, resultKey: passageKeyBase + ':textQuestions' }));
         }
         if (p.fillBlanks && p.fillBlanks.lines && p.fillBlanks.lines.length) {
-          passageBox.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks', onFinish: revealShowTranslation }, p.fillBlanks)));
+          passageBox.appendChild(renderFillBlanksText(Object.assign({ title: 'Fill in the Blanks', onFinish: revealShowTranslation, resultKey: passageKeyBase + ':fillBlanks' }, p.fillBlanks)));
         }
 
         // Không có câu hỏi nào -> vẫn cần nút "Done reading" để xác nhận đã đọc xong trước khi hiện Show Translation
@@ -180,12 +181,13 @@
 
 
     function renderChoiceQuiz(ex) {
+      function buildFresh() {
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
       if (ex.image) { const img = document.createElement('img'); img.src = ex.image; img.className = 'choice-quiz-shared-img'; box.appendChild(img); }
       const items = ex.items || [];
-      const tracker = trackQuizState(items.length);
+      const tracker = trackQuizState(items.length, ex.resultKey);
       items.forEach(function (q, qIdx) {
         const qBox = el('div', 'reasoning-item');
         if (q.image) { const img = document.createElement('img'); img.src = q.image; img.className = 'choice-quiz-img'; qBox.appendChild(img); }
@@ -213,10 +215,17 @@
       });
       if (items.length) appendSubmitAndRing(box, tracker, ex.onFinish);
       return box;
+      }
+      if (!ex.resultKey) return buildFresh();
+      return buildRetryableExercise(ex.resultKey, buildFresh, {
+        titleEl: function () { return el('h3', 'ex-title', ex.title); },
+        onSavedShown: ex.onFinish
+      });
     }
 
 
     function renderFillBlanksText(ex) {
+      function buildFresh() {
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
@@ -240,7 +249,7 @@
         row.appendChild(textSpan);
         box.appendChild(row);
       });
-      const tracker = trackQuizState(inputs.length);
+      const tracker = trackQuizState(inputs.length, ex.resultKey);
       const resultsRing = inputs.length ? createResultsRingReveal(tracker) : null;
       const submitBtn = el('button', 'btn-check', 'Submit'); submitBtn.type = 'button';
       submitBtn.addEventListener('click', function () {
@@ -260,10 +269,17 @@
       box.appendChild(submitBtn);
       if (resultsRing) box.appendChild(resultsRing.ringEl);
       return box;
+      }
+      if (!ex.resultKey) return buildFresh();
+      return buildRetryableExercise(ex.resultKey, buildFresh, {
+        titleEl: function () { return el('h3', 'ex-title', ex.title); },
+        onSavedShown: ex.onFinish
+      });
     }
 
 
     function renderTextAnswer(ex) {
+      function buildFresh() {
       const box = el('div', 'exercise');
       box.appendChild(el('h3', 'ex-title', ex.title));
       if (ex.instruction) box.appendChild(el('p', 'ex-instruction', ex.instruction));
@@ -283,7 +299,7 @@
         box.appendChild(bankRow);
       }
       const items = ex.items || [];
-      const tracker = trackQuizState(items.length);
+      const tracker = trackQuizState(items.length, ex.resultKey);
       items.forEach(function (item, itemIdx) {
         const row = el('div', 'text-answer-item');
         row.appendChild(el('p', 'match-prompt', item.prompt));
@@ -318,6 +334,12 @@
       });
       if (items.length) appendSubmitAndRing(box, tracker, ex.onFinish);
       return box;
+      }
+      if (!ex.resultKey) return buildFresh();
+      return buildRetryableExercise(ex.resultKey, buildFresh, {
+        titleEl: function () { return el('h3', 'ex-title', ex.title); },
+        onSavedShown: ex.onFinish
+      });
     }
 
     // ---------- Load ----------
