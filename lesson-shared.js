@@ -116,7 +116,8 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
         .toString().trim().toLowerCase()
         .normalize('NFC')
         .replace(/[.,!?;:"'“”]/g, '')
-        .replace(/\s+/g, ' ');
+        .replace(/\s+/g, ' ')
+        .trim();
     }
 
 
