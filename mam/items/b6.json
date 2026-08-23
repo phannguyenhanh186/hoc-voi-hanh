@@ -1,1060 +1,896 @@
 {
-  "id": "b6",
-  "num": 6,
-  "title": "Cho em một phở và một trà đá!",
-  "vocab": {
-    "items": [
-      {
-        "id": "v1",
-        "word": "dùng",
-        "meaning": "use",
-        "audio": "audio/b6/{voice}/vocab_dung.mp3"
-      },
-      {
-        "id": "v2",
-        "word": "coi",
-        "meaning": "watch, look at",
-        "audio": "audio/b6/{voice}/vocab_coi.mp3"
-      },
-      {
-        "id": "v3",
-        "word": "cho",
-        "meaning": "allow, give",
-        "audio": "audio/b6/{voice}/vocab_cho.mp3"
-      },
-      {
-        "id": "v4",
-        "word": "gọi món",
-        "meaning": "order food/drink",
-        "audio": "audio/b6/{voice}/vocab_goi_mon.mp3"
-      },
-      {
-        "id": "v5",
-        "word": "tính tiền",
-        "meaning": "pay the bill",
-        "audio": "audio/b6/{voice}/vocab_tinh_tien.mp3"
-      },
-      {
-        "id": "v6",
-        "word": "thêm",
-        "meaning": "add, more",
-        "audio": "audio/b6/{voice}/vocab_them.mp3"
-      },
-      {
-        "id": "v7",
-        "word": "hỏi",
-        "meaning": "ask",
-        "audio": "audio/b6/{voice}/vocab_hoi.mp3"
-      },
-      {
-        "id": "v8",
-        "word": "còn gì nữa không?",
-        "meaning": "Anything else?",
-        "audio": "audio/b6/{voice}/vocab_con_gi_nua_khong.mp3"
-      },
-      {
-        "id": "v9",
-        "word": "nhiều",
-        "meaning": "a lot of",
-        "audio": "audio/b6/{voice}/vocab_nhieu.mp3"
-      },
-      {
-        "id": "v10",
-        "word": "ít",
-        "meaning": "a few",
-        "audio": "audio/b6/{voice}/vocab_it.mp3"
-      },
-      {
-        "id": "v11",
-        "word": "rồi",
-        "meaning": "already, then",
-        "audio": "audio/b6/{voice}/vocab_roi.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "đá",
-        "meaning": "ice",
-        "audio": "audio/b6/{voice}/vocab_da.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "đường",
-        "meaning": "sugar",
-        "audio": "audio/b6/{voice}/vocab_duong.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "ớt",
-        "meaning": "chilli",
-        "audio": "audio/b6/{voice}/vocab_ot.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "sữa",
-        "meaning": "milk",
-        "audio": "audio/b6/{voice}/vocab_sua.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "tương cà",
-        "meaning": "ketchup",
-        "audio": "audio/b6/{voice}/vocab_tuong_ca.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "tương ớt",
-        "meaning": "chilli sauce",
-        "audio": "audio/b6/{voice}/vocab_tuong_ot.mp3"
-      },
-      {
-        "id": "v18",
-        "word": "bánh ngọt",
-        "meaning": "cake",
-        "audio": "audio/b6/{voice}/vocab_banh_ngot.mp3"
-      },
-      {
-        "id": "v19",
-        "word": "muỗng",
-        "meaning": "spoon",
-        "audio": "audio/b6/{voice}/vocab_muong.mp3"
-      },
-      {
-        "id": "v20",
-        "word": "đũa",
-        "meaning": "chopstick",
-        "audio": "audio/b6/{voice}/vocab_dua.mp3"
-      },
-      {
-        "id": "v21",
-        "word": "cốc",
-        "meaning": "cup",
-        "audio": "audio/b6/{voice}/vocab_coc.mp3"
-      },
-      {
-        "id": "v22",
-        "word": "chén",
-        "meaning": "bowl (often for cơm,...)",
-        "audio": "audio/b6/{voice}/vocab_chen.mp3"
-      },
-      {
-        "id": "v23",
-        "word": "tô",
-        "meaning": "large bowl (often for phở, bún,...)",
-        "audio": "audio/b6/{voice}/vocab_to.mp3"
-      },
-      {
-        "id": "v24",
-        "word": "dĩa",
-        "meaning": "plate",
-        "audio": "audio/b6/{voice}/vocab_dia.mp3"
-      },
-      {
-        "id": "v25",
-        "word": "món ăn",
-        "meaning": "food (dish)",
-        "audio": "audio/b6/{voice}/vocab_mon_an.mp3"
-      },
-      {
-        "id": "v26",
-        "word": "quán",
-        "meaning": "eatery, shop, bar (general)",
-        "audio": "audio/b6/{voice}/vocab_quan.mp3"
-      },
-      {
-        "id": "v27",
-        "word": "ngoài ra",
-        "meaning": "besides",
-        "audio": "audio/b6/{voice}/vocab_ngoai_ra.mp3"
-      },
-      {
-        "id": "v28",
-        "word": "tuỳ vào",
-        "meaning": "depend on",
-        "audio": "audio/b6/{voice}/vocab_tuy_vao.mp3"
-      },
-      {
-        "id": "v29",
-        "word": "miền Nam",
-        "meaning": "South, Southern",
-        "audio": "audio/b6/{voice}/vocab_mien_nam.mp3"
-      },
-      {
-        "id": "v30",
-        "word": "miền Trung",
-        "meaning": "Central",
-        "audio": "audio/b6/{voice}/vocab_mien_trung.mp3"
-      },
-      {
-        "id": "v31",
-        "word": "miền Bắc",
-        "meaning": "North, Northern",
-        "audio": "audio/b6/{voice}/vocab_mien_bac.mp3"
-      }
-    ]
-  },
-  "grammar": {
-    "sections": [
-      {
-        "id": "g1",
-        "titleVi": "Cho...",
-        "titleEn": "Could I have...?",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g1",
-            "label": "Cho...",
-            "subHeadingVi": "Cho...",
-            "subHeadingEn": "Could I have...?",
-            "paragraphs": [
-              "Use cho to make a polite request. You can use this pattern to ask for something (noun) or ask someone to do something (verb). This is one of the most common expressions when ordering food, shopping, or asking for help."
-            ],
-            "chips": [
-              {
-                "pattern": "Cho + [Pronoun] + [Noun / Verb]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Cho em một trà đá.",
-                "en": "I'd like an iced tea, please."
-              },
-              {
-                "vi": "Cho em tính tiền.",
-                "en": "The bill, please."
-              },
-              {
-                "vi": "Cho em coi menu.",
-                "en": "May I see the menu, please?"
-              },
-              {
-                "vi": "Chị ơi, cho em thêm một cái muỗng.",
-                "en": "Excuse me, could I have another spoon, please?"
-              }
-            ],
-            "quiz": [
-              {
-                "question": "Which sentence means \"I'd like an iced tea, please.\"",
-                "options": [
-                  "Cho em một trà đá.",
-                  "Một trà đá cho em.",
-                  "Em cho một trà đá."
-                ],
-                "answer": "Cho em một trà đá."
-              },
-              {
-                "question": "Which sentence would you say when you want to pay?",
-                "options": [
-                  "Cho em coi menu.",
-                  "Cho em tính tiền.",
-                  "Cho em một phở."
-                ],
-                "answer": "Cho em tính tiền."
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence to ask to see the menu",
-                "wordBank": [
-                  "tính",
-                  "em",
-                  "menu",
-                  "cho",
-                  "tiền",
-                  "một",
-                  "coi"
-                ],
-                "answer": "Cho em coi menu"
-              },
-              {
-                "question": "Which sentence is correct?",
-                "options": [
-                  "Một trà đá cho em chị ơi.",
-                  "Chị ơi cho em một trà đá.",
-                  "Chị ơi một trà đá cho em."
-                ],
-                "answer": "Chị ơi cho em một trà đá."
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"Can I have two chicken rice\"",
-                "wordBank": [
-                  "cơm",
-                  "bạn",
-                  "gà",
-                  "coi",
-                  "em",
-                  "hai",
-                  "cho"
-                ],
-                "answer": "Cho em hai cơm gà"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g2",
-        "titleVi": "Thêm",
-        "titleEn": "More",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g2",
-            "label": "Thêm",
-            "subHeadingVi": "Thêm",
-            "subHeadingEn": "More",
-            "paragraphs": [
-              "Use thêm to ask for more of something. You can use it to order one more item or a larger quantity. This pattern is commonly used in restaurants and cafés."
-            ],
-            "chips": [
-              {
-                "pattern": "Thêm + [Number] + [Noun]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Cho em thêm một phở.",
-                "en": "I'd like one more bowl of phở, please."
-              },
-              {
-                "vi": "Cho anh thêm hai cà phê sữa.",
-                "en": "Two more milk coffees, please."
-              },
-              {
-                "vi": "Cho em thêm hai chai nước.",
-                "en": "Two more bottles of water, please."
-              },
-              {
-                "vi": "Cho mình thêm ba cái ly.",
-                "en": "Three more glasses, please."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "What does thêm mean?",
-                "options": [
-                  "less",
-                  "more",
-                  "no"
-                ],
-                "answer": "more"
-              },
-              {
-                "question": "Which sentence means \"One more bowl of phở, please.\"",
-                "options": [
-                  "Cho em một phở.",
-                  "Cho em thêm một phở.",
-                  "Em cho thêm một phở."
-                ],
-                "answer": "Cho em thêm một phở."
-              },
-              {
-                "question": "Which sentence is correct?",
-                "options": [
-                  "Cho mình thêm ba cái ly.",
-                  "Cho thêm mình ba cái ly.",
-                  "Mình thêm cho ba cái ly."
-                ],
-                "answer": "Cho mình thêm ba cái ly."
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"Can I have three more iced tea\"",
-                "wordBank": [
-                  "thêm",
-                  "anh",
-                  "hai",
-                  "trà",
-                  "cho",
-                  "ba",
-                  "đá",
-                  "coi"
-                ],
-                "answer": "Cho anh thêm ba trà đá"
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence to ask for one more milk coffee",
-                "wordBank": [
-                  "thêm",
-                  "ba",
-                  "sữa",
-                  "tính",
-                  "cho",
-                  "một",
-                  "chị",
-                  "coi",
-                  "cà phê"
-                ],
-                "answer": "Cho chị thêm một cà phê sữa"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g3",
-        "titleVi": "Ít / Nhiều / Không",
-        "titleEn": "A few / Lots of / No",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g3",
-            "label": "Ít / Nhiều / Không",
-            "subHeadingVi": "Ít / Nhiều / Không",
-            "subHeadingEn": "A few / Lots of / No",
-            "paragraphs": [
-              "Use ít, nhiều, or không to tell someone how much of an ingredient you want in your food or drink. This pattern is commonly used when ordering food and drinks."
-            ],
-            "chips": [
-              {
-                "pattern": "Ít / Nhiều / Không + [Ingredient]"
-              }
-            ],
-            "notes": [
-              "ít = a few, a little",
-              "nhiều = lots of",
-              "không = no / without"
-            ],
-            "examples": [
-              {
-                "vi": "Cho em một cà phê đen không đường.",
-                "en": "I'd like a black coffee with no sugar."
-              },
-              {
-                "vi": "Cho chị thêm một bún bò không ớt, nhiều rau.",
-                "en": "One more bowl of bún bò, no chili, lots of vegetables, please."
-              },
-              {
-                "vi": "Cho em một cơm gà ít cơm.",
-                "en": "I'd like a chicken rice with little rice."
-              },
-              {
-                "vi": "Cho mình một trà sữa ít đá.",
-                "en": "I'd like a milk tea with little ice."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "What does \"ít\" mean?",
-                "options": [
-                  "a lot",
-                  "little, few",
-                  "no"
-                ],
-                "answer": "little, few"
-              },
-              {
-                "question": "Which sentence means \"No sugar.\"",
-                "options": [
-                  "Nhiều đường.",
-                  "Ít đường.",
-                  "Không đường."
-                ],
-                "answer": "Không đường."
-              },
-              {
-                "question": "Which sentence means \"Lots of vegetables.\"",
-                "options": [
-                  "Không rau.",
-                  "Ít rau.",
-                  "Nhiều rau."
-                ],
-                "answer": "Nhiều rau."
-              },
-              {
-                "question": "Which sentence means \"I'd like one coffee with lots of milk and little ice\"",
-                "options": [
-                  "Cho em một cà phê không sữa, nhiều đá.",
-                  "Cho em một cà phê ít sữa nhiều đá.",
-                  "Cho em một cà phê nhiều sữa, ít đá."
-                ],
-                "answer": "Cho em một cà phê nhiều sữa, ít đá."
-              },
-              {
-                "question": "Which sentence means \"I'd like a bowl of phở with no chili and lots of vegetables\"",
-                "options": [
-                  "Cho em một phở ít ớt, nhiều rau.",
-                  "Cho em một phở không ớt, nhiều rau.",
-                  "Cho em một phở không ớt, ít rau."
-                ],
-                "answer": "Cho em một phở không ớt, nhiều rau."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "review",
-        "titleVi": "Ôn tập tổng hợp",
-        "titleEn": "Review",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "review",
-            "label": "Ôn tập tổng hợp",
-            "quiz": [
-              {
-                "question": "Which sentence means \"I'd like a bowl of phở, please.\"",
-                "options": [
-                  "Cho em một phở.",
-                  "Một phở cho em.",
-                  "Em cho một phở.",
-                  "Một phở em cho"
-                ],
-                "answer": "Cho em một phở."
-              },
-              {
-                "question": "You have already finished your coffee and want another one. What should you say?",
-                "options": [
-                  "Cho em một ít cà phê.",
-                  "Cho em thêm một cà phê.",
-                  "Cho em không thêm cà phê.",
-                  "Cho em hai cà phê."
-                ],
-                "answer": "Cho em thêm một cà phê."
-              },
-              {
-                "question": "Which sentence asks to see the menu?",
-                "options": [
-                  "Cho em tính tiền.",
-                  "Cho em coi menu.",
-                  "Cho em thêm nước.",
-                  "Cho em một phở."
-                ],
-                "answer": "Cho em coi menu."
-              },
-              {
-                "question": "Choose the correct order.",
-                "options": [
-                  "Chị ơi cho em thêm một trà sữa.",
-                  "Chị ơi thêm cho em một trà sữa.",
-                  "Một trà sữa cho em thêm chị ơi.",
-                  "Thêm một trà sữa cho em chị ơi."
-                ],
-                "answer": "Chị ơi cho em thêm một trà sữa."
-              },
-              {
-                "question": "Which sentence means \"I'd like a black coffee with no sugar.\"",
-                "options": [
-                  "Cho em một cà phê đen nhiều đường.",
-                  "Cho em một cà phê đen không đường.",
-                  "Cho em một cà phê đen ít đường.",
-                  "Cho em không cà phê đường."
-                ],
-                "answer": "Cho em một cà phê đen không đường."
-              },
-              {
-                "question": "Which sentence means \"I'd like two milk tea with little ice.\"",
-                "options": [
-                  "Cho em một trà sữa nhiều đá.",
-                  "Cho em hai trà sữa không đá.",
-                  "Cho em hai trà sữa ít đá.",
-                  "Cho em thêm trà sữa ít đá."
-                ],
-                "answer": "Cho em hai trà sữa ít đá."
-              },
-              {
-                "question": "Which sentence means \"One more bottle of water, please.\"",
-                "options": [
-                  "Cho em một thêm chai nước.",
-                  "Cho em thêm một chai nước.",
-                  "Cho em một chai nước thêm.",
-                  "Một chai nước thêm cho em."
-                ],
-                "answer": "Cho em thêm một chai nước."
-              },
-              {
-                "question": "Complete the sentence: Cho em ______ hai cà phê sữa.",
-                "options": [
-                  "thêm",
-                  "nhiều",
-                  "không",
-                  "ít"
-                ],
-                "answer": "thêm"
-              },
-              {
-                "question": "Which sentence means \"I'd like three bowls of phở with no chili and lots of vegetables.\"",
-                "options": [
-                  "Cho em ba phở không ớt, nhiều rau.",
-                  "Cho em một phở ít ớt, nhiều rau.",
-                  "Cho em thêm hai phở không rau, nhiều ớt.",
-                  "Cho em hai phở nhiều ớt, không rau."
-                ],
-                "answer": "Cho em ba phở không ớt, nhiều rau."
-              },
-              {
-                "question": "You want to pay. What do you say?",
-                "options": [
-                  "Cho em coi menu.",
-                  "Cho em thêm nước.",
-                  "Cho em tính tiền.",
-                  "Cho em một phở."
-                ],
-                "answer": "Cho em tính tiền."
-              },
-              {
-                "question": "Which sentence is correct?",
-                "options": [
-                  "Cho em một cơm gà ít cơm.",
-                  "Cho em ít một cơm gà.",
-                  "Ít cơm cho em một gà.",
-                  "Cho em cơm gà một ít."
-                ],
-                "answer": "Cho em một cơm gà ít cơm."
-              },
-              {
-                "question": "Choose the best response.\nA: Chị ơi!\nB: Dạ, chị muốn ăn gì?\nA: ______",
-                "options": [
-                  "Cho em tính tiền.",
-                  "Cho em nhiều bò.",
-                  "Chị ơi cho em coi menu.",
-                  "Cho em một phở ít rau."
-                ],
-                "answer": "Cho em một phở ít rau."
-              },
-              {
-                "question": "Which sentence is the most natural?",
-                "options": [
-                  "Cho em một trà sữa thêm rau, ít đường.",
-                  "Cho em thêm một trà sữa không đường, ít đá.",
-                  "Cho em ít đá thêm trà sữa.",
-                  "Cho em một phở nhiều đá, ít đường."
-                ],
-                "answer": "Cho em một trà sữa thêm rau, ít đường."
-              },
-              {
-                "question": "Which sentence means \"I'd like two more milk coffees.\"",
-                "options": [
-                  "Cho anh hai cà phê sữa.",
-                  "Cho anh thêm hai cà phê sữa.",
-                  "Hai cà phê sữa cho anh thêm.",
-                  "Cho thêm anh cà phê sữa hai."
-                ],
-                "answer": "Cho anh thêm hai cà phê sữa."
-              },
-              {
-                "question": "Which sentence means \"I'd like a bowl of phở with little beef.\"",
-                "options": [
-                  "Cho em một phở nhiều rau.",
-                  "Cho em một phở nhiều ớt.",
-                  "Cho em một trà ít bò.",
-                  "Cho em một phở ít gà."
-                ],
-                "answer": "Cho em một trà ít bò."
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "listening": {
-    "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
-    "groups": [
-      {
-        "id": "d1",
-        "title": "Hội thoại 1: Gọi món",
-        "lines": [
-          {
-            "audio": "audio/b6/{voice}/listen_d1_01.mp3",
-            "text": "Chị ơi, cho em một phở bò và một phở gà.",
-            "wordBank": [
-              "gà",
-              "trà",
-              "và",
-              "một",
-              "cho",
-              "chị",
-              "phở",
-              "em",
-              "phở",
-              "ơi",
-              "bún",
-              "bò",
-              "một"
-            ]
-          },
-          {
-            "audio": "audio/b6/{voice}/listen_d1_02.mp3",
-            "text": "Một bò và một gà. Còn gì nữa không ạ?",
-            "wordBank": [
-              "gà",
-              "gì",
-              "ạ?",
-              "còn",
-              "một",
-              "bò",
-              "và",
-              "không",
-              "dạ",
-              "nữa",
-              "hoặc",
-              "một"
-            ]
-          },
-          {
-            "audio": "audio/b6/{voice}/listen_d1_03.mp3",
-            "text": "Cho em thêm hai trà đá.",
-            "wordBank": [
-              "hai",
-              "đá",
-              "thêm",
-              "em",
-              "một",
-              "trà",
-              "cho",
-              "chị"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "d2",
-        "title": "Hội thoại 2: Gọi thức uống",
-        "lines": [
-          {
-            "audio": "audio/b6/{voice}/listen_d2_01.mp3",
-            "text": "Anh chị uống gì ạ?",
-            "wordBank": [
-              "ạ?",
-              "còn",
-              "chị",
-              "ăn",
-              "làm",
-              "anh",
-              "gì",
-              "uống"
-            ]
-          },
-          {
-            "audio": "audio/b6/{voice}/listen_d2_02.mp3",
-            "text": "Cho anh một cà phê sữa không đường và một trà xanh ít đường.",
-            "wordBank": [
-              "ít",
-              "sữa",
-              "cho",
-              "đường",
-              "trà xanh",
-              "một",
-              "anh",
-              "ăn",
-              "không",
-              "và",
-              "một",
-              "đường",
-              "uống",
-              "cà phê",
-              "làm"
-            ]
-          },
-          {
-            "audio": "audio/b6/{voice}/listen_d2_03.mp3",
-            "text": "Anh chị có dùng thêm bánh ngọt không?",
-            "wordBank": [
-              "chị",
-              "ngọt",
-              "không?",
-              "anh",
-              "dùng",
-              "ăn",
-              "bánh",
-              "thêm",
-              "có",
-              "một"
-            ]
-          },
-          {
-            "audio": "audio/b6/{voice}/listen_d2_04.mp3",
-            "text": "Không. Cám ơn em.",
-            "wordBank": [
-              "em",
-              "không",
-              "xin lỗi",
-              "cám ơn",
-              "ăn"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "reading": {
-    "passages": [
-      {
-        "id": "r1",
-        "title": "Văn hóa ăn uống ở Việt Nam",
-        "audio": "audio/b6/{voice}/reading_r1.mp3",
-        "text": "Ở Việt Nam, nhiều người thích ăn ở quán hoặc nhà hàng. Khi đến quán, mọi người thường coi menu rồi gọi món.\nNgười Việt Nam thường dùng đũa để ăn. Ngoài ra, mọi người dùng muỗng, chén, tô hoặc dĩa, tùy theo món ăn. Ví dụ, phở và bún thường ăn với tô, còn cơm gà thường ăn với chén hoặc dĩa. Người miền Nam thường thích thêm đường vào món ăn, còn người miền Trung và miền Bắc thích ăn với nhiều nước mắm hoặc ớt.",
-        "titleEn": "Eating culture in Vietnam",
-        "textEn": "In Vietnam, many people like eating at restaurants or local eateries. When they go to a restaurant, people usually look at the menu and order their food.\nVietnamese people usually use chopsticks to eat. Besides, people use spoons, small bowls, large bowls, or plates, depending on the dish. For example, pho and noodle dishes are usually served in bowls, while chicken rice is usually served on a small bowl or a plate. People in Southern Vietnam usually like to add sugar to their food, while people in Central and Northern Vietnam like to eat food with more fish sauce or chili.",
-        "questions": [
-          {
-            "id": "rq1",
-            "context": "Khi đến quán, nhiều người thường làm gì trước?",
-            "options": [
-              "Tính tiền",
-              "Coi thực đơn",
-              "Uống cà phê"
-            ],
-            "answer": "Coi thực đơn"
-          },
-          {
-            "id": "rq2",
-            "context": "Phở và bún thường được ăn với gì?",
-            "options": [
-              "Chén",
-              "Dĩa",
-              "Tô"
-            ],
-            "answer": "Tô"
-          },
-          {
-            "id": "rq3",
-            "context": "Người miền Nam thích thêm gì vào món ăn?",
-            "options": [
-              "Đường",
-              "Ớt",
-              "Nước mắm"
-            ],
-            "answer": "Đường"
-          }
-        ]
-      }
-    ]
-  },
-  "preClass": {
-    "note": "Xem hình rồi nối từ.",
-    "vocabPreview": {
-      "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
-      "items": [
-        {
-          "word": "tô",
-          "image": "images/b6/nghe/to_pho.jpg",
-          "audio": "audio/b6/{voice}/vocab_to.mp3"
-        },
-        {
-          "word": "chén",
-          "image": "images/b6/nghe/chen_com.jpg",
-          "audio": "audio/b6/{voice}/vocab_chen.mp3"
-        },
-        {
-          "word": "cốc",
-          "image": "images/b6/nghe/coc_ca_phe.jpg",
-          "audio": "audio/b6/{voice}/vocab_coc.mp3"
-        }
-      ]
-    },
-    "imageMatch": {
-      "title": "Nối từ với hình",
-      "instruction": "Chọn đúng từ cho mỗi hình.",
-      "items": [
-        {
-          "id": "im1",
-          "image": "images/b6/nghe/to_pho.jpg",
-          "answer": "tô"
-        },
-        {
-          "id": "im2",
-          "image": "images/b6/nghe/chen_com.jpg",
-          "answer": "chén"
-        },
-        {
-          "id": "im3",
-          "image": "images/b6/nghe/coc_ca_phe.jpg",
-          "answer": "cốc"
-        }
+ "id": "b6",
+ "num": 6,
+ "title": "Cho em một phở và một trà đá!",
+ "vocab": {
+  "items": [
+   {
+    "id": "v1",
+    "word": "dùng",
+    "meaning": "use",
+    "audio": "audio/b6/{voice}/vocab_dung.mp3"
+   },
+   {
+    "id": "v2",
+    "word": "coi",
+    "meaning": "watch, look at",
+    "audio": "audio/b6/{voice}/vocab_coi.mp3"
+   },
+   {
+    "id": "v3",
+    "word": "cho",
+    "meaning": "allow, give",
+    "audio": "audio/b6/{voice}/vocab_cho.mp3"
+   },
+   {
+    "id": "v4",
+    "word": "gọi món",
+    "meaning": "order food/drink",
+    "audio": "audio/b6/{voice}/vocab_goi_mon.mp3"
+   },
+   {
+    "id": "v5",
+    "word": "tính tiền",
+    "meaning": "pay the bill",
+    "audio": "audio/b6/{voice}/vocab_tinh_tien.mp3"
+   },
+   {
+    "id": "v6",
+    "word": "thêm",
+    "meaning": "add, more",
+    "audio": "audio/b6/{voice}/vocab_them.mp3"
+   },
+   {
+    "id": "v7",
+    "word": "hỏi",
+    "meaning": "ask",
+    "audio": "audio/b6/{voice}/vocab_hoi.mp3"
+   },
+   {
+    "id": "v8",
+    "word": "còn gì nữa không?",
+    "meaning": "Anything else?",
+    "audio": "audio/b6/{voice}/vocab_con_gi_nua_khong.mp3"
+   },
+   {
+    "id": "v9",
+    "word": "nhiều",
+    "meaning": "a lot of",
+    "audio": "audio/b6/{voice}/vocab_nhieu.mp3"
+   },
+   {
+    "id": "v10",
+    "word": "ít",
+    "meaning": "a few",
+    "audio": "audio/b6/{voice}/vocab_it.mp3"
+   },
+   {
+    "id": "v11",
+    "word": "rồi",
+    "meaning": "already, then",
+    "audio": "audio/b6/{voice}/vocab_roi.mp3"
+   },
+   {
+    "id": "v12",
+    "word": "đá",
+    "meaning": "ice",
+    "audio": "audio/b6/{voice}/vocab_da.mp3"
+   },
+   {
+    "id": "v13",
+    "word": "đường",
+    "meaning": "sugar",
+    "audio": "audio/b6/{voice}/vocab_duong.mp3"
+   },
+   {
+    "id": "v14",
+    "word": "ớt",
+    "meaning": "chilli",
+    "audio": "audio/b6/{voice}/vocab_ot.mp3"
+   },
+   {
+    "id": "v15",
+    "word": "sữa",
+    "meaning": "milk",
+    "audio": "audio/b6/{voice}/vocab_sua.mp3"
+   },
+   {
+    "id": "v16",
+    "word": "tương cà",
+    "meaning": "ketchup",
+    "audio": "audio/b6/{voice}/vocab_tuong_ca.mp3"
+   },
+   {
+    "id": "v17",
+    "word": "tương ớt",
+    "meaning": "chilli sauce",
+    "audio": "audio/b6/{voice}/vocab_tuong_ot.mp3"
+   },
+   {
+    "id": "v18",
+    "word": "bánh ngọt",
+    "meaning": "cake",
+    "audio": "audio/b6/{voice}/vocab_banh_ngot.mp3"
+   },
+   {
+    "id": "v19",
+    "word": "muỗng",
+    "meaning": "spoon",
+    "audio": "audio/b6/{voice}/vocab_muong.mp3"
+   },
+   {
+    "id": "v20",
+    "word": "đũa",
+    "meaning": "chopstick",
+    "audio": "audio/b6/{voice}/vocab_dua.mp3"
+   },
+   {
+    "id": "v21",
+    "word": "cốc",
+    "meaning": "cup",
+    "audio": "audio/b6/{voice}/vocab_coc.mp3"
+   },
+   {
+    "id": "v22",
+    "word": "chén",
+    "meaning": "bowl (often for cơm,...)",
+    "audio": "audio/b6/{voice}/vocab_chen.mp3"
+   },
+   {
+    "id": "v23",
+    "word": "tô",
+    "meaning": "large bowl (often for phở, bún,...)",
+    "audio": "audio/b6/{voice}/vocab_to.mp3"
+   },
+   {
+    "id": "v24",
+    "word": "dĩa",
+    "meaning": "plate",
+    "audio": "audio/b6/{voice}/vocab_dia.mp3"
+   },
+   {
+    "id": "v25",
+    "word": "món ăn",
+    "meaning": "food (dish)",
+    "audio": "audio/b6/{voice}/vocab_mon_an.mp3"
+   },
+   {
+    "id": "v26",
+    "word": "quán",
+    "meaning": "eatery, shop, bar (general)",
+    "audio": "audio/b6/{voice}/vocab_quan.mp3"
+   },
+   {
+    "id": "v27",
+    "word": "ngoài ra",
+    "meaning": "besides",
+    "audio": "audio/b6/{voice}/vocab_ngoai_ra.mp3"
+   },
+   {
+    "id": "v28",
+    "word": "tuỳ vào",
+    "meaning": "depend on",
+    "audio": "audio/b6/{voice}/vocab_tuy_vao.mp3"
+   },
+   {
+    "id": "v29",
+    "word": "miền Nam",
+    "meaning": "South, Southern",
+    "audio": "audio/b6/{voice}/vocab_mien_nam.mp3"
+   },
+   {
+    "id": "v30",
+    "word": "miền Trung",
+    "meaning": "Central",
+    "audio": "audio/b6/{voice}/vocab_mien_trung.mp3"
+   },
+   {
+    "id": "v31",
+    "word": "miền Bắc",
+    "meaning": "North, Northern",
+    "audio": "audio/b6/{voice}/vocab_mien_bac.mp3"
+   }
+  ]
+ },
+ "grammar": {
+  "sections": [
+   {
+    "id": "g1",
+    "titleVi": "Cho...",
+    "titleEn": "Could I have...?",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g1",
+      "label": "Cho...",
+      "subHeadingVi": "Cho...",
+      "subHeadingEn": "Could I have...?",
+      "paragraphs": [
+       "Use cho to make a polite request. You can use this pattern to ask for something (noun) or ask someone to do something (verb). This is one of the most common expressions when ordering food, shopping, or asking for help."
       ],
-      "answerBank": [
-        "tô",
-        "chén",
-        "cốc"
-      ]
-    }
-  },
-  "postClass": {
-    "exercises": [
-      {
-        "type": "choice",
-        "title": "1. Chọn đáp án đúng.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Trước khi gọi món, bạn nói:",
-            "options": [
-              "Cho em tính tiền.",
-              "Cho em coi menu.",
-              "Cho em một phở."
-            ],
-            "answer": "Cho em coi menu."
-          },
-          {
-            "id": "2",
-            "context": "Bạn không ăn cay, bạn nói:",
-            "options": [
-              "Cho em nhiều ớt.",
-              "Cho em không ớt.",
-              "Cho em thêm ớt."
-            ],
-            "answer": "Cho em không ớt."
-          },
-          {
-            "id": "3",
-            "context": "Bạn ăn xong, bạn nói:",
-            "options": [
-              "Cho em gọi món.",
-              "Cho em tính tiền.",
-              "Cho em thêm một phở."
-            ],
-            "answer": "Cho em tính tiền."
-          }
-        ]
-      },
-      {
-        "type": "choice",
-        "title": "2. Chọn từ phù hợp.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Phở thường ăn với...",
-            "options": [
-              "cốc",
-              "tô",
-              "dĩa"
-            ],
-            "answer": "tô"
-          },
-          {
-            "id": "2",
-            "context": "Cơm thường ăn với...",
-            "options": [
-              "chén",
-              "tô",
-              "cốc"
-            ],
-            "answer": "chén"
-          },
-          {
-            "id": "3",
-            "context": "Cà phê thường uống bằng...",
-            "options": [
-              "tô",
-              "chén",
-              "cốc"
-            ],
-            "answer": "cốc"
-          }
-        ]
-      },
-      {
-        "type": "scramble",
-        "title": "3. Sắp xếp câu.",
-        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
-        "items": [
-          {
-            "prompt": "Câu 1",
-            "tokens": [
-              "em",
-              "cho",
-              "một",
-              "phở bò"
-            ],
-            "answer": "Cho em một phở bò."
-          },
-          {
-            "prompt": "Câu 2",
-            "tokens": [
-              "một",
-              "cho",
-              "trà đá",
-              "em",
-              "thêm"
-            ],
-            "answer": "Cho em thêm một trà đá."
-          },
-          {
-            "prompt": "Câu 3",
-            "tokens": [
-              "không đường",
-              "cà phê sữa",
-              "cho",
-              "một",
-              "anh"
-            ],
-            "answer": "Cho anh một cà phê sữa không đường."
-          },
-          {
-            "prompt": "Câu 4",
-            "tokens": [
-              "gì",
-              "còn",
-              "nữa",
-              "không"
-            ],
-            "answer": "Còn gì nữa không?"
-          },
-          {
-            "prompt": "Câu 5",
-            "tokens": [
-              "em",
-              "tính tiền",
-              "cho"
-            ],
-            "answer": "Cho em tính tiền."
-          }
-        ]
-      },
-      {
-        "type": "dialogue_fill",
-        "title": "4. Hoàn thành hội thoại.",
-        "instruction": "Điền từ thích hợp.",
-        "wordBank": [
-          "cho",
-          "thêm",
-          "còn gì nữa không",
-          "không đường"
+      "chips": [
+       {
+        "pattern": "Cho + [Pronoun] + [Noun / Verb]"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Cho em một trà đá.",
+        "en": "I'd like an iced tea, please."
+       },
+       {
+        "vi": "Cho em tính tiền.",
+        "en": "The bill, please."
+       },
+       {
+        "vi": "Cho em coi menu.",
+        "en": "May I see the menu, please?"
+       },
+       {
+        "vi": "Chị ơi, cho em thêm một cái muỗng.",
+        "en": "Excuse me, could I have another spoon, please?"
+       }
+      ],
+      "quiz": [
+       {
+        "question": "Which sentence means \"I'd like an iced tea, please.\"",
+        "options": [
+         "Cho em một trà đá.",
+         "Một trà đá cho em.",
+         "Em cho một trà đá."
         ],
-        "lines": [
-          {
-            "speaker": "Nhân viên",
-            "parts": [
-              "Anh uống gì ạ?"
-            ]
-          },
-          {
-            "speaker": "Khách",
-            "parts": [
-              {
-                "blank": "cho"
-              },
-              " anh một cà phê sữa ",
-              {
-                "blank": "không đường"
-              },
-              "."
-            ]
-          },
-          {
-            "speaker": "Nhân viên",
-            "parts": [
-              {
-                "blank": "còn gì nữa không"
-              },
-              "?"
-            ]
-          },
-          {
-            "speaker": "Khách",
-            "parts": [
-              "Cho anh ",
-              {
-                "blank": "thêm"
-              },
-              " một bánh ngọt."
-            ]
-          }
-        ]
-      }
+        "answer": "Cho em một trà đá."
+       },
+       {
+        "question": "Which sentence would you say when you want to pay?",
+        "options": [
+         "Cho em coi menu.",
+         "Cho em tính tiền.",
+         "Cho em một phở."
+        ],
+        "answer": "Cho em tính tiền."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence to ask to see the menu",
+        "wordBank": [
+         "tính",
+         "em",
+         "menu",
+         "cho",
+         "tiền",
+         "một",
+         "coi"
+        ],
+        "answer": "Cho em coi menu"
+       },
+       {
+        "question": "Which sentence is correct?",
+        "options": [
+         "Một trà đá cho em chị ơi.",
+         "Chị ơi cho em một trà đá.",
+         "Chị ơi một trà đá cho em."
+        ],
+        "answer": "Chị ơi cho em một trà đá."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Can I have two chicken rice\"",
+        "wordBank": [
+         "cơm",
+         "bạn",
+         "gà",
+         "coi",
+         "em",
+         "hai",
+         "cho"
+        ],
+        "answer": "Cho em hai cơm gà"
+       }
+      ]
+     }
     ]
+   },
+   {
+    "id": "g2",
+    "titleVi": "Thêm",
+    "titleEn": "More",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g2",
+      "label": "Thêm",
+      "subHeadingVi": "Thêm",
+      "subHeadingEn": "More",
+      "paragraphs": [
+       "Use thêm to ask for more of something. You can use it to order one more item or a larger quantity. This pattern is commonly used in restaurants and cafés."
+      ],
+      "chips": [
+       {
+        "pattern": "Thêm + [Number] + [Noun]"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Cho em thêm một phở.",
+        "en": "I'd like one more bowl of phở, please."
+       },
+       {
+        "vi": "Cho anh thêm hai cà phê sữa.",
+        "en": "Two more milk coffees, please."
+       },
+       {
+        "vi": "Cho em thêm hai chai nước.",
+        "en": "Two more bottles of water, please."
+       },
+       {
+        "vi": "Cho mình thêm ba cái ly.",
+        "en": "Three more glasses, please."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "What does thêm mean?",
+        "options": [
+         "less",
+         "more",
+         "no"
+        ],
+        "answer": "more"
+       },
+       {
+        "question": "Which sentence means \"One more bowl of phở, please.\"",
+        "options": [
+         "Cho em một phở.",
+         "Cho em thêm một phở.",
+         "Em cho thêm một phở."
+        ],
+        "answer": "Cho em thêm một phở."
+       },
+       {
+        "question": "Which sentence is correct?",
+        "options": [
+         "Cho mình thêm ba cái ly.",
+         "Cho thêm mình ba cái ly.",
+         "Mình thêm cho ba cái ly."
+        ],
+        "answer": "Cho mình thêm ba cái ly."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Can I have three more iced tea\"",
+        "wordBank": [
+         "thêm",
+         "anh",
+         "hai",
+         "trà",
+         "cho",
+         "ba",
+         "đá",
+         "coi"
+        ],
+        "answer": "Cho anh thêm ba trà đá"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence to ask for one more milk coffee",
+        "wordBank": [
+         "thêm",
+         "ba",
+         "sữa",
+         "tính",
+         "cho",
+         "một",
+         "chị",
+         "coi",
+         "cà phê"
+        ],
+        "answer": "Cho chị thêm một cà phê sữa"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g3",
+    "titleVi": "Ít / Nhiều / Không",
+    "titleEn": "A few / Lots of / No",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g3",
+      "label": "Ít / Nhiều / Không",
+      "subHeadingVi": "Ít / Nhiều / Không",
+      "subHeadingEn": "A few / Lots of / No",
+      "paragraphs": [
+       "Use ít, nhiều, or không to tell someone how much of an ingredient you want in your food or drink. This pattern is commonly used when ordering food and drinks."
+      ],
+      "chips": [
+       {
+        "pattern": "Ít / Nhiều / Không + [Ingredient]"
+       }
+      ],
+      "notes": [
+       "ít = a few, a little",
+       "nhiều = lots of",
+       "không = no / without"
+      ],
+      "examples": [
+       {
+        "vi": "Cho em một cà phê đen không đường.",
+        "en": "I'd like a black coffee with no sugar."
+       },
+       {
+        "vi": "Cho chị thêm một bún bò không ớt, nhiều rau.",
+        "en": "One more bowl of bún bò, no chili, lots of vegetables, please."
+       },
+       {
+        "vi": "Cho em một cơm gà ít cơm.",
+        "en": "I'd like a chicken rice with little rice."
+       },
+       {
+        "vi": "Cho mình một trà sữa ít đá.",
+        "en": "I'd like a milk tea with little ice."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "What does \"ít\" mean?",
+        "options": [
+         "a lot",
+         "little, few",
+         "no"
+        ],
+        "answer": "little, few"
+       },
+       {
+        "question": "Which sentence means \"No sugar.\"",
+        "options": [
+         "Nhiều đường.",
+         "Ít đường.",
+         "Không đường."
+        ],
+        "answer": "Không đường."
+       },
+       {
+        "question": "Which sentence means \"Lots of vegetables.\"",
+        "options": [
+         "Không rau.",
+         "Ít rau.",
+         "Nhiều rau."
+        ],
+        "answer": "Nhiều rau."
+       },
+       {
+        "question": "Which sentence means \"I'd like one coffee with lots of milk and little ice\"",
+        "options": [
+         "Cho em một cà phê không sữa, nhiều đá.",
+         "Cho em một cà phê ít sữa nhiều đá.",
+         "Cho em một cà phê nhiều sữa, ít đá."
+        ],
+        "answer": "Cho em một cà phê nhiều sữa, ít đá."
+       },
+       {
+        "question": "Which sentence means \"I'd like a bowl of phở with no chili and lots of vegetables\"",
+        "options": [
+         "Cho em một phở ít ớt, nhiều rau.",
+         "Cho em một phở không ớt, nhiều rau.",
+         "Cho em một phở không ớt, ít rau."
+        ],
+        "answer": "Cho em một phở không ớt, nhiều rau."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "listening": {
+  "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
+  "groups": [
+   {
+    "id": "d1",
+    "title": "Hội thoại 1: Gọi món",
+    "lines": [
+     {
+      "audio": "audio/b6/{voice}/listen_d1_01.mp3",
+      "text": "Chị ơi, cho em một phở bò và một phở gà.",
+      "wordBank": [
+       "gà",
+       "trà",
+       "và",
+       "một",
+       "cho",
+       "chị",
+       "phở",
+       "em",
+       "phở",
+       "ơi",
+       "bún",
+       "bò",
+       "một"
+      ]
+     },
+     {
+      "audio": "audio/b6/{voice}/listen_d1_02.mp3",
+      "text": "Một bò và một gà. Còn gì nữa không ạ?",
+      "wordBank": [
+       "gà",
+       "gì",
+       "ạ?",
+       "còn",
+       "một",
+       "bò",
+       "và",
+       "không",
+       "dạ",
+       "nữa",
+       "hoặc",
+       "một"
+      ]
+     },
+     {
+      "audio": "audio/b6/{voice}/listen_d1_03.mp3",
+      "text": "Cho em thêm hai trà đá.",
+      "wordBank": [
+       "hai",
+       "đá",
+       "thêm",
+       "em",
+       "một",
+       "trà",
+       "cho",
+       "chị"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d2",
+    "title": "Hội thoại 2: Gọi thức uống",
+    "lines": [
+     {
+      "audio": "audio/b6/{voice}/listen_d2_01.mp3",
+      "text": "Anh chị uống gì ạ?",
+      "wordBank": [
+       "ạ?",
+       "còn",
+       "chị",
+       "ăn",
+       "làm",
+       "anh",
+       "gì",
+       "uống"
+      ]
+     },
+     {
+      "audio": "audio/b6/{voice}/listen_d2_02.mp3",
+      "text": "Cho anh một cà phê sữa không đường và một trà xanh ít đường.",
+      "wordBank": [
+       "ít",
+       "sữa",
+       "cho",
+       "đường",
+       "trà xanh",
+       "một",
+       "anh",
+       "ăn",
+       "không",
+       "và",
+       "một",
+       "đường",
+       "uống",
+       "cà phê",
+       "làm"
+      ]
+     },
+     {
+      "audio": "audio/b6/{voice}/listen_d2_03.mp3",
+      "text": "Anh chị có dùng thêm bánh ngọt không?",
+      "wordBank": [
+       "chị",
+       "ngọt",
+       "không?",
+       "anh",
+       "dùng",
+       "ăn",
+       "bánh",
+       "thêm",
+       "có",
+       "một"
+      ]
+     },
+     {
+      "audio": "audio/b6/{voice}/listen_d2_04.mp3",
+      "text": "Không. Cám ơn em.",
+      "wordBank": [
+       "em",
+       "không",
+       "xin lỗi",
+       "cám ơn",
+       "ăn"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "reading": {
+  "passages": [
+   {
+    "id": "r1",
+    "title": "Văn hóa ăn uống ở Việt Nam",
+    "audio": "audio/b6/{voice}/reading_r1.mp3",
+    "text": "Ở Việt Nam, nhiều người thích ăn ở quán hoặc nhà hàng. Khi đến quán, mọi người thường coi menu rồi gọi món.\nNgười Việt Nam thường dùng đũa để ăn. Ngoài ra, mọi người dùng muỗng, chén, tô hoặc dĩa, tùy theo món ăn. Ví dụ, phở và bún thường ăn với tô, còn cơm gà thường ăn với chén hoặc dĩa. Người miền Nam thường thích thêm đường vào món ăn, còn người miền Trung và miền Bắc thích ăn với nhiều nước mắm hoặc ớt.",
+    "titleEn": "Eating culture in Vietnam",
+    "textEn": "In Vietnam, many people like eating at restaurants or local eateries. When they go to a restaurant, people usually look at the menu and order their food.\nVietnamese people usually use chopsticks to eat. Besides, people use spoons, small bowls, large bowls, or plates, depending on the dish. For example, pho and noodle dishes are usually served in bowls, while chicken rice is usually served on a small bowl or a plate. People in Southern Vietnam usually like to add sugar to their food, while people in Central and Northern Vietnam like to eat food with more fish sauce or chili.",
+    "questions": [
+     {
+      "id": "rq1",
+      "context": "Khi đến quán, nhiều người thường làm gì trước?",
+      "options": [
+       "Tính tiền",
+       "Coi thực đơn",
+       "Uống cà phê"
+      ],
+      "answer": "Coi thực đơn"
+     },
+     {
+      "id": "rq2",
+      "context": "Phở và bún thường được ăn với gì?",
+      "options": [
+       "Chén",
+       "Dĩa",
+       "Tô"
+      ],
+      "answer": "Tô"
+     },
+     {
+      "id": "rq3",
+      "context": "Người miền Nam thích thêm gì vào món ăn?",
+      "options": [
+       "Đường",
+       "Ớt",
+       "Nước mắm"
+      ],
+      "answer": "Đường"
+     }
+    ]
+   }
+  ]
+ },
+ "preClass": {
+  "note": "Xem hình rồi nối từ.",
+  "vocabPreview": {
+   "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+   "items": [
+    {
+     "word": "tô",
+     "image": "images/b6/nghe/to_pho.jpg",
+     "audio": "audio/b6/{voice}/vocab_to.mp3"
+    },
+    {
+     "word": "chén",
+     "image": "images/b6/nghe/chen_com.jpg",
+     "audio": "audio/b6/{voice}/vocab_chen.mp3"
+    },
+    {
+     "word": "cốc",
+     "image": "images/b6/nghe/coc_ca_phe.jpg",
+     "audio": "audio/b6/{voice}/vocab_coc.mp3"
+    }
+   ]
+  },
+  "imageMatch": {
+   "title": "Nối từ với hình",
+   "instruction": "Chọn đúng từ cho mỗi hình.",
+   "items": [
+    {
+     "id": "im1",
+     "image": "images/b6/nghe/to_pho.jpg",
+     "answer": "tô"
+    },
+    {
+     "id": "im2",
+     "image": "images/b6/nghe/chen_com.jpg",
+     "answer": "chén"
+    },
+    {
+     "id": "im3",
+     "image": "images/b6/nghe/coc_ca_phe.jpg",
+     "answer": "cốc"
+    }
+   ],
+   "answerBank": [
+    "tô",
+    "chén",
+    "cốc"
+   ]
   }
+ },
+ "postClass": {
+  "exercises": [
+   {
+    "type": "choice",
+    "title": "1. Chọn đáp án đúng.",
+    "items": [
+     {
+      "id": "1",
+      "context": "Trước khi gọi món, bạn nói:",
+      "options": [
+       "Cho em tính tiền.",
+       "Cho em coi menu.",
+       "Cho em một phở."
+      ],
+      "answer": "Cho em coi menu."
+     },
+     {
+      "id": "2",
+      "context": "Bạn không ăn cay, bạn nói:",
+      "options": [
+       "Cho em nhiều ớt.",
+       "Cho em không ớt.",
+       "Cho em thêm ớt."
+      ],
+      "answer": "Cho em không ớt."
+     },
+     {
+      "id": "3",
+      "context": "Bạn ăn xong, bạn nói:",
+      "options": [
+       "Cho em gọi món.",
+       "Cho em tính tiền.",
+       "Cho em thêm một phở."
+      ],
+      "answer": "Cho em tính tiền."
+     }
+    ]
+   },
+   {
+    "type": "choice",
+    "title": "2. Chọn từ phù hợp.",
+    "items": [
+     {
+      "id": "1",
+      "context": "Phở thường ăn với...",
+      "options": [
+       "cốc",
+       "tô",
+       "dĩa"
+      ],
+      "answer": "tô"
+     },
+     {
+      "id": "2",
+      "context": "Cơm thường ăn với...",
+      "options": [
+       "chén",
+       "tô",
+       "cốc"
+      ],
+      "answer": "chén"
+     },
+     {
+      "id": "3",
+      "context": "Cà phê thường uống bằng...",
+      "options": [
+       "tô",
+       "chén",
+       "cốc"
+      ],
+      "answer": "cốc"
+     }
+    ]
+   },
+   {
+    "type": "scramble",
+    "title": "3. Sắp xếp câu.",
+    "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+    "items": [
+     {
+      "prompt": "Câu 1",
+      "tokens": [
+       "em",
+       "cho",
+       "một",
+       "phở bò"
+      ],
+      "answer": "Cho em một phở bò."
+     },
+     {
+      "prompt": "Câu 2",
+      "tokens": [
+       "một",
+       "cho",
+       "trà đá",
+       "em",
+       "thêm"
+      ],
+      "answer": "Cho em thêm một trà đá."
+     },
+     {
+      "prompt": "Câu 3",
+      "tokens": [
+       "không đường",
+       "cà phê sữa",
+       "cho",
+       "một",
+       "anh"
+      ],
+      "answer": "Cho anh một cà phê sữa không đường."
+     },
+     {
+      "prompt": "Câu 4",
+      "tokens": [
+       "gì",
+       "còn",
+       "nữa",
+       "không"
+      ],
+      "answer": "Còn gì nữa không?"
+     },
+     {
+      "prompt": "Câu 5",
+      "tokens": [
+       "em",
+       "tính tiền",
+       "cho"
+      ],
+      "answer": "Cho em tính tiền."
+     }
+    ]
+   },
+   {
+    "type": "dialogue_fill",
+    "title": "4. Hoàn thành hội thoại.",
+    "instruction": "Điền từ thích hợp.",
+    "wordBank": [
+     "cho",
+     "thêm",
+     "còn gì nữa không",
+     "không đường"
+    ],
+    "lines": [
+     {
+      "speaker": "Nhân viên",
+      "parts": [
+       "Anh uống gì ạ?"
+      ]
+     },
+     {
+      "speaker": "Khách",
+      "parts": [
+       {
+        "blank": "cho"
+       },
+       " anh một cà phê sữa ",
+       {
+        "blank": "không đường"
+       },
+       "."
+      ]
+     },
+     {
+      "speaker": "Nhân viên",
+      "parts": [
+       {
+        "blank": "còn gì nữa không"
+       },
+       "?"
+      ]
+     },
+     {
+      "speaker": "Khách",
+      "parts": [
+       "Cho anh ",
+       {
+        "blank": "thêm"
+       },
+       " một bánh ngọt."
+      ]
+     }
+    ]
+   }
+  ]
+ }
 }
