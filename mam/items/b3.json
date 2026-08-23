@@ -1,1210 +1,1076 @@
 {
-  "id": "b3",
-  "num": 3,
-  "title": "Em thường đi chơi vào tối Chủ Nhật",
-  "vocab": {
-    "items": [
-      {
-        "id": "v1",
-        "word": "Thứ hai",
-        "meaning": "Monday",
-        "audio": "audio/b3/{voice}/vocab_thu_hai.mp3"
-      },
-      {
-        "id": "v2",
-        "word": "Thứ ba",
-        "meaning": "Tuesday",
-        "audio": "audio/b3/{voice}/vocab_thu_ba.mp3"
-      },
-      {
-        "id": "v3",
-        "word": "Thứ tư",
-        "meaning": "Wednesday",
-        "audio": "audio/b3/{voice}/vocab_thu_tu.mp3"
-      },
-      {
-        "id": "v4",
-        "word": "Thứ năm",
-        "meaning": "Thursday",
-        "audio": "audio/b3/{voice}/vocab_thu_nam.mp3"
-      },
-      {
-        "id": "v5",
-        "word": "Thứ sáu",
-        "meaning": "Friday",
-        "audio": "audio/b3/{voice}/vocab_thu_sau.mp3"
-      },
-      {
-        "id": "v6",
-        "word": "Thứ bảy",
-        "meaning": "Saturday",
-        "audio": "audio/b3/{voice}/vocab_thu_bay.mp3"
-      },
-      {
-        "id": "v7",
-        "word": "Chủ nhật",
-        "meaning": "Sunday",
-        "audio": "audio/b3/{voice}/vocab_chu_nhat.mp3"
-      },
-      {
-        "id": "v8",
-        "word": "buổi sáng",
-        "meaning": "morning",
-        "audio": "audio/b3/{voice}/vocab_buoi_sang.mp3"
-      },
-      {
-        "id": "v9",
-        "word": "buổi trưa",
-        "meaning": "noon",
-        "audio": "audio/b3/{voice}/vocab_buoi_trua.mp3"
-      },
-      {
-        "id": "v10",
-        "word": "buổi chiều",
-        "meaning": "afternoon",
-        "audio": "audio/b3/{voice}/vocab_buoi_chieu.mp3"
-      },
-      {
-        "id": "v11",
-        "word": "buổi tối",
-        "meaning": "evening, night",
-        "audio": "audio/b3/{voice}/vocab_buoi_toi.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "tập thể dục",
-        "meaning": "exercise",
-        "audio": "audio/b3/{voice}/vocab_tap_the_duc.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "nấu ăn",
-        "meaning": "cook",
-        "audio": "audio/b3/{voice}/vocab_nau_an.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "ăn sáng",
-        "meaning": "eat breakfast",
-        "audio": "audio/b3/{voice}/vocab_an_sang.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "ăn trưa",
-        "meaning": "eat lunch",
-        "audio": "audio/b3/{voice}/vocab_an_trua.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "ăn tối",
-        "meaning": "eat dinner",
-        "audio": "audio/b3/{voice}/vocab_an_toi.mp3"
-      },
-      {
-        "id": "v17",
-        "word": "ngủ trưa",
-        "meaning": "take a nap at noon",
-        "audio": "audio/b3/{voice}/vocab_ngu_trua.mp3"
-      },
-      {
-        "id": "v18",
-        "word": "điện thoại",
-        "meaning": "general phone, cell phone, landline phone",
-        "audio": "audio/b3/{voice}/vocab_dien_thoai.mp3"
-      },
-      {
-        "id": "v19",
-        "word": "lướt điện thoại",
-        "meaning": "scroll on a phone",
-        "audio": "audio/b3/{voice}/vocab_luot_dien_thoai.mp3"
-      },
-      {
-        "id": "v20",
-        "word": "đánh răng",
-        "meaning": "brush teeth",
-        "audio": "audio/b3/{voice}/vocab_danh_rang.mp3"
-      },
-      {
-        "id": "v21",
-        "word": "trước khi",
-        "meaning": "before",
-        "audio": "audio/b3/{voice}/vocab_truoc_khi.mp3"
-      },
-      {
-        "id": "v22",
-        "word": "sau khi",
-        "meaning": "after",
-        "audio": "audio/b3/{voice}/vocab_sau_khi.mp3"
-      },
-      {
-        "id": "v23",
-        "word": "thường",
-        "meaning": "often, usually",
-        "audio": "audio/b3/{voice}/vocab_thuong.mp3"
-      },
-      {
-        "id": "v24",
-        "word": "quay lại",
-        "meaning": "go back to",
-        "audio": "audio/b3/{voice}/vocab_quay_lai.mp3"
-      },
-      {
-        "id": "v25",
-        "word": "vào",
-        "meaning": "on (a date), in (time of day), into",
-        "audio": "audio/b3/{voice}/vocab_vao.mp3"
-      },
-      {
-        "id": "v26",
-        "word": "ở nhà",
-        "meaning": "stay at home, at home",
-        "audio": "audio/b3/{voice}/vocab_o_nha.mp3"
-      },
-      {
-        "id": "v27",
-        "word": "với",
-        "meaning": "with",
-        "audio": "audio/b3/{voice}/vocab_voi.mp3"
-      },
-      {
-        "id": "v28",
-        "word": "gia đình",
-        "meaning": "family",
-        "audio": "audio/b3/{voice}/vocab_gia_dinh.mp3"
-      },
-      {
-        "id": "v29",
-        "word": "và",
-        "meaning": "and",
-        "audio": "audio/b3/{voice}/vocab_va.mp3"
-      },
-      {
-        "id": "v30",
-        "word": "một mình",
-        "meaning": "alone",
-        "audio": "audio/b3/{voice}/vocab_mot_minh.mp3"
-      },
-      {
-        "id": "v31",
-        "word": "để",
-        "meaning": "in order to",
-        "audio": "audio/b3/{voice}/vocab_de.mp3"
-      },
-      {
-        "id": "v32",
-        "word": "hoặc",
-        "meaning": "or",
-        "audio": "audio/b3/{voice}/vocab_hoac.mp3"
-      },
-      {
-        "id": "v33",
-        "word": "sớm",
-        "meaning": "early",
-        "audio": "audio/b3/{voice}/vocab_som.mp3"
-      },
-      {
-        "id": "v34",
-        "word": "trễ",
-        "meaning": "late",
-        "audio": "audio/b3/{voice}/vocab_tre.mp3"
-      }
-    ]
-  },
-  "grammar": {
-    "sections": [
-      {
-        "id": "g1",
-        "titleVi": "Vào",
-        "titleEn": "At (Time Marker)",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g1",
-            "label": "Vào - At (Time Marker)",
-            "subHeadingVi": "Vào",
-            "subHeadingEn": "At (Time Marker)",
-            "paragraphs": [
-              "Use vào before a day of the week or a time of day to say when something happens. It works like \"on\" or \"in\" in English."
-            ],
-            "chips": [
-              {
-                "pattern": "vào + [Day] / [Time of day]"
-              }
-            ],
-            "notes": [
-              "Use vào + day for days of the week.",
-              "Use vào + buổi + time of day for parts of the day."
-            ],
-            "examples": [
-              {
-                "vi": "Vào thứ Hai.",
-                "en": "On Monday."
-              },
-              {
-                "vi": "Vào buổi sáng.",
-                "en": "In the morning."
-              },
-              {
-                "vi": "Vào buổi tối Chủ Nhật.",
-                "en": "On Sunday evening."
-              },
-              {
-                "vi": "Mình học tiếng Việt vào thứ Ba.",
-                "en": "I study Vietnamese on Tuesday."
-              },
-              {
-                "vi": "Anh ấy đi làm vào buổi sáng.",
-                "en": "He goes to work in the morning."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "Which sentence means \"on Monday\"?",
-                "options": [
-                  "Ở thứ Hai.",
-                  "Vào thứ Hai.",
-                  "Là Thứ Hai."
-                ],
-                "answer": "Vào thứ Hai."
-              },
-              {
-                "question": "Complete the sentence: Mình đi làm ______ buổi sáng.",
-                "options": [
-                  "ở",
-                  "vào",
-                  "là"
-                ],
-                "answer": "vào"
-              },
-              {
-                "question": "Which sentence means \"I go home in the evening.\"",
-                "options": [
-                  "Mình về nhà ở buổi chiều.",
-                  "Mình về nhà ở buổi tối.",
-                  "Mình về nhà vào buổi tối."
-                ],
-                "answer": "Mình về nhà vào buổi tối."
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"Huy exercises in the afternoon\"",
-                "wordBank": [
-                  "vào",
-                  "đi",
-                  "thể",
-                  "Huy",
-                  "buổi",
-                  "ở",
-                  "tối",
-                  "dục",
-                  "không",
-                  "tập",
-                  "chiều"
-                ],
-                "answer": "Huy tập thể dục vào buổi chiều"
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"I stay at home on Sunday\"",
-                "wordBank": [
-                  "ở",
-                  "Chủ Nhật",
-                  "mình",
-                  "không",
-                  "ngủ",
-                  "vào",
-                  "nhà"
-                ],
-                "answer": "Mình ở nhà vào Chủ Nhật"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g2",
-        "titleVi": "Thường",
-        "titleEn": "Often / Usually",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g2-0",
-            "label": "Thường + Động từ",
-            "subHeadingVi": "Thường + Động từ",
-            "subHeadingEn": "Often + Verb",
-            "paragraphs": [
-              "Use thường to talk about things that happen regularly or are part of someone's daily routine. In English, thường is similar to usually."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + thường + [Verb]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Mình thường đi làm vào buổi sáng.",
-                "en": "I usually go to work in the morning."
-              },
-              {
-                "vi": "Anh Kiên thường ở nhà vào Chủ Nhật.",
-                "en": "Kien usually stays at home on Sundays."
-              },
-              {
-                "vi": "Chồng của chị thường tập thể dục vào buổi chiều.",
-                "en": "Her husband usually exercises in the afternoon."
-              }
-            ],
-            "tip": {
-              "label": "💡 Language Tip",
-              "text": "Thường comes before the verb.",
-              "correct": "Mình thường uống cà phê.",
-              "incorrect": "Mình uống thường cà phê."
-            },
-            "quiz": [
-              {
-                "question": "What does thường mean?",
-                "options": [
-                  "always",
-                  "usually",
-                  "never"
-                ],
-                "answer": "usually"
-              },
-              {
-                "question": "Which sentence means \"I usually study Vietnamese\"?",
-                "options": [
-                  "Mình thường học tiếng Việt.",
-                  "Mình học thường tiếng Việt.",
-                  "Mình học tiếng Việt thường."
-                ],
-                "answer": "Mình thường học tiếng Việt."
-              },
-              {
-                "question": "Which sentence means \"I usually sleep at noon\"?",
-                "options": [
-                  "Anh ngủ thường vào buổi trưa.",
-                  "Anh ngủ vào buổi trưa thường.",
-                  "Anh thường ngủ vào buổi trưa."
-                ],
-                "answer": "Anh thường ngủ vào buổi trưa."
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"I often eat out on Friday night\"",
-                "wordBank": [
-                  "bạn",
-                  "sáng",
-                  "vào",
-                  "thứ",
-                  "không",
-                  "thường",
-                  "Sáu",
-                  "đi",
-                  "tối",
-                  "mình",
-                  "ăn",
-                  "buổi"
-                ],
-                "answer": "Mình thường đi ăn vào buổi tối thứ Sáu"
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"Phong often goes to bed late on Saturday\"",
-                "wordBank": [
-                  "thường",
-                  "thứ",
-                  "vào",
-                  "đi",
-                  "Phong",
-                  "ngủ",
-                  "Hai",
-                  "trễ",
-                  "Bảy"
-                ],
-                "answer": "Phong thường đi ngủ trễ vào thứ Bảy"
-              }
-            ]
-          },
-          {
-            "id": "g2-1",
-            "label": "Thường + Động từ + gì?",
-            "subHeadingVi": "Thường + Động từ + gì?",
-            "subHeadingEn": "Asking About Someone's Habits",
-            "paragraphs": [
-              "Use this pattern to ask what someone usually does. Gì means \"what.\""
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + thường + [Verb] + gì?"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Em thường ăn gì vào buổi sáng?",
-                "en": "What do you usually eat in the morning?"
-              },
-              {
-                "vi": "Chị ấy thường làm gì vào buổi tối?",
-                "en": "What does she usually do in the evening?"
-              },
-              {
-                "vi": "Bạn thường coi gì trên YouTube?",
-                "en": "What do you usually watch on YouTube?"
-              }
-            ],
-            "quiz": [
-              {
-                "question": "Which sentence means \"What do you usually do?\"",
-                "options": [
-                  "Bạn thường làm gì?",
-                  "Bạn làm gì?",
-                  "Bạn có làm không?"
-                ],
-                "answer": "Bạn thường làm gì?"
-              },
-              {
-                "question": "Which sentence means \"What does your mother usually cook?\"",
-                "options": [
-                  "Mẹ của bạn thích nấu gì?",
-                  "Mẹ của bạn không nấu gì?",
-                  "Mẹ của bạn thường nấu gì?"
-                ],
-                "answer": "Mẹ của bạn thường nấu gì?"
-              },
-              {
-                "question": "Which sentence means \"What do you usually drink in the morning?\"",
-                "options": [
-                  "Bạn thường uống vào buổi sáng?",
-                  "Bạn thường uống gì vào buổi sáng?",
-                  "Bạn uống gì ở buổi sáng?"
-                ],
-                "answer": "Bạn thường uống gì vào buổi sáng?"
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"What do you often do on Monday?\"",
-                "wordBank": [
-                  "mình",
-                  "làm",
-                  "vào",
-                  "thứ",
-                  "gì",
-                  "thường",
-                  "Hai",
-                  "sáng",
-                  "bạn",
-                  "ăn",
-                  "?"
-                ],
-                "answer": "Bạn thường làm gì vào thứ Hai ?"
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"What does Yến often eat in the evening?\"",
-                "wordBank": [
-                  "thường",
-                  "Yến",
-                  "chiều",
-                  "vào",
-                  "đi",
-                  "bạn",
-                  "gì",
-                  "buổi",
-                  "thứ",
-                  "tối",
-                  "?"
-                ],
-                "answer": "Yến thường ăn gì vào buổi tối ?"
-              }
-            ]
-          },
-          {
-            "id": "g2-2",
-            "label": "Có thường...không?",
-            "subHeadingVi": "Có thường...không?",
-            "subHeadingEn": "Asking If Someone Usually Does Something",
-            "paragraphs": [
-              "This is a Yes/No question. It is similar to: Do you usually...?"
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + có thường + [Verb] + không?"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Bạn có thường ăn phở không?",
-                "en": "Do you usually eat phở?"
-              },
-              {
-                "vi": "Anh có thường uống cà phê vào buổi tối không?",
-                "en": "Do you usually drink coffee in the evening?"
-              },
-              {
-                "vi": "Chị có thường đi chơi vào tối thứ Sáu không?",
-                "en": "Do you usually go out on Friday evenings?"
-              }
-            ],
-            "answerNote": "To answer this Yes/No question, follow the pattern [Pronoun] + Có/Không",
-            "answerExamples": [
-              "Bạn có thường ăn phở không? → Mình có.",
-              "Anh có thường uống cà phê vào buổi tối không? → Anh không."
-            ],
-            "quiz": [
-              {
-                "question": "Which sentence asks \"Do you usually exercise?\"",
-                "options": [
-                  "Bạn thường tập thể dục gì?",
-                  "Bạn có thường tập thể dục không?",
-                  "Bạn tập thể dục gì?"
-                ],
-                "answer": "Bạn có thường tập thể dục không?"
-              },
-              {
-                "question": "Which answer means \"Yes, I usually do.\"",
-                "options": [
-                  "Mình có.",
-                  "Mình thường.",
-                  "Mình không."
-                ],
-                "answer": "Mình có."
-              },
-              {
-                "question": "Which sentence asks \"Do you usually go to sleep early?\"",
-                "options": [
-                  "Em thường đi ngủ sớm gì?",
-                  "Em có thường đi ngủ sớm không?",
-                  "Em có đi ngủ sớm không?"
-                ],
-                "answer": "Em có thường đi ngủ sớm không?"
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"Does An often go to work on Wednesday?\"",
-                "wordBank": [
-                  "An",
-                  "Hai",
-                  "đi",
-                  "thường",
-                  "buổi",
-                  "vào",
-                  "Tư",
-                  "làm",
-                  "gì",
-                  "không",
-                  "có",
-                  "thứ",
-                  "?"
-                ],
-                "answer": "An có thường đi làm vào thứ Tư không ?"
-              },
-              {
-                "type": "scramble",
-                "question": "Make a sentence that means \"Do you often wake up early in the morning?\"",
-                "wordBank": [
-                  "bạn",
-                  "không",
-                  "thường",
-                  "vào",
-                  "có",
-                  "gì",
-                  "buổi",
-                  "ngủ",
-                  "sáng",
-                  "thứ",
-                  "làm",
-                  "dậy",
-                  "sớm",
-                  "?"
-                ],
-                "answer": "Bạn có thường ngủ dậy sớm vào buổi sáng không ?"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "review",
-        "titleVi": "Ôn tập tổng hợp",
-        "titleEn": "Review",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "review",
-            "label": "Ôn tập tổng hợp",
-            "quiz": [
-              {
-                "question": "Which sentence means \"I usually study Vietnamese on Monday.\"?",
-                "options": [
-                  "Mình thường học tiếng Việt vào thứ Hai.",
-                  "Mình học thường tiếng Việt vào thứ Hai.",
-                  "Mình không thường học tiếng Việt vào thứ Hai.",
-                  "Mình thích vào học tiếng Việt thứ Hai."
-                ],
-                "answer": "Mình thường học tiếng Việt vào thứ Hai."
-              },
-              {
-                "question": "Choose the correct word: Mình đi làm ______ buổi sáng.",
-                "options": [
-                  "ở",
-                  "vào",
-                  "là",
-                  "lúc"
-                ],
-                "answer": "vào"
-              },
-              {
-                "question": "What does \"thường\" mean?",
-                "options": [
-                  "always",
-                  "usually",
-                  "never",
-                  "sometimes"
-                ],
-                "answer": "usually"
-              },
-              {
-                "question": "Which sentence makes sense?",
-                "options": [
-                  "Mình uống thường cà phê.",
-                  "Mình thường uống cà phê.",
-                  "Mình cà phê thường uống.",
-                  "Thường mình cà phê uống."
-                ],
-                "answer": "Mình thường uống cà phê."
-              },
-              {
-                "question": "How do you ask \"What do you usually eat?\"",
-                "options": [
-                  "Bạn ăn gì thường?",
-                  "Bạn thường ăn gì?",
-                  "Bạn có thường ăn không?",
-                  "Bạn ăn thường gì?"
-                ],
-                "answer": "Bạn thường ăn gì?"
-              },
-              {
-                "question": "Which sentence asks \"Do you usually drink coffee?\"",
-                "options": [
-                  "Bạn thường uống cà phê không?",
-                  "Bạn uống cà phê gì?",
-                  "Bạn có uống cà phê thường không?",
-                  "Bạn không uống cà phê không?"
-                ],
-                "answer": "Bạn có uống cà phê thường không?"
-              },
-              {
-                "question": "Which sentence means \"I often go to sleep at 10\"",
-                "options": [
-                  "Chị đi ngủ vào 10 giờ.",
-                  "Chị thường đi ngủ lúc 10 giờ.",
-                  "Chị đi ngủ thường vào 10 giờ.",
-                  "Chị đi ngủ lúc 10 giờ thường."
-                ],
-                "answer": "Chị thường đi ngủ lúc 10 giờ."
-              },
-              {
-                "question": "Which sentence means \"I often exercise in the afternoon\"",
-                "options": [
-                  "Anh tập thể dục ở buổi chiều.",
-                  "Anh tập thẻ dục vào buổi chiều.",
-                  "Anh thường tập thể dục lúc buổi chiều.",
-                  "Anh thường tập thể dục vào buổi chiều."
-                ],
-                "answer": "Anh thường tập thể dục lúc buổi chiều."
-              },
-              {
-                "question": "Which answer is correct? — Bạn có thường đi chơi vào cuối tuần không?",
-                "options": [
-                  "Có, mình thường.",
-                  "Mình có.",
-                  "Có, mình.",
-                  "Có, thường mình."
-                ],
-                "answer": "Mình có."
-              },
-              {
-                "question": "Which sentence means \"What does your father usually do in the evening?\"",
-                "options": [
-                  "Ba bạn thường làm gì?",
-                  "Ba bạn có thường làm gì vào buổi tối?",
-                  "Ba bạn thường làm gì vào buổi tối?",
-                  "Ba bạn vào buổi tối làm gì không?"
-                ],
-                "answer": "Ba bạn thường làm gì vào buổi tối?"
-              },
-              {
-                "question": "Which sentence makes sense?",
-                "options": [
-                  "Mình thường vào Chủ Nhật đi chơi.",
-                  "Mình đi chơi thường vào Chủ Nhật.",
-                  "Mình thường đi chơi vào Chủ Nhật.",
-                  "Mình vào thường đi chơi Chủ Nhật."
-                ],
-                "answer": "Mình thường đi chơi vào Chủ Nhật."
-              },
-              {
-                "question": "Which sentence is NOT correct?",
-                "options": [
-                  "Mình thường uống trà vào buổi sáng.",
-                  "Anh có thường đi làm không?",
-                  "Em thường làm gì vào thứ Bảy?",
-                  "Chị vào thường đi ngủ lúc 10 giờ."
-                ],
-                "answer": "Chị vào thường đi ngủ lúc 10 giờ."
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "listening": {
-    "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
-    "groups": [
-      {
-        "id": "d1",
-        "title": "Hội thoại 1: Tối thứ Bảy",
-        "lines": [
-          {
-            "audio": "audio/b3/{voice}/listen_d1_01.mp3",
-            "text": "Em thường làm gì vào tối thứ Bảy?",
-            "wordBank": [
-              "thường",
-              "gì",
-              "thứ bảy?",
-              "làm",
-              "em",
-              "tối",
-              "vào",
-              "thứ hai",
-              "là"
-            ]
-          },
-          {
-            "audio": "audio/b3/{voice}/listen_d1_02.mp3",
-            "text": "Em thường đi chơi với bạn. Còn anh?",
-            "wordBank": [
-              "đi chơi",
-              "bạn",
-              "em",
-              "đi làm",
-              "thường",
-              "anh?",
-              "và",
-              "còn",
-              "với"
-            ]
-          },
-          {
-            "audio": "audio/b3/{voice}/listen_d1_03.mp3",
-            "text": "Anh thường ở nhà coi tivi.",
-            "wordBank": [
-              "thường",
-              "ở nhà",
-              "em",
-              "coi tivi",
-              "anh",
-              "dọn nhà",
-              "đi chơi",
-              "gì"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "d2",
-        "title": "Hội thoại 2: Ăn phở",
-        "lines": [
-          {
-            "audio": "audio/b3/{voice}/listen_d2_01.mp3",
-            "text": "Bạn có thường ăn phở vào buổi sáng không?",
-            "wordBank": [
-              "phở",
-              "thứ hai",
-              "buổi sáng",
-              "ăn",
-              "có",
-              "không?",
-              "em",
-              "bạn",
-              "vào",
-              "thường"
-            ]
-          },
-          {
-            "audio": "audio/b3/{voice}/listen_d2_02.mp3",
-            "text": "Mình có. Mình thích ăn phở vào buổi sáng.",
-            "wordBank": [
-              "có",
-              "thường",
-              "không",
-              "ăn",
-              "buổi tối",
-              "bún",
-              "thường",
-              "vào",
-              "mình",
-              "buổi sáng",
-              "bò",
-              "mình",
-              "thích",
-              "phở"
-            ]
-          },
-          {
-            "audio": "audio/b3/{voice}/listen_d2_03.mp3",
-            "text": "Bạn thường ăn phở gì?",
-            "wordBank": [
-              "gì?",
-              "ăn",
-              "thích",
-              "bạn",
-              "phở",
-              "không",
-              "thường",
-              "mình"
-            ]
-          },
-          {
-            "audio": "audio/b3/{voice}/listen_d2_04.mp3",
-            "text": "Mình thường ăn phở bò. Còn bạn?",
-            "wordBank": [
-              "ăn",
-              "gà",
-              "gì?",
-              "bạn?",
-              "thích",
-              "mình",
-              "phở",
-              "buổi tối",
-              "thường",
-              "bò",
-              "còn"
-            ]
-          },
-          {
-            "audio": "audio/b3/{voice}/listen_d2_05.mp3",
-            "text": "Không. Mình thường ăn bún bò vào buổi sáng.",
-            "wordBank": [
-              "buổi sáng",
-              "bún",
-              "mình",
-              "không",
-              "thích",
-              "vào",
-              "bò",
-              "thường",
-              "bạn",
-              "ăn",
-              "phở"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "reading": {
-    "passages": [
-      {
-        "id": "r1",
-        "title": "Một ngày của nhân viên văn phòng",
-        "audio": "audio/b3/{voice}/reading_r1.mp3",
-        "text": "Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để ăn sáng và đi làm. Có người thường ăn phở bò. Có người thường ăn bún bò hoặc bánh mì. Một số người thường tập thể dục trước khi đi làm.\nVào buổi trưa, họ thường đi ăn với đồng nghiệp. Sau khi ăn trưa xong, họ ngủ trưa hoặc quay lại làm việc.\nNhân viên văn phòng ở Việt Nam không thường đi chơi hay đi ăn sau khi về nhà vào buổi chiều. Họ thường ăn tối với gia đình hoặc một mình. Sau đó, họ thường dọn nhà, đánh răng, lướt điện thoại và đi ngủ.",
-        "titleEn": "A Day in the Life of an Office Worker",
-        "textEn": "Office workers in Vietnam usually get up early in the morning to have breakfast and go to work. Some people usually have beef pho. Others usually have beef noodle soup or banh mi. Some people usually exercise before going to work.\nAt lunchtime, they usually go out to eat with their colleagues. After lunch, they take a nap or go back to work.\nOffice workers in Vietnam do not usually go out or eat out after coming home in the afternoon. They usually have dinner with their family or by themselves. After that, they usually clean the house, brush their teeth, scroll on their phones, and go to bed.",
-        "questions": [
-          {
-            "context": "Câu 1: Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để làm gì?",
-            "options": [
-              "ăn sáng và đi chơi",
-              "ăn sáng và đi làm",
-              "ăn trưa và đi làm"
-            ],
-            "answer": "ăn sáng và đi làm"
-          },
-          {
-            "context": "Câu 2: Vào buổi trưa, họ thường làm gì?",
-            "options": [
-              "tập thể dục với đồng nghiệp",
-              "đi ăn với gia đình",
-              "đi ăn với đồng nghiệp"
-            ],
-            "answer": "đi ăn với đồng nghiệp"
-          },
-          {
-            "context": "Câu 3: Nhân viên văn phòng thường làm gì sau khi về nhà vào buổi chiều?",
-            "options": [
-              "ăn tối",
-              "dọn nhà",
-              "lướt điện thoại"
-            ],
-            "answer": "ăn tối"
-          }
-        ]
-      }
-    ]
-  },
-  "preClass": {
-    "note": "Xem hình rồi ghi nhớ từ vựng trước khi làm trắc nghiệm.",
-    "flows": [
-      {
-        "title": "Bài 1: Hoạt động",
-        "vocabPreview": {
-          "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
-          "items": [
-            {
-              "word": "tập thể dục",
-              "image": "images/b3/nghe/tap_the_duc.jpg",
-              "audio": "audio/b3/{voice}/vocab_tap_the_duc.mp3"
-            },
-            {
-              "word": "nấu ăn",
-              "image": "images/b3/nghe/nau_an.jpg",
-              "audio": "audio/b3/{voice}/vocab_nau_an.mp3"
-            },
-            {
-              "word": "ngủ trưa",
-              "image": "images/b3/nghe/ngu_trua.jpg",
-              "audio": "audio/b3/{voice}/vocab_ngu_trua.mp3"
-            },
-            {
-              "word": "lướt điện thoại",
-              "image": "images/b3/nghe/luot_dien_thoai.jpg",
-              "audio": "audio/b3/{voice}/vocab_luot_dien_thoai.mp3"
-            },
-            {
-              "word": "đánh răng",
-              "image": "images/b3/nghe/danh_rang.jpg",
-              "audio": "audio/b3/{voice}/vocab_danh_rang.mp3"
-            },
-            {
-              "word": "ở nhà",
-              "image": "images/b3/nghe/o_nha.jpg",
-              "audio": "audio/b3/{voice}/vocab_o_nha.mp3"
-            }
-          ]
-        },
-        "quiz": {
-          "title": "Thời khoá biểu của Minh",
-          "instruction": "Xem thời khoá biểu rồi chọn đáp án đúng.",
-          "image": "images/b3/nghe/thoi_khoa_bieu_minh.jpg",
-          "items": [
-            {
-              "id": "pc1q1",
-              "context": "Minh thường ______ vào buổi sáng.",
-              "options": [
-                "tập thể dục",
-                "nấu ăn",
-                "đi làm"
-              ],
-              "answer": "đi làm"
-            },
-            {
-              "id": "pc1q2",
-              "context": "Minh thường đi chơi với bạn vào ______ thứ Bảy.",
-              "options": [
-                "buổi sáng",
-                "buổi trưa",
-                "buổi tối"
-              ],
-              "answer": "buổi tối"
-            },
-            {
-              "id": "pc1q3",
-              "context": "Minh không ngủ trưa vào ______.",
-              "options": [
-                "thứ hai",
-                "thứ năm",
-                "Chủ Nhật"
-              ],
-              "answer": ""
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "postClass": {
-    "exercises": [
-      {
-        "type": "choice",
-        "title": "1. Chọn đáp án đúng.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Anh Minh thường ________ vào buổi sáng.",
-            "options": [
-              "ngủ trưa",
-              "đi làm",
-              "đi ngủ"
-            ],
-            "answer": "đi làm"
-          },
-          {
-            "id": "2",
-            "context": "Chị Lan thường ăn tối ________ gia đình.",
-            "options": [
-              "vào",
-              "để",
-              "với"
-            ],
-            "answer": "với"
-          },
-          {
-            "id": "3",
-            "context": "Bạn có thường tập thể dục ________ buổi sáng không?",
-            "options": [
-              "ở",
-              "với",
-              "vào"
-            ],
-            "answer": "vào"
-          },
-          {
-            "id": "4",
-            "context": "Sau khi ăn tối, mình thường ________.",
-            "options": [
-              "đánh răng",
-              "ăn sáng",
-              "ngủ dậy"
-            ],
-            "answer": "đánh răng"
-          },
-          {
-            "id": "5",
-            "context": "Vào Chủ Nhật, nhiều người thường ________.",
-            "options": [
-              "ở nhà",
-              "đi làm",
-              "ăn sáng ở văn phòng"
-            ],
-            "answer": "ở nhà"
-          }
-        ]
-      },
-      {
-        "type": "scramble",
-        "title": "2. Sắp xếp câu.",
-        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
-        "items": [
-          {
-            "prompt": "Câu 1",
-            "tokens": [
-              "thường",
-              "vào buổi sáng",
-              "mình",
-              "đi làm"
-            ],
-            "answer": "Mình thường đi làm vào buổi sáng."
-          },
-          {
-            "prompt": "Câu 2",
-            "tokens": [
-              "thường",
-              "anh",
-              "tập thể dục",
-              "trước khi",
-              "đi làm"
-            ],
-            "answer": "Anh thường tập thể dục trước khi đi làm."
-          },
-          {
-            "prompt": "Câu 3",
-            "tokens": [
-              "với gia đình",
-              "ăn tối",
-              "chị",
-              "thường"
-            ],
-            "answer": "Chị thường ăn tối với gia đình."
-          },
-          {
-            "prompt": "Câu 4",
-            "tokens": [
-              "thường",
-              "lướt điện thoại",
-              "sau khi",
-              "mình",
-              "ăn tối"
-            ],
-            "answer": "Mình thường lướt điện thoại sau khi ăn tối."
-          },
-          {
-            "prompt": "Câu 5",
-            "tokens": [
-              "có thường",
-              "bạn",
-              "ngủ trưa",
-              "không"
-            ],
-            "answer": "Bạn có thường ngủ trưa không?"
-          }
-        ]
-      },
-      {
-        "type": "dialogue_fill",
-        "title": "3. Hoàn thành đoạn hội thoại.",
-        "instruction": "Điền từ thích hợp.",
-        "wordBank": [
-          "thường",
-          "có",
-          "vào",
-          "với",
-          "gì",
-          "không"
+ "id": "b3",
+ "num": 3,
+ "title": "Em thường đi chơi vào tối Chủ Nhật",
+ "vocab": {
+  "items": [
+   {
+    "id": "v1",
+    "word": "Thứ hai",
+    "meaning": "Monday",
+    "audio": "audio/b3/{voice}/vocab_thu_hai.mp3"
+   },
+   {
+    "id": "v2",
+    "word": "Thứ ba",
+    "meaning": "Tuesday",
+    "audio": "audio/b3/{voice}/vocab_thu_ba.mp3"
+   },
+   {
+    "id": "v3",
+    "word": "Thứ tư",
+    "meaning": "Wednesday",
+    "audio": "audio/b3/{voice}/vocab_thu_tu.mp3"
+   },
+   {
+    "id": "v4",
+    "word": "Thứ năm",
+    "meaning": "Thursday",
+    "audio": "audio/b3/{voice}/vocab_thu_nam.mp3"
+   },
+   {
+    "id": "v5",
+    "word": "Thứ sáu",
+    "meaning": "Friday",
+    "audio": "audio/b3/{voice}/vocab_thu_sau.mp3"
+   },
+   {
+    "id": "v6",
+    "word": "Thứ bảy",
+    "meaning": "Saturday",
+    "audio": "audio/b3/{voice}/vocab_thu_bay.mp3"
+   },
+   {
+    "id": "v7",
+    "word": "Chủ nhật",
+    "meaning": "Sunday",
+    "audio": "audio/b3/{voice}/vocab_chu_nhat.mp3"
+   },
+   {
+    "id": "v8",
+    "word": "buổi sáng",
+    "meaning": "morning",
+    "audio": "audio/b3/{voice}/vocab_buoi_sang.mp3"
+   },
+   {
+    "id": "v9",
+    "word": "buổi trưa",
+    "meaning": "noon",
+    "audio": "audio/b3/{voice}/vocab_buoi_trua.mp3"
+   },
+   {
+    "id": "v10",
+    "word": "buổi chiều",
+    "meaning": "afternoon",
+    "audio": "audio/b3/{voice}/vocab_buoi_chieu.mp3"
+   },
+   {
+    "id": "v11",
+    "word": "buổi tối",
+    "meaning": "evening, night",
+    "audio": "audio/b3/{voice}/vocab_buoi_toi.mp3"
+   },
+   {
+    "id": "v12",
+    "word": "tập thể dục",
+    "meaning": "exercise",
+    "audio": "audio/b3/{voice}/vocab_tap_the_duc.mp3"
+   },
+   {
+    "id": "v13",
+    "word": "nấu ăn",
+    "meaning": "cook",
+    "audio": "audio/b3/{voice}/vocab_nau_an.mp3"
+   },
+   {
+    "id": "v14",
+    "word": "ăn sáng",
+    "meaning": "eat breakfast",
+    "audio": "audio/b3/{voice}/vocab_an_sang.mp3"
+   },
+   {
+    "id": "v15",
+    "word": "ăn trưa",
+    "meaning": "eat lunch",
+    "audio": "audio/b3/{voice}/vocab_an_trua.mp3"
+   },
+   {
+    "id": "v16",
+    "word": "ăn tối",
+    "meaning": "eat dinner",
+    "audio": "audio/b3/{voice}/vocab_an_toi.mp3"
+   },
+   {
+    "id": "v17",
+    "word": "ngủ trưa",
+    "meaning": "take a nap at noon",
+    "audio": "audio/b3/{voice}/vocab_ngu_trua.mp3"
+   },
+   {
+    "id": "v18",
+    "word": "điện thoại",
+    "meaning": "general phone, cell phone, landline phone",
+    "audio": "audio/b3/{voice}/vocab_dien_thoai.mp3"
+   },
+   {
+    "id": "v19",
+    "word": "lướt điện thoại",
+    "meaning": "scroll on a phone",
+    "audio": "audio/b3/{voice}/vocab_luot_dien_thoai.mp3"
+   },
+   {
+    "id": "v20",
+    "word": "đánh răng",
+    "meaning": "brush teeth",
+    "audio": "audio/b3/{voice}/vocab_danh_rang.mp3"
+   },
+   {
+    "id": "v21",
+    "word": "trước khi",
+    "meaning": "before",
+    "audio": "audio/b3/{voice}/vocab_truoc_khi.mp3"
+   },
+   {
+    "id": "v22",
+    "word": "sau khi",
+    "meaning": "after",
+    "audio": "audio/b3/{voice}/vocab_sau_khi.mp3"
+   },
+   {
+    "id": "v23",
+    "word": "thường",
+    "meaning": "often, usually",
+    "audio": "audio/b3/{voice}/vocab_thuong.mp3"
+   },
+   {
+    "id": "v24",
+    "word": "quay lại",
+    "meaning": "go back to",
+    "audio": "audio/b3/{voice}/vocab_quay_lai.mp3"
+   },
+   {
+    "id": "v25",
+    "word": "vào",
+    "meaning": "on (a date), in (time of day), into",
+    "audio": "audio/b3/{voice}/vocab_vao.mp3"
+   },
+   {
+    "id": "v26",
+    "word": "ở nhà",
+    "meaning": "stay at home, at home",
+    "audio": "audio/b3/{voice}/vocab_o_nha.mp3"
+   },
+   {
+    "id": "v27",
+    "word": "với",
+    "meaning": "with",
+    "audio": "audio/b3/{voice}/vocab_voi.mp3"
+   },
+   {
+    "id": "v28",
+    "word": "gia đình",
+    "meaning": "family",
+    "audio": "audio/b3/{voice}/vocab_gia_dinh.mp3"
+   },
+   {
+    "id": "v29",
+    "word": "và",
+    "meaning": "and",
+    "audio": "audio/b3/{voice}/vocab_va.mp3"
+   },
+   {
+    "id": "v30",
+    "word": "một mình",
+    "meaning": "alone",
+    "audio": "audio/b3/{voice}/vocab_mot_minh.mp3"
+   },
+   {
+    "id": "v31",
+    "word": "để",
+    "meaning": "in order to",
+    "audio": "audio/b3/{voice}/vocab_de.mp3"
+   },
+   {
+    "id": "v32",
+    "word": "hoặc",
+    "meaning": "or",
+    "audio": "audio/b3/{voice}/vocab_hoac.mp3"
+   },
+   {
+    "id": "v33",
+    "word": "sớm",
+    "meaning": "early",
+    "audio": "audio/b3/{voice}/vocab_som.mp3"
+   },
+   {
+    "id": "v34",
+    "word": "trễ",
+    "meaning": "late",
+    "audio": "audio/b3/{voice}/vocab_tre.mp3"
+   }
+  ]
+ },
+ "grammar": {
+  "sections": [
+   {
+    "id": "g1",
+    "titleVi": "Vào",
+    "titleEn": "At (Time Marker)",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g1",
+      "label": "Vào - At (Time Marker)",
+      "subHeadingVi": "Vào",
+      "subHeadingEn": "At (Time Marker)",
+      "paragraphs": [
+       "Use vào before a day of the week or a time of day to say when something happens. It works like \"on\" or \"in\" in English."
+      ],
+      "chips": [
+       {
+        "pattern": "vào + [Day] / [Time of day]"
+       }
+      ],
+      "notes": [
+       "Use vào + day for days of the week.",
+       "Use vào + buổi + time of day for parts of the day."
+      ],
+      "examples": [
+       {
+        "vi": "Vào thứ Hai.",
+        "en": "On Monday."
+       },
+       {
+        "vi": "Vào buổi sáng.",
+        "en": "In the morning."
+       },
+       {
+        "vi": "Vào buổi tối Chủ Nhật.",
+        "en": "On Sunday evening."
+       },
+       {
+        "vi": "Mình học tiếng Việt vào thứ Ba.",
+        "en": "I study Vietnamese on Tuesday."
+       },
+       {
+        "vi": "Anh ấy đi làm vào buổi sáng.",
+        "en": "He goes to work in the morning."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "Which sentence means \"on Monday\"?",
+        "options": [
+         "Ở thứ Hai.",
+         "Vào thứ Hai.",
+         "Là Thứ Hai."
         ],
-        "lines": [
-          {
-            "speaker": "Mai",
-            "parts": [
-              "Bạn ",
-              {
-                "blank": "có"
-              },
-              " thường đi làm ",
-              {
-                "blank": "vào"
-              },
-              " buổi sáng ",
-              {
-                "blank": "không"
-              },
-              "?"
-            ]
-          },
-          {
-            "speaker": "Nam",
-            "parts": [
-              "Có."
-            ]
-          },
-          {
-            "speaker": "Mai",
-            "parts": [
-              "Bạn ",
-              {
-                "blank": "thường"
-              },
-              " ăn ",
-              {
-                "blank": "gì"
-              },
-              " vào buổi trưa?"
-            ]
-          },
-          {
-            "speaker": "Nam",
-            "parts": [
-              "Mình thường ăn phở hoặc cơm gà ",
-              {
-                "blank": "với"
-              },
-              " đồng nghiệp."
-            ]
-          }
-        ]
-      }
+        "answer": "Vào thứ Hai."
+       },
+       {
+        "question": "Complete the sentence: Mình đi làm ______ buổi sáng.",
+        "options": [
+         "ở",
+         "vào",
+         "là"
+        ],
+        "answer": "vào"
+       },
+       {
+        "question": "Which sentence means \"I go home in the evening.\"",
+        "options": [
+         "Mình về nhà ở buổi chiều.",
+         "Mình về nhà ở buổi tối.",
+         "Mình về nhà vào buổi tối."
+        ],
+        "answer": "Mình về nhà vào buổi tối."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Huy exercises in the afternoon\"",
+        "wordBank": [
+         "vào",
+         "đi",
+         "thể",
+         "Huy",
+         "buổi",
+         "ở",
+         "tối",
+         "dục",
+         "không",
+         "tập",
+         "chiều"
+        ],
+        "answer": "Huy tập thể dục vào buổi chiều"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"I stay at home on Sunday\"",
+        "wordBank": [
+         "ở",
+         "Chủ Nhật",
+         "mình",
+         "không",
+         "ngủ",
+         "vào",
+         "nhà"
+        ],
+        "answer": "Mình ở nhà vào Chủ Nhật"
+       }
+      ]
+     }
     ]
-  }
+   },
+   {
+    "id": "g2",
+    "titleVi": "Thường",
+    "titleEn": "Often / Usually",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g2-0",
+      "label": "Thường + Động từ",
+      "subHeadingVi": "Thường + Động từ",
+      "subHeadingEn": "Often + Verb",
+      "paragraphs": [
+       "Use thường to talk about things that happen regularly or are part of someone's daily routine. In English, thường is similar to usually."
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + thường + [Verb]"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Mình thường đi làm vào buổi sáng.",
+        "en": "I usually go to work in the morning."
+       },
+       {
+        "vi": "Anh Kiên thường ở nhà vào Chủ Nhật.",
+        "en": "Kien usually stays at home on Sundays."
+       },
+       {
+        "vi": "Chồng của chị thường tập thể dục vào buổi chiều.",
+        "en": "Her husband usually exercises in the afternoon."
+       }
+      ],
+      "tip": {
+       "label": "💡 Language Tip",
+       "text": "Thường comes before the verb.",
+       "correct": "Mình thường uống cà phê.",
+       "incorrect": "Mình uống thường cà phê."
+      },
+      "quiz": [
+       {
+        "question": "What does thường mean?",
+        "options": [
+         "always",
+         "usually",
+         "never"
+        ],
+        "answer": "usually"
+       },
+       {
+        "question": "Which sentence means \"I usually study Vietnamese\"?",
+        "options": [
+         "Mình thường học tiếng Việt.",
+         "Mình học thường tiếng Việt.",
+         "Mình học tiếng Việt thường."
+        ],
+        "answer": "Mình thường học tiếng Việt."
+       },
+       {
+        "question": "Which sentence means \"I usually sleep at noon\"?",
+        "options": [
+         "Anh ngủ thường vào buổi trưa.",
+         "Anh ngủ vào buổi trưa thường.",
+         "Anh thường ngủ vào buổi trưa."
+        ],
+        "answer": "Anh thường ngủ vào buổi trưa."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"I often eat out on Friday night\"",
+        "wordBank": [
+         "bạn",
+         "sáng",
+         "vào",
+         "thứ",
+         "không",
+         "thường",
+         "Sáu",
+         "đi",
+         "tối",
+         "mình",
+         "ăn",
+         "buổi"
+        ],
+        "answer": "Mình thường đi ăn vào buổi tối thứ Sáu"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Phong often goes to bed late on Saturday\"",
+        "wordBank": [
+         "thường",
+         "thứ",
+         "vào",
+         "đi",
+         "Phong",
+         "ngủ",
+         "Hai",
+         "trễ",
+         "Bảy"
+        ],
+        "answer": "Phong thường đi ngủ trễ vào thứ Bảy"
+       }
+      ]
+     },
+     {
+      "id": "g2-1",
+      "label": "Thường + Động từ + gì?",
+      "subHeadingVi": "Thường + Động từ + gì?",
+      "subHeadingEn": "Asking About Someone's Habits",
+      "paragraphs": [
+       "Use this pattern to ask what someone usually does. Gì means \"what.\""
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + thường + [Verb] + gì?"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Em thường ăn gì vào buổi sáng?",
+        "en": "What do you usually eat in the morning?"
+       },
+       {
+        "vi": "Chị ấy thường làm gì vào buổi tối?",
+        "en": "What does she usually do in the evening?"
+       },
+       {
+        "vi": "Bạn thường coi gì trên YouTube?",
+        "en": "What do you usually watch on YouTube?"
+       }
+      ],
+      "quiz": [
+       {
+        "question": "Which sentence means \"What do you usually do?\"",
+        "options": [
+         "Bạn thường làm gì?",
+         "Bạn làm gì?",
+         "Bạn có làm không?"
+        ],
+        "answer": "Bạn thường làm gì?"
+       },
+       {
+        "question": "Which sentence means \"What does your mother usually cook?\"",
+        "options": [
+         "Mẹ của bạn thích nấu gì?",
+         "Mẹ của bạn không nấu gì?",
+         "Mẹ của bạn thường nấu gì?"
+        ],
+        "answer": "Mẹ của bạn thường nấu gì?"
+       },
+       {
+        "question": "Which sentence means \"What do you usually drink in the morning?\"",
+        "options": [
+         "Bạn thường uống vào buổi sáng?",
+         "Bạn thường uống gì vào buổi sáng?",
+         "Bạn uống gì ở buổi sáng?"
+        ],
+        "answer": "Bạn thường uống gì vào buổi sáng?"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"What do you often do on Monday?\"",
+        "wordBank": [
+         "mình",
+         "làm",
+         "vào",
+         "thứ",
+         "gì",
+         "thường",
+         "Hai",
+         "sáng",
+         "bạn",
+         "ăn",
+         "?"
+        ],
+        "answer": "Bạn thường làm gì vào thứ Hai ?"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"What does Yến often eat in the evening?\"",
+        "wordBank": [
+         "thường",
+         "Yến",
+         "chiều",
+         "vào",
+         "đi",
+         "bạn",
+         "gì",
+         "buổi",
+         "thứ",
+         "tối",
+         "?"
+        ],
+        "answer": "Yến thường ăn gì vào buổi tối ?"
+       }
+      ]
+     },
+     {
+      "id": "g2-2",
+      "label": "Có thường...không?",
+      "subHeadingVi": "Có thường...không?",
+      "subHeadingEn": "Asking If Someone Usually Does Something",
+      "paragraphs": [
+       "This is a Yes/No question. It is similar to: Do you usually...?"
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + có thường + [Verb] + không?"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Bạn có thường ăn phở không?",
+        "en": "Do you usually eat phở?"
+       },
+       {
+        "vi": "Anh có thường uống cà phê vào buổi tối không?",
+        "en": "Do you usually drink coffee in the evening?"
+       },
+       {
+        "vi": "Chị có thường đi chơi vào tối thứ Sáu không?",
+        "en": "Do you usually go out on Friday evenings?"
+       }
+      ],
+      "answerNote": "To answer this Yes/No question, follow the pattern [Pronoun] + Có/Không",
+      "answerExamples": [
+       "Bạn có thường ăn phở không? → Mình có.",
+       "Anh có thường uống cà phê vào buổi tối không? → Anh không."
+      ],
+      "quiz": [
+       {
+        "question": "Which sentence asks \"Do you usually exercise?\"",
+        "options": [
+         "Bạn thường tập thể dục gì?",
+         "Bạn có thường tập thể dục không?",
+         "Bạn tập thể dục gì?"
+        ],
+        "answer": "Bạn có thường tập thể dục không?"
+       },
+       {
+        "question": "Which answer means \"Yes, I usually do.\"",
+        "options": [
+         "Mình có.",
+         "Mình thường.",
+         "Mình không."
+        ],
+        "answer": "Mình có."
+       },
+       {
+        "question": "Which sentence asks \"Do you usually go to sleep early?\"",
+        "options": [
+         "Em thường đi ngủ sớm gì?",
+         "Em có thường đi ngủ sớm không?",
+         "Em có đi ngủ sớm không?"
+        ],
+        "answer": "Em có thường đi ngủ sớm không?"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Does An often go to work on Wednesday?\"",
+        "wordBank": [
+         "An",
+         "Hai",
+         "đi",
+         "thường",
+         "buổi",
+         "vào",
+         "Tư",
+         "làm",
+         "gì",
+         "không",
+         "có",
+         "thứ",
+         "?"
+        ],
+        "answer": "An có thường đi làm vào thứ Tư không ?"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Do you often wake up early in the morning?\"",
+        "wordBank": [
+         "bạn",
+         "không",
+         "thường",
+         "vào",
+         "có",
+         "gì",
+         "buổi",
+         "ngủ",
+         "sáng",
+         "thứ",
+         "làm",
+         "dậy",
+         "sớm",
+         "?"
+        ],
+        "answer": "Bạn có thường ngủ dậy sớm vào buổi sáng không ?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "listening": {
+  "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
+  "groups": [
+   {
+    "id": "d1",
+    "title": "Hội thoại 1: Tối thứ Bảy",
+    "lines": [
+     {
+      "audio": "audio/b3/{voice}/listen_d1_01.mp3",
+      "text": "Em thường làm gì vào tối thứ Bảy?",
+      "wordBank": [
+       "thường",
+       "gì",
+       "thứ bảy?",
+       "làm",
+       "em",
+       "tối",
+       "vào",
+       "thứ hai",
+       "là"
+      ]
+     },
+     {
+      "audio": "audio/b3/{voice}/listen_d1_02.mp3",
+      "text": "Em thường đi chơi với bạn. Còn anh?",
+      "wordBank": [
+       "đi chơi",
+       "bạn",
+       "em",
+       "đi làm",
+       "thường",
+       "anh?",
+       "và",
+       "còn",
+       "với"
+      ]
+     },
+     {
+      "audio": "audio/b3/{voice}/listen_d1_03.mp3",
+      "text": "Anh thường ở nhà coi tivi.",
+      "wordBank": [
+       "thường",
+       "ở nhà",
+       "em",
+       "coi tivi",
+       "anh",
+       "dọn nhà",
+       "đi chơi",
+       "gì"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d2",
+    "title": "Hội thoại 2: Ăn phở",
+    "lines": [
+     {
+      "audio": "audio/b3/{voice}/listen_d2_01.mp3",
+      "text": "Bạn có thường ăn phở vào buổi sáng không?",
+      "wordBank": [
+       "phở",
+       "thứ hai",
+       "buổi sáng",
+       "ăn",
+       "có",
+       "không?",
+       "em",
+       "bạn",
+       "vào",
+       "thường"
+      ]
+     },
+     {
+      "audio": "audio/b3/{voice}/listen_d2_02.mp3",
+      "text": "Mình có. Mình thích ăn phở vào buổi sáng.",
+      "wordBank": [
+       "có",
+       "thường",
+       "không",
+       "ăn",
+       "buổi tối",
+       "bún",
+       "thường",
+       "vào",
+       "mình",
+       "buổi sáng",
+       "bò",
+       "mình",
+       "thích",
+       "phở"
+      ]
+     },
+     {
+      "audio": "audio/b3/{voice}/listen_d2_03.mp3",
+      "text": "Bạn thường ăn phở gì?",
+      "wordBank": [
+       "gì?",
+       "ăn",
+       "thích",
+       "bạn",
+       "phở",
+       "không",
+       "thường",
+       "mình"
+      ]
+     },
+     {
+      "audio": "audio/b3/{voice}/listen_d2_04.mp3",
+      "text": "Mình thường ăn phở bò. Còn bạn?",
+      "wordBank": [
+       "ăn",
+       "gà",
+       "gì?",
+       "bạn?",
+       "thích",
+       "mình",
+       "phở",
+       "buổi tối",
+       "thường",
+       "bò",
+       "còn"
+      ]
+     },
+     {
+      "audio": "audio/b3/{voice}/listen_d2_05.mp3",
+      "text": "Không. Mình thường ăn bún bò vào buổi sáng.",
+      "wordBank": [
+       "buổi sáng",
+       "bún",
+       "mình",
+       "không",
+       "thích",
+       "vào",
+       "bò",
+       "thường",
+       "bạn",
+       "ăn",
+       "phở"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "reading": {
+  "passages": [
+   {
+    "id": "r1",
+    "title": "Một ngày của nhân viên văn phòng",
+    "audio": "audio/b3/{voice}/reading_r1.mp3",
+    "text": "Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để ăn sáng và đi làm. Có người thường ăn phở bò. Có người thường ăn bún bò hoặc bánh mì. Một số người thường tập thể dục trước khi đi làm.\nVào buổi trưa, họ thường đi ăn với đồng nghiệp. Sau khi ăn trưa xong, họ ngủ trưa hoặc quay lại làm việc.\nNhân viên văn phòng ở Việt Nam không thường đi chơi hay đi ăn sau khi về nhà vào buổi chiều. Họ thường ăn tối với gia đình hoặc một mình. Sau đó, họ thường dọn nhà, đánh răng, lướt điện thoại và đi ngủ.",
+    "titleEn": "A Day in the Life of an Office Worker",
+    "textEn": "Office workers in Vietnam usually get up early in the morning to have breakfast and go to work. Some people usually have beef pho. Others usually have beef noodle soup or banh mi. Some people usually exercise before going to work.\nAt lunchtime, they usually go out to eat with their colleagues. After lunch, they take a nap or go back to work.\nOffice workers in Vietnam do not usually go out or eat out after coming home in the afternoon. They usually have dinner with their family or by themselves. After that, they usually clean the house, brush their teeth, scroll on their phones, and go to bed.",
+    "questions": [
+     {
+      "context": "Câu 1: Nhân viên văn phòng ở Việt Nam thường ngủ dậy sớm vào buổi sáng để làm gì?",
+      "options": [
+       "ăn sáng và đi chơi",
+       "ăn sáng và đi làm",
+       "ăn trưa và đi làm"
+      ],
+      "answer": "ăn sáng và đi làm"
+     },
+     {
+      "context": "Câu 2: Vào buổi trưa, họ thường làm gì?",
+      "options": [
+       "tập thể dục với đồng nghiệp",
+       "đi ăn với gia đình",
+       "đi ăn với đồng nghiệp"
+      ],
+      "answer": "đi ăn với đồng nghiệp"
+     },
+     {
+      "context": "Câu 3: Nhân viên văn phòng thường làm gì sau khi về nhà vào buổi chiều?",
+      "options": [
+       "ăn tối",
+       "dọn nhà",
+       "lướt điện thoại"
+      ],
+      "answer": "ăn tối"
+     }
+    ]
+   }
+  ]
+ },
+ "preClass": {
+  "note": "Xem hình rồi ghi nhớ từ vựng trước khi làm trắc nghiệm.",
+  "flows": [
+   {
+    "title": "Bài 1: Hoạt động",
+    "vocabPreview": {
+     "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+     "items": [
+      {
+       "word": "tập thể dục",
+       "image": "images/b3/nghe/tap_the_duc.jpg",
+       "audio": "audio/b3/{voice}/vocab_tap_the_duc.mp3"
+      },
+      {
+       "word": "nấu ăn",
+       "image": "images/b3/nghe/nau_an.jpg",
+       "audio": "audio/b3/{voice}/vocab_nau_an.mp3"
+      },
+      {
+       "word": "ngủ trưa",
+       "image": "images/b3/nghe/ngu_trua.jpg",
+       "audio": "audio/b3/{voice}/vocab_ngu_trua.mp3"
+      },
+      {
+       "word": "lướt điện thoại",
+       "image": "images/b3/nghe/luot_dien_thoai.jpg",
+       "audio": "audio/b3/{voice}/vocab_luot_dien_thoai.mp3"
+      },
+      {
+       "word": "đánh răng",
+       "image": "images/b3/nghe/danh_rang.jpg",
+       "audio": "audio/b3/{voice}/vocab_danh_rang.mp3"
+      },
+      {
+       "word": "ở nhà",
+       "image": "images/b3/nghe/o_nha.jpg",
+       "audio": "audio/b3/{voice}/vocab_o_nha.mp3"
+      }
+     ]
+    },
+    "quiz": {
+     "title": "Thời khoá biểu của Minh",
+     "instruction": "Xem thời khoá biểu rồi chọn đáp án đúng.",
+     "image": "images/b3/nghe/thoi_khoa_bieu_minh.jpg",
+     "items": [
+      {
+       "id": "pc1q1",
+       "context": "Minh thường ______ vào buổi sáng.",
+       "options": [
+        "tập thể dục",
+        "nấu ăn",
+        "đi làm"
+       ],
+       "answer": "đi làm"
+      },
+      {
+       "id": "pc1q2",
+       "context": "Minh thường đi chơi với bạn vào ______ thứ Bảy.",
+       "options": [
+        "buổi sáng",
+        "buổi trưa",
+        "buổi tối"
+       ],
+       "answer": "buổi tối"
+      },
+      {
+       "id": "pc1q3",
+       "context": "Minh không ngủ trưa vào ______.",
+       "options": [
+        "thứ hai",
+        "thứ năm",
+        "Chủ Nhật"
+       ],
+       "answer": ""
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "postClass": {
+  "exercises": [
+   {
+    "type": "choice",
+    "title": "1. Chọn đáp án đúng.",
+    "items": [
+     {
+      "id": "1",
+      "context": "Anh Minh thường ________ vào buổi sáng.",
+      "options": [
+       "ngủ trưa",
+       "đi làm",
+       "đi ngủ"
+      ],
+      "answer": "đi làm"
+     },
+     {
+      "id": "2",
+      "context": "Chị Lan thường ăn tối ________ gia đình.",
+      "options": [
+       "vào",
+       "để",
+       "với"
+      ],
+      "answer": "với"
+     },
+     {
+      "id": "3",
+      "context": "Bạn có thường tập thể dục ________ buổi sáng không?",
+      "options": [
+       "ở",
+       "với",
+       "vào"
+      ],
+      "answer": "vào"
+     },
+     {
+      "id": "4",
+      "context": "Sau khi ăn tối, mình thường ________.",
+      "options": [
+       "đánh răng",
+       "ăn sáng",
+       "ngủ dậy"
+      ],
+      "answer": "đánh răng"
+     },
+     {
+      "id": "5",
+      "context": "Vào Chủ Nhật, nhiều người thường ________.",
+      "options": [
+       "ở nhà",
+       "đi làm",
+       "ăn sáng ở văn phòng"
+      ],
+      "answer": "ở nhà"
+     }
+    ]
+   },
+   {
+    "type": "scramble",
+    "title": "2. Sắp xếp câu.",
+    "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+    "items": [
+     {
+      "prompt": "Câu 1",
+      "tokens": [
+       "thường",
+       "vào buổi sáng",
+       "mình",
+       "đi làm"
+      ],
+      "answer": "Mình thường đi làm vào buổi sáng."
+     },
+     {
+      "prompt": "Câu 2",
+      "tokens": [
+       "thường",
+       "anh",
+       "tập thể dục",
+       "trước khi",
+       "đi làm"
+      ],
+      "answer": "Anh thường tập thể dục trước khi đi làm."
+     },
+     {
+      "prompt": "Câu 3",
+      "tokens": [
+       "với gia đình",
+       "ăn tối",
+       "chị",
+       "thường"
+      ],
+      "answer": "Chị thường ăn tối với gia đình."
+     },
+     {
+      "prompt": "Câu 4",
+      "tokens": [
+       "thường",
+       "lướt điện thoại",
+       "sau khi",
+       "mình",
+       "ăn tối"
+      ],
+      "answer": "Mình thường lướt điện thoại sau khi ăn tối."
+     },
+     {
+      "prompt": "Câu 5",
+      "tokens": [
+       "có thường",
+       "bạn",
+       "ngủ trưa",
+       "không"
+      ],
+      "answer": "Bạn có thường ngủ trưa không?"
+     }
+    ]
+   },
+   {
+    "type": "dialogue_fill",
+    "title": "3. Hoàn thành đoạn hội thoại.",
+    "instruction": "Điền từ thích hợp.",
+    "wordBank": [
+     "thường",
+     "có",
+     "vào",
+     "với",
+     "gì",
+     "không"
+    ],
+    "lines": [
+     {
+      "speaker": "Mai",
+      "parts": [
+       "Bạn ",
+       {
+        "blank": "có"
+       },
+       " thường đi làm ",
+       {
+        "blank": "vào"
+       },
+       " buổi sáng ",
+       {
+        "blank": "không"
+       },
+       "?"
+      ]
+     },
+     {
+      "speaker": "Nam",
+      "parts": [
+       "Có."
+      ]
+     },
+     {
+      "speaker": "Mai",
+      "parts": [
+       "Bạn ",
+       {
+        "blank": "thường"
+       },
+       " ăn ",
+       {
+        "blank": "gì"
+       },
+       " vào buổi trưa?"
+      ]
+     },
+     {
+      "speaker": "Nam",
+      "parts": [
+       "Mình thường ăn phở hoặc cơm gà ",
+       {
+        "blank": "với"
+       },
+       " đồng nghiệp."
+      ]
+     }
+    ]
+   }
+  ]
+ }
 }
