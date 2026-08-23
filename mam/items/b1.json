@@ -479,16 +479,6 @@
                 "answer": "bạn - mình"
               },
               {
-                "question": "An older man is talking to a younger person. Which pair does he normally use?",
-                "options": [
-                  "anh - em",
-                  "bạn - mình",
-                  "con - chú",
-                  "con - cô"
-                ],
-                "answer": "con - chú"
-              },
-              {
                 "question": "You are introducing yourself as Lan to a person the same age as you: ____ là Lan.",
                 "options": [
                   "Mình",
@@ -714,7 +704,7 @@
             "answer": "Chào em."
           },
           {
-            "question": "What is the best expression to complete the conversation?\nA: Chào bạn!\nB: Mình khỏe.",
+            "question": "What is the best expression to complete the conversation?\nA: Chào bạn! _______\nB: Mình khỏe.",
             "options": [
               "Cảm ơn em.",
               "Em khỏe không?",
