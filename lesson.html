@@ -15,7 +15,7 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" id="back-link" href="index.html">← home</a>
+          <a class="back-link" id="back-link" href="lessons.html">← lesson</a>
         </div>
       </nav>
     </div>
@@ -128,6 +128,8 @@
 
         document.title = (item.title || itemId) + ' — hoc voi hanh';
         $title.textContent = 'Bài ' + (item.num != null ? item.num : '') + (item.title ? ': ' + item.title : '');
+        $backLink.href = 'lessons.html?level=' + encodeURIComponent(level);
+
         renderMetaBadges(item);
 
         const vocabTotal = (item.vocab && item.vocab.items) ? item.vocab.items.length : 0;
