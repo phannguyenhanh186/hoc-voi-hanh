@@ -384,9 +384,10 @@
          "nóng",
          "trời",
          "giờ",
-         "nắng"
+         "nắng",
+         "và"
         ],
-        "answer": "bây giờ trời đang nắng nóng"
+        "answer": "bây giờ trời đang nắng và nóng"
        }
       ]
      }
