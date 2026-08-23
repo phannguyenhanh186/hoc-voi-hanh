@@ -1,973 +1,867 @@
 {
-  "id": "b8",
-  "num": 8,
-  "title": "Hôm nay trời mưa to!",
-  "vocab": {
-    "items": [
-      {
-        "id": "v1",
-        "word": "trời",
-        "meaning": "sky",
-        "audio": "audio/b8/{voice}/vocab_troi.mp3"
-      },
-      {
-        "id": "v2",
-        "word": "nắng",
-        "meaning": "sun, sunny",
-        "audio": "audio/b8/{voice}/vocab_nang.mp3"
-      },
-      {
-        "id": "v3",
-        "word": "mưa",
-        "meaning": "rain, rainy",
-        "audio": "audio/b8/{voice}/vocab_mua.mp3"
-      },
-      {
-        "id": "v4",
-        "word": "trời nắng",
-        "meaning": "it's sunny, sunny day",
-        "audio": "audio/b8/{voice}/vocab_troi_nang.mp3"
-      },
-      {
-        "id": "v5",
-        "word": "trời mưa",
-        "meaning": "it's rainy, rainy day",
-        "audio": "audio/b8/{voice}/vocab_troi_mua.mp3"
-      },
-      {
-        "id": "v6",
-        "word": "to",
-        "meaning": "big",
-        "audio": "audio/b8/{voice}/vocab_to.mp3"
-      },
-      {
-        "id": "v7",
-        "word": "trời nắng to",
-        "meaning": "it's very sunny",
-        "audio": "audio/b8/{voice}/vocab_troi_nang_to.mp3"
-      },
-      {
-        "id": "v8",
-        "word": "trời mưa to",
-        "meaning": "it's heavily raining",
-        "audio": "audio/b8/{voice}/vocab_troi_mua_to.mp3"
-      },
-      {
-        "id": "v9",
-        "word": "nóng",
-        "meaning": "hot",
-        "audio": "audio/b8/{voice}/vocab_nong.mp3"
-      },
-      {
-        "id": "v10",
-        "word": "lạnh",
-        "meaning": "cold",
-        "audio": "audio/b8/{voice}/vocab_lanh.mp3"
-      },
-      {
-        "id": "v11",
-        "word": "mát",
-        "meaning": "cool",
-        "audio": "audio/b8/{voice}/vocab_mat.mp3"
-      },
-      {
-        "id": "v12",
-        "word": "trời nóng",
-        "meaning": "hot weather",
-        "audio": "audio/b8/{voice}/vocab_troi_nong.mp3"
-      },
-      {
-        "id": "v13",
-        "word": "trời lạnh",
-        "meaning": "cold weather",
-        "audio": "audio/b8/{voice}/vocab_troi_lanh.mp3"
-      },
-      {
-        "id": "v14",
-        "word": "trời mát",
-        "meaning": "cool weather",
-        "audio": "audio/b8/{voice}/vocab_troi_mat.mp3"
-      },
-      {
-        "id": "v15",
-        "word": "thời tiết",
-        "meaning": "weather",
-        "audio": "audio/b8/{voice}/vocab_thoi_tiet.mp3"
-      },
-      {
-        "id": "v16",
-        "word": "thế nào",
-        "meaning": "how",
-        "audio": "audio/b8/{voice}/vocab_the_nao.mp3"
-      }
-    ]
-  },
-  "grammar": {
-    "sections": [
-      {
-        "id": "g1",
-        "titleVi": "Đang",
-        "titleEn": "Something is Happening Now",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g1",
-            "label": "Đang",
-            "subHeadingVi": "Đang",
-            "subHeadingEn": "Something is Happening Now",
-            "paragraphs": [
-              "Use đang to talk about an action that is happening now, at the moment of speaking. It is similar to the present continuous in English (be + verb-ing)."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + đang + [Verb]"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Mình đang ăn.",
-                "en": "I'm eating."
-              },
-              {
-                "vi": "Anh đang uống cà phê.",
-                "en": "He is drinking coffee."
-              },
-              {
-                "vi": "Chị đang học.",
-                "en": "She is studying."
-              },
-              {
-                "vi": "Trời đang mưa to.",
-                "en": "It is raining heavily."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "What does \"đang\" tell us?",
-                "options": [
-                  "The action happened yesterday.",
-                  "The action is happening now.",
-                  "The action will happen tomorrow."
-                ],
-                "answer": "The action is happening now."
-              },
-              {
-                "question": "Which sentence means \"She is studying.\"",
-                "options": [
-                  "Chị học.",
-                  "Chị đang học.",
-                  "Chị thường học."
-                ],
-                "answer": "Chị đang học."
-              },
-              {
-                "question": "Which sentence means \"I am working\"",
-                "options": [
-                  "Chị làm việc.",
-                  "Chị thường làm việc.",
-                  "Chị đang làm việc."
-                ],
-                "answer": "Chị đang làm việc."
-              },
-              {
-                "question": "Which sentence means \"It is raining.\"",
-                "options": [
-                  "Trời mưa.",
-                  "Trời đang mưa.",
-                  "Trời không mưa."
-                ],
-                "answer": "Trời đang mưa."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g2",
-        "titleVi": "Đang làm gì?",
-        "titleEn": "What Someone Is Doing",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g2",
-            "label": "Đang làm gì?",
-            "subHeadingVi": "Đang làm gì?",
-            "subHeadingEn": "What Someone Is Doing",
-            "paragraphs": [
-              "Use this pattern to ask what someone is doing right now. To answer, use: [Subject] + đang + [Verb]."
-            ],
-            "chips": [
-              {
-                "pattern": "[Subject] + đang + làm gì?"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Bạn đang làm gì?\n→ Mình đang làm việc.",
-                "en": "What are you doing?\nI'm working."
-              },
-              {
-                "vi": "Anh ấy đang làm gì?\n→ Anh ấy đang dọn nhà.",
-                "en": "What is he doing?\nHe is cleaning the house."
-              },
-              {
-                "vi": "Chị đang làm gì?\n→ Chị đang nấu ăn.",
-                "en": "What are you doing?\nI'm cooking."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "How do you ask \"What are you doing?\"",
-                "options": [
-                  "Bạn làm gì?",
-                  "Bạn đang làm gì?",
-                  "Bạn thường làm gì?"
-                ],
-                "answer": "Bạn đang làm gì?"
-              },
-              {
-                "question": "Choose the best answer: Bạn đang làm gì?",
-                "options": [
-                  "Mình đọc sách.",
-                  "Mình đang đọc sách.",
-                  "Mình thường đọc sách."
-                ],
-                "answer": "Mình đang đọc sách."
-              },
-              {
-                "question": "How do you ask \"Now, what are you doing?\"",
-                "options": [
-                  "Bạn đang làm gì?",
-                  "Hôm nay bạn đang làm gì?",
-                  "Bây giờ bạn đang làm gì?"
-                ],
-                "answer": "Hôm nay bạn đang làm gì?"
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Bạn đang làm gì?\nB: Mình đang nấu ăn.",
-                  "A: Bạn đang làm gì?\nB: Hôm nay mình nấu ăn.",
-                  "A: Hôm qua bạn đang làm gì?\nB: Mình đi ngủ."
-                ],
-                "answer": "A: Bạn đang làm gì?\nB: Mình đang nấu ăn."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g3",
-        "titleVi": "Thời tiết thế nào?",
-        "titleEn": "Asking About the Weather",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "g3",
-            "label": "Thời tiết thế nào?",
-            "subHeadingVi": "Thời tiết thế nào?",
-            "subHeadingEn": "How is the Weather",
-            "paragraphs": [
-              "Use this pattern to ask what the weather is like. You can ask about now, today, or yesterday. To answer, simply describe the weather."
-            ],
-            "chips": [
-              {
-                "pattern": "Bây giờ / Hôm nay / Hôm qua + thời tiết + thế nào?"
-              }
-            ],
-            "examples": [
-              {
-                "vi": "Bây giờ thời tiết thế nào?\n→ Trời đang mưa to.",
-                "en": "What's the weather like now?\nIt's raining heavily."
-              },
-              {
-                "vi": "Hôm nay thời tiết ở Việt Nam thế nào?\n→ Hôm nay trời nắng.",
-                "en": "What's the weather like in Vietnam today?\nIt's sunny today."
-              },
-              {
-                "vi": "Hôm qua thời tiết thế nào?\n→ Hôm qua trời mát, không mưa.",
-                "en": "What was the weather like yesterday?\nIt was cool and didn't rain."
-              },
-              {
-                "vi": "Hôm nay thời tiết thế nào?\n→ Hôm nay trời nhiều mây.",
-                "en": "What's the weather like today?\nIt's cloudy today."
-              }
-            ],
-            "quiz": [
-              {
-                "question": "How do you ask \"What's the weather like today?\"",
-                "options": [
-                  "Hôm nay trời gì?",
-                  "Hôm nay thời tiết thế nào?",
-                  "Hôm nay bạn thế nào?"
-                ],
-                "answer": "Hôm nay thời tiết thế nào?"
-              },
-              {
-                "question": "Which answer means \"It's raining heavily.\"",
-                "options": [
-                  "Trời mưa.",
-                  "Trời mưa to.",
-                  "Trời đang mưa to."
-                ],
-                "answer": "Trời đang mưa to."
-              },
-              {
-                "question": "Complete the question: Bây giờ ______ thế nào?",
-                "options": [
-                  "thời tiết",
-                  "thời gian",
-                  "mấy giờ"
-                ],
-                "answer": "thời tiết"
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Hôm qua thời tiết thế nào?\nB: Hôm nay trời mát, không mưa.",
-                  "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời nắng to.",
-                  "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời đang mưa to."
-                ],
-                "answer": "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời nắng to."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "review",
-        "titleVi": "Ôn tập tổng hợp",
-        "titleEn": "Review",
-        "intro": [],
-        "subtopics": [
-          {
-            "id": "review",
-            "label": "Ôn tập tổng hợp",
-            "quiz": [
-              {
-                "question": "Which sentence means \"I am eating.\"",
-                "options": [
-                  "Mình ăn.",
-                  "Mình thường ăn.",
-                  "Mình đang ăn.",
-                  "Mình sẽ ăn."
-                ],
-                "answer": "Mình đang ăn."
-              },
-              {
-                "question": "Which sentence means \"He is drinking coffee.\"",
-                "options": [
-                  "Anh uống cà phê.",
-                  "Anh đang uống cà phê.",
-                  "Anh thường uống cà phê.",
-                  "Anh sẽ uống cà phê."
-                ],
-                "answer": "Anh đang uống cà phê."
-              },
-              {
-                "question": "Complete the sentence: Chị ______ học.",
-                "options": [
-                  "đang",
-                  "thường",
-                  "là",
-                  "có"
-                ],
-                "answer": "đang"
-              },
-              {
-                "question": "How do you ask \"What are you doing now?\"",
-                "options": [
-                  "Bạn làm gì?",
-                  "Bạn thường làm gì?",
-                  "Bây giờ bạn đang làm gì?",
-                  "Bạn là gì?"
-                ],
-                "answer": "Bây giờ bạn đang làm gì?"
-              },
-              {
-                "question": "Choose the best answer.\nA: Bạn đang làm gì?\nB: ______",
-                "options": [
-                  "Mình đang đọc sách.",
-                  "Mình thường đọc sách.",
-                  "Mình hôm qua đọc sách.",
-                  "Mình là học sinh."
-                ],
-                "answer": "Mình đang đọc sách."
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Anh ấy đang làm gì?\nB: Anh ấy đang dọn nhà.",
-                  "A: Anh ấy đang làm gì?\nB: Anh ấy thường dọn nhà.",
-                  "A: Anh ấy đang làm gì?\nB: Anh ấy hôm qua dọn nhà.",
-                  "A: Anh ấy đang làm gì?\nB: Anh ấy là giáo viên."
-                ],
-                "answer": "A: Anh ấy đang làm gì?\nB: Anh ấy đang dọn nhà."
-              },
-              {
-                "question": "How do you ask \"What's the weather like today?\"",
-                "options": [
-                  "Hôm nay trời gì?",
-                  "Hôm nay thời tiết thế nào?",
-                  "Hôm nay mấy giờ?",
-                  "Hôm nay làm gì?"
-                ],
-                "answer": "Hôm nay thời tiết thế nào?"
-              },
-              {
-                "question": "Which answer means \"It's raining heavily.\"",
-                "options": [
-                  "Trời mưa.",
-                  "Trời đang mưa to.",
-                  "Trời mát.",
-                  "Trời lạnh."
-                ],
-                "answer": "Trời đang mưa to."
-              },
-              {
-                "question": "Complete the question: Hôm qua ______ thế nào?",
-                "options": [
-                  "thời tiết",
-                  "làm gì",
-                  "giờ",
-                  "người"
-                ],
-                "answer": "thời tiết"
-              },
-              {
-                "question": "Which conversation is correct?",
-                "options": [
-                  "A: Hôm nay thời tiết thế nào?\nB: Hôm nay trời nhiều mây.",
-                  "A: Hôm nay thời tiết thế nào?\nB: Hôm nay là thứ Hai.",
-                  "A: Hôm nay thời tiết thế nào?\nB: Mình đang học.",
-                  "A: Hôm nay thời tiết thế nào?\nB: Tám giờ sáng."
-                ],
-                "answer": "A: Hôm nay thời tiết thế nào?\nB: Hôm nay trời nhiều mây."
-              },
-              {
-                "question": "Which sentence is the most natural?",
-                "options": [
-                  "Trời đang nắng.",
-                  "Trời đang mưa to.",
-                  "Trời đang lạnh.",
-                  "All of the above."
-                ],
-                "answer": "All of the above."
-              },
-              {
-                "question": "Which sentence uses đang correctly?",
-                "options": [
-                  "Bạn đang học tiếng Việt.",
-                  "Đang bạn học tiếng Việt.",
-                  "Bạn học đang tiếng Việt.",
-                  "Bạn tiếng Việt đang học."
-                ],
-                "answer": "Bạn đang học tiếng Việt."
-              },
-              {
-                "question": "Choose the correct conversation.",
-                "options": [
-                  "A: Bây giờ thời tiết thế nào?\nB: Trời đang mưa to.",
-                  "A: Bây giờ thời tiết thế nào?\nB: Hôm qua trời mưa.",
-                  "A: Bây giờ thời tiết thế nào?\nB: Mình đang làm việc.",
-                  "A: Bây giờ thời tiết thế nào?\nB: Thứ Ba."
-                ],
-                "answer": "A: Bây giờ thời tiết thế nào?\nB: Trời đang mưa to."
-              },
-              {
-                "question": "You see your friend reading a book right now. What can you ask?",
-                "options": [
-                  "Bạn thường làm gì?",
-                  "Bạn đang làm gì?",
-                  "Bạn làm gì hôm qua?",
-                  "Bạn là gì?"
-                ],
-                "answer": "Bạn đang làm gì?"
-              },
-              {
-                "question": "Choose the best conversation.",
-                "options": [
-                  "A: Bây giờ bạn đang làm gì?\nB: Mình đang uống cà phê.",
-                  "A: Bây giờ bạn đang làm gì?\nB: Hôm qua mình uống cà phê.",
-                  "A: Bây giờ bạn đang làm gì?\nB: Trời đang mưa.",
-                  "A: Bây giờ bạn đang làm gì?\nB: Hôm nay nóng."
-                ],
-                "answer": "A: Bây giờ bạn đang làm gì?\nB: Mình đang uống cà phê."
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "listening": {
-    "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
-    "dialogueFill": {
-      "instruction": "Điền từ vào chỗ trống.",
-      "wordBank": [
-        "trời nắng",
-        "trời đang mưa",
-        "trời mưa to và lạnh"
+ "id": "b8",
+ "num": 8,
+ "title": "Hôm nay trời mưa to!",
+ "vocab": {
+  "items": [
+   {
+    "id": "v1",
+    "word": "trời",
+    "meaning": "sky",
+    "audio": "audio/b8/{voice}/vocab_troi.mp3"
+   },
+   {
+    "id": "v2",
+    "word": "nắng",
+    "meaning": "sun, sunny",
+    "audio": "audio/b8/{voice}/vocab_nang.mp3"
+   },
+   {
+    "id": "v3",
+    "word": "mưa",
+    "meaning": "rain, rainy",
+    "audio": "audio/b8/{voice}/vocab_mua.mp3"
+   },
+   {
+    "id": "v4",
+    "word": "trời nắng",
+    "meaning": "it's sunny, sunny day",
+    "audio": "audio/b8/{voice}/vocab_troi_nang.mp3"
+   },
+   {
+    "id": "v5",
+    "word": "trời mưa",
+    "meaning": "it's rainy, rainy day",
+    "audio": "audio/b8/{voice}/vocab_troi_mua.mp3"
+   },
+   {
+    "id": "v6",
+    "word": "to",
+    "meaning": "big",
+    "audio": "audio/b8/{voice}/vocab_to.mp3"
+   },
+   {
+    "id": "v7",
+    "word": "trời nắng to",
+    "meaning": "it's very sunny",
+    "audio": "audio/b8/{voice}/vocab_troi_nang_to.mp3"
+   },
+   {
+    "id": "v8",
+    "word": "trời mưa to",
+    "meaning": "it's heavily raining",
+    "audio": "audio/b8/{voice}/vocab_troi_mua_to.mp3"
+   },
+   {
+    "id": "v9",
+    "word": "nóng",
+    "meaning": "hot",
+    "audio": "audio/b8/{voice}/vocab_nong.mp3"
+   },
+   {
+    "id": "v10",
+    "word": "lạnh",
+    "meaning": "cold",
+    "audio": "audio/b8/{voice}/vocab_lanh.mp3"
+   },
+   {
+    "id": "v11",
+    "word": "mát",
+    "meaning": "cool",
+    "audio": "audio/b8/{voice}/vocab_mat.mp3"
+   },
+   {
+    "id": "v12",
+    "word": "trời nóng",
+    "meaning": "hot weather",
+    "audio": "audio/b8/{voice}/vocab_troi_nong.mp3"
+   },
+   {
+    "id": "v13",
+    "word": "trời lạnh",
+    "meaning": "cold weather",
+    "audio": "audio/b8/{voice}/vocab_troi_lanh.mp3"
+   },
+   {
+    "id": "v14",
+    "word": "trời mát",
+    "meaning": "cool weather",
+    "audio": "audio/b8/{voice}/vocab_troi_mat.mp3"
+   },
+   {
+    "id": "v15",
+    "word": "thời tiết",
+    "meaning": "weather",
+    "audio": "audio/b8/{voice}/vocab_thoi_tiet.mp3"
+   },
+   {
+    "id": "v16",
+    "word": "thế nào",
+    "meaning": "how",
+    "audio": "audio/b8/{voice}/vocab_the_nao.mp3"
+   }
+  ]
+ },
+ "grammar": {
+  "sections": [
+   {
+    "id": "g1",
+    "titleVi": "Đang",
+    "titleEn": "Something is Happening Now",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g1",
+      "label": "Đang",
+      "subHeadingVi": "Đang",
+      "subHeadingEn": "Something is Happening Now",
+      "paragraphs": [
+       "Use đang to talk about an action that is happening now, at the moment of speaking. It is similar to the present continuous in English (be + verb-ing)."
       ],
-      "lines": [
-        {
-          "parts": [
-            "Hôm nay ",
-            {
-              "blank": "trời nắng"
-            },
-            "."
-          ]
-        },
-        {
-          "parts": [
-            "Bây giờ ",
-            {
-              "blank": "trời đang mưa"
-            },
-            "."
-          ]
-        },
-        {
-          "parts": [
-            "Hôm qua ",
-            {
-              "blank": "trời mưa to và lạnh"
-            },
-            "."
-          ]
-        }
-      ]
-    },
-    "groups": [
-      {
-        "id": "d1",
-        "title": "Hội thoại 1: Thời tiết ở Mỹ và Việt Nam",
-        "lines": [
-          {
-            "audio": "audio/b8/{voice}/listen_d1_01.mp3",
-            "text": "Hôm nay thời tiết ở Mỹ thế nào?",
-            "wordBank": [
-              "Mỹ",
-              "thời tiết",
-              "mưa",
-              "hôm nay",
-              "thế nào?",
-              "gì",
-              "ở"
-            ]
-          },
-          {
-            "audio": "audio/b8/{voice}/listen_d1_02.mp3",
-            "text": "Hôm nay trời nắng và nóng.",
-            "wordBank": [
-              "nóng",
-              "mưa",
-              "hôm qua",
-              "và",
-              "trời",
-              "mình",
-              "hôm nay",
-              "nắng"
-            ]
-          },
-          {
-            "audio": "audio/b8/{voice}/listen_d1_03.mp3",
-            "text": "Còn ở Việt Nam thế nào?",
-            "wordBank": [
-              "thế nào?",
-              "ở",
-              "còn",
-              "Mỹ",
-              "Việt Nam",
-              "trời"
-            ]
-          },
-          {
-            "audio": "audio/b8/{voice}/listen_d1_04.mp3",
-            "text": "Hôm nay ở Việt Nam trời mát.",
-            "wordBank": [
-              "mưa",
-              "Việt Nam",
-              "ở",
-              "mát",
-              "trời",
-              "còn",
-              "hôm nay"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "d2",
-        "title": "Hội thoại 2: Thời tiết ở Sài Gòn và Hà Nội",
-        "lines": [
-          {
-            "audio": "audio/b8/{voice}/listen_d2_01.mp3",
-            "text": "Bây giờ thời tiết ở Sài Gòn thế nào?",
-            "wordBank": [
-              "thời tiết",
-              "ở",
-              "trời",
-              "hôm nay",
-              "thế nào?",
-              "còn",
-              "bây giờ",
-              "Sài Gòn"
-            ]
-          },
-          {
-            "audio": "audio/b8/{voice}/listen_d2_02.mp3",
-            "text": "Bây giờ trời đang mưa to. Còn thời tiết ở Hà Nội thế nào?",
-            "wordBank": [
-              "thời tiết",
-              "thế nào?",
-              "mưa",
-              "trời",
-              "ở",
-              "còn",
-              "Hà Nội",
-              "bây giờ",
-              "to",
-              "mát",
-              "hôm nay",
-              "đang"
-            ]
-          },
-          {
-            "audio": "audio/b8/{voice}/listen_d2_03.mp3",
-            "text": "Trời cũng đang mưa to ở đây. Bạn đang làm gì?",
-            "wordBank": [
-              "là",
-              "to",
-              "trời",
-              "làm",
-              "ở đây",
-              "còn",
-              "đang",
-              "gì?",
-              "đang",
-              "bạn",
-              "thời tiết",
-              "cũng",
-              "mưa"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "reading": {
-    "passages": [
-      {
-        "id": "r1",
-        "title": "Thời tiết ở miền Bắc và miền Nam",
-        "audio": "audio/b8/{voice}/reading_r1.mp3",
-        "text": "Thời tiết ở miền Bắc và miền Nam rất khác nhau. Ở miền Bắc, có bốn mùa: xuân, hè, thu và đông. Mùa hè thường từ tháng 5 đến tháng 8. Lúc này, trời thường nắng to và nóng. Mùa đông thường từ tháng 11 tới tháng 2, và trời thường rất lạnh.\nMiền Nam không có mùa đông. Miền Nam có hai mùa là mùa khô và mùa mưa. Mùa khô thường từ tháng 12 đến tháng 4. Thời tiết thường nắng và nóng. Mùa mưa thường từ tháng 5 tới tháng 11. Trời thường mưa to, nhất là vào buổi chiều. Sau khi mưa, trời thường mát hơn.",
-        "titleEn": "Weather in the North and the South",
-        "textEn": "The weather in the North and the South is very different. In the North, there are four seasons: spring, summer, autumn, and winter. Summer usually lasts from May to August. During this time, it is usually very sunny and hot. Winter usually lasts from November to February, and it is often very cold.\nThe South does not have winter. There are two seasons: the dry season and the rainy season. The dry season usually lasts from December to April. The weather is usually sunny and hot. The rainy season usually lasts from May to November. It often rains heavily, especially in the afternoon. After it rains, the weather is usually cooler.",
-        "fillBlanks": {
-          "instruction": "Trả lời câu hỏi.",
-          "lines": [
-            {
-              "parts": [
-                "Miền Bắc có ",
-                {
-                  "blank": "bốn"
-                },
-                " mùa."
-              ]
-            },
-            {
-              "parts": [
-                "Mùa hè ở miền Bắc thường từ tháng ",
-                {
-                  "blank": "năm"
-                },
-                " tới tháng ",
-                {
-                  "blank": "tám"
-                },
-                "."
-              ]
-            },
-            {
-              "parts": [
-                "Mùa ",
-                {
-                  "blank": "đông"
-                },
-                " ở miền Bắc, trời thường rất lạnh."
-              ]
-            },
-            {
-              "parts": [
-                "Miền Nam có mùa ",
-                {
-                  "blank": "khô"
-                },
-                " và mùa ",
-                {
-                  "blank": "mưa"
-                },
-                "."
-              ]
-            },
-            {
-              "parts": [
-                "Mùa khô ở miền Nam thường từ tháng ",
-                {
-                  "blank": "mười hai"
-                },
-                " tới tháng ",
-                {
-                  "blank": "bốn"
-                },
-                "."
-              ]
-            },
-            {
-              "parts": [
-                "Mùa mưa ở miền Nam thường từ tháng ",
-                {
-                  "blank": "năm"
-                },
-                " tới tháng ",
-                {
-                  "blank": "mười một"
-                },
-                "."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "preClass": {
-    "note": "Xem hình rồi nối từ.",
-    "vocabPreview": {
-      "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
-      "items": [
-        {
-          "word": "trời nóng",
-          "image": "images/b8/nghe/troi_nong.jpg",
-          "audio": "audio/b8/{voice}/vocab_troi_nong.mp3"
-        },
-        {
-          "word": "trời lạnh",
-          "image": "images/b8/nghe/troi_lanh.jpg",
-          "audio": "audio/b8/{voice}/vocab_troi_lanh.mp3"
-        },
-        {
-          "word": "trời mưa",
-          "image": "images/b8/nghe/troi_mua.jpg",
-          "audio": "audio/b8/{voice}/vocab_troi_mua.mp3"
-        },
-        {
-          "word": "trời nắng",
-          "image": "images/b8/nghe/troi_nang.jpg",
-          "audio": "audio/b8/{voice}/vocab_troi_nang.mp3"
-        },
-        {
-          "word": "trời mát",
-          "image": "images/b8/nghe/troi_mat.jpg",
-          "audio": "audio/b8/{voice}/vocab_troi_mat.mp3"
-        }
-      ]
-    },
-    "imageMatch": {
-      "title": "Nối từ với hình",
-      "instruction": "Chọn đúng từ cho mỗi hình.",
-      "items": [
-        {
-          "id": "im1",
-          "image": "images/b8/nghe/troi_nong.jpg",
-          "answer": "trời nóng"
-        },
-        {
-          "id": "im2",
-          "image": "images/b8/nghe/troi_lanh.jpg",
-          "answer": "trời lạnh"
-        },
-        {
-          "id": "im3",
-          "image": "images/b8/nghe/troi_mua.jpg",
-          "answer": "trời mưa"
-        },
-        {
-          "id": "im4",
-          "image": "images/b8/nghe/troi_nang.jpg",
-          "answer": "trời nắng"
-        },
-        {
-          "id": "im5",
-          "image": "images/b8/nghe/troi_mat.jpg",
-          "answer": "trời mát"
-        }
+      "chips": [
+       {
+        "pattern": "[Subject] + đang + [Verb]"
+       }
       ],
-      "answerBank": [
-        "trời nóng",
-        "trời lạnh",
-        "trời mưa",
-        "trời nắng",
-        "trời mát"
-      ]
-    }
-  },
-  "postClass": {
-    "exercises": [
-      {
-        "type": "choice",
-        "title": "1. Chọn đáp án đúng.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Bây giờ trời ________.",
-            "options": [
-              "đang mưa",
-              "mưa đang",
-              "đang là mưa"
-            ],
-            "answer": "đang mưa"
-          },
-          {
-            "id": "2",
-            "context": "Hôm nay thời tiết ________?",
-            "options": [
-              "gì",
-              "thế nào",
-              "ở đâu"
-            ],
-            "answer": "thế nào"
-          },
-          {
-            "id": "3",
-            "context": "Miền Nam có ________ mùa.",
-            "options": [
-              "hai",
-              "ba",
-              "bốn"
-            ],
-            "answer": "hai"
-          },
-          {
-            "id": "4",
-            "context": "Miền Bắc có mùa ________.",
-            "options": [
-              "khô",
-              "mưa",
-              "đông"
-            ],
-            "answer": "đông"
-          }
-        ]
-      },
-      {
+      "examples": [
+       {
+        "vi": "Mình đang ăn.",
+        "en": "I'm eating."
+       },
+       {
+        "vi": "Anh đang uống cà phê.",
+        "en": "He is drinking coffee."
+       },
+       {
+        "vi": "Chị đang học.",
+        "en": "She is studying."
+       },
+       {
+        "vi": "Trời đang mưa to.",
+        "en": "It is raining heavily."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "What does \"đang\" tell us?",
+        "options": [
+         "The action happened yesterday.",
+         "The action is happening now.",
+         "The action will happen tomorrow."
+        ],
+        "answer": "The action is happening now."
+       },
+       {
+        "question": "Which sentence means \"She is studying.\"",
+        "options": [
+         "Chị học.",
+         "Chị đang học.",
+         "Chị thường học."
+        ],
+        "answer": "Chị đang học."
+       },
+       {
         "type": "scramble",
-        "title": "2. Sắp xếp câu.",
-        "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
-        "items": [
-          {
-            "prompt": "Câu 1",
-            "tokens": [
-              "hôm nay",
-              "thế nào",
-              "thời tiết",
-              "?"
-            ],
-            "answer": "Hôm nay thời tiết thế nào?"
-          },
-          {
-            "prompt": "Câu 2",
-            "tokens": [
-              "đang",
-              "trời",
-              "mưa",
-              "to"
-            ],
-            "answer": "Trời đang mưa to."
-          },
-          {
-            "prompt": "Câu 3",
-            "tokens": [
-              "Nam",
-              "miền",
-              "mùa",
-              "có",
-              "khô"
-            ],
-            "answer": "Miền Nam có mùa khô."
-          },
-          {
-            "prompt": "Câu 4",
-            "tokens": [
-              "trời",
-              "hè",
-              "nóng",
-              "mùa",
-              "thường"
-            ],
-            "answer": "Mùa hè trời thường nóng."
-          },
-          {
-            "prompt": "Câu 5",
-            "tokens": [
-              "làm gì",
-              "bạn",
-              "đang",
-              "?"
-            ],
-            "answer": "Bạn đang làm gì?"
-          }
-        ]
+        "question": "How to say \"I am working now\"",
+        "wordBank": [
+         "làm",
+         "chị",
+         "bây",
+         "thường",
+         "đang",
+         "việc",
+         "giờ"
+        ],
+        "answer": "bây giờ chị đang làm việc"
+       },
+       {
+        "question": "Which sentence means \"It is raining.\"",
+        "options": [
+         "Trời mưa.",
+         "Trời đang mưa.",
+         "Trời không mưa."
+        ],
+        "answer": "Trời đang mưa."
+       },
+       {
+        "type": "scramble",
+        "question": "How to say \"Phương is tidying the house\"",
+        "wordBank": [
+         "đang",
+         "Phương",
+         "coi",
+         "nhà",
+         "dọn",
+         "ở"
+        ],
+        "answer": "Phương đang dọn nhà"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g2",
+    "titleVi": "Đang làm gì?",
+    "titleEn": "What Someone Is Doing",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g2",
+      "label": "Đang làm gì?",
+      "subHeadingVi": "Đang làm gì?",
+      "subHeadingEn": "What Someone Is Doing",
+      "paragraphs": [
+       "Use this pattern to ask what someone is doing right now. To answer, use: [Subject] + đang + [Verb]."
+      ],
+      "chips": [
+       {
+        "pattern": "[Subject] + đang + làm gì?"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Bạn đang làm gì?\n→ Mình đang làm việc.",
+        "en": "What are you doing?\nI'm working."
+       },
+       {
+        "vi": "Anh ấy đang làm gì?\n→ Anh ấy đang dọn nhà.",
+        "en": "What is he doing?\nHe is cleaning the house."
+       },
+       {
+        "vi": "Chị đang làm gì?\n→ Chị đang nấu ăn.",
+        "en": "What are you doing?\nI'm cooking."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How do you ask \"What are you doing?\"",
+        "options": [
+         "Bạn làm gì?",
+         "Bạn đang làm gì?",
+         "Bạn thường làm gì?"
+        ],
+        "answer": "Bạn đang làm gì?"
+       },
+       {
+        "question": "Choose the best answer: Bạn đang làm gì?",
+        "options": [
+         "Mình đọc sách.",
+         "Mình đang đọc sách.",
+         "Mình thường đọc sách."
+        ],
+        "answer": "Mình đang đọc sách."
+       },
+       {
+        "question": "How do you ask \"Now, what are you doing?\"",
+        "options": [
+         "Bạn đang làm gì?",
+         "Hôm nay bạn đang làm gì?",
+         "Bây giờ bạn đang làm gì?"
+        ],
+        "answer": "Bây giờ bạn đang làm gì?"
+       },
+       {
+        "question": "Which conversation is correct?",
+        "options": [
+         "A: Bạn đang làm gì?\nB: Mình đang nấu ăn.",
+         "A: Bạn đang làm gì?\nB: Hôm nay mình nấu ăn.",
+         "A: Hôm qua bạn đang làm gì?\nB: Mình đi ngủ."
+        ],
+        "answer": "A: Bạn đang làm gì?\nB: Mình đang nấu ăn."
+       },
+       {
+        "type": "scramble",
+        "question": "What is Mai doing now?",
+        "wordBank": [
+         "gì",
+         "bây",
+         "là",
+         "việc",
+         "giờ",
+         "Mai",
+         "làm",
+         "thường",
+         "đang"
+        ],
+        "answer": "Bây giờ Mai đang làm gì?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g3",
+    "titleVi": "Thời tiết thế nào?",
+    "titleEn": "Asking About the Weather",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g3",
+      "label": "Thời tiết thế nào?",
+      "subHeadingVi": "Thời tiết thế nào?",
+      "subHeadingEn": "How is the Weather",
+      "paragraphs": [
+       "Use this pattern to ask what the weather is like. You can ask about now, today, or yesterday. To answer, simply describe the weather."
+      ],
+      "chips": [
+       {
+        "label": "Question",
+        "pattern": "Bây giờ / Hôm nay / Hôm qua + thời tiết + thế nào?"
+       },
+       {
+        "label": "Answer",
+        "pattern": "Bây giờ / Hôm nay / Hôm qua + trời + nắng/mưa/mát/nóng/lạnh."
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Bây giờ thời tiết thế nào?\n→ Trời đang mưa to.",
+        "en": "What's the weather like now?\nIt's raining heavily."
+       },
+       {
+        "vi": "Hôm nay thời tiết ở Việt Nam thế nào?\n→ Hôm nay trời nắng.",
+        "en": "What's the weather like in Vietnam today?\nIt's sunny today."
+       },
+       {
+        "vi": "Hôm qua thời tiết thế nào?\n→ Hôm qua trời mát, không mưa.",
+        "en": "What was the weather like yesterday?\nIt was cool and didn't rain."
+       },
+       {
+        "vi": "Hôm nay thời tiết thế nào?\n→ Hôm nay trời nhiều mây.",
+        "en": "What's the weather like today?\nIt's cloudy today."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "How do you ask \"What's the weather like today?\"",
+        "options": [
+         "Hôm nay trời gì?",
+         "Hôm nay thời tiết thế nào?",
+         "Hôm nay bạn thế nào?"
+        ],
+        "answer": "Hôm nay thời tiết thế nào?"
+       },
+       {
+        "question": "Which answer means \"It's raining heavily.\"",
+        "options": [
+         "Trời mưa.",
+         "Trời mưa to.",
+         "Trời đang mưa to."
+        ],
+        "answer": "Trời đang mưa to."
+       },
+       {
+        "type": "scramble",
+        "question": "How to say \"Today it wasn't raining\"",
+        "wordBank": [
+         "nay",
+         "trời",
+         "nào",
+         "mưa",
+         "không",
+         "gì",
+         "hôm"
+        ],
+        "answer": "hôm nay trời không mưa"
+       },
+       {
+        "question": "Which conversation is correct?",
+        "options": [
+         "A: Hôm qua thời tiết thế nào?\nB: Hôm nay trời mát, không mưa.",
+         "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời nắng to.",
+         "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời đang mưa to."
+        ],
+        "answer": "A: Hôm qua thời tiết thế nào?\nB: Hôm qua trời nắng to."
+       },
+       {
+        "type": "scramble",
+        "question": "How to say \"The weather is sunny and hot now\"",
+        "wordBank": [
+         "bây",
+         "đang",
+         "mưa",
+         "nóng",
+         "trời",
+         "giờ",
+         "nắng"
+        ],
+        "answer": "bây giờ trời đang nắng nóng"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "listening": {
+  "instruction": "Listen and type out the sentence you hear. Tap a word in the word bank below if you need help.",
+  "dialogueFill": {
+   "instruction": "Điền từ vào chỗ trống.",
+   "wordBank": [
+    "trời nắng",
+    "trời đang mưa",
+    "trời mưa to và lạnh"
+   ],
+   "lines": [
+    {
+     "parts": [
+      "Hôm nay ",
+      {
+       "blank": "trời nắng"
+      },
+      "."
+     ]
+    },
+    {
+     "parts": [
+      "Bây giờ ",
+      {
+       "blank": "trời đang mưa"
+      },
+      "."
+     ]
+    },
+    {
+     "parts": [
+      "Hôm qua ",
+      {
+       "blank": "trời mưa to và lạnh"
+      },
+      "."
+     ]
+    }
+   ]
+  },
+  "groups": [
+   {
+    "id": "d1",
+    "title": "Hội thoại 1: Thời tiết ở Mỹ và Việt Nam",
+    "lines": [
+     {
+      "audio": "audio/b8/{voice}/listen_d1_01.mp3",
+      "text": "Hôm nay thời tiết ở Mỹ thế nào?",
+      "wordBank": [
+       "Mỹ",
+       "thời tiết",
+       "mưa",
+       "hôm nay",
+       "thế nào?",
+       "gì",
+       "ở"
+      ]
+     },
+     {
+      "audio": "audio/b8/{voice}/listen_d1_02.mp3",
+      "text": "Hôm nay trời nắng và nóng.",
+      "wordBank": [
+       "nóng",
+       "mưa",
+       "hôm qua",
+       "và",
+       "trời",
+       "mình",
+       "hôm nay",
+       "nắng"
+      ]
+     },
+     {
+      "audio": "audio/b8/{voice}/listen_d1_03.mp3",
+      "text": "Còn ở Việt Nam thế nào?",
+      "wordBank": [
+       "thế nào?",
+       "ở",
+       "còn",
+       "Mỹ",
+       "Việt Nam",
+       "trời"
+      ]
+     },
+     {
+      "audio": "audio/b8/{voice}/listen_d1_04.mp3",
+      "text": "Hôm nay ở Việt Nam trời mát.",
+      "wordBank": [
+       "mưa",
+       "Việt Nam",
+       "ở",
+       "mát",
+       "trời",
+       "còn",
+       "hôm nay"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d2",
+    "title": "Hội thoại 2: Thời tiết ở Sài Gòn và Hà Nội",
+    "lines": [
+     {
+      "audio": "audio/b8/{voice}/listen_d2_01.mp3",
+      "text": "Bây giờ thời tiết ở Sài Gòn thế nào?",
+      "wordBank": [
+       "thời tiết",
+       "ở",
+       "trời",
+       "hôm nay",
+       "thế nào?",
+       "còn",
+       "bây giờ",
+       "Sài Gòn"
+      ]
+     },
+     {
+      "audio": "audio/b8/{voice}/listen_d2_02.mp3",
+      "text": "Bây giờ trời đang mưa to. Còn thời tiết ở Hà Nội thế nào?",
+      "wordBank": [
+       "thời tiết",
+       "thế nào?",
+       "mưa",
+       "trời",
+       "ở",
+       "còn",
+       "Hà Nội",
+       "bây giờ",
+       "to",
+       "mát",
+       "hôm nay",
+       "đang"
+      ]
+     },
+     {
+      "audio": "audio/b8/{voice}/listen_d2_03.mp3",
+      "text": "Trời cũng đang mưa to ở đây. Bạn đang làm gì?",
+      "wordBank": [
+       "là",
+       "to",
+       "trời",
+       "làm",
+       "ở đây",
+       "còn",
+       "đang",
+       "gì?",
+       "đang",
+       "bạn",
+       "thời tiết",
+       "cũng",
+       "mưa"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "reading": {
+  "passages": [
+   {
+    "id": "r1",
+    "title": "Thời tiết ở miền Bắc và miền Nam",
+    "audio": "audio/b8/{voice}/reading_r1.mp3",
+    "text": "Thời tiết ở miền Bắc và miền Nam rất khác nhau. Ở miền Bắc, có bốn mùa: xuân, hè, thu và đông. Mùa hè thường từ tháng 5 đến tháng 8. Lúc này, trời thường nắng to và nóng. Mùa đông thường từ tháng 11 tới tháng 2, và trời thường rất lạnh.\nMiền Nam không có mùa đông. Miền Nam có hai mùa là mùa khô và mùa mưa. Mùa khô thường từ tháng 12 đến tháng 4. Thời tiết thường nắng và nóng. Mùa mưa thường từ tháng 5 tới tháng 11. Trời thường mưa to, nhất là vào buổi chiều. Sau khi mưa, trời thường mát hơn.",
+    "titleEn": "Weather in the North and the South",
+    "textEn": "The weather in the North and the South is very different. In the North, there are four seasons: spring, summer, autumn, and winter. Summer usually lasts from May to August. During this time, it is usually very sunny and hot. Winter usually lasts from November to February, and it is often very cold.\nThe South does not have winter. There are two seasons: the dry season and the rainy season. The dry season usually lasts from December to April. The weather is usually sunny and hot. The rainy season usually lasts from May to November. It often rains heavily, especially in the afternoon. After it rains, the weather is usually cooler.",
+    "fillBlanks": {
+     "instruction": "Trả lời câu hỏi.",
+     "lines": [
+      {
+       "parts": [
+        "Miền Bắc có ",
+        {
+         "blank": "bốn"
+        },
+        " mùa."
+       ]
       },
       {
-        "type": "choice",
-        "title": "3. Chọn câu trả lời phù hợp.",
-        "items": [
-          {
-            "id": "1",
-            "context": "Bây giờ thời tiết thế nào?",
-            "options": [
-              "Hôm nay trời mát.",
-              "Trời đang mưa.",
-              "Hôm qua trời không nắng."
-            ],
-            "answer": "Trời đang mưa."
-          },
-          {
-            "id": "2",
-            "context": "Bạn đang ăn gì?",
-            "options": [
-              "Mình đang ăn bún bò.",
-              "Mình đang làm việc.",
-              "Trời đang nắng to."
-            ],
-            "answer": "Mình đang ăn bún bò."
-          },
-          {
-            "id": "3",
-            "context": "Hôm qua thời tiết thế nào?",
-            "options": [
-              "Hôm qua trời mát, không mưa.",
-              "Hôm nay trời không nắng.",
-              "Trời đang nắng."
-            ],
-            "answer": "Hôm qua trời mát, không mưa."
-          },
-          {
-            "id": "4",
-            "context": "Mùa đông ở miền Bắc thường thế nào?",
-            "options": [
-              "Trời thường rất lạnh.",
-              "Trời thường rất nóng.",
-              "Trời thường nắng to."
-            ],
-            "answer": "Trời thường rất lạnh."
-          }
-        ]
+       "parts": [
+        "Mùa hè ở miền Bắc thường từ tháng ",
+        {
+         "blank": "năm"
+        },
+        " tới tháng ",
+        {
+         "blank": "tám"
+        },
+        "."
+       ]
+      },
+      {
+       "parts": [
+        "Mùa ",
+        {
+         "blank": "đông"
+        },
+        " ở miền Bắc, trời thường rất lạnh."
+       ]
+      },
+      {
+       "parts": [
+        "Miền Nam có mùa ",
+        {
+         "blank": "khô"
+        },
+        " và mùa ",
+        {
+         "blank": "mưa"
+        },
+        "."
+       ]
+      },
+      {
+       "parts": [
+        "Mùa khô ở miền Nam thường từ tháng ",
+        {
+         "blank": "mười hai"
+        },
+        " tới tháng ",
+        {
+         "blank": "bốn"
+        },
+        "."
+       ]
+      },
+      {
+       "parts": [
+        "Mùa mưa ở miền Nam thường từ tháng ",
+        {
+         "blank": "năm"
+        },
+        " tới tháng ",
+        {
+         "blank": "mười một"
+        },
+        "."
+       ]
       }
-    ]
+     ]
+    }
+   }
+  ]
+ },
+ "preClass": {
+  "note": "Xem hình rồi nối từ.",
+  "vocabPreview": {
+   "instruction": "Xem hình và bấm vào từ để nghe phát âm.",
+   "items": [
+    {
+     "word": "trời nóng",
+     "image": "images/b8/nghe/troi_nong.jpg",
+     "audio": "audio/b8/{voice}/vocab_troi_nong.mp3"
+    },
+    {
+     "word": "trời lạnh",
+     "image": "images/b8/nghe/troi_lanh.jpg",
+     "audio": "audio/b8/{voice}/vocab_troi_lanh.mp3"
+    },
+    {
+     "word": "trời mưa",
+     "image": "images/b8/nghe/troi_mua.jpg",
+     "audio": "audio/b8/{voice}/vocab_troi_mua.mp3"
+    },
+    {
+     "word": "trời nắng",
+     "image": "images/b8/nghe/troi_nang.jpg",
+     "audio": "audio/b8/{voice}/vocab_troi_nang.mp3"
+    },
+    {
+     "word": "trời mát",
+     "image": "images/b8/nghe/troi_mat.jpg",
+     "audio": "audio/b8/{voice}/vocab_troi_mat.mp3"
+    }
+   ]
+  },
+  "imageMatch": {
+   "title": "Nối từ với hình",
+   "instruction": "Chọn đúng từ cho mỗi hình.",
+   "items": [
+    {
+     "id": "im1",
+     "image": "images/b8/nghe/troi_nong.jpg",
+     "answer": "trời nóng"
+    },
+    {
+     "id": "im2",
+     "image": "images/b8/nghe/troi_lanh.jpg",
+     "answer": "trời lạnh"
+    },
+    {
+     "id": "im3",
+     "image": "images/b8/nghe/troi_mua.jpg",
+     "answer": "trời mưa"
+    },
+    {
+     "id": "im4",
+     "image": "images/b8/nghe/troi_nang.jpg",
+     "answer": "trời nắng"
+    },
+    {
+     "id": "im5",
+     "image": "images/b8/nghe/troi_mat.jpg",
+     "answer": "trời mát"
+    }
+   ],
+   "answerBank": [
+    "trời nóng",
+    "trời lạnh",
+    "trời mưa",
+    "trời nắng",
+    "trời mát"
+   ]
   }
+ },
+ "postClass": {
+  "exercises": [
+   {
+    "type": "choice",
+    "title": "1. Chọn đáp án đúng.",
+    "items": [
+     {
+      "id": "1",
+      "context": "Bây giờ trời ________.",
+      "options": [
+       "đang mưa",
+       "mưa đang",
+       "đang là mưa"
+      ],
+      "answer": "đang mưa"
+     },
+     {
+      "id": "2",
+      "context": "Hôm nay thời tiết ________?",
+      "options": [
+       "gì",
+       "thế nào",
+       "ở đâu"
+      ],
+      "answer": "thế nào"
+     },
+     {
+      "id": "3",
+      "context": "Miền Nam có ________ mùa.",
+      "options": [
+       "hai",
+       "ba",
+       "bốn"
+      ],
+      "answer": "hai"
+     },
+     {
+      "id": "4",
+      "context": "Miền Bắc có mùa ________.",
+      "options": [
+       "khô",
+       "mưa",
+       "đông"
+      ],
+      "answer": "đông"
+     }
+    ]
+   },
+   {
+    "type": "scramble",
+    "title": "2. Sắp xếp câu.",
+    "instruction": "Bấm vào từ theo đúng thứ tự để tạo thành câu.",
+    "items": [
+     {
+      "prompt": "Câu 1",
+      "tokens": [
+       "hôm nay",
+       "thế nào",
+       "thời tiết",
+       "?"
+      ],
+      "answer": "Hôm nay thời tiết thế nào?"
+     },
+     {
+      "prompt": "Câu 2",
+      "tokens": [
+       "đang",
+       "trời",
+       "mưa",
+       "to"
+      ],
+      "answer": "Trời đang mưa to."
+     },
+     {
+      "prompt": "Câu 3",
+      "tokens": [
+       "Nam",
+       "miền",
+       "mùa",
+       "có",
+       "khô"
+      ],
+      "answer": "Miền Nam có mùa khô."
+     },
+     {
+      "prompt": "Câu 4",
+      "tokens": [
+       "trời",
+       "hè",
+       "nóng",
+       "mùa",
+       "thường"
+      ],
+      "answer": "Mùa hè trời thường nóng."
+     },
+     {
+      "prompt": "Câu 5",
+      "tokens": [
+       "làm gì",
+       "bạn",
+       "đang",
+       "?"
+      ],
+      "answer": "Bạn đang làm gì?"
+     }
+    ]
+   },
+   {
+    "type": "choice",
+    "title": "3. Chọn câu trả lời phù hợp.",
+    "items": [
+     {
+      "id": "1",
+      "context": "Bây giờ thời tiết thế nào?",
+      "options": [
+       "Hôm nay trời mát.",
+       "Trời đang mưa.",
+       "Hôm qua trời không nắng."
+      ],
+      "answer": "Trời đang mưa."
+     },
+     {
+      "id": "2",
+      "context": "Bạn đang ăn gì?",
+      "options": [
+       "Mình đang ăn bún bò.",
+       "Mình đang làm việc.",
+       "Trời đang nắng to."
+      ],
+      "answer": "Mình đang ăn bún bò."
+     },
+     {
+      "id": "3",
+      "context": "Hôm qua thời tiết thế nào?",
+      "options": [
+       "Hôm qua trời mát, không mưa.",
+       "Hôm nay trời không nắng.",
+       "Trời đang nắng."
+      ],
+      "answer": "Hôm qua trời mát, không mưa."
+     },
+     {
+      "id": "4",
+      "context": "Mùa đông ở miền Bắc thường thế nào?",
+      "options": [
+       "Trời thường rất lạnh.",
+       "Trời thường rất nóng.",
+       "Trời thường nắng to."
+      ],
+      "answer": "Trời thường rất lạnh."
+     }
+    ]
+   }
+  ]
+ }
 }
