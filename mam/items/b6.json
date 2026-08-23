@@ -320,8 +320,8 @@
                 "en": "Two more milk coffees, please."
               },
               {
-                "vi": "Cho em thêm một chai nước.",
-                "en": "One more bottle of water, please."
+                "vi": "Cho em thêm hai chai nước.",
+                "en": "Two more bottles of water, please."
               },
               {
                 "vi": "Cho mình thêm ba cái ly.",
@@ -346,15 +346,6 @@
                   "Em cho thêm một phở."
                 ],
                 "answer": "Cho em thêm một phở."
-              },
-              {
-                "question": "Complete the sentence: Cho anh ______ hai cà phê sữa.",
-                "options": [
-                  "thêm",
-                  "một",
-                  "cho"
-                ],
-                "answer": "thêm"
               },
               {
                 "question": "Which sentence is correct?",
