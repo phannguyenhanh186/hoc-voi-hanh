@@ -222,7 +222,7 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
     // Tiện ích: theo dõi 1 mảng trạng thái (true/false/null); chỉ tính & hiện ring khi finalize() (bấm Nộp bài)
 
 
-    function trackQuizState(total) {
+    function trackQuizState(total, resultKey) {
       const state = new Array(total).fill(null);
       const ring = createResultsRing(total);
       function set(idx, ok) { state[idx] = ok; }
@@ -231,6 +231,7 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
         const wrongCount = state.filter(function (s) { return s === false; }).length;
         ring.update(correctCount, wrongCount);
         ring.reveal();
+        if (resultKey) saveQuizResult(resultKey, correctCount, total);
       }
       return { ring: ring, set: set, finalize: finalize };
     }
@@ -268,7 +269,7 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
     }
 
 
-    function buildQuizBlock(quiz, onReviewTheory) {
+    function buildQuizBlock(quiz, onReviewTheory, resultKey) {
       const wrap = el('div', 'gram2-quiz-wrap');
       wrap.appendChild(el('div', 'gram2-quiz-banner', 'Choose the correct answers.'));
 
@@ -280,13 +281,46 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
       const qSlot = el('div', 'gram2-quiz-item');
       wrap.appendChild(qSlot);
 
-      let tracker = trackQuizState(quiz.length);
+      let tracker = trackQuizState(quiz.length, resultKey);
       const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
       let i = 0;
+      // progressKeyForThis được lấy NGAY KHI TẠO (không đợi tới lúc làm xong), để việc
+      // đánh dấu hoàn thành ổn định, không phụ thuộc việc user có bấm "Làm lại" hay không.
+      const progressKeyForThis = nextProgressKey();
 
       function updateProgress() {
         const pct = quiz.length ? Math.round((i / quiz.length) * 100) : 0;
         progressFill.style.width = pct + '%';
+      }
+
+      function showSavedResult(saved) {
+        qSlot.innerHTML = '';
+        progressTrack.style.display = 'none';
+        const ring = createResultsRing(quiz.length);
+        ring.update(saved.correct, Math.max(0, quiz.length - saved.correct));
+        ring.reveal();
+        qSlot.appendChild(el('p', 'gram2-quiz-banner', 'Bạn đã hoàn thành bài này. Đây là kết quả lần gần nhất:'));
+        qSlot.appendChild(ring.el);
+        qSlot.appendChild(buildResultActions());
+      }
+
+      function buildResultActions() {
+        const actionsRow = el('div', 'gram2-quiz-result-actions');
+        const retryBtn = el('button', 'btn-check btn-secondary gram2-quiz-next', '↺ Try again'); retryBtn.type = 'button';
+        retryBtn.addEventListener('click', function () {
+          if (resultKey) clearQuizResult(resultKey);
+          i = 0;
+          tracker = trackQuizState(quiz.length, resultKey);
+          progressTrack.style.display = '';
+          renderQuestion();
+        });
+        actionsRow.appendChild(retryBtn);
+        if (onReviewTheory) {
+          const reviewBtn = el('button', 'btn-purple gram2-quiz-next', 'Review theory →'); reviewBtn.type = 'button';
+          reviewBtn.addEventListener('click', function () { onReviewTheory(); });
+          actionsRow.appendChild(reviewBtn);
+        }
+        return actionsRow;
       }
 
       function renderQuestion() {
@@ -294,23 +328,9 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
         if (i >= quiz.length) {
           updateProgress();
           tracker.finalize();
-          markProgressDone(nextProgressKey());
+          markProgressDone(progressKeyForThis);
           qSlot.appendChild(tracker.ring.el);
-
-          const actionsRow = el('div', 'gram2-quiz-result-actions');
-          const retryBtn = el('button', 'btn-check btn-secondary gram2-quiz-next', '↺ Try again'); retryBtn.type = 'button';
-          retryBtn.addEventListener('click', function () {
-            i = 0;
-            tracker = trackQuizState(quiz.length);
-            renderQuestion();
-          });
-          actionsRow.appendChild(retryBtn);
-          if (onReviewTheory) {
-            const reviewBtn = el('button', 'btn-purple gram2-quiz-next', 'Review theory →'); reviewBtn.type = 'button';
-            reviewBtn.addEventListener('click', function () { onReviewTheory(); });
-            actionsRow.appendChild(reviewBtn);
-          }
-          qSlot.appendChild(actionsRow);
+          qSlot.appendChild(buildResultActions());
           return;
         }
         const q = quiz[i];
@@ -416,14 +436,15 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
         updateProgress();
       }
 
-      renderQuestion();
+      const savedResult = resultKey ? loadQuizResult(resultKey) : null;
+      if (savedResult) { showSavedResult(savedResult); } else { renderQuestion(); }
       return wrap;
     }
 
 
-    function renderQuizToggle(quiz, label) {
+    function renderQuizToggle(quiz, label, resultKey) {
       return makeToggleSection(label || 'Small quiz', function () {
-        return buildQuizBlock(quiz);
+        return buildQuizBlock(quiz, null, resultKey);
       });
     }
 
@@ -522,5 +543,94 @@ function createProgressTracker(storageKey) {
   function doneCount() {
     return Object.keys(state.done).filter(function (k) { return state.done[k]; }).length;
   }
-  return { state: state, nextProgressKey: nextProgressKey, markProgressDone: markProgressDone, saveProgress: saveProgress, doneCount: doneCount };
+  return { state: state, nextProgressKey: nextProgressKey, markProgressDone: markProgressDone, saveProgress: saveProgress, doneCount: doneCount, storageKey: storageKey };
+}
+
+// ---------- Lưu KẾT QUẢ bài test/practice đã làm xong ----------
+// Cho phép khi user quay lại 1 bài test/practice đã hoàn thành, hiện lại kết quả cũ
+// (vòng tròn điểm số) kèm lựa chọn "Làm lại" hoặc "Xem lại lý thuyết", thay vì bắt
+// đầu lại từ câu hỏi đầu tiên như chưa từng làm.
+// resultKey nên là 1 chuỗi ổn định, duy nhất cho từng bài test (ví dụ ghép từ
+// progress.storageKey + tên bài tập), để không lẫn lộn giữa bài test này với bài khác.
+
+
+function saveQuizResult(resultKey, correct, total) {
+  if (!resultKey) return;
+  try {
+    localStorage.setItem('qresult:' + resultKey, JSON.stringify({ correct: correct, total: total, savedAt: Date.now() }));
+  } catch (e) {}
+}
+
+
+function loadQuizResult(resultKey) {
+  if (!resultKey) return null;
+  try {
+    const raw = localStorage.getItem('qresult:' + resultKey);
+    if (!raw) return null;
+    const obj = JSON.parse(raw);
+    if (obj && typeof obj.correct === 'number' && typeof obj.total === 'number' && obj.total > 0) return obj;
+  } catch (e) {}
+  return null;
+}
+
+
+function clearQuizResult(resultKey) {
+  if (!resultKey) return;
+  try { localStorage.removeItem('qresult:' + resultKey); } catch (e) {}
+}
+
+
+// Màn hình "đã làm bài này rồi" — vòng tròn kết quả cũ + nút Làm lại (+ Xem lại lý thuyết nếu có).
+
+
+function renderSavedResultView(saved, opts) {
+  opts = opts || {};
+  const wrap = el('div', 'gram2-quiz-wrap saved-result-wrap');
+  wrap.appendChild(el('div', 'gram2-quiz-banner', 'Bạn đã hoàn thành bài này. Đây là kết quả lần gần nhất:'));
+  const ring = createResultsRing(saved.total || 0);
+  const wrongCount = Math.max(0, (saved.total || 0) - (saved.correct || 0));
+  ring.update(saved.correct || 0, wrongCount);
+  ring.reveal();
+  wrap.appendChild(ring.el);
+  const actionsRow = el('div', 'gram2-quiz-result-actions');
+  const retryBtn = el('button', 'btn-check btn-secondary gram2-quiz-next', '↺ Làm lại');
+  retryBtn.type = 'button';
+  retryBtn.addEventListener('click', function () { if (opts.onRetry) opts.onRetry(); });
+  actionsRow.appendChild(retryBtn);
+  if (opts.onReviewTheory) {
+    const reviewBtn = el('button', 'btn-purple gram2-quiz-next', 'Xem lại lý thuyết →');
+    reviewBtn.type = 'button';
+    reviewBtn.addEventListener('click', opts.onReviewTheory);
+    actionsRow.appendChild(reviewBtn);
+  }
+  wrap.appendChild(actionsRow);
+  return wrap;
+}
+
+
+// Bọc quanh 1 bài tập/test: nếu đã có kết quả lưu sẵn cho resultKey, hiện màn hình kết quả cũ
+// (renderSavedResultView) thay vì gọi buildFn(); "Làm lại" sẽ xoá kết quả cũ rồi gọi lại buildFn().
+// buildFn() phải tự khởi tạo tracker/trackQuizState MỚI với cùng resultKey mỗi lần được gọi,
+// để khi làm xong lại, kết quả mới sẽ được lưu đè lên.
+
+
+function buildRetryableExercise(resultKey, buildFn, opts) {
+  opts = opts || {};
+  const holder = el('div', 'exercise-holder');
+  function mount() {
+    holder.innerHTML = '';
+    const saved = resultKey ? loadQuizResult(resultKey) : null;
+    if (saved) {
+      if (opts.titleEl) holder.appendChild(opts.titleEl());
+      holder.appendChild(renderSavedResultView(saved, {
+        onRetry: function () { if (resultKey) clearQuizResult(resultKey); mount(); },
+        onReviewTheory: opts.onReviewTheory
+      }));
+      if (opts.onSavedShown) opts.onSavedShown();
+    } else {
+      holder.appendChild(buildFn());
+    }
+  }
+  mount();
+  return holder;
 }
