@@ -1,0 +1,119 @@
+{
+ "id": "b11",
+ "num": 11,
+ "title": "Bạn là người Việt đúng không?",
+ "vocab": {
+  "items": []
+ },
+ "grammar": {
+  "sections": [
+   {
+    "id": "g1",
+    "titleVi": "Đúng không?",
+    "titleEn": "Right?",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g1",
+      "label": "Đúng không?",
+      "subHeadingVi": "Đúng không?",
+      "subHeadingEn": "Right?",
+      "paragraphs": [
+       "Use đúng không? at the end of a statement when you want to check or confirm information. It is similar to \"right?\", \"is that correct?\", or \"...?\" in English, depending on the context. The sentence keeps the same word order as a normal statement. Simply add đúng không? at the end."
+      ],
+      "chips": [
+       {
+        "pattern": "[Statement] + đúng không?"
+       }
+      ],
+      "examples": [
+       {
+        "vi": "Bạn là người Việt đúng không?",
+        "en": "You're Vietnamese, right?"
+       },
+       {
+        "vi": "Chị là giáo viên đúng không?",
+        "en": "You're a teacher, right?"
+       },
+       {
+        "vi": "Anh 25 tuổi đúng không?",
+        "en": "You're 25 years old, right?"
+       },
+       {
+        "vi": "Hôm nay là thứ Ba đúng không?",
+        "en": "Today is Tuesday, right?"
+       },
+       {
+        "vi": "Cái này tám mươi ngàn đúng không?",
+        "en": "This is 80,000 dong, right?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "g2",
+    "titleVi": "Đúng rồi / Không",
+    "titleEn": "Right / No",
+    "intro": [],
+    "subtopics": [
+     {
+      "id": "g2-0",
+      "label": "Đúng rồi",
+      "subHeadingVi": "Đúng rồi",
+      "subHeadingEn": "Yes, that's right",
+      "paragraphs": [
+       "Use đúng rồi when the information is correct."
+      ],
+      "examples": [
+       {
+        "vi": "A: Bạn là người Việt đúng không?\nB: Đúng rồi.",
+        "en": "A: You're Vietnamese, right?\nB: That's right."
+       },
+       {
+        "vi": "A: Hôm nay là thứ Ba đúng không?\nB: Đúng rồi.",
+        "en": "A: Today is Tuesday, right?\nB: That's right."
+       }
+      ]
+     },
+     {
+      "id": "g2-1",
+      "label": "Không",
+      "subHeadingVi": "Không",
+      "subHeadingEn": "No",
+      "paragraphs": [
+       "Use không when the information is incorrect."
+      ],
+      "examples": [
+       {
+        "vi": "A: Bạn là người Việt đúng không?\nB: Không.",
+        "en": "A: You're Vietnamese, right?\nB: No."
+       }
+      ],
+      "answerNote": "You can also give the correct information:",
+      "answerExamples": [
+       {
+        "vi": "A: Chị là giáo viên đúng không?\nB: Không. Chị là bác sĩ.",
+        "en": "A: You're a teacher, right?\nB: No. I'm a doctor."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "listening": {
+  "instruction": "",
+  "groups": []
+ },
+ "reading": {
+  "passages": []
+ },
+ "preClass": {
+  "note": "",
+  "flows": []
+ },
+ "postClass": {
+  "exercises": []
+ }
+}
