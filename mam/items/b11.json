@@ -23,80 +23,272 @@
       ],
       "chips": [
        {
+        "label": "Question",
         "pattern": "[Statement] + đúng không?"
+       },
+       {
+        "label": "Answer (Correct)",
+        "pattern": "Đúng rồi."
+       },
+       {
+        "label": "Answer (No)",
+        "pattern": "Không."
        }
       ],
       "examples": [
        {
-        "vi": "Bạn là người Việt đúng không?",
-        "en": "You're Vietnamese, right?"
+        "vi": "Bạn là người Việt đúng không?\nĐúng rồi. Mình là người Việt.",
+        "en": "You're Vietnamese, right?\nThat's right. I'm Vietnamese."
        },
        {
-        "vi": "Chị là giáo viên đúng không?",
-        "en": "You're a teacher, right?"
+        "vi": "Chị là giáo viên đúng không?\nKhông. Chị là nhân viên văn phòng.",
+        "en": "You're a teacher, right?\nNo. I'm an office staff."
        },
        {
-        "vi": "Anh 25 tuổi đúng không?",
-        "en": "You're 25 years old, right?"
+        "vi": "Anh 25 tuổi đúng không?\nKhông. Anh 27 tuổi.",
+        "en": "You're 25 years old, right?\nNo. I'm 27 years old."
        },
        {
         "vi": "Hôm nay là thứ Ba đúng không?",
         "en": "Today is Tuesday, right?"
        },
        {
-        "vi": "Cái này tám mươi ngàn đúng không?",
-        "en": "This is 80,000 dong, right?"
+        "vi": "Cái này tám mươi ngàn đúng không?\nĐúng rồi.",
+        "en": "This is 80,000 dong, right?\nThat's right."
        }
-      ]
+      ],
+      "quiz": []
      }
     ]
    },
    {
     "id": "g2",
-    "titleVi": "Đúng rồi / Không",
-    "titleEn": "Right / No",
+    "titleVi": "Quốc gia / Quốc tịch",
+    "titleEn": "Country / Nationality",
     "intro": [],
     "subtopics": [
      {
       "id": "g2-0",
-      "label": "Đúng rồi",
-      "subHeadingVi": "Đúng rồi",
-      "subHeadingEn": "Yes, that's right",
+      "label": "Quốc gia",
+      "subHeadingVi": "Quốc gia",
+      "subHeadingEn": "Country",
       "paragraphs": [
-       "Use đúng rồi when the information is correct."
+       "When talking about the country itself, use the name of the country directly."
       ],
+      "table": {
+       "caption": "Common countries",
+       "headers": [
+        "Vietnamese",
+        "English"
+       ],
+       "rows": [
+        [
+         "Việt Nam",
+         "Vietnam"
+        ],
+        [
+         "Mỹ",
+         "The United States / The US"
+        ],
+        [
+         "Anh",
+         "England / The UK"
+        ],
+        [
+         "Đức",
+         "Germany"
+        ],
+        [
+         "Pháp",
+         "France"
+        ],
+        [
+         "Úc",
+         "Australia"
+        ],
+        [
+         "Hàn / Hàn Quốc",
+         "South Korea"
+        ],
+        [
+         "Nhật / Nhật Bản",
+         "Japan"
+        ],
+        [
+         "Trung / Trung Quốc",
+         "China"
+        ],
+        [
+         "Thái / Thái Lan",
+         "Thailand"
+        ]
+       ]
+      },
       "examples": [
        {
-        "vi": "A: Bạn là người Việt đúng không?\nB: Đúng rồi.",
-        "en": "A: You're Vietnamese, right?\nB: That's right."
+        "vi": "Mình sống ở Việt Nam.",
+        "en": "I live in Vietnam."
        },
        {
-        "vi": "A: Hôm nay là thứ Ba đúng không?\nB: Đúng rồi.",
-        "en": "A: Today is Tuesday, right?\nB: That's right."
+        "vi": "Nhật Bản rất đẹp.",
+        "en": "Japan is very beautiful."
        }
-      ]
+      ],
+      "quiz": []
      },
      {
       "id": "g2-1",
-      "label": "Không",
-      "subHeadingVi": "Không",
-      "subHeadingEn": "No",
+      "label": "Quốc tịch",
+      "subHeadingVi": "Quốc tịch",
+      "subHeadingEn": "Nationality",
       "paragraphs": [
-       "Use không when the information is incorrect."
+       "When talking about a person's nationality, Vietnamese commonly uses the pattern: người + [Country].",
+       "However, some countries have a shorter, more natural nationality form that native speakers use more often than the full country name."
+      ],
+      "chips": [
+       {
+        "pattern": "Người + [Country]"
+       }
+      ],
+      "table": {
+       "caption": "Nationalities",
+       "headers": [
+        "Country",
+        "Nationality",
+        "English"
+       ],
+       "rows": [
+        [
+         "Việt Nam",
+         "người Việt (also người Việt Nam)",
+         "Vietnamese"
+        ],
+        [
+         "Mỹ",
+         "người Mỹ",
+         "American"
+        ],
+        [
+         "Anh",
+         "người Anh",
+         "British"
+        ],
+        [
+         "Đức",
+         "người Đức",
+         "German"
+        ],
+        [
+         "Pháp",
+         "người Pháp",
+         "French"
+        ],
+        [
+         "Nhật Bản",
+         "người Nhật (short form)",
+         "Japanese"
+        ],
+        [
+         "Hàn Quốc",
+         "người Hàn (short form)",
+         "Korean"
+        ],
+        [
+         "Trung Quốc",
+         "người Trung (short form)",
+         "Chinese"
+        ],
+        [
+         "Thái Lan",
+         "người Thái (short form)",
+         "Thai"
+        ]
+       ]
+      },
+      "examples": [
+       {
+        "vi": "Lan là người Việt.",
+        "en": "Lan is Vietnamese."
+       },
+       {
+        "vi": "Anh Bob là người Mỹ.",
+        "en": "Bob is American."
+       }
+      ],
+      "quiz": []
+     },
+     {
+      "id": "g2-2",
+      "label": "Người ở đâu?",
+      "subHeadingVi": "Người ở đâu?",
+      "subHeadingEn": "Where is someone from?",
+      "paragraphs": [
+       "To ask where someone is from or where they are originally from, use the structure below. This question can be answered in different ways depending on what information you want to give: your nationality, your place of birth, or where you currently live."
+      ],
+      "chips": [
+       {
+        "label": "Question",
+        "pattern": "[Pronoun] + là người ở đâu?"
+       },
+       {
+        "label": "Answer — Nationality",
+        "pattern": "[Pronoun] + là người + [Country]"
+       },
+       {
+        "label": "Answer — Place of birth",
+        "pattern": "[Pronoun] + sinh ra ở + [Country/Place]"
+       },
+       {
+        "label": "Answer — Current residence",
+        "pattern": "[Pronoun] + đang sống ở + [Country/Place]"
+       }
       ],
       "examples": [
        {
-        "vi": "A: Bạn là người Việt đúng không?\nB: Không.",
-        "en": "A: You're Vietnamese, right?\nB: No."
+        "vi": "Em là người ở đâu?",
+        "en": "Where are you from?"
+       },
+       {
+        "vi": "Chị Hà là người ở đâu?",
+        "en": "Where is Hà from?"
+       },
+       {
+        "vi": "Cô ấy là người ở đâu?",
+        "en": "Where is she from?"
+       },
+       {
+        "vi": "Mình là người Việt Nam.",
+        "en": "I'm Vietnamese."
+       },
+       {
+        "vi": "Mình là người Mỹ.",
+        "en": "I'm American."
+       },
+       {
+        "vi": "Mình sinh ra ở Anh.",
+        "en": "I was born in England."
+       },
+       {
+        "vi": "Mình sinh ra ở Hà Nội.",
+        "en": "I was born in Hanoi."
+       },
+       {
+        "vi": "Mình đang sống ở Pháp.",
+        "en": "I'm currently living in France."
+       },
+       {
+        "vi": "Mình đang sống ở Sài Gòn.",
+        "en": "I'm currently living in Saigon."
        }
       ],
-      "answerNote": "You can also give the correct information:",
+      "answerNote": "The same person can give different answers, combining all 3 structures above:",
       "answerExamples": [
        {
-        "vi": "A: Chị là giáo viên đúng không?\nB: Không. Chị là bác sĩ.",
-        "en": "A: You're a teacher, right?\nB: No. I'm a doctor."
+        "vi": "Mình là người Mỹ. Mình sinh ra ở Los Angeles, nhưng mình đang sống ở Việt Nam.",
+        "en": "I'm American. I was born in Los Angeles, but I'm currently living in Vietnam."
        }
-      ]
+      ],
+      "quiz": []
      }
     ]
    }
