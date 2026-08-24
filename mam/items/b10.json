@@ -219,6 +219,39 @@
          "A: Chị ấy đang mặc áo màu gì?\nB: Chị ấy thích màu trắng."
         ],
         "answer": "A: Anh đang mặc áo màu gì?\nB: Anh đang mặc áo màu trắng."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence asking what color someone's current jacket is.",
+        "wordBank": [
+         "mặc",
+         "gì",
+         "áo",
+         "bạn",
+         "đeo",
+         "màu",
+         "đang",
+         "đen",
+         "khoác",
+         "không",
+         "?"
+        ],
+        "answer": "bạn đang mặc áo khoác màu gì?"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence saying the color of your phone is white",
+        "wordBank": [
+         "điện",
+         "màu",
+         "mình",
+         "vàng",
+         "gì",
+         "của",
+         "thoại",
+         "trắng"
+        ],
+        "answer": "điện thoại của mình màu trắng"
        }
       ]
      }
@@ -260,6 +293,78 @@
         "vi": "Cảm ơn anh nhiều lắm.",
         "en": "Thank you very much."
        }
+      ],
+      "quiz": [
+       {
+        "question": "Which sentence makes sense?",
+        "options": [
+         "Mình thích lắm trời mưa.",
+         "Mình thích trời mưa lắm.",
+         "Mình lắm thích trời mưa."
+        ],
+        "answer": "Mình thích trời mưa lắm."
+       },
+       {
+        "question": "Which sentence makes sense?",
+        "options": [
+         "Mình lắm thích đi chơi với bạn vào cuối tuần.",
+         "Mình thích lắm đi chơi với bạn vào cuối tuần.",
+         "Mình thích đi chơi với bạn vào cuối tuần lắm."
+        ],
+        "answer": "Mình thích đi chơi với bạn vào cuối tuần lắm."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Today, it rained really heavily\"",
+        "wordBank": [
+         "lắm",
+         "nay",
+         "mưa",
+         "hôm",
+         "qua",
+         "to",
+         "mát",
+         "trời"
+        ],
+        "answer": "hôm nay trời mưa to lắm"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Black coffee in Vietnam is really tasty\"",
+        "wordBank": [
+         "đen",
+         "thường",
+         "ngon",
+         "gì",
+         "Việt Nam",
+         "lắm",
+         "cà phê",
+         "ở"
+        ],
+        "answers": [
+         "cà phê đen ở Việt Nam ngon lắm",
+         "ở Việt Nam cà phê đen ngon lắm"
+        ]
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence which means \"I really like watching movies at home\"",
+        "wordBank": [
+         "thích",
+         "nhà",
+         "làm",
+         "coi",
+         "mình",
+         "lắm",
+         "tivi",
+         "ở",
+         "không"
+        ],
+        "answers": [
+         "mình thích coi tivi ở nhà lắm",
+         "mình thích ở nhà coi tivi lắm"
+        ]
+       }
       ]
      },
      {
@@ -291,6 +396,76 @@
        {
         "vi": "Mình không mệt lắm.",
         "en": "I'm not very tired."
+       }
+      ],
+      "quiz": [
+       {
+        "question": "Which sentence makes sense?",
+        "options": [
+         "Hôm nay chị không mệt lắm.",
+         "Hôm nay chị không lắm mệt.",
+         "Hôm nay chị lắm không mệt."
+        ],
+        "answer": "Hôm nay chị không mệt lắm."
+       },
+       {
+        "question": "Which sentence makes sense?",
+        "options": [
+         "Anh ấy không thích lắm học tiếng Nhật.",
+         "Anh ấy không thích học tiếng Nhật lắm.",
+         "Anh ấy không lắm thích học tiếng Nhật."
+        ],
+        "answer": "Anh ấy không thích học tiếng Nhật lắm."
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Phở with chicken here is not really delicious.\"",
+        "wordBank": [
+         "ngon",
+         "ở",
+         "không",
+         "ăn",
+         "phở",
+         "thích",
+         "lắm",
+         "gà",
+         "đây"
+        ],
+        "answer": "phở gà ở đây không ngon lắm"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Yesterday, the weather was not really sunny and hot.\"",
+        "wordBank": [
+         "nóng",
+         "và",
+         "trời",
+         "qua",
+         "lắm",
+         "nắng",
+         "hôm",
+         "không",
+         "nay",
+         "mưa"
+        ],
+        "answer": "hôm qua trời không nắng và nóng lắm"
+       },
+       {
+        "type": "scramble",
+        "question": "Make a sentence that means \"Linh doesn't really like color blue\"",
+        "wordBank": [
+         "xanh",
+         "lắm",
+         "Linh",
+         "màu",
+         "ở",
+         "dương",
+         "thích",
+         "không",
+         "lá",
+         "và"
+        ],
+        "answer": "Linh không thích màu xanh dương lắm"
        }
       ]
      }
