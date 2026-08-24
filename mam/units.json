@@ -1,132 +1,132 @@
 {
-  "_guide": {
-    "doc": "Master index cho 1 level. App bo qua key bat dau bang '_'.",
-    "structure": "Moi 'lesson' = 1 Bai hoan chinh (id trong mam/items/<id>.json), dung khung 6 tab: vocab/grammar/listening/reading/preClass/postClass. Khong con chia A/B/C/D/Practical/Revise nua.",
-    "status": "'ready' = da co file noi dung | 'todo' = chua soan, the se mo 'sap ra mat'"
+ "_guide": {
+  "doc": "Master index cho 1 level. App bo qua key bat dau bang '_'.",
+  "structure": "Moi 'lesson' = 1 Bai hoan chinh (id trong mam/items/<id>.json), dung khung 6 tab: vocab/grammar/listening/reading/preClass/postClass. Khong con chia A/B/C/D/Practical/Revise nua.",
+  "status": "'ready' = da co file noi dung | 'todo' = chua soan, the se mo 'sap ra mat'"
+ },
+ "level": "mam",
+ "selfStudy": [
+  {
+   "id": "tones",
+   "title": "6 thanh điệu",
+   "titleEn": "The 6 tones",
+   "status": "ready"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "b1",
+   "num": 1,
+   "title": "Chào bạn, bạn tên là gì?",
+   "status": "ready"
   },
-  "level": "mam",
-  "selfStudy": [
-    {
-      "id": "tones",
-      "title": "6 thanh điệu",
-      "titleEn": "The 6 tones",
-      "status": "ready"
-    }
-  ],
-  "lessons": [
-    {
-      "id": "b1",
-      "num": 1,
-      "title": "Chào bạn, bạn tên là gì?",
-      "status": "ready"
-    },
-    {
-      "id": "b2",
-      "num": 2,
-      "title": "Anh thích ăn phở",
-      "status": "ready"
-    },
-    {
-      "id": "b3",
-      "num": 3,
-      "title": "Em thường đi chơi vào tối Chủ Nhật",
-      "status": "ready"
-    },
-    {
-      "id": "b4",
-      "num": 4,
-      "title": "Hôm qua chị đi ngủ lúc mấy giờ?",
-      "status": "ready"
-    },
-    {
-      "id": "b5",
-      "num": 5,
-      "title": "Sinh nhật của bạn là ngày mấy?",
-      "status": "ready"
-    },
-    {
-      "id": "b6",
-      "num": 6,
-      "title": "Cho em một phở và một trà đá!",
-      "status": "ready"
-    },
-    {
-      "id": "b7",
-      "num": 7,
-      "title": "Của anh chị một trăm ngàn!",
-      "status": "ready"
-    },
-    {
-      "id": "b8",
-      "num": 8,
-      "title": "Hôm nay trời mưa to!",
-      "status": "ready"
-    },
-    {
-      "id": "b9",
-      "num": 9,
-      "title": "Đi xe máy phải đội nón bảo hiểm",
-      "status": "ready"
-    },
-    {
-      "id": "b10",
-      "num": 10,
-      "title": "Mình thích áo khoác màu đen",
-      "status": "ready"
-    },
-    {
-      "id": "b12",
-      "num": 11,
-      "title": "Bạn là người Việt đúng không?",
-      "status": "todo"
-    },
-    {
-      "id": "b13",
-      "num": 12,
-      "title": "Bạn đang ở đâu?",
-      "status": "todo"
-    },
-    {
-      "id": "b14",
-      "num": 13,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    },
-    {
-      "id": "b15",
-      "num": 14,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    },
-    {
-      "id": "b16",
-      "num": 15,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    },
-    {
-      "id": "b17",
-      "num": 16,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    },
-    {
-      "id": "b18",
-      "num": 17,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    },
-    {
-      "id": "b19",
-      "num": 18,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    },
-    {
-      "id": "b20",
-      "num": 19,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    }
-  ]
+  {
+   "id": "b2",
+   "num": 2,
+   "title": "Anh thích ăn phở",
+   "status": "ready"
+  },
+  {
+   "id": "b3",
+   "num": 3,
+   "title": "Em thường đi chơi vào tối Chủ Nhật",
+   "status": "ready"
+  },
+  {
+   "id": "b4",
+   "num": 4,
+   "title": "Hôm qua chị đi ngủ lúc mấy giờ?",
+   "status": "ready"
+  },
+  {
+   "id": "b5",
+   "num": 5,
+   "title": "Sinh nhật của bạn là ngày mấy?",
+   "status": "ready"
+  },
+  {
+   "id": "b6",
+   "num": 6,
+   "title": "Cho em một phở và một trà đá!",
+   "status": "ready"
+  },
+  {
+   "id": "b7",
+   "num": 7,
+   "title": "Của anh chị một trăm ngàn!",
+   "status": "ready"
+  },
+  {
+   "id": "b8",
+   "num": 8,
+   "title": "Hôm nay trời mưa to!",
+   "status": "ready"
+  },
+  {
+   "id": "b9",
+   "num": 9,
+   "title": "Đi xe máy phải đội nón bảo hiểm",
+   "status": "ready"
+  },
+  {
+   "id": "b10",
+   "num": 10,
+   "title": "Mình thích áo khoác màu đen",
+   "status": "ready"
+  },
+  {
+   "id": "b11",
+   "num": 11,
+   "title": "Bạn là người Việt đúng không?",
+   "status": "todo"
+  },
+  {
+   "id": "b13",
+   "num": 12,
+   "title": "Bạn đang ở đâu?",
+   "status": "todo"
+  },
+  {
+   "id": "b14",
+   "num": 13,
+   "title": "Đang cập nhật…",
+   "status": "todo"
+  },
+  {
+   "id": "b15",
+   "num": 14,
+   "title": "Đang cập nhật…",
+   "status": "todo"
+  },
+  {
+   "id": "b16",
+   "num": 15,
+   "title": "Đang cập nhật…",
+   "status": "todo"
+  },
+  {
+   "id": "b17",
+   "num": 16,
+   "title": "Đang cập nhật…",
+   "status": "todo"
+  },
+  {
+   "id": "b18",
+   "num": 17,
+   "title": "Đang cập nhật…",
+   "status": "todo"
+  },
+  {
+   "id": "b19",
+   "num": 18,
+   "title": "Đang cập nhật…",
+   "status": "todo"
+  },
+  {
+   "id": "b20",
+   "num": 19,
+   "title": "Đang cập nhật…",
+   "status": "todo"
+  }
+ ]
 }
