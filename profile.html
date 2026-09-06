@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My profile — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <a class="back-link" href="index.html">← home</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="profile-hero">
+      <p class="profile-eyebrow">Overview · Practice progress</p>
+      <h1 id="profile-greeting">Hi there, let's practice today!</h1>
+    </section>
+
+    <div class="profile-stack">
+
+      <!-- ============ Learning day streak ============ -->
+      <section class="profile-card">
+        <p class="profile-card-label">🔥 Learning day streak</p>
+        <div class="streak-count">
+          <span class="flame">🔥</span>
+          <span class="num" id="streak-number">0</span>
+          <span class="label">days in a row</span>
+        </div>
+        <div class="streak-week" id="streak-week"></div>
+      </section>
+
+      <!-- ============ Study activity (calendar) ============ -->
+      <section class="profile-card">
+        <div class="activity-cal-head">
+          <p class="profile-card-label" style="margin:0">📅 Study activity</p>
+          <span class="activity-month" id="activity-month"></span>
+        </div>
+        <div class="activity-grid" id="activity-grid"></div>
+        <div class="activity-streak">
+          <span class="flame">🔥</span>
+          <strong id="activity-streak-number">0</strong> day streak
+        </div>
+      </section>
+
+      <!-- ============ Words per day ============ -->
+      <section class="profile-card">
+        <p class="profile-card-label">📚 Vocabulary</p>
+
+        <div class="words-stats">
+          <div class="stat-box">
+            <div class="stat-top"><span class="stat-icon">➕</span><span class="stat-label">Words added</span></div>
+            <div class="stat-value" id="stat-added">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-top"><span class="stat-icon">✅</span><span class="stat-label">Known</span></div>
+            <div class="stat-value" id="stat-known">0</div>
+            <div class="stat-unit">cards</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-top"><span class="stat-icon">❓</span><span class="stat-label">Not yet</span></div>
+            <div class="stat-value" id="stat-notyet">0</div>
+            <div class="stat-unit">cards</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-top"><span class="stat-icon">🔁</span><span class="stat-label">Needs review</span></div>
+            <div class="stat-value" id="stat-review">0</div>
+            <div class="stat-unit" id="stat-accuracy">— accuracy</div>
+          </div>
+        </div>
+
+        <div class="words-chart-head">
+          <div>
+            <h3>Words per day · last 7 days</h3>
+            <p>Words you added and studied each day this week</p>
+          </div>
+          <div class="chart-legend">
+            <span><span class="dot known"></span>Known</span>
+            <span><span class="dot review"></span>To review</span>
+          </div>
+        </div>
+        <div class="words-chart" id="words-chart"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDX1lJ_xBPAgWpireowMwQMbrmof7gtHfQ",
+      authDomain: "hocvoihanh.firebaseapp.com",
+      projectId: "hocvoihanh",
+      storageBucket: "hocvoihanh.firebasestorage.app",
+      messagingSenderId: "447968761171",
+      appId: "1:447968761171:web:8d4ec91591fd02dd22fda6",
+      measurementId: "G-X94RF3RXCT"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    const DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+    function buildStreakWeek() {
+      const wrap = document.getElementById('streak-week');
+      wrap.innerHTML = '';
+      const today = new Date();
+      const todayIdx = (today.getDay() + 6) % 7; // Mon = 0 ... Sun = 6
+      DOW.forEach((label, i) => {
+        const day = document.createElement('div');
+        day.className = 'streak-day' + (i === todayIdx ? ' is-today' : '');
+        day.innerHTML = '<span class="streak-dot"></span><span class="day-label">' + label + '</span>';
+        wrap.appendChild(day);
+      });
+    }
+
+    function buildActivityCalendar() {
+      const grid = document.getElementById('activity-grid');
+      const monthLabel = document.getElementById('activity-month');
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = today.getMonth();
+      monthLabel.textContent = MONTH_NAMES[month] + ' ' + year;
+
+      grid.innerHTML = '';
+      DOW.forEach((d) => {
+        const el = document.createElement('div');
+        el.className = 'activity-dow';
+        el.textContent = d;
+        grid.appendChild(el);
+      });
+
+      const firstOfMonth = new Date(year, month, 1);
+      const firstWeekday = (firstOfMonth.getDay() + 6) % 7; // Mon = 0
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      for (let i = 0; i < firstWeekday; i++) {
+        const el = document.createElement('div');
+        el.className = 'activity-cell is-empty';
+        grid.appendChild(el);
+      }
+      for (let d = 1; d <= daysInMonth; d++) {
+        const el = document.createElement('div');
+        el.className = 'activity-cell' + (d === today.getDate() ? ' is-today' : '');
+        el.textContent = String(d);
+        grid.appendChild(el);
+      }
+    }
+
+    function buildWordsChart() {
+      const wrap = document.getElementById('words-chart');
+      wrap.innerHTML = '';
+      const today = new Date();
+      for (let i = 6; i >= 0; i--) {
+        const d = new Date(today);
+        d.setDate(today.getDate() - i);
+        const label = DOW[(d.getDay() + 6) % 7];
+        const col = document.createElement('div');
+        col.className = 'chart-col';
+        col.innerHTML = '<div class="chart-bars"><div class="chart-baseline"></div></div><span class="day-label">' + label + '</span>';
+        wrap.appendChild(col);
+      }
+    }
+
+    buildStreakWeek();
+    buildActivityCalendar();
+    buildWordsChart();
+
+    auth.onAuthStateChanged((user) => {
+      if (!user) {
+        location.href = 'hoc-tap-demo.html?mode=login';
+        return;
+      }
+      const fallbackName = user.displayName || user.email.split('@')[0];
+      const greeting = document.getElementById('profile-greeting');
+      greeting.textContent = 'Hi ' + fallbackName + ", let's practice today!";
+
+      db.collection('users').doc(user.uid).get()
+        .then((doc) => {
+          const savedUsername = doc.exists ? doc.data().username : null;
+          if (savedUsername) greeting.textContent = 'Hi ' + savedUsername + ", let's practice today!";
+        })
+        .catch(() => {});
+
+      // Streak / vocab stats: chưa có hệ thống lưu trữ, tạm để 0 —
+      // sẽ nối vào Firestore khi có dữ liệu thật.
+    });
+  </script>
+  <script src="pomodoro.js" defer></script>
+</body>
+</html>
