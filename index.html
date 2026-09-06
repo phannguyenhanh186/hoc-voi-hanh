@@ -62,7 +62,7 @@
 
               <div id="account-member-content" hidden>
                 <div class="account-welcome">
-                  <p class="welcome-title">Hi there! 👋</p>
+                  <p class="welcome-title" id="account-member-greeting">Chào! 👋</p>
                   <p class="welcome-text" id="account-member-email"></p>
                 </div>
 
@@ -175,7 +175,13 @@
     const guestContent = document.getElementById('account-guest-content');
     const memberContent = document.getElementById('account-member-content');
     const memberEmail = document.getElementById('account-member-email');
+    const memberGreeting = document.getElementById('account-member-greeting');
     const btnSignOut = document.getElementById('btn-sign-out');
+
+    function setDisplayName(name) {
+      accountName.textContent = name;
+      memberGreeting.textContent = 'Chào ' + name + '! 👋';
+    }
 
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -187,12 +193,12 @@
         // Hiển thị tạm trong lúc chờ đọc username từ Firestore (nguồn dữ liệu
         // đáng tin cậy hơn user.displayName, vì displayName của Firebase Auth
         // đôi khi chưa kịp đồng bộ ngay sau khi vừa tạo tài khoản).
-        accountName.textContent = user.displayName || user.email.split('@')[0];
+        setDisplayName(user.displayName || user.email.split('@')[0]);
 
         db.collection('users').doc(user.uid).get()
           .then((doc) => {
             const savedUsername = doc.exists ? doc.data().username : null;
-            if (savedUsername) accountName.textContent = savedUsername;
+            if (savedUsername) setDisplayName(savedUsername);
           })
           .catch(() => {});
       } else {
