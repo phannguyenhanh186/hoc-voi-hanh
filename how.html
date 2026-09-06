@@ -22,101 +22,93 @@
   </header>
 
   <main class="wrap">
-    <!-- Bước 1: chọn giọng -->
-    <section id="step-accent">
-      <div class="lesson-head"><h1>Which accent would you like to learn?</h1></div>
-      <p class="note">Pick a regional accent — you can change it later.</p>
-      <div class="cards">
-        <a class="card accent-card" data-voice="nam" href="#">
-          <div class="card-head"><h3>🌴 Southern (Miền Nam)</h3></div>
-          <p>Saigon accent — spoken across southern Vietnam.</p>
-          <div class="go">Choose this accent →</div>
-        </a>
-        <a class="card accent-card" data-voice="bac" href="#">
-          <div class="card-head"><h3>🏯 Northern (Miền Bắc)</h3></div>
-          <p>Hanoi accent — spoken across northern Vietnam.</p>
-          <div class="go">Choose this accent →</div>
-        </a>
+
+    <!-- ============ Where technology meets education ============ -->
+    <section class="tech-edu-card">
+      <span class="tech-edu-eyebrow">Where technology meets education</span>
+
+      <div class="tech-feature-list">
+        <div class="tech-feature">
+          <span class="tech-feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/></svg>
+          </span>
+          <div>
+            <h2>Continuously Updated Learning Content</h2>
+            <p>Fresh, practical, and relevant content is constantly added to keep up with the way Vietnamese is used in everyday life.</p>
+          </div>
+        </div>
+
+        <div class="tech-feature">
+          <span class="tech-feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <div>
+            <h2>Lessons You Can Use in Real Life</h2>
+            <p>Learn practical Vietnamese that you can use right away — from everyday conversations to work and real-life situations.</p>
+          </div>
+        </div>
+
+        <div class="tech-feature">
+          <span class="tech-feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          </span>
+          <div>
+            <h2>A Technology-Enhanced Learning Platform</h2>
+            <p>Learn Vietnamese anytime, anywhere to develop all four essential skills: Listening, Speaking, Reading, and Writing.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Bước 2: chọn cấp độ -->
-    <section id="step-levels" style="display:none">
-      <div class="lesson-head"><h1>Your Roadmap to Fluency</h1></div>
-      <div class="q-card-like prose roadmap-intro">
-        <p>We track progress through <strong>Hours of Immersion</strong> rather than months or years. The reasoning is straightforward: claiming "I've studied for 5 years" doesn't mean much if those years only added up to 10 minutes a week. Hours actually reflect real exposure, which is why they're the metric that matters.</p>
-        <p>The approach is simple. You begin by listening and shadowing phrases that native speakers use on a daily basis.</p>
-        <p>The more hours you accumulate, the more fluent and complex your speech becomes, gradually moving you closer to sounding like a native speaker.</p>
-        <p style="margin-bottom:0">Here's what to focus on at each stage of the journey:</p>
+    <!-- ============ Learning Path ============ -->
+    <section class="frame-section frame-blue">
+      <div class="path-section-head">
+        <h2>Learning Path from a Complete Beginner to Advanced Learner</h2>
       </div>
-      <p class="note" style="margin-top:14px">Accent: <strong id="accent-name"></strong> · <a href="#" id="change-accent">change accent</a></p>
-      <div class="cards" id="level-cards"></div>
+
+      <div class="level-scroll">
+        <div class="level-pill-card lvl-1">
+          <div>
+            <div class="level-eyebrow">Level 01 · Foundation · Plant the seed</div>
+            <div class="level-word">Mầm</div>
+          </div>
+          <p class="level-tagline">Get familiar with the basics</p>
+        </div>
+
+        <div class="level-pill-card lvl-2">
+          <div>
+            <div class="level-eyebrow">Level 02 · Skill Building · Begin to sprout</div>
+            <div class="level-word">Chồi</div>
+          </div>
+          <p class="level-tagline">Build essential communication skills</p>
+        </div>
+
+        <div class="level-pill-card lvl-3">
+          <div>
+            <div class="level-eyebrow">Level 03 · Core Training · Branch out</div>
+            <div class="level-word">Cành</div>
+          </div>
+          <p class="level-tagline">Keep growing and expanding from the core</p>
+        </div>
+
+        <div class="level-pill-card lvl-4">
+          <div>
+            <div class="level-eyebrow">Level 04 · Mastery · Leaf flush</div>
+            <div class="level-word">Lá</div>
+          </div>
+          <p class="level-tagline">Refine through the details</p>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        Scroll to see more levels
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </div>
     </section>
+
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
-
-  <script>
-    const ACCENTS = { nam: 'Southern (Miền Nam)', bac: 'Northern (Miền Bắc)' };
-    const LEVELS = [
-      { id: 'mam', name: 'mầm', en: 'Level 1', hours: '0', words: '0', learn: ['Stories with very simple sentences (5–8 words)', 'Limited vocabulary and phrases', 'Basic sentence structures', 'Slow, clear audio'] },
-      { id: 'choi', name: 'chồi', en: 'Level 2', hours: '60', words: '300', learn: ['Longer sentences', 'Common grammar patterns', 'Expanded vocabulary'] },
-      { id: 'la', name: 'lá', en: 'Level 3', hours: '200', words: '2,000', learn: ['More challenging stories with longer sentences', 'More advanced grammar structures', 'Wider range of vocabulary'] },
-    ];
-    const stepA = document.getElementById('step-accent');
-    const stepL = document.getElementById('step-levels');
-
-    let availableLevels = new Set();
-    Promise.all(LEVELS.map(function (lv) {
-      return fetch(lv.id + '/units.json', { cache: 'no-cache' })
-        .then(function (r) { return r.ok; })
-        .catch(function () { return false; });
-    })).then(function (results) {
-      LEVELS.forEach(function (lv, i) { if (results[i]) availableLevels.add(lv.id); });
-      if (stepL.style.display !== 'none') renderLevels();
-    });
-
-    function chooseAccent(v) {
-      try { localStorage.setItem('voice', v); } catch (e) {}
-      document.getElementById('accent-name').textContent = ACCENTS[v];
-      stepA.style.display = 'none';
-      stepL.style.display = '';
-      renderLevels();
-      window.scrollTo(0, 0);
-    }
-
-    function renderLevels() {
-      const wrap = document.getElementById('level-cards');
-      wrap.innerHTML = '';
-      LEVELS.forEach(lv => {
-        const ready = availableLevels.has(lv.id);
-        const a = document.createElement('a');
-        a.className = 'card' + (ready ? '' : ' card-soon');
-        if (ready) a.href = 'lessons.html?level=' + lv.id;
-        const head = document.createElement('div'); head.className = 'card-head';
-        const h3 = document.createElement('h3'); h3.innerHTML = lv.name + ' <span class="title-en">(' + lv.en + ')</span>'; head.appendChild(h3);
-        const badge = document.createElement('span'); badge.className = 'badge'; badge.textContent = ready ? 'available' : 'coming soon'; head.appendChild(badge);
-        a.appendChild(head);
-
-        const stats = document.createElement('div'); stats.className = 'level-stats';
-        stats.innerHTML = '<span>⏱ <strong>' + lv.hours + '</strong> immersion hours</span><span>📚 <strong>' + lv.words + '</strong> words known</span>';
-        a.appendChild(stats);
-
-        const lt = document.createElement('div'); lt.className = 'learn-title'; lt.textContent = "What you'll learn:"; a.appendChild(lt);
-        const ul = document.createElement('ul'); ul.className = 'learn-list';
-        lv.learn.forEach(x => { const li = document.createElement('li'); li.textContent = x; ul.appendChild(li); });
-        a.appendChild(ul);
-
-        const go = document.createElement('div'); go.className = 'go'; go.textContent = ready ? 'Vào học →' : 'In development'; a.appendChild(go);
-        wrap.appendChild(a);
-      });
-    }
-
-    document.querySelectorAll('.accent-card').forEach(c => c.addEventListener('click', e => { e.preventDefault(); chooseAccent(c.dataset.voice); }));
-    document.getElementById('change-accent').addEventListener('click', e => { e.preventDefault(); stepL.style.display = 'none'; stepA.style.display = ''; window.scrollTo(0, 0); });
-
-    // nếu đã chọn giọng trước đó, vẫn bắt đầu từ bước chọn giọng để học sinh xác nhận
-  </script>
   <script src="pomodoro.js" defer></script>
 </body>
 </html>
