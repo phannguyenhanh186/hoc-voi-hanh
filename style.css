@@ -512,9 +512,10 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .frame-heading h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2rem); margin: 0 0 10px; letter-spacing: -.3px; color: var(--ink); }
 .frame-heading p { color: var(--ink); margin: 0 auto; max-width: 50ch; }
 
-/* Explore now — 3 equal cards, viền đen dày + shadow tĩnh kiểu sticker */
+/* Explore now — 4 equal cards, viền đen dày + shadow tĩnh kiểu sticker */
 .explore-grid { display: grid; gap: 18px; align-items: stretch; }
-@media (min-width: 720px) { .explore-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 560px) { .explore-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .explore-grid { grid-template-columns: repeat(4, 1fr); } }
 .explore-card {
   border: 2px solid var(--stroke); border-radius: 18px; overflow: hidden;
   background: var(--surface); display: flex; flex-direction: column; height: 100%;
@@ -523,6 +524,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .explore-card-head { padding: 16px 18px 14px; border-bottom: 2px solid var(--stroke); }
 .explore-card-head.head-yellow { background: var(--yellow); }
 .explore-card-head.head-blue   { background: var(--blue); }
+.explore-card-head.head-green  { background: var(--leaf-green); }
 .explore-card-head.head-pink   { background: var(--pink); }
 .explore-card-head h3 { margin: 0 0 2px; font-family: var(--font-display); font-size: 1.12rem; color: var(--ink); }
 .explore-card-head .subtitle { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); opacity: .65; }
