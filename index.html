@@ -85,12 +85,27 @@
                   </span>
                   <span>Sign out</span>
                 </button>
+
+                <div class="account-danger">
+                  <button class="account-action account-action-danger" id="btn-delete-account" type="button" aria-expanded="false" aria-controls="delete-confirm">
+                    <span class="action-icon action-icon-danger">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+                    </span>
+                    <span>Delete account</span>
+                  </button>
+
+                  <div class="delete-confirm" id="delete-confirm" hidden>
+                    <p class="delete-confirm-text">This permanently deletes your account and saved progress. Enter your password to confirm.</p>
+                    <input type="password" id="delete-password" placeholder="Password" autocomplete="current-password" />
+                    <div class="msg" id="delete-msg"></div>
+                    <div class="delete-confirm-actions">
+                      <button type="button" class="btn-mini btn-mini-ghost" id="btn-delete-cancel">Cancel</button>
+                      <button type="button" class="btn-mini btn-mini-danger" id="btn-delete-confirm">Delete my account</button>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div class="account-footer">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"/></svg>
-                Privacy info
-              </div>
             </div>
           </div>
         </div>
@@ -140,6 +155,7 @@
   <!-- Firebase (dùng chung config với hoc-tap-demo.html) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyDX1lJ_xBPAgWpireowMwQMbrmof7gtHfQ",
@@ -152,6 +168,7 @@
     };
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
+    const db = firebase.firestore();
 
     const accountName = document.getElementById('account-name');
     const accountRole = document.getElementById('account-role');
@@ -180,6 +197,73 @@
         auth.signOut().then(() => location.reload());
       });
     }
+  </script>
+
+  <!-- Delete account -->
+  <script>
+    (function () {
+      const btnDeleteAccount = document.getElementById('btn-delete-account');
+      const deleteConfirm = document.getElementById('delete-confirm');
+      const deletePassword = document.getElementById('delete-password');
+      const deleteMsg = document.getElementById('delete-msg');
+      const btnDeleteCancel = document.getElementById('btn-delete-cancel');
+      const btnDeleteConfirm = document.getElementById('btn-delete-confirm');
+      if (!btnDeleteAccount || !deleteConfirm) return;
+
+      function resetDeletePanel() {
+        deleteConfirm.hidden = true;
+        btnDeleteAccount.setAttribute('aria-expanded', 'false');
+        deletePassword.value = '';
+        deleteMsg.textContent = '';
+        deleteMsg.className = 'msg';
+        btnDeleteConfirm.disabled = false;
+        btnDeleteConfirm.textContent = 'Delete my account';
+      }
+
+      btnDeleteAccount.addEventListener('click', () => {
+        const willOpen = deleteConfirm.hidden;
+        resetDeletePanel();
+        deleteConfirm.hidden = !willOpen;
+        btnDeleteAccount.setAttribute('aria-expanded', String(willOpen));
+        if (willOpen) deletePassword.focus();
+      });
+
+      btnDeleteCancel.addEventListener('click', resetDeletePanel);
+
+      btnDeleteConfirm.addEventListener('click', () => {
+        const user = auth.currentUser;
+        if (!user) return;
+        const password = deletePassword.value;
+        if (!password) {
+          deleteMsg.textContent = 'Please enter your password.';
+          deleteMsg.className = 'msg error';
+          return;
+        }
+
+        btnDeleteConfirm.disabled = true;
+        btnDeleteConfirm.textContent = 'Deleting…';
+        deleteMsg.textContent = '';
+        deleteMsg.className = 'msg';
+
+        const credential = firebase.auth.EmailAuthProvider.credential(user.email, password);
+        user.reauthenticateWithCredential(credential)
+          .then(() => db.collection('users').doc(user.uid).delete().catch(() => {}))
+          .then(() => user.delete())
+          .then(() => location.reload())
+          .catch((err) => {
+            btnDeleteConfirm.disabled = false;
+            btnDeleteConfirm.textContent = 'Delete my account';
+            const map = {
+              'auth/wrong-password': 'Incorrect password.',
+              'auth/invalid-credential': 'Incorrect password.',
+              'auth/too-many-requests': 'Too many attempts. Please try again later.',
+              'auth/requires-recent-login': 'Please sign out and sign in again, then retry.'
+            };
+            deleteMsg.textContent = map[err.code] || ('Something went wrong: ' + err.message);
+            deleteMsg.className = 'msg error';
+          });
+      });
+    })();
   </script>
 
   <script>
