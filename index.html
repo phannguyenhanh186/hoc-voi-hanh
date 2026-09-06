@@ -179,16 +179,22 @@
 
     auth.onAuthStateChanged((user) => {
       if (user) {
-        // Đảm bảo lấy displayName (username) mới nhất, phòng trường hợp
-        // hồ sơ vừa được cập nhật ở tab/trang khác.
-        user.reload().catch(() => {}).then(() => {
-          const current = auth.currentUser || user;
-          accountName.textContent = current.displayName || current.email.split('@')[0];
-          accountRole.innerHTML = '<span class="dot"></span>MEMBER';
-          memberEmail.textContent = current.email;
-          guestContent.hidden = true;
-          memberContent.hidden = false;
-        });
+        accountRole.innerHTML = '<span class="dot"></span>MEMBER';
+        memberEmail.textContent = user.email;
+        guestContent.hidden = true;
+        memberContent.hidden = false;
+
+        // Hiển thị tạm trong lúc chờ đọc username từ Firestore (nguồn dữ liệu
+        // đáng tin cậy hơn user.displayName, vì displayName của Firebase Auth
+        // đôi khi chưa kịp đồng bộ ngay sau khi vừa tạo tài khoản).
+        accountName.textContent = user.displayName || user.email.split('@')[0];
+
+        db.collection('users').doc(user.uid).get()
+          .then((doc) => {
+            const savedUsername = doc.exists ? doc.data().username : null;
+            if (savedUsername) accountName.textContent = savedUsername;
+          })
+          .catch(() => {});
       } else {
         accountName.textContent = 'Guest';
         accountRole.innerHTML = '<span class="dot"></span>GUEST';
