@@ -56,7 +56,7 @@
                   <span class="action-icon">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="7.5" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
                   </span>
-                  <span>New here? Create your account</span>
+                  <span>New here? Create your new account</span>
                 </a>
               </div>
 
@@ -149,8 +149,7 @@
 
     auth.onAuthStateChanged((user) => {
       if (user) {
-        const namePart = user.email.split('@')[0];
-        accountName.textContent = namePart;
+        accountName.textContent = user.displayName || user.email.split('@')[0];
         accountRole.innerHTML = '<span class="dot"></span>MEMBER';
         memberEmail.textContent = user.email;
         guestContent.hidden = true;
