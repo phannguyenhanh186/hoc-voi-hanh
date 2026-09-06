@@ -294,6 +294,8 @@ const DANH_SACH_BAI = [
 
 let uidHienTai = null;
 let tienDoHienTai = {};
+let dangTaoTaiKhoan = false; // true trong lúc đang tạo tài khoản, để tạm hoãn redirect
+                              // cho đến khi đã lưu xong username (displayName)
 
 /* =========================================================
    0) CHUYỂN GIỮA 2 VIEW (Sign in / Create account)
@@ -336,6 +338,7 @@ function dangKy() {
     return hienThiLoi("signup-msg", "Please fill in username, email, and password.");
   }
 
+  dangTaoTaiKhoan = true; // hoãn redirect ở onAuthStateChanged cho tới khi xong bên dưới
   auth.createUserWithEmailAndPassword(email, password)
     .then(cred => {
       return cred.user.updateProfile({ displayName: username })
@@ -345,7 +348,14 @@ function dangKy() {
           progress: {}
         }));
     })
-    .catch(err => hienThiLoi("signup-msg", dichLoi(err)));
+    .then(() => {
+      dangTaoTaiKhoan = false;
+      location.href = "index.html"; // lúc này displayName đã chắc chắn được lưu
+    })
+    .catch(err => {
+      dangTaoTaiKhoan = false;
+      hienThiLoi("signup-msg", dichLoi(err));
+    });
 }
 
 function dangNhap() {
@@ -382,7 +392,11 @@ function dichLoi(err) {
 auth.onAuthStateChanged(user => {
   if (user) {
     uidHienTai = user.uid;
-    location.href = "index.html";
+    if (!dangTaoTaiKhoan) {
+      location.href = "index.html";
+    }
+    // nếu đang trong lúc dangKy() xử lý, để hàm đó tự redirect
+    // sau khi displayName đã lưu xong (tránh hiện email thay vì username)
   } else {
     uidHienTai = null;
     document.getElementById("app-screen").classList.add("hidden");
