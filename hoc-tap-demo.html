@@ -163,8 +163,8 @@
 
   <!-- ============ MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ ============ -->
   <div id="auth-screen">
-    <h1>Luyện bài</h1>
-    <p class="subtitle">Đăng nhập để lưu lại tiến độ làm bài của bạn.</p>
+    <h1 id="auth-title">Luyện bài</h1>
+    <p class="subtitle" id="auth-subtitle">Đăng nhập để lưu lại tiến độ làm bài của bạn.</p>
 
     <div class="panel">
       <label for="email">Email</label>
@@ -174,8 +174,8 @@
       <input type="password" id="password" placeholder="Tối thiểu 6 ký tự" />
 
       <div class="row">
-        <button class="btn-primary" onclick="dangNhap()">Đăng nhập</button>
-        <button class="btn-ghost" onclick="dangKy()">Tạo tài khoản</button>
+        <button class="btn-primary" id="btn-login" onclick="dangNhap()">Đăng nhập</button>
+        <button class="btn-ghost" id="btn-signup" onclick="dangKy()">Tạo tài khoản</button>
       </div>
 
       <div id="auth-msg"></div>
@@ -231,6 +231,35 @@ const DANH_SACH_BAI = [
 
 let uidHienTai = null;
 let tienDoHienTai = {};
+
+/* =========================================================
+   0) NHẬN Ý ĐỊNH TỪ URL (?mode=signup / ?mode=login)
+   -----------------------------------------------------------
+   Cho phép trang chủ liên kết thẳng tới đúng thao tác:
+   hoc-tap-demo.html?mode=signup  -> làm nổi bật "Tạo tài khoản"
+   hoc-tap-demo.html?mode=login   -> làm nổi bật "Đăng nhập"
+========================================================= */
+(function apDungCheDo() {
+  const mode = new URLSearchParams(location.search).get("mode");
+  const title = document.getElementById("auth-title");
+  const subtitle = document.getElementById("auth-subtitle");
+  const btnLogin = document.getElementById("btn-login");
+  const btnSignup = document.getElementById("btn-signup");
+
+  if (mode === "signup") {
+    title.textContent = "Tạo tài khoản mới";
+    subtitle.textContent = "Tạo tài khoản để lưu lại tiến độ và lộ trình học của bạn.";
+    btnSignup.classList.add("btn-primary");
+    btnSignup.classList.remove("btn-ghost");
+    btnLogin.classList.add("btn-ghost");
+    btnLogin.classList.remove("btn-primary");
+  } else if (mode === "login") {
+    title.textContent = "Đăng nhập";
+    subtitle.textContent = "Đăng nhập để lưu lại tiến độ làm bài của bạn.";
+  }
+
+  document.getElementById("email").focus();
+})();
 
 /* =========================================================
    3) ĐĂNG KÝ / ĐĂNG NHẬP / ĐĂNG XUẤT
