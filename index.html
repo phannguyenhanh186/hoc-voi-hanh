@@ -179,11 +179,16 @@
 
     auth.onAuthStateChanged((user) => {
       if (user) {
-        accountName.textContent = user.displayName || user.email.split('@')[0];
-        accountRole.innerHTML = '<span class="dot"></span>MEMBER';
-        memberEmail.textContent = user.email;
-        guestContent.hidden = true;
-        memberContent.hidden = false;
+        // Đảm bảo lấy displayName (username) mới nhất, phòng trường hợp
+        // hồ sơ vừa được cập nhật ở tab/trang khác.
+        user.reload().catch(() => {}).then(() => {
+          const current = auth.currentUser || user;
+          accountName.textContent = current.displayName || current.email.split('@')[0];
+          accountRole.innerHTML = '<span class="dot"></span>MEMBER';
+          memberEmail.textContent = current.email;
+          guestContent.hidden = true;
+          memberContent.hidden = false;
+        });
       } else {
         accountName.textContent = 'Guest';
         accountRole.innerHTML = '<span class="dot"></span>GUEST';
