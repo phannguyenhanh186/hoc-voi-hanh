@@ -455,11 +455,14 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .welcome-title { margin: 0 0 4px; font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--ink); }
 .welcome-text { margin: 0; font-size: .85rem; color: var(--muted); line-height: 1.45; }
 .account-action {
-  display: flex; align-items: center; gap: 12px;
+  display: flex; align-items: center; gap: 12px; width: 100%;
   padding: 9px 6px; border-radius: 12px;
+  background: none; border: none; margin: 0; cursor: pointer; text-align: left;
   font-family: var(--font-display); font-weight: 700; font-size: .92rem; color: var(--ink);
+  -webkit-appearance: none; appearance: none;
 }
 .account-action:hover { background: var(--tint); color: var(--ink); }
+.account-action + .account-action { margin-top: 2px; }
 .action-icon {
   display: flex; align-items: center; justify-content: center; flex: none;
   width: 34px; height: 34px; border-radius: 10px;
