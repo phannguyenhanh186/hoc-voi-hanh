@@ -312,14 +312,14 @@ function dichLoi(err) {
 
 /* =========================================================
    4) THEO DÕI TRẠNG THÁI ĐĂNG NHẬP
+   -----------------------------------------------------------
+   Đăng nhập/tạo tài khoản xong thì quay về trang chủ luôn,
+   không ở lại đây nữa.
 ========================================================= */
 auth.onAuthStateChanged(user => {
   if (user) {
     uidHienTai = user.uid;
-    document.getElementById("auth-screen").classList.add("hidden");
-    document.getElementById("app-screen").classList.remove("hidden");
-    document.getElementById("user-email").textContent = user.email;
-    taiTienDo();
+    location.href = "index.html";
   } else {
     uidHienTai = null;
     document.getElementById("app-screen").classList.add("hidden");
