@@ -1287,3 +1287,82 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   .level-scroll { overflow-x: visible; flex-wrap: wrap; justify-content: center; }
   .scroll-hint { display: none; }
 }
+
+/* ============================================================
+   My profile — practice dashboard (streak / activity / words)
+   ============================================================ */
+.profile-hero { padding: 34px 0 6px; }
+.profile-eyebrow {
+  font-family: var(--font-display); font-weight: 700; font-size: .78rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px;
+}
+.profile-hero h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2rem); margin: 0; color: var(--ink); letter-spacing: -.3px; }
+
+.profile-stack { display: flex; flex-direction: column; gap: 18px; margin: 22px 0 48px; }
+.profile-card {
+  border: 2px solid var(--stroke); border-radius: 22px; background: var(--surface);
+  padding: 24px 22px; box-shadow: 6px 6px 0 0 var(--stroke);
+}
+.profile-card-label {
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px;
+}
+
+/* -- streak card -- */
+.streak-count { display: flex; align-items: baseline; gap: 8px; margin-bottom: 18px; }
+.streak-count .flame { font-size: 1.6rem; }
+.streak-count .num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--ink); }
+.streak-count .label { color: var(--muted); font-size: .95rem; }
+.streak-week { display: flex; gap: 10px; flex-wrap: wrap; }
+.streak-day { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.streak-dot {
+  width: 34px; height: 34px; border-radius: 50%; background: var(--tint);
+  border: 1.5px solid var(--stroke);
+}
+.streak-day.is-today .streak-dot { background: var(--yellow); }
+.streak-day span.day-label { font-size: .72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+
+/* -- study activity calendar -- */
+.activity-cal-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+.activity-month { font-size: .82rem; color: var(--muted); font-weight: 700; }
+.activity-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.activity-dow { text-align: center; font-size: .72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; padding-bottom: 4px; }
+.activity-cell {
+  aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  border-radius: 10px; background: var(--tint); font-size: .82rem; font-weight: 700; color: var(--ink);
+}
+.activity-cell.is-empty { background: transparent; }
+.activity-cell.is-today { border: 2px solid var(--accent-deep); background: var(--surface); }
+.activity-streak { display: flex; align-items: center; gap: 8px; margin-top: 18px; font-size: .95rem; color: var(--ink); }
+.activity-streak .flame { font-size: 1.3rem; }
+.activity-streak strong { font-family: var(--font-display); font-size: 1.1rem; }
+
+/* -- words per day -- */
+.words-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 22px; }
+@media (min-width: 640px) { .words-stats { grid-template-columns: repeat(4, 1fr); } }
+.stat-box {
+  border: 1.5px solid var(--stroke); border-radius: 14px; padding: 14px 14px 12px;
+  background: var(--tint);
+}
+.stat-box .stat-top { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.stat-box .stat-icon { font-size: 1.05rem; }
+.stat-box .stat-label { font-size: .8rem; color: var(--muted); font-weight: 700; }
+.stat-box .stat-value { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; color: var(--ink); }
+.stat-box .stat-unit { font-size: .78rem; color: var(--muted); }
+
+.words-chart-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; border-top: 1px dashed var(--line); padding-top: 18px; margin-top: 4px; }
+.words-chart-head h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 4px; color: var(--ink); }
+.words-chart-head p { margin: 0; font-size: .85rem; color: var(--muted); }
+.chart-legend { display: flex; gap: 14px; font-size: .8rem; color: var(--muted); font-weight: 700; }
+.chart-legend .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+.chart-legend .dot.known { background: var(--leaf-green); }
+.chart-legend .dot.review { background: var(--yellow); }
+
+.words-chart { display: flex; align-items: flex-end; gap: 14px; height: 160px; margin-top: 22px; padding: 0 4px; }
+.chart-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 8px; }
+.chart-bars { width: 100%; max-width: 34px; display: flex; flex-direction: column-reverse; gap: 2px; flex: 1; justify-content: flex-start; align-items: stretch; }
+.chart-bar { width: 100%; border-radius: 4px 4px 0 0; background: var(--tint); border: 1.5px solid var(--stroke); border-bottom: none; min-height: 0; }
+.chart-bar.known { background: var(--leaf-green); }
+.chart-bar.review { background: var(--yellow); }
+.chart-baseline { width: 100%; max-width: 34px; height: 3px; background: var(--stroke); border-radius: 2px; }
+.chart-col .day-label { font-size: .74rem; font-weight: 700; color: var(--muted); text-transform: uppercase; }
