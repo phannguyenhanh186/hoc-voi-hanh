@@ -64,7 +64,7 @@ a { color: var(--accent-deep); text-decoration: none; }
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 10001; /* phải cao hơn widget Pomodoro nổi (z-index: 9999) để menu tài khoản luôn bắt được click */
   background: var(--bg);
   padding: 14px 0;
 }
@@ -444,7 +444,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .account-menu.is-open .account-chevron { transform: rotate(180deg); }
 
 .account-dropdown {
-  position: absolute; top: calc(100% + 12px); right: 0; z-index: 20;
+  position: absolute; top: calc(100% + 12px); right: 0; z-index: 10000;
   width: min(320px, 88vw);
   background: var(--surface); border: 2px solid var(--stroke); border-radius: 22px;
   padding: 16px; box-shadow: 6px 6px 0 0 var(--stroke);
