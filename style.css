@@ -468,11 +468,32 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   width: 34px; height: 34px; border-radius: 10px;
   background: var(--surface); border: 1.5px solid var(--stroke); color: var(--accent-deep);
 }
-.account-footer {
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-  margin-top: 8px; padding-top: 12px; border-top: 1px dotted var(--line);
-  font-size: .74rem; font-weight: 600; letter-spacing: .03em; color: var(--muted); text-transform: uppercase;
+/* ---------- Delete account (danger zone) ---------- */
+.account-danger { margin-top: 4px; padding-top: 8px; border-top: 1px dotted var(--line); }
+.account-action-danger { color: #C4302B; }
+.account-action-danger:hover { background: #FDEAEA; color: #C4302B; }
+.action-icon-danger { color: #C4302B; border-color: #C4302B; }
+.delete-confirm {
+  margin: 6px 6px 0; padding: 12px; background: #FDEAEA;
+  border: 1.5px solid #C4302B; border-radius: 12px;
 }
+.delete-confirm-text { margin: 0 0 10px; font-size: .8rem; color: #7A201D; line-height: 1.45; }
+.delete-confirm input[type="password"] {
+  width: 100%; padding: 8px 10px; margin-bottom: 8px;
+  border: 1.5px solid var(--stroke); border-radius: 10px;
+  font-family: var(--font-body); font-size: .88rem; background: var(--surface); color: var(--ink);
+}
+.delete-confirm .msg { font-size: .78rem; margin: 0 0 8px; min-height: 0; }
+.delete-confirm .msg.error { color: #C4302B; font-weight: 700; }
+.delete-confirm-actions { display: flex; gap: 8px; }
+.btn-mini {
+  flex: 1; font-family: var(--font-display); font-weight: 700; font-size: .82rem;
+  border-radius: 999px; padding: 8px 10px; border: 1.5px solid var(--stroke); cursor: pointer;
+}
+.btn-mini-ghost { background: var(--surface); color: var(--ink); }
+.btn-mini-danger { background: #C4302B; color: #fff; border-color: #7A201D; }
+.btn-mini-danger:disabled { opacity: .6; cursor: default; }
+.btn-mini:hover:not(:disabled) { filter: brightness(1.05); }
 
 .landing-hero-c { text-align: center; padding: 54px 0 8px; }
 .landing-hero-c h1 {
