@@ -1207,3 +1207,81 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .vocab-num { font-family: var(--font-display); font-weight: 700; font-size: 1.8rem; color: var(--ink); line-height: 1; }
 .vocab-word { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--ink); min-height: 1.3em; }
 .vocab-item.playing .vocab-num { color: var(--accent-deep); }
+
+/* ============================================================
+   How this works — "Where technology meets education" +
+   Learning Path (mầm/chồi/cành/lá)
+   ============================================================ */
+.how-hero { text-align: center; padding: 40px 0 6px; }
+.how-hero h1 {
+  font-family: var(--font-display); font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.15; letter-spacing: -.4px; margin: 0 auto 12px; max-width: 22ch; color: var(--ink);
+}
+.how-hero p { color: var(--muted); margin: 0 auto; max-width: 54ch; }
+
+/* ---- dark "tech meets education" card ---- */
+.tech-edu-card {
+  background: #14141C; color: #fff;
+  border: 2px solid var(--stroke); border-radius: 28px;
+  padding: 42px 24px; margin: 40px 0;
+  box-shadow: 6px 6px 0 0 var(--stroke);
+}
+.tech-edu-eyebrow {
+  display: inline-block; font-family: var(--font-display); font-weight: 700;
+  font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+  color: #14141C; background: var(--yellow); border: 1.5px solid var(--stroke);
+  border-radius: 999px; padding: 6px 16px; margin: 0 auto 34px; display: table;
+}
+.tech-feature-list { display: flex; flex-direction: column; gap: 30px; max-width: 640px; margin: 0 auto; }
+.tech-feature { display: flex; align-items: flex-start; gap: 18px; }
+.tech-feature-icon {
+  flex: none; width: 52px; height: 52px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid var(--stroke); color: #14141C;
+}
+.tech-feature:nth-child(1) .tech-feature-icon { background: var(--pink); }
+.tech-feature:nth-child(2) .tech-feature-icon { background: var(--blue); }
+.tech-feature:nth-child(3) .tech-feature-icon { background: var(--yellow); }
+.tech-feature h2 {
+  font-family: var(--font-display); font-size: 1.18rem; font-weight: 700;
+  margin: 4px 0 6px; color: #fff; letter-spacing: -.2px;
+}
+.tech-feature p { margin: 0; color: #C7C6D6; font-size: .95rem; line-height: 1.55; }
+
+/* ---- Learning path: horizontally scrollable level cards ---- */
+.path-section-head { text-align: center; margin-bottom: 26px; }
+.path-section-head h2 {
+  font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2rem);
+  margin: 0 auto 8px; max-width: 24ch; letter-spacing: -.3px; color: var(--ink);
+}
+.level-scroll {
+  display: flex; gap: 14px; overflow-x: auto; padding: 4px 4px 14px;
+  scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch;
+}
+.level-scroll::-webkit-scrollbar { height: 6px; }
+.level-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
+.level-pill-card {
+  flex: 0 0 auto; scroll-snap-align: start;
+  width: 230px; min-height: 168px;
+  border: 2px solid var(--stroke); border-radius: 20px;
+  padding: 18px 18px 16px; color: #fff;
+  display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: 5px 5px 0 0 var(--stroke);
+}
+.level-pill-card.lvl-1 { background: var(--yellow-border); }
+.level-pill-card.lvl-2 { background: var(--blue-border); }
+.level-pill-card.lvl-3 { background: var(--leaf-green); }
+.level-pill-card.lvl-4 { background: var(--pink-border); }
+.level-eyebrow { font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .85; }
+.level-word { font-family: var(--font-display); font-size: 2rem; font-weight: 700; margin: 6px 0 4px; letter-spacing: .02em; }
+.level-tagline { font-size: .88rem; line-height: 1.4; margin: 0; opacity: .95; }
+.scroll-hint {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--surface); border: 1.5px solid var(--stroke); border-radius: 999px;
+  padding: 12px 20px; font-family: var(--font-display); font-weight: 700; font-size: .9rem;
+  color: var(--ink); max-width: 340px; margin: 6px auto 0;
+}
+@media (min-width: 760px) {
+  .level-scroll { overflow-x: visible; flex-wrap: wrap; justify-content: center; }
+  .scroll-hint { display: none; }
+}
