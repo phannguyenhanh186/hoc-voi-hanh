@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Luyện bài — Đăng nhập &amp; Tiến độ</title>
+
+<!-- ========================================================= -->
+<!--  FIREBASE SDK (phiên bản compat — dễ dùng, không cần build tool) -->
+<!-- ========================================================= -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<style>
+  :root{
+    --ink:#1c2333;
+    --ink-soft:#4a5268;
+    --paper:#f7f6f2;
+    --paper-raised:#ffffff;
+    --line:#dcd9d0;
+    --accent:#c8781f;
+    --accent-soft:#f2e2cf;
+    --good:#2f6f52;
+    --good-soft:#e2efe6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+  }
+  .shell{
+    max-width:560px;
+    margin:0 auto;
+    padding:48px 20px 80px;
+  }
+  h1{
+    font-size:1.5rem;
+    font-weight:700;
+    margin:0 0 4px;
+    letter-spacing:-0.01em;
+  }
+  .subtitle{
+    color:var(--ink-soft);
+    font-size:0.95rem;
+    margin:0 0 32px;
+  }
+  .panel{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:24px;
+    margin-bottom:20px;
+  }
+  label{
+    display:block;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    margin:14px 0 6px;
+  }
+  label:first-child{ margin-top:0; }
+  input[type=email], input[type=password], input[type=text]{
+    width:100%;
+    padding:10px 12px;
+    border:1px solid var(--line);
+    border-radius:7px;
+    font-size:0.95rem;
+    background:var(--paper);
+    color:var(--ink);
+  }
+  input:focus{
+    outline:2px solid var(--accent);
+    outline-offset:1px;
+  }
+  .row{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+  }
+  button{
+    cursor:pointer;
+    border:none;
+    border-radius:7px;
+    padding:10px 16px;
+    font-size:0.9rem;
+    font-weight:600;
+  }
+  .btn-primary{
+    background:var(--accent);
+    color:#fff;
+    flex:1;
+  }
+  .btn-primary:hover{ background:#b3691a; }
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+    flex:1;
+  }
+  .btn-ghost:hover{ background:var(--paper); }
+  .msg{
+    font-size:0.85rem;
+    margin-top:12px;
+    padding:8px 10px;
+    border-radius:6px;
+  }
+  .msg.error{ background:#fbeaea; color:#a3342a; }
+  .msg.ok{ background:var(--good-soft); color:var(--good); }
+  .hidden{ display:none !important; }
+
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+  }
+  .who{ font-size:0.9rem; color:var(--ink-soft); }
+  .who b{ color:var(--ink); }
+  .logout{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    padding:6px 12px;
+    font-size:0.82rem;
+    font-weight:500;
+  }
+  .logout:hover{ background:var(--paper); }
+
+  .lesson{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .lesson:last-child{ border-bottom:none; }
+  .lesson-name{ font-weight:600; font-size:0.95rem; }
+  .lesson-meta{ font-size:0.8rem; color:var(--ink-soft); margin-top:2px; }
+  .tag{
+    font-size:0.78rem;
+    font-weight:600;
+    padding:4px 10px;
+    border-radius:99px;
+  }
+  .tag.done{ background:var(--good-soft); color:var(--good); }
+  .tag.todo{ background:var(--accent-soft); color:var(--accent); }
+  .lesson-action{ display:flex; align-items:center; gap:10px; }
+  .mark-btn{
+    background:var(--ink);
+    color:#fff;
+    padding:6px 12px;
+    font-size:0.8rem;
+  }
+  .mark-btn:hover{ background:#000; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ============ MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ ============ -->
+  <div id="auth-screen">
+    <h1>Luyện bài</h1>
+    <p class="subtitle">Đăng nhập để lưu lại tiến độ làm bài của bạn.</p>
+
+    <div class="panel">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="ban@vidu.com" />
+
+      <label for="password">Mật khẩu</label>
+      <input type="password" id="password" placeholder="Tối thiểu 6 ký tự" />
+
+      <div class="row">
+        <button class="btn-primary" onclick="dangNhap()">Đăng nhập</button>
+        <button class="btn-ghost" onclick="dangKy()">Tạo tài khoản</button>
+      </div>
+
+      <div id="auth-msg"></div>
+    </div>
+  </div>
+
+  <!-- ============ MÀN HÌNH SAU KHI ĐĂNG NHẬP ============ -->
+  <div id="app-screen" class="hidden">
+    <div class="topbar">
+      <div class="who">Xin chào, <b id="user-email"></b></div>
+      <button class="logout" onclick="dangXuat()">Đăng xuất</button>
+    </div>
+
+    <div class="panel">
+      <div id="lesson-list"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* =========================================================
+   1) CẤU HÌNH FIREBASE
+   -----------------------------------------------------------
+   Thay các giá trị bên dưới bằng thông tin project Firebase
+   của bạn: vào https://console.firebase.google.com
+   -> Tạo project -> Project settings -> "Your apps" -> Web app
+   -> Bật Authentication (Email/Password) và Firestore Database.
+========================================================= */
+const firebaseConfig = {
+  apiKey: "DÁN_API_KEY_CỦA_BẠN",
+  authDomain: "DAN-PROJECT-ID.firebaseapp.com",
+  projectId: "DAN-PROJECT-ID",
+  storageBucket: "DAN-PROJECT-ID.appspot.com",
+  messagingSenderId: "DÁN_SENDER_ID",
+  appId: "DÁN_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+/* =========================================================
+   2) DANH SÁCH BÀI HỌC — sửa lại cho đúng nội dung của bạn
+========================================================= */
+const DANH_SACH_BAI = [
+  { id: "bai1", ten: "Bài 1 — Giới thiệu" },
+  { id: "bai2", ten: "Bài 2 — Ngữ pháp cơ bản" },
+  { id: "bai3", ten: "Bài 3 — Bài tập thực hành" },
+  { id: "bai4", ten: "Bài 4 — Kiểm tra cuối chương" }
+];
+
+let uidHienTai = null;
+let tienDoHienTai = {};
+
+/* =========================================================
+   3) ĐĂNG KÝ / ĐĂNG NHẬP / ĐĂNG XUẤT
+========================================================= */
+function hienThiLoi(text) {
+  const el = document.getElementById("auth-msg");
+  el.innerHTML = `<div class="msg error">${text}</div>`;
+}
+
+function dangKy() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  if (!email || !password) return hienThiLoi("Vui lòng nhập email và mật khẩu.");
+
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(cred => {
+      // Tạo document user trống ban đầu trong Firestore
+      return db.collection("users").doc(cred.user.uid).set({
+        email: email,
+        progress: {}
+      });
+    })
+    .catch(err => hienThiLoi(dichLoi(err)));
+}
+
+function dangNhap() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  if (!email || !password) return hienThiLoi("Vui lòng nhập email và mật khẩu.");
+
+  auth.signInWithEmailAndPassword(email, password)
+    .catch(err => hienThiLoi(dichLoi(err)));
+}
+
+function dangXuat() {
+  auth.signOut();
+}
+
+function dichLoi(err) {
+  const map = {
+    "auth/email-already-in-use": "Email này đã được đăng ký.",
+    "auth/invalid-email": "Email không hợp lệ.",
+    "auth/weak-password": "Mật khẩu cần ít nhất 6 ký tự.",
+    "auth/user-not-found": "Không tìm thấy tài khoản với email này.",
+    "auth/wrong-password": "Sai mật khẩu.",
+    "auth/invalid-credential": "Email hoặc mật khẩu không đúng."
+  };
+  return map[err.code] || ("Có lỗi xảy ra: " + err.message);
+}
+
+/* =========================================================
+   4) THEO DÕI TRẠNG THÁI ĐĂNG NHẬP
+========================================================= */
+auth.onAuthStateChanged(user => {
+  if (user) {
+    uidHienTai = user.uid;
+    document.getElementById("auth-screen").classList.add("hidden");
+    document.getElementById("app-screen").classList.remove("hidden");
+    document.getElementById("user-email").textContent = user.email;
+    taiTienDo();
+  } else {
+    uidHienTai = null;
+    document.getElementById("app-screen").classList.add("hidden");
+    document.getElementById("auth-screen").classList.remove("hidden");
+  }
+});
+
+/* =========================================================
+   5) ĐỌC / GHI TIẾN ĐỘ TỪ FIRESTORE
+========================================================= */
+function taiTienDo() {
+  db.collection("users").doc(uidHienTai).get()
+    .then(doc => {
+      tienDoHienTai = (doc.exists && doc.data().progress) ? doc.data().progress : {};
+      veLaiDanhSachBai();
+    })
+    .catch(err => console.error("Lỗi khi tải tiến độ:", err));
+}
+
+function danhDauHoanThanh(baiId) {
+  tienDoHienTai[baiId] = {
+    done: true,
+    date: new Date().toISOString()
+  };
+
+  db.collection("users").doc(uidHienTai)
+    .set({ progress: tienDoHienTai }, { merge: true })
+    .then(() => veLaiDanhSachBai())
+    .catch(err => console.error("Lỗi khi lưu tiến độ:", err));
+}
+
+/* =========================================================
+   6) VẼ GIAO DIỆN DANH SÁCH BÀI
+========================================================= */
+function veLaiDanhSachBai() {
+  const container = document.getElementById("lesson-list");
+  container.innerHTML = "";
+
+  DANH_SACH_BAI.forEach(bai => {
+    const daXong = tienDoHienTai[bai.id] && tienDoHienTai[bai.id].done;
+    const ngay = daXong ? new Date(tienDoHienTai[bai.id].date).toLocaleDateString("vi-VN") : null;
+
+    const div = document.createElement("div");
+    div.className = "lesson";
+    div.innerHTML = `
+      <div>
+        <div class="lesson-name">${bai.ten}</div>
+        <div class="lesson-meta">${daXong ? "Hoàn thành ngày " + ngay : "Chưa làm"}</div>
+      </div>
+      <div class="lesson-action">
+        <span class="tag ${daXong ? "done" : "todo"}">${daXong ? "Đã xong" : "Chưa xong"}</span>
+        ${daXong ? "" : `<button class="mark-btn" onclick="danhDauHoanThanh('${bai.id}')">Đánh dấu xong</button>`}
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+</script>
+</body>
+</html>
