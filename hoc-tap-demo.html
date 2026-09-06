@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Luyện bài — Đăng nhập &amp; Tiến độ</title>
+<title>Sign in &amp; Progress — hoc voi hanh</title>
 
 <!-- ========================================================= -->
 <!--  FIREBASE SDK (phiên bản compat — dễ dùng, không cần build tool) -->
@@ -155,38 +155,82 @@
     font-size:0.8rem;
   }
   .mark-btn:hover{ background:#000; }
+
+  .switch-link{
+    font-size:0.87rem;
+    color:var(--ink-soft);
+    margin:16px 0 0;
+    text-align:center;
+  }
+  .switch-link a{
+    color:var(--accent);
+    font-weight:600;
+    text-decoration:none;
+  }
+  .switch-link a:hover{ text-decoration:underline; }
 </style>
 </head>
 <body>
 
 <div class="shell">
 
-  <!-- ============ MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ ============ -->
+  <!-- ============ SIGN IN / CREATE ACCOUNT SCREENS ============ -->
   <div id="auth-screen">
-    <h1 id="auth-title">Luyện bài</h1>
-    <p class="subtitle" id="auth-subtitle">Đăng nhập để lưu lại tiến độ làm bài của bạn.</p>
 
-    <div class="panel">
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="ban@vidu.com" />
+    <!-- ---- Sign in ---- -->
+    <div id="view-signin">
+      <h1>Sign in</h1>
+      <p class="subtitle">Sign in to save your progress.</p>
 
-      <label for="password">Mật khẩu</label>
-      <input type="password" id="password" placeholder="Tối thiểu 6 ký tự" />
+      <div class="panel">
+        <label for="signin-email">Email</label>
+        <input type="email" id="signin-email" placeholder="email@example.com" />
 
-      <div class="row">
-        <button class="btn-primary" id="btn-login" onclick="dangNhap()">Đăng nhập</button>
-        <button class="btn-ghost" id="btn-signup" onclick="dangKy()">Tạo tài khoản</button>
+        <label for="signin-password">Password</label>
+        <input type="password" id="signin-password" placeholder="At least 6 characters" />
+
+        <div class="row">
+          <button class="btn-primary" onclick="dangNhap()">Sign in</button>
+        </div>
+
+        <p class="switch-link">New here? <a href="#" onclick="showView('signup'); return false;">Create your new account</a></p>
+
+        <div id="signin-msg"></div>
       </div>
-
-      <div id="auth-msg"></div>
     </div>
+
+    <!-- ---- Create account ---- -->
+    <div id="view-signup" class="hidden">
+      <h1>Create your account</h1>
+      <p class="subtitle">Create an account to save your progress and get a personalized learning path.</p>
+
+      <div class="panel">
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" placeholder="username123" />
+
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" placeholder="email@example.com" />
+
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" placeholder="At least 6 characters" />
+
+        <div class="row">
+          <button class="btn-primary" onclick="dangKy()">Create account</button>
+        </div>
+
+        <p class="switch-link">Already have an account? <a href="#" onclick="showView('signin'); return false;">Sign in</a></p>
+
+        <div id="signup-msg"></div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- ============ MÀN HÌNH SAU KHI ĐĂNG NHẬP ============ -->
+  <!-- ============ SCREEN AFTER SIGN IN ============ -->
   <div id="app-screen" class="hidden">
     <div class="topbar">
-      <div class="who">Xin chào, <b id="user-email"></b></div>
-      <button class="logout" onclick="dangXuat()">Đăng xuất</button>
+      <div class="who">Welcome, <b id="user-email"></b></div>
+      <button class="logout" onclick="dangXuat()">Sign out</button>
     </div>
 
     <div class="panel">
@@ -223,75 +267,75 @@ const db = firebase.firestore();
    2) DANH SÁCH BÀI HỌC — sửa lại cho đúng nội dung của bạn
 ========================================================= */
 const DANH_SACH_BAI = [
-  { id: "bai1", ten: "Bài 1 — Giới thiệu" },
-  { id: "bai2", ten: "Bài 2 — Ngữ pháp cơ bản" },
-  { id: "bai3", ten: "Bài 3 — Bài tập thực hành" },
-  { id: "bai4", ten: "Bài 4 — Kiểm tra cuối chương" }
+  { id: "bai1", ten: "Lesson 1 — Introduction" },
+  { id: "bai2", ten: "Lesson 2 — Basic grammar" },
+  { id: "bai3", ten: "Lesson 3 — Practice exercises" },
+  { id: "bai4", ten: "Lesson 4 — Chapter test" }
 ];
 
 let uidHienTai = null;
 let tienDoHienTai = {};
 
 /* =========================================================
-   0) NHẬN Ý ĐỊNH TỪ URL (?mode=signup / ?mode=login)
+   0) CHUYỂN GIỮA 2 VIEW (Sign in / Create account)
    -----------------------------------------------------------
    Cho phép trang chủ liên kết thẳng tới đúng thao tác:
-   hoc-tap-demo.html?mode=signup  -> làm nổi bật "Tạo tài khoản"
-   hoc-tap-demo.html?mode=login   -> làm nổi bật "Đăng nhập"
+   hoc-tap-demo.html?mode=signup  -> mở màn Create account
+   hoc-tap-demo.html?mode=login   -> mở màn Sign in (mặc định)
 ========================================================= */
+function showView(view) {
+  const isSignup = view === "signup";
+  document.getElementById("view-signin").classList.toggle("hidden", isSignup);
+  document.getElementById("view-signup").classList.toggle("hidden", !isSignup);
+
+  const url = new URL(location.href);
+  url.searchParams.set("mode", isSignup ? "signup" : "login");
+  history.replaceState(null, "", url);
+
+  const focusId = isSignup ? "signup-username" : "signin-email";
+  document.getElementById(focusId).focus();
+}
+
 (function apDungCheDo() {
   const mode = new URLSearchParams(location.search).get("mode");
-  const title = document.getElementById("auth-title");
-  const subtitle = document.getElementById("auth-subtitle");
-  const btnLogin = document.getElementById("btn-login");
-  const btnSignup = document.getElementById("btn-signup");
-
-  if (mode === "signup") {
-    title.textContent = "Tạo tài khoản mới";
-    subtitle.textContent = "Tạo tài khoản để lưu lại tiến độ và lộ trình học của bạn.";
-    btnSignup.classList.add("btn-primary");
-    btnSignup.classList.remove("btn-ghost");
-    btnLogin.classList.add("btn-ghost");
-    btnLogin.classList.remove("btn-primary");
-  } else if (mode === "login") {
-    title.textContent = "Đăng nhập";
-    subtitle.textContent = "Đăng nhập để lưu lại tiến độ làm bài của bạn.";
-  }
-
-  document.getElementById("email").focus();
+  showView(mode === "signup" ? "signup" : "signin");
 })();
 
 /* =========================================================
    3) ĐĂNG KÝ / ĐĂNG NHẬP / ĐĂNG XUẤT
 ========================================================= */
-function hienThiLoi(text) {
-  const el = document.getElementById("auth-msg");
+function hienThiLoi(targetId, text) {
+  const el = document.getElementById(targetId);
   el.innerHTML = `<div class="msg error">${text}</div>`;
 }
 
 function dangKy() {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
-  if (!email || !password) return hienThiLoi("Vui lòng nhập email và mật khẩu.");
+  const username = document.getElementById("signup-username").value.trim();
+  const email = document.getElementById("signup-email").value.trim();
+  const password = document.getElementById("signup-password").value;
+  if (!username || !email || !password) {
+    return hienThiLoi("signup-msg", "Please fill in username, email, and password.");
+  }
 
   auth.createUserWithEmailAndPassword(email, password)
     .then(cred => {
-      // Tạo document user trống ban đầu trong Firestore
-      return db.collection("users").doc(cred.user.uid).set({
-        email: email,
-        progress: {}
-      });
+      return cred.user.updateProfile({ displayName: username })
+        .then(() => db.collection("users").doc(cred.user.uid).set({
+          username: username,
+          email: email,
+          progress: {}
+        }));
     })
-    .catch(err => hienThiLoi(dichLoi(err)));
+    .catch(err => hienThiLoi("signup-msg", dichLoi(err)));
 }
 
 function dangNhap() {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
-  if (!email || !password) return hienThiLoi("Vui lòng nhập email và mật khẩu.");
+  const email = document.getElementById("signin-email").value.trim();
+  const password = document.getElementById("signin-password").value;
+  if (!email || !password) return hienThiLoi("signin-msg", "Please enter your email and password.");
 
   auth.signInWithEmailAndPassword(email, password)
-    .catch(err => hienThiLoi(dichLoi(err)));
+    .catch(err => hienThiLoi("signin-msg", dichLoi(err)));
 }
 
 function dangXuat() {
@@ -300,14 +344,14 @@ function dangXuat() {
 
 function dichLoi(err) {
   const map = {
-    "auth/email-already-in-use": "Email này đã được đăng ký.",
-    "auth/invalid-email": "Email không hợp lệ.",
-    "auth/weak-password": "Mật khẩu cần ít nhất 6 ký tự.",
-    "auth/user-not-found": "Không tìm thấy tài khoản với email này.",
-    "auth/wrong-password": "Sai mật khẩu.",
-    "auth/invalid-credential": "Email hoặc mật khẩu không đúng."
+    "auth/email-already-in-use": "This email is already registered.",
+    "auth/invalid-email": "Invalid email address.",
+    "auth/weak-password": "Password must be at least 6 characters.",
+    "auth/user-not-found": "No account found with this email.",
+    "auth/wrong-password": "Incorrect password.",
+    "auth/invalid-credential": "Incorrect email or password."
   };
-  return map[err.code] || ("Có lỗi xảy ra: " + err.message);
+  return map[err.code] || ("Something went wrong: " + err.message);
 }
 
 /* =========================================================
@@ -336,7 +380,7 @@ function taiTienDo() {
       tienDoHienTai = (doc.exists && doc.data().progress) ? doc.data().progress : {};
       veLaiDanhSachBai();
     })
-    .catch(err => console.error("Lỗi khi tải tiến độ:", err));
+    .catch(err => console.error("Error loading progress:", err));
 }
 
 function danhDauHoanThanh(baiId) {
@@ -348,7 +392,7 @@ function danhDauHoanThanh(baiId) {
   db.collection("users").doc(uidHienTai)
     .set({ progress: tienDoHienTai }, { merge: true })
     .then(() => veLaiDanhSachBai())
-    .catch(err => console.error("Lỗi khi lưu tiến độ:", err));
+    .catch(err => console.error("Error saving progress:", err));
 }
 
 /* =========================================================
@@ -360,18 +404,18 @@ function veLaiDanhSachBai() {
 
   DANH_SACH_BAI.forEach(bai => {
     const daXong = tienDoHienTai[bai.id] && tienDoHienTai[bai.id].done;
-    const ngay = daXong ? new Date(tienDoHienTai[bai.id].date).toLocaleDateString("vi-VN") : null;
+    const ngay = daXong ? new Date(tienDoHienTai[bai.id].date).toLocaleDateString("en-US") : null;
 
     const div = document.createElement("div");
     div.className = "lesson";
     div.innerHTML = `
       <div>
         <div class="lesson-name">${bai.ten}</div>
-        <div class="lesson-meta">${daXong ? "Hoàn thành ngày " + ngay : "Chưa làm"}</div>
+        <div class="lesson-meta">${daXong ? "Completed on " + ngay : "Not started"}</div>
       </div>
       <div class="lesson-action">
-        <span class="tag ${daXong ? "done" : "todo"}">${daXong ? "Đã xong" : "Chưa xong"}</span>
-        ${daXong ? "" : `<button class="mark-btn" onclick="danhDauHoanThanh('${bai.id}')">Đánh dấu xong</button>`}
+        <span class="tag ${daXong ? "done" : "todo"}">${daXong ? "Done" : "Not done"}</span>
+        ${daXong ? "" : `<button class="mark-btn" onclick="danhDauHoanThanh('${bai.id}')">Mark as done</button>`}
       </div>
     `;
     container.appendChild(div);
