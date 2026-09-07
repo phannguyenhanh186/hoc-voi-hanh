@@ -1350,6 +1350,52 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .stat-box .stat-value { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; color: var(--ink); }
 .stat-box .stat-unit { font-size: .78rem; color: var(--muted); }
 
+/* -- stat boxes are clickable: open the word-list modal -- */
+.stat-box[data-status] { cursor: pointer; transition: transform .12s ease, box-shadow .12s ease; }
+.stat-box[data-status]:hover { transform: translateY(-2px); box-shadow: 3px 3px 0 0 var(--stroke); }
+.stat-box[data-status]:active { transform: translateY(0); box-shadow: none; }
+
+/* -- word-list modal -- */
+.word-modal-overlay {
+  position: fixed; inset: 0; background: rgba(20, 20, 30, .45);
+  display: none; align-items: center; justify-content: center; padding: 20px; z-index: 200;
+}
+.word-modal-overlay.is-open { display: flex; }
+.word-modal {
+  width: 100%; max-width: 460px; max-height: 78vh;
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--surface); border: 2px solid var(--stroke); border-radius: 22px;
+  box-shadow: 6px 6px 0 0 var(--stroke);
+}
+.word-modal-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 18px 20px; border-bottom: 1px dashed var(--line);
+}
+.word-modal-head h3 { margin: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); }
+.word-modal-count { font-size: .78rem; color: var(--muted); font-weight: 700; }
+.word-modal-close {
+  border: 1.5px solid var(--stroke); background: var(--tint); border-radius: 50%;
+  width: 30px; height: 30px; min-width: 30px; font-size: .9rem; cursor: pointer; color: var(--ink);
+  display: flex; align-items: center; justify-content: center; line-height: 1;
+}
+.word-modal-close:hover { background: var(--yellow); }
+.word-modal-body { padding: 8px 12px 16px; overflow-y: auto; }
+.word-modal-empty, .word-modal-loading {
+  padding: 30px 10px; text-align: center; color: var(--muted); font-size: .9rem;
+}
+.word-modal-lesson {
+  font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--muted); margin: 16px 8px 4px;
+}
+.word-modal-lesson:first-child { margin-top: 8px; }
+.word-row {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  padding: 10px 8px; border-radius: 12px;
+}
+.word-row:hover { background: var(--tint); }
+.word-row .word-vi { font-weight: 700; color: var(--ink); }
+.word-row .word-en { color: var(--muted); font-size: .88rem; text-align: right; }
+
 .words-chart-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; border-top: 1px dashed var(--line); padding-top: 18px; margin-top: 4px; }
 .words-chart-head h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 4px; color: var(--ink); }
 .words-chart-head p { margin: 0; font-size: .85rem; color: var(--muted); }
