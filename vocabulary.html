@@ -42,6 +42,34 @@
     const $backLink = document.getElementById('back-link');
     $backLink.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
 
+    // ---------- Trạng thái từ vựng (dùng cho hub "words learned" và trang My profile) ----------
+    // seenWords     -> từ đã từng hiện ra ở flashcard ("đã thêm" vào vòng ôn tập)
+    // learnedWords  -> từ đã bấm "Remembered" (đã có sẵn key này, lesson.html hub đọc từ đây)
+    // quizFlag      -> kết quả quiz gần nhất của từng từ (true = đúng, false = sai)
+    const seenWordsKey = 'seenWords:' + level + ':' + itemId;
+    let seenWords = {};
+    try { seenWords = JSON.parse(localStorage.getItem(seenWordsKey) || 'null') || {}; } catch (e) { seenWords = {}; }
+
+    const learnedWordsKey = 'learnedWords:' + level + ':' + itemId;
+    let learnedWords = {};
+    try { learnedWords = JSON.parse(localStorage.getItem(learnedWordsKey) || 'null') || {}; } catch (e) { learnedWords = {}; }
+
+    const quizFlagKey = 'quizFlag:' + level + ':' + itemId;
+    let quizFlags = {};
+    try { quizFlags = JSON.parse(localStorage.getItem(quizFlagKey) || 'null') || {}; } catch (e) { quizFlags = {}; }
+
+    function markWordSeen(wordId) {
+      if (!wordId || seenWords[wordId]) return;
+      seenWords[wordId] = true;
+      try { localStorage.setItem(seenWordsKey, JSON.stringify(seenWords)); } catch (e) {}
+    }
+
+    function markWordQuizResult(wordId, correct) {
+      if (!wordId) return;
+      quizFlags[wordId] = !!correct;
+      try { localStorage.setItem(quizFlagKey, JSON.stringify(quizFlags)); } catch (e) {}
+    }
+
     // Back về landing page (trang chọn kỹ năng) của đúng bài + cấp hiện tại
         function backToTabs() { location.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level); }
 
@@ -109,9 +137,8 @@
       const card = el('div', 'flash-card-simple');
       const ctrlRow = el('div', 'flash-controls-row');
       const forgetBtn = el('button', 'flash-ctrl-btn flash-ctrl-forget', 'Not remember');
-      const nextBtn = el('button', 'flash-ctrl-btn flash-ctrl-skip', 'Next');
       const rememberBtn = el('button', 'flash-ctrl-btn flash-ctrl-remember', 'Remembered');
-      forgetBtn.type = 'button'; nextBtn.type = 'button'; rememberBtn.type = 'button';
+      forgetBtn.type = 'button'; rememberBtn.type = 'button';
 
       const progressWrap = el('div', 'flash-progress-wrap');
       const progressLabel = el('div', 'flash-progress-label');
@@ -137,6 +164,7 @@
         card.className = 'flash-card-simple';
         card.innerHTML = '';
         const w = currentWord();
+        markWordSeen(w.id);
         card.appendChild(el('div', 'flash-word-simple', w.word));
         const iconRow = el('div', 'flash-icon-row');
         const playBtnEl = el('button', 'flash-round-btn'); playBtnEl.type = 'button'; playBtnEl.innerHTML = '▶';
@@ -204,9 +232,8 @@
 
       card.addEventListener('click', toggleFlip);
       forgetBtn.addEventListener('click', function () { goNext('forget'); });
-      nextBtn.addEventListener('click', function () { goNext('skip'); });
       rememberBtn.addEventListener('click', function () { goNext('remember'); });
-      ctrlRow.appendChild(forgetBtn); ctrlRow.appendChild(nextBtn); ctrlRow.appendChild(rememberBtn);
+      ctrlRow.appendChild(forgetBtn); ctrlRow.appendChild(rememberBtn);
 
       detachFlashKeydown();
       flashKeydownHandler = function (e) {
@@ -214,7 +241,6 @@
         if (e.code === 'Space') { e.preventDefault(); toggleFlip(); }
         else if (e.key === '1') { goNext('forget'); }
         else if (e.key === '2') { goNext('remember'); }
-        else if (e.key === 'ArrowRight') { goNext('skip'); }
       };
       document.addEventListener('keydown', flashKeydownHandler);
 
@@ -284,6 +310,7 @@
             answered = true;
             const ok = opt.id === w.id;
             btn.classList.add(ok ? 'opt-correct' : 'opt-wrong');
+            markWordQuizResult(w.id, ok);
             if (!ok) {
               Array.from(optWrap.children).forEach(function (c) {
                 if (c.textContent === w.meaning) c.classList.add('opt-correct');
