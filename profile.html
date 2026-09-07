@@ -59,22 +59,22 @@
         <p class="profile-card-label">📚 Vocabulary</p>
 
         <div class="words-stats">
-          <div class="stat-box">
+          <div class="stat-box" data-status="not_yet" tabindex="0" role="button" aria-label="Xem danh sách từ Not yet">
             <div class="stat-top"><span class="stat-icon">🕓</span><span class="stat-label">Not yet</span></div>
             <div class="stat-value" id="stat-notyet">0</div>
             <div class="stat-unit">cards</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-box" data-status="known" tabindex="0" role="button" aria-label="Xem danh sách từ Known">
             <div class="stat-top"><span class="stat-icon">✅</span><span class="stat-label">Known</span></div>
             <div class="stat-value" id="stat-known">0</div>
             <div class="stat-unit">cards</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-box" data-status="needs_reviewed" tabindex="0" role="button" aria-label="Xem danh sách từ Needs Reviewed">
             <div class="stat-top"><span class="stat-icon">🔁</span><span class="stat-label">Needs Reviewed</span></div>
             <div class="stat-value" id="stat-needs-reviewed">0</div>
             <div class="stat-unit">cards</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-box" data-status="mastered" tabindex="0" role="button" aria-label="Xem danh sách từ Mastered">
             <div class="stat-top"><span class="stat-icon">🏆</span><span class="stat-label">Mastered</span></div>
             <div class="stat-value" id="stat-mastered">0</div>
             <div class="stat-unit" id="stat-accuracy">— accuracy</div>
@@ -94,6 +94,18 @@
         <div class="words-chart" id="words-chart"></div>
       </section>
 
+    </div>
+
+    <!-- ============ Word-list modal (Not yet / Known / Needs Reviewed / Mastered) ============ -->
+    <div class="word-modal-overlay" id="word-modal-overlay">
+      <div class="word-modal" role="dialog" aria-modal="true" aria-labelledby="word-modal-title">
+        <div class="word-modal-head">
+          <h3 id="word-modal-title">Not yet</h3>
+          <span class="word-modal-count" id="word-modal-count"></span>
+          <button class="word-modal-close" id="word-modal-close" aria-label="Đóng">✕</button>
+        </div>
+        <div class="word-modal-body" id="word-modal-body"></div>
+      </div>
     </div>
   </main>
 
@@ -190,6 +202,10 @@
     // Known        = đã Remembered, quiz gần nhất không đúng
     // Needs Reviewed = chưa Remembered nhưng làm quiz bị sai
     // Mastered     = đã Remembered VÀ quiz gần nhất đúng
+    // wordsByStatus: { not_yet: [{level,itemId,wordId}], known: [...], ... }
+    // được buildVocabStats() điền lại mỗi lần chạy, và openWordListModal() đọc để hiển thị list.
+    const wordsByStatus = { not_yet: [], known: [], needs_reviewed: [], mastered: [] };
+
     function buildVocabStats() {
       const groups = {};
       for (let i = 0; i < localStorage.length; i++) {
@@ -210,9 +226,17 @@
       }
 
       const counts = { not_yet: 0, known: 0, needs_reviewed: 0, mastered: 0 };
+      wordsByStatus.not_yet = [];
+      wordsByStatus.known = [];
+      wordsByStatus.needs_reviewed = [];
+      wordsByStatus.mastered = [];
       let quizCorrect = 0, quizTotal = 0;
 
       Object.keys(groups).forEach((suffix) => {
+        // suffix có dạng "<level>:<itemId>"
+        const sepIdx = suffix.indexOf(':');
+        const level = sepIdx === -1 ? suffix : suffix.slice(0, sepIdx);
+        const itemId = sepIdx === -1 ? '' : suffix.slice(sepIdx + 1);
         const g = groups[suffix];
         const ids = new Set(Object.keys(g.seen).concat(Object.keys(g.learned), Object.keys(g.quiz)));
         ids.forEach((id) => {
@@ -224,6 +248,7 @@
           if (remembered) status = quizOk === true ? 'mastered' : 'known';
           else status = quizOk === false ? 'needs_reviewed' : 'not_yet';
           counts[status]++;
+          wordsByStatus[status].push({ level: level, itemId: itemId, wordId: id });
         });
       });
 
@@ -234,6 +259,120 @@
       const accEl = document.getElementById('stat-accuracy');
       accEl.textContent = quizTotal ? Math.round((quizCorrect / quizTotal) * 100) + '% accuracy' : '— accuracy';
     }
+
+    // ---------- Word-list modal ----------
+    const STATUS_LABELS = {
+      not_yet: 'Not yet',
+      known: 'Known',
+      needs_reviewed: 'Needs Reviewed',
+      mastered: 'Mastered'
+    };
+
+    const lessonCache = {}; // "<level>:<itemId>" -> Promise<item json | null>
+    const overlayEl = document.getElementById('word-modal-overlay');
+    const modalTitleEl = document.getElementById('word-modal-title');
+    const modalCountEl = document.getElementById('word-modal-count');
+    const modalBodyEl = document.getElementById('word-modal-body');
+    let modalRequestId = 0; // để bỏ qua kết quả trả về trễ khi mở nhanh nhiều modal khác nhau
+
+    function fetchLesson(level, itemId) {
+      const key = level + ':' + itemId;
+      if (!lessonCache[key]) {
+        lessonCache[key] = fetch(level + '/items/' + itemId + '.json', { cache: 'no-cache' })
+          .then((res) => (res.ok ? res.json() : null))
+          .catch(() => null);
+      }
+      return lessonCache[key];
+    }
+
+    function closeWordListModal() {
+      overlayEl.classList.remove('is-open');
+    }
+
+    function openWordListModal(status) {
+      const entries = wordsByStatus[status] || [];
+      modalTitleEl.textContent = STATUS_LABELS[status] || status;
+      modalCountEl.textContent = entries.length + (entries.length === 1 ? ' card' : ' cards');
+      overlayEl.classList.add('is-open');
+
+      if (!entries.length) {
+        modalBodyEl.innerHTML = '<p class="word-modal-empty">Chưa có từ nào ở trạng thái này.</p>';
+        return;
+      }
+
+      modalBodyEl.innerHTML = '<p class="word-modal-loading">Đang tải danh sách từ…</p>';
+
+      const requestId = ++modalRequestId;
+
+      // gộp theo (level,itemId) để chỉ fetch mỗi bài học một lần
+      const byLesson = {};
+      entries.forEach((e) => {
+        const key = e.level + ':' + e.itemId;
+        byLesson[key] = byLesson[key] || { level: e.level, itemId: e.itemId, wordIds: [] };
+        byLesson[key].wordIds.push(e.wordId);
+      });
+      const lessonKeys = Object.keys(byLesson);
+
+      Promise.all(lessonKeys.map((key) => fetchLesson(byLesson[key].level, byLesson[key].itemId)))
+        .then((lessonJsons) => {
+          if (requestId !== modalRequestId) return; // modal khác đã được mở sau đó, bỏ kết quả cũ
+
+          const sections = [];
+          lessonKeys.forEach((key, idx) => {
+            const lessonInfo = byLesson[key];
+            const lessonJson = lessonJsons[idx];
+            const vocabItems = (lessonJson && lessonJson.vocab && Array.isArray(lessonJson.vocab.items))
+              ? lessonJson.vocab.items : [];
+            const byId = {};
+            vocabItems.forEach((v) => { byId[v.id] = v; });
+
+            const rows = lessonInfo.wordIds
+              .map((wid) => byId[wid])
+              .filter(Boolean)
+              .sort((a, b) => a.word.localeCompare(b.word, 'vi'));
+
+            if (!rows.length) return; // không tìm thấy dữ liệu từ (VD: file bài học đã đổi/xóa)
+
+            sections.push({
+              title: (lessonJson && lessonJson.title) ? lessonJson.title : lessonInfo.itemId,
+              rows: rows
+            });
+          });
+
+          if (!sections.length) {
+            modalBodyEl.innerHTML = '<p class="word-modal-empty">Không tải được dữ liệu từ vựng.</p>';
+            return;
+          }
+
+          sections.sort((a, b) => a.title.localeCompare(b.title, 'vi'));
+
+          const html = sections.map((section) => {
+            const rowsHtml = section.rows.map((v) =>
+              '<div class="word-row"><span class="word-vi">' + escapeHtml(v.word) +
+              '</span><span class="word-en">' + escapeHtml(v.meaning || '') + '</span></div>'
+            ).join('');
+            return '<div class="word-modal-lesson">' + escapeHtml(section.title) + '</div>' + rowsHtml;
+          }).join('');
+
+          modalBodyEl.innerHTML = html;
+        });
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, (c) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[c]));
+    }
+
+    document.querySelectorAll('.stat-box[data-status]').forEach((box) => {
+      box.addEventListener('click', () => openWordListModal(box.dataset.status));
+      box.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openWordListModal(box.dataset.status); }
+      });
+    });
+    document.getElementById('word-modal-close').addEventListener('click', closeWordListModal);
+    overlayEl.addEventListener('click', (e) => { if (e.target === overlayEl) closeWordListModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeWordListModal(); });
 
     buildStreakWeek();
     buildActivityCalendar();
