@@ -15,11 +15,15 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <a class="back-link" href="index.html">← home</a>
+          <div id="account-widget-slot"></div>
         </div>
       </nav>
     </div>
   </header>
+
+  <div class="page-back-bar wrap">
+    <a class="back-link" href="index.html">← Back</a>
+  </div>
 
   <main class="wrap">
     <div class="lesson-head"><h1>About</h1></div>
@@ -33,5 +37,9 @@
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
   <script src="pomodoro.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="account-widget.js"></script>
 </body>
 </html>
