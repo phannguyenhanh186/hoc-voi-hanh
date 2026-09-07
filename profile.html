@@ -60,8 +60,9 @@
 
         <div class="words-stats">
           <div class="stat-box">
-            <div class="stat-top"><span class="stat-icon">➕</span><span class="stat-label">Words added</span></div>
-            <div class="stat-value" id="stat-added">0</div>
+            <div class="stat-top"><span class="stat-icon">🕓</span><span class="stat-label">Not yet</span></div>
+            <div class="stat-value" id="stat-notyet">0</div>
+            <div class="stat-unit">cards</div>
           </div>
           <div class="stat-box">
             <div class="stat-top"><span class="stat-icon">✅</span><span class="stat-label">Known</span></div>
@@ -69,13 +70,13 @@
             <div class="stat-unit">cards</div>
           </div>
           <div class="stat-box">
-            <div class="stat-top"><span class="stat-icon">❓</span><span class="stat-label">Not yet</span></div>
-            <div class="stat-value" id="stat-notyet">0</div>
+            <div class="stat-top"><span class="stat-icon">🔁</span><span class="stat-label">Needs Reviewed</span></div>
+            <div class="stat-value" id="stat-needs-reviewed">0</div>
             <div class="stat-unit">cards</div>
           </div>
           <div class="stat-box">
-            <div class="stat-top"><span class="stat-icon">🔁</span><span class="stat-label">Needs review</span></div>
-            <div class="stat-value" id="stat-review">0</div>
+            <div class="stat-top"><span class="stat-icon">🏆</span><span class="stat-label">Mastered</span></div>
+            <div class="stat-value" id="stat-mastered">0</div>
             <div class="stat-unit" id="stat-accuracy">— accuracy</div>
           </div>
         </div>
@@ -180,9 +181,64 @@
       }
     }
 
+    // ---------- Vocabulary stats (đọc từ localStorage, gộp từ mọi bài/level) ----------
+    // Trạng thái 1 từ được suy ra từ 2 nguồn lưu bởi vocabulary.html:
+    //   learnedWords:<level>:<itemId>  -> { wordId: true }         (đã bấm "Remembered")
+    //   quizFlag:<level>:<itemId>      -> { wordId: true|false }   (kết quả quiz gần nhất)
+    //   seenWords:<level>:<itemId>     -> { wordId: true }         (đã từng hiện flashcard)
+    // Not yet      = đã "thêm" (seen) nhưng chưa Remembered, và quiz gần nhất không sai
+    // Known        = đã Remembered, quiz gần nhất không đúng
+    // Needs Reviewed = chưa Remembered nhưng làm quiz bị sai
+    // Mastered     = đã Remembered VÀ quiz gần nhất đúng
+    function buildVocabStats() {
+      const groups = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        let prefix = null;
+        if (key.indexOf('seenWords:') === 0) prefix = 'seenWords:';
+        else if (key.indexOf('learnedWords:') === 0) prefix = 'learnedWords:';
+        else if (key.indexOf('quizFlag:') === 0) prefix = 'quizFlag:';
+        if (!prefix) continue;
+        const suffix = key.slice(prefix.length);
+        groups[suffix] = groups[suffix] || { seen: {}, learned: {}, quiz: {} };
+        let parsed = null;
+        try { parsed = JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) {}
+        if (!parsed || typeof parsed !== 'object') continue;
+        if (prefix === 'seenWords:') groups[suffix].seen = parsed;
+        else if (prefix === 'learnedWords:') groups[suffix].learned = parsed;
+        else groups[suffix].quiz = parsed;
+      }
+
+      const counts = { not_yet: 0, known: 0, needs_reviewed: 0, mastered: 0 };
+      let quizCorrect = 0, quizTotal = 0;
+
+      Object.keys(groups).forEach((suffix) => {
+        const g = groups[suffix];
+        const ids = new Set(Object.keys(g.seen).concat(Object.keys(g.learned), Object.keys(g.quiz)));
+        ids.forEach((id) => {
+          const remembered = !!g.learned[id];
+          const hasQuiz = Object.prototype.hasOwnProperty.call(g.quiz, id);
+          const quizOk = hasQuiz ? !!g.quiz[id] : null;
+          if (hasQuiz) { quizTotal++; if (quizOk) quizCorrect++; }
+          let status;
+          if (remembered) status = quizOk === true ? 'mastered' : 'known';
+          else status = quizOk === false ? 'needs_reviewed' : 'not_yet';
+          counts[status]++;
+        });
+      });
+
+      document.getElementById('stat-notyet').textContent = String(counts.not_yet);
+      document.getElementById('stat-known').textContent = String(counts.known);
+      document.getElementById('stat-needs-reviewed').textContent = String(counts.needs_reviewed);
+      document.getElementById('stat-mastered').textContent = String(counts.mastered);
+      const accEl = document.getElementById('stat-accuracy');
+      accEl.textContent = quizTotal ? Math.round((quizCorrect / quizTotal) * 100) + '% accuracy' : '— accuracy';
+    }
+
     buildStreakWeek();
     buildActivityCalendar();
     buildWordsChart();
+    buildVocabStats();
 
     auth.onAuthStateChanged((user) => {
       if (!user) {
@@ -200,7 +256,7 @@
         })
         .catch(() => {});
 
-      // Streak / vocab stats: chưa có hệ thống lưu trữ, tạm để 0 —
+      // Streak / study-activity thật: chưa có hệ thống lưu trữ theo ngày —
       // sẽ nối vào Firestore khi có dữ liệu thật.
     });
   </script>
