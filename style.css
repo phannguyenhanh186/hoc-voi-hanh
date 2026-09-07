@@ -354,8 +354,11 @@ h1,
 /* ----- điều hướng mới (landing / how / about / back) ----- */
 .nav-link { font-weight: 700; color: var(--ink); text-decoration: none; padding: 7px 15px; border-radius: 999px; border: 1.5px solid var(--stroke); background: var(--surface); font-family: var(--font-display); font-size: .9rem; }
 .nav-link:hover { color: var(--accent-deep); }
-.back-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--accent-deep); text-decoration: none; border: 1.5px solid var(--stroke); background: var(--surface); border-radius: 999px; padding: 7px 15px; font-family: var(--font-display); font-size: .9rem; }
-.back-link:hover { background: #F3F2FF; }
+.back-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--muted); text-decoration: none; font-family: var(--font-display); font-size: .92rem; }
+.back-link:hover { color: var(--accent-deep); }
+
+/* thanh chứa nút Back, nằm phía trên nội dung mỗi trang (không còn trong navbar) */
+.page-back-bar { padding-top: 18px; }
 
 .landing-hero { padding: 40px 0 10px; }
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
@@ -379,10 +382,10 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .learn-list li { margin: 3px 0; line-height: 1.45; }
 
 /* drop shadow khi hover cho các button (giống thẻ) */
-.cta-btn, .cta-ghost, .back-link, .nav-link, .btn-primary, .opt, .mic-btn, #inputs-nav .btn-input, .btn-signup, .tab-btn {
+.cta-btn, .cta-ghost, .nav-link, .btn-primary, .opt, .mic-btn, #inputs-nav .btn-input, .btn-signup, .tab-btn {
   transition: transform .12s ease, box-shadow .12s ease, background .15s ease, filter .12s ease;
 }
-.cta-btn:hover, .cta-ghost:hover, .back-link:hover, .nav-link:hover, .btn-primary:hover, .opt:hover, .mic-btn:hover, #inputs-nav .btn-input:hover, .btn-signup:hover, .tab-btn:hover {
+.cta-btn:hover, .cta-ghost:hover, .nav-link:hover, .btn-primary:hover, .opt:hover, .mic-btn:hover, #inputs-nav .btn-input:hover, .btn-signup:hover, .tab-btn:hover {
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0 0 var(--stroke);
 }
