@@ -22,7 +22,7 @@
   </header>
 
   <div class="page-back-bar wrap">
-    <a class="back-link" id="back-link" href="lesson.html">← Back</a>
+    <a class="back-link" id="back-link" href="lessons.html">← Back</a>
   </div>
 
   <main class="wrap">
@@ -44,10 +44,11 @@
 
     const $title = document.getElementById('title');
     const $backLink = document.getElementById('back-link');
-    $backLink.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
+    $backLink.href = 'lessons.html?level=' + encodeURIComponent(level);
+    setupLessonFlow('listening', itemId, level);
 
     // Back về landing page (trang chọn kỹ năng) của đúng bài + cấp hiện tại
-        function backToTabs() { location.href = 'lesson.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level); }
+        function backToTabs() { location.href = 'lessons.html?level=' + encodeURIComponent(level); }
 
     // Tiến độ của riêng phần "Listening" (localStorage tách theo từng kỹ năng)
     const progress = createProgressTracker('progress:' + level + ':' + itemId + ':listening');
