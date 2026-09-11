@@ -246,6 +246,35 @@ a { color: var(--accent-deep); text-decoration: none; }
 .player-bar .label { font-size: .85rem; color: var(--muted); flex: none; }
 .player-bar audio { flex: 1; height: 38px; width: 100%; }
 
+/* ============================================================
+   FLOW BÀI HỌC (kiểu Duolingo) — thanh tiến trình 4 chặng ở đầu
+   trang + thanh "Tiếp tục" cố định dưới cùng. Thay cho màn hình
+   chọn kỹ năng: vào bài là học luôn, hết phần này tự sang phần kia.
+   ============================================================ */
+.flow-progress { display: flex; gap: 6px; margin: 2px 0 20px; }
+.flow-seg { flex: 1; text-decoration: none; }
+.flow-seg-bar {
+  display: block; height: 9px; border-radius: 999px;
+  background: var(--line); border: 1.5px solid var(--stroke);
+}
+.flow-seg-done .flow-seg-bar { background: var(--green); }
+.flow-seg-current .flow-seg-bar { background: var(--accent); }
+
+.flow-nav-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  background: rgba(248,248,248,.96); backdrop-filter: blur(8px);
+  border-top: 1.5px solid var(--stroke);
+}
+.flow-nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 18px; }
+.flow-nav-bar .flow-nav-prev, .flow-nav-bar .flow-nav-next {
+  margin: 0; text-decoration: none; display: inline-flex; align-items: center;
+}
+body.has-flow-nav { padding-bottom: 78px; }
+@media (max-width: 480px) {
+  .flow-nav-inner { padding: 10px 14px; }
+  .flow-nav-bar .flow-nav-prev, .flow-nav-bar .flow-nav-next { font-size: .82rem; padding: 8px 14px; }
+}
+
 /* ---------- Misc ---------- */
 .note { margin: 14px 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--muted); font-size: .9rem; }
 .unit-section { margin-bottom: 32px; }
