@@ -161,7 +161,8 @@
 
         (data.selfStudy || []).forEach(s => {
           const locked = s.status === 'todo';
-          const href = s.id === 'tones' ? 'tones.html' : ('lesson.html?id=' + encodeURIComponent(s.id) + '&level=' + encodeURIComponent(activeLevel));
+          // Vào thẳng bài (Từ vựng trước tiên), không qua màn hình chọn kỹ năng nữa.
+          const href = s.id === 'tones' ? 'tones.html' : ('vocabulary.html?id=' + encodeURIComponent(s.id) + '&level=' + encodeURIComponent(activeLevel));
           cards.appendChild(makeTile({
             eyebrow: 'Tự học', title: s.title, locked: locked, href: href
           }));
@@ -172,7 +173,9 @@
 
         lessons.forEach(function (b) {
           const locked = b.status === 'todo';
-          const base = 'lesson.html?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel);
+          // Bấm "Học" là vào thẳng bài (từ Từ vựng), giống Duolingo — không còn
+          // màn hình trung gian để chọn Vocabulary/Grammar/Reading/Listening.
+          const base = 'vocabulary.html?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel);
           cards.appendChild(makeTile({
             eyebrow: 'BÀI ' + b.num,
             title: b.title,
