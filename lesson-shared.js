@@ -139,6 +139,104 @@ try { voice = localStorage.getItem('voice') || 'nam'; } catch (e) {}
     // nút này gọi history.back() để quay lại đúng trang hub vừa rồi.
     const $hub = document.getElementById('lesson-hub');
 
+// ============================================================
+// FLOW BÀI HỌC (kiểu Duolingo)
+// Bấm vào 1 bài trên lessons.html sẽ vào THẲNG phần Từ vựng — không
+// còn màn hình "chọn kỹ năng" (lesson.html) ở giữa nữa. Học xong 1 phần,
+// bấm "Tiếp tục" sẽ tự động sang phần kế tiếp theo thứ tự cố định bên dưới,
+// tới hết Nghe thì bài coi như hoàn thành và quay về danh sách bài học.
+// ============================================================
+const LESSON_FLOW = [
+  { key: 'vocabulary', file: 'vocabulary.html', label: 'Từ vựng' },
+  { key: 'grammar', file: 'grammar.html', label: 'Ngữ pháp' },
+  { key: 'reading', file: 'reading.html', label: 'Đọc' },
+  { key: 'listening', file: 'listening.html', label: 'Nghe' }
+];
+
+function flowSectionUrl(file, itemId, level) {
+  return file + '?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
+}
+
+// Tiến độ Ở CẤP BÀI HỌC (không phải theo từng kỹ năng) — đây chính là key mà
+// thẻ bài trên lessons.html đọc để hiện "✓ x/4". Đi qua 1 phần thì phần đó
+// được đánh dấu đã xong.
+function markLessonSectionVisited(level, itemId, key) {
+  const storeKey = 'progress:' + level + ':' + itemId;
+  let state = { total: LESSON_FLOW.length, done: {} };
+  try {
+    const saved = JSON.parse(localStorage.getItem(storeKey) || 'null');
+    if (saved && typeof saved === 'object') state = saved;
+    if (!state.done) state.done = {};
+  } catch (e) {}
+  state.total = Math.max(state.total || 0, LESSON_FLOW.length);
+  state.done[key] = true;
+  try { localStorage.setItem(storeKey, JSON.stringify(state)); } catch (e) {}
+}
+
+// Thanh tiến trình 4 chặng, đặt ngay dưới tiêu đề bài. Chặng đã đi qua tô xanh,
+// chặng hiện tại tô tím; bấm vào 1 chặng có thể nhảy thẳng tới đó.
+function renderFlowProgressBar(currentKey, itemId, level) {
+  const wrap = el('div', 'flow-progress');
+  const currentIdx = LESSON_FLOW.findIndex(function (s) { return s.key === currentKey; });
+  LESSON_FLOW.forEach(function (s, idx) {
+    const seg = el('a', 'flow-seg');
+    seg.href = flowSectionUrl(s.file, itemId, level);
+    seg.title = s.label;
+    if (idx < currentIdx) seg.classList.add('flow-seg-done');
+    if (idx === currentIdx) seg.classList.add('flow-seg-current');
+    seg.appendChild(el('span', 'flow-seg-bar'));
+    wrap.appendChild(seg);
+  });
+  return wrap;
+}
+
+// Thanh điều hướng cố định dưới cùng màn hình: nút "Tiếp tục" đưa thẳng sang
+// phần kế tiếp trong bài. Ở phần cuối cùng (Nghe), nút đổi thành "Hoàn thành
+// bài học ✓" và quay về danh sách bài học.
+function renderFlowNav(currentKey, itemId, level) {
+  const idx = LESSON_FLOW.findIndex(function (s) { return s.key === currentKey; });
+  if (idx === -1) return el('div', 'flow-nav-bar hidden');
+  markLessonSectionVisited(level, itemId, currentKey);
+  const isLast = idx === LESSON_FLOW.length - 1;
+
+  const bar = el('div', 'flow-nav-bar');
+  const inner = el('div', 'flow-nav-inner wrap');
+
+  let prevBtn;
+  if (idx > 0) {
+    prevBtn = el('a', 'btn-check btn-secondary flow-nav-prev', '← ' + LESSON_FLOW[idx - 1].label);
+    prevBtn.href = flowSectionUrl(LESSON_FLOW[idx - 1].file, itemId, level);
+  } else {
+    prevBtn = el('a', 'btn-check btn-secondary flow-nav-prev', 'Thoát bài học');
+    prevBtn.href = 'lessons.html?level=' + encodeURIComponent(level);
+  }
+  inner.appendChild(prevBtn);
+
+  let nextBtn;
+  if (!isLast) {
+    nextBtn = el('a', 'btn-check flow-nav-next', LESSON_FLOW[idx + 1].label + ' →');
+    nextBtn.href = flowSectionUrl(LESSON_FLOW[idx + 1].file, itemId, level);
+  } else {
+    nextBtn = el('a', 'btn-check flow-nav-next', 'Hoàn thành bài học ✓');
+    nextBtn.href = 'lessons.html?level=' + encodeURIComponent(level);
+  }
+  inner.appendChild(nextBtn);
+
+  bar.appendChild(inner);
+  return bar;
+}
+
+// Gắn thanh tiến trình + thanh điều hướng vào 1 trang kỹ năng. Gọi ngay khi
+// trang tải (không cần đợi fetch xong dữ liệu bài), vì chỉ cần id/level từ URL.
+function setupLessonFlow(currentKey, itemId, level) {
+  const head = document.querySelector('.lesson-head');
+  if (head && head.parentNode) {
+    head.parentNode.insertBefore(renderFlowProgressBar(currentKey, itemId, level), head.nextSibling);
+  }
+  document.body.appendChild(renderFlowNav(currentKey, itemId, level));
+  document.body.classList.add('has-flow-nav');
+}
+
 
     function makeToggleSection(label, buildContent) {
       const wrap = el('div', 'toggle-section');
