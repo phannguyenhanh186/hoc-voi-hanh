@@ -302,18 +302,25 @@
     "intro": {
       "words": [
         {
+          "id": "v30",
           "word": "chào",
-          "meaning": "hi / hello / bye / goodbye"
+          "meaning": "hi / hello / bye / goodbye",
+          "audio": "audio/b1/{voice}/vocab_chao.mp3"
         },
         {
+          "id": "v33",
           "word": "cám ơn",
-          "meaning": "thank you"
+          "meaning": "thank you",
+          "audio": "audio/b1/{voice}/vocab_cam_on.mp3"
         },
         {
+          "id": "v32",
           "word": "xin lỗi",
-          "meaning": "sorry"
+          "meaning": "sorry",
+          "audio": "audio/b1/{voice}/vocab_xin_loi.mp3"
         }
       ],
+      "revealGrammarSection": "greetings",
       "quiz": [
         {
           "question": "What to say when you just meet someone?",
