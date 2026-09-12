@@ -352,6 +352,19 @@
       words.forEach(function (w) {
         const card = el('div', 'vocab-showcase-card');
         card.appendChild(el('div', 'vocab-showcase-word', w.word));
+        const iconRow = el('div', 'flash-icon-row vocab-showcase-icons');
+        const playBtnEl = el('button', 'flash-round-btn'); playBtnEl.type = 'button'; playBtnEl.innerHTML = '▶';
+        playBtnEl.setAttribute('aria-label', 'Play audio');
+        if (w.audio) playBtnEl.addEventListener('click', function (e) { e.stopPropagation(); play(resolveAudio(w.audio)); });
+        else playBtnEl.disabled = true;
+        iconRow.appendChild(playBtnEl);
+        if (w.id) {
+          const starBtnEl = el('button', 'flash-round-btn' + (isSaved(w) ? ' starred' : ''));
+          starBtnEl.type = 'button'; starBtnEl.innerHTML = '★'; starBtnEl.setAttribute('aria-label', 'Save word');
+          starBtnEl.addEventListener('click', function (e) { e.stopPropagation(); toggleSaved(w, starBtnEl); });
+          iconRow.appendChild(starBtnEl);
+        }
+        card.appendChild(iconRow);
         card.appendChild(el('div', 'vocab-showcase-meaning', w.meaning));
         list.appendChild(card);
       });
@@ -364,13 +377,80 @@
       return wrap;
     }
 
-    function renderVocabIntro(intro, onDone) {
+    // Bản rút gọn của phần render Ngữ pháp (grammar.html) — chỉ dùng để hiện lại
+    // 1 mục (section) ngữ pháp liên quan, ngay trong trang Vocabulary, sau khi
+    // học viên hoàn thành quiz trí nhớ của phần "intro".
+    function renderExampleLinesLocal(lines) {
+      const wrap = el('div', 'grammar-examples');
+      (lines || []).forEach(function (ln) {
+        const row = el('div', 'example');
+        if (typeof ln === 'string') { row.appendChild(el('div', 'ex-vi', ln)); }
+        else {
+          row.appendChild(el('div', 'ex-vi', ln.vi));
+          if (ln.en) row.appendChild(el('div', 'ex-en', ln.en));
+        }
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    function buildGrammarPreviewFromSection(section) {
+      const box = el('div', 'vocab-gram-preview');
+      box.appendChild(el('h3', 'ex-title', section.titleVi + (section.titleEn ? ' — ' + section.titleEn : '')));
+      (section.subtopics || []).forEach(function (sub) {
+        const subBox = el('div', 'grammar-subsection');
+        const hVi = sub.subHeadingVi || sub.label || '';
+        const hEn = sub.subHeadingEn;
+        subBox.appendChild(el('h4', 'grammar-subhead grammar-subhead-purple', hVi + (hEn ? ' — ' + hEn : '')));
+        (sub.paragraphs || []).forEach(function (p) { subBox.appendChild(el('p', 'gram2-intro', p)); });
+        if (sub.chips && sub.chips.length) {
+          const chipRow = el('div', 'gram2-chip-row');
+          sub.chips.forEach(function (c) {
+            const chipItem = el('div', 'gram2-chip-item');
+            if (c.label) chipItem.appendChild(el('span', 'gram2-chip-label', c.label));
+            chipItem.appendChild(el('span', 'gram2-chip', c.pattern));
+            chipRow.appendChild(chipItem);
+          });
+          subBox.appendChild(chipRow);
+        }
+        if (sub.examples && sub.examples.length) {
+          subBox.appendChild(el('div', 'gram2-examples-label', 'Examples'));
+          subBox.appendChild(renderExampleLinesLocal(sub.examples));
+        }
+        box.appendChild(subBox);
+      });
+      const linkBtn = document.createElement('a');
+      linkBtn.className = 'btn-purple';
+      linkBtn.style.display = 'inline-block';
+      linkBtn.style.marginTop = '14px';
+      linkBtn.href = 'grammar.html?id=' + encodeURIComponent(itemId) + '&level=' + encodeURIComponent(level);
+      linkBtn.textContent = 'Xem đầy đủ trong Ngữ pháp →';
+      box.appendChild(linkBtn);
+      return box;
+    }
+
+    // onShowAll: được gọi khi không có "revealGrammarSection" -> hiện lại toàn bộ
+    // từ vựng của bài (hành vi cũ), nhưng chỉ SAU KHI đã hoàn thành quiz intro.
+    function renderVocabIntro(item, intro, onShowAll) {
       const wrap = el('div', 'vocab-intro-wrap');
       const resultKey = progress.storageKey + ':intro-quiz';
+      const revealSlot = el('div', 'vocab-intro-reveal');
+
+      function showReveal() {
+        revealSlot.innerHTML = '';
+        const sectionId = intro.revealGrammarSection;
+        const sections = (item.grammar && item.grammar.sections) || [];
+        const section = sectionId && sections.filter(function (s) { return s.id === sectionId; })[0];
+        if (section) revealSlot.appendChild(buildGrammarPreviewFromSection(section));
+        else revealSlot.appendChild(makeToggleSection('↓ Xem toàn bộ từ vựng của bài', onShowAll));
+      }
+
       function showQuiz() {
         wrap.innerHTML = '';
-        wrap.appendChild(buildQuizBlock(intro.quiz, null, resultKey));
+        wrap.appendChild(buildQuizBlock(intro.quiz, showReveal, resultKey));
+        wrap.appendChild(revealSlot);
       }
+
       wrap.appendChild(renderVocabShowcase(intro.words, showQuiz));
       return wrap;
     }
@@ -418,20 +498,21 @@
         return;
       }
 
-      // Có phần "intro": mặc định chỉ hiện showcase + quiz trí nhớ (giống Duolingo).
-      // Toàn bộ danh sách từ vựng (Flashcards/Quiz/List) được gấp lại bên dưới,
-      // học viên có thể mở ra xem thêm nếu muốn ôn cả bài.
-      const introSlot = el('div', 'vocab-intro-slot');
-      introSlot.appendChild(renderVocabIntro(intro, function () {}));
-      shell.appendChild(introSlot);
-
-      shell.appendChild(makeToggleSection('↓ Xem toàn bộ từ vựng của bài', function () {
+      function buildFullVocabSection() {
         const moreWrap = el('div', 'vocab-more-wrap');
         moreWrap.appendChild(modeBar);
         moreWrap.appendChild(content);
         draw();
         return moreWrap;
-      }));
+      }
+
+      // Có phần "intro": mặc định CHỈ hiện showcase + quiz trí nhớ (giống Duolingo).
+      // "Xem toàn bộ từ vựng của bài" (hoặc bảng ngữ pháp liên quan, nếu bài có khai
+      // báo "revealGrammarSection") CHỈ xuất hiện SAU KHI học viên làm xong quiz intro —
+      // không hiện sẵn ngay từ đầu như trước nữa.
+      const introSlot = el('div', 'vocab-intro-slot');
+      introSlot.appendChild(renderVocabIntro(item, intro, buildFullVocabSection));
+      shell.appendChild(introSlot);
     }
 
     // ========================================================
