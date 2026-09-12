@@ -339,6 +339,42 @@
     }
 
 
+    // ========================================================
+    // VOCAB "INTRO" (kiểu Duolingo): showcase vài từ trọng tâm trước,
+    // rồi test trí nhớ bằng câu hỏi tình huống (3 nút cố định), có phản
+    // hồi ngay khi bấm + nút "Tiếp ->" sang câu kế. Dùng buildQuizBlock
+    // có sẵn (giống quiz nhỏ trong Grammar) để tái dùng logic chấm điểm.
+    // ========================================================
+    function renderVocabShowcase(words, onNext) {
+      const wrap = el('div', 'vocab-showcase');
+      wrap.appendChild(el('p', 'gram2-intro', 'Học 3 từ này trước nhé:'));
+      const list = el('div', 'vocab-showcase-list');
+      words.forEach(function (w) {
+        const card = el('div', 'vocab-showcase-card');
+        card.appendChild(el('div', 'vocab-showcase-word', w.word));
+        card.appendChild(el('div', 'vocab-showcase-meaning', w.meaning));
+        list.appendChild(card);
+      });
+      wrap.appendChild(list);
+      const nextBtn = el('button', 'btn-check', 'Tiếp →');
+      nextBtn.type = 'button';
+      nextBtn.style.marginTop = '16px';
+      nextBtn.addEventListener('click', onNext);
+      wrap.appendChild(nextBtn);
+      return wrap;
+    }
+
+    function renderVocabIntro(intro, onDone) {
+      const wrap = el('div', 'vocab-intro-wrap');
+      const resultKey = progress.storageKey + ':intro-quiz';
+      function showQuiz() {
+        wrap.innerHTML = '';
+        wrap.appendChild(buildQuizBlock(intro.quiz, null, resultKey));
+      }
+      wrap.appendChild(renderVocabShowcase(intro.words, showQuiz));
+      return wrap;
+    }
+
     function renderVocabTab(item) {
       const panel = document.getElementById('panel-vocab');
       panel.innerHTML = '';
@@ -347,6 +383,8 @@
 
       const shell = buildSectionShell('Vocabulary', backToTabs);
       panel.appendChild(shell);
+
+      const intro = item.vocab && item.vocab.intro;
 
       const modeBar = el('div', 'mode-bar');
       const modes = [['flashcards', 'Flashcards'], ['quiz', 'Quiz'], ['list', 'List']];
@@ -371,9 +409,29 @@
         b.addEventListener('click', function () { setMode(m[0]); });
         modeBar.appendChild(b);
       });
-      shell.appendChild(modeBar);
-      shell.appendChild(content);
-      draw();
+
+      if (!intro || !intro.words || !intro.words.length) {
+        // Bài không có phần "intro" showcase riêng -> giữ nguyên hành vi cũ.
+        shell.appendChild(modeBar);
+        shell.appendChild(content);
+        draw();
+        return;
+      }
+
+      // Có phần "intro": mặc định chỉ hiện showcase + quiz trí nhớ (giống Duolingo).
+      // Toàn bộ danh sách từ vựng (Flashcards/Quiz/List) được gấp lại bên dưới,
+      // học viên có thể mở ra xem thêm nếu muốn ôn cả bài.
+      const introSlot = el('div', 'vocab-intro-slot');
+      introSlot.appendChild(renderVocabIntro(intro, function () {}));
+      shell.appendChild(introSlot);
+
+      shell.appendChild(makeToggleSection('↓ Xem toàn bộ từ vựng của bài', function () {
+        const moreWrap = el('div', 'vocab-more-wrap');
+        moreWrap.appendChild(modeBar);
+        moreWrap.appendChild(content);
+        draw();
+        return moreWrap;
+      }));
     }
 
     // ========================================================
