@@ -316,11 +316,16 @@
     }
 
 
-    function renderGrammarTabSidebar(item, sections) {
-      const panel = document.getElementById('panel-grammar');
-      panel.innerHTML = '';
-
-      const shell = buildSectionShell('Grammar', backToTabs);
+    // `existingShell`: nếu đã có 1 hoặc nhiều section "minimal" render trước đó
+    // (xem renderGrammarTab), gắn tiếp sidebar của các section còn lại vào ĐÚNG
+    // shell đó thay vì xoá panel và tạo shell/nút back mới.
+    function renderGrammarTabSidebar(item, sections, existingShell) {
+      const shell = existingShell || buildSectionShell('Grammar', backToTabs);
+      if (!existingShell) {
+        const panel = document.getElementById('panel-grammar');
+        panel.innerHTML = '';
+        panel.appendChild(shell);
+      }
 
       const body = el('div', 'gram2-body');
       const sidebar = el('aside', 'gram2-sidebar');
@@ -328,7 +333,6 @@
       body.appendChild(sidebar);
       body.appendChild(content);
       shell.appendChild(body);
-      panel.appendChild(shell);
 
       let firstEntry = null;
 
@@ -433,9 +437,52 @@
     }
 
 
+    // ========================================================
+    // SECTION "MINIMAL" (kiểu Duolingo): chỉ hiện đoạn giới thiệu ngắn (intro),
+    // bấm "Next ->" là vào thẳng bài luyện tập (quiz) — không qua sidebar,
+    // không có bảng/ví dụ chi tiết. Dùng khi section.minimalIntro === true.
+    // ========================================================
+    function renderGrammarSectionMinimal(section) {
+      const box = el('div', 'exercise gram2-minimal');
+      box.appendChild(el('h3', 'ex-title', section.titleVi + (section.titleEn ? ' — ' + section.titleEn : '')));
+
+      const introSlot = el('div', 'gram2-minimal-slot');
+      (section.intro || []).forEach(function (p) { introSlot.appendChild(el('p', 'gram2-intro', p)); });
+      const nextBtn = el('button', 'btn-check', 'Next →');
+      nextBtn.type = 'button';
+      introSlot.appendChild(nextBtn);
+      box.appendChild(introSlot);
+
+      const quiz = (section.subtopics && section.subtopics[0] && section.subtopics[0].quiz) || section.quiz || [];
+      nextBtn.addEventListener('click', function () {
+        introSlot.innerHTML = '';
+        if (quiz.length) {
+          const quizKey = quizResultKey((section.titleVi || section.id || '') + ':minimal');
+          introSlot.appendChild(buildQuizBlock(quiz, null, quizKey));
+        } else {
+          introSlot.appendChild(el('p', 'note', 'Practice exercises coming soon.'));
+        }
+      });
+      return box;
+    }
+
     function renderGrammarTab(item) {
       const sections = item.grammar && item.grammar.sections;
-      if (sections && sections.length) { renderGrammarTabSidebar(item, sections); return; }
+      if (sections && sections.length) {
+        const minimalSections = sections.filter(function (s) { return s.minimalIntro; });
+        const restSections = sections.filter(function (s) { return !s.minimalIntro; });
+        if (minimalSections.length) {
+          const panel = document.getElementById('panel-grammar');
+          panel.innerHTML = '';
+          const shell = buildSectionShell('Grammar', backToTabs);
+          panel.appendChild(shell);
+          minimalSections.forEach(function (s) { shell.appendChild(renderGrammarSectionMinimal(s)); });
+          if (restSections.length) renderGrammarTabSidebar(item, restSections, shell);
+          return;
+        }
+        renderGrammarTabSidebar(item, sections);
+        return;
+      }
       const panel = document.getElementById('panel-grammar');
       panel.innerHTML = '';
       const points = (item.grammar && item.grammar.points) || [];
