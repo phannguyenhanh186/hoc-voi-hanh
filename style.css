@@ -276,14 +276,19 @@ body.has-flow-nav { padding-bottom: 78px; }
 }
 
 /* ---------- Vocab intro (showcase 1 vài từ + quiz trí nhớ, kiểu Duolingo) ---------- */
+/* Thẻ giống flash-card-simple (nền tím, icon loa + sao) nhưng không có nút Remembered/Not remembered. */
 .vocab-showcase-list { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0; }
 .vocab-showcase-card {
-  flex: 1 1 140px; background: var(--surface); border: 1.5px solid var(--stroke);
-  border-radius: 14px; padding: 16px 14px; text-align: center;
+  flex: 1 1 140px; background: #7A63EE; color: #fff; border: 2px solid var(--stroke);
+  border-radius: 18px; padding: 20px 14px; text-align: center; box-shadow: 5px 5px 0 0 var(--stroke);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
 }
 .vocab-showcase-word { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; }
-.vocab-showcase-meaning { color: var(--muted); margin-top: 4px; font-size: .92rem; }
+.vocab-showcase-meaning { color: rgba(255, 255, 255, .88); font-size: .92rem; }
+.vocab-showcase-icons { justify-content: center; }
 .vocab-intro-wrap { margin-bottom: 8px; }
+.vocab-intro-reveal { margin-top: 10px; }
+.vocab-gram-preview { margin-top: 4px; }
 
 /* ---------- Misc ---------- */
 .note { margin: 14px 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--muted); font-size: .9rem; }
