@@ -298,7 +298,61 @@
         "meaning": "also",
         "audio": "audio/b1/{voice}/vocab_cung.mp3"
       }
-    ]
+    ],
+    "intro": {
+      "words": [
+        {
+          "word": "chào",
+          "meaning": "hi / hello / bye / goodbye"
+        },
+        {
+          "word": "cám ơn",
+          "meaning": "thank you"
+        },
+        {
+          "word": "xin lỗi",
+          "meaning": "sorry"
+        }
+      ],
+      "quiz": [
+        {
+          "question": "What to say when you just meet someone?",
+          "options": [
+            "Chào",
+            "Cám ơn",
+            "Xin lỗi"
+          ],
+          "answer": "Chào"
+        },
+        {
+          "question": "What to say when you accidentally step on someone's foot?",
+          "options": [
+            "Chào",
+            "Cám ơn",
+            "Xin lỗi"
+          ],
+          "answer": "Xin lỗi"
+        },
+        {
+          "question": "What to say when a waiter hands you a cup of coffee?",
+          "options": [
+            "Chào",
+            "Cám ơn",
+            "Xin lỗi"
+          ],
+          "answer": "Cám ơn"
+        },
+        {
+          "question": "What to say when you want to say goodbye to someone?",
+          "options": [
+            "Chào",
+            "Cám ơn",
+            "Xin lỗi"
+          ],
+          "answer": "Chào"
+        }
+      ]
+    }
   },
   "grammar": {
     "sections": [
@@ -520,7 +574,8 @@
               }
             ]
           }
-        ]
+        ],
+        "minimalIntro": true
       },
       {
         "id": "greetings",
@@ -975,17 +1030,29 @@
         "questions": [
           {
             "context": "Câu 1: Nếu người kia lớn tuổi hơn bạn, bạn có thể gọi họ là \"___\" và \"___\"",
-            "options": ["bạn/mình", "anh/chị", "anh/em"],
+            "options": [
+              "bạn/mình",
+              "anh/chị",
+              "anh/em"
+            ],
             "answer": "anh/chị"
           },
           {
             "context": "Câu 2: Nếu người kia nhỏ tuổi hơn bạn, bạn có thể gọi là \"___\"",
-            "options": ["anh", "chị", "em"],
+            "options": [
+              "anh",
+              "chị",
+              "em"
+            ],
             "answer": "em"
           },
           {
             "context": "Câu 3: Nếu hai người bằng hoặc gần bằng tuổi nhau, nhiều người dùng \"___\" và \"mình\" khi đang nói chuyện.",
-            "options": ["em", "bạn", "mình"],
+            "options": [
+              "em",
+              "bạn",
+              "mình"
+            ],
             "answer": "bạn"
           }
         ]
