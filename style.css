@@ -275,6 +275,16 @@ body.has-flow-nav { padding-bottom: 78px; }
   .flow-nav-bar .flow-nav-prev, .flow-nav-bar .flow-nav-next { font-size: .82rem; padding: 8px 14px; }
 }
 
+/* ---------- Vocab intro (showcase 1 vài từ + quiz trí nhớ, kiểu Duolingo) ---------- */
+.vocab-showcase-list { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0; }
+.vocab-showcase-card {
+  flex: 1 1 140px; background: var(--surface); border: 1.5px solid var(--stroke);
+  border-radius: 14px; padding: 16px 14px; text-align: center;
+}
+.vocab-showcase-word { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; }
+.vocab-showcase-meaning { color: var(--muted); margin-top: 4px; font-size: .92rem; }
+.vocab-intro-wrap { margin-bottom: 8px; }
+
 /* ---------- Misc ---------- */
 .note { margin: 14px 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--muted); font-size: .9rem; }
 .unit-section { margin-bottom: 32px; }
