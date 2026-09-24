@@ -220,8 +220,11 @@
         });
       }
       function reveal() {
-        rows.forEach(function (r) { r.input.value = r.item.answers.join(' / '); });
-        check();
+        rows.forEach(function (r) {
+          r.input.value = r.item.answers[0];
+          r.mark.textContent = '✓'; r.mark.className = 'bai-mark ok';
+          r.input.classList.add('is-correct'); r.input.classList.remove('is-wrong');
+        });
       }
       rows.forEach(function (r) {
         r.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
