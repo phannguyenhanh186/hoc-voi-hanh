@@ -237,13 +237,95 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames };
+    // Nút nghe 1 đoạn audio cho cả bài (dùng cho bài từ vựng có ảnh).
+    function makeListenBtn(ex, n) {
+      const b = el('button', 'bai-listen', '▶ Nghe');
+      b.type = 'button'; b.dataset.text = 'bài ' + n;
+      b.setAttribute('aria-label', 'Nghe bài ' + n);
+      b.addEventListener('click', function () { play(resolveAudio(ex.audio), b); });
+      return b;
+    }
+    function makePhoto(src, alt) {
+      const img = document.createElement('img');
+      img.src = src; img.alt = alt || ''; img.loading = 'lazy'; img.className = 'bai-photo-img';
+      return img;
+    }
+
+    // Bài 6: nhìn hình, nghe mọi người nói. Ảnh + chú thích (tên, nghề).
+    function renderPhotoVocab(ex, n) {
+      const box = el('div');
+      box.appendChild(makeListenBtn(ex, n));
+      const grid = el('div', 'bai-photos');
+      (ex.items || []).forEach(function (it) {
+        const fig = el('figure', 'bai-photo');
+        fig.appendChild(makePhoto(it.img, it.caption));
+        fig.appendChild(el('figcaption', 'bai-photo-cap', it.caption));
+        grid.appendChild(fig);
+      });
+      box.appendChild(grid);
+      return box;
+    }
+
+    // Bài 7: nghe và đánh số hình theo thứ tự nghe được. Có 'answer' thì mới chấm được.
+    function renderPhotoOrder(ex, n) {
+      const box = el('div');
+      box.appendChild(makeListenBtn(ex, n));
+      const grid = el('div', 'bai-photos');
+      const cells = [];
+      (ex.items || []).forEach(function (it, i) {
+        const fig = el('figure', 'bai-photo');
+        fig.appendChild(makePhoto(it.img, 'Hình ' + (i + 1)));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-order'; input.maxLength = 1;
+        input.inputMode = 'numeric'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Số thứ tự hình ' + (i + 1));
+        if (it.example != null) { input.value = String(it.example); input.disabled = true; input.classList.add('is-example'); }
+        fig.appendChild(input);
+        const mark = el('span', 'bai-mark'); fig.appendChild(mark);
+        grid.appendChild(fig);
+        cells.push({ it: it, input: input, mark: mark });
+      });
+      box.appendChild(grid);
+
+      const gradable = cells.some(function (c) { return c.it.answer != null; });
+      if (gradable) {
+        function check() {
+          cells.forEach(function (c) {
+            if (c.it.answer == null) return;
+            const v = c.input.value.trim();
+            const ok = v === String(c.it.answer);
+            c.mark.textContent = !v ? '' : (ok ? '✓' : '✗');
+            c.mark.className = 'bai-mark ' + (!v ? '' : (ok ? 'ok' : 'bad'));
+            c.input.classList.toggle('is-correct', !!v && ok);
+            c.input.classList.toggle('is-wrong', !!v && !ok);
+          });
+        }
+        function reveal() {
+          cells.forEach(function (c) {
+            if (c.it.answer == null) return;
+            c.input.value = String(c.it.answer);
+            c.mark.textContent = '✓'; c.mark.className = 'bai-mark ok';
+            c.input.classList.add('is-correct'); c.input.classList.remove('is-wrong');
+          });
+        }
+        cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+        const bar = el('div', 'bai-fill-actions');
+        const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+        const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+        bar.appendChild(bCheck); bar.appendChild(bShow);
+        box.appendChild(bar);
+      }
+      return box;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
+      n = ex.num != null ? ex.num : n;   // 'num' trong JSON = số bài in trong sách (vd. 6, 7)
       box.appendChild(exerciseHead(ex, n));
       const fn = RENDERERS[ex.type];
-      box.appendChild(fn ? fn(ex) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
+      box.appendChild(fn ? fn(ex, n) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
       return box;
     }
 
