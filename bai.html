@@ -65,9 +65,19 @@
     // ---------- Audio: tên file theo kiểu Telex ----------
     // ă→aw  â→aa  đ→dd  ê→ee  ô→oo  ơ→ow  ư→uw ; các chữ khác giữ nguyên.
     // Ví dụ: "đi" → ddi, "bơ" → bow, "tư" → tuw.
-    const TELEX = { 'ă': 'aw', 'â': 'aa', 'đ': 'dd', 'ê': 'ee', 'ô': 'oo', 'ơ': 'ow', 'ư': 'uw' };
+    // Có thanh điệu thì thêm chữ Telex ở CUỐI âm tiết: sắc=s huyền=f hỏi=r ngã=x nặng=j.
+    // Ví dụ: "bố" → boos, "phở" → phowr, "đã" → ddax, "mẹ" → mej. Không dấu thì như cũ.
+    const TONE_MARK = { '\u0301': 's', '\u0300': 'f', '\u0309': 'r', '\u0303': 'x', '\u0323': 'j' };
     function audioKey(text) {
-      return String(text).normalize('NFC').toLowerCase().split('').map(function (ch) { return TELEX[ch] || ch; }).join('');
+      let out = '', tone = '';
+      String(text).normalize('NFD').toLowerCase().split('').forEach(function (ch) {
+        if (TONE_MARK[ch]) tone = TONE_MARK[ch];
+        else if (ch === '\u0306' || ch === '\u031B') out += 'w';            // ă, ơ, ư
+        else if (ch === '\u0302') out += out.charAt(out.length - 1);          // â, ê, ô
+        else if (ch === '\u0111') out += 'dd';                                 // đ
+        else out += ch;
+      });
+      return out + tone;
     }
     function audioSrc(template, text) {
       if (!template) return '';
@@ -130,16 +140,152 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds };
-
-    function renderExercises(container, exercises) {
-      (exercises || []).forEach(function (ex, i) {
-        const box = el('div', 'bai-exercise');
-        box.appendChild(exerciseHead(ex, i + 1));
-        const fn = RENDERERS[ex.type];
-        box.appendChild(fn ? fn(ex) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
-        container.appendChild(box);
+    // Bài 3: nghe & khoanh tròn. Bấm SỐ để nghe (phát âm của đáp án); bấm ô hồng để chọn.
+    function renderListenPick(ex) {
+      const wrap = el('div', 'bai-pick');
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-pick-row');
+        const num = makeChip(String(i + 1), ex.audio, 'bai-tone-lav bai-num');
+        num.dataset.text = 'câu ' + (i + 1);
+        num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        num.addEventListener('click', function () { play(audioSrc(ex.audio, item.answer), num); });
+        row.appendChild(num);
+        (item.options || []).forEach(function (opt) {
+          const b = el('button', 'bai-chip bai-tone-pink bai-opt', opt);
+          b.type = 'button';
+          b.addEventListener('click', function () {
+            if (row.classList.contains('solved')) return;
+            if (opt === item.answer) {
+              b.classList.remove('is-wrong'); b.classList.add('is-correct');
+              row.classList.add('solved');
+            } else {
+              b.classList.add('is-wrong');
+            }
+          });
+          row.appendChild(b);
+        });
+        wrap.appendChild(row);
       });
+      return wrap;
+    }
+
+    // Bài 4: bảng thanh điệu. Cột đầu là nhãn thanh, các ô sau bấm để nghe.
+    function renderTones(ex) {
+      const wrap = el('div', 'bai-tones');
+      (ex.rows || []).forEach(function (row) {
+        const tone = 'bai-tone-' + (row.tone || 'lav');
+        wrap.appendChild(el('div', 'bai-chip bai-label ' + tone, row.label));
+        for (let i = 0; i < 4; i++) {
+          if (row.words[i] == null) { const gap = el('span'); gap.setAttribute('aria-hidden', 'true'); wrap.appendChild(gap); }
+          else wrap.appendChild(makeChip(row.words[i], ex.audio, tone));
+        }
+      });
+      return wrap;
+    }
+
+    // Bài 5: nghe tên, điền vào chỗ trống. Bấm SỐ để nghe cả câu.
+    function normName(t) { return String(t).normalize('NFC').trim().toLowerCase(); }
+    function renderFillNames(ex) {
+      const wrap = el('div', 'bai-fill');
+      const rows = [];
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-fill-row');
+        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
+        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1);
+        num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        num.addEventListener('click', function () { play(resolveAudio(item.audio), num); });
+        row.appendChild(num);
+
+        const line = el('div', 'bai-fill-line');
+        line.appendChild(document.createTextNode(item.before || ''));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Tên trong câu ' + (i + 1));
+        line.appendChild(input);
+        line.appendChild(document.createTextNode(item.after || ''));
+        const mark = el('span', 'bai-mark'); line.appendChild(mark);
+        row.appendChild(line);
+        wrap.appendChild(row);
+        rows.push({ item: item, input: input, mark: mark });
+      });
+
+      function check() {
+        rows.forEach(function (r) {
+          const v = normName(r.input.value);
+          const ok = v && r.item.answers.some(function (a) { return normName(a) === v; });
+          r.mark.textContent = !v ? '' : (ok ? '✓' : '✗');
+          r.mark.className = 'bai-mark ' + (!v ? '' : (ok ? 'ok' : 'bad'));
+          r.input.classList.toggle('is-correct', !!ok);
+          r.input.classList.toggle('is-wrong', !!v && !ok);
+        });
+      }
+      function reveal() {
+        rows.forEach(function (r) { r.input.value = r.item.answers.join(' / '); });
+        check();
+      }
+      rows.forEach(function (r) {
+        r.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+      });
+      const bar = el('div', 'bai-fill-actions');
+      const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+      bar.appendChild(bCheck); bar.appendChild(bShow);
+      wrap.appendChild(bar);
+      return wrap;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames };
+
+    function buildExercise(ex, n) {
+      const box = el('div', 'bai-exercise');
+      box.appendChild(exerciseHead(ex, n));
+      const fn = RENDERERS[ex.type];
+      box.appendChild(fn ? fn(ex) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
+      return box;
+    }
+
+    // Nhiều bài tập → mỗi bài 1 trang, bấm mũi tên (hoặc phím ← →) để chuyển.
+    let pagerKeyHandler = null;
+    function stopAudio() {
+      try { player.pause(); } catch (e) {}
+      if (currentEl) currentEl.classList.remove('playing');
+    }
+    function renderExercises(container, exercises) {
+      exercises = exercises || [];
+      if (pagerKeyHandler) { document.removeEventListener('keydown', pagerKeyHandler); pagerKeyHandler = null; }
+      if (exercises.length <= 1) {
+        exercises.forEach(function (ex, i) { container.appendChild(buildExercise(ex, i + 1)); });
+        return;
+      }
+      const stage = el('div', 'bai-stage');
+      const pager = el('div', 'bai-pager');
+      const prev = el('button', 'bai-arrow', '←'); prev.type = 'button'; prev.setAttribute('aria-label', 'Bài trước');
+      const next = el('button', 'bai-arrow', '→'); next.type = 'button'; next.setAttribute('aria-label', 'Bài tiếp theo');
+      const count = el('span', 'bai-pager-count');
+      pager.appendChild(prev); pager.appendChild(count); pager.appendChild(next);
+      container.appendChild(stage);
+      container.appendChild(pager);
+
+      let idx = 0;
+      function show(i) {
+        idx = Math.max(0, Math.min(exercises.length - 1, i));
+        stopAudio();
+        stage.innerHTML = '';
+        stage.appendChild(buildExercise(exercises[idx], idx + 1));
+        count.textContent = (idx + 1) + ' / ' + exercises.length;
+        prev.disabled = idx === 0;
+        next.disabled = idx === exercises.length - 1;
+      }
+      prev.addEventListener('click', function () { show(idx - 1); });
+      next.addEventListener('click', function () { show(idx + 1); });
+      pagerKeyHandler = function (e) {
+        const t = e.target && e.target.tagName;
+        if (t === 'INPUT' || t === 'TEXTAREA') return;
+        if (e.key === 'ArrowLeft') show(idx - 1);
+        else if (e.key === 'ArrowRight') show(idx + 1);
+      };
+      document.addEventListener('keydown', pagerKeyHandler);
+      show(0);
     }
 
     // ---------- Khung: sidebar (section → mục con) + nội dung ----------
