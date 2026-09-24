@@ -36,3 +36,7 @@ ex5_02.mp3  (Chào chị, em tên là Vi.)
 ex5_03.mp3  (Chào em, anh tên là Phú.)
 ex5_04.mp3  (Chào cô, con tên là Thư.)
 ex5_05.mp3  (Chào ông, con tên là Nga.)
+
+# Từ vựng - Nghề nghiệp (mỗi bài 1 file nghe cả bài; sẽ bổ sung sau)
+vocab_ex6.mp3  (bài 6: nhìn hình, nghe mọi người nói)
+vocab_ex7.mp3  (bài 7: nghe và đánh số hình)
