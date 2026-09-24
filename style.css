@@ -1561,3 +1561,26 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-arrow:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .bai-arrow { transition: none; } .bai-arrow:hover:not(:disabled) { transform: none; } }
 .bai-tone-lav { --chip-bg: #D4C9FB; }
+
+/* ---- Từ vựng có ảnh: bài 6-7 ---- */
+.bai-listen {
+  display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 18px; padding: 10px 18px;
+  border: 1.5px solid var(--stroke); border-radius: 999px; background: #D4C9FB; color: var(--ink);
+  font-family: var(--font-display); font-weight: 700; font-size: .95rem; cursor: pointer;
+}
+.bai-listen:hover { box-shadow: 2px 2px 0 0 var(--stroke); }
+.bai-listen.playing { background: #FCEFCD; }
+.bai-listen:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 2px; }
+.bai-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; max-width: 440px; }
+.bai-photo { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.bai-photo-img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 2px solid var(--stroke); background: #fff; }
+.bai-photo-cap { align-self: flex-start; font-weight: 600; color: var(--ink); }
+.bai-order {
+  width: 3.2ch; padding: 2px 4px; font: inherit; font-size: 1.2rem; font-weight: 700; text-align: center; color: var(--ink);
+  border: 0; border-bottom: 2px dashed var(--stroke); background: transparent; border-radius: 4px 4px 0 0;
+}
+.bai-order:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 1px; }
+.bai-order.is-example { color: #EB483F; opacity: 1; -webkit-text-fill-color: #EB483F; }
+.bai-order.is-correct { background: #D6F2DF; border-bottom-color: #2E9E5B; }
+.bai-order.is-wrong { background: #FBE0DE; border-bottom-color: #EB483F; }
+@media (max-width: 480px) { .bai-photos { gap: 16px 12px; } }
