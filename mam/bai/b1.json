@@ -4,7 +4,9 @@
   "section": "Moi section co titleVi + titleEn. Co 'subtopics' thi hien danh sach muc con ben duoi; khong co thi bam vao se hien 'dang soan'.",
   "exercise.letters": "Luoi cac chu cai. 'rows' = danh sach hang, moi hang la danh sach chu.",
   "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong.",
-  "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt"
+  "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt",
+  "exercise.photoVocab": "Anh + chu thich + 1 nut nghe cho ca bai ('audio' la duong dan file). 'num' = so bai in trong sach.",
+  "exercise.photoOrder": "Nghe va danh so hinh. Moi item co 'example' (so cho san, khoa) hoac 'answer' (dap an, dien so 1-6). Chua co 'answer' thi khong hien nut Kiem tra."
  },
  "id": "b1",
  "num": 1,
@@ -327,7 +329,87 @@
   {
    "id": "tu-vung",
    "titleVi": "Từ vựng",
-   "titleEn": "Vocabulary"
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "nghe-nghiep",
+     "label": "Nghề nghiệp",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 6,
+       "instructionVi": "Nhìn vào hình và nghe mọi người nói.",
+       "instructionEn": "Look at the photos and listen to the people.",
+       "audio": "audio/b1/{voice}/vocab_ex6.mp3",
+       "items": [
+        {
+         "img": "images/b1/nghe-nghiep/ha.jpg",
+         "caption": "Hà, giáo viên."
+        },
+        {
+         "img": "images/b1/nghe-nghiep/phu.jpg",
+         "caption": "Phú, bác sĩ"
+        },
+        {
+         "img": "images/b1/nghe-nghiep/tu.jpg",
+         "caption": "Tú, kỹ sư"
+        },
+        {
+         "img": "images/b1/nghe-nghiep/chi.jpg",
+         "caption": "Chi, công an"
+        },
+        {
+         "img": "images/b1/nghe-nghiep/an.jpg",
+         "caption": "An, nhân viên văn phòng"
+        },
+        {
+         "img": "images/b1/nghe-nghiep/my.jpg",
+         "caption": "My, ca sĩ"
+        }
+       ]
+      },
+      {
+       "type": "photoOrder",
+       "num": 7,
+       "instructionVi": "Nghe và đánh số các hình theo thứ tự bạn nghe được.",
+       "instructionEn": "Listen and number the pictures in the order you hear.",
+       "audio": "audio/b1/{voice}/vocab_ex7.mp3",
+       "items": [
+        {
+         "img": "images/b1/nghe-nghiep/ha.jpg",
+         "caption": "Hà, giáo viên.",
+         "answer": null
+        },
+        {
+         "img": "images/b1/nghe-nghiep/phu.jpg",
+         "caption": "Phú, bác sĩ",
+         "answer": null
+        },
+        {
+         "img": "images/b1/nghe-nghiep/tu.jpg",
+         "caption": "Tú, kỹ sư",
+         "example": 1
+        },
+        {
+         "img": "images/b1/nghe-nghiep/chi.jpg",
+         "caption": "Chi, công an",
+         "answer": null
+        },
+        {
+         "img": "images/b1/nghe-nghiep/an.jpg",
+         "caption": "An, nhân viên văn phòng",
+         "answer": null
+        },
+        {
+         "img": "images/b1/nghe-nghiep/my.jpg",
+         "caption": "My, ca sĩ",
+         "answer": null
+        }
+       ]
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "nghe",
