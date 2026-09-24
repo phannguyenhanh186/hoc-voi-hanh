@@ -1,0 +1,61 @@
+{
+  "_guide": {
+    "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b1&level=mam. App bo qua key bat dau bang '_'.",
+    "section": "Moi section co titleVi + titleEn. Co 'subtopics' thi hien danh sach muc con ben duoi; khong co thi bam vao se hien 'dang soan'.",
+    "exercise.letters": "Luoi cac chu cai. 'rows' = danh sach hang, moi hang la danh sach chu.",
+    "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong.",
+    "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt"
+  },
+  "id": "b1",
+  "num": 1,
+  "title": "Chào bạn, bạn khoẻ không?",
+  "sections": [
+    {
+      "id": "phat-am",
+      "titleVi": "Phát âm",
+      "titleEn": "Pronunciation",
+      "subtopics": [
+        {
+          "id": "bang-chu-cai",
+          "label": "Bảng chữ cái",
+          "exercises": [
+            {
+              "type": "letters",
+              "instructionVi": "Nghe và lặp lại bảng chữ cái sau.",
+              "instructionEn": "Listen and repeat the following alphabet.",
+              "audio": "audio/b1/{voice}/pron_{key}.mp3",
+              "rows": [
+                ["a", "ă", "â", "b", "c", "d", "đ", "e", "ê"],
+                ["g", "h", "i", "k", "l", "m", "n", "o", "ô"],
+                ["ơ", "p", "q", "r", "s", "t", "u", "ư", "v"],
+                ["x", "y"]
+              ]
+            },
+            {
+              "type": "sounds",
+              "instructionVi": "Nghe và lặp lại các vần sau.",
+              "instructionEn": "Listen and repeat the following sounds.",
+              "audio": "audio/b1/{voice}/pron_{key}.mp3",
+              "columns": [
+                [
+                  { "tone": "yellow", "rows": [["a", "ba", "ra"], ["ă"], ["â"]] },
+                  { "tone": "pink",   "rows": [["e", "be", "xe"], ["ê", "tê", "mê"], ["i", "đi", "bi"]] }
+                ],
+                [
+                  { "tone": "blue",   "rows": [["o", "to", "lo"], ["ô", "cô", "tô"], ["ơ", "bơ", "mơ"]] },
+                  { "tone": "violet", "rows": [["u", "xu", "vu"], ["ư", "tư", "dư"], ["y", "ly"]] }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { "id": "tu-vung",  "titleVi": "Từ vựng",  "titleEn": "Vocabulary" },
+    { "id": "nghe",     "titleVi": "Nghe",     "titleEn": "Listening" },
+    { "id": "ngu-phap", "titleVi": "Ngữ pháp", "titleEn": "Grammar" },
+    { "id": "noi",      "titleVi": "Nói",      "titleEn": "Speaking" },
+    { "id": "doc",      "titleVi": "Đọc",      "titleEn": "Reading" },
+    { "id": "viet",     "titleVi": "Viết",     "titleEn": "Writing" }
+  ]
+}
