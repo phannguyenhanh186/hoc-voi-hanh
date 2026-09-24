@@ -1509,3 +1509,55 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   border-radius: 999px; opacity: 0; pointer-events: none; transition: opacity .15s ease;
 }
 .bai-toast.show { opacity: 1; }
+
+/* ---- Bài học slide: bài 3-5 (nghe chọn, bảng thanh điệu, điền tên) + phân trang ---- */
+.bai-exercise { margin: 0; }
+.bai-stage { min-height: 320px; }
+.bai-num { font-weight: 700; }
+.bai-label { cursor: default; font-size: 1.05rem; padding: 0 12px; }
+.bai-label:hover { transform: none; box-shadow: none; }
+
+.bai-pick { display: grid; gap: 10px; max-width: 640px; }
+.bai-pick-row { display: grid; grid-template-columns: 56px repeat(4, minmax(0, 1fr)); gap: 10px; }
+.bai-opt { position: relative; }
+.bai-opt.is-correct { box-shadow: 0 0 0 3px #2E9E5B; background: #D6F2DF; }
+.bai-opt.is-correct::after { content: '✓'; position: absolute; top: 3px; right: 7px; font-size: .8rem; font-weight: 800; color: #1E7A43; }
+.bai-opt.is-wrong { box-shadow: inset 0 0 0 2px #EB483F; opacity: .55; }
+.bai-pick-row.solved .bai-opt:not(.is-correct) { opacity: .5; cursor: default; }
+
+.bai-tones { display: grid; grid-template-columns: minmax(150px, 2.2fr) repeat(4, minmax(0, 1fr)); gap: 10px; max-width: 640px; }
+@media (max-width: 640px) { .bai-tones { grid-template-columns: minmax(110px, 1.8fr) repeat(4, minmax(0, 1fr)); gap: 6px; } .bai-label { font-size: .9rem; } }
+
+.bai-fill { display: grid; gap: 14px; max-width: 640px; }
+.bai-fill-row { display: grid; grid-template-columns: 56px 1fr; gap: 12px; align-items: center; }
+.bai-fill-line { font-size: 1.15rem; line-height: 1.9; color: var(--ink); }
+.bai-blank {
+  width: 9ch; margin: 0 4px; padding: 2px 6px; font: inherit; color: var(--ink); text-align: center;
+  border: 0; border-bottom: 2px solid var(--stroke); background: transparent; border-radius: 4px 4px 0 0;
+}
+.bai-blank:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 1px; }
+.bai-blank.is-correct { background: #D6F2DF; border-bottom-color: #2E9E5B; }
+.bai-blank.is-wrong { background: #FBE0DE; border-bottom-color: #EB483F; }
+.bai-mark { margin-left: 6px; font-weight: 800; }
+.bai-mark.ok { color: #1E7A43; }
+.bai-mark.bad { color: #EB483F; }
+.bai-fill-actions { display: flex; gap: 10px; margin-top: 6px; }
+.bai-btn {
+  padding: 10px 18px; border: 1.5px solid var(--stroke); border-radius: 10px; background: #D4C9FB; color: var(--ink);
+  font-family: var(--font-display); font-weight: 700; font-size: .95rem; cursor: pointer;
+}
+.bai-btn-ghost { background: transparent; }
+.bai-btn:hover { box-shadow: 2px 2px 0 0 var(--stroke); }
+.bai-btn:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 2px; }
+
+.bai-pager { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 28px; }
+.bai-pager-count { font-weight: 700; color: var(--muted); min-width: 56px; text-align: center; }
+.bai-arrow {
+  width: 48px; height: 48px; border: 1.5px solid var(--stroke); border-radius: 50%; background: #FCEFCD; color: var(--ink);
+  font-size: 1.4rem; line-height: 1; cursor: pointer; transition: transform .1s ease, box-shadow .1s ease;
+}
+.bai-arrow:hover:not(:disabled) { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 var(--stroke); }
+.bai-arrow:disabled { opacity: .35; cursor: default; }
+.bai-arrow:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .bai-arrow { transition: none; } .bai-arrow:hover:not(:disabled) { transform: none; } }
+.bai-tone-lav { --chip-bg: #D4C9FB; }
