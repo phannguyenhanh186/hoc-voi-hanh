@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hoc voi hanh — Learn Vietnamese beyond textbooks</title>
+  <meta name="description" content="Build real-world Vietnamese with lessons, reading materials, native audio, and practical exercises." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header landing-nav">
+    <div class="wrap-wide">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hocvoihanh</a>
+        <div class="nav-links">
+          <span class="nav-divider"></span>
+          <a href="how.html">How this works?</a>
+          <a href="about.html">Contact</a>
+          <span class="nav-divider"></span>
+        </div>
+        <div class="nav-right">
+          <button class="icon-btn" type="button" aria-label="Notifications">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="icon-badge">5</span>
+          </button>
+
+          <div class="account-menu">
+            <button class="account-pill" id="account-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="account-dropdown">
+              <span class="account-avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+              </span>
+              <span class="account-text">
+                <span class="account-name" id="account-name">Guest</span>
+                <span class="account-role" id="account-role"><span class="dot"></span>GUEST</span>
+              </span>
+              <svg class="account-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+
+            <div class="account-dropdown" id="account-dropdown" hidden>
+              <div id="account-guest-content">
+                <div class="account-welcome">
+                  <p class="welcome-title">Welcome! 👋</p>
+                  <p class="welcome-text">Sign in to save your progress and receive personalized learning path.</p>
+                </div>
+
+                <a class="account-action" href="hoc-tap-demo.html?mode=login">
+                  <span class="action-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M9 17l5-5-5-5"/><path d="M14 12H3"/></svg>
+                  </span>
+                  <span>Sign in</span>
+                </a>
+                <a class="account-action" href="hoc-tap-demo.html?mode=signup">
+                  <span class="action-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="7.5" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
+                  </span>
+                  <span>New here? Create your new account</span>
+                </a>
+              </div>
+
+              <div id="account-member-content" hidden>
+                <div class="account-welcome">
+                  <p class="welcome-title" id="account-member-greeting">Chào! 👋</p>
+                  <p class="welcome-text" id="account-member-email"></p>
+                </div>
+
+                <a class="account-action" href="profile.html">
+                  <span class="action-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+                  </span>
+                  <span>My profile</span>
+                </a>
+                <a class="account-action" href="#">
+                  <span class="action-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </span>
+                  <span>My vocab notebook</span>
+                </a>
+
+                <button class="account-action" id="btn-sign-out" type="button">
+                  <span class="action-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+                  </span>
+                  <span>Sign out</span>
+                </button>
+
+                <div class="account-danger">
+                  <button class="account-action account-action-danger" id="btn-delete-account" type="button" aria-expanded="false" aria-controls="delete-confirm">
+                    <span class="action-icon action-icon-danger">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+                    </span>
+                    <span>Delete account</span>
+                  </button>
+
+                  <div class="delete-confirm" id="delete-confirm" hidden>
+                    <p class="delete-confirm-text">This permanently deletes your account and saved progress. Enter your password to confirm.</p>
+                    <input type="password" id="delete-password" placeholder="Password" autocomplete="current-password" />
+                    <div class="msg" id="delete-msg"></div>
+                    <div class="delete-confirm-actions">
+                      <button type="button" class="btn-mini btn-mini-ghost" id="btn-delete-cancel">Cancel</button>
+                      <button type="button" class="btn-mini btn-mini-danger" id="btn-delete-confirm">Delete my account</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap-wide">
+    <section class="landing-hero-c">
+      <h1>Your Vietnamese journey, ready whenever you are</h1>
+      <p>Whoever you are, wherever you are — if you're ready to learn, we've got everything you need to effectively learn Vietnamese at your own pace.</p>
+    </section>
+
+    <section class="frame-section frame-blue">
+      <div class="frame-heading">
+        <h2>Explore now</h2>
+      </div>
+      <div class="explore-grid">
+        <a class="explore-card is-link" href="lessons.html?level=mam">
+          <div class="explore-card-head head-yellow">
+            <h3>Mầm 🌱</h3>
+            <div class="subtitle">Foundations</div>
+          </div>
+          <p class="desc">You are beginning to understand basic Vietnamese sounds and words.</p>
+        </a>
+        <div class="explore-card is-soon">
+          <div class="explore-card-head head-blue">
+            <h3>Chồi 🌿</h3>
+            <div class="subtitle">Communication</div>
+          </div>
+          <p class="desc">You can communicate about familiar topics with growing confidence.</p>
+        </div>
+        <div class="explore-card is-soon">
+          <div class="explore-card-head head-green">
+            <h3>Cành 🌳</h3>
+            <div class="subtitle">Growth</div>
+          </div>
+          <p class="desc">You feel more comfortable using and reading Vietnamese as your skills grow.</p>
+        </div>
+        <div class="explore-card is-soon">
+          <div class="explore-card-head head-pink">
+            <h3>Lá 🍃</h3>
+            <div class="subtitle">Real-world Vietnamese</div>
+          </div>
+          <p class="desc">You understand Vietnamese beyond the textbook and participate in real conversations.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap-wide">hoc voi hanh · học đi đôi với hành</div></footer>
+  <script src="pomodoro.js" defer></script>
+
+  <!-- Firebase (dùng chung config với hoc-tap-demo.html) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDX1lJ_xBPAgWpireowMwQMbrmof7gtHfQ",
+      authDomain: "hocvoihanh.firebaseapp.com",
+      projectId: "hocvoihanh",
+      storageBucket: "hocvoihanh.firebasestorage.app",
+      messagingSenderId: "447968761171",
+      appId: "1:447968761171:web:8d4ec91591fd02dd22fda6",
+      measurementId: "G-X94RF3RXCT"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    const accountName = document.getElementById('account-name');
+    const accountRole = document.getElementById('account-role');
+    const guestContent = document.getElementById('account-guest-content');
+    const memberContent = document.getElementById('account-member-content');
+    const memberEmail = document.getElementById('account-member-email');
+    const memberGreeting = document.getElementById('account-member-greeting');
+    const btnSignOut = document.getElementById('btn-sign-out');
+
+    function setDisplayName(name) {
+      accountName.textContent = name;
+      memberGreeting.textContent = 'Chào ' + name + '! 👋';
+    }
+
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        accountRole.innerHTML = '<span class="dot"></span>MEMBER';
+        memberEmail.textContent = user.email;
+        guestContent.hidden = true;
+        memberContent.hidden = false;
+
+        // Hiển thị tạm trong lúc chờ đọc username từ Firestore (nguồn dữ liệu
+        // đáng tin cậy hơn user.displayName, vì displayName của Firebase Auth
+        // đôi khi chưa kịp đồng bộ ngay sau khi vừa tạo tài khoản).
+        setDisplayName(user.displayName || user.email.split('@')[0]);
+
+        db.collection('users').doc(user.uid).get()
+          .then((doc) => {
+            const savedUsername = doc.exists ? doc.data().username : null;
+            if (savedUsername) setDisplayName(savedUsername);
+          })
+          .catch(() => {});
+      } else {
+        accountName.textContent = 'Guest';
+        accountRole.innerHTML = '<span class="dot"></span>GUEST';
+        guestContent.hidden = false;
+        memberContent.hidden = true;
+      }
+    });
+
+    if (btnSignOut) {
+      btnSignOut.addEventListener('click', () => {
+        auth.signOut().then(() => location.reload());
+      });
+    }
+  </script>
+
+  <!-- Delete account -->
+  <script>
+    (function () {
+      const btnDeleteAccount = document.getElementById('btn-delete-account');
+      const deleteConfirm = document.getElementById('delete-confirm');
+      const deletePassword = document.getElementById('delete-password');
+      const deleteMsg = document.getElementById('delete-msg');
+      const btnDeleteCancel = document.getElementById('btn-delete-cancel');
+      const btnDeleteConfirm = document.getElementById('btn-delete-confirm');
+      if (!btnDeleteAccount || !deleteConfirm) return;
+
+      function resetDeletePanel() {
+        deleteConfirm.hidden = true;
+        btnDeleteAccount.setAttribute('aria-expanded', 'false');
+        deletePassword.value = '';
+        deleteMsg.textContent = '';
+        deleteMsg.className = 'msg';
+        btnDeleteConfirm.disabled = false;
+        btnDeleteConfirm.textContent = 'Delete my account';
+      }
+
+      btnDeleteAccount.addEventListener('click', () => {
+        const willOpen = deleteConfirm.hidden;
+        resetDeletePanel();
+        deleteConfirm.hidden = !willOpen;
+        btnDeleteAccount.setAttribute('aria-expanded', String(willOpen));
+        if (willOpen) deletePassword.focus();
+      });
+
+      btnDeleteCancel.addEventListener('click', resetDeletePanel);
+
+      btnDeleteConfirm.addEventListener('click', () => {
+        const user = auth.currentUser;
+        if (!user) return;
+        const password = deletePassword.value;
+        if (!password) {
+          deleteMsg.textContent = 'Please enter your password.';
+          deleteMsg.className = 'msg error';
+          return;
+        }
+
+        btnDeleteConfirm.disabled = true;
+        btnDeleteConfirm.textContent = 'Deleting…';
+        deleteMsg.textContent = '';
+        deleteMsg.className = 'msg';
+
+        const credential = firebase.auth.EmailAuthProvider.credential(user.email, password);
+        user.reauthenticateWithCredential(credential)
+          .then(() => db.collection('users').doc(user.uid).delete().catch(() => {}))
+          .then(() => user.delete())
+          .then(() => location.reload())
+          .catch((err) => {
+            btnDeleteConfirm.disabled = false;
+            btnDeleteConfirm.textContent = 'Delete my account';
+            const map = {
+              'auth/wrong-password': 'Incorrect password.',
+              'auth/invalid-credential': 'Incorrect password.',
+              'auth/too-many-requests': 'Too many attempts. Please try again later.',
+              'auth/requires-recent-login': 'Please sign out and sign in again, then retry.'
+            };
+            deleteMsg.textContent = map[err.code] || ('Something went wrong: ' + err.message);
+            deleteMsg.className = 'msg error';
+          });
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('account-toggle');
+      const dropdown = document.getElementById('account-dropdown');
+      const menu = toggle && toggle.closest('.account-menu');
+      if (!toggle || !dropdown || !menu) return;
+
+      function closeMenu() {
+        dropdown.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+      }
+      function openMenu() {
+        dropdown.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
+        menu.classList.add('is-open');
+      }
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.hidden ? openMenu() : closeMenu();
+      });
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target)) closeMenu();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>

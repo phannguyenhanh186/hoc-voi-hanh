@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+          <div id="account-widget-slot"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-back-bar wrap">
+    <a class="back-link" id="back-link" href="lessons.html">← Back</a>
+  </div>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <h1 id="title">Đang tải…</h1>
+    </div>
+    <section class="tab-panel" id="panel"></section>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <div class="bai-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="lesson-shared.js"></script>
+  <script>
+    // ========================================================
+    // bai.html — bài học kiểu "slide dạy học"
+    // Dữ liệu: <level>/bai/<id>.json  (xem _guide trong file JSON)
+    // Khung: sidebar trái = các section (giống Grammar v2), nội dung bên phải.
+    // ========================================================
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || 'b1';
+    const level = params.get('level') || 'mam';
+    const SAFE_ID = /^[a-z0-9_-]+$/i;
+
+    const $title = document.getElementById('title');
+    const $panel = document.getElementById('panel');
+    const $toast = document.getElementById('toast');
+    document.getElementById('back-link').href = 'lessons.html?level=' + encodeURIComponent(level);
+
+    // ---------- Thông báo nhỏ (dùng khi chưa có file audio) ----------
+    let toastTimer = null;
+    function toast(msg) {
+      $toast.textContent = msg;
+      $toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { $toast.classList.remove('show'); }, 2200);
+    }
+
+    // ---------- Audio: tên file theo kiểu Telex ----------
+    // ă→aw  â→aa  đ→dd  ê→ee  ô→oo  ơ→ow  ư→uw ; các chữ khác giữ nguyên.
+    // Ví dụ: "đi" → ddi, "bơ" → bow, "tư" → tuw.
+    const TELEX = { 'ă': 'aw', 'â': 'aa', 'đ': 'dd', 'ê': 'ee', 'ô': 'oo', 'ơ': 'ow', 'ư': 'uw' };
+    function audioKey(text) {
+      return String(text).normalize('NFC').toLowerCase().split('').map(function (ch) { return TELEX[ch] || ch; }).join('');
+    }
+    function audioSrc(template, text) {
+      if (!template) return '';
+      return resolveAudio(template.replace('{key}', audioKey(text)));
+    }
+
+    // File audio chưa có → trình phát báo lỗi → hiện thông báo thay vì im lặng.
+    player.addEventListener('error', function () {
+      if (!currentEl) return;
+      currentEl.classList.remove('playing');
+      toast('Chưa có audio cho “' + (currentEl.dataset.text || '') + '”');
+    });
+
+    function makeChip(text, template, extraClass) {
+      const b = el('button', 'bai-chip' + (extraClass ? ' ' + extraClass : ''), text);
+      b.type = 'button';
+      b.dataset.text = text;
+      b.setAttribute('aria-label', 'Nghe “' + text + '”');
+      b.addEventListener('click', function () { play(audioSrc(template, text), b); });
+      return b;
+    }
+
+    // ---------- Các dạng bài tập ----------
+    function exerciseHead(ex, n) {
+      const wrap = el('div');
+      const h = el('h3', 'bai-ex-head');
+      h.appendChild(el('span', 'bai-ex-num', String(n)));
+      h.appendChild(el('span', 'bai-ex-vi', ex.instructionVi || ''));
+      wrap.appendChild(h);
+      if (ex.instructionEn) wrap.appendChild(el('p', 'bai-ex-en', ex.instructionEn));
+      return wrap;
+    }
+
+    function renderLetters(ex) {
+      const grid = el('div', 'bai-letters');
+      (ex.rows || []).forEach(function (row) {
+        row.forEach(function (ch) { grid.appendChild(makeChip(ch, ex.audio)); });
+      });
+      return grid;
+    }
+
+    function renderSounds(ex) {
+      const wrap = el('div', 'bai-sounds');
+      (ex.columns || []).forEach(function (groups) {
+        const col = el('div', 'bai-sound-col');
+        groups.forEach(function (g) {
+          (g.rows || []).forEach(function (row) {
+            for (let i = 0; i < 3; i++) {
+              if (row[i] == null) {
+                const gap = el('span'); gap.setAttribute('aria-hidden', 'true');
+                col.appendChild(gap);
+              } else {
+                col.appendChild(makeChip(row[i], ex.audio, 'bai-tone-' + (g.tone || 'violet')));
+              }
+            }
+          });
+        });
+        wrap.appendChild(col);
+      });
+      return wrap;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds };
+
+    function renderExercises(container, exercises) {
+      (exercises || []).forEach(function (ex, i) {
+        const box = el('div', 'bai-exercise');
+        box.appendChild(exerciseHead(ex, i + 1));
+        const fn = RENDERERS[ex.type];
+        box.appendChild(fn ? fn(ex) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
+        container.appendChild(box);
+      });
+    }
+
+    // ---------- Khung: sidebar (section → mục con) + nội dung ----------
+    function buildLesson(item) {
+      const sections = item.sections || [];
+      $panel.innerHTML = '';
+
+      const shell = buildSectionShell('', function () { location.href = 'lessons.html?level=' + encodeURIComponent(level); });
+      const pill = shell.querySelector('.gram2-tab-pill');
+      $panel.appendChild(shell);
+
+      const body = el('div', 'gram2-body');
+      const sidebar = el('aside', 'gram2-sidebar');
+      const content = el('div', 'gram2-content');
+      body.appendChild(sidebar);
+      body.appendChild(content);
+      shell.appendChild(body);
+
+      const entries = [];   // { key, section, sub, btn, header, list, chevron }
+
+      function scrollToContentOnMobile() {
+        if (!window.matchMedia('(max-width: 720px)').matches) return;
+        window.requestAnimationFrame(function () {
+          const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 0;
+          window.scrollTo({ top: content.getBoundingClientRect().top + window.scrollY - headerH - 12, behavior: 'smooth' });
+        });
+      }
+
+      function select(entry, opts) {
+        entries.forEach(function (e) {
+          e.btn && e.btn.classList.toggle('active', e === entry);
+          e.isStatic && e.header.classList.toggle('active', e === entry);
+        });
+        // Mở section chứa mục đang chọn
+        if (entry.list && entry.list.classList.contains('gram2-collapsed')) {
+          entry.list.classList.remove('gram2-collapsed');
+          entry.chevron.textContent = '▾';
+        }
+
+        pill.textContent = entry.section.titleVi;
+        content.innerHTML = '';
+        if (entry.sub) {
+          content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));
+          if (entry.sub.exercises && entry.sub.exercises.length) renderExercises(content, entry.sub.exercises);
+          else content.appendChild(emptyNote('Mục này đang được soạn.'));
+        } else {
+          content.appendChild(el('h2', 'gram2-content-title', entry.section.titleVi));
+          content.appendChild(emptyNote('Phần “' + entry.section.titleVi + '” đang được soạn.'));
+        }
+
+        try { history.replaceState(null, '', '#' + entry.key); } catch (e) {}
+        if (opts && opts.scroll) scrollToContentOnMobile();
+      }
+
+      sections.forEach(function (section, si) {
+        const secBox = el('div', 'gram2-section');
+        const header = el('button', 'gram2-section-header'); header.type = 'button';
+        const titles = el('div', 'gram2-section-titles');
+        titles.appendChild(el('div', 'gram2-section-title-vi', (si + 1) + '. ' + section.titleVi));
+        if (section.titleEn) titles.appendChild(el('div', 'gram2-section-title-en', section.titleEn));
+        header.appendChild(titles);
+        const chevron = el('span', 'gram2-chevron', '▾');
+        header.appendChild(chevron);
+        secBox.appendChild(header);
+
+        const subs = section.subtopics || [];
+        if (!subs.length) {
+          // Section chưa có mục con: bấm vào tiêu đề là chọn luôn section.
+          header.classList.add('is-static');
+          const entry = { key: section.id, section: section, sub: null, header: header, isStatic: true };
+          entries.push(entry);
+          header.addEventListener('click', function () { select(entry, { scroll: true }); });
+        } else {
+          const list = el('div', 'gram2-subtopic-list');
+          subs.forEach(function (sub) {
+            const btn = el('button', 'gram2-subtopic-btn', sub.label); btn.type = 'button';
+            const entry = { key: section.id + '/' + sub.id, section: section, sub: sub, btn: btn, list: list, chevron: chevron };
+            entries.push(entry);
+            btn.addEventListener('click', function () { select(entry, { scroll: true }); });
+            list.appendChild(btn);
+          });
+          secBox.appendChild(list);
+          // Chỉ mở section đầu tiên lúc đầu; select() sẽ tự mở section chứa mục được chọn.
+          if (si !== 0) { list.classList.add('gram2-collapsed'); chevron.textContent = '▸'; }
+          header.addEventListener('click', function () {
+            const collapsed = list.classList.toggle('gram2-collapsed');
+            chevron.textContent = collapsed ? '▸' : '▾';
+          });
+        }
+        sidebar.appendChild(secBox);
+      });
+
+      // Mở đúng chỗ đang dạy khi tải lại trang (#phat-am/bang-chu-cai), mặc định mục đầu tiên.
+      const wanted = decodeURIComponent(location.hash.replace(/^#/, ''));
+      const first = entries.filter(function (e) { return e.key === wanted; })[0]
+        || entries.filter(function (e) { return e.sub; })[0]
+        || entries[0];
+      if (first) select(first);
+    }
+
+    // ---------- Load ----------
+    (async function () {
+      try {
+        if (!SAFE_ID.test(itemId) || !SAFE_ID.test(level)) throw new Error('Bad id');
+        const res = await fetch(level + '/bai/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+        document.title = 'Bài ' + item.num + ': ' + item.title + ' — hoc voi hanh';
+        $title.textContent = 'Bài ' + item.num + ': ' + item.title;
+        buildLesson(item);
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Không tải được bài học';
+        $panel.innerHTML = '<p class="note">Không tìm thấy file <code>' + level + '/bai/' + itemId + '.json</code>.</p>';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+  <script src="pomodoro.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="account-widget.js"></script>
+</body>
+</html>
