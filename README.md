@@ -54,3 +54,10 @@ Audio để trong audio/<id>/. Đường dẫn ghi thẳng trong JSON của bài
 5. Đợi ~1 phút, site lên tại https://<user>.github.io/<repo>/.
 
 Mỗi lần git push, Pages tự cập nhật (có thể chậm vài phút do cache CDN; thêm ?v=2 vào link CSS để né cache khi cần).
+
+## (e) Bài học kiểu "slide dạy học" (bai.html)
+Bài nào trong `<level>/units.json` có `"page": "bai.html"` sẽ vào thẳng trang này (không qua Từ vựng → Ngữ pháp → … như cũ). Dữ liệu ở `<level>/bai/<id>.json` (xem `_guide` trong file), ví dụ `mam/bai/b1.json`.
+- Sidebar trái = 7 section (Phát âm, Từ vựng, Nghe, Ngữ pháp, Nói, Đọc, Viết); section chưa có `subtopics` sẽ hiện "đang soạn".
+- Dạng bài đã có: `letters` (lưới chữ cái), `sounds` (bảng vần). Bấm vào ô để nghe.
+- Audio: `audio/<bài>/{voice}/pron_<tên Telex>.mp3` — danh sách file cần thu ở `audio/b1/_pron_filenames.txt`. Chưa có file thì bấm vào sẽ hiện thông báo "Chưa có audio".
+- URL có `#phat-am/bang-chu-cai` nên tải lại trang vẫn ở đúng mục đang dạy.
