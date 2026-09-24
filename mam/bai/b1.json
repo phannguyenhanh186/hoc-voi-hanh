@@ -376,32 +376,32 @@
        "audio": "audio/b1/{voice}/vocab_ex7.mp3",
        "items": [
         {
-         "img": "images/b1/nghe-nghiep/bai7/ha.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/giao-vien.jpg",
          "caption": "Hà, giáo viên.",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/bai7/phu.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/bac-si.jpg",
          "caption": "Phú, bác sĩ",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/bai7/tu.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/ky-su.jpg",
          "caption": "Tú, kỹ sư",
          "example": 1
         },
         {
-         "img": "images/b1/nghe-nghiep/bai7/chi.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/cong-an.jpg",
          "caption": "Chi, công an",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/bai7/an.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/nhan-vien-van-phong.jpg",
          "caption": "An, nhân viên văn phòng",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/bai7/my.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/ca-si.jpg",
          "caption": "My, ca sĩ",
          "answer": null
         }
