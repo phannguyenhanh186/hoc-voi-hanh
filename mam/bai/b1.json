@@ -343,27 +343,27 @@
        "audio": "audio/b1/{voice}/vocab_ex6.mp3",
        "items": [
         {
-         "img": "images/b1/nghe-nghiep/ha.jpg",
+         "img": "images/b1/nghe-nghiep/bai6/ha.jpg",
          "caption": "Hà, giáo viên."
         },
         {
-         "img": "images/b1/nghe-nghiep/phu.jpg",
+         "img": "images/b1/nghe-nghiep/bai6/phu.jpg",
          "caption": "Phú, bác sĩ"
         },
         {
-         "img": "images/b1/nghe-nghiep/tu.jpg",
+         "img": "images/b1/nghe-nghiep/bai6/tu.jpg",
          "caption": "Tú, kỹ sư"
         },
         {
-         "img": "images/b1/nghe-nghiep/chi.jpg",
+         "img": "images/b1/nghe-nghiep/bai6/chi.jpg",
          "caption": "Chi, công an"
         },
         {
-         "img": "images/b1/nghe-nghiep/an.jpg",
+         "img": "images/b1/nghe-nghiep/bai6/an.jpg",
          "caption": "An, nhân viên văn phòng"
         },
         {
-         "img": "images/b1/nghe-nghiep/my.jpg",
+         "img": "images/b1/nghe-nghiep/bai6/my.jpg",
          "caption": "My, ca sĩ"
         }
        ]
@@ -376,32 +376,32 @@
        "audio": "audio/b1/{voice}/vocab_ex7.mp3",
        "items": [
         {
-         "img": "images/b1/nghe-nghiep/ha.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/ha.jpg",
          "caption": "Hà, giáo viên.",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/phu.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/phu.jpg",
          "caption": "Phú, bác sĩ",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/tu.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/tu.jpg",
          "caption": "Tú, kỹ sư",
          "example": 1
         },
         {
-         "img": "images/b1/nghe-nghiep/chi.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/chi.jpg",
          "caption": "Chi, công an",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/an.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/an.jpg",
          "caption": "An, nhân viên văn phòng",
          "answer": null
         },
         {
-         "img": "images/b1/nghe-nghiep/my.jpg",
+         "img": "images/b1/nghe-nghiep/bai7/my.jpg",
          "caption": "My, ca sĩ",
          "answer": null
         }
