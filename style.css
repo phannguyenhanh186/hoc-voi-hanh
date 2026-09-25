@@ -1625,3 +1625,15 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-choose-row .bai-chip,
 .bai-pick-row .bai-chip { display: inline-flex; min-height: 38px; padding: 0 14px; font-size: 1.05rem; vertical-align: middle; }
 .bai-choose-row { display: block; }
+
+/* ---- Bài 6: nút nghe riêng trên từng ảnh ---- */
+.bai-photo-media { position: relative; }
+.bai-photo-listen {
+  position: absolute; right: 8px; bottom: 8px; width: 38px; height: 38px; border-radius: 50%;
+  border: 1.5px solid var(--stroke); background: #fff; color: var(--ink); font-size: .85rem;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 1px 1px 0 0 var(--stroke);
+}
+.bai-photo-listen:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 var(--stroke); }
+.bai-photo-listen.playing { background: #FCEFCD; }
+.bai-photo-listen:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 2px; }
