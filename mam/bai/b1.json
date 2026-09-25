@@ -4,7 +4,7 @@
   "section": "Moi section co titleVi + titleEn. Co 'subtopics' thi hien danh sach muc con ben duoi; khong co thi bam vao se hien 'dang soan'.",
   "exercise.letters": "Luoi cac chu cai. 'rows' = danh sach hang, moi hang la danh sach chu.",
   "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong.",
-  "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt",
+  "audio": "Mau duong dan audio cua exercise. {voice} = nam/bac, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt",
   "exercise.photoVocab": "Anh + chu thich + 1 nut nghe cho ca bai ('audio' la duong dan file). 'num' = so bai in trong sach.",
   "exercise.photoOrder": "Nghe va danh so hinh. Moi item co 'example' (so cho san, khoa) hoac 'answer' (dap an, dien so 1-6). Chua co 'answer' thi khong hien nut Kiem tra."
  },
@@ -688,25 +688,25 @@
        ],
        "items": [
         {
-         "img": "images/b1/bai11-ngu-phap/ha.jpg",
+         "img": "images/b1/bai11/ha.jpg",
          "name": "Hà",
          "template": "{0}",
          "answers": "chị"
         },
         {
-         "img": "images/b1/bai11-ngu-phap/binh.jpg",
+         "img": "images/b1/bai11/binh.jpg",
          "name": "Bình",
          "template": "{0}",
          "answers": "chú"
         },
         {
-         "img": "images/b1/bai11-ngu-phap/minh.jpg",
+         "img": "images/b1/bai11/minh.jpg",
          "name": "Minh",
          "template": "{0}",
          "answers": "anh"
         },
         {
-         "img": "images/b1/bai11-ngu-phap/lien.jpg",
+         "img": "images/b1/bai11/lien.jpg",
          "name": "Liên",
          "template": "{0}",
          "answers": "cô"
@@ -733,28 +733,28 @@
        "instructionEn": "Introduce the people below using the appropriate pronouns and jobs.",
        "items": [
         {
-         "img": "images/b1/bai11-noi/giang.jpg",
+         "img": "images/b1/bai12/giang.jpg",
          "name": "Giang",
          "example": "Đây là chị Giang. Chị Giang làm bác sĩ."
         },
         {
-         "img": "images/b1/bai11-noi/mai.jpg",
+         "img": "images/b1/bai12/mai.jpg",
          "name": "Mai"
         },
         {
-         "img": "images/b1/bai11-noi/chi-3.jpg",
+         "img": "images/b1/bai12/chi-3.jpg",
          "name": "Chi"
         },
         {
-         "img": "images/b1/bai11-noi/sang.jpg",
+         "img": "images/b1/bai12/sang.jpg",
          "name": "Sang"
         },
         {
-         "img": "images/b1/bai11-noi/hai.jpg",
+         "img": "images/b1/bai12/hai.jpg",
          "name": "Hải"
         },
         {
-         "img": "images/b1/bai11-noi/thu.jpg",
+         "img": "images/b1/bai12/thu.jpg",
          "name": "Thu"
         }
        ]
