@@ -1584,3 +1584,44 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-order.is-correct { background: #D6F2DF; border-bottom-color: #2E9E5B; }
 .bai-order.is-wrong { background: #FBE0DE; border-bottom-color: #EB483F; }
 @media (max-width: 480px) { .bai-photos { gap: 16px 12px; } }
+
+/* ---- Nghe/Ngữ pháp/Nói/Đọc/Viết: bài 8-13 ---- */
+.bai-dialog { display: grid; gap: 10px; max-width: 640px; margin-bottom: 16px; }
+.bai-dialog-row { display: grid; grid-template-columns: 56px 1fr; gap: 10px; align-items: baseline; }
+.bai-dialog-speaker { font-weight: 700; color: var(--muted); }
+.bai-dialog-row .bai-fill-line { font-size: 1.1rem; line-height: 1.9; }
+
+.bai-achoice { display: grid; gap: 22px; max-width: 640px; }
+.bai-achoice-head { margin-bottom: 8px; }
+.bai-achoice-opts { display: grid; gap: 8px; }
+.bai-achoice-opt {
+  text-align: left; padding: 10px 16px; border: 1.5px solid var(--stroke); border-radius: 10px;
+  background: #fff; color: var(--ink); font-family: var(--font-body); font-size: 1rem; cursor: pointer;
+}
+.bai-achoice-opt:hover { box-shadow: 2px 2px 0 0 var(--stroke); }
+.bai-achoice-opt.is-picked { background: #EFE9FE; }
+.bai-achoice-opt.is-correct { background: #D6F2DF; box-shadow: 0 0 0 2px #2E9E5B; }
+.bai-achoice-opt.is-wrong { background: #FBE0DE; box-shadow: inset 0 0 0 2px #EB483F; opacity: .7; }
+
+.bai-wordbank { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.bai-photos-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 460px; }
+.bai-photos-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
+.bai-photo-wide .bai-photo-img { aspect-ratio: 4 / 5; }
+.bai-photo .bai-fill-line { align-self: stretch; font-size: 1rem; }
+.bai-blank-wide { width: 8ch; }
+.bai-example { color: #EB483F; font-weight: 700; }
+
+.bai-passage {
+  max-width: 640px; padding: 16px 20px; margin: 0 0 20px; background: #EFE9FE; border: 1.5px solid var(--stroke);
+  border-radius: 12px; font-size: 1.05rem; line-height: 1.7; color: var(--ink);
+}
+.bai-qa-row { grid-template-columns: none; display: block; margin-bottom: 14px; }
+.bai-qa-q { display: block; font-weight: 700; margin-bottom: 6px; }
+.bai-blank-full { display: block; width: 100%; max-width: 480px; border-bottom: 2px solid var(--stroke); }
+
+.bai-choose { display: grid; gap: 14px; max-width: 640px; font-size: 1.05rem; }
+.bai-choose-row { line-height: 2.1; }
+
+.bai-choose-row .bai-chip,
+.bai-pick-row .bai-chip { display: inline-flex; min-height: 38px; padding: 0 14px; font-size: 1.05rem; vertical-align: middle; }
+.bai-choose-row { display: block; }
