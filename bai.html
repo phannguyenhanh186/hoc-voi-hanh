@@ -490,21 +490,36 @@
       (ex.items || []).forEach(function (it, i) {
         const fig = el('figure', 'bai-photo bai-photo-wide');
         fig.appendChild(makePhoto(it.img, it.name));
-        const cap = el('div', 'bai-fill-line');
-        cap.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
         if (it.example) {
+          const cap = el('div', 'bai-fill-line');
+          cap.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
           cap.appendChild(el('span', 'bai-example', it.example));
+          fig.appendChild(cap);
         } else {
-          ['pronoun', 'job'].forEach(function (kind) {
-            const input = document.createElement('input');
-            input.type = 'text'; input.className = 'bai-blank bai-blank-wide'; input.autocomplete = 'off';
-            input.setAttribute('aria-label', (kind === 'pronoun' ? 'Đại từ' : 'Nghề nghiệp') + ' cho ' + it.name);
-            cap.appendChild(document.createTextNode(kind === 'pronoun' ? 'Đây là ' : ' làm '));
-            cap.appendChild(input);
-          });
-          cap.appendChild(document.createTextNode(' ' + it.name + '.'));
+          // Dòng 1: "Đây là ___ Name." — dòng 2: "___ Name làm ___."
+          const line1 = el('div', 'bai-fill-line');
+          line1.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0Đây là '));
+          const p1 = document.createElement('input');
+          p1.type = 'text'; p1.className = 'bai-blank bai-blank-wide'; p1.autocomplete = 'off';
+          p1.setAttribute('aria-label', 'Đại từ cho ' + it.name);
+          line1.appendChild(p1);
+          line1.appendChild(document.createTextNode(' ' + it.name + '.'));
+
+          const line2 = el('div', 'bai-fill-line');
+          const p2 = document.createElement('input');
+          p2.type = 'text'; p2.className = 'bai-blank bai-blank-wide'; p2.autocomplete = 'off';
+          p2.setAttribute('aria-label', 'Đại từ cho ' + it.name + ' (câu 2)');
+          line2.appendChild(p2);
+          line2.appendChild(document.createTextNode(' ' + it.name + ' làm '));
+          const job = document.createElement('input');
+          job.type = 'text'; job.className = 'bai-blank bai-blank-wide'; job.autocomplete = 'off';
+          job.setAttribute('aria-label', 'Nghề nghiệp cho ' + it.name);
+          line2.appendChild(job);
+          line2.appendChild(document.createTextNode('.'));
+
+          fig.appendChild(line1);
+          fig.appendChild(line2);
         }
-        fig.appendChild(cap);
         grid.appendChild(fig);
       });
       return grid;
