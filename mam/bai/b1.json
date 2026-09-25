@@ -688,25 +688,25 @@
        ],
        "items": [
         {
-         "img": "images/b1/danh-xung/gp11/ha.jpg",
+         "img": "images/b1/bai11-ngu-phap/ha.jpg",
          "name": "Hà",
          "template": "{0}",
          "answers": "chị"
         },
         {
-         "img": "images/b1/danh-xung/gp11/binh.jpg",
+         "img": "images/b1/bai11-ngu-phap/binh.jpg",
          "name": "Bình",
          "template": "{0}",
          "answers": "chú"
         },
         {
-         "img": "images/b1/danh-xung/gp11/minh.jpg",
+         "img": "images/b1/bai11-ngu-phap/minh.jpg",
          "name": "Minh",
          "template": "{0}",
          "answers": "anh"
         },
         {
-         "img": "images/b1/danh-xung/gp11/lien.jpg",
+         "img": "images/b1/bai11-ngu-phap/lien.jpg",
          "name": "Liên",
          "template": "{0}",
          "answers": "cô"
@@ -728,33 +728,33 @@
      "exercises": [
       {
        "type": "openIntro",
-       "num": 11,
+       "num": 12,
        "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng và nghề nghiệp thích hợp.",
        "instructionEn": "Introduce the people below using the appropriate pronouns and jobs.",
        "items": [
         {
-         "img": "images/b1/danh-xung/noi11/giang.jpg",
+         "img": "images/b1/bai11-noi/giang.jpg",
          "name": "Giang",
          "example": "Đây là chị Giang. Chị Giang làm bác sĩ."
         },
         {
-         "img": "images/b1/danh-xung/noi11/mai.jpg",
+         "img": "images/b1/bai11-noi/mai.jpg",
          "name": "Mai"
         },
         {
-         "img": "images/b1/danh-xung/noi11/chi-3.jpg",
+         "img": "images/b1/bai11-noi/chi-3.jpg",
          "name": "Chi"
         },
         {
-         "img": "images/b1/danh-xung/noi11/sang.jpg",
+         "img": "images/b1/bai11-noi/sang.jpg",
          "name": "Sang"
         },
         {
-         "img": "images/b1/danh-xung/noi11/hai.jpg",
+         "img": "images/b1/bai11-noi/hai.jpg",
          "name": "Hải"
         },
         {
-         "img": "images/b1/danh-xung/noi11/thu.jpg",
+         "img": "images/b1/bai11-noi/thu.jpg",
          "name": "Thu"
         }
        ]
@@ -774,7 +774,7 @@
      "exercises": [
       {
        "type": "readingQA",
-       "num": 11,
+       "num": 13,
        "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
        "instructionEn": "Read the following paragraph and answer the questions.",
        "passage": "Hôm nay Tú gặp Ann và bạn của Ann. Tú chào Ann và hỏi tên bạn của Ann. Bạn của Ann tên là Mike.",
@@ -808,7 +808,7 @@
      "exercises": [
       {
        "type": "chooseWord",
-       "num": 12,
+       "num": 14,
        "instructionVi": "Chọn từ đúng.",
        "instructionEn": "Choose the correct words.",
        "items": [
@@ -895,7 +895,7 @@
       },
       {
        "type": "dialogueFill",
-       "num": 13,
+       "num": 15,
        "instructionVi": "Hoàn thành đoạn hội thoại sau.",
        "instructionEn": "Complete the following dialogue.",
        "lines": [
