@@ -500,7 +500,7 @@
         },
         {
          "speaker": "Ann:",
-         "template": "Tú?",
+         "template": "Tứ?",
          "answers": []
         },
         {
@@ -510,7 +510,7 @@
         },
         {
          "speaker": "Ann:",
-         "template": "Ã, {0} {1} bạn.",
+         "template": "À, {0} {1} bạn.",
          "answers": [
           [
            "xin"
