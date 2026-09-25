@@ -534,7 +534,7 @@
           "Anh làm giáo viên.",
           "Anh làm nhân viên."
          ],
-         "answer": null
+         "answer": "a"
         },
         {
          "audio": "audio/b1/{voice}/listen_ex9_02.mp3",
@@ -542,7 +542,7 @@
           "Chị Lâm làm bác sĩ.",
           "Chị Lan làm kỹ sư."
          ],
-         "answer": null
+         "answer": "a"
         },
         {
          "audio": "audio/b1/{voice}/listen_ex9_03.mp3",
@@ -550,7 +550,7 @@
           "Em làm công an.",
           "Em làm nhân viên."
          ],
-         "answer": null
+         "answer": "b"
         },
         {
          "audio": "audio/b1/{voice}/listen_ex9_04.mp3",
@@ -558,7 +558,7 @@
           "Chú Nam làm bác sĩ.",
           "Chú Nam làm ca sĩ."
          ],
-         "answer": null
+         "answer": "b"
         },
         {
          "audio": "audio/b1/{voice}/listen_ex9_05.mp3",
@@ -566,7 +566,7 @@
           "Mẹ của mình làm giáo viên.",
           "Mẹ của mình làm kỹ sư."
          ],
-         "answer": null
+         "answer": "b"
         }
        ]
       }
@@ -642,7 +642,7 @@
         },
         {
          "speaker": "   B:",
-         "template": "Cô khoẻ, cảm ơn {0}.",
+         "template": "Cô khoẻ, cám ơn {0}.",
          "answers": [
           [
            "con"
@@ -651,11 +651,10 @@
         },
         {
          "speaker": "5  A:",
-         "template": "Em tên là Linh. Còn {0}?",
+         "template": "{0} tên là Linh. Còn chị?",
          "answers": [
           [
-           "anh",
-           "chị"
+           "Em"
           ]
          ]
         },
@@ -664,7 +663,6 @@
          "template": "{0} tên là Phương.",
          "answers": [
           [
-           "Anh",
            "Chị"
           ]
          ]
@@ -837,8 +835,8 @@
          "blanks": [
           {
            "options": [
-            "khoẻ",
-            "khỏe"
+            "khoé",
+            "khoẻ"
            ],
            "answer": "khoẻ"
           }
@@ -873,17 +871,17 @@
          "blanks": [
           {
            "options": [
-            "khoẻ",
-            "khỏe"
+            "khoé",
+            "khoẻ"
            ],
            "answer": "khoẻ"
           },
           {
            "options": [
             "cạm",
-            "cảm"
+            "cám"
            ],
-           "answer": "cảm"
+           "answer": "cám"
           }
          ]
         }
@@ -951,8 +949,8 @@
            "Khỏe"
           ],
           [
-           "cảm ơn",
-           "cám ơn"
+           "cám ơn",
+           "cảm ơn"
           ]
          ]
         }
