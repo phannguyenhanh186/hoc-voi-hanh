@@ -251,14 +251,20 @@
       return img;
     }
 
-    // Bài 6: nhìn hình, nghe mọi người nói. Ảnh + chú thích (tên, nghề).
+    // Bài 6: nhìn hình, nghe mọi người nói. Mỗi người có nút nghe riêng.
     function renderPhotoVocab(ex, n) {
       const box = el('div');
-      box.appendChild(makeListenBtn(ex, n));
       const grid = el('div', 'bai-photos');
-      (ex.items || []).forEach(function (it) {
+      (ex.items || []).forEach(function (it, i) {
         const fig = el('figure', 'bai-photo');
-        fig.appendChild(makePhoto(it.img, it.caption));
+        const media = el('div', 'bai-photo-media');
+        media.appendChild(makePhoto(it.img, it.caption));
+        const btn = el('button', 'bai-photo-listen', '▶');
+        btn.type = 'button'; btn.dataset.text = it.caption;
+        btn.setAttribute('aria-label', 'Nghe: ' + it.caption);
+        btn.addEventListener('click', function () { play(resolveAudio(it.audio || ex.audio), btn); });
+        media.appendChild(btn);
+        fig.appendChild(media);
         fig.appendChild(el('figcaption', 'bai-photo-cap', it.caption));
         grid.appendChild(fig);
       });
