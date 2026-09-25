@@ -344,27 +344,33 @@
        "items": [
         {
          "img": "images/b1/nghe-nghiep/bai6/ha.jpg",
-         "caption": "Hà, giáo viên."
+         "caption": "Hà, giáo viên.",
+         "audio": "audio/b1/{voice}/vocab_ex6_ha.mp3"
         },
         {
          "img": "images/b1/nghe-nghiep/bai6/phu.jpg",
-         "caption": "Phú, bác sĩ"
+         "caption": "Phú, bác sĩ",
+         "audio": "audio/b1/{voice}/vocab_ex6_phu.mp3"
         },
         {
          "img": "images/b1/nghe-nghiep/bai6/tu.jpg",
-         "caption": "Tú, kỹ sư"
+         "caption": "Tú, kỹ sư",
+         "audio": "audio/b1/{voice}/vocab_ex6_tu.mp3"
         },
         {
          "img": "images/b1/nghe-nghiep/bai6/chi.jpg",
-         "caption": "Chi, công an"
+         "caption": "Chi, công an",
+         "audio": "audio/b1/{voice}/vocab_ex6_chi.mp3"
         },
         {
          "img": "images/b1/nghe-nghiep/bai6/an.jpg",
-         "caption": "An, nhân viên văn phòng"
+         "caption": "An, nhân viên văn phòng",
+         "audio": "audio/b1/{voice}/vocab_ex6_an.mp3"
         },
         {
          "img": "images/b1/nghe-nghiep/bai6/my.jpg",
-         "caption": "My, ca sĩ"
+         "caption": "My, ca sĩ",
+         "audio": "audio/b1/{voice}/vocab_ex6_my.mp3"
         }
        ]
       },
