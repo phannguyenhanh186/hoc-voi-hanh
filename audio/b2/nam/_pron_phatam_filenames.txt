@@ -113,6 +113,6 @@ listen_ex7_04.mp3   (Cô Hân không thích bún bò.)             -- đáp án:
 
 --- BÀI 8 (phần Nghe): Nghe và chọn đáp án đúng (đọc cả câu, không hiện chữ trên web) ---
 listen_ex8_01.mp3   (An thích phở bò.)                       -- đáp án: "phở bò" (không phải "phở gà")
-listen_ex8_02.mp3   (Chị Ngân không thích trái cây.)         -- đáp án: "trái cây" (không phải "trà")
+listen_ex8_02.mp3   (Chị Ngân không thích trà.)              -- đáp án: "trà" (không phải "trái cây")
 listen_ex8_03.mp3   (Trang không thích cà phê đen.)          -- đáp án: "đen" (không phải "sữa")
 listen_ex8_04.mp3   (Quân thích ăn cơm với canh.)            -- đáp án: "canh" (không phải "rau")
