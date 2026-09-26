@@ -268,6 +268,65 @@
     }
 
     // Bài 6: nhìn hình, nghe mọi người nói. Mỗi người có nút nghe riêng.
+    // Ảnh + câu có chỗ trống (item.example=true thì hiện đáp án tô đỏ thay vì ô nhập).
+    function renderPhotoFill(ex, n) {
+      const box = el('div');
+      if (ex.audio) box.appendChild(makeListenBtn(ex, n));
+      const grid = el('div', 'bai-photos');
+      const allCells = [];
+      (ex.items || []).forEach(function (it) {
+        const fig = el('figure', 'bai-photo');
+        const media = el('div', 'bai-photo-media');
+        media.appendChild(makePhoto(it.img, it.name));
+        const btn = el('button', 'bai-photo-listen', '▶');
+        btn.type = 'button'; btn.dataset.text = it.name;
+        btn.setAttribute('aria-label', 'Nghe: ' + it.name);
+        btn.addEventListener('click', function () { play(resolveAudio(it.audio || ex.audio), btn); });
+        media.appendChild(btn);
+        fig.appendChild(media);
+
+        const cap = el('figcaption', 'bai-photo-cap');
+        if (it.example) {
+          String(it.template).split(/(\{0\})/).forEach(function (part) {
+            if (part === '{0}') {
+              const ans = (it.answers && it.answers[0] && it.answers[0][0]) || '';
+              cap.appendChild(el('span', 'bai-fill-example', ans));
+            } else if (part) {
+              cap.appendChild(document.createTextNode(part));
+            }
+          });
+        } else {
+          const built = buildFillLine(it.template, it.answers || [], it.name);
+          const mark = el('span', 'bai-mark');
+          built.line.appendChild(mark);
+          cap.appendChild(built.line);
+          built.cells.forEach(function (c) { allCells.push({ input: c.input, answers: c.answers, mark: mark }); });
+        }
+        fig.appendChild(cap);
+        grid.appendChild(fig);
+      });
+      box.appendChild(grid);
+
+      if (allCells.length) {
+        function check() {
+          allCells.forEach(function (c) {
+            const v = normName(c.input.value);
+            const ok = v && c.answers.some(function (a) { return normName(a) === v; });
+            markCell(c.input, c.mark, !v ? '' : (ok ? 'ok' : 'bad'));
+          });
+        }
+        function reveal() {
+          allCells.forEach(function (c) {
+            c.input.value = c.answers[0] || '';
+            markCell(c.input, c.mark, 'ok');
+          });
+        }
+        allCells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+        box.appendChild(fillCheckBar(allCells, check, reveal));
+      }
+      return box;
+    }
+
     function renderPhotoVocab(ex, n) {
       const box = el('div');
       const grid = el('div', 'bai-photos');
@@ -594,7 +653,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
