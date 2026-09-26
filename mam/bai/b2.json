@@ -7,6 +7,7 @@
   "exercise.listenPick": "Nghe va khoanh tron am dung. Moi item: 'options' (4 lua chon) + 'answer' (dap an - PHAI xac nhan lai truoc khi thu am, xem todo_answers).",
   "exercise.fillWords": "Giong fillNames nhung dien tu bat ky (khong chi ten). Moi item: before/after/answers[]/audio.",
   "exercise.photoFill": "Anh + cau co 1 cho trong, dien tu nghe duoc. Item dau tien co the danh dau 'example: true' de hien dap an to do lam mau (khong co o nhap). Moi item: img/name/template ('{0}' la cho trong)/answers (mang cac mang dap an chap nhan)/audio.",
+  "exercise.audioChoice": "Item co the them 'text' (cau hien thi tren man hinh canh nut nghe) - dung cho dang dung/sai hoac can hien cau hoi ro rang. Neu khong co 'text' thi chi hien nut nghe + cac lua chon (dang nghe kin, khong hien chu).",
   "todo_images": "Duong dan img la placeholder: Bai 5 (tu vung) trong thu muc images/b2/bai1/, Bai 6 (photoFill) trong thu muc images/b2/bai6/ (6 anh: minh, thu, tram, thom, han, giang) - chua co file that, se bo sung sau.",
   "todo_audio_vocab": "9/10 tu (tu vung) da co san audio trong audio/b2/nam/. Rieng 'trai_cay' (trai cay) chua co file vocab_trai_cay.mp3, can thu am them.",
   "todo_audio_phatam": "Toan bo audio phan Phat am (pron_*, ex2_*, ex4_*) CHUA THU AM, xem file audio/b2/_pron_phatam_filenames.txt de biet danh sach can thu.",
@@ -190,10 +191,10 @@
        "instructionVi": "Nghe và trả lời các câu hỏi sau.",
        "instructionEn": "Listen and answer the following questions.",
        "items": [
-        { "audio": "audio/b2/{voice}/listen_ex7_01.mp3", "options": ["Đúng", "Sai"], "answer": "b" },
-        { "audio": "audio/b2/{voice}/listen_ex7_02.mp3", "options": ["Đúng", "Sai"], "answer": "b" },
-        { "audio": "audio/b2/{voice}/listen_ex7_03.mp3", "options": ["Đúng", "Sai"], "answer": "a" },
-        { "audio": "audio/b2/{voice}/listen_ex7_04.mp3", "options": ["Đúng", "Sai"], "answer": "a" }
+        { "audio": "audio/b2/{voice}/listen_ex7_01.mp3", "text": "Chị Vân thích cà phê sữa.", "options": ["Đúng", "Sai"], "answer": "b" },
+        { "audio": "audio/b2/{voice}/listen_ex7_02.mp3", "text": "Anh Khang không thích cơm thịt gà.", "options": ["Đúng", "Sai"], "answer": "b" },
+        { "audio": "audio/b2/{voice}/listen_ex7_03.mp3", "text": "Chú Tâm thích trái cây.", "options": ["Đúng", "Sai"], "answer": "a" },
+        { "audio": "audio/b2/{voice}/listen_ex7_04.mp3", "text": "Cô Hân không thích bún bò.", "options": ["Đúng", "Sai"], "answer": "a" }
        ]
       },
       {
