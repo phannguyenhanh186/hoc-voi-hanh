@@ -1593,7 +1593,8 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-dialog-row .bai-fill-line { font-size: 1.1rem; line-height: 1.9; }
 
 .bai-achoice { display: grid; gap: 22px; max-width: 640px; }
-.bai-achoice-head { margin-bottom: 8px; }
+.bai-achoice-head { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.bai-achoice-text { font-size: 1.05rem; color: var(--ink); }
 .bai-achoice-opts { display: grid; gap: 8px; }
 .bai-achoice-opt {
   text-align: left; padding: 10px 16px; border: 1.5px solid var(--stroke); border-radius: 10px;
