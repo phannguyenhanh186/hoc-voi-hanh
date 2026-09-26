@@ -93,3 +93,14 @@ ex4_05.mp3   (Chú Tân không thích thịt bò.)
 LƯU Ý: đáp án của Bài 3 và Bài 4 hiện là mình điền tạm dựa theo từ vựng của bài học.
 Trước khi thu âm, cần xác nhận lại nội dung câu/đáp án đúng ý muốn, vì phải khớp
 chính xác với từ được đọc trong file audio.
+
+--- BÀI 6 (phần Từ vựng): Nghe và hoàn thành các câu (đọc cả câu) ---
+ex6_01.mp3   (Minh thích ăn bún bò.)              -- câu ví dụ, đáp án tô đỏ, không có ô trống
+ex6_02.mp3   (Chị Thư thích uống cà phê sữa.)
+ex6_03.mp3   (Trâm không thích ăn rau.)
+ex6_04.mp3   (Cô Thơm thích ăn cơm với canh.)
+ex6_05.mp3   (Hân thích uống trà.)
+ex6_06.mp3   (Anh Giang không thích ăn thịt gà.)
+
+Ảnh cần cho Bài 6 (đặt trong images/b2/bai6/): minh.jpg, thu.jpg, tram.jpg, thom.jpg, han.jpg, giang.jpg
+(đúng thứ tự: Minh, Thư, Trâm, Thơm, Hân, Giang)
