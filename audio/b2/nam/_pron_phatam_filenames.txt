@@ -1,0 +1,95 @@
+Danh sách file audio cần thu cho phần "Phát âm" của b2 (âm cuối "n" và "m")
+Đặt vào audio/b2/nam/ (giọng miền Nam) và audio/b2/bac/ (giọng miền Bắc, nếu có) - tên file giống hệt nhau ở cả 2 thư mục.
+======================================================================
+
+--- BÀI 1: Nghe và lặp lại các vần (cột "m") ---
+pron_am.mp3    (am)
+pron_camr.mp3  (cảm)
+pron_lamf.mp3  (làm)
+pron_awm.mp3   (ăm)
+pron_nawmf.mp3 (nằm)
+pron_tawms.mp3 (tắm)
+pron_taam.mp3  (âm)
+pron_taam.mp3  (tâm)   -- trùng file với "âm", không cần thu lại
+pron_chawm.mp3 (chăm)
+pron_em.mp3    (em)
+pron_kem.mp3   (kem)
+pron_hemr.mp3  (hẻm)
+pron_eem.mp3   (êm)
+pron_theem.mp3 (thêm)
+pron_meemf.mp3 (mềm)
+pron_im.mp3    (im)
+pron_chim.mp3  (chim)
+pron_phim.mp3  (phim)
+pron_om.mp3    (om)
+pron_xoms.mp3  (xóm)
+pron_gom.mp3   (gom)
+pron_oom.mp3   (ôm)
+pron_hoom.mp3  (hôm)
+pron_toom.mp3  (tôm)
+pron_owm.mp3   (ơm)
+pron_cowm.mp3  (cơm)
+pron_sowms.mp3 (sớm)
+pron_um.mp3    (um)
+pron_cums.mp3  (cúm)
+pron_giumf.mp3 (giùm)
+pron_uwm.mp3   (ưm)
+
+--- BÀI 1: Nghe và lặp lại các vần (cột "n") ---
+pron_an.mp3    (an)
+pron_banj.mp3  (bạn)
+pron_ddanf.mp3 (đàn)
+pron_awn.mp3   (ăn)
+pron_khawn.mp3 (khăn)
+pron_mawnj.mp3 (mặn)
+pron_aan.mp3   (ân)
+pron_baanj.mp3 (bận)
+pron_chaan.mp3 (chân)
+pron_en.mp3    (en)
+pron_dden.mp3  (đen)
+pron_chens.mp3 (chén)
+pron_een.mp3   (ên)
+pron_treen.mp3 (trên)
+pron_leen.mp3  (lên)
+pron_in.mp3    (in)      -- trùng file voi cot "m" ben tren, khong can thu lai
+pron_chin.mp3  (chin)
+pron_xin.mp3   (xin)
+pron_on.mp3    (on)
+pron_non.mp3   (non)
+pron_ngon.mp3  (ngon)
+pron_oon.mp3   (ôn)
+pron_troons.mp3 (trốn)
+pron_boons.mp3 (bốn)
+pron_own.mp3   (ơn)
+pron_lowns.mp3 (lớn)
+pron_hown.mp3  (hơn)
+pron_un.mp3    (un)
+pron_buns.mp3  (bún)
+pron_thun.mp3  (thun)
+pron_uwn.mp3   (ưn)
+
+--- BÀI 2: Nghe và lặp lại các câu (đọc cả câu) ---
+ex2_01.mp3   (Mình thích cà phê đen.)
+ex2_02.mp3   (Anh không thích trái cây.)
+ex2_03.mp3   (Chị của mình thích trà.)
+ex2_04.mp3   (Cô không thích cơm thịt bò.)
+ex2_05.mp3   (Chú thích thịt gà nhưng không thích rau.)
+
+--- BÀI 3: Nghe và khoanh tròn âm đúng (đọc đáp án - XEM LẠI đáp án trong b2.json trước khi thu) ---
+pron_cowm.mp3  (cơm)   -- trùng file voi Bai 1
+pron_awn.mp3   (ăn)    -- trùng file voi Bai 1
+pron_leen.mp3  (lên)   -- trùng file voi Bai 1
+pron_dden.mp3  (đen)   -- trùng file voi Bai 1
+pron_toom.mp3  (tôm)   -- trùng file voi Bai 1
+
+--- BÀI 4: Nghe và hoàn thành câu (đọc cả câu - XEM LẠI đáp án trong b2.json trước khi thu) ---
+ex4_01.mp3   (Mình thích cơm với rau.)
+ex4_02.mp3   (Anh Nam không thích cà phê sữa.)
+ex4_03.mp3   (Em của mình thích uống trà.)
+ex4_04.mp3   (Cô Loan thích ăn trái cây đúng không?)
+ex4_05.mp3   (Chú không thích thịt bò.)
+
+======================================================================
+LƯU Ý: đáp án của Bài 3 và Bài 4 hiện là mình điền tạm dựa theo từ vựng của bài học.
+Trước khi thu âm, cần xác nhận lại nội dung câu/đáp án đúng ý muốn, vì phải khớp
+chính xác với từ được đọc trong file audio.
