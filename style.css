@@ -1575,6 +1575,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-photo { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .bai-photo-img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; border: 2px solid var(--stroke); background: #fff; }
 .bai-photo-cap { align-self: flex-start; font-weight: 600; color: var(--ink); }
+.bai-fill-example { color: #dc2626; font-weight: 700; }
 .bai-order {
   width: 3.2ch; padding: 2px 4px; font: inherit; font-size: 1.2rem; font-weight: 700; text-align: center; color: var(--ink);
   border: 0; border-bottom: 2px dashed var(--stroke); background: transparent; border-radius: 4px 4px 0 0;
