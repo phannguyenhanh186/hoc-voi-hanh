@@ -492,6 +492,7 @@
         num.type = 'button'; num.dataset.text = 'câu ' + (i + 1); num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
         num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
         head.appendChild(num);
+        if (item.text) head.appendChild(el('div', 'bai-achoice-text', item.text));
         row.appendChild(head);
         const opts = el('div', 'bai-achoice-opts');
         (item.options || []).forEach(function (opt, oi) {
