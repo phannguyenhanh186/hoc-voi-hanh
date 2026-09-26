@@ -11,14 +11,14 @@
   {
    "id": "b1",
    "num": 1,
-   "title": "Chào bạn, bạn khoẻ không?",
+   "title": "Chào bạn, bạn có khoẻ không?",
    "page": "bai.html",
    "status": "ready"
   },
   {
    "id": "b2",
    "num": 2,
-   "title": "Anh thích ăn phở",
+   "title": "Anh có thích phở không??",
    "page": "bai.html",
    "status": "ready"
   },
