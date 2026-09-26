@@ -237,6 +237,22 @@
       return wrap;
     }
 
+    // Nghe và lặp lại các câu (không có chỗ trống). Bấm SỐ để nghe cả câu.
+    function renderRepeatSentences(ex) {
+      const wrap = el('div', 'bai-fill');
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-fill-row');
+        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
+        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1);
+        num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
+        row.appendChild(num);
+        row.appendChild(el('div', 'bai-fill-line', item.text));
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
     // Nút nghe 1 đoạn audio cho cả bài (dùng cho bài từ vựng có ảnh).
     function makeListenBtn(ex, n) {
       const b = el('button', 'bai-listen', '▶ Nghe');
@@ -578,7 +594,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
