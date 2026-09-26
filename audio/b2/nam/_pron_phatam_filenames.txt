@@ -85,9 +85,9 @@ pron_toom.mp3  (tôm)   -- trùng file voi Bai 1
 --- BÀI 4: Nghe và hoàn thành câu (đọc cả câu - XEM LẠI đáp án trong b2.json trước khi thu) ---
 ex4_01.mp3   (Mình thích cơm với rau.)
 ex4_02.mp3   (Anh Nam không thích cà phê đen.)
-ex4_03.mp3   (Em của mình thích uống trà.)
+ex4_03.mp3   (Em của mình thích bún bò.)
 ex4_04.mp3   (Cô Loan thích ăn trái cây đúng không?)
-ex4_05.mp3   (Chú không thích thịt bò.)
+ex4_05.mp3   (Chú Tân không thích thịt bò.)
 
 ======================================================================
 LƯU Ý: đáp án của Bài 3 và Bài 4 hiện là mình điền tạm dựa theo từ vựng của bài học.
