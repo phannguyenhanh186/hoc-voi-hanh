@@ -1,95 +1,117 @@
-# Audio cho Bài 1 - Phát âm - Bảng chữ cái
-# Đặt file vào audio/b1/nam/ (hoặc audio/b1/nu/ nếu dùng giọng nữ). Đuôi .mp3, đúng chữ hoa/thường.
-# Tên file = pron_ + tên viết kiểu Telex + .mp3
-#   mũ/móc:  ă=aw  â=aa  đ=dd  ê=ee  ô=oo  ơ=ow  ư=uw
-#   thanh điệu (thêm CUỐI tên): sắc=s  huyền=f  hỏi=r  ngã=x  nặng=j   ví dụ: bố=boos, phở=phowr, mẹ=mej
-# Muốn đổi cách đặt tên: sửa trường "audio" trong mam/bai/b1.json
-# File đã xuất hiện ở bài trước thì không lặp lại ở bài sau (dùng chung 1 file).
+Danh sách file audio cần thu cho b1
+Đặt vào audio/b1/nam/ (giọng miền Nam) và audio/b1/bac/ (giọng miền Bắc, nếu có) - tên file giống hệt nhau ở cả 2 thư mục.
+======================================================================
 
-# TỔNG: 76 file
+--- BÀI 1: Bảng chữ cái (đọc từng chữ cái) ---
+pron_a.mp3   (a)
+pron_aw.mp3   (ă)
+pron_aa.mp3   (â)
+pron_b.mp3   (b)
+pron_c.mp3   (c)
+pron_d.mp3   (d)
+pron_dd.mp3   (đ)
+pron_e.mp3   (e)
+pron_ee.mp3   (ê)
+pron_g.mp3   (g)
+pron_h.mp3   (h)
+pron_i.mp3   (i)
+pron_k.mp3   (k)
+pron_l.mp3   (l)
+pron_m.mp3   (m)
+pron_n.mp3   (n)
+pron_o.mp3   (o)
+pron_oo.mp3   (ô)
+pron_ow.mp3   (ơ)
+pron_p.mp3   (p)
+pron_q.mp3   (q)
+pron_r.mp3   (r)
+pron_s.mp3   (s)
+pron_t.mp3   (t)
+pron_u.mp3   (u)
+pron_uw.mp3   (ư)
+pron_v.mp3   (v)
+pron_x.mp3   (x)
+pron_y.mp3   (y)
 
-## Bài 1 - Bảng chữ cái (29 file)
-pron_a.mp3	a
-pron_aw.mp3	ă
-pron_aa.mp3	â
-pron_b.mp3	b
-pron_c.mp3	c
-pron_d.mp3	d
-pron_dd.mp3	đ
-pron_e.mp3	e
-pron_ee.mp3	ê
-pron_g.mp3	g
-pron_h.mp3	h
-pron_i.mp3	i
-pron_k.mp3	k
-pron_l.mp3	l
-pron_m.mp3	m
-pron_n.mp3	n
-pron_o.mp3	o
-pron_oo.mp3	ô
-pron_ow.mp3	ơ
-pron_p.mp3	p
-pron_q.mp3	q
-pron_r.mp3	r
-pron_s.mp3	s
-pron_t.mp3	t
-pron_u.mp3	u
-pron_uw.mp3	ư
-pron_v.mp3	v
-pron_x.mp3	x
-pron_y.mp3	y
+--- BÀI 2: Vần (đọc từng từ; chữ đơn đã có ở bài 1, không lặp lại) ---
+pron_ba.mp3   (ba)
+pron_ra.mp3   (ra)
+pron_be.mp3   (be)
+pron_xe.mp3   (xe)
+pron_tee.mp3   (tê)
+pron_mee.mp3   (mê)
+pron_ddi.mp3   (đi)
+pron_bi.mp3   (bi)
+pron_to.mp3   (to)
+pron_lo.mp3   (lo)
+pron_coo.mp3   (cô)
+pron_too.mp3   (tô)
+pron_bow.mp3   (bơ)
+pron_mow.mp3   (mơ)
+pron_xu.mp3   (xu)
+pron_vu.mp3   (vu)
+pron_tuw.mp3   (tư)
+pron_duw.mp3   (dư)
+pron_ly.mp3   (ly)
 
-## Bài 2 - Các vần (chỉ liệt kê file MỚI, nguyên âm dùng lại file bài 1) (19 file)
-pron_ba.mp3	ba
-pron_ra.mp3	ra
-pron_be.mp3	be
-pron_xe.mp3	xe
-pron_tee.mp3	tê
-pron_mee.mp3	mê
-pron_ddi.mp3	đi
-pron_bi.mp3	bi
-pron_to.mp3	to
-pron_lo.mp3	lo
-pron_coo.mp3	cô
-pron_too.mp3	tô
-pron_bow.mp3	bơ
-pron_mow.mp3	mơ
-pron_xu.mp3	xu
-pron_vu.mp3	vu
-pron_tuw.mp3	tư
-pron_duw.mp3	dư
-pron_ly.mp3	ly
+--- BÀI 3: Nghe và khoanh tròn âm đúng (đọc đáp án) ---
+pron_coo.mp3   (cô)
+pron_bee.mp3   (bê)
+pron_ddi.mp3   (đi)
+pron_tuw.mp3   (tư)
+pron_la.mp3   (la)
 
-## Bài 3 - Nghe và khoanh tròn (bấm số 1-5 sẽ phát âm ĐÁP ÁN) (2 file)
-pron_bee.mp3	bê
-pron_la.mp3	la
+--- BÀI 4: Bảng thanh điệu (đọc từng từ; từ trùng bài 3 không lặp lại) ---
+pron_ly.mp3   (ly)
+pron_to.mp3   (to)
+pron_boos.mp3   (bố)
+pron_chus.mp3   (chú)
+pron_coos.mp3   (cố)
+pron_phis.mp3   (phí)
+pron_maf.mp3   (mà)
+pron_tuwf.mp3   (từ)
+pron_laf.mp3   (là)
+pron_veef.mp3   (về)
+pron_ler.mp3   (lẻ)
+pron_tur.mp3   (tủ)
+pron_phowr.mp3   (phở)
+pron_nhor.mp3   (nhỏ)
+pron_ddax.mp3   (đã)
+pron_cux.mp3   (cũ)
+pron_sex.mp3   (sẽ)
+pron_lowx.mp3   (lỡ)
+pron_mej.mp3   (mẹ)
+pron_teej.mp3   (tệ)
+pron_booj.mp3   (bộ)
+pron_tuwj.mp3   (tự)
 
-## Bài 4 - Thanh điệu (mỗi ô một file) (21 file)
-pron_di.mp3	di
-pron_boos.mp3	bố
-pron_chus.mp3	chú
-pron_coos.mp3	cố
-pron_phis.mp3	phí
-pron_maf.mp3	mà
-pron_tuwf.mp3	từ
-pron_laf.mp3	là
-pron_veef.mp3	về
-pron_ler.mp3	lẻ
-pron_tur.mp3	tủ
-pron_phowr.mp3	phở
-pron_nhor.mp3	nhỏ
-pron_ddax.mp3	đã
-pron_cux.mp3	cũ
-pron_sex.mp3	sẽ
-pron_lowx.mp3	lỡ
-pron_mej.mp3	mẹ
-pron_teej.mp3	tệ
-pron_booj.mp3	bộ
-pron_tuwj.mp3	tự
+--- BÀI 5: Nghe và hoàn thành câu (đọc cả câu) ---
+ex5_01.mp3   (Chào bạn, mình là Chi.)
+ex5_02.mp3   (Chào chị, em tên là Vi.)
+ex5_03.mp3   (Chào em, anh tên là Phú.)
+ex5_04.mp3   (Chào cô, con tên là Thư.)
+ex5_05.mp3   (Chào ông, con tên là Nga.)
 
-## Bài 5 - Nghe và điền tên (bấm số 1-5 phát CẢ CÂU) (5 file)
-pron_cau_1.mp3	Chào bạn, mình là Chi.
-pron_cau_2.mp3	Chào chị, em tên là Vi/Vy.
-pron_cau_3.mp3	Chào em, anh tên là Phú.
-pron_cau_4.mp3	Chào cô, con tên là Thư.
-pron_cau_5.mp3	Chào ông, con tên là Nga.
+--- BÀI 6: Nhìn hình nghe mọi người nói (mỗi người 1 file riêng) ---
+vocab_ex6_ha.mp3   (Hà, giáo viên.)
+vocab_ex6_phu.mp3   (Phú, bác sĩ)
+vocab_ex6_tu.mp3   (Tú, kỹ sư)
+vocab_ex6_chi.mp3   (Chi, công an)
+vocab_ex6_an.mp3   (An, nhân viên văn phòng)
+vocab_ex6_my.mp3   (My, ca sĩ)
+
+--- BÀI 7: Nghe và đánh số hình (1 file, đọc cả bài theo đúng thứ tự cần nghe) ---
+vocab_ex7.mp3   (cả bài)
+
+--- BÀI 8: Nghe và hoàn thành câu (1 file, đọc cả đoạn hội thoại Ann/Tú) ---
+listen_ex8.mp3   (cả hội thoại)
+
+--- BÀI 9: Nghe và chọn câu trả lời đúng (mỗi câu 1 file) ---
+listen_ex9_01.mp3
+listen_ex9_02.mp3
+listen_ex9_03.mp3
+listen_ex9_04.mp3
+listen_ex9_05.mp3
+
+======================================================================
+Từ bài 11 (Ngữ pháp) trở đi hiện chưa có audio trong b1.json.
