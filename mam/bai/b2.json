@@ -79,7 +79,7 @@
        "instructionEn": "Listen and complete the sentences with the words you hear.",
        "items": [
         { "before": "Mình thích ", "after": " với rau.", "answers": ["cơm"], "audio": "audio/b2/{voice}/ex4_01.mp3" },
-        { "before": "Anh Nam không thích cà phê ", "after": ".", "answers": ["sữa"], "audio": "audio/b2/{voice}/ex4_02.mp3" },
+        { "before": "Anh Nam không thích cà phê ", "after": ".", "answers": ["đen"], "audio": "audio/b2/{voice}/ex4_02.mp3" },
         { "before": "Em của mình thích uống ", "after": ".", "answers": ["trà"], "audio": "audio/b2/{voice}/ex4_03.mp3" },
         { "before": "Cô Loan thích ", "after": " trái cây đúng không?", "answers": ["ăn"], "audio": "audio/b2/{voice}/ex4_04.mp3" },
         { "before": "Chú không thích ", "after": " bò.", "answers": ["thịt"], "audio": "audio/b2/{voice}/ex4_05.mp3" }
