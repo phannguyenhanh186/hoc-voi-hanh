@@ -1,15 +1,94 @@
 {
  "_guide": {
   "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b2&level=mam. App bo qua key bat dau bang '_'.",
-  "status": "Moi co section 'tu-vung' / Bai 1 (photoVocab). Cac phan sau (phat-am, nghe, ngu-phap, noi, doc, viet...) se bo sung sau.",
-  "exercise.photoVocab": "Anh + chu thich + 1 nut nghe rieng cho moi item ('audio' cua item, hoac 'audio' cua ca bai neu item khong co). 'num' = so bai in trong sach.",
-  "todo_images": "Cac duong dan img duoi day la placeholder trong thu muc images/b2/bai1/ (chua co file that, se bo sung sau).",
-  "todo_audio": "9/10 tu da co san audio trong audio/b2/nam/. Rieng 'trai_cay' (trai cay) chua co file vocab_trai_cay.mp3, can thu am them."
+  "status": "Da co section 'phat-am' (Bai 1-4: van cuoi n/m) va 'tu-vung' (Bai 1: photoVocab). Cac phan sau (nghe, ngu-phap, noi, doc, viet...) se bo sung sau.",
+  "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong (null).",
+  "exercise.repeatSentences": "Nghe va lap lai ca cau (khong co cho trong). Moi item: 'text' (cau hien thi) + 'audio' (rieng, hoac dung chung ex.audio).",
+  "exercise.listenPick": "Nghe va khoanh tron am dung. Moi item: 'options' (4 lua chon) + 'answer' (dap an - PHAI xac nhan lai truoc khi thu am, xem todo_answers).",
+  "exercise.fillWords": "Giong fillNames nhung dien tu bat ky (khong chi ten). Moi item: before/after/answers[]/audio.",
+  "todo_images": "Duong dan img trong Bai 1 (tu vung) la placeholder trong thu muc images/b2/bai1/ (chua co file that, se bo sung sau).",
+  "todo_audio_vocab": "9/10 tu (tu vung) da co san audio trong audio/b2/nam/. Rieng 'trai_cay' (trai cay) chua co file vocab_trai_cay.mp3, can thu am them.",
+  "todo_audio_phatam": "Toan bo audio phan Phat am (pron_*, ex2_*, ex4_*) CHUA THU AM, xem file audio/b2/_pron_phatam_filenames.txt de biet danh sach can thu.",
+  "todo_answers": "Bai 3 (listenPick) va Bai 4 (fillWords): dap an minh dien tam theo tu vung bai hoc, CAN BAN XAC NHAN LAI truoc khi thu am (vi dap an phai khop voi tu duoc doc trong file audio)."
  },
  "id": "b2",
  "num": 2,
  "title": "Anh có thích cà phê sữa không?",
  "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "am-cuoi-n-m",
+     "label": "Âm cuối \"n\" và \"m\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b2/{voice}/pron_{key}.mp3",
+       "columns": [
+        [
+         { "tone": "yellow", "rows": [ ["am", "cảm", "làm"], ["ăm", "nằm", "tắm"], ["âm", "tâm", "chăm"] ] },
+         { "tone": "pink", "rows": [ ["em", "kem", "hẻm"], ["êm", "thêm", "mềm"], ["im", "chim", "phim"] ] },
+         { "tone": "blue", "rows": [ ["om", "xóm", "gom"], ["ôm", "hôm", "tôm"], ["ơm", "cơm", "sớm"] ] },
+         { "tone": "violet", "rows": [ ["um", "cúm", "giùm"], ["ưm"] ] }
+        ],
+        [
+         { "tone": "yellow", "rows": [ ["an", "bạn", "đàn"], ["ăn", "khăn", "mặn"], ["ân", "bận", "chân"] ] },
+         { "tone": "pink", "rows": [ ["en", "đen", "chén"], ["ên", "trên", "lên"], ["in", "chin", "xin"] ] },
+         { "tone": "blue", "rows": [ ["on", "non", "ngon"], ["ôn", "trốn", "bốn"], ["ơn", "lớn", "hơn"] ] },
+         { "tone": "violet", "rows": [ ["un", "bún", "thun"], ["ưn"] ] }
+        ]
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và lặp lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        { "text": "Mình thích cà phê đen.", "audio": "audio/b2/{voice}/ex2_01.mp3" },
+        { "text": "Anh không thích trái cây.", "audio": "audio/b2/{voice}/ex2_02.mp3" },
+        { "text": "Chị của mình thích trà.", "audio": "audio/b2/{voice}/ex2_03.mp3" },
+        { "text": "Cô không thích cơm thịt bò.", "audio": "audio/b2/{voice}/ex2_04.mp3" },
+        { "text": "Chú thích thịt gà nhưng không thích rau.", "audio": "audio/b2/{voice}/ex2_05.mp3" }
+       ]
+      },
+      {
+       "type": "listenPick",
+       "num": 3,
+       "instructionVi": "Nghe và khoanh tròn âm đúng.",
+       "instructionEn": "Listen and circle the correct sounds.",
+       "audio": "audio/b2/{voice}/pron_{key}.mp3",
+       "items": [
+        { "options": ["cơm", "con", "cam", "can"], "answer": "cơm" },
+        { "options": ["ăm", "ăn", "âm", "ân"], "answer": "ăn" },
+        { "options": ["lêm", "lên", "lơm", "lơn"], "answer": "lên" },
+        { "options": ["đem", "đen", "đom", "đon"], "answer": "đen" },
+        { "options": ["tum", "tun", "tôm", "tôn"], "answer": "tôm" }
+       ]
+      },
+      {
+       "type": "fillWords",
+       "num": 4,
+       "instructionVi": "Nghe và hoàn thành các câu bằng từ bạn nghe được.",
+       "instructionEn": "Listen and complete the sentences with the words you hear.",
+       "items": [
+        { "before": "Mình thích ", "after": " với rau.", "answers": ["cơm"], "audio": "audio/b2/{voice}/ex4_01.mp3" },
+        { "before": "Anh Nam không thích cà phê ", "after": ".", "answers": ["sữa"], "audio": "audio/b2/{voice}/ex4_02.mp3" },
+        { "before": "Em của mình thích uống ", "after": ".", "answers": ["trà"], "audio": "audio/b2/{voice}/ex4_03.mp3" },
+        { "before": "Cô Loan thích ", "after": " trái cây đúng không?", "answers": ["ăn"], "audio": "audio/b2/{voice}/ex4_04.mp3" },
+        { "before": "Chú không thích ", "after": " bò.", "answers": ["thịt"], "audio": "audio/b2/{voice}/ex4_05.mp3" }
+       ]
+      }
+     ]
+    }
+   ]
+  },
   {
    "id": "tu-vung",
    "titleVi": "Từ vựng",
