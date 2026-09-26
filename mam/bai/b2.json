@@ -1,0 +1,85 @@
+{
+ "_guide": {
+  "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b2&level=mam. App bo qua key bat dau bang '_'.",
+  "status": "Moi co section 'tu-vung' / Bai 1 (photoVocab). Cac phan sau (phat-am, nghe, ngu-phap, noi, doc, viet...) se bo sung sau.",
+  "exercise.photoVocab": "Anh + chu thich + 1 nut nghe rieng cho moi item ('audio' cua item, hoac 'audio' cua ca bai neu item khong co). 'num' = so bai in trong sach.",
+  "todo_images": "Cac duong dan img duoi day la placeholder trong thu muc images/b2/bai1/ (chua co file that, se bo sung sau).",
+  "todo_audio": "9/10 tu da co san audio trong audio/b2/nam/. Rieng 'trai_cay' (trai cay) chua co file vocab_trai_cay.mp3, can thu am them."
+ },
+ "id": "b2",
+ "num": 2,
+ "title": "Anh có thích cà phê sữa không?",
+ "sections": [
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "do-an-do-uong",
+     "label": "Đồ ăn và Đồ uống",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 1,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "img": "images/b2/bai1/com.jpg",
+         "caption": "Cơm",
+         "audio": "audio/b2/{voice}/vocab_com.mp3"
+        },
+        {
+         "img": "images/b2/bai1/rau.jpg",
+         "caption": "Rau",
+         "audio": "audio/b2/{voice}/vocab_rau.mp3"
+        },
+        {
+         "img": "images/b2/bai1/canh.jpg",
+         "caption": "Canh",
+         "audio": "audio/b2/{voice}/vocab_canh.mp3"
+        },
+        {
+         "img": "images/b2/bai1/thit_ga.jpg",
+         "caption": "Thịt gà",
+         "audio": "audio/b2/{voice}/vocab_thit_ga.mp3"
+        },
+        {
+         "img": "images/b2/bai1/thit_bo.jpg",
+         "caption": "Thịt bò",
+         "audio": "audio/b2/{voice}/vocab_thit_bo.mp3"
+        },
+        {
+         "img": "images/b2/bai1/bun_bo.jpg",
+         "caption": "Bún bò",
+         "audio": "audio/b2/{voice}/vocab_bun_bo.mp3"
+        },
+        {
+         "img": "images/b2/bai1/ca_phe_den.jpg",
+         "caption": "Cà phê đen",
+         "audio": "audio/b2/{voice}/vocab_ca_phe_den.mp3"
+        },
+        {
+         "img": "images/b2/bai1/ca_phe_sua.jpg",
+         "caption": "Cà phê sữa",
+         "audio": "audio/b2/{voice}/vocab_ca_phe_sua.mp3"
+        },
+        {
+         "img": "images/b2/bai1/tra.jpg",
+         "caption": "Trà",
+         "audio": "audio/b2/{voice}/vocab_tra.mp3"
+        },
+        {
+         "img": "images/b2/bai1/trai_cay.jpg",
+         "caption": "Trái cây",
+         "audio": "audio/b2/{voice}/vocab_trai_cay.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
