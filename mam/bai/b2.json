@@ -325,7 +325,20 @@
         { "num": 7, "q": "Ai không thích trái cây?", "a": "Kiên không thích trái cây." },
         { "num": 8, "q": "Ai không thích thịt gà?", "a": "Lan và Vân không thích thịt gà." }
        ]
-      },
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "thich",
+     "label": "Thích",
+     "exercises": [
       {
        "type": "readingQA",
        "num": 12,
@@ -339,6 +352,46 @@
         { "q": "Tâm thích uống gì?", "a": "Tâm thích uống cà phê đen." },
         { "q": "Tâm thích ăn gì?", "a": "Tâm thích ăn bún bò với rau." },
         { "q": "Tâm không thích ăn gì?", "a": "Tâm không thích ăn phở bò." }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "thich",
+     "label": "Thích",
+     "exercises": [
+      {
+       "type": "chooseWord",
+       "num": 13,
+       "instructionVi": "Chọn từ đúng.",
+       "instructionEn": "Choose the correct words.",
+       "items": [
+        { "template": "Em thích cà phê {0}.", "blanks": [ { "options": ["đem", "đen"], "answer": "đen" } ] },
+        { "template": "Anh Phong {0} thích trà.", "blanks": [ { "options": ["khôn", "không"], "answer": "không" } ] },
+        { "template": "Chị Hiền thích {0} phở gà.", "blanks": [ { "options": ["ăn", "ăm"], "answer": "ăn" } ] },
+        { "template": "Nga thích {0} cà phê sữa.", "blanks": [ { "options": ["uốn", "uống"], "answer": "uống" } ] },
+        { "template": "Hân thích {0} gà và rau.", "blanks": [ { "options": ["cơn", "cơm"], "answer": "cơm" } ] }
+       ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 14,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau.",
+       "instructionEn": "Complete the following dialogue.",
+       "items": [
+        { "template": "Mai: Anh Kiên thích ăn {0}?", "blanks": [ { "options": ["gì", "không"], "answer": "gì" } ] },
+        { "template": "Kiên: Anh thích {0} phở bò. Còn em?", "blanks": [ { "options": ["ăn", "uống"], "answer": "ăn" } ] },
+        { "template": "Mai: Em cũng thích ăn phở bò {0} em không thích ăn với rau.", "blanks": [ { "options": ["nhưng", "với"], "answer": "nhưng" } ] },
+        { "template": "Kiên: Em có thích uống cà phê {0}?", "blanks": [ { "options": ["gì", "không"], "answer": "không" } ] },
+        { "template": "Mai: Em có, nhưng em {0} thích uống cà phê đen.", "blanks": [ { "options": ["có", "không"], "answer": "không" } ] },
+        { "template": "Kiên: Anh cũng vậy." }
        ]
       }
      ]
