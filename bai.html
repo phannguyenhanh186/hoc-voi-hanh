@@ -327,6 +327,40 @@
       return box;
     }
 
+    // Ghi chú ngữ pháp song ngữ (khong tuong tac, chi hien thi).
+    function renderGrammarNote(ex) {
+      const wrap = el('div', 'bai-grammar');
+      if (ex.title) wrap.appendChild(el('h3', 'bai-grammar-title', ex.title));
+      (ex.blocks || []).forEach(function (b) {
+        if (b.type === 'heading') {
+          const h = el('div', 'bai-grammar-heading');
+          h.appendChild(el('div', 'bai-grammar-heading-vi', b.vi || ''));
+          if (b.en) h.appendChild(el('div', 'bai-grammar-heading-en', b.en));
+          wrap.appendChild(h);
+        } else if (b.type === 'structure') {
+          const s = el('div', 'bai-grammar-structure');
+          s.appendChild(el('div', 'bai-grammar-structure-vi', b.vi || ''));
+          if (b.en) s.appendChild(el('div', 'bai-grammar-structure-en', b.en));
+          wrap.appendChild(s);
+        } else if (b.type === 'paragraph') {
+          const p = el('div', 'bai-grammar-p');
+          p.appendChild(el('div', 'bai-grammar-p-vi', b.vi || ''));
+          if (b.en) p.appendChild(el('div', 'bai-grammar-p-en', b.en));
+          wrap.appendChild(p);
+        } else if (b.type === 'examples') {
+          const list = el('div', 'bai-grammar-examples');
+          (b.items || []).forEach(function (it) {
+            const row = el('div', 'bai-grammar-ex');
+            row.appendChild(el('div', 'bai-grammar-ex-vi', '• ' + (it.vi || '')));
+            if (it.en) row.appendChild(el('div', 'bai-grammar-ex-en', it.en));
+            list.appendChild(row);
+          });
+          wrap.appendChild(list);
+        }
+      });
+      return wrap;
+    }
+
     function renderPhotoVocab(ex, n) {
       const box = el('div');
       const grid = el('div', 'bai-photos');
@@ -654,7 +688,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
