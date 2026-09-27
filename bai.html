@@ -680,15 +680,23 @@
     // Bài 11 (đọc): đoạn văn + câu hỏi, chỉ có nút xem đáp án (câu trả lời tự do, không chấm đúng/sai).
     function renderReadingQA(ex, n) {
       const box = el('div');
-      box.appendChild(el('p', 'bai-passage', ex.passage));
+      if (ex.passage) box.appendChild(el('p', 'bai-passage', ex.passage));
       const rows = [];
       (ex.questions || []).forEach(function (q, i) {
         const row = el('div', 'bai-fill-row bai-qa-row');
-        row.appendChild(el('span', 'bai-qa-q', (i + 1) + '\u00A0\u00A0' + q.q));
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
-        input.setAttribute('aria-label', 'Trả lời câu ' + (i + 1));
-        row.appendChild(input);
+        if (ex.blankFirst) {
+          // Dạng "đặt câu hỏi": chỗ trống (câu hỏi cần điền) hiện trước, gợi ý (câu trả lời có sẵn) hiện sau.
+          input.setAttribute('aria-label', 'Câu hỏi cho câu ' + (i + 1));
+          row.appendChild(el('span', 'bai-qa-q', String(i + 1)));
+          row.appendChild(input);
+          row.appendChild(el('div', 'bai-example', q.q));
+        } else {
+          input.setAttribute('aria-label', 'Trả lời câu ' + (i + 1));
+          row.appendChild(el('span', 'bai-qa-q', (i + 1) + '\u00A0\u00A0' + q.q));
+          row.appendChild(input);
+        }
         box.appendChild(row);
         rows.push({ input: input, answer: q.a });
       });
