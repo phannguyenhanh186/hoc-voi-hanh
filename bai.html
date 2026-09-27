@@ -328,6 +328,8 @@
     }
 
     // Ghi chú ngữ pháp song ngữ (khong tuong tac, chi hien thi).
+    // Dung lai style/ham co san cua grammar.html (lesson-shared.js): khung vang
+    // '.grammar-callout' cho cau truc, va 'makeToggleSection' cho vi du (bam de mo/thu gon).
     function renderGrammarNote(ex) {
       const wrap = el('div', 'bai-grammar');
       if (ex.title) wrap.appendChild(el('h3', 'bai-grammar-title', ex.title));
@@ -338,7 +340,7 @@
           if (b.en) h.appendChild(el('div', 'bai-grammar-heading-en', b.en));
           wrap.appendChild(h);
         } else if (b.type === 'structure') {
-          const s = el('div', 'bai-grammar-structure');
+          const s = el('div', 'grammar-callout bai-grammar-structure');
           s.appendChild(el('div', 'bai-grammar-structure-vi', b.vi || ''));
           if (b.en) s.appendChild(el('div', 'bai-grammar-structure-en', b.en));
           wrap.appendChild(s);
@@ -348,14 +350,16 @@
           if (b.en) p.appendChild(el('div', 'bai-grammar-p-en', b.en));
           wrap.appendChild(p);
         } else if (b.type === 'examples') {
-          const list = el('div', 'bai-grammar-examples');
-          (b.items || []).forEach(function (it) {
-            const row = el('div', 'bai-grammar-ex');
-            row.appendChild(el('div', 'bai-grammar-ex-vi', '• ' + (it.vi || '')));
-            if (it.en) row.appendChild(el('div', 'bai-grammar-ex-en', it.en));
-            list.appendChild(row);
-          });
-          wrap.appendChild(list);
+          wrap.appendChild(makeToggleSection('Ví dụ / Examples', function () {
+            const list = el('div', 'grammar-examples');
+            (b.items || []).forEach(function (it) {
+              const row = el('div', 'example');
+              row.appendChild(el('div', 'ex-vi', it.vi || ''));
+              if (it.en) row.appendChild(el('div', 'ex-en', it.en));
+              list.appendChild(row);
+            });
+            return list;
+          }));
         }
       });
       return wrap;
