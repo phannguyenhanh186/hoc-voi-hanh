@@ -683,24 +683,27 @@
       wrap.style.margin = '10px 0 20px';
       const table = document.createElement('table');
       table.className = 'grammar-table';
+      // rows: nhãn hàng (vd. tên người); cols: nhãn cột (vd. món ăn/uống); marks[rowVal][colVal] = '✓' | 'x'
+      const rowLabels = t.rows || t.people || [];
+      const colLabels = t.cols || t.items || [];
       const thead = document.createElement('thead');
       const headRow = document.createElement('tr');
       headRow.appendChild(document.createElement('th'));
-      (t.people || []).forEach(function (p) {
-        const th = document.createElement('th'); th.textContent = p; th.style.textAlign = 'center';
+      colLabels.forEach(function (c) {
+        const th = document.createElement('th'); th.textContent = c; th.style.textAlign = 'center';
         headRow.appendChild(th);
       });
       thead.appendChild(headRow);
       table.appendChild(thead);
       const tbody = document.createElement('tbody');
-      (t.items || []).forEach(function (item) {
+      rowLabels.forEach(function (r) {
         const tr = document.createElement('tr');
-        const th = document.createElement('td'); th.textContent = item;
+        const th = document.createElement('td'); th.textContent = r;
         tr.appendChild(th);
-        (t.people || []).forEach(function (p) {
+        colLabels.forEach(function (c) {
           const td = document.createElement('td');
           td.style.textAlign = 'center';
-          const mark = (t.marks && t.marks[p] && t.marks[p][item]) || '';
+          const mark = (t.marks && t.marks[r] && t.marks[r][c]) || '';
           td.textContent = mark;
           if (mark === '✓') { td.style.color = '#1E7A43'; td.style.fontWeight = '800'; }
           if (mark === 'x') { td.style.color = '#EB483F'; td.style.fontWeight = '800'; }
