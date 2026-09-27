@@ -687,16 +687,19 @@
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
         if (ex.blankFirst) {
-          // Dạng "đặt câu hỏi": chỗ trống (câu hỏi cần điền) hiện trước, gợi ý (câu trả lời có sẵn) hiện sau.
+          // Dạng "đặt câu hỏi": số + chỗ trống cùng 1 dòng (lưới 2 cột), gợi ý hiện dòng dưới.
           input.setAttribute('aria-label', 'Câu hỏi cho câu ' + (i + 1));
-          row.appendChild(el('span', 'bai-qa-q', String(i + 1)));
-          row.appendChild(input);
-          row.appendChild(el('div', 'bai-example', q.q));
-        } else {
-          input.setAttribute('aria-label', 'Trả lời câu ' + (i + 1));
-          row.appendChild(el('span', 'bai-qa-q', (i + 1) + '\u00A0\u00A0' + q.q));
-          row.appendChild(input);
+          const line = el('div', 'bai-fill-row');
+          line.appendChild(el('span', 'bai-qa-q', String(i + 1)));
+          line.appendChild(input);
+          box.appendChild(line);
+          box.appendChild(el('div', 'bai-fill-line', q.q));
+          rows.push({ input: input, answer: q.a });
+          return;
         }
+        input.setAttribute('aria-label', 'Trả lời câu ' + (i + 1));
+        row.appendChild(el('span', 'bai-qa-q', (i + 1) + '\u00A0\u00A0' + q.q));
+        row.appendChild(input);
         box.appendChild(row);
         rows.push({ input: input, answer: q.a });
       });
