@@ -1,7 +1,7 @@
 {
   "id": "b2",
   "num": 2,
-  "title": "Anh thích ăn phở",
+  "title": "Bạn thích ăn gì?",
   "vocab": {
     "items": [
       {
@@ -421,6 +421,120 @@
                   "?"
                 ],
                 "answer": "Bạn thích làm gì ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"What do you like to eat?\"",
+                "wordBank": [
+                  "ăn",
+                  "thích",
+                  "gì",
+                  "bạn",
+                  "không",
+                  "có",
+                  "uống",
+                  "?"
+                ],
+                "answer": "Bạn thích ăn gì ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"What does she like to drink?\"",
+                "wordBank": [
+                  "uống",
+                  "thích",
+                  "gì",
+                  "chị",
+                  "không",
+                  "có",
+                  "ăn",
+                  "?"
+                ],
+                "answer": "Chị thích uống gì ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"What does the teacher like to eat?\"",
+                "wordBank": [
+                  "ăn",
+                  "thích",
+                  "gì",
+                  "cô",
+                  "không",
+                  "có",
+                  "uống",
+                  "?"
+                ],
+                "answer": "Cô thích ăn gì ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"What does your mom like to drink?\"",
+                "wordBank": [
+                  "uống",
+                  "thích",
+                  "gì",
+                  "mẹ",
+                  "của",
+                  "em",
+                  "không",
+                  "?"
+                ],
+                "answer": "Mẹ của em thích uống gì ?"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"I like eating bún bò\"",
+                "wordBank": [
+                  "ăn",
+                  "thích",
+                  "bún bò",
+                  "mình",
+                  "không",
+                  "uống"
+                ],
+                "answer": "Mình thích ăn bún bò"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"I like drinking tea\"",
+                "wordBank": [
+                  "uống",
+                  "thích",
+                  "trà",
+                  "mình",
+                  "không",
+                  "ăn"
+                ],
+                "answer": "Mình thích uống trà"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"My mom likes eating chicken\"",
+                "wordBank": [
+                  "ăn",
+                  "thích",
+                  "thịt gà",
+                  "mẹ",
+                  "của",
+                  "mình",
+                  "không"
+                ],
+                "answer": "Mẹ của mình thích ăn thịt gà"
+              },
+              {
+                "type": "scramble",
+                "question": "Make a sentence which means \"My dad likes eating fruit\"",
+                "wordBank": [
+                  "ăn",
+                  "thích",
+                  "trái cây",
+                  "ba",
+                  "của",
+                  "mình",
+                  "không"
+                ],
+                "answer": "Ba của mình thích ăn trái cây"
               }
             ]
           },
