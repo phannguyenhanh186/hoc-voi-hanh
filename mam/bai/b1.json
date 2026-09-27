@@ -6,7 +6,9 @@
   "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong.",
   "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt",
   "exercise.photoVocab": "Anh + chu thich + 1 nut nghe cho ca bai ('audio' la duong dan file). 'num' = so bai in trong sach.",
-  "exercise.photoOrder": "Nghe va danh so hinh. Moi item co 'example' (so cho san, khoa) hoac 'answer' (dap an, dien so 1-6). Chua co 'answer' thi khong hien nut Kiem tra."
+  "exercise.photoOrder": "Nghe va danh so hinh. Moi item co 'example' (so cho san, khoa) hoac 'answer' (dap an, dien so 1-6). Chua co 'answer' thi khong hien nut Kiem tra.",
+  "exercise.pronounPairs": "Bang 'danh xung theo cap' (tu xung / xung ho / vi du), khong tuong tac, khong dap an. 'intro' = doan gioi thieu (khung vang). 'columns' = 3 tieu de cot {vi,en}. 'rows' = danh sach hang; moi hang co 'self' va 'other' (mang 1-2 item {text, tone: yellow|blue|pink} - 2 item thi chia doi o, mau khac nhau) va 'examples' (mang cau vi du, nen tim).",
+  "noNum": "Them 'noNum': true vao bat ky exercise nao de an so bai (khung tron so) tren tieu de - dung cho noi dung tham khao khong phai bai tap co dem so."
  },
  "id": "b1",
  "num": 1,
@@ -589,6 +591,47 @@
      "id": "danh-xung",
      "label": "Danh xưng",
      "exercises": [
+      {
+       "type": "pronounPairs",
+       "noNum": true,
+       "instructionVi": "",
+       "intro": {
+        "vi": "Danh xưng tiếng Việt đi theo cặp. Từ xưng hô thay đổi tùy theo bạn đang nói chuyện với ai.",
+        "en": "Vietnamese address terms come in pairs. Pronouns change depending on the gender and age of whom you're speaking with."
+       },
+       "columns": [
+        { "vi": "tự xưng", "en": "self-reference" },
+        { "vi": "xưng hô", "en": "term of address" },
+        { "vi": "ví dụ", "en": "example" }
+       ],
+       "rows": [
+        {
+         "self": [ { "text": "mình", "tone": "yellow" } ],
+         "other": [ { "text": "bạn", "tone": "yellow" } ],
+         "examples": [ "Bạn tên là gì?", "Mình tên là Minh." ]
+        },
+        {
+         "self": [ { "text": "em", "tone": "yellow" } ],
+         "other": [ { "text": "anh", "tone": "blue" }, { "text": "chị", "tone": "pink" } ],
+         "examples": [ "Chào anh. Em là Nhi.", "Em tên là Hà. Còn chị?" ]
+        },
+        {
+         "self": [ { "text": "anh", "tone": "blue" }, { "text": "chị", "tone": "pink" } ],
+         "other": [ { "text": "em", "tone": "yellow" } ],
+         "examples": [ "Anh khoẻ, cám ơn em.", "Chào em, anh là Nam." ]
+        },
+        {
+         "self": [ { "text": "con", "tone": "yellow" } ],
+         "other": [ { "text": "chú", "tone": "blue" }, { "text": "cô", "tone": "pink" } ],
+         "examples": [ "Chào cô. Con tên là Vy.", "Con khoẻ. Còn chú?" ]
+        },
+        {
+         "self": [ { "text": "chú", "tone": "blue" }, { "text": "cô", "tone": "pink" } ],
+         "other": [ { "text": "con", "tone": "yellow" } ],
+         "examples": [ "Cảm ơn con. Cô khoẻ.", "Chào con. Chú tên là Tân." ]
+        }
+       ]
+      },
       {
        "type": "dialogueFill",
        "num": 10,
