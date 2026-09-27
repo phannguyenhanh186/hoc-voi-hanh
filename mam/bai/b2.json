@@ -278,6 +278,7 @@
       {
        "type": "readingQA",
        "num": 9,
+       "blankFirst": true,
        "instructionVi": "Hoàn thành câu hỏi cho những câu trả lời sau.",
        "instructionEn": "Complete the question for each answer below.",
        "questions": [
