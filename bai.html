@@ -677,22 +677,60 @@
       return grid;
     }
 
-    // Bài 11 (đọc): đoạn văn + câu hỏi, chỉ có nút xem đáp án (câu trả lời tự do, không chấm đúng/sai).
+    function buildQATable(t) {
+      const wrap = el('div');
+      wrap.style.overflowX = 'auto';
+      wrap.style.margin = '10px 0 20px';
+      const table = document.createElement('table');
+      table.className = 'grammar-table';
+      const thead = document.createElement('thead');
+      const headRow = document.createElement('tr');
+      headRow.appendChild(document.createElement('th'));
+      (t.people || []).forEach(function (p) {
+        const th = document.createElement('th'); th.textContent = p; th.style.textAlign = 'center';
+        headRow.appendChild(th);
+      });
+      thead.appendChild(headRow);
+      table.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      (t.items || []).forEach(function (item) {
+        const tr = document.createElement('tr');
+        const th = document.createElement('td'); th.textContent = item;
+        tr.appendChild(th);
+        (t.people || []).forEach(function (p) {
+          const td = document.createElement('td');
+          td.style.textAlign = 'center';
+          const mark = (t.marks && t.marks[p] && t.marks[p][item]) || '';
+          td.textContent = mark;
+          if (mark === '✓') { td.style.color = '#1E7A43'; td.style.fontWeight = '800'; }
+          if (mark === 'x') { td.style.color = '#EB483F'; td.style.fontWeight = '800'; }
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      wrap.appendChild(table);
+      return wrap;
+    }
+
+    // Bài 11 (đọc): đoạn văn/bảng + câu hỏi, chỉ có nút xem đáp án (câu trả lời tự do, không chấm đúng/sai).
     function renderReadingQA(ex, n) {
       const box = el('div');
+      if (ex.table) box.appendChild(buildQATable(ex.table));
       if (ex.passage) box.appendChild(el('p', 'bai-passage', ex.passage));
       const rows = [];
       (ex.questions || []).forEach(function (q, i) {
+        const num = (q.num != null) ? q.num : (i + 1);
         const row = el('div', 'bai-fill-row bai-qa-row');
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
         if (ex.blankFirst) {
           // Dạng "đặt câu hỏi": số + chỗ trống cùng 1 dòng (sát nhau), gợi ý cách dòng trên 1 khoảng rõ.
-          input.setAttribute('aria-label', 'Câu hỏi cho câu ' + (i + 1));
+          input.setAttribute('aria-label', 'Câu hỏi cho câu ' + num);
           const line = el('div', 'bai-fill-row');
           line.style.gridTemplateColumns = '24px 1fr';
           line.style.columnGap = '8px';
-          const numSpan = el('span', 'bai-qa-q', String(i + 1));
+          const numSpan = el('span', 'bai-qa-q', String(num));
           numSpan.style.marginBottom = '0';
           line.appendChild(numSpan);
           line.appendChild(input);
@@ -703,11 +741,17 @@
           rows.push({ input: input, answer: q.a });
           return;
         }
-        input.setAttribute('aria-label', 'Trả lời câu ' + (i + 1));
-        row.appendChild(el('span', 'bai-qa-q', (i + 1) + '\u00A0\u00A0' + q.q));
-        row.appendChild(input);
+        row.appendChild(el('span', 'bai-qa-q', num + '\u00A0\u00A0' + q.q));
+        if (q.example) {
+          const sample = el('div', 'bai-fill-line', '\u2192\u00A0' + q.a);
+          sample.style.margin = '2px 0 14px';
+          row.appendChild(sample);
+        } else {
+          input.setAttribute('aria-label', 'Trả lời câu ' + num);
+          row.appendChild(input);
+          rows.push({ input: input, answer: q.a });
+        }
         box.appendChild(row);
-        rows.push({ input: input, answer: q.a });
       });
       const bar = el('div', 'bai-fill-actions');
       const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án gợi ý'); bShow.type = 'button';
