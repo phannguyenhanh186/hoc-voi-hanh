@@ -103,10 +103,12 @@
     // ---------- Các dạng bài tập ----------
     function exerciseHead(ex, n) {
       const wrap = el('div');
-      const h = el('h3', 'bai-ex-head');
-      h.appendChild(el('span', 'bai-ex-num', String(n)));
-      h.appendChild(el('span', 'bai-ex-vi', ex.instructionVi || ''));
-      wrap.appendChild(h);
+      if (!ex.noNum || ex.instructionVi) {
+        const h = el('h3', 'bai-ex-head');
+        if (!ex.noNum) h.appendChild(el('span', 'bai-ex-num', String(n)));
+        h.appendChild(el('span', 'bai-ex-vi', ex.instructionVi || ''));
+        wrap.appendChild(h);
+      }
       if (ex.instructionEn) wrap.appendChild(el('p', 'bai-ex-en', ex.instructionEn));
       return wrap;
     }
@@ -362,6 +364,42 @@
           }));
         }
       });
+      return wrap;
+    }
+
+    // Bang "danh xung theo cap" (tu xung / xung ho / vi du), khong tuong tac.
+    function buildPairCell(items) {
+      const cell = el('div', 'bai-pairs-cell');
+      (items || []).forEach(function (it) {
+        cell.appendChild(el('div', 'bai-pairs-sub bai-tone-' + (it.tone || 'yellow'), it.text));
+      });
+      return cell;
+    }
+    function renderPronounPairs(ex) {
+      const wrap = el('div', 'bai-pairs');
+      if (ex.intro) {
+        const intro = el('div', 'bai-pairs-intro');
+        intro.appendChild(el('div', 'bai-pairs-intro-vi', ex.intro.vi || ''));
+        if (ex.intro.en) intro.appendChild(el('div', 'bai-pairs-intro-en', ex.intro.en));
+        wrap.appendChild(intro);
+      }
+      const table = el('div', 'bai-pairs-table');
+      (ex.columns || []).forEach(function (col) {
+        const h = el('div', 'bai-pairs-head');
+        h.appendChild(el('div', 'bai-pairs-head-vi', col.vi || ''));
+        if (col.en) h.appendChild(el('div', 'bai-pairs-head-en', col.en));
+        table.appendChild(h);
+      });
+      (ex.rows || []).forEach(function (row) {
+        table.appendChild(buildPairCell(row.self));
+        table.appendChild(buildPairCell(row.other));
+        const exCell = el('div', 'bai-pairs-cell bai-pairs-example bai-tone-lav');
+        (row.examples || []).forEach(function (line) {
+          exCell.appendChild(el('div', 'bai-pairs-ex-line', line));
+        });
+        table.appendChild(exCell);
+      });
+      wrap.appendChild(table);
       return wrap;
     }
 
@@ -692,7 +730,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
