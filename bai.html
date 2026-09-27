@@ -769,7 +769,7 @@
       const wrap = el('div', 'bai-choose');
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-choose-row');
-        row.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
+        if (!ex.noItemNum) row.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
         let solvedCount = 0;
         const blanks = item.blanks || [];
         const total = blanks.filter(function (b) { return b.options && b.options.length; }).length;
