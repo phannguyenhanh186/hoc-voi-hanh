@@ -274,6 +274,30 @@
           { "vi": "Ba của mình không thích uống trà.", "en": "My father doesn't like drinking tea." }
         ] }
        ]
+      },
+      {
+       "type": "readingQA",
+       "num": 9,
+       "instructionVi": "Hoàn thành câu hỏi cho những câu trả lời sau.",
+       "instructionEn": "Complete the question for each answer below.",
+       "questions": [
+        { "q": "→ Mình thích ăn cơm bò.", "a": "Bạn thích ăn gì?" },
+        { "q": "→ Chị thích uống cà phê đen.", "a": "Chị thích uống gì?" },
+        { "q": "→ Cô thích ăn phở gà.", "a": "Cô thích ăn gì?" },
+        { "q": "→ Mẹ của em thích uống trà.", "a": "Mẹ của em thích uống gì?" }
+       ]
+      },
+      {
+       "type": "readingQA",
+       "num": 10,
+       "instructionVi": "Trả lời những câu hỏi sau.",
+       "instructionEn": "Answer the following questions.",
+       "questions": [
+        { "q": "Bạn thích ăn gì?", "a": "Mình thích ăn bún bò." },
+        { "q": "Bạn thích uống gì?", "a": "Mình thích uống trà." },
+        { "q": "Mẹ của bạn thích ăn gì?", "a": "Mẹ của mình thích ăn thịt gà." },
+        { "q": "Ba của bạn thích ăn gì?", "a": "Ba của mình thích ăn trái cây." }
+       ]
       }
      ]
     }
