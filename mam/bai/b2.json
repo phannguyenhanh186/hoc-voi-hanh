@@ -383,6 +383,7 @@
       {
        "type": "chooseWord",
        "num": 14,
+       "noItemNum": true,
        "instructionVi": "Hoàn thành đoạn hội thoại sau.",
        "instructionEn": "Complete the following dialogue.",
        "items": [
