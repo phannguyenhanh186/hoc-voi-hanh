@@ -1640,17 +1640,13 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-photo-listen.playing { background: #FCEFCD; }
 .bai-photo-listen:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 2px; }
 
-/* Ghi chú ngữ pháp (grammarNote) */
-.bai-grammar { max-width: 720px; display: grid; gap: 14px; }
-.bai-grammar-title { font-size: 1.4rem; font-weight: 800; color: var(--accent-deep, #b45309); margin: 0 0 4px; }
-.bai-grammar-heading { margin-top: 10px; }
+/* Ghi chú ngữ pháp (grammarNote) - dùng lại .grammar-callout / .grammar-examples / .example / .toggle-* có sẵn */
+.bai-grammar { max-width: 720px; display: grid; gap: 6px; }
+.bai-grammar-title { font-size: 1.4rem; font-weight: 800; color: var(--accent-deep); margin: 0 0 4px; }
+.bai-grammar-heading { margin-top: 14px; }
 .bai-grammar-heading-vi { font-size: 1.15rem; font-weight: 700; color: var(--ink); }
-.bai-grammar-heading-en { font-size: 0.95rem; font-style: italic; color: var(--muted, #6b7280); }
-.bai-grammar-structure { background: #FCEFCD; border: 2px solid var(--stroke); border-radius: 10px; padding: 10px 14px; }
+.bai-grammar-heading-en { font-size: 0.95rem; font-style: italic; color: var(--muted); }
 .bai-grammar-structure-vi { font-weight: 700; color: var(--ink); }
-.bai-grammar-structure-en { font-style: italic; color: var(--muted, #6b7280); font-size: 0.95rem; }
+.bai-grammar-structure-en { font-style: italic; color: var(--muted); font-size: 0.95rem; }
 .bai-grammar-p-vi { color: var(--ink); line-height: 1.6; }
-.bai-grammar-p-en { font-style: italic; color: var(--muted, #6b7280); font-size: 0.95rem; line-height: 1.5; }
-.bai-grammar-examples { display: grid; gap: 6px; padding-left: 4px; }
-.bai-grammar-ex-vi { color: var(--ink); }
-.bai-grammar-ex-en { font-style: italic; color: var(--muted, #6b7280); font-size: 0.9rem; padding-left: 14px; }
+.bai-grammar-p-en { font-style: italic; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
