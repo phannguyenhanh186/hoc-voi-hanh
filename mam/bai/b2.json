@@ -1,7 +1,7 @@
 {
  "_guide": {
   "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b2&level=mam. App bo qua key bat dau bang '_'.",
-  "status": "Da co section 'phat-am' (Bai 1-4: van cuoi n/m), 'tu-vung' (Bai 5: photoVocab, Bai 6: photoFill), 'nghe' (Bai 7: dung/sai, Bai 8: chon cau dung) va 'ngu-phap' (Bai 9: ghi chu 'Thich - Like'). Cac phan sau (noi, doc, viet...) se bo sung sau.",
+  "status": "Da co section 'phat-am' (Bai 1-4: van cuoi n/m), 'tu-vung' (Bai 5: photoVocab, Bai 6: photoFill), 'nghe' (Bai 7: dung/sai, Bai 8: chon cau dung) va 'ngu-phap' (khong danh so - ghi chu 'Thich - Like', giong cach lam o b1). Cac phan sau (noi, doc, viet...) se bo sung sau.",
   "exercise.grammarNote": "Ghi chu ngu phap song ngu, khong tuong tac (khong co dap an/audio). 'title' = tieu de lon. 'blocks' la mang cac khoi, moi khoi co 'type': 'paragraph' (doan van vi/en), 'heading' (tieu de nho vi/en), 'structure' (cong thuc vi/en, hien khung vang giong .grammar-callout co san), 'examples' (danh sach vi du dang an/hien - bam nut de mo, giong makeToggleSection cua grammar.html; moi item la {vi, en} - 'en' co the bo trong).",
   "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong (null).",
   "exercise.repeatSentences": "Nghe va lap lai ca cau (khong co cho trong). Moi item: 'text' (cau hien thi) + 'audio' (rieng, hoac dung chung ex.audio).",
@@ -225,9 +225,8 @@
      "exercises": [
       {
        "type": "grammarNote",
-       "num": 9,
-       "instructionVi": "Ghi chú ngữ pháp.",
-       "instructionEn": "Grammar note.",
+       "noNum": true,
+       "instructionVi": "",
        "title": "THÍCH – LIKE",
        "blocks": [
         { "type": "paragraph", "vi": "Thích có nghĩa là “like” trong tiếng Anh. Dùng thích để nói về người, đồ vật, món ăn, đồ uống hoặc hoạt động mà bạn yêu thích.", "en": "Thích means “to like.” It is used to talk about things, food, drinks, or activities that you like." },
