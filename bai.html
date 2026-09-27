@@ -687,13 +687,19 @@
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
         if (ex.blankFirst) {
-          // Dạng "đặt câu hỏi": số + chỗ trống cùng 1 dòng (lưới 2 cột), gợi ý hiện dòng dưới.
+          // Dạng "đặt câu hỏi": số + chỗ trống cùng 1 dòng (sát nhau), gợi ý cách dòng trên 1 khoảng rõ.
           input.setAttribute('aria-label', 'Câu hỏi cho câu ' + (i + 1));
           const line = el('div', 'bai-fill-row');
-          line.appendChild(el('span', 'bai-qa-q', String(i + 1)));
+          line.style.gridTemplateColumns = '24px 1fr';
+          line.style.columnGap = '8px';
+          const numSpan = el('span', 'bai-qa-q', String(i + 1));
+          numSpan.style.marginBottom = '0';
+          line.appendChild(numSpan);
           line.appendChild(input);
           box.appendChild(line);
-          box.appendChild(el('div', 'bai-fill-line', q.q));
+          const hint = el('div', 'bai-fill-line', q.q);
+          hint.style.margin = '10px 0 20px';
+          box.appendChild(hint);
           rows.push({ input: input, answer: q.a });
           return;
         }
