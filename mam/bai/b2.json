@@ -306,8 +306,8 @@
        "instructionVi": "Dựa vào bảng sau và hoàn thành câu.",
        "instructionEn": "Use the table below to complete the sentences.",
        "table": {
-        "people": ["Tâm", "Lan", "Kiên", "Vân"],
-        "items": ["cà phê đen", "cà phê sữa", "trà", "trái cây", "bún bò", "phở gà", "canh", "rau", "cơm", "thịt gà", "thịt bò"],
+        "rows": ["Tâm", "Lan", "Kiên", "Vân"],
+        "cols": ["cà phê đen", "cà phê sữa", "trà", "trái cây", "bún bò", "phở gà", "canh", "rau", "cơm", "thịt gà", "thịt bò"],
         "marks": {
          "Tâm":  { "cà phê đen": "x", "cà phê sữa": "✓", "trà": "✓", "phở gà": "✓", "thịt gà": "✓", "thịt bò": "x" },
          "Lan":  { "cà phê đen": "x", "trà": "✓", "trái cây": "✓", "cơm": "✓", "rau": "✓", "thịt bò": "✓", "thịt gà": "x", "canh": "x" },
