@@ -325,6 +325,21 @@
         { "num": 7, "q": "Ai không thích trái cây?", "a": "Kiên không thích trái cây." },
         { "num": 8, "q": "Ai không thích thịt gà?", "a": "Lan và Vân không thích thịt gà." }
        ]
+      },
+      {
+       "type": "readingQA",
+       "num": 12,
+       "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
+       "instructionEn": "Read the following paragraph and answer the questions.",
+       "passage": "Mình là Phương. Mình thích cà phê sữa và trà. Mình cũng thích phở bò và cơm gà. Tâm, bạn của mình, thích cà phê đen. Tâm không thích phở bò nhưng Tâm thích bún bò với rau.",
+       "questions": [
+        { "q": "Phương thích uống gì?", "a": "Phương thích uống cà phê sữa và trà." },
+        { "q": "Phương thích ăn gì?", "a": "Phương thích ăn phở bò và cơm gà." },
+        { "q": "Phương không thích uống gì?", "a": "Phương không thích uống cà phê đen." },
+        { "q": "Tâm thích uống gì?", "a": "Tâm thích uống cà phê đen." },
+        { "q": "Tâm thích ăn gì?", "a": "Tâm thích ăn bún bò với rau." },
+        { "q": "Tâm không thích ăn gì?", "a": "Tâm không thích ăn phở bò." }
+       ]
       }
      ]
     }
