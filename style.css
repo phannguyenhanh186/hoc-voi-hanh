@@ -1647,6 +1647,26 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-grammar-heading-vi { font-size: 1.15rem; font-weight: 700; color: var(--ink); }
 .bai-grammar-heading-en { font-size: 0.95rem; font-style: italic; color: var(--muted); }
 .bai-grammar-structure-vi { font-weight: 700; color: var(--ink); }
+/* Bài 2: cấu trúc dùng vàng nhạt riêng #FFEEC9 (thay vì --yellow dùng chung toàn site) */
+.bai-grammar-structure { background: #FFEEC9; }
 .bai-grammar-structure-en { font-style: italic; color: var(--muted); font-size: 0.95rem; }
 .bai-grammar-p-vi { color: var(--ink); line-height: 1.6; }
 .bai-grammar-p-en { font-style: italic; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
+
+
+/* Bảng "danh xưng theo cặp" (pronounPairs) */
+.bai-pairs { max-width: 760px; display: grid; gap: 16px; }
+.bai-pairs-intro { background: #FCEFCD; border: 2px solid var(--stroke); border-radius: 14px; padding: 14px 18px; display: grid; gap: 6px; }
+.bai-pairs-intro-vi { font-weight: 700; color: var(--ink); line-height: 1.5; }
+.bai-pairs-intro-en { color: var(--muted); line-height: 1.5; }
+.bai-pairs-table { display: grid; grid-template-columns: 1fr 1fr 1.5fr; border: 2px solid var(--stroke); border-radius: 16px; overflow: hidden; }
+.bai-pairs-head { background: var(--tint); padding: 12px 10px; text-align: center; border-bottom: 2px solid var(--stroke); border-right: 2px solid var(--stroke); }
+.bai-pairs-head:last-child { border-right: none; }
+.bai-pairs-head-vi { font-weight: 800; color: var(--ink); }
+.bai-pairs-head-en { font-size: .82rem; color: var(--muted); }
+.bai-pairs-cell { display: flex; border-top: 2px solid var(--stroke); border-right: 2px solid var(--stroke); }
+.bai-pairs-table > .bai-pairs-cell:nth-child(3n) { border-right: none; }
+.bai-pairs-sub { flex: 1; display: flex; align-items: center; justify-content: center; padding: 16px 10px; font-weight: 700; font-size: 1.05rem; color: var(--ink); background: var(--chip-bg, #FCEFCD); }
+.bai-pairs-sub + .bai-pairs-sub { border-left: 2px solid var(--stroke); }
+.bai-pairs-example { flex-direction: column; justify-content: center; gap: 4px; padding: 12px 16px; background: var(--chip-bg, #D4C9FB); }
+.bai-pairs-ex-line { color: var(--ink); line-height: 1.5; }
