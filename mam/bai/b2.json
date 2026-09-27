@@ -1,7 +1,8 @@
 {
  "_guide": {
   "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b2&level=mam. App bo qua key bat dau bang '_'.",
-  "status": "Da co section 'phat-am' (Bai 1-4: van cuoi n/m), 'tu-vung' (Bai 5: photoVocab, Bai 6: photoFill) va 'nghe' (Bai 7: dung/sai, Bai 8: chon cau dung - deu dung lai type 'audioChoice' co san). Cac phan sau (ngu-phap, noi, doc, viet...) se bo sung sau.",
+  "status": "Da co section 'phat-am' (Bai 1-4: van cuoi n/m), 'tu-vung' (Bai 5: photoVocab, Bai 6: photoFill), 'nghe' (Bai 7: dung/sai, Bai 8: chon cau dung) va 'ngu-phap' (Bai 9: ghi chu 'Thich - Like'). Cac phan sau (noi, doc, viet...) se bo sung sau.",
+  "exercise.grammarNote": "Ghi chu ngu phap song ngu, khong tuong tac (khong co dap an/audio). 'title' = tieu de lon. 'blocks' la mang cac khoi, moi khoi co 'type': 'paragraph' (doan van vi/en), 'heading' (tieu de nho vi/en), 'structure' (cong thuc vi/en, hien khung mau vang), 'examples' (danh sach vi du, moi item la {vi, en} - 'en' co the bo trong neu khong can dich).",
   "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong (null).",
   "exercise.repeatSentences": "Nghe va lap lai ca cau (khong co cho trong). Moi item: 'text' (cau hien thi) + 'audio' (rieng, hoac dung chung ex.audio).",
   "exercise.listenPick": "Nghe va khoanh tron am dung. Moi item: 'options' (4 lua chon) + 'answer' (dap an - PHAI xac nhan lai truoc khi thu am, xem todo_answers).",
@@ -207,6 +208,72 @@
         { "audio": "audio/b2/{voice}/listen_ex8_02.mp3", "options": ["Chị Ngân không thích trà.", "Chị Ngân không thích trái cây."], "answer": "a" },
         { "audio": "audio/b2/{voice}/listen_ex8_03.mp3", "options": ["Trang không thích cà phê đen.", "Trang không thích cà phê sữa."], "answer": "a" },
         { "audio": "audio/b2/{voice}/listen_ex8_04.mp3", "options": ["Quân thích ăn cơm với canh.", "Quân thích ăn cơm với rau."], "answer": "a" }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "thich",
+     "label": "Thích – Like",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "num": 9,
+       "instructionVi": "Ghi chú ngữ pháp.",
+       "instructionEn": "Grammar note.",
+       "title": "THÍCH – LIKE",
+       "blocks": [
+        { "type": "paragraph", "vi": "Thích có nghĩa là “like” trong tiếng Anh. Dùng thích để nói về người, đồ vật, món ăn, đồ uống hoặc hoạt động mà bạn yêu thích.", "en": "Thích means “to like.” It is used to talk about things, food, drinks, or activities that you like." },
+
+        { "type": "heading", "vi": "1. Thích + danh từ", "en": "1. Thích + noun" },
+        { "type": "structure", "vi": "Chủ ngữ + thích + danh từ", "en": "Subject + thích + noun" },
+        { "type": "examples", "items": [
+          { "vi": "Mình thích phở.", "en": "I like phở." },
+          { "vi": "Chị Liên thích cà phê.", "en": "Lien likes coffee." },
+          { "vi": "Ann thích tiếng Việt.", "en": "Ann likes Vietnamese." }
+        ] },
+        { "type": "paragraph", "vi": "Thích không thay đổi theo chủ ngữ.", "en": "The word thích does not change according to the subject." },
+        { "type": "examples", "items": [
+          { "vi": "Mình thích phở." },
+          { "vi": "Chị thích bún bò." },
+          { "vi": "Mẹ của em thích trà." },
+          { "vi": "Chú Bình thích cà phê." }
+        ] },
+
+        { "type": "heading", "vi": "2. Thích ăn gì?", "en": "2. What do you like to eat?" },
+        { "type": "structure", "vi": "Chủ ngữ + thích ăn + món ăn", "en": "Subject + thích ăn + food" },
+        { "type": "examples", "items": [
+          { "vi": "Bạn thích ăn gì?", "en": "What do you like to eat?" },
+          { "vi": "Mình thích ăn phở. / Mình thích phở.", "en": "I like to eat phở. / I like phở." },
+          { "vi": "Anh thích ăn gì?", "en": "What do you like to eat?" },
+          { "vi": "Anh thích ăn cơm gà. / Anh thích cơm gà.", "en": "I like to eat chicken rice. / I like chicken rice." }
+        ] },
+        { "type": "paragraph", "vi": "Cả “Mình thích phở” và “Mình thích ăn phở” đều tự nhiên. Câu đầu tập trung vào món ăn; câu sau nhấn mạnh việc ăn món đó.", "en": "Both “Mình thích phở” and “Mình thích ăn phở” are natural. The first focuses on the food; the second focuses on the activity of eating." },
+
+        { "type": "heading", "vi": "3. Thích uống gì?", "en": "3. What do you like to drink?" },
+        { "type": "structure", "vi": "Chủ ngữ + thích uống + đồ uống", "en": "Subject + thích uống + drink" },
+        { "type": "examples", "items": [
+          { "vi": "Bạn thích uống gì?", "en": "What do you like to drink?" },
+          { "vi": "Mình thích uống cà phê. / Mình thích cà phê.", "en": "I like to drink coffee. / I like coffee." },
+          { "vi": "Chị thích uống gì?", "en": "What do you like to drink?" },
+          { "vi": "Chị thích uống trà. / Chị thích trà.", "en": "I like to drink tea. / I like tea." }
+        ] },
+
+        { "type": "heading", "vi": "4. Không thích", "en": "4. Do not like" },
+        { "type": "paragraph", "vi": "Đặt không trước thích để tạo câu phủ định.", "en": "Put không before thích to make a negative sentence." },
+        { "type": "structure", "vi": "Chủ ngữ + không thích + danh từ", "en": "Subject + không thích + noun" },
+        { "type": "examples", "items": [
+          { "vi": "Mình không thích cà phê.", "en": "I don't like coffee." },
+          { "vi": "Em không thích ăn thịt.", "en": "I don't like eating meat." },
+          { "vi": "Ba của mình không thích uống trà.", "en": "My father doesn't like drinking tea." }
+        ] }
        ]
       }
      ]
