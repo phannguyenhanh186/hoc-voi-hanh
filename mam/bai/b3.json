@@ -1,0 +1,133 @@
+{
+ "id": "b3",
+ "num": 3,
+ "title": "Hôm nay bạn có đi làm không?",
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "am-cuoi-ng",
+     "label": "Âm kết thúc bằng \"ng\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b3/{voice}/pron_{key}.mp3",
+       "noteVi": "Trong tiếng miền Nam, các âm kết thúc bằng \"n\" khác với các âm kết thúc bằng \"ng\".",
+       "noteEn": "In Southern Vietnamese, final -n sounds different from final -ng.",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ang",
+            "mang",
+            "hàng"
+           ],
+           [
+            "âng",
+            "vâng",
+            "hẫng"
+           ],
+           [
+            "ăng",
+            "tăng",
+            "bằng"
+           ]
+          ]
+         }
+        ],
+        [
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "ong",
+            "trong",
+            "mỏng"
+           ],
+           [
+            "ông",
+            "không",
+            "đồng"
+           ]
+          ]
+         }
+        ],
+        [
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "ung",
+            "thúng",
+            "cùng"
+           ],
+           [
+            "ưng",
+            "mừng",
+            "bưng"
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phu-am-ng-ngh",
+     "label": "Phụ âm \"ng\"/\"ngh\"",
+     "exercises": [
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Ngọc nghe nhạc.",
+         "audio": "audio/b3/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Nga nghe Nghi nói.",
+         "audio": "audio/b3/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Nghỉ ngơi nhé Ngân.",
+         "audio": "audio/b3/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Nghĩa nghe tiếng Nga.",
+         "audio": "audio/b3/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Người này là Nghi.",
+         "audio": "audio/b3/{voice}/ex2_05.mp3"
+        },
+        {
+         "text": "Ngày mai Ngạn nghỉ.",
+         "audio": "audio/b3/{voice}/ex2_06.mp3"
+        },
+        {
+         "text": "Người Việt nấu ăn ngon.",
+         "audio": "audio/b3/{voice}/ex2_07.mp3"
+        },
+        {
+         "text": "Ngày nào mình cũng nghe tiếng Anh.",
+         "audio": "audio/b3/{voice}/ex2_08.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
