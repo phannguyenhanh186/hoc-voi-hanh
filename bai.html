@@ -274,6 +274,29 @@
     function renderPhotoFill(ex, n) {
       const box = el('div');
       if (ex.audio) box.appendChild(makeListenBtn(ex, n));
+      let activeInput = null;
+      if (ex.words) {
+        // Có 'words': hiện ngân hàng từ phía trên; từ đã dùng ở câu ví dụ thì gạch khung, không chọn được.
+        const exItem = (ex.items || []).filter(function (x) { return x.example; })[0];
+        const usedWord = exItem && exItem.answers && exItem.answers[0] ? normName(exItem.answers[0][0]) : '';
+        const bank = el('div', 'bai-wordbank');
+        ex.words.forEach(function (w) {
+          const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+          if (normName(w) === usedWord) {
+            chip.disabled = true;
+            chip.style.textDecoration = 'line-through'; chip.style.opacity = '.55';
+            chip.style.outline = '2px solid var(--stroke)'; chip.style.outlineOffset = '2px'; chip.style.cursor = 'default';
+          } else {
+            chip.addEventListener('click', function () {
+              if (!activeInput) return;
+              activeInput.value = w;
+              activeInput.dispatchEvent(new Event('input'));
+            });
+          }
+          bank.appendChild(chip);
+        });
+        box.appendChild(bank);
+      }
       const grid = el('div', 'bai-photos');
       const allCells = [];
       (ex.items || []).forEach(function (it) {
@@ -302,7 +325,10 @@
           const mark = el('span', 'bai-mark');
           built.line.appendChild(mark);
           cap.appendChild(built.line);
-          built.cells.forEach(function (c) { allCells.push({ input: c.input, answers: c.answers, mark: mark }); });
+          built.cells.forEach(function (c) {
+            if (ex.words) { c.input.style.width = '12ch'; c.input.addEventListener('focus', function () { activeInput = c.input; }); }
+            allCells.push({ input: c.input, answers: c.answers, mark: mark });
+          });
         }
         fig.appendChild(cap);
         grid.appendChild(fig);
@@ -636,6 +662,76 @@
       return box;
     }
 
+    // Bài 5 (b3): lịch 3 ngày (ảnh hoạt động mỗi ngày) + ngân hàng từ + câu điền chỗ trống.
+    // Item có 'distinct: true' (2 ô, đáp án gồm cả 2 thứ tự) thì 2 ô phải khác nhau.
+    function renderCalendarFill(ex, n) {
+      const box = el('div');
+      const cal = el('div', 'bai-cal');
+      cal.style.display = 'grid'; cal.style.gap = '12px'; cal.style.maxWidth = '520px'; cal.style.marginBottom = '18px';
+      const days = ex.days || [];
+      cal.style.gridTemplateColumns = 'repeat(' + Math.max(days.length, 1) + ', minmax(0, 1fr))';
+      days.forEach(function (d) {
+        const col = el('div'); col.style.display = 'flex'; col.style.flexDirection = 'column'; col.style.gap = '10px';
+        const head = el('div', 'bai-chip bai-tone-' + (d.tone || 'yellow'));
+        head.style.flexDirection = 'column'; head.style.height = 'auto'; head.style.minHeight = '54px'; head.style.padding = '8px 6px'; head.style.cursor = 'default';
+        head.appendChild(el('div', '', 'Ngày ' + d.date));
+        if (d.label) { const t = el('div', '', d.label); t.style.fontSize = '.85rem'; t.style.color = '#dc2626'; t.style.fontWeight = '700'; head.appendChild(t); }
+        col.appendChild(head);
+        (d.imgs || []).forEach(function (im) { col.appendChild(makePhoto(im.img, im.alt)); });
+        cal.appendChild(col);
+      });
+      box.appendChild(cal);
+
+      let activeInput = null;
+      const bank = el('div', 'bai-wordbank');
+      (ex.words || []).forEach(function (w) {
+        const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+        chip.addEventListener('click', function () {
+          if (!activeInput) return;
+          activeInput.value = w;
+          activeInput.dispatchEvent(new Event('input'));
+        });
+        bank.appendChild(chip);
+      });
+      box.appendChild(bank);
+
+      const lines = el('div'); lines.style.display = 'grid'; lines.style.gap = '10px';
+      const groups = [];
+      (ex.items || []).forEach(function (it, i) {
+        const built = buildFillLine((i + 1) + '\u00A0\u00A0' + it.template, it.answers || [], 'Câu ' + (i + 1));
+        const mark = el('span', 'bai-mark');
+        built.line.appendChild(mark);
+        lines.appendChild(built.line);
+        built.cells.forEach(function (c) {
+          c.input.style.width = '10ch';
+          c.input.addEventListener('focus', function () { activeInput = c.input; });
+        });
+        groups.push({ cells: built.cells, mark: mark, distinct: !!it.distinct });
+      });
+      box.appendChild(lines);
+
+      function check() {
+        groups.forEach(function (g) {
+          const vals = g.cells.map(function (c) { return normName(c.input.value); });
+          const oks = g.cells.map(function (c, k) { return !!vals[k] && c.answers.some(function (a) { return normName(a) === vals[k]; }); });
+          if (g.distinct && vals.length > 1 && vals[0] && vals[0] === vals[1]) oks.fill(false);
+          g.cells.forEach(function (c, k) { markCell(c.input, g.mark, !vals[k] ? '' : (oks[k] ? 'ok' : 'bad')); });
+          const all = oks.every(Boolean), any = vals.some(Boolean);
+          g.mark.textContent = !any ? '' : (all ? '✓' : '✗');
+          g.mark.className = 'bai-mark ' + (!any ? '' : (all ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() {
+        groups.forEach(function (g) {
+          g.cells.forEach(function (c) { c.input.value = c.answers[0] || ''; c.input.classList.remove('is-wrong'); c.input.classList.add('is-correct'); });
+          g.mark.textContent = '✓'; g.mark.className = 'bai-mark ok';
+        });
+      }
+      groups.forEach(function (g) { g.cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); }); });
+      box.appendChild(fillCheckBar(groups, check, reveal));
+      return box;
+    }
+
     // Bài 11 (nói): ảnh + tự giới thiệu tên và nghề — luyện nói tự do, không chấm điểm.
     function renderOpenIntro(ex, n) {
       const grid = el('div', 'bai-photos bai-photos-2');
@@ -794,7 +890,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
@@ -804,8 +900,10 @@
       box.appendChild(fn ? fn(ex, n) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
       if (ex.noteVi) {
         const note = el('div', 'grammar-callout');
-        note.appendChild(el('div', '', 'Ghi chú: ' + ex.noteVi));
-        if (ex.noteEn) { const en = el('div', 'grammar-note', 'Note: ' + ex.noteEn); note.appendChild(en); }
+        if (ex.noteTitleVi) { const t = el('div', '', ex.noteTitleVi); t.style.fontWeight = '700'; note.appendChild(t); }
+        note.appendChild(el('div', '', (ex.noteTitleVi ? '' : 'Ghi chú: ') + ex.noteVi));
+        if (ex.noteTitleEn) { const t2 = el('div', 'grammar-note', ex.noteTitleEn); t2.style.fontWeight = '700'; t2.style.marginBottom = '0'; note.appendChild(t2); }
+        if (ex.noteEn) { const en = el('div', 'grammar-note', (ex.noteTitleEn ? '' : 'Note: ') + ex.noteEn); note.appendChild(en); }
         box.appendChild(note);
       }
       return box;
