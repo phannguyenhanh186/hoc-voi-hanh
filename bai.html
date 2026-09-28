@@ -802,6 +802,12 @@
       box.appendChild(exerciseHead(ex, n));
       const fn = RENDERERS[ex.type];
       box.appendChild(fn ? fn(ex, n) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
+      if (ex.noteVi) {
+        const note = el('div', 'grammar-callout');
+        note.appendChild(el('div', '', 'Ghi chú: ' + ex.noteVi));
+        if (ex.noteEn) { const en = el('div', 'grammar-note', 'Note: ' + ex.noteEn); note.appendChild(en); }
+        box.appendChild(note);
+      }
       return box;
     }
 
