@@ -128,6 +128,257 @@
      ]
     }
    ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "di-dong-tu",
+     "label": "Đi + Động từ",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 3,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "noteTitleVi": "Đi + Động từ",
+       "noteVi": "Khi “Đi” đứng trước một động từ, nó có nghĩa là bạn di chuyển để thực hiện hành động đó.",
+       "noteTitleEn": "Đi + Verb",
+       "noteEn": "When “Đi” is placed before a verb, it means that you move (or go somewhere) to perform that action.",
+       "items": [
+        {
+         "img": "images/b3/bai3/di_lam.jpg",
+         "caption": "Đi làm",
+         "audio": "audio/b3/{voice}/vocab_di_lam.mp3"
+        },
+        {
+         "img": "images/b3/bai3/di_hoc.jpg",
+         "caption": "Đi học",
+         "audio": "audio/b3/{voice}/vocab_di_hoc.mp3"
+        },
+        {
+         "img": "images/b3/bai3/di_choi.jpg",
+         "caption": "Đi chơi",
+         "audio": "audio/b3/{voice}/vocab_di_choi.mp3"
+        },
+        {
+         "img": "images/b3/bai3/di_an.jpg",
+         "caption": "Đi ăn",
+         "audio": "audio/b3/{voice}/vocab_di_an.mp3"
+        },
+        {
+         "img": "images/b3/bai3/di_ngu.jpg",
+         "caption": "Đi ngủ",
+         "audio": "audio/b3/{voice}/vocab_di_ngu.mp3"
+        },
+        {
+         "img": "images/b3/bai3/di_du_lich.jpg",
+         "caption": "Đi du lịch",
+         "audio": "audio/b3/{voice}/vocab_di_du_lich.mp3"
+        }
+       ]
+      },
+      {
+       "type": "photoFill",
+       "num": 4,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "đi làm",
+        "đi học",
+        "đi chơi",
+        "đi ăn",
+        "đi ngủ",
+        "đi du lịch"
+       ],
+       "items": [
+        {
+         "img": "images/b3/bai4/hinh1.jpg",
+         "name": "Hình 1",
+         "template": "Hôm nay mình {0}.",
+         "answers": [
+          [
+           "đi chơi"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex4_01.mp3",
+         "example": true
+        },
+        {
+         "img": "images/b3/bai4/hinh2.jpg",
+         "name": "Hình 2",
+         "template": "Ngày mai chị {0}.",
+         "answers": [
+          [
+           "đi du lịch"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex4_02.mp3"
+        },
+        {
+         "img": "images/b3/bai4/hinh3.jpg",
+         "name": "Hình 3",
+         "template": "Hôm qua em không {0}.",
+         "answers": [
+          [
+           "đi học"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex4_03.mp3"
+        },
+        {
+         "img": "images/b3/bai4/hinh4.jpg",
+         "name": "Hình 4",
+         "template": "Hôm nay chú không {0}.",
+         "answers": [
+          [
+           "đi làm"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex4_04.mp3"
+        },
+        {
+         "img": "images/b3/bai4/hinh5.jpg",
+         "name": "Hình 5",
+         "template": "Bây giờ anh {0}.",
+         "answers": [
+          [
+           "đi ngủ"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex4_05.mp3"
+        },
+        {
+         "img": "images/b3/bai4/hinh6.jpg",
+         "name": "Hình 6",
+         "template": "Bây giờ cô {0}.",
+         "answers": [
+          [
+           "đi ăn"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex4_06.mp3"
+        }
+       ]
+      },
+      {
+       "type": "calendarFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu sau dựa vào lịch bên dưới.",
+       "instructionEn": "Complete the following sentences based on the calendar below.",
+       "days": [
+        {
+         "date": 2,
+         "tone": "blue",
+         "imgs": [
+          {
+           "img": "images/b3/bai5/ngay2_di_hoc.jpg",
+           "alt": "đi học"
+          },
+          {
+           "img": "images/b3/bai5/ngay2_di_choi.jpg",
+           "alt": "đi chơi"
+          }
+         ]
+        },
+        {
+         "date": 3,
+         "tone": "pink",
+         "label": "Hôm nay",
+         "imgs": [
+          {
+           "img": "images/b3/bai5/ngay3_di_lam.jpg",
+           "alt": "đi làm"
+          },
+          {
+           "img": "images/b3/bai5/ngay3_di_hoc.jpg",
+           "alt": "đi học"
+          }
+         ]
+        },
+        {
+         "date": 4,
+         "tone": "yellow",
+         "imgs": [
+          {
+           "img": "images/b3/bai5/ngay4_di_du_lich.jpg",
+           "alt": "đi du lịch"
+          },
+          {
+           "img": "images/b3/bai5/ngay4_di_an.jpg",
+           "alt": "đi ăn"
+          }
+         ]
+        }
+       ],
+       "words": [
+        "Hôm nay",
+        "Ngày mai",
+        "Hôm qua"
+       ],
+       "items": [
+        {
+         "template": "{0} mình đi ăn.",
+         "answers": [
+          [
+           "Ngày mai"
+          ]
+         ]
+        },
+        {
+         "template": "{0} mình không đi học.",
+         "answers": [
+          [
+           "Ngày mai"
+          ]
+         ]
+        },
+        {
+         "template": "{0} mình đi chơi với Kiên.",
+         "answers": [
+          [
+           "Hôm qua"
+          ]
+         ]
+        },
+        {
+         "template": "{0} đi làm.",
+         "answers": [
+          [
+           "Hôm nay"
+          ]
+         ]
+        },
+        {
+         "template": "{0} và {1} mình không đi du lịch.",
+         "answers": [
+          [
+           "Hôm qua",
+           "Hôm nay"
+          ],
+          [
+           "Hôm nay",
+           "Hôm qua"
+          ]
+         ],
+         "distinct": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
- ]
+ ],
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "exercise.photoFill.words": "Neu ex co 'words' thi hien ngan hang tu phia tren; tu trung voi dap an cua item 'example' se bi gach + khung, khong chon duoc.",
+  "exercise.calendarFill": "Lich (days[]: date, tone, label, imgs[{img,alt}]) + ngan hang tu 'words' + items[{template,answers,distinct}]. distinct=true: 2 o phai khac nhau (dap an chap nhan ca 2 thu tu).",
+  "exercise.noteVi": "Bat ky exercise nao cung co the co ghi chu: noteTitleVi/noteVi/noteTitleEn/noteEn (khung vang duoi bai tap).",
+  "todo_images": "images/b3/bai3, bai4 (hinh1..6.jpg), bai5 (ngay2_di_hoc.jpg ...) chua co - se bo sung sau.",
+  "todo_audio": "audio/b3/nam: vocab_di_lam.mp3... (6 tu), ex4_01..06.mp3 - chua thu am.",
+  "todo_answers": "Bai 4: cau vi du (Hinh 1) tam dat la 'di choi' (tu con lai sau 5 dap an) - CAN XAC NHAN."
+ }
 }
