@@ -370,6 +370,145 @@
      ]
     }
    ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "di-dong-tu",
+     "label": "Đi + Động từ",
+     "exercises": [
+      {
+       "type": "fillWords",
+       "num": 6,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "đi làm",
+        "đi học",
+        "đi ăn",
+        "đi ngủ",
+        "đi chơi",
+        "đi du lịch"
+       ],
+       "items": [
+        {
+         "before": "Hôm nay cô Loan ",
+         "after": ".",
+         "answers": [
+          "đi học"
+         ],
+         "audio": "audio/b3/{voice}/ex6_01.mp3"
+        },
+        {
+         "before": "Ngày mai chị Hân không ",
+         "after": ".",
+         "answers": [
+          "đi du lịch"
+         ],
+         "audio": "audio/b3/{voice}/ex6_02.mp3"
+        },
+        {
+         "before": "Hôm qua anh Nghĩa ",
+         "after": ".",
+         "answers": [
+          "đi làm"
+         ],
+         "audio": "audio/b3/{voice}/ex6_03.mp3"
+        },
+        {
+         "before": "Ngày mai An không ",
+         "after": ".",
+         "answers": [
+          "đi chơi"
+         ],
+         "audio": "audio/b3/{voice}/ex6_04.mp3"
+        },
+        {
+         "before": "Hôm qua chú Phúc không ",
+         "after": ".",
+         "answers": [
+          "đi ăn"
+         ],
+         "audio": "audio/b3/{voice}/ex6_05.mp3"
+        },
+        {
+         "before": "Bây giờ Minh ",
+         "after": ".",
+         "answers": [
+          "đi ngủ"
+         ],
+         "audio": "audio/b3/{voice}/ex6_06.mp3"
+        }
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 7,
+       "instructionVi": "Nghe và trả lời các câu hỏi sau.",
+       "instructionEn": "Listen and answer the following questions.",
+       "items": [
+        {
+         "audio": "audio/b3/{voice}/listen_ex7_01.mp3",
+         "text": "Hôm nay anh Giang đi làm.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex7_02.mp3",
+         "text": "Ngày mai chị Ngân không đi ăn.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex7_03.mp3",
+         "text": "Hôm qua Nghĩa đi học.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex7_04.mp3",
+         "text": "Hôm nay chị Lan không đi chơi.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex7_05.mp3",
+         "text": "Ngày mai chú Phong đi du lịch.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex7_06.mp3",
+         "text": "Bây giờ Liên đi ngủ.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "_guide": {
@@ -379,6 +518,10 @@
   "exercise.noteVi": "Bat ky exercise nao cung co the co ghi chu: noteTitleVi/noteVi/noteTitleEn/noteEn (khung vang duoi bai tap).",
   "todo_images": "images/b3/bai3, bai4 (hinh1..6.jpg), bai5 (ngay2_di_hoc.jpg ...) chua co - se bo sung sau.",
   "todo_audio": "audio/b3/nam: vocab_di_lam.mp3... (6 tu), ex4_01..06.mp3 - chua thu am.",
-  "todo_answers": "Bai 4: cau vi du (Hinh 1) tam dat la 'di choi' (tu con lai sau 5 dap an) - CAN XAC NHAN."
+  "todo_answers": "Bai 4: cau vi du (Hinh 1) tam dat la 'di choi' (tu con lai sau 5 dap an) - CAN XAC NHAN.",
+  "exercise.fillWords.words": "Neu ex co 'words' thi hien ngan hang tu phia tren; bam tu de dien vao o dang focus (giong photoFill/calendarFill).",
+  "audio_script_bai6": "Bai 6 la nghe-chep chinh ta: moi cau audio doc dung y cau da dien dap an, vd 'Hom nay co Loan di hoc.' 'Ngay mai chi Han khong di du lich.' 'Hom qua anh Nghia di lam.' 'Ngay mai An khong di choi.' 'Hom qua chu Phuc khong di an.' 'Bay gio Minh di ngu.'",
+  "audio_script_bai7": "Bai 7 - noi dung hoi thoai can thu am (audio khac voi text hien tren man hinh, day la dang nghe-hieu suy luan): 1) Hom nay anh co di lam khong? / Anh co. 2) Ngay mai chi co di an voi gia dinh khong? / Chi khong, ngay mai chi o nha. 3) Hom qua em co di hoc khong? / Em khong, hom qua em bi benh. 4) Hom nay chi Lan co di choi khong? / Chi khong. Hom nay chi di lam. 5) Hom qua chu Phong co di du lich khong? / Khong, ngay mai chu moi di du lich. 6) Bay gio ban di an dung khong? / Khong, bay gio minh di ngu.",
+  "todo_audio_nghe": "audio/b3/nam: ex6_01..06.mp3 (theo audio_script_bai6), listen_ex7_01..06.mp3 (theo audio_script_bai7) - chua thu am."
  }
 }
