@@ -509,6 +509,115 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "co-khong",
+     "label": "Có...không?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "CÂU HỎI CÓ...KHÔNG? – YES/NO QUESTIONS",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, có...không? được dùng để đặt câu hỏi có/không. Cấu trúc này tương tự như các câu hỏi bắt đầu bằng “Do/Does...?” trong tiếng Anh.",
+         "en": "In Vietnamese, có...không? is used to ask a yes/no question. It is similar to questions beginning with “Do/Does...?” in English."
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + có + ... + không?",
+         "en": "Subject + có + ... + không?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có đứng trước nội dung chính của câu hỏi, còn không đứng ở cuối câu.",
+         "en": "The word có comes before the main information, and không comes at the end of the question."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn có thích phở không?",
+           "en": "Do you like phở?"
+          },
+          {
+           "vi": "Anh có uống cà phê không?",
+           "en": "Do you drink coffee?"
+          },
+          {
+           "vi": "Chị có đi du lịch không?",
+           "en": "Do you travel?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "2. Short answers – Câu trả lời ngắn",
+         "en": "2. Short answers"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời ngắn thường lặp lại chủ ngữ và dùng có hoặc không.",
+         "en": "A short answer usually repeats the subject and uses có or không."
+        },
+        {
+         "type": "structure",
+         "vi": "[Đại từ] + có. → Yes.\n[Đại từ] + không. → No.",
+         "en": "[Pronoun] + có. → Yes.\n[Pronoun] + không. → No."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn có thích bún bò không? → Mình có. / Mình không.",
+           "en": "Do you like beef noodle? → Yes, I do. / No, I don't."
+          },
+          {
+           "vi": "Bạn có thích cà phê không? → Mình có. / Mình không."
+          },
+          {
+           "vi": "Cô có đi du lịch không? → Cô có. / Cô không."
+          },
+          {
+           "vi": "Anh có ăn thịt gà không? → Anh có. / Anh không."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "3. Full answers – Câu trả lời đầy đủ",
+         "en": "3. Full answers"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Bạn cũng có thể trả lời đầy đủ bằng cách lặp lại động từ hoặc cụm từ trong câu hỏi.",
+         "en": "You can also give a full answer by repeating the verb or phrase from the question."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Em có thích phở không? → Em có thích phở. / Em không thích phở.",
+           "en": "Do you like phở? → I do like phở. / I don't like phở."
+          },
+          {
+           "vi": "Chú có ăn trái cây không? → Chú có ăn trái cây. / Chú không ăn trái cây.",
+           "en": "Do you eat fruits? → I do eat fruits. / I don't eat fruits."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "_guide": {
