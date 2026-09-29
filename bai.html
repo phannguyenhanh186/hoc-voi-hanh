@@ -189,6 +189,20 @@
     function normName(t) { return String(t).normalize('NFC').trim().toLowerCase(); }
     function renderFillNames(ex) {
       const wrap = el('div', 'bai-fill');
+      let activeInput = null;
+      if (ex.words) {
+        const bank = el('div', 'bai-wordbank');
+        ex.words.forEach(function (w) {
+          const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+          chip.addEventListener('click', function () {
+            if (!activeInput) return;
+            activeInput.value = w;
+            activeInput.dispatchEvent(new Event('input'));
+          });
+          bank.appendChild(chip);
+        });
+        wrap.appendChild(bank);
+      }
       const rows = [];
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-fill-row');
@@ -203,6 +217,7 @@
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank'; input.autocomplete = 'off';
         input.setAttribute('aria-label', 'Tên trong câu ' + (i + 1));
+        if (ex.words) { input.style.width = '12ch'; input.addEventListener('focus', function () { activeInput = input; }); }
         line.appendChild(input);
         line.appendChild(document.createTextNode(item.after || ''));
         const mark = el('span', 'bai-mark'); line.appendChild(mark);
