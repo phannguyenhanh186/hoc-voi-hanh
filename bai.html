@@ -905,7 +905,162 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill };
+    // Bài 8 (b3): sắp xếp các từ thành câu hỏi. Bấm từ ở ngân hàng để đưa lên dòng câu, bấm lại để bỏ xuống.
+    // item: { words:[...], answers:[câu chấp nhận...], example:true }
+    function normSentence(s) {
+      return String(s).normalize('NFC').toLowerCase().replace(/[.,!?;:]/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+    function renderWordOrder(ex, n) {
+      const box = el('div', 'bai-order-list');
+      const rows = [];
+      (ex.items || []).forEach(function (it, i) {
+        const row = el('div', 'bai-order-row');
+        row.appendChild(el('div', 'bai-order-num', it.example ? 'Ví dụ' : String(i)));
+        const body = el('div', 'bai-order-body');
+        const answerLine = el('div', 'bai-order-answer');
+        const mark = el('span', 'bai-mark');
+        const bank = el('div', 'bai-wordbank');
+        const chips = [];
+        const picked = [];
+        function refresh() {
+          answerLine.innerHTML = '';
+          picked.forEach(function (c) {
+            const b = el('button', 'bai-chip bai-tone-pink', c.word); b.type = 'button';
+            b.addEventListener('click', function () {
+              picked.splice(picked.indexOf(c), 1); c.used = false; refresh();
+            });
+            answerLine.appendChild(b);
+          });
+          chips.forEach(function (c) { c.btn.style.visibility = c.used ? 'hidden' : 'visible'; });
+          answerLine.classList.remove('is-correct', 'is-wrong');
+          mark.textContent = ''; mark.className = 'bai-mark';
+        }
+        (it.words || []).forEach(function (w) {
+          const c = { word: w, used: false };
+          c.btn = el('button', 'bai-chip bai-tone-lav', w); c.btn.type = 'button';
+          c.btn.addEventListener('click', function () {
+            if (c.used) return;
+            c.used = true; picked.push(c); refresh();
+          });
+          chips.push(c); bank.appendChild(c.btn);
+        });
+        function setAnswer(sentence) {
+          picked.length = 0;
+          chips.forEach(function (c) { c.used = false; });
+          String(sentence).replace(/[.,!?]/g, '').split(/\s+/).forEach(function (w) {
+            const c = chips.find(function (x) { return !x.used && normSentence(x.word) === normSentence(w); });
+            if (c) { c.used = true; picked.push(c); }
+          });
+          refresh();
+        }
+        const accepted = (it.answers || []).map(normSentence);
+        function check() {
+          if (!picked.length) return;
+          const v = normSentence(picked.map(function (c) { return c.word; }).join(' '));
+          const ok = accepted.indexOf(v) !== -1;
+          answerLine.classList.toggle('is-correct', ok); answerLine.classList.toggle('is-wrong', !ok);
+          mark.textContent = ok ? '✓' : '✗'; mark.className = 'bai-mark ' + (ok ? 'ok' : 'bad');
+        }
+        function reveal() { setAnswer(it.answers[0]); answerLine.classList.add('is-correct'); mark.textContent = '✓'; mark.className = 'bai-mark ok'; }
+        function reset() { picked.length = 0; chips.forEach(function (c) { c.used = false; }); refresh(); }
+        body.appendChild(bank);
+        answerLine.setAttribute('aria-label', 'Câu bạn sắp xếp');
+        const lineWrap = el('div', 'bai-order-linewrap');
+        lineWrap.appendChild(answerLine); lineWrap.appendChild(mark);
+        body.appendChild(lineWrap);
+        if (it.example) {
+          setAnswer(it.answers[0]);
+          chips.forEach(function (c) { c.btn.disabled = true; });
+          answerLine.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
+          body.appendChild(el('div', 'bai-example', it.answers[0]));
+        } else {
+          const bar = el('div', 'bai-fill-actions');
+          const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+          const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+          const bReset = el('button', 'bai-btn bai-btn-ghost', 'Làm lại'); bReset.type = 'button'; bReset.addEventListener('click', reset);
+          bar.appendChild(bCheck); bar.appendChild(bShow); bar.appendChild(bReset);
+          body.appendChild(bar);
+          rows.push({ reveal: reveal });
+        }
+        row.appendChild(body);
+        box.appendChild(row);
+      });
+      return box;
+    }
+
+    // Bài 9 (b3): viết câu trả lời theo gợi ý. answers dùng {p} = đại từ xưng hô (pronouns[]).
+    function renderWriteAnswer(ex, n) {
+      const box = el('div', 'bai-write-list');
+      (ex.items || []).forEach(function (it, i) {
+        const row = el('div', 'bai-write-row');
+        const q = el('div', 'bai-write-q');
+        q.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0' + it.question + ' '));
+        if (it.hint) q.appendChild(el('span', 'bai-example', '(' + it.hint + ')'));
+        row.appendChild(q);
+        const line = el('div', 'bai-fill-line');
+        line.appendChild(document.createTextNode('→\u00A0'));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
+        const mark = el('span', 'bai-mark');
+        line.appendChild(input); line.appendChild(mark);
+        row.appendChild(line);
+        const accepted = [];
+        (it.answers || []).forEach(function (a) {
+          (it.pronouns && a.indexOf('{p}') !== -1 ? it.pronouns : [null]).forEach(function (p) {
+            accepted.push(normSentence(p ? a.replace(/\{p\}/g, p) : a));
+          });
+        });
+        const model = it.model || it.answers[0];
+        function modelText() {
+          const s = (it.pronouns ? model.replace(/\{p\}/g, it.pronouns[0]) : model);
+          return s.charAt(0).toUpperCase() + s.slice(1);
+        }
+        function check() {
+          const v = normSentence(input.value);
+          markCell(input, mark, !v ? '' : (accepted.indexOf(v) !== -1 ? 'ok' : 'bad'));
+        }
+        function reveal() { input.value = modelText(); markCell(input, mark, 'ok'); }
+        input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+        input.addEventListener('input', function () { markCell(input, mark, ''); });
+        const bar = el('div', 'bai-fill-actions');
+        const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+        const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+        bar.appendChild(bCheck); bar.appendChild(bShow);
+        row.appendChild(bar);
+        box.appendChild(row);
+      });
+      return box;
+    }
+
+    // Bài 10 (b3): bài nói, trả lời mở. Có ví dụ + ô ghi chú tự do (không chấm điểm).
+    function renderOpenAnswer(ex, n) {
+      const box = el('div', 'bai-write-list');
+      if (ex.example) {
+        const row = el('div', 'bai-write-row');
+        row.appendChild(el('div', 'bai-write-q', ex.example.question));
+        const line = el('div', 'bai-fill-line');
+        line.appendChild(document.createTextNode('→\u00A0'));
+        line.appendChild(el('span', 'bai-example', ex.example.answer));
+        row.appendChild(line);
+        box.appendChild(row);
+      }
+      (ex.items || []).forEach(function (it, i) {
+        const row = el('div', 'bai-write-row');
+        row.appendChild(el('div', 'bai-write-q', (i + 1) + '\u00A0\u00A0' + it.question));
+        const line = el('div', 'bai-fill-line');
+        line.appendChild(document.createTextNode('→\u00A0'));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
+        line.appendChild(input);
+        row.appendChild(line);
+        box.appendChild(row);
+      });
+      return box;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
