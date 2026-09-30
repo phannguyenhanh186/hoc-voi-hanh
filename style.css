@@ -1667,3 +1667,18 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-pairs-sub { flex: 1; display: flex; align-items: center; justify-content: center; padding: 18px 10px; border-radius: 14px; font-weight: 700; font-size: 1.05rem; color: var(--ink); background: var(--chip-bg, #FCEFCD); }
 .bai-pairs-example { flex-direction: column; gap: 10px; }
 .bai-pairs-ex-line { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 14px 16px; border-radius: 14px; color: var(--ink); font-weight: 600; line-height: 1.4; background: var(--chip-bg, #D4C9FB); }
+
+/* Bài 8/9 (b3): sắp xếp từ + viết câu trả lời */
+.bai-order-list, .bai-write-list { display: flex; flex-direction: column; gap: 22px; }
+.bai-order-row { display: flex; gap: 14px; align-items: flex-start; }
+.bai-order-num { min-width: 3.2rem; font-weight: 700; font-size: 1.1rem; color: var(--ink); padding-top: 6px; }
+.bai-order-body { flex: 1; min-width: 0; }
+.bai-order-body .bai-wordbank { margin-bottom: 10px; }
+.bai-order-linewrap { display: flex; align-items: center; gap: 8px; }
+.bai-order-answer { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; flex: 1; min-height: 50px; padding: 6px 8px; border-bottom: 2px solid var(--stroke); }
+.bai-order-answer.is-correct { background: #D6F2DF; border-bottom-color: #2E9E5B; }
+.bai-order-answer.is-wrong { background: #FBE0DE; border-bottom-color: #EB483F; }
+.bai-order-body .bai-example { margin-top: 6px; }
+.bai-write-row { display: flex; flex-direction: column; gap: 6px; }
+.bai-write-q { font-size: 1.15rem; line-height: 1.6; color: var(--ink); }
+.bai-write-row .bai-blank-full { max-width: 640px; width: calc(100% - 3rem); display: inline-block; }
