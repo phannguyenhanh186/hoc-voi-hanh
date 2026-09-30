@@ -614,6 +614,258 @@
          ]
         }
        ]
+      },
+      {
+       "type": "wordOrder",
+       "num": 8,
+       "instructionVi": "Sắp xếp các từ sau để tạo thành câu hỏi hoàn chỉnh.",
+       "instructionEn": "Put the words in the correct order to make complete questions.",
+       "items": [
+        {
+         "words": [
+          "bạn",
+          "làm",
+          "có",
+          "không",
+          "đi",
+          "hôm",
+          "qua"
+         ],
+         "answers": [
+          "Hôm qua bạn có đi làm không?"
+         ],
+         "example": true
+        },
+        {
+         "words": [
+          "có",
+          "mai",
+          "học",
+          "chị",
+          "ngày",
+          "đi",
+          "không"
+         ],
+         "answers": [
+          "Ngày mai chị có đi học không?",
+          "Chị có đi học ngày mai không?"
+         ]
+        },
+        {
+         "words": [
+          "không",
+          "ngủ",
+          "qua",
+          "chú",
+          "hôm",
+          "đi",
+          "có"
+         ],
+         "answers": [
+          "Hôm qua chú có đi ngủ không?",
+          "Chú có đi ngủ hôm qua không?"
+         ]
+        },
+        {
+         "words": [
+          "chơi",
+          "mai",
+          "có",
+          "đi",
+          "không",
+          "ngày",
+          "anh"
+         ],
+         "answers": [
+          "Ngày mai anh có đi chơi không?",
+          "Anh có đi chơi ngày mai không?"
+         ]
+        },
+        {
+         "words": [
+          "qua",
+          "lịch",
+          "đi",
+          "không",
+          "có",
+          "em",
+          "hôm",
+          "du"
+         ],
+         "answers": [
+          "Hôm qua em có đi du lịch không?",
+          "Em có đi du lịch hôm qua không?"
+         ]
+        },
+        {
+         "words": [
+          "đi",
+          "hôm",
+          "có",
+          "ăn",
+          "không",
+          "cô",
+          "nay"
+         ],
+         "answers": [
+          "Hôm nay cô có đi ăn không?",
+          "Cô có đi ăn hôm nay không?"
+         ]
+        },
+        {
+         "words": [
+          "làm",
+          "mai",
+          "chị",
+          "không",
+          "đi",
+          "có",
+          "ngày"
+         ],
+         "answers": [
+          "Ngày mai chị có đi làm không?",
+          "Chị có đi làm ngày mai không?"
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 9,
+       "instructionVi": "Viết câu trả lời phù hợp cho từng câu hỏi theo gợi ý.",
+       "instructionEn": "Write an appropriate answer for each question using the prompts.",
+       "noteTitleVi": "Gợi ý",
+       "noteVi": "Có thể trả lời ngắn (Mình có.) hoặc đầy đủ (Mình có đi học.). Với câu trả lời “không”, hãy thêm hoạt động em sẽ làm.",
+       "noteTitleEn": "Hint",
+       "noteEn": "You can answer briefly (Mình có.) or fully (Mình có đi học.). For a “không” answer, add what you will do instead.",
+       "items": [
+        {
+         "question": "Hôm nay bạn có đi học không?",
+         "hint": "Có",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} có.",
+          "{p} có đi học.",
+          "Có.",
+          "Có, {p} đi học."
+         ],
+         "model": "{p} có đi học."
+        },
+        {
+         "question": "Ngày mai bạn có đi làm không?",
+         "hint": "Không, đi du lịch",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} không đi làm. {p} đi du lịch.",
+          "{p} không. {p} đi du lịch.",
+          "Không, {p} đi du lịch.",
+          "Không, {p} không đi làm. {p} đi du lịch.",
+          "{p} không đi làm, {p} đi du lịch.",
+          "{p} không đi làm. Ngày mai {p} đi du lịch.",
+          "{p} không đi làm. {p} đi du lịch ngày mai."
+         ],
+         "model": "{p} không đi làm. {p} đi du lịch."
+        },
+        {
+         "question": "Hôm qua bạn có đi ăn không?",
+         "hint": "Có",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} có.",
+          "{p} có đi ăn.",
+          "Có.",
+          "Có, {p} đi ăn."
+         ],
+         "model": "{p} có đi ăn."
+        },
+        {
+         "question": "Ngày mai bạn có đi du lịch không?",
+         "hint": "Không, đi làm",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} không đi du lịch. {p} đi làm.",
+          "{p} không. {p} đi làm.",
+          "Không, {p} đi làm.",
+          "Không, {p} không đi du lịch. {p} đi làm.",
+          "{p} không đi du lịch, {p} đi làm.",
+          "{p} không đi du lịch. Ngày mai {p} đi làm.",
+          "{p} không đi du lịch. {p} đi làm ngày mai."
+         ],
+         "model": "{p} không đi du lịch. {p} đi làm."
+        },
+        {
+         "question": "Hôm nay chị có đi chơi không?",
+         "hint": "Không, đi ngủ",
+         "pronouns": [
+          "chị",
+          "mình",
+          "tôi"
+         ],
+         "answers": [
+          "{p} không đi chơi. {p} đi ngủ.",
+          "{p} không. {p} đi ngủ.",
+          "Không, {p} đi ngủ.",
+          "Không, {p} không đi chơi. {p} đi ngủ.",
+          "{p} không đi chơi, {p} đi ngủ.",
+          "{p} không đi chơi. Hôm nay {p} đi ngủ.",
+          "{p} không đi chơi. {p} đi ngủ hôm nay."
+         ],
+         "model": "{p} không đi chơi. {p} đi ngủ."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "co-khong",
+     "label": "Có...không?",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 10,
+       "instructionVi": "Dùng Có hoặc Không để trả lời.",
+       "instructionEn": "Use Yes or No to answer.",
+       "example": {
+        "question": "Hôm nay bạn có đi làm không?",
+        "answer": "Mình có. / Mình không. Hôm nay mình ở nhà."
+       },
+       "items": [
+        {
+         "question": "Hôm qua bạn có đi học không?"
+        },
+        {
+         "question": "Hôm nay bạn có đi chơi không?"
+        },
+        {
+         "question": "Ngày mai bạn có đi du lịch không?"
+        },
+        {
+         "question": "Hôm nay bạn có đi ăn không?"
+        }
+       ]
       }
      ]
     }
