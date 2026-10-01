@@ -4,7 +4,10 @@
  "title": "Bạn đang ở đâu?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b4/nam: pron_<van>.mp3 (au, đau, màu, âu, đâu, lầu, êu, kêu, lều, iu, chịu, xíu, ưu, lưu, cừu) va ex2_01..05.mp3 - chua thu am. Ten file pron_ theo cach b2/b3 (xem audio/b2/nam/_pron_phatam_filenames.txt)."
+  "todo_audio": "audio/b4/nam: pron_<van>.mp3 (au, đau, màu, âu, đâu, lầu, êu, kêu, lều, iu, chịu, xíu, ưu, lưu, cừu) va ex2_01..05.mp3 - chua thu am. Ten file pron_ theo cach b2/b3 (xem audio/b2/nam/_pron_phatam_filenames.txt).",
+  "todo_images": "images/b4/bai3/<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.jpg va images/b4/bai4/hinh1..8.jpg - chua co, se bo sung.",
+  "todo_audio_tu_vung": "audio/b4/nam: vocab_<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.mp3 va ex4_01..08.mp3 - chua thu am.",
+  "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN."
  },
  "sections": [
   {
@@ -110,6 +113,178 @@
         {
          "text": "Đan đi đón Đăng rồi đi ăn tối.",
          "audio": "audio/b4/{voice}/ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "toi-dia-diem",
+     "label": "Tới + Địa điểm",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 3,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "img": "images/b4/bai3/nha.jpg",
+         "caption": "Nhà",
+         "audio": "audio/b4/{voice}/vocab_nha.mp3"
+        },
+        {
+         "img": "images/b4/bai3/van_phong.jpg",
+         "caption": "Văn phòng",
+         "audio": "audio/b4/{voice}/vocab_van_phong.mp3"
+        },
+        {
+         "img": "images/b4/bai3/quan_an.jpg",
+         "caption": "Quán ăn",
+         "audio": "audio/b4/{voice}/vocab_quan_an.mp3"
+        },
+        {
+         "img": "images/b4/bai3/quan_ca_phe.jpg",
+         "caption": "Quán cà phê",
+         "audio": "audio/b4/{voice}/vocab_quan_ca_phe.mp3"
+        },
+        {
+         "img": "images/b4/bai3/khach_san.jpg",
+         "caption": "Khách sạn",
+         "audio": "audio/b4/{voice}/vocab_khach_san.mp3"
+        },
+        {
+         "img": "images/b4/bai3/sieu_thi.jpg",
+         "caption": "Siêu thị",
+         "audio": "audio/b4/{voice}/vocab_sieu_thi.mp3"
+        },
+        {
+         "img": "images/b4/bai3/san_bay.jpg",
+         "caption": "Sân bay",
+         "audio": "audio/b4/{voice}/vocab_san_bay.mp3"
+        },
+        {
+         "img": "images/b4/bai3/benh_vien.jpg",
+         "caption": "Bệnh viện",
+         "audio": "audio/b4/{voice}/vocab_benh_vien.mp3"
+        }
+       ]
+      },
+      {
+       "type": "photoFill",
+       "num": 4,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "nhà",
+        "văn phòng",
+        "quán ăn",
+        "quán cà phê",
+        "khách sạn",
+        "siêu thị",
+        "sân bay",
+        "bệnh viện"
+       ],
+       "noteTitleVi": "Tới + Địa điểm",
+       "noteVi": "Khi “Tới” đứng trước một địa điểm, nó có nghĩa là bạn di chuyển tới địa điểm đó. Nhà là ngoại lệ: bạn phải thêm từ “về”.\nNgoại lệ: “nhà”\nKhi nói “go home”, tiếng Việt dùng “Về nhà”, không nói “Tới nhà”.",
+       "noteTitleEn": "Tới + Place",
+       "noteEn": "When “Tới” (tới means towards) is placed before a place, it means that you move to that particular place.\nException: “nhà”\nTo say “go home”, Vietnamese uses “Về nhà” (về means back), not “Tới nhà.”\nVí dụ\nvề nhà → go home\nTôi về nhà. → I go home.\nHôm nay, tôi về nhà. → Today, I go home.",
+       "items": [
+        {
+         "img": "images/b4/bai4/hinh1.jpg",
+         "name": "Hình 1",
+         "template": "Hôm nay mình về {0}.",
+         "answers": [
+          [
+           "nhà"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_01.mp3",
+         "example": true
+        },
+        {
+         "img": "images/b4/bai4/hinh2.jpg",
+         "name": "Hình 2",
+         "template": "Ngày mai chú tới {0}.",
+         "answers": [
+          [
+           "bệnh viện"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_02.mp3"
+        },
+        {
+         "img": "images/b4/bai4/hinh3.jpg",
+         "name": "Hình 3",
+         "template": "Hôm qua chị không tới {0}.",
+         "answers": [
+          [
+           "khách sạn"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_03.mp3"
+        },
+        {
+         "img": "images/b4/bai4/hinh4.jpg",
+         "name": "Hình 4",
+         "template": "Hôm nay anh Nam tới {0}.",
+         "answers": [
+          [
+           "sân bay"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_04.mp3"
+        },
+        {
+         "img": "images/b4/bai4/hinh5.jpg",
+         "name": "Hình 5",
+         "template": "Ngày mai em không tới {0}.",
+         "answers": [
+          [
+           "văn phòng"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_05.mp3"
+        },
+        {
+         "img": "images/b4/bai4/hinh6.jpg",
+         "name": "Hình 6",
+         "template": "Hôm qua chú Đăng tới {0}.",
+         "answers": [
+          [
+           "quán ăn"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_06.mp3"
+        },
+        {
+         "img": "images/b4/bai4/hinh7.jpg",
+         "name": "Hình 7",
+         "template": "Hôm nay cô không tới {0}.",
+         "answers": [
+          [
+           "siêu thị"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_07.mp3"
+        },
+        {
+         "img": "images/b4/bai4/hinh8.jpg",
+         "name": "Hình 8",
+         "template": "Hôm nay chị Mai tới {0}.",
+         "answers": [
+          [
+           "quán cà phê"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex4_08.mp3"
         }
        ]
       }
