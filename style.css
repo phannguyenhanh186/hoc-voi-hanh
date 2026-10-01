@@ -1682,3 +1682,10 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-write-row { display: flex; flex-direction: column; gap: 6px; }
 .bai-write-q { font-size: 1.15rem; line-height: 1.6; color: var(--ink); }
 .bai-write-row .bai-blank-full { max-width: 640px; width: calc(100% - 3rem); display: inline-block; }
+
+/* Bảng so sánh trong ghi chú ngữ pháp (b4) */
+.bai-grammar-table { display: grid; max-width: 640px; margin: 8px 0 14px; border: 2px solid var(--stroke); border-radius: 10px; overflow: hidden; background: #fff; }
+.bai-grammar-th, .bai-grammar-td { padding: 10px 12px; border-bottom: 1px solid var(--stroke); border-right: 1px solid var(--stroke); line-height: 1.45; }
+.bai-grammar-th { font-weight: 700; background: #FFF3C4; }
+.bai-grammar-table > :nth-child(3n) { border-right: 0; }
+.bai-grammar-table > :nth-last-child(-n+3) { border-bottom: 0; }
