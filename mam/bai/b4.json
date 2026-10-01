@@ -1,0 +1,121 @@
+{
+ "id": "b4",
+ "num": 4,
+ "title": "Bạn đang ở đâu?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b4/nam: pron_<van>.mp3 (au, đau, màu, âu, đâu, lầu, êu, kêu, lều, iu, chịu, xíu, ưu, lưu, cừu) va ex2_01..05.mp3 - chua thu am. Ten file pron_ theo cach b2/b3 (xem audio/b2/nam/_pron_phatam_filenames.txt)."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "nguyen-am",
+     "label": "Nguyên âm \"au\", \"âu\", \"êu\", \"iu\", \"ưu\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b4/{voice}/pron_{key}.mp3",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "au",
+            "đau",
+            "màu"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "âu",
+            "đâu",
+            "lầu"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "êu",
+            "kêu",
+            "lều"
+           ]
+          ]
+         }
+        ],
+        [
+         {
+          "tone": "violet",
+          "rows": [
+           [
+            "iu",
+            "chịu",
+            "xíu"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ưu",
+            "lưu",
+            "cừu"
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phu-am-d",
+     "label": "Phụ âm đầu \"đ\"",
+     "exercises": [
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Đan đang ăn.",
+         "audio": "audio/b4/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Định đang đi làm.",
+         "audio": "audio/b4/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Đừng đi ăn đêm.",
+         "audio": "audio/b4/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Điệp đi làm cùng Đông.",
+         "audio": "audio/b4/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Đan đi đón Đăng rồi đi ăn tối.",
+         "audio": "audio/b4/{voice}/ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
