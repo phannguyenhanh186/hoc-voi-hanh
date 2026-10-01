@@ -912,6 +912,178 @@
      ]
     }
    ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "co-khong",
+     "label": "Có...không?",
+     "exercises": [
+      {
+       "type": "chooseWord",
+       "num": 12,
+       "instructionVi": "Chọn từ đúng.",
+       "instructionEn": "Choose the correct words.",
+       "items": [
+        {
+         "template": "{0} nay bạn có đi ăn không?",
+         "blanks": [
+          {
+           "options": [
+            "Hôm",
+            "Hom"
+           ],
+           "answer": "Hôm"
+          }
+         ]
+        },
+        {
+         "template": "Ngày mai em có đi {0} không?",
+         "blanks": [
+          {
+           "options": [
+            "học",
+            "hộc"
+           ],
+           "answer": "học"
+          }
+         ]
+        },
+        {
+         "template": "Hôm qua chị Nga có đi {0} không?",
+         "blanks": [
+          {
+           "options": [
+            "lờm",
+            "làm"
+           ],
+           "answer": "làm"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay cô có đi {0} không?",
+         "blanks": [
+          {
+           "options": [
+            "chai",
+            "chơi"
+           ],
+           "answer": "chơi"
+          }
+         ]
+        },
+        {
+         "template": "Không. Chú không đi {0}.",
+         "blanks": [
+          {
+           "options": [
+            "du lịch",
+            "lệch"
+           ],
+           "answer": "du lịch"
+          }
+         ]
+        },
+        {
+         "template": "Hôm qua chị không đi {0}.",
+         "blanks": [
+          {
+           "options": [
+            "ngú",
+            "ngủ"
+           ],
+           "answer": "ngủ"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 13,
+       "noItemNum": true,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau.",
+       "instructionEn": "Complete the following dialogue.",
+       "items": [
+        {
+         "template": "Nghi: Chào anh Ninh, anh {0} khoẻ không?",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "có"
+           ],
+           "answer": "có"
+          }
+         ]
+        },
+        {
+         "template": "Ninh: Chào Nghi, anh khoẻ. Còn em?"
+        },
+        {
+         "template": "Nghi: Em {0} khoẻ, cám ơn anh. Hôm nay anh {1} đi làm không?",
+         "blanks": [
+          {
+           "options": [
+            "không",
+            "cũng"
+           ],
+           "answer": "cũng"
+          },
+          {
+           "options": [
+            "là",
+            "có"
+           ],
+           "answer": "có"
+          }
+         ]
+        },
+        {
+         "template": "Ninh: Anh có. Còn em?"
+        },
+        {
+         "template": "Nghi: Hôm nay em {0} đi làm. Hôm nay em ở nhà.",
+         "blanks": [
+          {
+           "options": [
+            "có",
+            "không"
+           ],
+           "answer": "không"
+          }
+         ]
+        },
+        {
+         "template": "Ninh: Vậy hả? {0} mai em có đi ăn với chị Mai không?",
+         "blanks": [
+          {
+           "options": [
+            "Ngày",
+            "Hôm"
+           ],
+           "answer": "Ngày"
+          }
+         ]
+        },
+        {
+         "template": "Nghi: Em có. Còn anh?"
+        },
+        {
+         "template": "Ninh: Anh cũng có."
+        },
+        {
+         "template": "Nghi: Hẹn gặp anh ngày mai nhé!"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "_guide": {
