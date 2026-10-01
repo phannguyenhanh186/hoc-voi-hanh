@@ -441,72 +441,6 @@
    ]
   },
   {
-   "id": "nghe",
-   "titleVi": "Nghe",
-   "titleEn": "Listening",
-   "subtopics": [
-    {
-     "id": "dau",
-     "label": "Đâu?",
-     "exercises": [
-      {
-       "type": "audioChoice",
-       "num": 6,
-       "instructionVi": "Nghe và chọn câu trả lời đúng.",
-       "instructionEn": "Listen and choose the correct answer.",
-       "items": [
-        {
-         "audio": "audio/b4/{voice}/listen_ex6_01.mp3",
-         "text": "Bây giờ Minh đang ở đâu?",
-         "options": [
-          "Nhà.",
-          "Văn phòng."
-         ],
-         "answer": "b"
-        },
-        {
-         "audio": "audio/b4/{voice}/listen_ex6_02.mp3",
-         "text": "Hôm qua chị Vy đi đâu?",
-         "options": [
-          "Đi ăn.",
-          "Đi chơi."
-         ],
-         "answer": "b"
-        },
-        {
-         "audio": "audio/b4/{voice}/listen_ex6_03.mp3",
-         "text": "Bây giờ Linh đi đâu?",
-         "options": [
-          "Nhà của Hùng.",
-          "Sân bay."
-         ],
-         "answer": "a"
-        },
-        {
-         "audio": "audio/b4/{voice}/listen_ex6_04.mp3",
-         "text": "Ngày mai chị Hương đi đâu?",
-         "options": [
-          "Đi du lịch.",
-          "Về nhà."
-         ],
-         "answer": "b"
-        },
-        {
-         "audio": "audio/b4/{voice}/listen_ex6_05.mp3",
-         "text": "Hôm nay anh Nam đi đâu?",
-         "options": [
-          "Khách sạn.",
-          "Quán ăn."
-         ],
-         "answer": "a"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
    "id": "ngu-phap",
    "titleVi": "Ngữ pháp",
    "titleEn": "Grammar",
@@ -765,7 +699,7 @@
       },
       {
        "type": "chooseWord",
-       "num": 7,
+       "num": 6,
        "instructionVi": "Chọn ở đâu, đi đâu hoặc tới đâu để hoàn thành câu.",
        "instructionEn": "Choose the appropriate word.",
        "items": [
@@ -877,7 +811,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 8,
+       "num": 7,
        "instructionVi": "Dùng thông tin trong ngoặc để trả lời câu hỏi.",
        "instructionEn": "Use the information in the brackets to answer the questions.",
        "items": [
@@ -966,6 +900,72 @@
           "mình",
           "tôi"
          ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "audioChoice",
+       "num": 8,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_01.mp3",
+         "text": "Bây giờ Minh đang ở đâu?",
+         "options": [
+          "Nhà.",
+          "Văn phòng."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_02.mp3",
+         "text": "Hôm qua chị Vy đi đâu?",
+         "options": [
+          "Đi ăn.",
+          "Đi chơi."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_03.mp3",
+         "text": "Bây giờ Linh đi đâu?",
+         "options": [
+          "Nhà của Hùng.",
+          "Sân bay."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_04.mp3",
+         "text": "Ngày mai chị Hương đi đâu?",
+         "options": [
+          "Đi du lịch.",
+          "Về nhà."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_05.mp3",
+         "text": "Hôm nay anh Nam đi đâu?",
+         "options": [
+          "Khách sạn.",
+          "Quán ăn."
+         ],
+         "answer": "a"
         }
        ]
       }
