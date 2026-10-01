@@ -863,7 +863,7 @@
     function renderReadingQA(ex, n) {
       const box = el('div');
       if (ex.table) box.appendChild(buildQATable(ex.table));
-      if (ex.passage) box.appendChild(el('p', 'bai-passage', ex.passage));
+      if (ex.passage) { const ps = el('p', 'bai-passage', ex.passage); ps.style.whiteSpace = 'pre-line'; box.appendChild(ps); }
       const rows = [];
       (ex.questions || []).forEach(function (q, i) {
         const num = (q.num != null) ? q.num : (i + 1);
