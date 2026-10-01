@@ -7,7 +7,8 @@
   "todo_audio": "audio/b4/nam: pron_<van>.mp3 (au, đau, màu, âu, đâu, lầu, êu, kêu, lều, iu, chịu, xíu, ưu, lưu, cừu) va ex2_01..05.mp3 - chua thu am. Ten file pron_ theo cach b2/b3 (xem audio/b2/nam/_pron_phatam_filenames.txt).",
   "todo_images": "images/b4/bai3/<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.jpg va images/b4/bai4/hinh1..8.jpg - chua co, se bo sung.",
   "todo_audio_tu_vung": "audio/b4/nam: vocab_<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.mp3 va ex4_01..08.mp3 - chua thu am.",
-  "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN."
+  "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN.",
+  "todo_bai5": "Bai 5: de khong cho biet Chau lam gi vao ngay 4, nen cau 4 (Ngay mai Chau toi ...) de trong dap an va o Chau-ngay 4 de trong. Cau 8 trung cau 5 - CAN XAC NHAN. Hinh trong lich dung lai images/b4/bai3/*.jpg."
  },
  "sections": [
   {
@@ -285,6 +286,177 @@
           ]
          ],
          "audio": "audio/b4/{voice}/ex4_08.mp3"
+        }
+       ]
+      },
+      {
+       "type": "calendarFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu sau dựa vào lịch bên dưới.",
+       "instructionEn": "Complete the following sentences based on the calendar below.",
+       "matrix": {
+        "columns": [
+         "Kiên",
+         "Ngân",
+         "Trang",
+         "Châu"
+        ],
+        "tones": [
+         "yellow",
+         "pink",
+         "blue",
+         "violet"
+        ],
+        "rows": [
+         {
+          "date": 1,
+          "tone": "yellow",
+          "cells": [
+           {
+            "img": "images/b4/bai3/benh_vien.jpg",
+            "alt": "bệnh viện"
+           },
+           null,
+           null,
+           {
+            "img": "images/b4/bai3/van_phong.jpg",
+            "alt": "văn phòng"
+           }
+          ]
+         },
+         {
+          "date": 2,
+          "tone": "yellow",
+          "cells": [
+           null,
+           null,
+           {
+            "img": "images/b4/bai3/quan_an.jpg",
+            "alt": "quán ăn"
+           },
+           null
+          ]
+         },
+         {
+          "date": 3,
+          "tone": "pink",
+          "cells": [
+           {
+            "img": "images/b4/bai3/quan_an.jpg",
+            "alt": "quán ăn"
+           },
+           {
+            "img": "images/b4/bai3/van_phong.jpg",
+            "alt": "văn phòng"
+           },
+           null,
+           {
+            "img": "images/b4/bai3/quan_ca_phe.jpg",
+            "alt": "quán cà phê"
+           }
+          ],
+          "label": "Hôm nay"
+         },
+         {
+          "date": 4,
+          "tone": "yellow",
+          "cells": [
+           null,
+           null,
+           {
+            "img": "images/b4/bai3/khach_san.jpg",
+            "alt": "khách sạn"
+           },
+           null
+          ]
+         },
+         {
+          "date": 5,
+          "tone": "yellow",
+          "cells": [
+           null,
+           {
+            "img": "images/b4/bai3/san_bay.jpg",
+            "alt": "sân bay"
+           },
+           null,
+           null
+          ]
+         }
+        ]
+       },
+       "words": [
+        "bệnh viện",
+        "quán ăn",
+        "văn phòng",
+        "sân bay",
+        "khách sạn",
+        "quán cà phê"
+       ],
+       "items": [
+        {
+         "template": "Kiên tới {0} vào ngày 1.",
+         "answers": [
+          [
+           "bệnh viện"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm nay Ngân tới {0}.",
+         "answers": [
+          [
+           "văn phòng"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm qua Trang tới {0}.",
+         "answers": [
+          [
+           "quán ăn"
+          ]
+         ]
+        },
+        {
+         "template": "Ngày mai Châu tới {0}.",
+         "answers": [
+          [
+           ""
+          ]
+         ]
+        },
+        {
+         "template": "Ngân tới {0} vào ngày 5.",
+         "answers": [
+          [
+           "sân bay"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm nay Châu tới {0}.",
+         "answers": [
+          [
+           "quán cà phê"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm nay Kiên tới {0}.",
+         "answers": [
+          [
+           "quán ăn"
+          ]
+         ]
+        },
+        {
+         "template": "Ngân tới {0} vào ngày 5.",
+         "answers": [
+          [
+           "sân bay"
+          ]
+         ]
         }
        ]
       }
