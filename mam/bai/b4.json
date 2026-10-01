@@ -695,6 +695,212 @@
          ]
         }
        ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 6,
+       "instructionVi": "Chọn ở đâu, đi đâu hoặc tới đâu để hoàn thành câu.",
+       "instructionEn": "Choose the appropriate word.",
+       "items": [
+        {
+         "template": "Bạn {0}? – Mình về nhà.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "đi đâu"
+          }
+         ]
+        },
+        {
+         "template": "Ngân {0}? – Ngân ở sân bay.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "ở đâu"
+          }
+         ]
+        },
+        {
+         "template": "Bạn {0}? – Mình tới văn phòng.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "tới đâu"
+          }
+         ]
+        },
+        {
+         "template": "Anh {0}? – Anh ở Việt Nam.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "ở đâu"
+          }
+         ]
+        },
+        {
+         "template": "Bạn {0}? – Mình đi làm.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "đi đâu"
+          }
+         ]
+        },
+        {
+         "template": "Chị {0}? – Chị tới bệnh viện.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "tới đâu"
+          }
+         ]
+        },
+        {
+         "template": "Bạn {0}? – Mình ở quán cà phê.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "ở đâu"
+          }
+         ]
+        },
+        {
+         "template": "Minh {0}? – Minh đi chơi.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "đi đâu"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 7,
+       "instructionVi": "Dùng thông tin trong ngoặc để trả lời câu hỏi.",
+       "instructionEn": "Use the information in the brackets to answer the questions.",
+       "items": [
+        {
+         "question": "Bạn ở đâu?",
+         "hint": "nhà",
+         "answers": [
+          "{p} ở nhà.",
+          "Ở nhà.",
+          "{p} ở nhà."
+         ],
+         "model": "{p} ở nhà.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ]
+        },
+        {
+         "question": "Hôm qua chị đi đâu?",
+         "hint": "đi làm",
+         "answers": [
+          "{p} đi làm.",
+          "Hôm qua {p} đi làm.",
+          "{p} đi làm hôm qua.",
+          "Đi làm."
+         ],
+         "model": "Hôm qua {p} đi làm.",
+         "pronouns": [
+          "chị",
+          "mình",
+          "tôi",
+          "em"
+         ]
+        },
+        {
+         "question": "Bây giờ em tới đâu?",
+         "hint": "sân bay",
+         "answers": [
+          "{p} tới sân bay.",
+          "Bây giờ {p} tới sân bay.",
+          "{p} tới sân bay bây giờ.",
+          "Tới sân bay."
+         ],
+         "model": "Bây giờ {p} tới sân bay.",
+         "pronouns": [
+          "em",
+          "mình",
+          "tôi"
+         ]
+        },
+        {
+         "question": "Bây giờ An ở đâu?",
+         "hint": "Việt Nam",
+         "answers": [
+          "An ở Việt Nam.",
+          "Bây giờ An ở Việt Nam.",
+          "An ở Việt Nam bây giờ.",
+          "Ở Việt Nam."
+         ],
+         "model": "Bây giờ An ở Việt Nam."
+        },
+        {
+         "question": "Ngày mai Nghĩa đi đâu?",
+         "hint": "đi chơi",
+         "answers": [
+          "Nghĩa đi chơi.",
+          "Ngày mai Nghĩa đi chơi.",
+          "Nghĩa đi chơi ngày mai.",
+          "Đi chơi."
+         ],
+         "model": "Ngày mai Nghĩa đi chơi."
+        },
+        {
+         "question": "Bây giờ chú tới đâu?",
+         "hint": "văn phòng",
+         "answers": [
+          "{p} tới văn phòng.",
+          "Bây giờ {p} tới văn phòng.",
+          "{p} tới văn phòng bây giờ.",
+          "Tới văn phòng."
+         ],
+         "model": "Bây giờ {p} tới văn phòng.",
+         "pronouns": [
+          "chú",
+          "mình",
+          "tôi"
+         ]
+        }
+       ]
       }
      ]
     }
