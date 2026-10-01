@@ -1071,9 +1071,9 @@
       if (ex.noteVi) {
         const note = el('div', 'grammar-callout');
         if (ex.noteTitleVi) { const t = el('div', '', ex.noteTitleVi); t.style.fontWeight = '700'; note.appendChild(t); }
-        note.appendChild(el('div', '', (ex.noteTitleVi ? '' : 'Ghi chú: ') + ex.noteVi));
+        const nv = el('div', '', (ex.noteTitleVi ? '' : 'Ghi chú: ') + ex.noteVi); nv.style.whiteSpace = 'pre-line'; note.appendChild(nv);
         if (ex.noteTitleEn) { const t2 = el('div', 'grammar-note', ex.noteTitleEn); t2.style.fontWeight = '700'; t2.style.marginBottom = '0'; note.appendChild(t2); }
-        if (ex.noteEn) { const en = el('div', 'grammar-note', (ex.noteTitleEn ? '' : 'Note: ') + ex.noteEn); note.appendChild(en); }
+        if (ex.noteEn) { const en = el('div', 'grammar-note', (ex.noteTitleEn ? '' : 'Note: ') + ex.noteEn); en.style.whiteSpace = 'pre-line'; note.appendChild(en); }
         box.appendChild(note);
       }
       return box;
