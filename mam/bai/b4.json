@@ -9,7 +9,8 @@
   "todo_audio_tu_vung": "audio/b4/nam: vocab_<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.mp3 va ex4_01..08.mp3 - chua thu am.",
   "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN.",
   "bai5": "Hinh trong lich dung lai images/b4/bai3/*.jpg (7 dia diem, gom ca sieu_thi).",
-  "todo_audio_nghe": "audio/b4/nam/listen_ex6_01..05.mp3 - chua thu am. Cau hoi hien thi duoi dang text; noi dung audio can thong nhat voi cau hoi + dap an."
+  "todo_audio_nghe": "audio/b4/nam/listen_ex6_01..05.mp3 - chua thu am. Cau hoi hien thi duoi dang text; noi dung audio can thong nhat voi cau hoi + dap an.",
+  "todo_audio_nghe2": "audio/b4/nam/ex9_01..08.mp3 - chua thu am. Cau 7 de bai thieu chu ngu ('Bay gio ... dang toi'), can bo sung ten nguoi - CAN XAC NHAN."
  },
  "sections": [
   {
@@ -966,6 +967,88 @@
           "Quán ăn."
          ],
          "answer": "a"
+        }
+       ]
+      },
+      {
+       "type": "fillWords",
+       "num": 9,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "siêu thị",
+        "bệnh viện",
+        "văn phòng",
+        "sân bay",
+        "quán cà phê",
+        "về nhà",
+        "khách sạn",
+        "quán ăn"
+       ],
+       "items": [
+        {
+         "before": "Hôm nay Hương tới ",
+         "after": ".",
+         "answers": [
+          "siêu thị"
+         ],
+         "audio": "audio/b4/{voice}/ex9_01.mp3"
+        },
+        {
+         "before": "Ngày mai anh Phong tới ",
+         "after": ".",
+         "answers": [
+          "bệnh viện"
+         ],
+         "audio": "audio/b4/{voice}/ex9_02.mp3"
+        },
+        {
+         "before": "Hôm qua chị Linh không tới ",
+         "after": ".",
+         "answers": [
+          "văn phòng"
+         ],
+         "audio": "audio/b4/{voice}/ex9_03.mp3"
+        },
+        {
+         "before": "Ngày mai chú Sáu không tới ",
+         "after": ".",
+         "answers": [
+          "sân bay"
+         ],
+         "audio": "audio/b4/{voice}/ex9_04.mp3"
+        },
+        {
+         "before": "Chị Châu đang tới ",
+         "after": ".",
+         "answers": [
+          "quán cà phê"
+         ],
+         "audio": "audio/b4/{voice}/ex9_05.mp3"
+        },
+        {
+         "before": "Hôm nay chú Vinh không ",
+         "after": ".",
+         "answers": [
+          "về nhà"
+         ],
+         "audio": "audio/b4/{voice}/ex9_06.mp3"
+        },
+        {
+         "before": "Bây giờ đang tới ",
+         "after": ".",
+         "answers": [
+          "khách sạn"
+         ],
+         "audio": "audio/b4/{voice}/ex9_07.mp3"
+        },
+        {
+         "before": "Bây giờ cô Mây tới ",
+         "after": ".",
+         "answers": [
+          "quán ăn"
+         ],
+         "audio": "audio/b4/{voice}/ex9_08.mp3"
         }
        ]
       }
