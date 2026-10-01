@@ -600,35 +600,125 @@
         "en": "Vietnamese address terms come in pairs. Pronouns change depending on the gender and age of whom you're speaking with."
        },
        "columns": [
-        { "vi": "tự xưng", "en": "self-reference" },
-        { "vi": "xưng hô", "en": "term of address" },
-        { "vi": "ví dụ", "en": "example" }
+        {
+         "vi": "tự xưng",
+         "en": "self-reference"
+        },
+        {
+         "vi": "xưng hô",
+         "en": "term of address"
+        },
+        {
+         "vi": "ví dụ",
+         "en": "example"
+        }
        ],
        "rows": [
         {
-         "self": [ { "text": "mình", "tone": "yellow" } ],
-         "other": [ { "text": "bạn", "tone": "yellow" } ],
-         "examples": [ "Bạn tên là gì?", "Mình tên là Minh." ]
+         "self": [
+          {
+           "text": "mình",
+           "tone": "yellow"
+          }
+         ],
+         "other": [
+          {
+           "text": "bạn",
+           "tone": "yellow"
+          }
+         ],
+         "examples": [
+          "Bạn tên là gì?",
+          "Mình tên là Minh."
+         ]
         },
         {
-         "self": [ { "text": "em", "tone": "yellow" } ],
-         "other": [ { "text": "anh", "tone": "blue" }, { "text": "chị", "tone": "pink" } ],
-         "examples": [ "Chào anh. Em là Nhi.", "Em tên là Hà. Còn chị?" ]
+         "self": [
+          {
+           "text": "em",
+           "tone": "yellow"
+          }
+         ],
+         "other": [
+          {
+           "text": "anh",
+           "tone": "blue"
+          },
+          {
+           "text": "chị",
+           "tone": "pink"
+          }
+         ],
+         "examples": [
+          "Chào anh. Em là Nhi.",
+          "Em tên là Hà. Còn chị?"
+         ]
         },
         {
-         "self": [ { "text": "anh", "tone": "blue" }, { "text": "chị", "tone": "pink" } ],
-         "other": [ { "text": "em", "tone": "yellow" } ],
-         "examples": [ "Anh khoẻ, cám ơn em.", "Chào em, anh là Nam." ]
+         "self": [
+          {
+           "text": "anh",
+           "tone": "blue"
+          },
+          {
+           "text": "chị",
+           "tone": "pink"
+          }
+         ],
+         "other": [
+          {
+           "text": "em",
+           "tone": "yellow"
+          }
+         ],
+         "examples": [
+          "Anh khoẻ, cám ơn em.",
+          "Chào em, anh là Nam."
+         ]
         },
         {
-         "self": [ { "text": "con", "tone": "yellow" } ],
-         "other": [ { "text": "chú", "tone": "blue" }, { "text": "cô", "tone": "pink" } ],
-         "examples": [ "Chào cô. Con tên là Vy.", "Con khoẻ. Còn chú?" ]
+         "self": [
+          {
+           "text": "con",
+           "tone": "yellow"
+          }
+         ],
+         "other": [
+          {
+           "text": "chú",
+           "tone": "blue"
+          },
+          {
+           "text": "cô",
+           "tone": "pink"
+          }
+         ],
+         "examples": [
+          "Chào cô. Con tên là Vy.",
+          "Con khoẻ. Còn chú?"
+         ]
         },
         {
-         "self": [ { "text": "chú", "tone": "blue" }, { "text": "cô", "tone": "pink" } ],
-         "other": [ { "text": "con", "tone": "yellow" } ],
-         "examples": [ "Cảm ơn con. Cô khoẻ.", "Chào con. Chú tên là Tân." ]
+         "self": [
+          {
+           "text": "chú",
+           "tone": "blue"
+          },
+          {
+           "text": "cô",
+           "tone": "pink"
+          }
+         ],
+         "other": [
+          {
+           "text": "con",
+           "tone": "yellow"
+          }
+         ],
+         "examples": [
+          "Cảm ơn con. Cô khoẻ.",
+          "Chào con. Chú tên là Tân."
+         ]
         }
        ]
       },
@@ -761,52 +851,6 @@
    ]
   },
   {
-   "id": "noi",
-   "titleVi": "Nói",
-   "titleEn": "Speaking",
-   "subtopics": [
-    {
-     "id": "chao-hoi",
-     "label": "Chào hỏi",
-     "exercises": [
-      {
-       "type": "openIntro",
-       "num": 12,
-       "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng và nghề nghiệp thích hợp.",
-       "instructionEn": "Introduce the people below using the appropriate pronouns and jobs.",
-       "items": [
-        {
-         "img": "images/b1/bai12/giang.jpg",
-         "name": "Giang",
-         "example": "Đây là chị Giang. Chị Giang làm bác sĩ."
-        },
-        {
-         "img": "images/b1/bai12/mai.jpg",
-         "name": "Mai"
-        },
-        {
-         "img": "images/b1/bai12/chi.jpg",
-         "name": "Chi"
-        },
-        {
-         "img": "images/b1/bai12/sang.jpg",
-         "name": "Sang"
-        },
-        {
-         "img": "images/b1/bai12/hai.jpg",
-         "name": "Hải"
-        },
-        {
-         "img": "images/b1/bai12/thu.jpg",
-         "name": "Thu"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
    "id": "doc",
    "titleVi": "Đọc",
    "titleEn": "Reading",
@@ -817,7 +861,7 @@
      "exercises": [
       {
        "type": "readingQA",
-       "num": 13,
+       "num": 12,
        "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
        "instructionEn": "Read the following paragraph and answer the questions.",
        "passage": "Hôm nay Tú gặp Ann và bạn của Ann. Tú chào Ann và hỏi tên bạn của Ann. Bạn của Ann tên là Mike.",
@@ -851,7 +895,7 @@
      "exercises": [
       {
        "type": "chooseWord",
-       "num": 14,
+       "num": 13,
        "instructionVi": "Chọn từ đúng.",
        "instructionEn": "Choose the correct words.",
        "items": [
@@ -938,7 +982,7 @@
       },
       {
        "type": "dialogueFill",
-       "num": 15,
+       "num": 14,
        "instructionVi": "Hoàn thành đoạn hội thoại sau.",
        "instructionEn": "Complete the following dialogue.",
        "lines": [
@@ -1002,6 +1046,52 @@
            "cảm ơn"
           ]
          ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "chao-hoi",
+     "label": "Chào hỏi",
+     "exercises": [
+      {
+       "type": "openIntro",
+       "num": 15,
+       "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng và nghề nghiệp thích hợp.",
+       "instructionEn": "Introduce the people below using the appropriate pronouns and jobs.",
+       "items": [
+        {
+         "img": "images/b1/bai12/giang.jpg",
+         "name": "Giang",
+         "example": "Đây là chị Giang. Chị Giang làm bác sĩ."
+        },
+        {
+         "img": "images/b1/bai12/mai.jpg",
+         "name": "Mai"
+        },
+        {
+         "img": "images/b1/bai12/chi.jpg",
+         "name": "Chi"
+        },
+        {
+         "img": "images/b1/bai12/sang.jpg",
+         "name": "Sang"
+        },
+        {
+         "img": "images/b1/bai12/hai.jpg",
+         "name": "Hải"
+        },
+        {
+         "img": "images/b1/bai12/thu.jpg",
+         "name": "Thu"
         }
        ]
       }
