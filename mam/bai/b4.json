@@ -10,7 +10,8 @@
   "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN.",
   "bai5": "Hinh trong lich dung lai images/b4/bai3/*.jpg (7 dia diem, gom ca sieu_thi).",
   "todo_audio_nghe": "audio/b4/nam/listen_ex6_01..05.mp3 - chua thu am. Cau hoi hien thi duoi dang text; noi dung audio can thong nhat voi cau hoi + dap an.",
-  "todo_audio_nghe2": "audio/b4/nam/ex9_01..08.mp3 - chua thu am. Cau 7 de bai thieu chu ngu ('Bay gio ... dang toi'), can bo sung ten nguoi - CAN XAC NHAN."
+  "todo_audio_nghe2": "audio/b4/nam/ex9_01..08.mp3 - chua thu am. Cau 7 de bai thieu chu ngu ('Bay gio ... dang toi'), can bo sung ten nguoi - CAN XAC NHAN.",
+  "todo_doc": "Bai doc: cau 3 (25/8 co di an khong?) trong bai doc mau thuan (buoi trua di an voi dong nghiep, nhung 'Hom nay minh khong di an') - CAN XAC NHAN dap an."
  },
  "sections": [
   {
@@ -442,6 +443,154 @@
    ]
   },
   {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "audioChoice",
+       "num": 6,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_01.mp3",
+         "text": "Bây giờ Minh đang ở đâu?",
+         "options": [
+          "Nhà.",
+          "Văn phòng."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_02.mp3",
+         "text": "Hôm qua chị Vy đi đâu?",
+         "options": [
+          "Đi ăn.",
+          "Đi chơi."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_03.mp3",
+         "text": "Bây giờ Linh đi đâu?",
+         "options": [
+          "Nhà của Hùng.",
+          "Sân bay."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_04.mp3",
+         "text": "Ngày mai chị Hương đi đâu?",
+         "options": [
+          "Đi du lịch.",
+          "Về nhà."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex6_05.mp3",
+         "text": "Hôm nay anh Nam đi đâu?",
+         "options": [
+          "Khách sạn.",
+          "Quán ăn."
+         ],
+         "answer": "a"
+        }
+       ]
+      },
+      {
+       "type": "fillWords",
+       "num": 7,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "siêu thị",
+        "bệnh viện",
+        "văn phòng",
+        "sân bay",
+        "quán cà phê",
+        "về nhà",
+        "khách sạn",
+        "quán ăn"
+       ],
+       "items": [
+        {
+         "before": "Hôm nay Hương tới ",
+         "after": ".",
+         "answers": [
+          "siêu thị"
+         ],
+         "audio": "audio/b4/{voice}/ex9_01.mp3"
+        },
+        {
+         "before": "Ngày mai anh Phong tới ",
+         "after": ".",
+         "answers": [
+          "bệnh viện"
+         ],
+         "audio": "audio/b4/{voice}/ex9_02.mp3"
+        },
+        {
+         "before": "Hôm qua chị Linh không tới ",
+         "after": ".",
+         "answers": [
+          "văn phòng"
+         ],
+         "audio": "audio/b4/{voice}/ex9_03.mp3"
+        },
+        {
+         "before": "Ngày mai chú Sáu không tới ",
+         "after": ".",
+         "answers": [
+          "sân bay"
+         ],
+         "audio": "audio/b4/{voice}/ex9_04.mp3"
+        },
+        {
+         "before": "Chị Châu đang tới ",
+         "after": ".",
+         "answers": [
+          "quán cà phê"
+         ],
+         "audio": "audio/b4/{voice}/ex9_05.mp3"
+        },
+        {
+         "before": "Hôm nay chú Vinh không ",
+         "after": ".",
+         "answers": [
+          "về nhà"
+         ],
+         "audio": "audio/b4/{voice}/ex9_06.mp3"
+        },
+        {
+         "before": "Bây giờ đang tới ",
+         "after": ".",
+         "answers": [
+          "khách sạn"
+         ],
+         "audio": "audio/b4/{voice}/ex9_07.mp3"
+        },
+        {
+         "before": "Bây giờ cô Mây tới ",
+         "after": ".",
+         "answers": [
+          "quán ăn"
+         ],
+         "audio": "audio/b4/{voice}/ex9_08.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "ngu-phap",
    "titleVi": "Ngữ pháp",
    "titleEn": "Grammar",
@@ -700,7 +849,7 @@
       },
       {
        "type": "chooseWord",
-       "num": 6,
+       "num": 8,
        "instructionVi": "Chọn ở đâu, đi đâu hoặc tới đâu để hoàn thành câu.",
        "instructionEn": "Choose the appropriate word.",
        "items": [
@@ -812,7 +961,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 7,
+       "num": 9,
        "instructionVi": "Dùng thông tin trong ngoặc để trả lời câu hỏi.",
        "instructionEn": "Use the information in the brackets to answer the questions.",
        "items": [
@@ -909,146 +1058,44 @@
    ]
   },
   {
-   "id": "nghe",
-   "titleVi": "Nghe",
-   "titleEn": "Listening",
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
    "subtopics": [
     {
      "id": "dau",
      "label": "Đâu?",
      "exercises": [
       {
-       "type": "audioChoice",
-       "num": 8,
-       "instructionVi": "Nghe và chọn câu trả lời đúng.",
-       "instructionEn": "Listen and choose the correct answer.",
-       "items": [
+       "type": "readingQA",
+       "num": 10,
+       "instructionVi": "Đọc nhật ký của Châu và trả lời câu hỏi.",
+       "instructionEn": "Read Châu's diary and answer the questions.",
+       "passage": "25/8\nHôm nay mình đi làm. Buổi sáng, mình tới văn phòng. Buổi trưa, mình đi ăn với đồng nghiệp. Buổi chiều, mình tới siêu thị mua đồ ăn. Hôm nay mình không đi ăn. Hôm nay mình ăn ở nhà.\n\n26/8\nHôm qua mình không đi làm. Mình ở nhà. Buổi chiều, mình tới nhà Ngân ăn cơm.\n\n27/8\nHôm nay mình đi du lịch. Mình tới sân bay từ buổi sáng. Mình sẽ về nhà vào ngày 30.",
+       "questions": [
         {
-         "audio": "audio/b4/{voice}/listen_ex6_01.mp3",
-         "text": "Bây giờ Minh đang ở đâu?",
-         "options": [
-          "Nhà.",
-          "Văn phòng."
-         ],
-         "answer": "b"
+         "q": "Ngày 25 tháng 8, Châu đi đâu vào buổi sáng?",
+         "a": "Ngày 25 tháng 8, buổi sáng Châu tới văn phòng."
         },
         {
-         "audio": "audio/b4/{voice}/listen_ex6_02.mp3",
-         "text": "Hôm qua chị Vy đi đâu?",
-         "options": [
-          "Đi ăn.",
-          "Đi chơi."
-         ],
-         "answer": "b"
+         "q": "Buổi trưa ngày 25 tháng 8, Châu làm gì?",
+         "a": "Buổi trưa ngày 25 tháng 8, Châu đi ăn với đồng nghiệp."
         },
         {
-         "audio": "audio/b4/{voice}/listen_ex6_03.mp3",
-         "text": "Bây giờ Linh đi đâu?",
-         "options": [
-          "Nhà của Hùng.",
-          "Sân bay."
-         ],
-         "answer": "a"
+         "q": "Ngày 25 tháng 8 Châu có đi ăn không?",
+         "a": "Có. Buổi trưa Châu đi ăn với đồng nghiệp."
         },
         {
-         "audio": "audio/b4/{voice}/listen_ex6_04.mp3",
-         "text": "Ngày mai chị Hương đi đâu?",
-         "options": [
-          "Đi du lịch.",
-          "Về nhà."
-         ],
-         "answer": "b"
+         "q": "Ngày 26 tháng 8, Châu đi làm ở đâu?",
+         "a": "Ngày 26 tháng 8, Châu không đi làm. Châu ở nhà."
         },
         {
-         "audio": "audio/b4/{voice}/listen_ex6_05.mp3",
-         "text": "Hôm nay anh Nam đi đâu?",
-         "options": [
-          "Khách sạn.",
-          "Quán ăn."
-         ],
-         "answer": "a"
-        }
-       ]
-      },
-      {
-       "type": "fillWords",
-       "num": 9,
-       "instructionVi": "Nghe và hoàn thành các câu sau.",
-       "instructionEn": "Listen and complete the following sentences.",
-       "words": [
-        "siêu thị",
-        "bệnh viện",
-        "văn phòng",
-        "sân bay",
-        "quán cà phê",
-        "về nhà",
-        "khách sạn",
-        "quán ăn"
-       ],
-       "items": [
-        {
-         "before": "Hôm nay Hương tới ",
-         "after": ".",
-         "answers": [
-          "siêu thị"
-         ],
-         "audio": "audio/b4/{voice}/ex9_01.mp3"
+         "q": "Buổi chiều ngày 26 tháng 8, Châu đi đâu?",
+         "a": "Buổi chiều ngày 26 tháng 8, Châu tới nhà Ngân ăn cơm."
         },
         {
-         "before": "Ngày mai anh Phong tới ",
-         "after": ".",
-         "answers": [
-          "bệnh viện"
-         ],
-         "audio": "audio/b4/{voice}/ex9_02.mp3"
-        },
-        {
-         "before": "Hôm qua chị Linh không tới ",
-         "after": ".",
-         "answers": [
-          "văn phòng"
-         ],
-         "audio": "audio/b4/{voice}/ex9_03.mp3"
-        },
-        {
-         "before": "Ngày mai chú Sáu không tới ",
-         "after": ".",
-         "answers": [
-          "sân bay"
-         ],
-         "audio": "audio/b4/{voice}/ex9_04.mp3"
-        },
-        {
-         "before": "Chị Châu đang tới ",
-         "after": ".",
-         "answers": [
-          "quán cà phê"
-         ],
-         "audio": "audio/b4/{voice}/ex9_05.mp3"
-        },
-        {
-         "before": "Hôm nay chú Vinh không ",
-         "after": ".",
-         "answers": [
-          "về nhà"
-         ],
-         "audio": "audio/b4/{voice}/ex9_06.mp3"
-        },
-        {
-         "before": "Bây giờ đang tới ",
-         "after": ".",
-         "answers": [
-          "khách sạn"
-         ],
-         "audio": "audio/b4/{voice}/ex9_07.mp3"
-        },
-        {
-         "before": "Bây giờ cô Mây tới ",
-         "after": ".",
-         "answers": [
-          "quán ăn"
-         ],
-         "audio": "audio/b4/{voice}/ex9_08.mp3"
+         "q": "Châu đi đâu vào ngày 27 tháng 8?",
+         "a": "Ngày 27 tháng 8, Châu đi du lịch. Châu tới sân bay."
         }
        ]
       }
