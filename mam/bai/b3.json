@@ -977,14 +977,14 @@
          ]
         },
         {
-         "template": "Không. Chú không đi {0}.",
+         "template": "Không. Chú không đi du {0}.",
          "blanks": [
           {
            "options": [
-            "du lịch",
+            "lịch",
             "lệch"
            ],
-           "answer": "du lịch"
+           "answer": "lịch"
           }
          ]
         },
