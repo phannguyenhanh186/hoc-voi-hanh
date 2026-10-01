@@ -835,43 +835,6 @@
    ]
   },
   {
-   "id": "noi",
-   "titleVi": "Nói",
-   "titleEn": "Speaking",
-   "subtopics": [
-    {
-     "id": "co-khong",
-     "label": "Có...không?",
-     "exercises": [
-      {
-       "type": "openAnswer",
-       "num": 10,
-       "instructionVi": "Dùng Có hoặc Không để trả lời.",
-       "instructionEn": "Use Yes or No to answer.",
-       "example": {
-        "question": "Hôm nay bạn có đi làm không?",
-        "answer": "Mình có. / Mình không. Hôm nay mình ở nhà."
-       },
-       "items": [
-        {
-         "question": "Hôm qua bạn có đi học không?"
-        },
-        {
-         "question": "Hôm nay bạn có đi chơi không?"
-        },
-        {
-         "question": "Ngày mai bạn có đi du lịch không?"
-        },
-        {
-         "question": "Hôm nay bạn có đi ăn không?"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
    "id": "doc",
    "titleVi": "Đọc",
    "titleEn": "Reading",
@@ -882,7 +845,7 @@
      "exercises": [
       {
        "type": "readingQA",
-       "num": 11,
+       "num": 10,
        "instructionVi": "Đọc nhật ký của Nghĩa và trả lời câu hỏi.",
        "instructionEn": "Read Nghĩa's diary and answer the questions.",
        "passage": "Hôm nay mình không đi làm, nhưng hôm qua mình đi học vào buổi sáng và đi chơi với Kiên vào buổi tối. Hôm nay mình ở nhà và làm việc. Ngày mai mình đi ăn với Hùng và Ngân.",
@@ -924,7 +887,7 @@
      "exercises": [
       {
        "type": "chooseWord",
-       "num": 12,
+       "num": 11,
        "instructionVi": "Chọn từ đúng.",
        "instructionEn": "Choose the correct words.",
        "items": [
@@ -1004,7 +967,7 @@
       },
       {
        "type": "chooseWord",
-       "num": 13,
+       "num": 12,
        "noItemNum": true,
        "instructionVi": "Hoàn thành đoạn hội thoại sau.",
        "instructionEn": "Complete the following dialogue.",
@@ -1078,6 +1041,43 @@
         },
         {
          "template": "Nghi: Hẹn gặp anh ngày mai nhé!"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "co-khong",
+     "label": "Có...không?",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 13,
+       "instructionVi": "Dùng Có hoặc Không để trả lời.",
+       "instructionEn": "Use Yes or No to answer.",
+       "example": {
+        "question": "Hôm nay bạn có đi làm không?",
+        "answer": "Mình có. / Mình không. Hôm nay mình ở nhà."
+       },
+       "items": [
+        {
+         "question": "Hôm qua bạn có đi học không?"
+        },
+        {
+         "question": "Hôm nay bạn có đi chơi không?"
+        },
+        {
+         "question": "Ngày mai bạn có đi du lịch không?"
+        },
+        {
+         "question": "Hôm nay bạn có đi ăn không?"
         }
        ]
       }
