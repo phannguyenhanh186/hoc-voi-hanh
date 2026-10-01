@@ -438,6 +438,267 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "ĐÂU? – WHERE?",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "Đâu là từ để hỏi về địa điểm.",
+         "en": "“Đâu” is a question word used to ask about a place or location."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, đâu thường đứng ở cuối câu hỏi.",
+         "en": "In Vietnamese, “đâu” usually comes at the end of the question."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu?",
+           "en": "Where are you?"
+          },
+          {
+           "vi": "Bạn đi đâu?",
+           "en": "Where are you going?"
+          },
+          {
+           "vi": "Bạn tới đâu?",
+           "en": "Where are you going to?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Tùy vào động từ đi với đâu, câu hỏi có ý nghĩa khác nhau.",
+         "en": "The meaning changes depending on the verb used with “đâu.”"
+        },
+        {
+         "type": "heading",
+         "vi": "1. Ở đâu? – Where are you?",
+         "en": "1. Ở đâu? – Where are you?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Ở đâu? dùng để hỏi một người hoặc một vật đang ở vị trí nào.",
+         "en": "“Ở đâu?” is used to ask where a person or thing is located."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + ở đâu?",
+         "en": "[Subject] + ở đâu?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu?",
+           "en": "Where are you?"
+          },
+          {
+           "vi": "Lan ở đâu?",
+           "en": "Where is Lan?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời thường dùng ở + địa điểm.",
+         "en": "The answer usually uses “ở + place.”"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu? → Mình ở nhà.",
+           "en": "Where are you? → I’m at home."
+          },
+          {
+           "vi": "Lan ở đâu? → Lan ở văn phòng.",
+           "en": "Where is Lan? → Lan is at the office."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Ở → nói về vị trí.",
+         "en": "“Ở” indicates a location or position."
+        },
+        {
+         "type": "heading",
+         "vi": "2. Đi đâu? – Where are you going?",
+         "en": "2. Đi đâu? – Where are you going?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Đi đâu? dùng để hỏi một người đang đi đâu.",
+         "en": "“Đi đâu?” is used to ask where someone is going."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + đi đâu?",
+         "en": "[Subject] + đi đâu?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn đi đâu?",
+           "en": "Where are you going?"
+          },
+          {
+           "vi": "Lan đi đâu?",
+           "en": "Where is Lan going?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời thường dùng đi + địa điểm / hoạt động.",
+         "en": "The answer usually uses “đi + place / activity.”"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn đi đâu? → Mình đi học.",
+           "en": "Where are you going? → I’m going to school."
+          },
+          {
+           "vi": "Bạn đi đâu? → Mình đi làm.",
+           "en": "Where are you going? → I’m going to work."
+          },
+          {
+           "vi": "Lan đi đâu? → Lan đi chơi.",
+           "en": "Where is Lan going? → Lan is going out."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Đi → nói về việc di chuyển / đi đâu đó.",
+         "en": "“Đi” indicates going or traveling somewhere."
+        },
+        {
+         "type": "heading",
+         "vi": "3. Tới đâu? – Where are you going to?",
+         "en": "3. Tới đâu? – Where are you going to?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Tới đâu? dùng để hỏi điểm đến của một người.",
+         "en": "“Tới đâu?” is used to ask about someone’s destination."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + tới đâu?",
+         "en": "[Subject] + tới đâu?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn tới đâu?",
+           "en": "Where are you going to?"
+          },
+          {
+           "vi": "Bạn đi tới đâu?",
+           "en": "Where are you going to?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời thường dùng tới + địa điểm.",
+         "en": "The answer usually uses “tới + place.”"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn tới đâu? → Mình tới trường.",
+           "en": "Where are you going to? → I’m going to school."
+          },
+          {
+           "vi": "Bạn tới đâu? → Mình tới nhà bạn.",
+           "en": "Where are you going to? → I’m going to your house."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Tới → nhấn mạnh điểm đến.",
+         "en": "“Tới” emphasizes the destination or the place someone is going to."
+        },
+        {
+         "type": "heading",
+         "vi": "4. So sánh “ở đâu?”, “đi đâu?” và “tới đâu?”",
+         "en": "4. Comparing “ở đâu?”, “đi đâu?” and “tới đâu?”"
+        },
+        {
+         "type": "table",
+         "columns": [
+          "Mẫu câu",
+          "Ý nghĩa",
+          "English"
+         ],
+         "rows": [
+          [
+           "ở đâu?",
+           "hỏi vị trí",
+           "ask where someone/something is"
+          ],
+          [
+           "đi đâu?",
+           "hỏi đi đâu",
+           "ask where someone is going"
+          ],
+          [
+           "tới đâu?",
+           "hỏi điểm đến",
+           "ask where someone is going to"
+          ]
+         ]
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu? → Mình ở nhà.",
+           "en": "Where are you? → I’m at home."
+          },
+          {
+           "vi": "Bạn đi đâu? → Mình đi làm.",
+           "en": "Where are you going? → I’m going to work."
+          },
+          {
+           "vi": "Em đi đâu? → Em tới siêu thị.",
+           "en": "Where are you going? → I’m going to the supermarket."
+          },
+          {
+           "vi": "Anh tới đâu? → Anh tới sân bay.",
+           "en": "Where are you going to? → I’m going to the airport."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
