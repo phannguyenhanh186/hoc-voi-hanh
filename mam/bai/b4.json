@@ -8,7 +8,7 @@
   "todo_images": "images/b4/bai3/<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.jpg va images/b4/bai4/hinh1..8.jpg - chua co, se bo sung.",
   "todo_audio_tu_vung": "audio/b4/nam: vocab_<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.mp3 va ex4_01..08.mp3 - chua thu am.",
   "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN.",
-  "todo_bai5": "Bai 5: de khong cho biet Chau lam gi vao ngay 4, nen cau 4 (Ngay mai Chau toi ...) de trong dap an va o Chau-ngay 4 de trong. Cau 8 trung cau 5 - CAN XAC NHAN. Hinh trong lich dung lai images/b4/bai3/*.jpg."
+  "bai5": "Hinh trong lich dung lai images/b4/bai3/*.jpg (7 dia diem, gom ca sieu_thi)."
  },
  "sections": [
   {
@@ -296,106 +296,89 @@
        "instructionEn": "Complete the following sentences based on the calendar below.",
        "matrix": {
         "columns": [
-         "Kiên",
-         "Ngân",
-         "Trang",
-         "Châu"
-        ],
-        "tones": [
-         "yellow",
-         "pink",
-         "blue",
-         "violet"
+         {
+          "date": 1,
+          "tone": "yellow"
+         },
+         {
+          "date": 2,
+          "tone": "pink",
+          "label": "Hôm nay"
+         },
+         {
+          "date": 3,
+          "tone": "yellow"
+         }
         ],
         "rows": [
          {
-          "date": 1,
-          "tone": "yellow",
+          "name": "Châu",
+          "tone": "violet",
           "cells": [
            {
             "img": "images/b4/bai3/benh_vien.jpg",
             "alt": "bệnh viện"
            },
-           null,
-           null,
-           {
-            "img": "images/b4/bai3/van_phong.jpg",
-            "alt": "văn phòng"
-           }
-          ]
-         },
-         {
-          "date": 2,
-          "tone": "yellow",
-          "cells": [
-           null,
-           null,
-           {
-            "img": "images/b4/bai3/quan_an.jpg",
-            "alt": "quán ăn"
-           },
-           null
-          ]
-         },
-         {
-          "date": 3,
-          "tone": "pink",
-          "cells": [
-           {
-            "img": "images/b4/bai3/quan_an.jpg",
-            "alt": "quán ăn"
-           },
-           {
-            "img": "images/b4/bai3/van_phong.jpg",
-            "alt": "văn phòng"
-           },
-           null,
-           {
-            "img": "images/b4/bai3/quan_ca_phe.jpg",
-            "alt": "quán cà phê"
-           }
-          ],
-          "label": "Hôm nay"
-         },
-         {
-          "date": 4,
-          "tone": "yellow",
-          "cells": [
-           null,
-           null,
-           {
-            "img": "images/b4/bai3/khach_san.jpg",
-            "alt": "khách sạn"
-           },
-           null
-          ]
-         },
-         {
-          "date": 5,
-          "tone": "yellow",
-          "cells": [
-           null,
            {
             "img": "images/b4/bai3/san_bay.jpg",
             "alt": "sân bay"
            },
-           null,
-           null
+           {
+            "img": "images/b4/bai3/khach_san.jpg",
+            "alt": "khách sạn"
+           }
+          ]
+         },
+         {
+          "name": "Ngân",
+          "tone": "pink",
+          "cells": [
+           {
+            "img": "images/b4/bai3/van_phong.jpg",
+            "alt": "văn phòng"
+           },
+           {
+            "img": "images/b4/bai3/quan_ca_phe.jpg",
+            "alt": "quán cà phê"
+           },
+           {
+            "img": "images/b4/bai3/quan_ca_phe.jpg",
+            "alt": "quán cà phê"
+           }
+          ]
+         },
+         {
+          "name": "Trang",
+          "tone": "blue",
+          "cells": [
+           {
+            "img": "images/b4/bai3/van_phong.jpg",
+            "alt": "văn phòng"
+           },
+           {
+            "img": "images/b4/bai3/sieu_thi.jpg",
+            "alt": "siêu thị"
+           },
+           {
+            "img": "images/b4/bai3/quan_an.jpg",
+            "alt": "quán ăn"
+           }
           ]
          }
         ]
        },
        "words": [
         "bệnh viện",
-        "quán ăn",
         "văn phòng",
+        "quán cà phê",
+        "siêu thị",
         "sân bay",
         "khách sạn",
-        "quán cà phê"
+        "quán ăn"
        ],
        "items": [
         {
-         "template": "Kiên tới {0} vào ngày 1.",
+         "template": "Hôm qua Châu tới {0}.",
          "answers": [
           [
            "bệnh viện"
@@ -403,7 +386,7 @@
          ]
         },
         {
-         "template": "Hôm nay Ngân tới {0}.",
+         "template": "Hôm qua Ngân và Trang tới {0}.",
          "answers": [
           [
            "văn phòng"
@@ -411,31 +394,7 @@
          ]
         },
         {
-         "template": "Hôm qua Trang tới {0}.",
-         "answers": [
-          [
-           "quán ăn"
-          ]
-         ]
-        },
-        {
-         "template": "Ngày mai Châu tới {0}.",
-         "answers": [
-          [
-           ""
-          ]
-         ]
-        },
-        {
-         "template": "Ngân tới {0} vào ngày 5.",
-         "answers": [
-          [
-           "sân bay"
-          ]
-         ]
-        },
-        {
-         "template": "Hôm nay Châu tới {0}.",
+         "template": "Hôm nay và ngày mai Ngân tới {0}.",
          "answers": [
           [
            "quán cà phê"
@@ -443,18 +402,34 @@
          ]
         },
         {
-         "template": "Hôm nay Kiên tới {0}.",
+         "template": "Hôm nay Trang tới {0}.",
          "answers": [
           [
-           "quán ăn"
+           "siêu thị"
           ]
          ]
         },
         {
-         "template": "Ngân tới {0} vào ngày 5.",
+         "template": "Hôm nay Châu tới {0}.",
          "answers": [
           [
            "sân bay"
+          ]
+         ]
+        },
+        {
+         "template": "Ngày mai Châu tới {0}.",
+         "answers": [
+          [
+           "khách sạn"
+          ]
+         ]
+        },
+        {
+         "template": "Ngày mai Trang tới {0}.",
+         "answers": [
+          [
+           "quán ăn"
           ]
          ]
         }
