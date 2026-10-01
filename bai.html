@@ -392,6 +392,12 @@
           p.appendChild(el('div', 'bai-grammar-p-vi', b.vi || ''));
           if (b.en) p.appendChild(el('div', 'bai-grammar-p-en', b.en));
           wrap.appendChild(p);
+        } else if (b.type === 'table') {
+          const t = el('div', 'bai-grammar-table');
+          t.style.gridTemplateColumns = 'repeat(' + (b.columns || []).length + ', minmax(0, 1fr))';
+          (b.columns || []).forEach(function (c) { t.appendChild(el('div', 'bai-grammar-th', c)); });
+          (b.rows || []).forEach(function (r) { r.forEach(function (c) { t.appendChild(el('div', 'bai-grammar-td', c)); }); });
+          wrap.appendChild(t);
         } else if (b.type === 'examples') {
           wrap.appendChild(makeToggleSection('Ví dụ / Examples', function () {
             const list = el('div', 'grammar-examples');
