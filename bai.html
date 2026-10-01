@@ -685,24 +685,25 @@
       cal.style.display = 'grid'; cal.style.gap = '12px'; cal.style.maxWidth = '520px'; cal.style.marginBottom = '18px';
       const days = ex.days || [];
       cal.style.gridTemplateColumns = 'repeat(' + Math.max(days.length, 1) + ', minmax(0, 1fr))';
-      // Chế độ ma trận (b4 bài 5): hàng dọc = ngày, hàng ngang = người. ex.matrix = {columns:[tên...], rows:[{date,label,tone,cells:[{img,alt}|null...]}]}
+      // Chế độ ma trận (b4 bài 5): hàng dọc = người, hàng ngang = ngày.
+      // ex.matrix = {columns:[{date,label,tone}...], rows:[{name,tone,cells:[{img,alt}|null...]}]}
       if (ex.matrix) {
         const mx = ex.matrix, ncol = (mx.columns || []).length;
         cal.className = 'bai-cal bai-cal-matrix';
-        cal.style.maxWidth = '640px'; cal.style.gap = '8px';
-        cal.style.gridTemplateColumns = 'minmax(70px, .9fr) repeat(' + ncol + ', minmax(0, 1fr))';
-        const corner = el('div'); cal.appendChild(corner);
-        (mx.columns || []).forEach(function (name, ci) {
-          const hd = el('div', 'bai-chip bai-tone-' + (mx.tones && mx.tones[ci] || 'lav'), name);
-          hd.style.height = 'auto'; hd.style.minHeight = '44px'; hd.style.cursor = 'default';
-          cal.appendChild(hd);
+        cal.style.maxWidth = '600px'; cal.style.gap = '8px';
+        cal.style.gridTemplateColumns = 'minmax(64px, .8fr) repeat(' + ncol + ', minmax(0, 1fr))';
+        cal.appendChild(el('div'));
+        (mx.columns || []).forEach(function (c) {
+          const dh = el('div', 'bai-chip bai-tone-' + (c.tone || 'yellow'));
+          dh.style.flexDirection = 'column'; dh.style.height = 'auto'; dh.style.minHeight = '54px'; dh.style.padding = '6px'; dh.style.cursor = 'default';
+          dh.appendChild(el('div', '', 'Ngày ' + c.date));
+          if (c.label) { const t = el('div', '', c.label); t.style.fontSize = '.8rem'; t.style.color = '#dc2626'; t.style.fontWeight = '700'; dh.appendChild(t); }
+          cal.appendChild(dh);
         });
         (mx.rows || []).forEach(function (r) {
-          const dh = el('div', 'bai-chip bai-tone-' + (r.tone || 'yellow'));
-          dh.style.flexDirection = 'column'; dh.style.height = 'auto'; dh.style.minHeight = '54px'; dh.style.padding = '6px'; dh.style.cursor = 'default';
-          dh.appendChild(el('div', '', 'Ngày ' + r.date));
-          if (r.label) { const t = el('div', '', r.label); t.style.fontSize = '.8rem'; t.style.color = '#dc2626'; t.style.fontWeight = '700'; dh.appendChild(t); }
-          cal.appendChild(dh);
+          const nm = el('div', 'bai-chip bai-tone-' + (r.tone || 'lav'), r.name);
+          nm.style.height = 'auto'; nm.style.minHeight = '44px'; nm.style.cursor = 'default';
+          cal.appendChild(nm);
           (r.cells || []).forEach(function (c) {
             const cell = el('div'); cell.style.display = 'flex'; cell.style.alignItems = 'center'; cell.style.justifyContent = 'center';
             if (c && c.img) cell.appendChild(makePhoto(c.img, c.alt));
