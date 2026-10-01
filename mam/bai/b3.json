@@ -870,6 +870,48 @@
      ]
     }
    ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "co-khong",
+     "label": "Có...không?",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 11,
+       "instructionVi": "Đọc nhật ký của Nghĩa và trả lời câu hỏi.",
+       "instructionEn": "Read Nghĩa's diary and answer the questions.",
+       "passage": "Hôm nay mình không đi làm, nhưng hôm qua mình đi học vào buổi sáng và đi chơi với Kiên vào buổi tối. Hôm nay mình ở nhà và làm việc. Ngày mai mình đi ăn với Hùng và Ngân.",
+       "questions": [
+        {
+         "q": "Hôm nay Nghĩa có đi làm không?",
+         "a": "Hôm nay Nghĩa không đi làm."
+        },
+        {
+         "q": "Hôm nay Nghĩa làm gì?",
+         "a": "Hôm nay Nghĩa ở nhà và làm việc."
+        },
+        {
+         "q": "Hôm qua Nghĩa có đi học không?",
+         "a": "Hôm qua Nghĩa có đi học."
+        },
+        {
+         "q": "Buổi tối hôm qua Nghĩa làm gì?",
+         "a": "Buổi tối hôm qua Nghĩa đi chơi với Kiên."
+        },
+        {
+         "q": "Ngày mai Nghĩa có đi du lịch không?",
+         "a": "Ngày mai Nghĩa không đi du lịch. Nghĩa đi ăn với Hùng và Ngân."
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "_guide": {
