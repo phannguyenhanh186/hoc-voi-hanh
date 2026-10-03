@@ -696,13 +696,13 @@
       if (ex.matrix) {
         const mx = ex.matrix, ncol = (mx.columns || []).length;
         cal.className = 'bai-cal bai-cal-matrix';
-        cal.style.maxWidth = '600px'; cal.style.gap = '8px';
+        cal.style.maxWidth = (ncol < 3 ? '420px' : '600px'); cal.style.gap = '8px';
         cal.style.gridTemplateColumns = 'minmax(64px, .8fr) repeat(' + ncol + ', minmax(0, 1fr))';
         cal.appendChild(el('div'));
         (mx.columns || []).forEach(function (c) {
           const dh = el('div', 'bai-chip bai-tone-' + (c.tone || 'yellow'));
           dh.style.flexDirection = 'column'; dh.style.height = 'auto'; dh.style.minHeight = '54px'; dh.style.padding = '6px'; dh.style.cursor = 'default';
-          dh.appendChild(el('div', '', 'Ngày ' + c.date));
+          dh.appendChild(el('div', '', c.title ? c.title : 'Ngày ' + c.date));
           if (c.label) { const t = el('div', '', c.label); t.style.fontSize = '.8rem'; t.style.color = '#dc2626'; t.style.fontWeight = '700'; dh.appendChild(t); }
           cal.appendChild(dh);
         });
@@ -713,6 +713,7 @@
           (r.cells || []).forEach(function (c) {
             const cell = el('div'); cell.style.display = 'flex'; cell.style.alignItems = 'center'; cell.style.justifyContent = 'center';
             if (c && c.img) cell.appendChild(makePhoto(c.img, c.alt));
+            else if (c && c.text) { const tc = el('div', 'bai-chip bai-tone-lav', c.text); tc.style.height = 'auto'; tc.style.minHeight = '44px'; tc.style.width = '100%'; tc.style.cursor = 'default'; cell.style.width = '100%'; cell.appendChild(tc); }
             cal.appendChild(cell);
           });
         });
@@ -745,6 +746,15 @@
       const lines = el('div'); lines.style.display = 'grid'; lines.style.gap = '10px';
       const groups = [];
       (ex.items || []).forEach(function (it, i) {
+        if (it.example) {
+          const exLine = el('div', 'bai-fill-line');
+          const parts = it.template.split('{0}');
+          exLine.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
+          exLine.appendChild(el('span', 'bai-example', it.answers[0][0]));
+          exLine.appendChild(document.createTextNode(parts[1] || ''));
+          lines.appendChild(exLine);
+          return;
+        }
         const built = buildFillLine((i + 1) + '\u00A0\u00A0' + it.template, it.answers || [], 'Câu ' + (i + 1));
         const mark = el('span', 'bai-mark');
         built.line.appendChild(mark);
