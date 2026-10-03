@@ -1102,6 +1102,196 @@
      ]
     }
    ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "chooseWord",
+       "num": 11,
+       "instructionVi": "Chọn từ đúng.",
+       "instructionEn": "Choose the correct words.",
+       "items": [
+        {
+         "template": "Hôm nay em tới {0} thị.",
+         "blanks": [
+          {
+           "options": [
+            "siêu",
+            "siu"
+           ],
+           "answer": "siêu"
+          }
+         ]
+        },
+        {
+         "template": "Hôm qua chị có tới khách {0} không?",
+         "blanks": [
+          {
+           "options": [
+            "sạn",
+            "sạng"
+           ],
+           "answer": "sạn"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay cô không tới {0} phòng.",
+         "blanks": [
+          {
+           "options": [
+            "văn",
+            "văng"
+           ],
+           "answer": "văn"
+          }
+         ]
+        },
+        {
+         "template": "Hôm qua mình tới {0} cà phê gặp bạn.",
+         "blanks": [
+          {
+           "options": [
+            "quán",
+            "quáng"
+           ],
+           "answer": "quán"
+          }
+         ]
+        },
+        {
+         "template": "Ngày mai anh có tới sân {0} không?",
+         "blanks": [
+          {
+           "options": [
+            "bai",
+            "bay"
+           ],
+           "answer": "bay"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "dialogueFill",
+       "num": 12,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau.",
+       "instructionEn": "Complete the following dialogue.",
+       "lines": [
+        {
+         "speaker": "Minh:",
+         "template": "Chào Hân, em có khoẻ {0}?",
+         "answers": [
+          [
+           "không"
+          ]
+         ]
+        },
+        {
+         "speaker": "Hân:",
+         "template": "Chào anh Minh, em {0}. Còn anh?",
+         "answers": [
+          [
+           "khoẻ",
+           "khỏe"
+          ]
+         ]
+        },
+        {
+         "speaker": "Minh:",
+         "template": "Anh cũng {0}, cám {1} em. Hôm nay em {2} đi làm không?",
+         "answers": [
+          [
+           "khoẻ",
+           "khỏe"
+          ],
+          [
+           "ơn"
+          ],
+          [
+           "có"
+          ]
+         ]
+        },
+        {
+         "speaker": "Hân:",
+         "template": "Em {0}. Hôm nay em ở nhà. Còn anh?",
+         "answers": [
+          [
+           "không"
+          ]
+         ]
+        },
+        {
+         "speaker": "Minh:",
+         "template": "Hôm nay anh có. Nhưng ngày mai anh không đi làm.",
+         "answers": []
+        },
+        {
+         "speaker": "Hân:",
+         "template": "Ngày mai anh đi {0}?",
+         "answers": [
+          [
+           "đâu"
+          ]
+         ]
+        },
+        {
+         "speaker": "Minh:",
+         "template": "Ngày mai anh {0} nhà ba mẹ.",
+         "answers": [
+          [
+           "về",
+           "tới"
+          ]
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 13,
+       "instructionVi": "Trả lời những câu hỏi sau.",
+       "instructionEn": "Answer the following questions.",
+       "items": [
+        {
+         "question": "Bây giờ bạn ở đâu?"
+        },
+        {
+         "question": "Hôm nay bạn có tới văn phòng không?"
+        },
+        {
+         "question": "Hôm qua bạn có tới siêu thị không?"
+        },
+        {
+         "question": "Ngày mai bạn có tới quán cà phê không?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
