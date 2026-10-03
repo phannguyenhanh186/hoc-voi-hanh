@@ -1355,16 +1355,16 @@
        },
        "items": [
         {
-         "question": "Hôm qua bạn có đi học không?"
+         "question": "Buổi chiều hôm qua bạn có đi cà phê không?"
         },
         {
-         "question": "Hôm nay bạn có đi chơi không?"
+         "question": "Buổi tối hôm nay bạn có đi ăn không?"
         },
         {
-         "question": "Ngày mai bạn có đi du lịch không?"
+         "question": "Buổi chiều ngày mai bạn có đi chơi không?"
         },
         {
-         "question": "Hôm nay bạn có đi ăn không?"
+         "question": "Buổi trưa hôm nay bạn có đi ngủ không?"
         }
        ]
       }
