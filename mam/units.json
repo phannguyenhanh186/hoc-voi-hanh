@@ -16,18 +16,18 @@
       "status": "ready"
     },
     {
-      "id": "b2",
-      "num": 2,
-      "title": "Bạn thích ăn gì?",
-      "page": "bai.html",
-      "status": "ready"
-    },
-    {
       "id": "b3",
-      "num": 3,
+      "num": 2,
       "title": "Hôm nay bạn có đi làm không?",
       "status": "ready",
       "page": "bai.html"
+    },
+    {
+      "id": "b2",
+      "num": 3,
+      "title": "Buổi sáng chị thích ăn gì?",
+      "page": "bai.html",
+      "status": "ready"
     },
     {
       "id": "b4",
