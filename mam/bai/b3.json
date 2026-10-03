@@ -640,7 +640,7 @@
        ],
        "items": [
         {
-         "before": "Hôm nay cô Loan ",
+         "before": "Buổi sáng hôm nay cô Loan ",
          "after": ".",
          "answers": [
           "đi học"
@@ -656,7 +656,7 @@
          "audio": "audio/b3/{voice}/ex6_02.mp3"
         },
         {
-         "before": "Hôm qua anh Nghĩa ",
+         "before": "Buổi chiều hôm qua anh Nghĩa ",
          "after": ".",
          "answers": [
           "đi làm"
@@ -664,7 +664,7 @@
          "audio": "audio/b3/{voice}/ex6_03.mp3"
         },
         {
-         "before": "Ngày mai An không ",
+         "before": "Buổi tối ngày mai An không ",
          "after": ".",
          "answers": [
           "đi chơi"
@@ -680,7 +680,7 @@
          "audio": "audio/b3/{voice}/ex6_05.mp3"
         },
         {
-         "before": "Bây giờ Minh ",
+         "before": "Buổi tối hôm qua Minh ",
          "after": ".",
          "answers": [
           "đi ngủ"
@@ -1093,7 +1093,7 @@
        "num": 12,
        "instructionVi": "Đọc nhật ký của Nghĩa và trả lời câu hỏi.",
        "instructionEn": "Read Nghĩa's diary and answer the questions.",
-       "passage": "Hôm nay mình không đi làm, nhưng hôm qua mình đi học vào buổi sáng và đi chơi với Kiên vào buổi tối. Hôm nay mình ở nhà và làm việc. Ngày mai mình đi ăn với Hùng và Ngân.",
+       "passage": "Hôm nay mình không đi làm, nhưng buổi sáng hôm qua mình đi học và đi chơi với Kiên buổi tối. Hôm nay mình không đi làm. Buổi trưa mình đi cà phê. Buổi sáng ngày mai mình đi làm và buổi tối mình đi ăn với Hùng và Ngân.",
        "questions": [
         {
          "q": "Hôm nay Nghĩa có đi làm không?",
@@ -1101,7 +1101,7 @@
         },
         {
          "q": "Hôm nay Nghĩa làm gì?",
-         "a": "Hôm nay Nghĩa ở nhà và làm việc."
+         "a": "Buổi trưa hôm nay Nghĩa đi cà phê."
         },
         {
          "q": "Hôm qua Nghĩa có đi học không?",
@@ -1112,8 +1112,12 @@
          "a": "Buổi tối hôm qua Nghĩa đi chơi với Kiên."
         },
         {
-         "q": "Ngày mai Nghĩa có đi du lịch không?",
-         "a": "Ngày mai Nghĩa không đi du lịch. Nghĩa đi ăn với Hùng và Ngân."
+         "q": "Buổi sáng ngày mai Nghĩa làm gì?",
+         "a": "Buổi sáng ngày mai Nghĩa đi làm."
+        },
+        {
+         "q": "Buổi tối ngày mai Nghĩa có về nhà không?",
+         "a": "Không. Buổi tối ngày mai Nghĩa đi ăn với Hùng và Ngân."
         }
        ]
       }
@@ -1161,8 +1165,15 @@
          ]
         },
         {
-         "template": "Hôm qua chị Nga có đi {0} không?",
+         "template": "{0} sáng hôm qua chị Nga có đi {1} không?",
          "blanks": [
+          {
+           "options": [
+            "Buối",
+            "Buổi"
+           ],
+           "answer": "Buổi"
+          },
           {
            "options": [
             "lờm",
@@ -1197,14 +1208,45 @@
          ]
         },
         {
-         "template": "Hôm qua chị không đi {0}.",
+         "template": "Buổi {0} hôm qua chị không đi {1}.",
          "blanks": [
+          {
+           "options": [
+            "tôi",
+            "tối"
+           ],
+           "answer": "tối"
+          },
           {
            "options": [
             "ngú",
             "ngủ"
            ],
            "answer": "ngủ"
+          }
+         ]
+        },
+        {
+         "template": "Buổi {0} hôm qua chú không về nhà.",
+         "blanks": [
+          {
+           "options": [
+            "chìu",
+            "chiều"
+           ],
+           "answer": "chiều"
+          }
+         ]
+        },
+        {
+         "template": "Buổi {0} hôm nay em đi cà phê với đồng nghiệp.",
+         "blanks": [
+          {
+           "options": [
+            "chưa",
+            "trưa"
+           ],
+           "answer": "trưa"
           }
          ]
         }
@@ -1344,6 +1386,7 @@
   "audio_script_bai7": "Bai 7 - noi dung hoi thoai can thu am (audio khac voi text hien tren man hinh, day la dang nghe-hieu suy luan): 1) Hom nay anh co di lam khong? / Anh co. 2) Ngay mai chi co di an voi gia dinh khong? / Chi khong, ngay mai chi o nha. 3) Hom qua em co di hoc khong? / Em khong, hom qua em bi benh. 4) Hom nay chi Lan co di choi khong? / Chi khong. Hom nay chi di lam. 5) Hom qua chu Phong co di du lich khong? / Khong, ngay mai chu moi di du lich. 6) Bay gio ban di an dung khong? / Khong, bay gio minh di ngu.",
   "todo_audio_nghe": "audio/b3/nam: ex6_01..06.mp3 (theo audio_script_bai6), listen_ex7_01..06.mp3 (theo audio_script_bai7) - chua thu am.",
   "todo_thoi_gian": "Hinh/audio moi: images/b3/bai3/{ve_nha,di_ca_phe,buoi_sang,buoi_trua,buoi_chieu,buoi_toi}.jpg; audio/b3/nam/{vocab_ve_nha(da copy tu b4),vocab_di_ca_phe,vocab_buoi_sang,vocab_buoi_trua,vocab_buoi_chieu,vocab_buoi_toi}.mp3. Thoi khoa bieu: vi du sua 'Buoi sang' -> 'Buoi trua' (12:00 di an) - CAN XAC NHAN; cau 4-6 them chu ngu 'Tran'; 18:00 ve nha tinh la 'Buoi toi' - CAN XAC NHAN.",
-  "lich": "Bai lich cuoi muc Thoi gian trong ngay: hinh dung lai images/b3/bai3/*.jpg."
+  "lich": "Bai lich cuoi muc Thoi gian trong ngay: hinh dung lai images/b3/bai3/*.jpg.",
+  "todo_audio_ex8": "Bai 8: cau 1, 3, 4, 6 doi noi dung (them buoi) - can thu lai audio/b3/nam/ex6_01, ex6_03, ex6_04, ex6_06.mp3."
  }
 }
