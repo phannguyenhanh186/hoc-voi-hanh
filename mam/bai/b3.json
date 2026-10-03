@@ -201,7 +201,9 @@
         "đi chơi",
         "đi ăn",
         "đi ngủ",
-        "đi du lịch"
+        "đi du lịch",
+        "về nhà",
+        "đi cà phê"
        ],
        "items": [
         {
@@ -252,7 +254,7 @@
         {
          "img": "images/b3/bai4/hinh5.jpg",
          "name": "Hình 5",
-         "template": "Bây giờ anh {0}.",
+         "template": "Buổi tối anh {0}.",
          "answers": [
           [
            "đi ngủ"
@@ -263,117 +265,35 @@
         {
          "img": "images/b3/bai4/hinh6.jpg",
          "name": "Hình 6",
-         "template": "Bây giờ cô {0}.",
+         "template": "Buổi sáng cô {0}.",
          "answers": [
           [
            "đi ăn"
           ]
          ],
          "audio": "audio/b3/{voice}/ex4_06.mp3"
-        }
-       ]
-      },
-      {
-       "type": "calendarFill",
-       "num": 5,
-       "instructionVi": "Hoàn thành các câu sau dựa vào lịch bên dưới.",
-       "instructionEn": "Complete the following sentences based on the calendar below.",
-       "days": [
-        {
-         "date": 2,
-         "tone": "blue",
-         "imgs": [
-          {
-           "img": "images/b3/bai5/ngay2_di_hoc.jpg",
-           "alt": "đi học"
-          },
-          {
-           "img": "images/b3/bai5/ngay2_di_choi.jpg",
-           "alt": "đi chơi"
-          }
-         ]
         },
         {
-         "date": 3,
-         "tone": "pink",
-         "label": "Hôm nay",
-         "imgs": [
-          {
-           "img": "images/b3/bai5/ngay3_di_lam.jpg",
-           "alt": "đi làm"
-          },
-          {
-           "img": "images/b3/bai5/ngay3_di_hoc.jpg",
-           "alt": "đi học"
-          }
-         ]
-        },
-        {
-         "date": 4,
-         "tone": "yellow",
-         "imgs": [
-          {
-           "img": "images/b3/bai5/ngay4_di_du_lich.jpg",
-           "alt": "đi du lịch"
-          },
-          {
-           "img": "images/b3/bai5/ngay4_di_an.jpg",
-           "alt": "đi ăn"
-          }
-         ]
-        }
-       ],
-       "words": [
-        "Hôm nay",
-        "Ngày mai",
-        "Hôm qua"
-       ],
-       "items": [
-        {
-         "template": "{0} mình đi ăn.",
+         "img": "images/b3/bai4/hinh7.jpg",
+         "name": "Hình 7",
+         "template": "Buổi sáng ngày mai em {0}.",
          "answers": [
           [
-           "Ngày mai"
-          ]
-         ]
-        },
-        {
-         "template": "{0} mình không đi học.",
-         "answers": [
-          [
-           "Ngày mai"
-          ]
-         ]
-        },
-        {
-         "template": "{0} mình đi chơi với Kiên.",
-         "answers": [
-          [
-           "Hôm qua"
-          ]
-         ]
-        },
-        {
-         "template": "{0} đi làm.",
-         "answers": [
-          [
-           "Hôm nay"
-          ]
-         ]
-        },
-        {
-         "template": "{0} và {1} mình không đi du lịch.",
-         "answers": [
-          [
-           "Hôm qua",
-           "Hôm nay"
-          ],
-          [
-           "Hôm nay",
-           "Hôm qua"
+           "về nhà"
           ]
          ],
-         "distinct": true
+         "audio": "audio/b3/{voice}/ex4_07.mp3"
+        },
+        {
+         "img": "images/b3/bai4/hinh8.jpg",
+         "name": "Hình 8",
+         "template": "Buổi chiều hôm qua chị Hân {0}.",
+         "answers": [
+          [
+           "đi cà phê"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex4_08.mp3"
         }
        ]
       }
@@ -385,7 +305,7 @@
      "exercises": [
       {
        "type": "photoVocab",
-       "num": 6,
+       "num": 5,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
        "items": [
@@ -413,7 +333,7 @@
       },
       {
        "type": "calendarFill",
-       "num": 7,
+       "num": 6,
        "instructionVi": "Hoàn thành các câu sau dựa theo thời khoá biểu của Trân.",
        "instructionEn": "Complete the sentences based on Trân’s schedule.",
        "matrix": {
@@ -535,6 +455,160 @@
            "Buổi tối"
           ]
          ]
+        }
+       ]
+      },
+      {
+       "type": "calendarFill",
+       "num": 7,
+       "instructionVi": "Hoàn thành các câu sau dựa vào lịch bên dưới.",
+       "instructionEn": "Complete the following sentences based on the calendar below.",
+       "matrix": {
+        "columns": [
+         {
+          "title": "Buổi sáng",
+          "tone": "yellow"
+         },
+         {
+          "title": "Buổi trưa",
+          "tone": "pink"
+         },
+         {
+          "title": "Buổi chiều",
+          "tone": "blue"
+         },
+         {
+          "title": "Buổi tối",
+          "tone": "violet"
+         }
+        ],
+        "rows": [
+         {
+          "name": "Ngày 2",
+          "tone": "blue",
+          "cells": [
+           {
+            "img": "images/b3/bai3/di_hoc.jpg",
+            "alt": "đi học"
+           },
+           {
+            "img": "images/b3/bai3/di_an.jpg",
+            "alt": "đi ăn"
+           },
+           {
+            "img": "images/b3/bai3/di_ca_phe.jpg",
+            "alt": "đi cà phê"
+           },
+           {
+            "img": "images/b3/bai3/ve_nha.jpg",
+            "alt": "về nhà"
+           }
+          ]
+         },
+         {
+          "name": "Ngày 3",
+          "tone": "pink",
+          "cells": [
+           {
+            "img": "images/b3/bai3/di_lam.jpg",
+            "alt": "đi làm"
+           },
+           {
+            "img": "images/b3/bai3/di_ngu.jpg",
+            "alt": "đi ngủ"
+           },
+           null,
+           {
+            "img": "images/b3/bai3/ve_nha.jpg",
+            "alt": "về nhà"
+           }
+          ],
+          "label": "Hôm nay"
+         },
+         {
+          "name": "Ngày 4",
+          "tone": "yellow",
+          "cells": [
+           {
+            "img": "images/b3/bai3/di_ca_phe.jpg",
+            "alt": "đi cà phê"
+           },
+           {
+            "img": "images/b3/bai3/di_an.jpg",
+            "alt": "đi ăn"
+           },
+           {
+            "img": "images/b3/bai3/di_choi.jpg",
+            "alt": "đi chơi"
+           },
+           null
+          ]
+         }
+        ]
+       },
+       "words": [
+        "Hôm nay",
+        "Ngày mai",
+        "Hôm qua",
+        "Buổi sáng",
+        "Buổi trưa",
+        "Buổi chiều",
+        "Buổi tối"
+       ],
+       "items": [
+        {
+         "template": "{0} hôm qua mình đi học.",
+         "answers": [
+          [
+           "Buổi sáng"
+          ]
+         ]
+        },
+        {
+         "template": "Buổi trưa {0} mình không đi ăn.",
+         "answers": [
+          [
+           "hôm nay"
+          ]
+         ]
+        },
+        {
+         "template": "Buổi chiều {0} mình đi cà phê.",
+         "answers": [
+          [
+           "hôm qua"
+          ]
+         ]
+        },
+        {
+         "template": "{0} hôm qua mình về nhà.",
+         "answers": [
+          [
+           "Buổi tối"
+          ]
+         ]
+        },
+        {
+         "template": "Buổi chiều {0} mình đi chơi.",
+         "answers": [
+          [
+           "ngày mai"
+          ]
+         ]
+        },
+        {
+         "template": "Buổi tối {0} và {1} mình về nhà.",
+         "answers": [
+          [
+           "hôm qua",
+           "hôm nay"
+          ],
+          [
+           "hôm nay",
+           "hôm qua"
+          ]
+         ],
+         "distinct": true
         }
        ]
       }
@@ -1269,6 +1343,7 @@
   "audio_script_bai6": "Bai 6 la nghe-chep chinh ta: moi cau audio doc dung y cau da dien dap an, vd 'Hom nay co Loan di hoc.' 'Ngay mai chi Han khong di du lich.' 'Hom qua anh Nghia di lam.' 'Ngay mai An khong di choi.' 'Hom qua chu Phuc khong di an.' 'Bay gio Minh di ngu.'",
   "audio_script_bai7": "Bai 7 - noi dung hoi thoai can thu am (audio khac voi text hien tren man hinh, day la dang nghe-hieu suy luan): 1) Hom nay anh co di lam khong? / Anh co. 2) Ngay mai chi co di an voi gia dinh khong? / Chi khong, ngay mai chi o nha. 3) Hom qua em co di hoc khong? / Em khong, hom qua em bi benh. 4) Hom nay chi Lan co di choi khong? / Chi khong. Hom nay chi di lam. 5) Hom qua chu Phong co di du lich khong? / Khong, ngay mai chu moi di du lich. 6) Bay gio ban di an dung khong? / Khong, bay gio minh di ngu.",
   "todo_audio_nghe": "audio/b3/nam: ex6_01..06.mp3 (theo audio_script_bai6), listen_ex7_01..06.mp3 (theo audio_script_bai7) - chua thu am.",
-  "todo_thoi_gian": "Hinh/audio moi: images/b3/bai3/{ve_nha,di_ca_phe,buoi_sang,buoi_trua,buoi_chieu,buoi_toi}.jpg; audio/b3/nam/{vocab_ve_nha(da copy tu b4),vocab_di_ca_phe,vocab_buoi_sang,vocab_buoi_trua,vocab_buoi_chieu,vocab_buoi_toi}.mp3. Thoi khoa bieu: vi du sua 'Buoi sang' -> 'Buoi trua' (12:00 di an) - CAN XAC NHAN; cau 4-6 them chu ngu 'Tran'; 18:00 ve nha tinh la 'Buoi toi' - CAN XAC NHAN."
+  "todo_thoi_gian": "Hinh/audio moi: images/b3/bai3/{ve_nha,di_ca_phe,buoi_sang,buoi_trua,buoi_chieu,buoi_toi}.jpg; audio/b3/nam/{vocab_ve_nha(da copy tu b4),vocab_di_ca_phe,vocab_buoi_sang,vocab_buoi_trua,vocab_buoi_chieu,vocab_buoi_toi}.mp3. Thoi khoa bieu: vi du sua 'Buoi sang' -> 'Buoi trua' (12:00 di an) - CAN XAC NHAN; cau 4-6 them chu ngu 'Tran'; 18:00 ve nha tinh la 'Buoi toi' - CAN XAC NHAN.",
+  "lich": "Bai lich cuoi muc Thoi gian trong ngay: hinh dung lai images/b3/bai3/*.jpg."
  }
 }
