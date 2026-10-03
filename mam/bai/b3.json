@@ -1,6 +1,6 @@
 {
  "id": "b3",
- "num": 3,
+ "num": 2,
  "title": "Hôm nay bạn có đi làm không?",
  "sections": [
   {
@@ -177,6 +177,16 @@
          "img": "images/b3/bai3/di_du_lich.jpg",
          "caption": "Đi du lịch",
          "audio": "audio/b3/{voice}/vocab_di_du_lich.mp3"
+        },
+        {
+         "img": "images/b3/bai3/ve_nha.jpg",
+         "caption": "Về nhà",
+         "audio": "audio/b3/{voice}/vocab_ve_nha.mp3"
+        },
+        {
+         "img": "images/b3/bai3/di_ca_phe.jpg",
+         "caption": "Đi cà phê",
+         "audio": "audio/b3/{voice}/vocab_di_ca_phe.mp3"
         }
        ]
       },
@@ -368,6 +378,167 @@
        ]
       }
      ]
+    },
+    {
+     "id": "thoi-gian",
+     "label": "Thời gian trong ngày",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 6,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "img": "images/b3/bai3/buoi_sang.jpg",
+         "caption": "Buổi sáng",
+         "audio": "audio/b3/{voice}/vocab_buoi_sang.mp3"
+        },
+        {
+         "img": "images/b3/bai3/buoi_trua.jpg",
+         "caption": "Buổi trưa",
+         "audio": "audio/b3/{voice}/vocab_buoi_trua.mp3"
+        },
+        {
+         "img": "images/b3/bai3/buoi_chieu.jpg",
+         "caption": "Buổi chiều",
+         "audio": "audio/b3/{voice}/vocab_buoi_chieu.mp3"
+        },
+        {
+         "img": "images/b3/bai3/buoi_toi.jpg",
+         "caption": "Buổi tối",
+         "audio": "audio/b3/{voice}/vocab_buoi_toi.mp3"
+        }
+       ]
+      },
+      {
+       "type": "calendarFill",
+       "num": 7,
+       "instructionVi": "Hoàn thành các câu sau dựa theo thời khoá biểu của Trân.",
+       "instructionEn": "Complete the sentences based on Trân’s schedule.",
+       "matrix": {
+        "columns": [
+         {
+          "title": "Trân",
+          "tone": "pink"
+         }
+        ],
+        "rows": [
+         {
+          "name": "8:00",
+          "tone": "yellow",
+          "cells": [
+           {
+            "text": "đi làm"
+           }
+          ]
+         },
+         {
+          "name": "12:00",
+          "tone": "yellow",
+          "cells": [
+           {
+            "text": "đi ăn"
+           }
+          ]
+         },
+         {
+          "name": "15:00",
+          "tone": "yellow",
+          "cells": [
+           {
+            "text": "đi cà phê"
+           }
+          ]
+         },
+         {
+          "name": "18:00",
+          "tone": "yellow",
+          "cells": [
+           {
+            "text": "về nhà"
+           }
+          ]
+         },
+         {
+          "name": "20:00",
+          "tone": "yellow",
+          "cells": [
+           {
+            "text": "đi chơi"
+           }
+          ]
+         },
+         {
+          "name": "23:00",
+          "tone": "yellow",
+          "cells": [
+           {
+            "text": "đi ngủ"
+           }
+          ]
+         }
+        ]
+       },
+       "words": [
+        "Buổi sáng",
+        "Buổi trưa",
+        "Buổi chiều",
+        "Buổi tối"
+       ],
+       "items": [
+        {
+         "template": "{0} Trân đi ăn.",
+         "answers": [
+          [
+           "Buổi trưa"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "template": "{0} Trân đi làm.",
+         "answers": [
+          [
+           "Buổi sáng"
+          ]
+         ]
+        },
+        {
+         "template": "{0} Trân đi cà phê.",
+         "answers": [
+          [
+           "Buổi chiều"
+          ]
+         ]
+        },
+        {
+         "template": "{0} Trân về nhà.",
+         "answers": [
+          [
+           "Buổi tối"
+          ]
+         ]
+        },
+        {
+         "template": "{0} Trân đi chơi.",
+         "answers": [
+          [
+           "Buổi tối"
+          ]
+         ]
+        },
+        {
+         "template": "{0} Trân đi ngủ.",
+         "answers": [
+          [
+           "Buổi tối"
+          ]
+         ]
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -382,7 +553,7 @@
      "exercises": [
       {
        "type": "fillWords",
-       "num": 6,
+       "num": 8,
        "instructionVi": "Nghe và hoàn thành các câu sau.",
        "instructionEn": "Listen and complete the following sentences.",
        "words": [
@@ -446,7 +617,7 @@
       },
       {
        "type": "audioChoice",
-       "num": 7,
+       "num": 9,
        "instructionVi": "Nghe và trả lời các câu hỏi sau.",
        "instructionEn": "Listen and answer the following questions.",
        "items": [
@@ -617,7 +788,7 @@
       },
       {
        "type": "wordOrder",
-       "num": 8,
+       "num": 10,
        "instructionVi": "Sắp xếp các từ sau để tạo thành câu hỏi hoàn chỉnh.",
        "instructionEn": "Put the words in the correct order to make complete questions.",
        "items": [
@@ -731,7 +902,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 9,
+       "num": 11,
        "instructionVi": "Viết câu trả lời phù hợp cho từng câu hỏi theo gợi ý.",
        "instructionEn": "Write an appropriate answer for each question using the prompts.",
        "noteTitleVi": "Gợi ý",
@@ -845,7 +1016,7 @@
      "exercises": [
       {
        "type": "readingQA",
-       "num": 10,
+       "num": 12,
        "instructionVi": "Đọc nhật ký của Nghĩa và trả lời câu hỏi.",
        "instructionEn": "Read Nghĩa's diary and answer the questions.",
        "passage": "Hôm nay mình không đi làm, nhưng hôm qua mình đi học vào buổi sáng và đi chơi với Kiên vào buổi tối. Hôm nay mình ở nhà và làm việc. Ngày mai mình đi ăn với Hùng và Ngân.",
@@ -887,7 +1058,7 @@
      "exercises": [
       {
        "type": "chooseWord",
-       "num": 11,
+       "num": 13,
        "instructionVi": "Chọn từ đúng.",
        "instructionEn": "Choose the correct words.",
        "items": [
@@ -967,7 +1138,7 @@
       },
       {
        "type": "chooseWord",
-       "num": 12,
+       "num": 14,
        "noItemNum": true,
        "instructionVi": "Hoàn thành đoạn hội thoại sau.",
        "instructionEn": "Complete the following dialogue.",
@@ -1059,7 +1230,7 @@
      "exercises": [
       {
        "type": "openAnswer",
-       "num": 13,
+       "num": 15,
        "instructionVi": "Dùng Có hoặc Không để trả lời.",
        "instructionEn": "Use Yes or No to answer.",
        "example": {
@@ -1097,6 +1268,7 @@
   "exercise.fillWords.words": "Neu ex co 'words' thi hien ngan hang tu phia tren; bam tu de dien vao o dang focus (giong photoFill/calendarFill).",
   "audio_script_bai6": "Bai 6 la nghe-chep chinh ta: moi cau audio doc dung y cau da dien dap an, vd 'Hom nay co Loan di hoc.' 'Ngay mai chi Han khong di du lich.' 'Hom qua anh Nghia di lam.' 'Ngay mai An khong di choi.' 'Hom qua chu Phuc khong di an.' 'Bay gio Minh di ngu.'",
   "audio_script_bai7": "Bai 7 - noi dung hoi thoai can thu am (audio khac voi text hien tren man hinh, day la dang nghe-hieu suy luan): 1) Hom nay anh co di lam khong? / Anh co. 2) Ngay mai chi co di an voi gia dinh khong? / Chi khong, ngay mai chi o nha. 3) Hom qua em co di hoc khong? / Em khong, hom qua em bi benh. 4) Hom nay chi Lan co di choi khong? / Chi khong. Hom nay chi di lam. 5) Hom qua chu Phong co di du lich khong? / Khong, ngay mai chu moi di du lich. 6) Bay gio ban di an dung khong? / Khong, bay gio minh di ngu.",
-  "todo_audio_nghe": "audio/b3/nam: ex6_01..06.mp3 (theo audio_script_bai6), listen_ex7_01..06.mp3 (theo audio_script_bai7) - chua thu am."
+  "todo_audio_nghe": "audio/b3/nam: ex6_01..06.mp3 (theo audio_script_bai6), listen_ex7_01..06.mp3 (theo audio_script_bai7) - chua thu am.",
+  "todo_thoi_gian": "Hinh/audio moi: images/b3/bai3/{ve_nha,di_ca_phe,buoi_sang,buoi_trua,buoi_chieu,buoi_toi}.jpg; audio/b3/nam/{vocab_ve_nha(da copy tu b4),vocab_di_ca_phe,vocab_buoi_sang,vocab_buoi_trua,vocab_buoi_chieu,vocab_buoi_toi}.mp3. Thoi khoa bieu: vi du sua 'Buoi sang' -> 'Buoi trua' (12:00 di an) - CAN XAC NHAN; cau 4-6 them chu ngu 'Tran'; 18:00 ve nha tinh la 'Buoi toi' - CAN XAC NHAN."
  }
 }
