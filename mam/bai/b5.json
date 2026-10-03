@@ -1,0 +1,1297 @@
+{
+ "id": "b5",
+ "num": 5,
+ "title": "Bạn đang ở đâu?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b5/nam: pron_<van>.mp3 (au, đau, màu, âu, đâu, lầu, êu, kêu, lều, iu, chịu, xíu, ưu, lưu, cừu) va ex2_01..05.mp3 - chua thu am. Ten file pron_ theo cach b2/b3 (xem audio/b2/nam/_pron_phatam_filenames.txt).",
+  "todo_images": "images/b5/bai3/<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.jpg va images/b5/bai4/hinh1..8.jpg - chua co, se bo sung.",
+  "todo_audio_tu_vung": "audio/b5/nam: vocab_<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.mp3 va ex4_01..08.mp3 - chua thu am.",
+  "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN.",
+  "bai5": "Hinh trong lich dung lai images/b5/bai3/*.jpg (7 dia diem, gom ca sieu_thi).",
+  "todo_audio_nghe": "audio/b5/nam/listen_ex6_01..05.mp3 - chua thu am. Cau hoi hien thi duoi dang text; noi dung audio can thong nhat voi cau hoi + dap an.",
+  "todo_audio_nghe2": "audio/b5/nam/ex9_01..08.mp3 - chua thu am. Cau 7 de bai thieu chu ngu ('Bay gio ... dang toi'), can bo sung ten nguoi - CAN XAC NHAN.",
+  "todo_doc": "Bai doc: cau 3 (25/8 co di an khong?) trong bai doc mau thuan (buoi trua di an voi dong nghiep, nhung 'Hom nay minh khong di an') - CAN XAC NHAN dap an."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "nguyen-am",
+     "label": "Nguyên âm \"au\", \"âu\", \"êu\", \"iu\", \"ưu\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b5/{voice}/pron_{key}.mp3",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "au",
+            "đau",
+            "màu"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "âu",
+            "đâu",
+            "lầu"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "êu",
+            "kêu",
+            "lều"
+           ]
+          ]
+         }
+        ],
+        [
+         {
+          "tone": "violet",
+          "rows": [
+           [
+            "iu",
+            "chịu",
+            "xíu"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ưu",
+            "lưu",
+            "cừu"
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phu-am-d",
+     "label": "Phụ âm đầu \"đ\"",
+     "exercises": [
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Đan đang ăn.",
+         "audio": "audio/b5/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Định đang đi làm.",
+         "audio": "audio/b5/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Đừng đi ăn đêm.",
+         "audio": "audio/b5/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Điệp đi làm cùng Đông.",
+         "audio": "audio/b5/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Đan đi đón Đăng rồi đi ăn tối.",
+         "audio": "audio/b5/{voice}/ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "toi-dia-diem",
+     "label": "Tới + Địa điểm",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 3,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "img": "images/b5/bai3/nha.jpg",
+         "caption": "Nhà",
+         "audio": "audio/b5/{voice}/vocab_nha.mp3"
+        },
+        {
+         "img": "images/b5/bai3/van_phong.jpg",
+         "caption": "Văn phòng",
+         "audio": "audio/b5/{voice}/vocab_van_phong.mp3"
+        },
+        {
+         "img": "images/b5/bai3/quan_an.jpg",
+         "caption": "Quán ăn",
+         "audio": "audio/b5/{voice}/vocab_quan_an.mp3"
+        },
+        {
+         "img": "images/b5/bai3/quan_ca_phe.jpg",
+         "caption": "Quán cà phê",
+         "audio": "audio/b5/{voice}/vocab_quan_ca_phe.mp3"
+        },
+        {
+         "img": "images/b5/bai3/khach_san.jpg",
+         "caption": "Khách sạn",
+         "audio": "audio/b5/{voice}/vocab_khach_san.mp3"
+        },
+        {
+         "img": "images/b5/bai3/sieu_thi.jpg",
+         "caption": "Siêu thị",
+         "audio": "audio/b5/{voice}/vocab_sieu_thi.mp3"
+        },
+        {
+         "img": "images/b5/bai3/san_bay.jpg",
+         "caption": "Sân bay",
+         "audio": "audio/b5/{voice}/vocab_san_bay.mp3"
+        },
+        {
+         "img": "images/b5/bai3/benh_vien.jpg",
+         "caption": "Bệnh viện",
+         "audio": "audio/b5/{voice}/vocab_benh_vien.mp3"
+        }
+       ]
+      },
+      {
+       "type": "photoFill",
+       "num": 4,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "nhà",
+        "văn phòng",
+        "quán ăn",
+        "quán cà phê",
+        "khách sạn",
+        "siêu thị",
+        "sân bay",
+        "bệnh viện"
+       ],
+       "noteTitleVi": "Tới + Địa điểm",
+       "noteVi": "Khi “Tới” đứng trước một địa điểm, nó có nghĩa là bạn di chuyển tới địa điểm đó. Nhà là ngoại lệ: bạn phải thêm từ “về”.\nNgoại lệ: “nhà”\nKhi nói “go home”, tiếng Việt dùng “Về nhà”, không nói “Tới nhà”.",
+       "noteTitleEn": "Tới + Place",
+       "noteEn": "When “Tới” (tới means towards) is placed before a place, it means that you move to that particular place.\nException: “nhà”\nTo say “go home”, Vietnamese uses “Về nhà” (về means back), not “Tới nhà.”\nVí dụ\nvề nhà → go home\nTôi về nhà. → I go home.\nHôm nay, tôi về nhà. → Today, I go home.",
+       "items": [
+        {
+         "img": "images/b5/bai4/hinh1.jpg",
+         "name": "Hình 1",
+         "template": "Hôm nay mình về {0}.",
+         "answers": [
+          [
+           "nhà"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_01.mp3",
+         "example": true
+        },
+        {
+         "img": "images/b5/bai4/hinh2.jpg",
+         "name": "Hình 2",
+         "template": "Ngày mai chú tới {0}.",
+         "answers": [
+          [
+           "bệnh viện"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_02.mp3"
+        },
+        {
+         "img": "images/b5/bai4/hinh3.jpg",
+         "name": "Hình 3",
+         "template": "Hôm qua chị không tới {0}.",
+         "answers": [
+          [
+           "khách sạn"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_03.mp3"
+        },
+        {
+         "img": "images/b5/bai4/hinh4.jpg",
+         "name": "Hình 4",
+         "template": "Hôm nay anh Nam tới {0}.",
+         "answers": [
+          [
+           "sân bay"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_04.mp3"
+        },
+        {
+         "img": "images/b5/bai4/hinh5.jpg",
+         "name": "Hình 5",
+         "template": "Ngày mai em không tới {0}.",
+         "answers": [
+          [
+           "văn phòng"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_05.mp3"
+        },
+        {
+         "img": "images/b5/bai4/hinh6.jpg",
+         "name": "Hình 6",
+         "template": "Hôm qua chú Đăng tới {0}.",
+         "answers": [
+          [
+           "quán ăn"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_06.mp3"
+        },
+        {
+         "img": "images/b5/bai4/hinh7.jpg",
+         "name": "Hình 7",
+         "template": "Hôm nay cô không tới {0}.",
+         "answers": [
+          [
+           "siêu thị"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_07.mp3"
+        },
+        {
+         "img": "images/b5/bai4/hinh8.jpg",
+         "name": "Hình 8",
+         "template": "Hôm nay chị Mai tới {0}.",
+         "answers": [
+          [
+           "quán cà phê"
+          ]
+         ],
+         "audio": "audio/b5/{voice}/ex4_08.mp3"
+        }
+       ]
+      },
+      {
+       "type": "calendarFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu sau dựa vào lịch bên dưới.",
+       "instructionEn": "Complete the following sentences based on the calendar below.",
+       "matrix": {
+        "columns": [
+         {
+          "date": 1,
+          "tone": "yellow"
+         },
+         {
+          "date": 2,
+          "tone": "pink",
+          "label": "Hôm nay"
+         },
+         {
+          "date": 3,
+          "tone": "yellow"
+         }
+        ],
+        "rows": [
+         {
+          "name": "Châu",
+          "tone": "violet",
+          "cells": [
+           {
+            "img": "images/b5/bai3/benh_vien.jpg",
+            "alt": "bệnh viện"
+           },
+           {
+            "img": "images/b5/bai3/san_bay.jpg",
+            "alt": "sân bay"
+           },
+           {
+            "img": "images/b5/bai3/khach_san.jpg",
+            "alt": "khách sạn"
+           }
+          ]
+         },
+         {
+          "name": "Ngân",
+          "tone": "pink",
+          "cells": [
+           {
+            "img": "images/b5/bai3/van_phong.jpg",
+            "alt": "văn phòng"
+           },
+           {
+            "img": "images/b5/bai3/quan_ca_phe.jpg",
+            "alt": "quán cà phê"
+           },
+           {
+            "img": "images/b5/bai3/quan_ca_phe.jpg",
+            "alt": "quán cà phê"
+           }
+          ]
+         },
+         {
+          "name": "Trang",
+          "tone": "blue",
+          "cells": [
+           {
+            "img": "images/b5/bai3/van_phong.jpg",
+            "alt": "văn phòng"
+           },
+           {
+            "img": "images/b5/bai3/sieu_thi.jpg",
+            "alt": "siêu thị"
+           },
+           {
+            "img": "images/b5/bai3/quan_an.jpg",
+            "alt": "quán ăn"
+           }
+          ]
+         }
+        ]
+       },
+       "words": [
+        "bệnh viện",
+        "văn phòng",
+        "quán cà phê",
+        "siêu thị",
+        "sân bay",
+        "khách sạn",
+        "quán ăn"
+       ],
+       "items": [
+        {
+         "template": "Hôm qua Châu tới {0}.",
+         "answers": [
+          [
+           "bệnh viện"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm qua Ngân và Trang tới {0}.",
+         "answers": [
+          [
+           "văn phòng"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm nay và ngày mai Ngân tới {0}.",
+         "answers": [
+          [
+           "quán cà phê"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm nay Trang tới {0}.",
+         "answers": [
+          [
+           "siêu thị"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm nay Châu tới {0}.",
+         "answers": [
+          [
+           "sân bay"
+          ]
+         ]
+        },
+        {
+         "template": "Ngày mai Châu tới {0}.",
+         "answers": [
+          [
+           "khách sạn"
+          ]
+         ]
+        },
+        {
+         "template": "Ngày mai Trang tới {0}.",
+         "answers": [
+          [
+           "quán ăn"
+          ]
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "audioChoice",
+       "num": 6,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b5/{voice}/listen_ex6_01.mp3",
+         "text": "Bây giờ Minh đang ở đâu?",
+         "options": [
+          "Nhà.",
+          "Văn phòng."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b5/{voice}/listen_ex6_02.mp3",
+         "text": "Hôm qua chị Vy đi đâu?",
+         "options": [
+          "Đi ăn.",
+          "Đi chơi."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b5/{voice}/listen_ex6_03.mp3",
+         "text": "Bây giờ Linh đi đâu?",
+         "options": [
+          "Nhà của Hùng.",
+          "Sân bay."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b5/{voice}/listen_ex6_04.mp3",
+         "text": "Ngày mai chị Hương đi đâu?",
+         "options": [
+          "Đi du lịch.",
+          "Về nhà."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b5/{voice}/listen_ex6_05.mp3",
+         "text": "Hôm nay anh Nam đi đâu?",
+         "options": [
+          "Khách sạn.",
+          "Quán ăn."
+         ],
+         "answer": "a"
+        }
+       ]
+      },
+      {
+       "type": "fillWords",
+       "num": 7,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "siêu thị",
+        "bệnh viện",
+        "văn phòng",
+        "sân bay",
+        "quán cà phê",
+        "về nhà",
+        "khách sạn",
+        "quán ăn"
+       ],
+       "items": [
+        {
+         "before": "Hôm nay Hương tới ",
+         "after": ".",
+         "answers": [
+          "siêu thị"
+         ],
+         "audio": "audio/b5/{voice}/ex9_01.mp3"
+        },
+        {
+         "before": "Ngày mai anh Phong tới ",
+         "after": ".",
+         "answers": [
+          "bệnh viện"
+         ],
+         "audio": "audio/b5/{voice}/ex9_02.mp3"
+        },
+        {
+         "before": "Hôm qua chị Linh không tới ",
+         "after": ".",
+         "answers": [
+          "văn phòng"
+         ],
+         "audio": "audio/b5/{voice}/ex9_03.mp3"
+        },
+        {
+         "before": "Ngày mai chú Sáu không tới ",
+         "after": ".",
+         "answers": [
+          "sân bay"
+         ],
+         "audio": "audio/b5/{voice}/ex9_04.mp3"
+        },
+        {
+         "before": "Chị Châu đang tới ",
+         "after": ".",
+         "answers": [
+          "quán cà phê"
+         ],
+         "audio": "audio/b5/{voice}/ex9_05.mp3"
+        },
+        {
+         "before": "Hôm nay chú Vinh không ",
+         "after": ".",
+         "answers": [
+          "về nhà"
+         ],
+         "audio": "audio/b5/{voice}/ex9_06.mp3"
+        },
+        {
+         "before": "Bây giờ đang tới ",
+         "after": ".",
+         "answers": [
+          "khách sạn"
+         ],
+         "audio": "audio/b5/{voice}/ex9_07.mp3"
+        },
+        {
+         "before": "Bây giờ cô Mây tới ",
+         "after": ".",
+         "answers": [
+          "quán ăn"
+         ],
+         "audio": "audio/b5/{voice}/ex9_08.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "ĐÂU? – WHERE?",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "Đâu là từ để hỏi về địa điểm.",
+         "en": "“Đâu” is a question word used to ask about a place or location."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, đâu thường đứng ở cuối câu hỏi.",
+         "en": "In Vietnamese, “đâu” usually comes at the end of the question."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu?",
+           "en": "Where are you?"
+          },
+          {
+           "vi": "Bạn đi đâu?",
+           "en": "Where are you going?"
+          },
+          {
+           "vi": "Bạn tới đâu?",
+           "en": "Where are you going to?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Tùy vào động từ đi với đâu, câu hỏi có ý nghĩa khác nhau.",
+         "en": "The meaning changes depending on the verb used with “đâu.”"
+        },
+        {
+         "type": "heading",
+         "vi": "1. Ở đâu? – Where are you?",
+         "en": "1. Ở đâu? – Where are you?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Ở đâu? dùng để hỏi một người hoặc một vật đang ở vị trí nào.",
+         "en": "“Ở đâu?” is used to ask where a person or thing is located."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + ở đâu?",
+         "en": "[Subject] + ở đâu?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu?",
+           "en": "Where are you?"
+          },
+          {
+           "vi": "Lan ở đâu?",
+           "en": "Where is Lan?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời thường dùng ở + địa điểm.",
+         "en": "The answer usually uses “ở + place.”"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu? → Mình ở nhà.",
+           "en": "Where are you? → I’m at home."
+          },
+          {
+           "vi": "Lan ở đâu? → Lan ở văn phòng.",
+           "en": "Where is Lan? → Lan is at the office."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Ở → nói về vị trí.",
+         "en": "“Ở” indicates a location or position."
+        },
+        {
+         "type": "heading",
+         "vi": "2. Đi đâu? – Where are you going?",
+         "en": "2. Đi đâu? – Where are you going?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Đi đâu? dùng để hỏi một người đang đi đâu.",
+         "en": "“Đi đâu?” is used to ask where someone is going."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + đi đâu?",
+         "en": "[Subject] + đi đâu?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn đi đâu?",
+           "en": "Where are you going?"
+          },
+          {
+           "vi": "Lan đi đâu?",
+           "en": "Where is Lan going?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời thường dùng đi + địa điểm / hoạt động.",
+         "en": "The answer usually uses “đi + place / activity.”"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn đi đâu? → Mình đi học.",
+           "en": "Where are you going? → I’m going to school."
+          },
+          {
+           "vi": "Bạn đi đâu? → Mình đi làm.",
+           "en": "Where are you going? → I’m going to work."
+          },
+          {
+           "vi": "Lan đi đâu? → Lan đi chơi.",
+           "en": "Where is Lan going? → Lan is going out."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Đi → nói về việc di chuyển / đi đâu đó.",
+         "en": "“Đi” indicates going or traveling somewhere."
+        },
+        {
+         "type": "heading",
+         "vi": "3. Tới đâu? – Where are you going to?",
+         "en": "3. Tới đâu? – Where are you going to?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Tới đâu? dùng để hỏi điểm đến của một người.",
+         "en": "“Tới đâu?” is used to ask about someone’s destination."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + tới đâu?",
+         "en": "[Subject] + tới đâu?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn tới đâu?",
+           "en": "Where are you going to?"
+          },
+          {
+           "vi": "Bạn đi tới đâu?",
+           "en": "Where are you going to?"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời thường dùng tới + địa điểm.",
+         "en": "The answer usually uses “tới + place.”"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn tới đâu? → Mình tới trường.",
+           "en": "Where are you going to? → I’m going to school."
+          },
+          {
+           "vi": "Bạn tới đâu? → Mình tới nhà bạn.",
+           "en": "Where are you going to? → I’m going to your house."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Tới → nhấn mạnh điểm đến.",
+         "en": "“Tới” emphasizes the destination or the place someone is going to."
+        },
+        {
+         "type": "heading",
+         "vi": "4. So sánh “ở đâu?”, “đi đâu?” và “tới đâu?”",
+         "en": "4. Comparing “ở đâu?”, “đi đâu?” and “tới đâu?”"
+        },
+        {
+         "type": "table",
+         "columns": [
+          "Mẫu câu",
+          "Ý nghĩa",
+          "English"
+         ],
+         "rows": [
+          [
+           "ở đâu?",
+           "hỏi vị trí",
+           "ask where someone/something is"
+          ],
+          [
+           "đi đâu?",
+           "hỏi đi đâu",
+           "ask where someone is going"
+          ],
+          [
+           "tới đâu?",
+           "hỏi điểm đến",
+           "ask where someone is going to"
+          ]
+         ]
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ở đâu? → Mình ở nhà.",
+           "en": "Where are you? → I’m at home."
+          },
+          {
+           "vi": "Bạn đi đâu? → Mình đi làm.",
+           "en": "Where are you going? → I’m going to work."
+          },
+          {
+           "vi": "Em đi đâu? → Em tới siêu thị.",
+           "en": "Where are you going? → I’m going to the supermarket."
+          },
+          {
+           "vi": "Anh tới đâu? → Anh tới sân bay.",
+           "en": "Where are you going to? → I’m going to the airport."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 8,
+       "instructionVi": "Chọn ở đâu, đi đâu hoặc tới đâu để hoàn thành câu.",
+       "instructionEn": "Choose the appropriate word.",
+       "items": [
+        {
+         "template": "Bạn {0}? – Mình về nhà.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "đi đâu"
+          }
+         ]
+        },
+        {
+         "template": "Ngân {0}? – Ngân ở sân bay.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "ở đâu"
+          }
+         ]
+        },
+        {
+         "template": "Bạn {0}? – Mình tới văn phòng.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "tới đâu"
+          }
+         ]
+        },
+        {
+         "template": "Anh {0}? – Anh ở Việt Nam.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "ở đâu"
+          }
+         ]
+        },
+        {
+         "template": "Bạn {0}? – Mình đi làm.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "đi đâu"
+          }
+         ]
+        },
+        {
+         "template": "Chị {0}? – Chị tới bệnh viện.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "tới đâu"
+          }
+         ]
+        },
+        {
+         "template": "Bạn {0}? – Mình ở quán cà phê.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "ở đâu"
+          }
+         ]
+        },
+        {
+         "template": "Minh {0}? – Minh đi chơi.",
+         "blanks": [
+          {
+           "options": [
+            "ở đâu",
+            "đi đâu",
+            "tới đâu"
+           ],
+           "answer": "đi đâu"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 9,
+       "instructionVi": "Dùng thông tin trong ngoặc để trả lời câu hỏi.",
+       "instructionEn": "Use the information in the brackets to answer the questions.",
+       "items": [
+        {
+         "question": "Bạn ở đâu?",
+         "hint": "nhà",
+         "answers": [
+          "{p} ở nhà.",
+          "Ở nhà.",
+          "{p} ở nhà."
+         ],
+         "model": "{p} ở nhà.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ]
+        },
+        {
+         "question": "Hôm qua chị đi đâu?",
+         "hint": "đi làm",
+         "answers": [
+          "{p} đi làm.",
+          "Hôm qua {p} đi làm.",
+          "{p} đi làm hôm qua.",
+          "Đi làm."
+         ],
+         "model": "Hôm qua {p} đi làm.",
+         "pronouns": [
+          "chị",
+          "mình",
+          "tôi",
+          "em"
+         ]
+        },
+        {
+         "question": "Bây giờ em tới đâu?",
+         "hint": "sân bay",
+         "answers": [
+          "{p} tới sân bay.",
+          "Bây giờ {p} tới sân bay.",
+          "{p} tới sân bay bây giờ.",
+          "Tới sân bay."
+         ],
+         "model": "Bây giờ {p} tới sân bay.",
+         "pronouns": [
+          "em",
+          "mình",
+          "tôi"
+         ]
+        },
+        {
+         "question": "Bây giờ An ở đâu?",
+         "hint": "Việt Nam",
+         "answers": [
+          "An ở Việt Nam.",
+          "Bây giờ An ở Việt Nam.",
+          "An ở Việt Nam bây giờ.",
+          "Ở Việt Nam."
+         ],
+         "model": "Bây giờ An ở Việt Nam."
+        },
+        {
+         "question": "Ngày mai Nghĩa đi đâu?",
+         "hint": "đi chơi",
+         "answers": [
+          "Nghĩa đi chơi.",
+          "Ngày mai Nghĩa đi chơi.",
+          "Nghĩa đi chơi ngày mai.",
+          "Đi chơi."
+         ],
+         "model": "Ngày mai Nghĩa đi chơi."
+        },
+        {
+         "question": "Bây giờ chú tới đâu?",
+         "hint": "văn phòng",
+         "answers": [
+          "{p} tới văn phòng.",
+          "Bây giờ {p} tới văn phòng.",
+          "{p} tới văn phòng bây giờ.",
+          "Tới văn phòng."
+         ],
+         "model": "Bây giờ {p} tới văn phòng.",
+         "pronouns": [
+          "chú",
+          "mình",
+          "tôi"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 10,
+       "instructionVi": "Đọc nhật ký của Châu và trả lời câu hỏi.",
+       "instructionEn": "Read Châu's diary and answer the questions.",
+       "passage": "25/8\nHôm nay mình đi làm. Buổi sáng, mình tới văn phòng. Buổi trưa, mình đi ăn với đồng nghiệp. Buổi chiều, mình tới siêu thị mua đồ ăn. Hôm nay mình không đi ăn. Hôm nay mình ăn ở nhà.\n\n26/8\nHôm qua mình không đi làm. Mình ở nhà. Buổi chiều, mình tới nhà Ngân ăn cơm.\n\n27/8\nHôm nay mình đi du lịch. Mình tới sân bay từ buổi sáng. Mình sẽ về nhà vào ngày 30.",
+       "questions": [
+        {
+         "q": "Ngày 25 tháng 8, Châu đi đâu vào buổi sáng?",
+         "a": "Ngày 25 tháng 8, buổi sáng Châu tới văn phòng."
+        },
+        {
+         "q": "Buổi trưa ngày 25 tháng 8, Châu làm gì?",
+         "a": "Buổi trưa ngày 25 tháng 8, Châu đi ăn với đồng nghiệp."
+        },
+        {
+         "q": "Ngày 25 tháng 8 Châu có đi ăn không?",
+         "a": "Có. Buổi trưa Châu đi ăn với đồng nghiệp."
+        },
+        {
+         "q": "Ngày 26 tháng 8, Châu đi làm ở đâu?",
+         "a": "Ngày 26 tháng 8, Châu không đi làm. Châu ở nhà."
+        },
+        {
+         "q": "Buổi chiều ngày 26 tháng 8, Châu đi đâu?",
+         "a": "Buổi chiều ngày 26 tháng 8, Châu tới nhà Ngân ăn cơm."
+        },
+        {
+         "q": "Châu đi đâu vào ngày 27 tháng 8?",
+         "a": "Ngày 27 tháng 8, Châu đi du lịch. Châu tới sân bay."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "chooseWord",
+       "num": 11,
+       "instructionVi": "Chọn từ đúng.",
+       "instructionEn": "Choose the correct words.",
+       "items": [
+        {
+         "template": "Hôm nay em tới {0} thị.",
+         "blanks": [
+          {
+           "options": [
+            "siêu",
+            "siu"
+           ],
+           "answer": "siêu"
+          }
+         ]
+        },
+        {
+         "template": "Hôm qua chị có tới khách {0} không?",
+         "blanks": [
+          {
+           "options": [
+            "sạn",
+            "sạng"
+           ],
+           "answer": "sạn"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay cô không tới {0} phòng.",
+         "blanks": [
+          {
+           "options": [
+            "văn",
+            "văng"
+           ],
+           "answer": "văn"
+          }
+         ]
+        },
+        {
+         "template": "Hôm qua mình tới {0} cà phê gặp bạn.",
+         "blanks": [
+          {
+           "options": [
+            "quán",
+            "quáng"
+           ],
+           "answer": "quán"
+          }
+         ]
+        },
+        {
+         "template": "Ngày mai anh có tới sân {0} không?",
+         "blanks": [
+          {
+           "options": [
+            "bai",
+            "bay"
+           ],
+           "answer": "bay"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "dialogueFill",
+       "num": 12,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau.",
+       "instructionEn": "Complete the following dialogue.",
+       "lines": [
+        {
+         "speaker": "Minh:",
+         "template": "Chào Hân, em có khoẻ {0}?",
+         "answers": [
+          [
+           "không"
+          ]
+         ]
+        },
+        {
+         "speaker": "Hân:",
+         "template": "Chào anh Minh, em {0}. Còn anh?",
+         "answers": [
+          [
+           "khoẻ",
+           "khỏe"
+          ]
+         ]
+        },
+        {
+         "speaker": "Minh:",
+         "template": "Anh cũng {0}, cám {1} em. Hôm nay em {2} đi làm không?",
+         "answers": [
+          [
+           "khoẻ",
+           "khỏe"
+          ],
+          [
+           "ơn"
+          ],
+          [
+           "có"
+          ]
+         ]
+        },
+        {
+         "speaker": "Hân:",
+         "template": "Em {0}. Hôm nay em ở nhà. Còn anh?",
+         "answers": [
+          [
+           "không"
+          ]
+         ]
+        },
+        {
+         "speaker": "Minh:",
+         "template": "Hôm nay anh có. Nhưng ngày mai anh không đi làm.",
+         "answers": []
+        },
+        {
+         "speaker": "Hân:",
+         "template": "Ngày mai anh đi {0}?",
+         "answers": [
+          [
+           "đâu"
+          ]
+         ]
+        },
+        {
+         "speaker": "Minh:",
+         "template": "Ngày mai anh {0} nhà ba mẹ.",
+         "answers": [
+          [
+           "về",
+           "tới"
+          ]
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "dau",
+     "label": "Đâu?",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 13,
+       "instructionVi": "Trả lời những câu hỏi sau.",
+       "instructionEn": "Answer the following questions.",
+       "items": [
+        {
+         "question": "Bây giờ bạn ở đâu?"
+        },
+        {
+         "question": "Hôm nay bạn có tới văn phòng không?"
+        },
+        {
+         "question": "Hôm qua bạn có tới siêu thị không?"
+        },
+        {
+         "question": "Ngày mai bạn có tới quán cà phê không?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
