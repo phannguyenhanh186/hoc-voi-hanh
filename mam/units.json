@@ -32,57 +32,58 @@
     {
       "id": "b4",
       "num": 4,
-      "title": "Bạn đang ở đâu?",
+      "title": "Bạn ăn cơm chưa?",
       "status": "ready",
       "page": "bai.html"
     },
     {
       "id": "b5",
       "num": 5,
-      "title": "Sinh nhật của bạn là ngày mấy?",
-      "status": "ready"
+      "title": "Bạn đang ở đâu?",
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b6",
       "num": 6,
-      "title": "Cho em một phở và một trà đá!",
+      "title": "Sinh nhật của bạn là ngày mấy?",
       "status": "ready"
     },
     {
       "id": "b7",
       "num": 7,
-      "title": "Của anh chị một trăm ngàn!",
+      "title": "Cho em một phở và một trà đá!",
       "status": "ready"
     },
     {
       "id": "b8",
       "num": 8,
-      "title": "Hôm nay trời mưa to!",
+      "title": "Của anh chị một trăm ngàn!",
       "status": "ready"
     },
     {
       "id": "b9",
       "num": 9,
-      "title": "Đi xe máy phải đội nón bảo hiểm",
+      "title": "Hôm nay trời mưa to!",
       "status": "ready"
     },
     {
       "id": "b10",
       "num": 10,
-      "title": "Mình thích áo khoác màu đen",
+      "title": "Đi xe máy phải đội nón bảo hiểm",
       "status": "ready"
     },
     {
       "id": "b11",
       "num": 11,
-      "title": "Bạn là người Việt đúng không?",
+      "title": "Mình thích áo khoác màu đen",
       "status": "ready"
     },
     {
-      "id": "b13",
+      "id": "b12",
       "num": 12,
-      "title": "Bạn đang ở đâu?",
-      "status": "todo"
+      "title": "Bạn là người Việt đúng không?",
+      "status": "ready"
     },
     {
       "id": "b14",
