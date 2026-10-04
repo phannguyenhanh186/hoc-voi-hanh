@@ -1700,3 +1700,8 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-match-sel.is-wrong { background: #FBE0DE; border-color: #EB483F; }
 .bai-match-opt { font-size: 1.1rem; line-height: 1.5; padding: 6px 0; color: var(--ink); }
 @media (max-width: 560px) { .bai-match-cols { grid-template-columns: 1fr; } }
+
+/* Bảng âm: mỗi âm một hàng (layout: "rows") */
+.bai-sounds-rows { display: flex; flex-direction: column; gap: 14px; max-width: 760px; }
+.bai-sound-line { display: flex; flex-wrap: wrap; gap: 8px; }
+.bai-sound-line .bai-chip { flex: 0 0 auto; min-width: 84px; }
