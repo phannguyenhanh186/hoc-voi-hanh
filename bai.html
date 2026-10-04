@@ -1105,7 +1105,49 @@
       return box;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer };
+    // Nối câu hỏi với câu trả lời (b4): mỗi câu hỏi chọn chữ cái của câu trả lời phù hợp.
+    // ex.questions = [{q, answer:'b'}], ex.options = [{key:'a', text:'...'}]
+    function renderMatchPairs(ex) {
+      const wrap = el('div', 'bai-match');
+      const left = el('div', 'bai-match-left');
+      const right = el('div', 'bai-match-right');
+      const rows = [];
+      (ex.questions || []).forEach(function (q, i) {
+        const row = el('div', 'bai-match-row');
+        row.appendChild(el('span', 'bai-match-q', (i + 1) + '\u00A0\u00A0' + q.q));
+        const sel = document.createElement('select');
+        sel.className = 'bai-match-sel';
+        sel.setAttribute('aria-label', 'Chọn câu trả lời cho câu ' + (i + 1));
+        const blank = document.createElement('option'); blank.value = ''; blank.textContent = '—'; sel.appendChild(blank);
+        (ex.options || []).forEach(function (o) {
+          const op = document.createElement('option'); op.value = o.key; op.textContent = o.key; sel.appendChild(op);
+        });
+        const mark = el('span', 'bai-mark');
+        sel.addEventListener('change', function () { markCell(sel, mark, ''); });
+        row.appendChild(sel); row.appendChild(mark);
+        left.appendChild(row);
+        rows.push({ q: q, sel: sel, mark: mark });
+      });
+      (ex.options || []).forEach(function (o) {
+        right.appendChild(el('div', 'bai-match-opt', o.key + '.\u00A0\u00A0' + o.text));
+      });
+      const bar = el('div', 'bai-fill-actions');
+      const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button';
+      bCheck.addEventListener('click', function () {
+        rows.forEach(function (r) { markCell(r.sel, r.mark, !r.sel.value ? '' : (r.sel.value === r.q.answer ? 'ok' : 'bad')); });
+      });
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button';
+      bShow.addEventListener('click', function () {
+        rows.forEach(function (r) { r.sel.value = r.q.answer; markCell(r.sel, r.mark, 'ok'); });
+      });
+      bar.appendChild(bCheck); bar.appendChild(bShow);
+      const cols = el('div', 'bai-match-cols');
+      cols.appendChild(left); cols.appendChild(right);
+      wrap.appendChild(cols); wrap.appendChild(bar);
+      return wrap;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
