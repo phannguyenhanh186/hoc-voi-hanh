@@ -453,6 +453,7 @@
     function renderPhotoVocab(ex, n) {
       const box = el('div');
       const grid = el('div', 'bai-photos');
+      if (ex.columns) { grid.style.gridTemplateColumns = 'repeat(' + ex.columns + ', minmax(0, 1fr))'; grid.style.maxWidth = (ex.columns * 210) + 'px'; }
       (ex.items || []).forEach(function (it, i) {
         const fig = el('figure', 'bai-photo');
         const media = el('div', 'bai-photo-media');
