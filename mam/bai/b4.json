@@ -267,7 +267,8 @@
          "caption": "Uống thuốc",
          "audio": "audio/b4/{voice}/vocab_uong_thuoc.mp3"
         }
-       ]
+       ],
+       "columns": 3
       },
       {
        "type": "photoFill",
