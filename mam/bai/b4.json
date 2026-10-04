@@ -4,7 +4,8 @@
  "title": "Bạn ăn cơm chưa?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b4/nam: pron_<van/tu>.mp3 (ua, ưa, ch, tr va cac tu trong bang; ten file theo cach b2/b3), ex2_01..06.mp3 (6 cau ua/ưa), ex4_01..05.mp3 (5 cau ch/tr) - chua thu am."
+  "todo_audio": "audio/b4/nam: pron_<van/tu>.mp3 (ua, ưa, ch, tr va cac tu trong bang; ten file theo cach b2/b3), ex2_01..06.mp3 (6 cau ua/ưa), ex4_01..05.mp3 (5 cau ch/tr) - chua thu am.",
+  "todo_tu_vung": "Hinh: images/b4/bai5/<an_sang|ngu_trua|an_toi|nau_com|tap_the_duc|tam|danh_rang|goi_dau|don_nha|di_cho|uong_thuoc>.jpg va images/b4/bai6/hinh1..10.jpg. Audio audio/b4/nam: vocab_<slug>.mp3 (11 tu) va ex6_01..10.mp3 - chua co."
  },
  "sections": [
   {
@@ -189,6 +190,214 @@
         {
          "text": "Trời mưa nên Trân chưa đi chợ.",
          "audio": "audio/b4/{voice}/ex4_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "hoat-dong",
+     "label": "Hoạt động hằng ngày",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 5,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "img": "images/b4/bai5/an_sang.jpg",
+         "caption": "Ăn sáng",
+         "audio": "audio/b4/{voice}/vocab_an_sang.mp3"
+        },
+        {
+         "img": "images/b4/bai5/ngu_trua.jpg",
+         "caption": "Ngủ trưa",
+         "audio": "audio/b4/{voice}/vocab_ngu_trua.mp3"
+        },
+        {
+         "img": "images/b4/bai5/an_toi.jpg",
+         "caption": "Ăn tối",
+         "audio": "audio/b4/{voice}/vocab_an_toi.mp3"
+        },
+        {
+         "img": "images/b4/bai5/nau_com.jpg",
+         "caption": "Nấu cơm",
+         "audio": "audio/b4/{voice}/vocab_nau_com.mp3"
+        },
+        {
+         "img": "images/b4/bai5/tap_the_duc.jpg",
+         "caption": "Tập thể dục",
+         "audio": "audio/b4/{voice}/vocab_tap_the_duc.mp3"
+        },
+        {
+         "img": "images/b4/bai5/tam.jpg",
+         "caption": "Tắm",
+         "audio": "audio/b4/{voice}/vocab_tam.mp3"
+        },
+        {
+         "img": "images/b4/bai5/danh_rang.jpg",
+         "caption": "Đánh răng",
+         "audio": "audio/b4/{voice}/vocab_danh_rang.mp3"
+        },
+        {
+         "img": "images/b4/bai5/goi_dau.jpg",
+         "caption": "Gội đầu",
+         "audio": "audio/b4/{voice}/vocab_goi_dau.mp3"
+        },
+        {
+         "img": "images/b4/bai5/don_nha.jpg",
+         "caption": "Dọn nhà",
+         "audio": "audio/b4/{voice}/vocab_don_nha.mp3"
+        },
+        {
+         "img": "images/b4/bai5/di_cho.jpg",
+         "caption": "Đi chợ",
+         "audio": "audio/b4/{voice}/vocab_di_cho.mp3"
+        },
+        {
+         "img": "images/b4/bai5/uong_thuoc.jpg",
+         "caption": "Uống thuốc",
+         "audio": "audio/b4/{voice}/vocab_uong_thuoc.mp3"
+        }
+       ]
+      },
+      {
+       "type": "photoFill",
+       "num": 6,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "ăn sáng",
+        "ngủ trưa",
+        "ăn tối",
+        "nấu cơm",
+        "tập thể dục",
+        "tắm",
+        "đánh răng",
+        "gội đầu",
+        "dọn nhà",
+        "đi chợ",
+        "uống thuốc"
+       ],
+       "items": [
+        {
+         "img": "images/b4/bai6/hinh1.jpg",
+         "name": "Hình 1",
+         "template": "Chị Vy {0} rồi.",
+         "answers": [
+          [
+           "đánh răng"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_01.mp3",
+         "example": true
+        },
+        {
+         "img": "images/b4/bai6/hinh2.jpg",
+         "name": "Hình 2",
+         "template": "Cô Lụa {0} rồi.",
+         "answers": [
+          [
+           "uống thuốc"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_02.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh3.jpg",
+         "name": "Hình 3",
+         "template": "Trang {0} rồi.",
+         "answers": [
+          [
+           "tập thể dục"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_03.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh4.jpg",
+         "name": "Hình 4",
+         "template": "Chú Hồng chưa {0}.",
+         "answers": [
+          [
+           "tắm"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_04.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh5.jpg",
+         "name": "Hình 5",
+         "template": "Chị Lan chưa {0}.",
+         "answers": [
+          [
+           "đi chợ"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_05.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh6.jpg",
+         "name": "Hình 6",
+         "template": "Hiền {0} rồi.",
+         "answers": [
+          [
+           "tắm"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_06.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh7.jpg",
+         "name": "Hình 7",
+         "template": "Anh Đăng chưa {0}.",
+         "answers": [
+          [
+           "ăn sáng"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_07.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh8.jpg",
+         "name": "Hình 8",
+         "template": "Chú Minh chưa {0}.",
+         "answers": [
+          [
+           "ngủ trưa"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_08.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh9.jpg",
+         "name": "Hình 9",
+         "template": "Cô Hương {0} rồi.",
+         "answers": [
+          [
+           "dọn nhà"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_09.mp3"
+        },
+        {
+         "img": "images/b4/bai6/hinh10.jpg",
+         "name": "Hình 10",
+         "template": "Anh Cường {0} rồi.",
+         "answers": [
+          [
+           "ăn tối"
+          ]
+         ],
+         "audio": "audio/b4/{voice}/ex6_10.mp3"
         }
        ]
       }
