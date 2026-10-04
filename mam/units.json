@@ -46,84 +46,91 @@
     {
       "id": "b6",
       "num": 6,
-      "title": "Sinh nhật của bạn là ngày mấy?",
-      "status": "ready"
+      "title": "Em thường đi chơi vào tối Chủ Nhật.",
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b7",
       "num": 7,
-      "title": "Cho em một phở và một trà đá!",
+      "title": "Sinh nhật của bạn là ngày mấy?",
       "status": "ready"
     },
     {
       "id": "b8",
       "num": 8,
-      "title": "Của anh chị một trăm ngàn!",
+      "title": "Cho em một phở và một trà đá!",
       "status": "ready"
     },
     {
       "id": "b9",
       "num": 9,
-      "title": "Hôm nay trời mưa to!",
+      "title": "Của anh chị một trăm ngàn!",
       "status": "ready"
     },
     {
       "id": "b10",
       "num": 10,
-      "title": "Đi xe máy phải đội nón bảo hiểm",
+      "title": "Hôm nay trời mưa to!",
       "status": "ready"
     },
     {
       "id": "b11",
       "num": 11,
-      "title": "Mình thích áo khoác màu đen",
+      "title": "Đi xe máy phải đội nón bảo hiểm",
       "status": "ready"
     },
     {
       "id": "b12",
       "num": 12,
+      "title": "Mình thích áo khoác màu đen",
+      "status": "ready"
+    },
+    {
+      "id": "b13",
+      "num": 13,
       "title": "Bạn là người Việt đúng không?",
       "status": "ready"
     },
     {
       "id": "b14",
-      "num": 13,
-      "title": "Đang cập nhật…",
-      "status": "todo"
-    },
-    {
-      "id": "b15",
       "num": 14,
       "title": "Đang cập nhật…",
       "status": "todo"
     },
     {
-      "id": "b16",
+      "id": "b15",
       "num": 15,
       "title": "Đang cập nhật…",
       "status": "todo"
     },
     {
-      "id": "b17",
+      "id": "b16",
       "num": 16,
       "title": "Đang cập nhật…",
       "status": "todo"
     },
     {
-      "id": "b18",
+      "id": "b17",
       "num": 17,
       "title": "Đang cập nhật…",
       "status": "todo"
     },
     {
-      "id": "b19",
+      "id": "b18",
       "num": 18,
       "title": "Đang cập nhật…",
       "status": "todo"
     },
     {
-      "id": "b20",
+      "id": "b19",
       "num": 19,
+      "title": "Đang cập nhật…",
+      "status": "todo"
+    },
+    {
+      "id": "b20",
+      "num": 20,
       "title": "Đang cập nhật…",
       "status": "todo"
     }
