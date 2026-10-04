@@ -695,8 +695,8 @@
        "blocks": [
         {
          "type": "heading",
-         "vi": "Thường + Hành động",
-         "en": "Thường + Action"
+         "vi": "Thường + hành động",
+         "en": "Thường + action"
         },
         {
          "type": "paragraph",
@@ -731,8 +731,8 @@
         },
         {
          "type": "heading",
-         "vi": "Không thường + Hành động",
-         "en": "Không thường + Action"
+         "vi": "Không thường + hành động",
+         "en": "Không thường + action"
         },
         {
          "type": "paragraph",
@@ -764,6 +764,255 @@
            "en": "Mrs. Sáu doesn't usually drink coffee."
           }
          ]
+        },
+        {
+         "type": "heading",
+         "vi": "… có thường + hành động + không?",
+         "en": "… có thường + action + không?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "“… có thường + hành động + không?” dùng để hỏi một người có thường xuyên làm một việc gì đó hay không.",
+         "en": "“… có thường + action + không?” is used to ask whether someone usually does something."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + có thường + [hành động] + không?",
+         "en": "[Subject] + có thường + [action] + không?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn có thường đi làm không?",
+           "en": "Do you usually go to work?"
+          },
+          {
+           "vi": "Chị có thường uống cà phê không?",
+           "en": "Do you usually drink coffee?"
+          },
+          {
+           "vi": "Anh Phong có thường tập thể dục không?",
+           "en": "Does Phong usually exercise?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cách trả lời",
+         "en": "How to answer"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có thể trả lời ngắn:",
+         "en": "You can give a short answer:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có.",
+         "en": "Yes."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Không.",
+         "en": "No."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Bạn cũng có thể trả lời bằng một câu đầy đủ:",
+         "en": "You can also answer with a full sentence:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Mình thường đi làm.",
+         "en": "I usually go to work."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Mình không thường đi chợ.",
+         "en": "I don't usually go to the market."
+        },
+        {
+         "type": "heading",
+         "vi": "So sánh",
+         "en": "Compare"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Bạn có đi chợ không?",
+         "en": "Do you go to the market?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Bạn có thường đi chợ không?",
+         "en": "Do you usually go to the market?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "“Có…không?” hỏi một hành động có xảy ra hay không.",
+         "en": "“Có…không?” asks whether an action happens or not."
+        },
+        {
+         "type": "paragraph",
+         "vi": "“Có thường…không?” hỏi một hành động có xảy ra thường xuyên / như một thói quen hay không.",
+         "en": "“Có thường…không?” asks whether an action happens regularly or as a habit."
+        }
+       ]
+      },
+      {
+       "type": "wordOrder",
+       "num": 12,
+       "instructionVi": "Sắp xếp các từ sau để tạo thành câu hoàn chỉnh.",
+       "instructionEn": "Put the words in the correct order to make complete sentences.",
+       "items": [
+        {
+         "words": [
+          "thường",
+          "mình",
+          "làm",
+          "đi"
+         ],
+         "answers": [
+          "Mình thường đi làm."
+         ]
+        },
+        {
+         "words": [
+          "không",
+          "Lan",
+          "đi",
+          "thường",
+          "chợ"
+         ],
+         "answers": [
+          "Lan không thường đi chợ."
+         ]
+        },
+        {
+         "words": [
+          "tập",
+          "Long",
+          "thường",
+          "dục",
+          "anh",
+          "thể"
+         ],
+         "answers": [
+          "Anh Long thường tập thể dục."
+         ]
+        },
+        {
+         "words": [
+          "không",
+          "sáng",
+          "Minh",
+          "ăn",
+          "thường"
+         ],
+         "answers": [
+          "Minh không thường ăn sáng."
+         ]
+        },
+        {
+         "words": [
+          "dọn",
+          "Mai",
+          "thường",
+          "nhà"
+         ],
+         "answers": [
+          "Mai thường dọn nhà."
+         ]
+        },
+        {
+         "words": [
+          "đi",
+          "thường",
+          "không",
+          "Nam",
+          "chợ"
+         ],
+         "answers": [
+          "Nam không thường đi chợ."
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 13,
+       "instructionVi": "Trả lời các câu hỏi theo gợi ý.",
+       "instructionEn": "Answer the questions using the prompts.",
+       "items": [
+        {
+         "question": "Bạn có thường đi làm không?",
+         "prefix": "Có.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} thường đi làm."
+         ],
+         "model": "{p} thường đi làm."
+        },
+        {
+         "question": "Bạn có thường đi chợ không?",
+         "prefix": "Không.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} không thường đi chợ."
+         ],
+         "model": "{p} không thường đi chợ."
+        },
+        {
+         "question": "Chị Hường có thường tập thể dục không?",
+         "prefix": "Có.",
+         "answers": [
+          "Chị Hường thường tập thể dục.",
+          "Chị ấy thường tập thể dục.",
+          "Chị thường tập thể dục.",
+          "Hường thường tập thể dục."
+         ],
+         "model": "Chị Hường thường tập thể dục."
+        },
+        {
+         "question": "Anh Bình có thường ăn sáng không?",
+         "prefix": "Không.",
+         "answers": [
+          "Anh Bình không thường ăn sáng.",
+          "Anh ấy không thường ăn sáng.",
+          "Anh không thường ăn sáng.",
+          "Bình không thường ăn sáng."
+         ],
+         "model": "Anh Bình không thường ăn sáng."
+        },
+        {
+         "question": "Chú Tám có thường dọn nhà không?",
+         "prefix": "Có.",
+         "answers": [
+          "Chú Tám thường dọn nhà.",
+          "Chú ấy thường dọn nhà.",
+          "Chú thường dọn nhà.",
+          "Tám thường dọn nhà."
+         ],
+         "model": "Chú Tám thường dọn nhà."
+        },
+        {
+         "question": "Cô Nga có thường đi chơi không?",
+         "prefix": "Không.",
+         "answers": [
+          "Cô Nga không thường đi chơi.",
+          "Cô ấy không thường đi chơi.",
+          "Cô không thường đi chơi.",
+          "Nga không thường đi chơi."
+         ],
+         "model": "Cô Nga không thường đi chơi."
         }
        ]
       }
