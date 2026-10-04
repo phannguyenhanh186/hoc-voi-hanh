@@ -59,79 +59,79 @@
     {
       "id": "b8",
       "num": 8,
-      "title": "Cho em một phở và một trà đá!",
-      "status": "ready"
+      "title": "Bây giờ là mấy giờ?",
+      "status": "todo"
     },
     {
       "id": "b9",
       "num": 9,
-      "title": "Của anh chị một trăm ngàn!",
+      "title": "Hôm qua chị đi ngủ lúc mấy giờ?",
       "status": "ready"
     },
     {
       "id": "b10",
       "num": 10,
-      "title": "Hôm nay trời mưa to!",
-      "status": "ready"
+      "title": "Mẹ của bạn mấy tuổi?",
+      "status": "todo"
     },
     {
       "id": "b11",
       "num": 11,
-      "title": "Đi xe máy phải đội nón bảo hiểm",
-      "status": "ready"
+      "title": "Khi nào bạn đi Việt Nam?",
+      "status": "todo"
     },
     {
       "id": "b12",
       "num": 12,
-      "title": "Mình thích áo khoác màu đen",
-      "status": "ready"
+      "title": "Mình chỉ có một chị gái thôi.",
+      "status": "todo"
     },
     {
       "id": "b13",
       "num": 13,
-      "title": "Bạn là người Việt đúng không?",
-      "status": "ready"
+      "title": "Anh ấy là người Pháp đúng không?",
+      "status": "todo"
     },
     {
       "id": "b14",
       "num": 14,
-      "title": "Đang cập nhật…",
+      "title": "Đi từ Hà Nội tới Sài Gòn mất bao lâu?",
       "status": "todo"
     },
     {
       "id": "b15",
       "num": 15,
-      "title": "Đang cập nhật…",
+      "title": "Cái áo khoác này bao nhiêu?",
       "status": "todo"
     },
     {
       "id": "b16",
       "num": 16,
-      "title": "Đang cập nhật…",
-      "status": "todo"
+      "title": "Cho em một phở và một trà đá!",
+      "status": "ready"
     },
     {
       "id": "b17",
       "num": 17,
-      "title": "Đang cập nhật…",
+      "title": "Dạo này em thấy mệt.",
       "status": "todo"
     },
     {
       "id": "b18",
       "num": 18,
-      "title": "Đang cập nhật…",
-      "status": "todo"
+      "title": "Trời đang mưa to.",
+      "status": "ready"
     },
     {
       "id": "b19",
       "num": 19,
-      "title": "Đang cập nhật…",
-      "status": "todo"
+      "title": "Ra đường phải đội nón bảo hiểm",
+      "status": "ready"
     },
     {
       "id": "b20",
       "num": 20,
-      "title": "Đang cập nhật…",
+      "title": "Ôn tập",
       "status": "todo"
     }
   ]
