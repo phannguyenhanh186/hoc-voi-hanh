@@ -1689,3 +1689,14 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-grammar-th { font-weight: 700; background: #FFF3C4; }
 .bai-grammar-table > :nth-child(3n) { border-right: 0; }
 .bai-grammar-table > :nth-last-child(-n+3) { border-bottom: 0; }
+
+/* Nối câu hỏi - câu trả lời (b4) */
+.bai-match { max-width: 760px; }
+.bai-match-cols { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 20px 32px; align-items: start; margin-bottom: 14px; }
+.bai-match-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.bai-match-q { flex: 1; font-size: 1.1rem; line-height: 1.5; color: var(--ink); }
+.bai-match-sel { font: inherit; font-size: 1.1rem; min-width: 4.2rem; padding: 4px 8px; border: 2px solid var(--stroke); border-radius: 8px; background: #fff; color: var(--ink); }
+.bai-match-sel.is-correct { background: #D6F2DF; border-color: #2E9E5B; }
+.bai-match-sel.is-wrong { background: #FBE0DE; border-color: #EB483F; }
+.bai-match-opt { font-size: 1.1rem; line-height: 1.5; padding: 6px 0; color: var(--ink); }
+@media (max-width: 560px) { .bai-match-cols { grid-template-columns: 1fr; } }
