@@ -4,8 +4,7 @@
  "title": "Bạn ăn cơm chưa?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b4/nam: pron_<van>.mp3 cho ua, mua, chua(chúa), mùa, của, đũa, lụa, ưa, mưa, hứa, dừa, lửa, sữa, ngựa (ten file theo cach b2/b3) va ex2_01..05.mp3 - chua thu am.",
-  "todo_confirm": "Phat am: da bo bang ch/tr; con 5 cau (Bai 2) - CAN XAC NHAN."
+  "todo_audio": "audio/b4/nam: pron_<van/tu>.mp3 (ua, ưa, ch, tr va cac tu trong bang; ten file theo cach b2/b3), ex2_01..06.mp3 (6 cau ua/ưa), ex4_01..05.mp3 (5 cau ch/tr) - chua thu am."
  },
  "sections": [
   {
@@ -65,6 +64,38 @@
          }
         ]
        ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và lặp lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Trời mưa chưa?",
+         "audio": "audio/b4/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Buổi trưa nay mưa.",
+         "audio": "audio/b4/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Mưa vừa vừa, chưa to.",
+         "audio": "audio/b4/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Mẹ của mình mua cua để nấu cơm trưa.",
+         "audio": "audio/b4/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Buổi trưa mưa to nên mình chưa đi chùa.",
+         "audio": "audio/b4/{voice}/ex2_05.mp3"
+        },
+        {
+         "text": "Mưa vừa dứt, cô Lụa đi mua dưa để nấu canh chua.",
+         "audio": "audio/b4/{voice}/ex2_06.mp3"
+        }
+       ]
       }
      ]
     },
@@ -73,30 +104,91 @@
      "label": "Phụ âm ch/tr",
      "exercises": [
       {
+       "type": "sounds",
+       "num": 3,
+       "instructionVi": "Nghe và lặp lại các âm sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b4/{voice}/pron_{key}.mp3",
+       "columns": [
+        [
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "ch",
+            "chả",
+            "cho"
+           ],
+           [
+            "chợ",
+            "chỗ",
+            "chê"
+           ],
+           [
+            "chủ",
+            "chữ",
+            "chân"
+           ],
+           [
+            "chọn",
+            "chưa",
+            "chua"
+           ]
+          ]
+         }
+        ],
+        [
+         {
+          "tone": "violet",
+          "rows": [
+           [
+            "tr",
+            "trả",
+            "trọ"
+           ],
+           [
+            "trơ",
+            "tre",
+            "trữ"
+           ],
+           [
+            "trăn",
+            "trên",
+            "trốn"
+           ],
+           [
+            "trưa"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
        "type": "repeatSentences",
-       "num": 2,
+       "num": 4,
        "instructionVi": "Nghe và lặp lại các câu sau.",
        "instructionEn": "Listen and repeat the following sentences.",
        "items": [
         {
          "text": "Trời chưa mưa.",
-         "audio": "audio/b4/{voice}/ex2_01.mp3"
+         "audio": "audio/b4/{voice}/ex4_01.mp3"
         },
         {
          "text": "Trang chưa đi chơi.",
-         "audio": "audio/b4/{voice}/ex2_02.mp3"
+         "audio": "audio/b4/{voice}/ex4_02.mp3"
         },
         {
          "text": "Trưa nay chị đi mua trái cây.",
-         "audio": "audio/b4/{voice}/ex2_03.mp3"
+         "audio": "audio/b4/{voice}/ex4_03.mp3"
         },
         {
          "text": "Chương và chú Trung chưa đi ăn.",
-         "audio": "audio/b4/{voice}/ex2_04.mp3"
+         "audio": "audio/b4/{voice}/ex4_04.mp3"
         },
         {
          "text": "Trời mưa nên Trân chưa đi chợ.",
-         "audio": "audio/b4/{voice}/ex2_05.mp3"
+         "audio": "audio/b4/{voice}/ex4_05.mp3"
         }
        ]
       }
