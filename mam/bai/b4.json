@@ -890,6 +890,187 @@
      ]
     }
    ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "roi-chua",
+     "label": "Rồi/Chưa",
+     "exercises": [
+      {
+       "type": "chooseWord",
+       "num": 12,
+       "instructionVi": "Chọn từ đúng.",
+       "instructionEn": "Choose the correct words.",
+       "items": [
+        {
+         "template": "Bạn ngủ {0} chưa?",
+         "blanks": [
+          {
+           "options": [
+            "dậy",
+            "vậy"
+           ],
+           "answer": "dậy"
+          }
+         ]
+        },
+        {
+         "template": "Anh Tú chưa {0} đầu.",
+         "blanks": [
+          {
+           "options": [
+            "ngội",
+            "gội"
+           ],
+           "answer": "gội"
+          }
+         ]
+        },
+        {
+         "template": "Chị Mai {0} cơm rồi.",
+         "blanks": [
+          {
+           "options": [
+            "nấu",
+            "nhấu"
+           ],
+           "answer": "nấu"
+          }
+         ]
+        },
+        {
+         "template": "Cô Oanh chưa ăn {0}.",
+         "blanks": [
+          {
+           "options": [
+            "tối",
+            "tói"
+           ],
+           "answer": "tối"
+          }
+         ]
+        },
+        {
+         "template": "Chú Phúc uống {0} rồi.",
+         "blanks": [
+          {
+           "options": [
+            "thúc",
+            "thuốc"
+           ],
+           "answer": "thuốc"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 13,
+       "noItemNum": true,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau sử dụng từ chưa và rồi.",
+       "instructionEn": "Complete the following dialogue.",
+       "items": [
+        {
+         "template": "Ánh: Chào Tùng, bạn ăn sáng {0}?",
+         "blanks": [
+          {
+           "options": [
+            "chưa",
+            "rồi"
+           ],
+           "answer": "chưa"
+          }
+         ]
+        },
+        {
+         "template": "Tùng: Chào Ánh, mình ăn sáng {0}. Còn bạn?",
+         "blanks": [
+          {
+           "options": [
+            "chưa",
+            "rồi"
+           ],
+           "answer": "rồi"
+          }
+         ]
+        },
+        {
+         "template": "Ánh: Mình {0} ăn sáng tại vì mình {1} đi chợ. Mình mới tập thể dục. Sáng hôm nay bạn ăn gì?",
+         "blanks": [
+          {
+           "options": [
+            "chưa",
+            "rồi"
+           ],
+           "answer": "chưa"
+          },
+          {
+           "options": [
+            "chưa",
+            "rồi"
+           ],
+           "answer": "chưa"
+          }
+         ]
+        },
+        {
+         "template": "Tùng: Mình ăn bún bò, nhưng mình {0} tập thể dục.",
+         "blanks": [
+          {
+           "options": [
+            "chưa",
+            "rồi"
+           ],
+           "answer": "chưa"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "roi-chua",
+     "label": "Rồi/Chưa",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 14,
+       "instructionVi": "Trả lời những câu hỏi sau.",
+       "instructionEn": "Answer the following questions.",
+       "items": [
+        {
+         "question": "Hôm nay bạn ăn sáng chưa?"
+        },
+        {
+         "question": "Hôm nay bạn uống thuốc chưa?"
+        },
+        {
+         "question": "Buổi sáng hôm nay bạn đi làm chưa?"
+        },
+        {
+         "question": "Hôm nay bạn đi chợ chưa?"
+        },
+        {
+         "question": "Sáng hôm nay bạn đánh răng chưa?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
