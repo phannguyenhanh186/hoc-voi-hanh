@@ -122,6 +122,20 @@
     }
 
     function renderSounds(ex) {
+      if (ex.layout === 'rows') {
+        // Mỗi âm một hàng: chip đầu là âm, các chip sau là từ ví dụ; tự xuống dòng nếu hẹp.
+        const rowsWrap = el('div', 'bai-sounds-rows');
+        (ex.columns || []).forEach(function (groups) {
+          groups.forEach(function (g) {
+            const line = el('div', 'bai-sound-line');
+            (g.rows || []).forEach(function (row) {
+              row.forEach(function (t) { if (t != null) line.appendChild(makeChip(t, ex.audio, 'bai-tone-' + (g.tone || 'violet'))); });
+            });
+            rowsWrap.appendChild(line);
+          });
+        });
+        return rowsWrap;
+      }
       const wrap = el('div', 'bai-sounds');
       (ex.columns || []).forEach(function (groups) {
         const col = el('div', 'bai-sound-col');
