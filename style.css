@@ -1645,6 +1645,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-grammar-title { font-size: 1.4rem; font-weight: 800; color: var(--accent-deep); margin: 0 0 4px; }
 .bai-grammar-heading { margin-top: 14px; }
 .bai-grammar-heading-vi { font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+.bai-grammar-heading.is-purple .bai-grammar-heading-vi { font-size: 1.4rem; font-weight: 800; color: var(--accent-deep); }
 .bai-grammar-heading-en { font-size: 0.95rem; font-style: italic; color: var(--muted); }
 .bai-grammar-structure-vi { font-weight: 700; color: var(--ink); }
 /* Bài 2: cấu trúc dùng vàng nhạt riêng #FFEEC9 (thay vì --yellow dùng chung toàn site) */
