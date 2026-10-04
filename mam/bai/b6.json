@@ -5,7 +5,8 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo": "Audio audio/b6/nam: pron_<van/tu>.mp3 (ươ, uô va cac tu trong bang), ex2_01..05.mp3, ex3_01..05.mp3, vocab_so_<khong|mot|hai|ba|bon|nam|sau|bay|tam|chin|muoi>.mp3, vocab_thu_<hai|ba|tu|nam|sau|bay>.mp3 + vocab_chu_nhat.mp3 - chua thu am. Hinh so: images/b6/bai4/so_0..so_10.jpg (chua co thi app hien o chu so lon). Thu trong tuan khong dung hinh.",
-  "confirm": "De ghi 'so 0-10' va 11 hinh nhung chi liet ke tu mot..muoi; da them 'khong' cho so 0 - CAN XAC NHAN. Cac bai tu vung danh so 4, 5 tam thoi."
+  "confirm": "De ghi 'so 0-10' va 11 hinh nhung chi liet ke tu mot..muoi; da them 'khong' cho so 0 - CAN XAC NHAN. Cac bai tu vung danh so 4, 5 tam thoi.",
+  "todo_ex": "Hinh so: images/b6/bai5/hinh1..9.jpg; audio thu: audio/b6/nam/ex_thu_01..06.mp3 - chua co. Bai so khong co audio. Cau vi du 'ba' to dam/do theo kieu vi du chung."
  },
  "sections": [
   {
@@ -205,6 +206,109 @@
          "audio": "audio/b6/{voice}/vocab_so_muoi.mp3"
         }
        ]
+      },
+      {
+       "type": "photoFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu sau với số phù hợp.",
+       "instructionEn": "Complete the following sentences with the appropriate numbers.",
+       "columns": 3,
+       "items": [
+        {
+         "img": "images/b6/bai5/hinh1.jpg",
+         "name": "Hình 1",
+         "template": "{0} quả táo.",
+         "answers": [
+          [
+           "ba"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "img": "images/b6/bai5/hinh2.jpg",
+         "name": "Hình 2",
+         "template": "{0} con chó.",
+         "answers": [
+          [
+           "bốn"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh3.jpg",
+         "name": "Hình 3",
+         "template": "{0} cuốn sách.",
+         "answers": [
+          [
+           "bảy"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh4.jpg",
+         "name": "Hình 4",
+         "template": "{0} quả cam.",
+         "answers": [
+          [
+           "chín"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh5.jpg",
+         "name": "Hình 5",
+         "template": "{0} ly nước.",
+         "answers": [
+          [
+           "năm"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh6.jpg",
+         "name": "Hình 6",
+         "template": "{0} người.",
+         "answers": [
+          [
+           "hai"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh7.jpg",
+         "name": "Hình 7",
+         "template": "{0} cái ghế và {1} cái bàn.",
+         "answers": [
+          [
+           "mười"
+          ],
+          [
+           "một"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh8.jpg",
+         "name": "Hình 8",
+         "template": "{0} cái điện thoại.",
+         "answers": [
+          [
+           "ba"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh9.jpg",
+         "name": "Hình 9",
+         "template": "{0} cái chén.",
+         "answers": [
+          [
+           "sáu"
+          ]
+         ]
+        }
+       ]
       }
      ]
     },
@@ -214,7 +318,7 @@
      "exercises": [
       {
        "type": "photoVocab",
-       "num": 5,
+       "num": 6,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
        "columns": 4,
@@ -253,6 +357,74 @@
          "big": "CN",
          "caption": "Chủ nhật",
          "audio": "audio/b6/{voice}/vocab_chu_nhat.mp3"
+        }
+       ]
+      },
+      {
+       "type": "audioFill",
+       "num": 7,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "items": [
+        {
+         "template": "Tối {0} Thư ở nhà.",
+         "answers": [
+          [
+           "thứ sáu"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_01.mp3"
+        },
+        {
+         "template": "Chiều {0} mình đi ăn với anh Kiên.",
+         "answers": [
+          [
+           "thứ ba"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_02.mp3"
+        },
+        {
+         "template": "Mình thường đi chợ vào {0}.",
+         "answers": [
+          [
+           "thứ bảy"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_03.mp3"
+        },
+        {
+         "template": "{0} mình đi về nhà ba mẹ.",
+         "answers": [
+          [
+           "thứ tư"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_04.mp3"
+        },
+        {
+         "distinct": true,
+         "template": "{0} và {1} Nam không đi làm.",
+         "answers": [
+          [
+           "thứ năm",
+           "chủ nhật"
+          ],
+          [
+           "chủ nhật",
+           "thứ năm"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_05.mp3"
+        },
+        {
+         "template": "Sáng {0} Quỳnh đi cà phê.",
+         "answers": [
+          [
+           "thứ hai"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_06.mp3"
         }
        ]
       }
