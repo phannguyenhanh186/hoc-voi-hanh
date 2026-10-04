@@ -6,7 +6,8 @@
   "doc": "App bo qua key bat dau bang '_'.",
   "todo": "Audio audio/b6/nam: pron_<van/tu>.mp3 (ươ, uô va cac tu trong bang), ex2_01..05.mp3, ex3_01..05.mp3, vocab_so_<khong|mot|hai|ba|bon|nam|sau|bay|tam|chin|muoi>.mp3, vocab_thu_<hai|ba|tu|nam|sau|bay>.mp3 + vocab_chu_nhat.mp3 - chua thu am. Hinh so: images/b6/bai4/so_0..so_10.jpg (chua co thi app hien o chu so lon). Thu trong tuan khong dung hinh.",
   "confirm": "De ghi 'so 0-10' va 11 hinh nhung chi liet ke tu mot..muoi; da them 'khong' cho so 0 - CAN XAC NHAN. Cac bai tu vung danh so 4, 5 tam thoi.",
-  "todo_ex": "Hinh so: images/b6/bai5/hinh1..9.jpg; audio thu: audio/b6/nam/ex_thu_01..06.mp3 - chua co. Bai so khong co audio. Cau vi du 'ba' to dam/do theo kieu vi du chung."
+  "todo_ex": "Hinh so: images/b6/bai5/hinh1..9.jpg; audio thu: audio/b6/nam/ex_thu_01..06.mp3 - chua co. Bai so khong co audio. Cau vi du 'ba' to dam/do theo kieu vi du chung.",
+  "todo_nghe": "audio/b6/nam: ex8_01..05.mp3, ex9_01..06.mp3 - chua thu am. Bai 8: cau lenh 'chon cau tra loi dung' nhung de la dien so, dang lam kieu dien (nhan so hoac chu); bai 9: nhan 4302 hoac '4 3 0 2'."
  },
  "sections": [
   {
@@ -425,6 +426,156 @@
           ]
          ],
          "audio": "audio/b6/{voice}/ex_thu_06.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "so",
+     "label": "Số",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "num": 8,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "template": "Xe buýt số {0}.",
+         "answers": [
+          [
+           "8",
+           "tám"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_01.mp3"
+        },
+        {
+         "template": "Nhà Nhật có {0} người.",
+         "answers": [
+          [
+           "5",
+           "năm"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_02.mp3"
+        },
+        {
+         "template": "Linh năm nay {0} tuổi.",
+         "answers": [
+          [
+           "10",
+           "mười"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_03.mp3"
+        },
+        {
+         "template": "Phòng số {0}.",
+         "answers": [
+          [
+           "147",
+           "một bốn bảy"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_04.mp3"
+        },
+        {
+         "template": "Số điện thoại của chị Tuyền là 083 153 {0}.",
+         "answers": [
+          [
+           "0592"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_05.mp3"
+        }
+       ]
+      },
+      {
+       "type": "audioFill",
+       "num": 9,
+       "instructionVi": "Nghe và điền số vào chỗ trống.",
+       "instructionEn": "Listen and fill in the blanks.",
+       "items": [
+        {
+         "template": "091 151 {0}",
+         "answers": [
+          [
+           "4302"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_01.mp3"
+        },
+        {
+         "template": "093 227 {0}",
+         "answers": [
+          [
+           "8143"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_02.mp3"
+        },
+        {
+         "template": "083 {0} {1}",
+         "answers": [
+          [
+           "562"
+          ],
+          [
+           "7891"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_03.mp3"
+        },
+        {
+         "template": "028 {0} {1}",
+         "answers": [
+          [
+           "304"
+          ],
+          [
+           "7740"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_04.mp3"
+        },
+        {
+         "template": "{0} {1} {2}",
+         "answers": [
+          [
+           "094"
+          ],
+          [
+           "321"
+          ],
+          [
+           "8692"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_05.mp3"
+        },
+        {
+         "template": "{0} {1} {2}",
+         "answers": [
+          [
+           "070"
+          ],
+          [
+           "304"
+          ],
+          [
+           "5852"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_06.mp3"
         }
        ]
       }
