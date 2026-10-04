@@ -125,9 +125,12 @@
       if (ex.layout === 'rows') {
         // Mỗi âm một hàng: chip đầu là âm, các chip sau là từ ví dụ; tự xuống dòng nếu hẹp.
         const rowsWrap = el('div', 'bai-sounds-rows');
+        let maxN = 1;
+        (ex.columns || []).forEach(function (groups) { groups.forEach(function (g) { (g.rows || []).forEach(function (r) { maxN = Math.max(maxN, r.length); }); }); });
         (ex.columns || []).forEach(function (groups) {
           groups.forEach(function (g) {
             const line = el('div', 'bai-sound-line');
+            line.style.gridTemplateColumns = 'repeat(' + maxN + ', minmax(0, 1fr))';
             (g.rows || []).forEach(function (row) {
               row.forEach(function (t) { if (t != null) line.appendChild(makeChip(t, ex.audio, 'bai-tone-' + (g.tone || 'violet'))); });
             });
