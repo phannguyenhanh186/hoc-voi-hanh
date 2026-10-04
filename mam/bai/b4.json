@@ -5,8 +5,9 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b4/nam: pron_<van/tu>.mp3 (ua, ưa, ch, tr va cac tu trong bang; ten file theo cach b2/b3), ex2_01..06.mp3 (6 cau ua/ưa), ex4_01..05.mp3 (5 cau ch/tr) - chua thu am.",
-  "todo_tu_vung": "Hinh: images/b4/bai5/<an_sang|ngu_trua|an_toi|nau_com|tap_the_duc|tam|danh_rang|goi_dau|don_nha|di_cho|uong_thuoc>.jpg va images/b4/bai6/hinh1..10.jpg. Audio audio/b4/nam: vocab_<slug>.mp3 (11 tu) va ex6_01..10.mp3 - chua co.",
-  "todo_audio_nghe": "audio/b4/nam: listen_ex7_01..08.mp3, listen_ex8_01..06.mp3 - chua thu am. Bai 8 cau 3, 4: de ghi 'My chưa...' o dap an B, da sua thanh ten trong cau hoi (Anh Long, Chu Tam) - CAN XAC NHAN."
+  "todo_tu_vung": "Hinh: images/b4/bai5/<an_sang|ngu_trua|an_toi|nau_com|tap_the_duc|tam|danh_rang|goi_dau|don_nha|di_cho|uong_thuoc|ngu_day>.jpg va images/b4/bai6/hinh1..10.jpg. Audio audio/b4/nam: vocab_<slug>.mp3 (12 tu) va ex6_01..10.mp3 (cau 10 thu lai: 'ngu day') - chua co.",
+  "todo_audio_nghe": "audio/b4/nam: listen_ex7_01..08.mp3, listen_ex8_01..06.mp3 (cau 2 bai 8 thu lai: 'ngu day') - chua thu am. Bai 8 cau 3, 4: da sua 'My' thanh ten trong cau hoi - CAN XAC NHAN.",
+  "todo_bai10": "Bai 10: de khong dua cau hoi de 'Dat cau hoi', hien chi chon roi/chua - CAN XAC NHAN. Doc: 'Thoi chet' (de ghi 'Thoi chet')."
  },
  "sections": [
   {
@@ -267,6 +268,11 @@
          "img": "images/b4/bai5/uong_thuoc.jpg",
          "caption": "Uống thuốc",
          "audio": "audio/b4/{voice}/vocab_uong_thuoc.mp3"
+        },
+        {
+         "img": "images/b4/bai5/ngu_day.jpg",
+         "caption": "Ngủ dậy",
+         "audio": "audio/b4/{voice}/vocab_ngu_day.mp3"
         }
        ],
        "columns": 3
@@ -287,7 +293,8 @@
         "gội đầu",
         "dọn nhà",
         "đi chợ",
-        "uống thuốc"
+        "uống thuốc",
+        "ngủ dậy"
        ],
        "items": [
         {
@@ -396,7 +403,7 @@
          "template": "Anh Cường {0} rồi.",
          "answers": [
           [
-           "ăn tối"
+           "ngủ dậy"
           ]
          ],
          "audio": "audio/b4/{voice}/ex6_10.mp3"
@@ -513,10 +520,10 @@
         },
         {
          "audio": "audio/b4/{voice}/listen_ex8_02.mp3",
-         "text": "My ngủ trưa chưa?",
+         "text": "My ngủ dậy chưa?",
          "options": [
-          "Rồi. My ngủ trưa rồi.",
-          "Chưa. My chưa ngủ trưa."
+          "Rồi. My ngủ dậy rồi.",
+          "Chưa. My chưa ngủ dậy."
          ],
          "answer": "a"
         },
@@ -669,6 +676,214 @@
          "type": "paragraph",
          "vi": "Nếu chỉ trả lời “Rồi.” hoặc “Chưa.”, câu trả lời có thể nghe hơi cụt hoặc thiếu tự nhiên. Vì vậy, khi nói chuyện, bạn nên trả lời đầy đủ hơn bằng cách thêm đại từ và hành động.",
          "en": "If you answer with only Rồi or Chưa, your response may sound a little abrupt or unnatural. So, when speaking, it is better to give a fuller answer by adding a pronoun and the action."
+        }
+       ]
+      },
+      {
+       "type": "matchPairs",
+       "num": 9,
+       "instructionVi": "Nối mỗi câu hỏi với câu trả lời phù hợp.",
+       "instructionEn": "Match each question with the appropriate answer.",
+       "questions": [
+        {
+         "q": "Anh uống thuốc chưa?",
+         "answer": "b"
+        },
+        {
+         "q": "Khánh đi chợ chưa?",
+         "answer": "e"
+        },
+        {
+         "q": "Chú Vinh ăn sáng chưa?",
+         "answer": "d"
+        },
+        {
+         "q": "Chị Ngân tập thể dục chưa?",
+         "answer": "f"
+        },
+        {
+         "q": "Bảo dọn nhà chưa?",
+         "answer": "a"
+        },
+        {
+         "q": "Bạn ngủ trưa chưa?",
+         "answer": "c"
+        }
+       ],
+       "options": [
+        {
+         "key": "a",
+         "text": "Em chưa dọn nhà."
+        },
+        {
+         "key": "b",
+         "text": "Anh uống thuốc rồi."
+        },
+        {
+         "key": "c",
+         "text": "Mình chưa ngủ trưa."
+        },
+        {
+         "key": "d",
+         "text": "Chú ăn sáng rồi."
+        },
+        {
+         "key": "e",
+         "text": "Mình chưa đi chợ."
+        },
+        {
+         "key": "f",
+         "text": "Chị tập thể dục rồi."
+        }
+       ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 10,
+       "instructionVi": "Đặt câu hỏi và hoàn thành các câu trả lời bằng rồi hoặc chưa.",
+       "instructionEn": "Make questions and complete the answers with rồi or chưa.",
+       "items": [
+        {
+         "template": "Mình uống thuốc {0}.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "rồi"
+          }
+         ]
+        },
+        {
+         "template": "Em {0} tập thể dục.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "chưa"
+          }
+         ]
+        },
+        {
+         "template": "Anh tắm {0}.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "rồi"
+          }
+         ]
+        },
+        {
+         "template": "Chị Linh {0} đi chợ.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "chưa"
+          }
+         ]
+        },
+        {
+         "template": "Cô Tiên ăn sáng {0}.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "rồi"
+          }
+         ]
+        },
+        {
+         "template": "Chú Tư {0} ngủ trưa.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "chưa"
+          }
+         ]
+        },
+        {
+         "template": "Nghĩa dọn nhà {0}.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "rồi"
+          }
+         ]
+        },
+        {
+         "template": "Vân {0} ăn tối.",
+         "blanks": [
+          {
+           "options": [
+            "rồi",
+            "chưa"
+           ],
+           "answer": "chưa"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "roi-chua",
+     "label": "Rồi/Chưa",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 11,
+       "instructionVi": "Đọc đoạn hội thoại sau và trả lời câu hỏi sau.",
+       "instructionEn": "Read the following paragraph and answer the questions.",
+       "passage": "Quân: Chào Trang, em khoẻ không?\nTrang: Chào anh Quân, em khoẻ. Còn anh?\nQuân: Anh không khoẻ lắm, tối hôm qua anh đi ngủ trễ.\nTrang: Tại sao vậy?\nQuân: Hôm qua anh đi du lịch, buổi tối anh mới về nhà.\nTrang: Anh ăn sáng chưa?\nQuân: Anh chưa ăn sáng. Anh mới đánh răng và gội đầu thôi. Còn em?\nTrang: Em ăn sáng rồi. Em cũng đi chợ rồi.\nQuân: À, nhưng anh tập thể dục rồi.\nTrang: Thôi chết, em chưa uống thuốc. Em phải về nhà đây. Chào anh!",
+       "questions": [
+        {
+         "q": "Anh Quân ăn sáng chưa?",
+         "a": "Chưa. Anh Quân chưa ăn sáng."
+        },
+        {
+         "q": "Trang ăn sáng chưa?",
+         "a": "Rồi. Trang ăn sáng rồi."
+        },
+        {
+         "q": "Anh Quân gội đầu chưa?",
+         "a": "Rồi. Anh Quân gội đầu rồi."
+        },
+        {
+         "q": "Trang đi chợ chưa?",
+         "a": "Rồi. Trang đi chợ rồi."
+        },
+        {
+         "q": "Anh Quân tập thể dục chưa?",
+         "a": "Rồi. Anh Quân tập thể dục rồi."
+        },
+        {
+         "q": "Trang uống thuốc chưa?",
+         "a": "Chưa. Trang chưa uống thuốc."
         }
        ]
       }
