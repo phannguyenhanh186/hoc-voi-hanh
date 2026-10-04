@@ -5,7 +5,8 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b4/nam: pron_<van/tu>.mp3 (ua, ưa, ch, tr va cac tu trong bang; ten file theo cach b2/b3), ex2_01..06.mp3 (6 cau ua/ưa), ex4_01..05.mp3 (5 cau ch/tr) - chua thu am.",
-  "todo_tu_vung": "Hinh: images/b4/bai5/<an_sang|ngu_trua|an_toi|nau_com|tap_the_duc|tam|danh_rang|goi_dau|don_nha|di_cho|uong_thuoc>.jpg va images/b4/bai6/hinh1..10.jpg. Audio audio/b4/nam: vocab_<slug>.mp3 (11 tu) va ex6_01..10.mp3 - chua co."
+  "todo_tu_vung": "Hinh: images/b4/bai5/<an_sang|ngu_trua|an_toi|nau_com|tap_the_duc|tam|danh_rang|goi_dau|don_nha|di_cho|uong_thuoc>.jpg va images/b4/bai6/hinh1..10.jpg. Audio audio/b4/nam: vocab_<slug>.mp3 (11 tu) va ex6_01..10.mp3 - chua co.",
+  "todo_audio_nghe": "audio/b4/nam: listen_ex7_01..08.mp3, listen_ex8_01..06.mp3 - chua thu am. Bai 8 cau 3, 4: de ghi 'My chưa...' o dap an B, da sua thanh ten trong cau hoi (Anh Long, Chu Tam) - CAN XAC NHAN."
  },
  "sections": [
   {
@@ -399,6 +400,161 @@
           ]
          ],
          "audio": "audio/b4/{voice}/ex6_10.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "hoat-dong",
+     "label": "Hoạt động hằng ngày",
+     "exercises": [
+      {
+       "type": "audioChoice",
+       "num": 7,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_01.mp3",
+         "text": "Chị An nấu cơm rồi.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_02.mp3",
+         "text": "Anh Công chưa ăn sáng và tập thể dục.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_03.mp3",
+         "text": "Chú Bình chưa ngủ trưa.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_04.mp3",
+         "text": "Cô Loan tắm và gội đầu rồi.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_05.mp3",
+         "text": "Phương chưa đi chợ.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_06.mp3",
+         "text": "Chị Giang chưa ăn tối.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_07.mp3",
+         "text": "Anh Phúc chưa uống thuốc.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex7_08.mp3",
+         "text": "Vinh đánh răng rồi.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        }
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 8,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b4/{voice}/listen_ex8_01.mp3",
+         "text": "Cô Năm ăn tối chưa?",
+         "options": [
+          "Rồi. Cô Năm ăn tối rồi.",
+          "Chưa. Cô Năm chưa ăn tối."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex8_02.mp3",
+         "text": "My ngủ trưa chưa?",
+         "options": [
+          "Rồi. My ngủ trưa rồi.",
+          "Chưa. My chưa ngủ trưa."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex8_03.mp3",
+         "text": "Anh Long uống thuốc chưa?",
+         "options": [
+          "Rồi. Anh Long uống thuốc rồi.",
+          "Chưa. Anh Long chưa uống thuốc."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex8_04.mp3",
+         "text": "Chú Tám đi chợ chưa?",
+         "options": [
+          "Rồi. Chú Tám đi chợ rồi.",
+          "Chưa. Chú Tám chưa đi chợ."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex8_05.mp3",
+         "text": "Chị Quỳnh tập thể dục chưa?",
+         "options": [
+          "Rồi. Chị Quỳnh tập thể dục rồi.",
+          "Chưa. Chị Quỳnh chưa tập thể dục."
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b4/{voice}/listen_ex8_06.mp3",
+         "text": "Ngọc gội đầu chưa?",
+         "options": [
+          "Rồi. Ngọc gội đầu rồi.",
+          "Chưa. Ngọc chưa gội đầu."
+         ],
+         "answer": "a"
         }
        ]
       }
