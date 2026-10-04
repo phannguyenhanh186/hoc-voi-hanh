@@ -405,7 +405,7 @@
       if (ex.title) wrap.appendChild(el('h3', 'bai-grammar-title', ex.title));
       (ex.blocks || []).forEach(function (b) {
         if (b.type === 'heading') {
-          const h = el('div', 'bai-grammar-heading');
+          const h = el('div', 'bai-grammar-heading' + (b.tone === 'purple' ? ' is-purple' : ''));
           h.appendChild(el('div', 'bai-grammar-heading-vi', b.vi || ''));
           if (b.en) h.appendChild(el('div', 'bai-grammar-heading-en', b.en));
           wrap.appendChild(h);
