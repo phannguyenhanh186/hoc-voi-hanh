@@ -1191,11 +1191,12 @@
         wrap.appendChild(row);
         rows.push({ item: item, cells: built.cells, mark: mark });
       });
+      function nsp(t) { return normName(t).replace(/\s+/g, ''); }   // bỏ khoảng trắng: "1 4 7" = "147"
       function check() {
         rows.forEach(function (r) {
           const vals = r.cells.map(function (c) { return normName(c.input.value); });
           const filled = vals.every(Boolean);
-          let ok = filled && r.cells.every(function (c, k) { return c.answers.some(function (a) { return normName(a) === vals[k]; }); });
+          let ok = filled && r.cells.every(function (c, k) { return c.answers.some(function (a) { return nsp(a) === nsp(vals[k]); }); });
           if (ok && r.item.distinct && new Set(vals).size !== vals.length) ok = false;
           r.cells.forEach(function (c, k) { markCell(c.input, r.mark, ''); c.input.classList.toggle('is-correct', ok); c.input.classList.toggle('is-wrong', filled && !ok); });
           r.mark.textContent = !vals.some(Boolean) ? '' : (ok ? '✓' : '✗');
