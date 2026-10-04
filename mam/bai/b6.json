@@ -1,0 +1,271 @@
+{
+ "id": "b6",
+ "num": 6,
+ "title": "Em thường đi chơi vào tối Chủ Nhật.",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo": "Audio audio/b6/nam: pron_<van/tu>.mp3 (ươ, uô va cac tu trong bang), ex2_01..05.mp3, ex3_01..05.mp3, vocab_so_<khong|mot|hai|ba|bon|nam|sau|bay|tam|chin|muoi>.mp3, vocab_thu_<hai|ba|tu|nam|sau|bay>.mp3 + vocab_chu_nhat.mp3 - chua thu am. Hinh so: images/b6/bai4/so_0..so_10.jpg (chua co thi app hien o chu so lon). Thu trong tuan khong dung hinh.",
+  "confirm": "De ghi 'so 0-10' va 11 hinh nhung chi liet ke tu mot..muoi; da them 'khong' cho so 0 - CAN XAC NHAN. Cac bai tu vung danh so 4, 5 tam thoi."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "uo",
+     "label": "Nguyên âm \"ươ\"/\"uô\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b6/{voice}/pron_{key}.mp3",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ươ",
+            "nước",
+            "sườn"
+           ],
+           [
+            "thường",
+            "lượm",
+            "cướp"
+           ],
+           [
+            "mượt"
+           ]
+          ]
+         }
+        ],
+        [
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "uô",
+            "thuốc",
+            "muốn"
+           ],
+           [
+            "uống",
+            "nhuộm",
+            "chuột"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Bên đường có con chuột.",
+         "audio": "audio/b6/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Trời mới mưa nên đường còn ướt.",
+         "audio": "audio/b6/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Cường muốn ra vườn uống nước.",
+         "audio": "audio/b6/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Cô Phương thường nấu rau muống.",
+         "audio": "audio/b6/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Chị Hương thường đi bộ qua đường để mua mướp.",
+         "audio": "audio/b6/{voice}/ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "label": "Phụ âm \"th\"",
+     "exercises": [
+      {
+       "type": "repeatSentences",
+       "num": 3,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Thành thích ăn thịt.",
+         "audio": "audio/b6/{voice}/ex3_01.mp3"
+        },
+        {
+         "text": "Chị Thảo rất thích thể thao.",
+         "audio": "audio/b6/{voice}/ex3_02.mp3"
+        },
+        {
+         "text": "Thời tiết tháng mười thường thay đổi.",
+         "audio": "audio/b6/{voice}/ex3_03.mp3"
+        },
+        {
+         "text": "Thiên thường mua thịt và rau ở chợ.",
+         "audio": "audio/b6/{voice}/ex3_04.mp3"
+        },
+        {
+         "text": "Thầy Tường thường thức dậy thật sớm để đi thể dục.",
+         "audio": "audio/b6/{voice}/ex3_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "so",
+     "label": "Số 0–10",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 4,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "img": "images/b6/bai4/so_0.jpg",
+         "big": "0",
+         "caption": "Không",
+         "audio": "audio/b6/{voice}/vocab_so_khong.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_1.jpg",
+         "big": "1",
+         "caption": "Một",
+         "audio": "audio/b6/{voice}/vocab_so_mot.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_2.jpg",
+         "big": "2",
+         "caption": "Hai",
+         "audio": "audio/b6/{voice}/vocab_so_hai.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_3.jpg",
+         "big": "3",
+         "caption": "Ba",
+         "audio": "audio/b6/{voice}/vocab_so_ba.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_4.jpg",
+         "big": "4",
+         "caption": "Bốn",
+         "audio": "audio/b6/{voice}/vocab_so_bon.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_5.jpg",
+         "big": "5",
+         "caption": "Năm",
+         "audio": "audio/b6/{voice}/vocab_so_nam.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_6.jpg",
+         "big": "6",
+         "caption": "Sáu",
+         "audio": "audio/b6/{voice}/vocab_so_sau.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_7.jpg",
+         "big": "7",
+         "caption": "Bảy",
+         "audio": "audio/b6/{voice}/vocab_so_bay.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_8.jpg",
+         "big": "8",
+         "caption": "Tám",
+         "audio": "audio/b6/{voice}/vocab_so_tam.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_9.jpg",
+         "big": "9",
+         "caption": "Chín",
+         "audio": "audio/b6/{voice}/vocab_so_chin.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_10.jpg",
+         "big": "10",
+         "caption": "Mười",
+         "audio": "audio/b6/{voice}/vocab_so_muoi.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "thu",
+     "label": "Thứ trong tuần",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 5,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "2",
+         "caption": "Thứ hai",
+         "audio": "audio/b6/{voice}/vocab_thu_hai.mp3"
+        },
+        {
+         "big": "3",
+         "caption": "Thứ ba",
+         "audio": "audio/b6/{voice}/vocab_thu_ba.mp3"
+        },
+        {
+         "big": "4",
+         "caption": "Thứ tư",
+         "audio": "audio/b6/{voice}/vocab_thu_tu.mp3"
+        },
+        {
+         "big": "5",
+         "caption": "Thứ năm",
+         "audio": "audio/b6/{voice}/vocab_thu_nam.mp3"
+        },
+        {
+         "big": "6",
+         "caption": "Thứ sáu",
+         "audio": "audio/b6/{voice}/vocab_thu_sau.mp3"
+        },
+        {
+         "big": "7",
+         "caption": "Thứ bảy",
+         "audio": "audio/b6/{voice}/vocab_thu_bay.mp3"
+        },
+        {
+         "big": "CN",
+         "caption": "Chủ nhật",
+         "audio": "audio/b6/{voice}/vocab_chu_nhat.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
