@@ -561,6 +561,120 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "roi-chua",
+     "label": "Rồi/Chưa",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "RỒI / CHƯA",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Câu hỏi ...chưa?",
+         "en": "Questions with ...chưa?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, chưa? được dùng ở cuối câu để hỏi một hành động đã xảy ra hay chưa.",
+         "en": "In Vietnamese, chưa? is used at the end of a question to ask whether an action has happened yet."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ăn cơm chưa?",
+           "en": "Have you eaten yet?"
+          },
+          {
+           "vi": "Anh đi làm chưa?",
+           "en": "Have you gone to work yet?"
+          },
+          {
+           "vi": "Lan đi ngủ chưa?",
+           "en": "Has Lan gone to sleep yet?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Trả lời: Rồi (already)",
+         "en": "Answer: Rồi (already)"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng rồi khi hành động đã xảy ra.",
+         "en": "Use rồi when the action has already happened."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + [hành động] + rồi.",
+         "en": "[Subject] + [action] + rồi."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn ăn cơm chưa? → Rồi. Mình ăn cơm rồi.",
+           "en": "Have you eaten yet? → Yes. I’ve eaten."
+          },
+          {
+           "vi": "Cô Lụa ăn cơm chưa? → Cô Lụa ăn cơm rồi.",
+           "en": "Has Ms. Lụa eaten yet? → Ms. Lụa has eaten."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Trả lời: Chưa (yet, not yet)",
+         "en": "Answer: Chưa (yet, not yet)"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng chưa khi hành động chưa xảy ra.",
+         "en": "Use chưa when the action has not happened yet."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + chưa + [hành động].",
+         "en": "[Subject] + chưa + [action]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Em đánh răng chưa? → Chưa. Em chưa đánh răng.",
+           "en": "Have you brushed your teeth yet? → Not yet. I haven’t brushed my teeth."
+          },
+          {
+           "vi": "Anh Tuyền tập thể dục chưa? → Anh Tuyền chưa tập thể dục.",
+           "en": "Has Tuyền exercised yet? → Tuyền hasn’t exercised yet."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Ghi chú / Note",
+         "en": "Ghi chú / Note"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Nếu chỉ trả lời “Rồi.” hoặc “Chưa.”, câu trả lời có thể nghe hơi cụt hoặc thiếu tự nhiên. Vì vậy, khi nói chuyện, bạn nên trả lời đầy đủ hơn bằng cách thêm đại từ và hành động.",
+         "en": "If you answer with only Rồi or Chưa, your response may sound a little abrupt or unnatural. So, when speaking, it is better to give a fuller answer by adding a pronoun and the action."
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
