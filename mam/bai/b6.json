@@ -691,12 +691,12 @@
        "type": "grammarNote",
        "noNum": true,
        "instructionVi": "",
-       "title": "THƯỜNG / KHÔNG THƯỜNG",
        "blocks": [
         {
          "type": "heading",
          "vi": "Thường + hành động",
-         "en": "Thường + action"
+         "en": "Thường + action",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -732,7 +732,8 @@
         {
          "type": "heading",
          "vi": "Không thường + hành động",
-         "en": "Không thường + action"
+         "en": "Không thường + action",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -768,7 +769,8 @@
         {
          "type": "heading",
          "vi": "… có thường + hành động + không?",
-         "en": "… có thường + action + không?"
+         "en": "… có thường + action + không?",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -824,13 +826,13 @@
         },
         {
          "type": "paragraph",
-         "vi": "Mình thường đi làm.",
-         "en": "I usually go to work."
+         "vi": "Có. Mình thường đi làm.",
+         "en": "Yes. I usually go to work."
         },
         {
          "type": "paragraph",
-         "vi": "Mình không thường đi chợ.",
-         "en": "I don't usually go to the market."
+         "vi": "Không. Mình không thường đi chợ.",
+         "en": "No. I don't usually go to the market."
         },
         {
          "type": "heading",
