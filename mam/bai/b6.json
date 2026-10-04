@@ -582,6 +582,99 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "THƯỜNG / KHÔNG THƯỜNG",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Thường + Hành động",
+         "en": "Thường + Action"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Thường được dùng để nói về một hành động hoặc thói quen xảy ra nhiều lần hoặc thường xuyên.",
+         "en": "Thường is used to talk about an action or habit that happens regularly or frequently."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + thường + [hành động].",
+         "en": "[Subject] + thường + [action]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình thường đi học.",
+           "en": "I usually go to school."
+          },
+          {
+           "vi": "Chị thường uống cà phê.",
+           "en": "I usually drink coffee."
+          },
+          {
+           "vi": "Hồng thường đi chợ.",
+           "en": "Hồng usually goes to the market."
+          },
+          {
+           "vi": "Anh Nam thường tập thể dục vào buổi chiều.",
+           "en": "Nam usually exercises in the afternoon."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Không thường + Hành động",
+         "en": "Không thường + Action"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Để nói một hành động không thường xuyên xảy ra, dùng không thường trước hành động.",
+         "en": "To say that an action does not happen regularly, use không thường before the action."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + không thường + [hành động].",
+         "en": "[Subject] + không thường + [action]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình không thường đi chợ.",
+           "en": "I don't usually go to the market."
+          },
+          {
+           "vi": "Anh không thường tập thể dục.",
+           "en": "I don't usually exercise."
+          },
+          {
+           "vi": "Phương không thường ăn sáng.",
+           "en": "Phương doesn't usually eat breakfast."
+          },
+          {
+           "vi": "Cô Sáu không thường uống cà phê.",
+           "en": "Mrs. Sáu doesn't usually drink coffee."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
