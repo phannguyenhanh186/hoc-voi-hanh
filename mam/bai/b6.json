@@ -31,29 +31,21 @@
            [
             "ươ",
             "nước",
-            "sườn"
-           ],
-           [
+            "sườn",
             "thường",
             "lượm",
-            "cướp"
-           ],
-           [
+            "cướp",
             "mượt"
            ]
           ]
-         }
-        ],
-        [
+         },
          {
           "tone": "pink",
           "rows": [
            [
             "uô",
             "thuốc",
-            "muốn"
-           ],
-           [
+            "muốn",
             "uống",
             "nhuộm",
             "chuột"
@@ -61,7 +53,8 @@
           ]
          }
         ]
-       ]
+       ],
+       "layout": "rows"
       },
       {
        "type": "repeatSentences",
