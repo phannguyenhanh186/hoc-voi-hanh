@@ -1077,7 +1077,7 @@
         if (it.hint) q.appendChild(el('span', 'bai-example', '(' + it.hint + ')'));
         row.appendChild(q);
         const line = el('div', 'bai-fill-line');
-        line.appendChild(document.createTextNode('→\u00A0'));
+        line.appendChild(document.createTextNode('→\u00A0' + (it.prefix ? it.prefix + '\u00A0' : '')));
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
         input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
@@ -1087,7 +1087,9 @@
         const accepted = [];
         (it.answers || []).forEach(function (a) {
           (it.pronouns && a.indexOf('{p}') !== -1 ? it.pronouns : [null]).forEach(function (p) {
-            accepted.push(normSentence(p ? a.replace(/\{p\}/g, p) : a));
+            const full = p ? a.replace(/\{p\}/g, p) : a;
+            accepted.push(normSentence(full));
+            if (it.prefix) accepted.push(normSentence(it.prefix + ' ' + full));   // chấp nhận cả khi gõ lại "Có." / "Không."
           });
         });
         const model = it.model || it.answers[0];
@@ -1128,7 +1130,7 @@
         const row = el('div', 'bai-write-row');
         row.appendChild(el('div', 'bai-write-q', (i + 1) + '\u00A0\u00A0' + it.question));
         const line = el('div', 'bai-fill-line');
-        line.appendChild(document.createTextNode('→\u00A0'));
+        line.appendChild(document.createTextNode('→\u00A0' + (it.prefix ? it.prefix + '\u00A0' : '')));
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
         input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
