@@ -364,68 +364,89 @@
       {
        "type": "audioFill",
        "num": 7,
-       "instructionVi": "Nghe và hoàn thành các câu sau.",
-       "instructionEn": "Listen and complete the following sentences.",
+       "instructionVi": "Điền tên thứ thích hợp vào chỗ trống.",
+       "instructionEn": "Fill in the blanks with the correct day of the week.",
        "items": [
         {
-         "template": "Tối {0} Thư ở nhà.",
-         "answers": [
-          [
-           "thứ sáu"
-          ]
-         ],
-         "audio": "audio/b6/{voice}/ex_thu_01.mp3"
-        },
-        {
-         "template": "Chiều {0} mình đi ăn với anh Kiên.",
-         "answers": [
-          [
-           "thứ ba"
-          ]
-         ],
-         "audio": "audio/b6/{voice}/ex_thu_02.mp3"
-        },
-        {
-         "template": "Mình thường đi chợ vào {0}.",
-         "answers": [
-          [
-           "thứ bảy"
-          ]
-         ],
-         "audio": "audio/b6/{voice}/ex_thu_03.mp3"
-        },
-        {
-         "template": "{0} mình đi về nhà ba mẹ.",
+         "template": "Thứ hai, thứ ba, {0}, thứ năm.",
          "answers": [
           [
            "thứ tư"
           ]
-         ],
-         "audio": "audio/b6/{voice}/ex_thu_04.mp3"
+         ]
         },
         {
-         "distinct": true,
-         "template": "{0} và {1} Nam không đi làm.",
+         "template": "Thứ năm, {0}, thứ bảy.",
          "answers": [
           [
-           "thứ năm",
-           "chủ nhật"
-          ],
+           "thứ sáu"
+          ]
+         ]
+        },
+        {
+         "template": "{0}, thứ hai, thứ ba.",
+         "answers": [
           [
-           "chủ nhật",
+           "chủ nhật"
+          ]
+         ]
+        },
+        {
+         "template": "Thứ ba, thứ tư, {0}, thứ sáu.",
+         "answers": [
+          [
            "thứ năm"
           ]
-         ],
-         "audio": "audio/b6/{voice}/ex_thu_05.mp3"
+         ]
         },
         {
-         "template": "Sáng {0} Quỳnh đi cà phê.",
+         "template": "Thứ sáu, {0}, chủ nhật.",
          "answers": [
           [
-           "thứ hai"
+           "thứ bảy"
           ]
+         ]
+        }
+       ]
+      },
+      {
+       "type": "wordOrder",
+       "num": 8,
+       "instructionVi": "Sắp xếp các thứ sau theo thứ tự trong tuần.",
+       "instructionEn": "Put the days in the correct order.",
+       "items": [
+        {
+         "words": [
+          "thứ năm",
+          "thứ hai",
+          "thứ tư",
+          "thứ ba"
          ],
-         "audio": "audio/b6/{voice}/ex_thu_06.mp3"
+         "answers": [
+          "thứ hai thứ ba thứ tư thứ năm"
+         ]
+        },
+        {
+         "words": [
+          "chủ nhật",
+          "thứ sáu",
+          "thứ bảy",
+          "thứ năm"
+         ],
+         "answers": [
+          "thứ năm thứ sáu thứ bảy chủ nhật"
+         ]
+        },
+        {
+         "words": [
+          "thứ ba",
+          "thứ bảy",
+          "thứ tư",
+          "thứ hai"
+         ],
+         "answers": [
+          "thứ hai thứ ba thứ tư thứ bảy"
+         ]
         }
        ]
       }
@@ -444,7 +465,7 @@
      "exercises": [
       {
        "type": "audioFill",
-       "num": 8,
+       "num": 9,
        "instructionVi": "Nghe và chọn câu trả lời đúng.",
        "instructionEn": "Listen and choose the correct answer.",
        "items": [
@@ -501,7 +522,7 @@
       },
       {
        "type": "audioFill",
-       "num": 9,
+       "num": 10,
        "instructionVi": "Nghe và điền số vào chỗ trống.",
        "instructionEn": "Listen and fill in the blanks.",
        "items": [
@@ -576,6 +597,80 @@
           ]
          ],
          "audio": "audio/b6/{voice}/ex9_06.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "thu",
+     "label": "Thứ trong tuần",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "num": 11,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "items": [
+        {
+         "template": "Tối {0} Thư ở nhà.",
+         "answers": [
+          [
+           "thứ sáu"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_01.mp3"
+        },
+        {
+         "template": "Chiều {0} mình đi ăn với anh Kiên.",
+         "answers": [
+          [
+           "thứ ba"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_02.mp3"
+        },
+        {
+         "template": "Mình thường đi chợ vào {0}.",
+         "answers": [
+          [
+           "thứ bảy"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_03.mp3"
+        },
+        {
+         "template": "{0} mình đi về nhà ba mẹ.",
+         "answers": [
+          [
+           "thứ tư"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_04.mp3"
+        },
+        {
+         "distinct": true,
+         "template": "{0} và {1} Nam không đi làm.",
+         "answers": [
+          [
+           "thứ năm",
+           "chủ nhật"
+          ],
+          [
+           "chủ nhật",
+           "thứ năm"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_05.mp3"
+        },
+        {
+         "template": "Sáng {0} Quỳnh đi cà phê.",
+         "answers": [
+          [
+           "thứ hai"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_06.mp3"
         }
        ]
       }
