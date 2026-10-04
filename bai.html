@@ -987,7 +987,7 @@
       const rows = [];
       (ex.items || []).forEach(function (it, i) {
         const row = el('div', 'bai-order-row');
-        row.appendChild(el('div', 'bai-order-num', it.example ? 'Ví dụ' : String(i)));
+        row.appendChild(el('div', 'bai-order-num', it.example ? 'Ví dụ' : String(i + ((ex.items[0] && ex.items[0].example) ? 0 : 1))));
         const body = el('div', 'bai-order-body');
         const answerLine = el('div', 'bai-order-answer');
         const mark = el('span', 'bai-mark');
@@ -1019,10 +1019,17 @@
         function setAnswer(sentence) {
           picked.length = 0;
           chips.forEach(function (c) { c.used = false; });
-          String(sentence).replace(/[.,!?]/g, '').split(/\s+/).forEach(function (w) {
-            const c = chips.find(function (x) { return !x.used && normSentence(x.word) === normSentence(w); });
-            if (c) { c.used = true; picked.push(c); }
-          });
+          const toks = String(sentence).replace(/[.,!?]/g, '').split(/\s+/).filter(Boolean);
+          let k = 0;
+          while (k < toks.length) {   // khớp cả chip nhiều chữ (vd. "thứ năm"), ưu tiên chip dài nhất
+            let best = null;
+            chips.forEach(function (x) {
+              if (x.used) return;
+              const n = normSentence(x.word).split(' ').length;
+              if (normSentence(toks.slice(k, k + n).join(' ')) === normSentence(x.word) && (!best || n > best.n)) best = { c: x, n: n };
+            });
+            if (best) { best.c.used = true; picked.push(best.c); k += best.n; } else k++;
+          }
           refresh();
         }
         const accepted = (it.answers || []).map(normSentence);
@@ -1183,7 +1190,11 @@
         const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
         num.type = 'button'; num.dataset.text = 'câu ' + (i + 1);
         num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
-        num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
+        if (item.audio || ex.audio) {
+          num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
+        } else {
+          num.disabled = true; num.style.cursor = 'default';   // bài điền không có audio
+        }
         row.appendChild(num);
         const built = buildFillLine(item.template, item.answers || [], 'Câu ' + (i + 1));
         const mark = el('span', 'bai-mark'); built.line.appendChild(mark);
