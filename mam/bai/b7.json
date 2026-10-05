@@ -5,7 +5,8 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b7/nam: pron_<van>.mp3 (canh, banh, hanh, ...), pron_nh_<tu>.mp3 (nha, nhi, ...), ex2_01..05.mp3, ex5_01..05.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html).",
-  "confirm": "Bai 4 (phu am nh) dung lai dung 5 cau cua bai 2 (nguon de gui giong het) - CAN XAC NHAN; hien dung lai audio ex2_01..05."
+  "confirm": "Bai 4 (phu am nh) dung lai dung 5 cau cua bai 2 (nguon de gui giong het) - CAN XAC NHAN; hien dung lai audio ex2_01..05.",
+  "todo_audio_tu_vung": "audio/b7/nam: vocab_ngay_01..31.mp3, vocab_thang_01..12.mp3, vocab_nam_<nam>.mp3 (1900, 1940, 1951, 1964, 1975, 2000, 2001, 2005, 2010, 2014, 2020..2025) - chua thu am. Thang 4 doc 'tu'; cac nam doc theo kieu mien Nam ('ngan', 'le') - CAN XAC NHAN."
  },
  "sections": [
   {
@@ -206,6 +207,371 @@
          "text": "Công việc nhân viên nhà hàng không nhẹ nhàng.",
          "audio": "audio/b7/{voice}/ex5_05.mp3"
         }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "ngay",
+     "label": "Ngày",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 6,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "1",
+         "caption": "Ngày một",
+         "audio": "audio/b7/{voice}/vocab_ngay_01.mp3"
+        },
+        {
+         "big": "2",
+         "caption": "Ngày hai",
+         "audio": "audio/b7/{voice}/vocab_ngay_02.mp3"
+        },
+        {
+         "big": "3",
+         "caption": "Ngày ba",
+         "audio": "audio/b7/{voice}/vocab_ngay_03.mp3"
+        },
+        {
+         "big": "4",
+         "caption": "Ngày bốn",
+         "audio": "audio/b7/{voice}/vocab_ngay_04.mp3"
+        },
+        {
+         "big": "5",
+         "caption": "Ngày năm",
+         "audio": "audio/b7/{voice}/vocab_ngay_05.mp3"
+        },
+        {
+         "big": "6",
+         "caption": "Ngày sáu",
+         "audio": "audio/b7/{voice}/vocab_ngay_06.mp3"
+        },
+        {
+         "big": "7",
+         "caption": "Ngày bảy",
+         "audio": "audio/b7/{voice}/vocab_ngay_07.mp3"
+        },
+        {
+         "big": "8",
+         "caption": "Ngày tám",
+         "audio": "audio/b7/{voice}/vocab_ngay_08.mp3"
+        },
+        {
+         "big": "9",
+         "caption": "Ngày chín",
+         "audio": "audio/b7/{voice}/vocab_ngay_09.mp3"
+        },
+        {
+         "big": "10",
+         "caption": "Ngày mười",
+         "audio": "audio/b7/{voice}/vocab_ngay_10.mp3"
+        },
+        {
+         "big": "11",
+         "caption": "Ngày mười một",
+         "audio": "audio/b7/{voice}/vocab_ngay_11.mp3"
+        },
+        {
+         "big": "12",
+         "caption": "Ngày mười hai",
+         "audio": "audio/b7/{voice}/vocab_ngay_12.mp3"
+        },
+        {
+         "big": "13",
+         "caption": "Ngày mười ba",
+         "audio": "audio/b7/{voice}/vocab_ngay_13.mp3"
+        },
+        {
+         "big": "14",
+         "caption": "Ngày mười bốn",
+         "audio": "audio/b7/{voice}/vocab_ngay_14.mp3"
+        },
+        {
+         "big": "15",
+         "caption": "Ngày mười lăm",
+         "audio": "audio/b7/{voice}/vocab_ngay_15.mp3"
+        },
+        {
+         "big": "16",
+         "caption": "Ngày mười sáu",
+         "audio": "audio/b7/{voice}/vocab_ngay_16.mp3"
+        },
+        {
+         "big": "17",
+         "caption": "Ngày mười bảy",
+         "audio": "audio/b7/{voice}/vocab_ngay_17.mp3"
+        },
+        {
+         "big": "18",
+         "caption": "Ngày mười tám",
+         "audio": "audio/b7/{voice}/vocab_ngay_18.mp3"
+        },
+        {
+         "big": "19",
+         "caption": "Ngày mười chín",
+         "audio": "audio/b7/{voice}/vocab_ngay_19.mp3"
+        },
+        {
+         "big": "20",
+         "caption": "Ngày hai mươi",
+         "audio": "audio/b7/{voice}/vocab_ngay_20.mp3"
+        },
+        {
+         "big": "21",
+         "caption": "Ngày hai mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_ngay_21.mp3"
+        },
+        {
+         "big": "22",
+         "caption": "Ngày hai mươi hai",
+         "audio": "audio/b7/{voice}/vocab_ngay_22.mp3"
+        },
+        {
+         "big": "23",
+         "caption": "Ngày hai mươi ba",
+         "audio": "audio/b7/{voice}/vocab_ngay_23.mp3"
+        },
+        {
+         "big": "24",
+         "caption": "Ngày hai mươi tư",
+         "audio": "audio/b7/{voice}/vocab_ngay_24.mp3"
+        },
+        {
+         "big": "25",
+         "caption": "Ngày hai mươi lăm",
+         "audio": "audio/b7/{voice}/vocab_ngay_25.mp3"
+        },
+        {
+         "big": "26",
+         "caption": "Ngày hai mươi sáu",
+         "audio": "audio/b7/{voice}/vocab_ngay_26.mp3"
+        },
+        {
+         "big": "27",
+         "caption": "Ngày hai mươi bảy",
+         "audio": "audio/b7/{voice}/vocab_ngay_27.mp3"
+        },
+        {
+         "big": "28",
+         "caption": "Ngày hai mươi tám",
+         "audio": "audio/b7/{voice}/vocab_ngay_28.mp3"
+        },
+        {
+         "big": "29",
+         "caption": "Ngày hai mươi chín",
+         "audio": "audio/b7/{voice}/vocab_ngay_29.mp3"
+        },
+        {
+         "big": "30",
+         "caption": "Ngày ba mươi",
+         "audio": "audio/b7/{voice}/vocab_ngay_30.mp3"
+        },
+        {
+         "big": "31",
+         "caption": "Ngày ba mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_ngay_31.mp3"
+        }
+       ],
+       "highlight": [
+        "mốt",
+        "tư",
+        "lăm",
+        "lẻ"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "thang",
+     "label": "Tháng",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 7,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "1",
+         "caption": "Tháng một",
+         "audio": "audio/b7/{voice}/vocab_thang_01.mp3"
+        },
+        {
+         "big": "2",
+         "caption": "Tháng hai",
+         "audio": "audio/b7/{voice}/vocab_thang_02.mp3"
+        },
+        {
+         "big": "3",
+         "caption": "Tháng ba",
+         "audio": "audio/b7/{voice}/vocab_thang_03.mp3"
+        },
+        {
+         "big": "4",
+         "caption": "Tháng tư",
+         "audio": "audio/b7/{voice}/vocab_thang_04.mp3"
+        },
+        {
+         "big": "5",
+         "caption": "Tháng năm",
+         "audio": "audio/b7/{voice}/vocab_thang_05.mp3"
+        },
+        {
+         "big": "6",
+         "caption": "Tháng sáu",
+         "audio": "audio/b7/{voice}/vocab_thang_06.mp3"
+        },
+        {
+         "big": "7",
+         "caption": "Tháng bảy",
+         "audio": "audio/b7/{voice}/vocab_thang_07.mp3"
+        },
+        {
+         "big": "8",
+         "caption": "Tháng tám",
+         "audio": "audio/b7/{voice}/vocab_thang_08.mp3"
+        },
+        {
+         "big": "9",
+         "caption": "Tháng chín",
+         "audio": "audio/b7/{voice}/vocab_thang_09.mp3"
+        },
+        {
+         "big": "10",
+         "caption": "Tháng mười",
+         "audio": "audio/b7/{voice}/vocab_thang_10.mp3"
+        },
+        {
+         "big": "11",
+         "caption": "Tháng mười một",
+         "audio": "audio/b7/{voice}/vocab_thang_11.mp3"
+        },
+        {
+         "big": "12",
+         "caption": "Tháng mười hai",
+         "audio": "audio/b7/{voice}/vocab_thang_12.mp3"
+        }
+       ],
+       "highlight": [
+        "mốt",
+        "tư",
+        "lăm",
+        "lẻ"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "nam",
+     "label": "Năm",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 8,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "1900",
+         "caption": "Một ngàn chín trăm",
+         "audio": "audio/b7/{voice}/vocab_nam_1900.mp3"
+        },
+        {
+         "big": "1940",
+         "caption": "Một ngàn chín trăm bốn mươi",
+         "audio": "audio/b7/{voice}/vocab_nam_1940.mp3"
+        },
+        {
+         "big": "1951",
+         "caption": "Một ngàn chín trăm năm mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_nam_1951.mp3"
+        },
+        {
+         "big": "1964",
+         "caption": "Một ngàn chín trăm sáu mươi tư",
+         "audio": "audio/b7/{voice}/vocab_nam_1964.mp3"
+        },
+        {
+         "big": "1975",
+         "caption": "Một ngàn chín trăm bảy mươi lăm",
+         "audio": "audio/b7/{voice}/vocab_nam_1975.mp3"
+        },
+        {
+         "big": "2000",
+         "caption": "Hai ngàn",
+         "audio": "audio/b7/{voice}/vocab_nam_2000.mp3"
+        },
+        {
+         "big": "2001",
+         "caption": "Hai ngàn không trăm lẻ một",
+         "audio": "audio/b7/{voice}/vocab_nam_2001.mp3"
+        },
+        {
+         "big": "2005",
+         "caption": "Hai ngàn không trăm lẻ năm",
+         "audio": "audio/b7/{voice}/vocab_nam_2005.mp3"
+        },
+        {
+         "big": "2010",
+         "caption": "Hai ngàn không trăm mười",
+         "audio": "audio/b7/{voice}/vocab_nam_2010.mp3"
+        },
+        {
+         "big": "2014",
+         "caption": "Hai ngàn không trăm mười bốn",
+         "audio": "audio/b7/{voice}/vocab_nam_2014.mp3"
+        },
+        {
+         "big": "2020",
+         "caption": "Hai ngàn không trăm hai mươi",
+         "audio": "audio/b7/{voice}/vocab_nam_2020.mp3"
+        },
+        {
+         "big": "2021",
+         "caption": "Hai ngàn không trăm hai mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_nam_2021.mp3"
+        },
+        {
+         "big": "2022",
+         "caption": "Hai ngàn không trăm hai mươi hai",
+         "audio": "audio/b7/{voice}/vocab_nam_2022.mp3"
+        },
+        {
+         "big": "2023",
+         "caption": "Hai ngàn không trăm hai mươi ba",
+         "audio": "audio/b7/{voice}/vocab_nam_2023.mp3"
+        },
+        {
+         "big": "2024",
+         "caption": "Hai ngàn không trăm hai mươi tư",
+         "audio": "audio/b7/{voice}/vocab_nam_2024.mp3"
+        },
+        {
+         "big": "2025",
+         "caption": "Hai ngàn không trăm hai mươi lăm",
+         "audio": "audio/b7/{voice}/vocab_nam_2025.mp3"
+        }
+       ],
+       "highlight": [
+        "mốt",
+        "tư",
+        "lăm",
+        "lẻ"
        ]
       }
      ]
