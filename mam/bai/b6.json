@@ -994,6 +994,225 @@
        ]
       }
      ]
+    },
+    {
+     "id": "buoi-thu",
+     "label": "Thời gian: Buổi + Thứ",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "Thời gian: Buổi + Thứ",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, khi nói một thời điểm cụ thể trong ngày, “buổi” đứng trước “thứ”.",
+         "en": "In Vietnamese, when talking about a specific time of day on a particular day, “buổi” comes before the day of the week."
+        },
+        {
+         "type": "structure",
+         "vi": "buổi + [thời gian trong ngày] + [thứ]",
+         "en": "buổi + [time of day] + [day of the week]"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "buổi sáng thứ Hai",
+           "en": "Monday morning"
+          },
+          {
+           "vi": "buổi chiều thứ Ba",
+           "en": "Tuesday afternoon"
+          },
+          {
+           "vi": "buổi tối thứ Sáu",
+           "en": "Friday evening"
+          },
+          {
+           "vi": "buổi trưa thứ Bảy",
+           "en": "Saturday noon"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "1. Thời gian ở cuối câu",
+         "en": "Time at the end",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi thời gian đứng ở cuối câu, có thể dùng “vào” trước cụm thời gian để nói một hành động xảy ra vào thời điểm hoặc khoảng thời gian đó.",
+         "en": "When the time expression comes at the end of the sentence, “vào” can be used before the time expression to say when an action happens."
+        },
+        {
+         "type": "structure",
+         "vi": "[hành động/sự kiện] + vào + [thời gian].",
+         "en": "[action/event] + vào + [time]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình đi làm vào buổi sáng.",
+           "en": "I go to work in the morning."
+          },
+          {
+           "vi": "Chị Minh đi ăn với bạn vào buổi tối thứ Sáu.",
+           "en": "Minh eats out with friends on Friday night."
+          },
+          {
+           "vi": "Em thường tập thể dục vào thứ Tư và thứ Bảy.",
+           "en": "I often do exercises on Wednesdays and Saturdays."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Thời gian ở đầu câu",
+         "en": "Time at the beginning",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi thời gian đứng ở đầu câu, thường không dùng “vào”.",
+         "en": "When the time expression comes at the beginning of the sentence, “vào” is usually not used."
+        },
+        {
+         "type": "structure",
+         "vi": "[Thời gian] + [chủ ngữ] + [hành động].",
+         "en": "[Time] + [subject] + [action]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Thứ Hai, mình đi làm.",
+           "en": "On Monday, I go to work."
+          },
+          {
+           "vi": "Thứ Bảy, mình đi chợ.",
+           "en": "On Saturday, I go to the market."
+          },
+          {
+           "vi": "Buổi sáng, mình uống cà phê.",
+           "en": "In the morning, I drink coffee."
+          },
+          {
+           "vi": "Buổi tối, mình thường ở nhà.",
+           "en": "In the evening, I usually stay home."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 14,
+       "instructionVi": "Chọn câu đúng.",
+       "instructionEn": "Choose the correct sentence.",
+       "items": [
+        {
+         "options": [
+          "Vào thứ Hai mình đi làm.",
+          "Thứ Hai mình đi làm."
+         ],
+         "answer": "b"
+        },
+        {
+         "options": [
+          "Buổi sáng mình uống cà phê.",
+          "Vào buổi sáng mình uống cà phê."
+         ],
+         "answer": "a"
+        },
+        {
+         "options": [
+          "Mình đi chợ vào thứ Bảy.",
+          "Mình đi chợ thứ Bảy."
+         ],
+         "answer": "a"
+        },
+        {
+         "options": [
+          "Mình uống cà phê vào buổi sáng thứ Năm.",
+          "Mình uống cà phê thứ Năm buổi sáng."
+         ],
+         "answer": "a"
+        },
+        {
+         "options": [
+          "Thứ Bảy buổi tối Hưng ở nhà.",
+          "Hưng ở nhà buổi tối thứ Bảy."
+         ],
+         "answer": "b"
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 15,
+       "instructionVi": "Viết lại câu.",
+       "instructionEn": "Rewrite each sentence using the time expression at the beginning.",
+       "items": [
+        {
+         "example": true,
+         "question": "Mình thường đi làm vào sáng thứ Hai.",
+         "answers": [
+          "Sáng thứ Hai mình thường đi làm."
+         ],
+         "model": "Sáng thứ Hai mình thường đi làm."
+        },
+        {
+         "question": "Em đi chợ vào thứ Bảy.",
+         "answers": [
+          "Thứ Bảy em đi chợ."
+         ],
+         "model": "Thứ Bảy em đi chợ."
+        },
+        {
+         "question": "Buổi sáng, anh Nam thường uống cà phê.",
+         "answers": [
+          "Buổi sáng anh Nam thường uống cà phê.",
+          "Anh Nam thường uống cà phê vào buổi sáng."
+         ],
+         "model": "Buổi sáng anh Nam thường uống cà phê."
+        },
+        {
+         "question": "Mình về nhà vào buổi tối.",
+         "answers": [
+          "Buổi tối mình về nhà."
+         ],
+         "model": "Buổi tối mình về nhà."
+        },
+        {
+         "question": "Chú Quân không thường tập thể dục vào buổi trưa.",
+         "answers": [
+          "Buổi trưa chú Quân không thường tập thể dục."
+         ],
+         "model": "Buổi trưa chú Quân không thường tập thể dục."
+        },
+        {
+         "question": "Cuối tuần chị Ly không thường đi du lịch.",
+         "answers": [
+          "Cuối tuần chị Ly không thường đi du lịch.",
+          "Chị Ly không thường đi du lịch vào cuối tuần."
+         ],
+         "model": "Cuối tuần chị Ly không thường đi du lịch."
+        },
+        {
+         "question": "Tối thứ Năm Nghĩa thường đi học tiếng Anh.",
+         "answers": [
+          "Tối thứ Năm Nghĩa thường đi học tiếng Anh.",
+          "Nghĩa thường đi học tiếng Anh vào tối thứ Năm."
+         ],
+         "model": "Tối thứ Năm Nghĩa thường đi học tiếng Anh."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -1008,7 +1227,7 @@
      "exercises": [
       {
        "type": "readingQA",
-       "num": 14,
+       "num": 16,
        "instructionVi": "Đọc nhật ký của Long và trả lời câu hỏi.",
        "instructionEn": "Read Long's diary and answer the questions.",
        "passage": "Mình thường dậy sớm và ăn sáng ở nhà. Sau đó, mình thường uống cà phê và đi làm. Mình không thường đi chợ vì mình thường về nhà trễ.\nBuổi trưa, mình thường ăn cơm và ngủ trưa. Buổi chiều, mình đi làm tiếp. Mình không thường uống cà phê vào buổi chiều.\nBuổi tối, mình thường ăn tối ở quán ăn. Sau đó, mình dọn nhà và tắm. Mình không thường đi chơi vào buổi tối. Cuối tuần, mình thường đi cà phê với bạn.",
@@ -1040,6 +1259,150 @@
         {
          "q": "Long có thường ở nhà vào cuối tuần không?",
          "a": "Không. Cuối tuần, Long thường đi cà phê với bạn."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "writeAnswer",
+       "num": 17,
+       "instructionVi": "Hoàn thành câu theo gợi ý sử dụng “thường” và thời gian phù hợp.",
+       "instructionEn": "Complete the sentences using the prompts with “thường” and the appropriate time expression.",
+       "items": [
+        {
+         "question": "Minh/ngủ dậy sớm/sáng/thứ Hai.",
+         "answers": [
+          "Minh thường ngủ dậy sớm vào buổi sáng thứ Hai.",
+          "Minh thường ngủ dậy sớm vào sáng thứ Hai.",
+          "Buổi sáng thứ Hai minh thường ngủ dậy sớm.",
+          "Sáng thứ Hai minh thường ngủ dậy sớm."
+         ],
+         "model": "Minh thường ngủ dậy sớm vào buổi sáng thứ Hai."
+        },
+        {
+         "question": "Chị Phương/ở nhà/thứ Năm.",
+         "answers": [
+          "Chị Phương thường ở nhà vào thứ Năm.",
+          "Thứ Năm chị Phương thường ở nhà."
+         ],
+         "model": "Chị Phương thường ở nhà vào thứ Năm."
+        },
+        {
+         "question": "Ân/đi siêu thị/trưa/thứ Bảy.",
+         "answers": [
+          "Ân thường đi siêu thị vào buổi trưa thứ Bảy.",
+          "Ân thường đi siêu thị vào trưa thứ Bảy.",
+          "Buổi trưa thứ Bảy ân thường đi siêu thị.",
+          "Trưa thứ Bảy ân thường đi siêu thị."
+         ],
+         "model": "Ân thường đi siêu thị vào buổi trưa thứ Bảy."
+        },
+        {
+         "question": "Chú Tám/tới sân bay/cuối tuần.",
+         "answers": [
+          "Chú Tám thường tới sân bay vào cuối tuần.",
+          "Cuối tuần chú Tám thường tới sân bay."
+         ],
+         "model": "Chú Tám thường tới sân bay vào cuối tuần."
+        },
+        {
+         "question": "Cô Huyền/về nhà trễ/chiều/thứ Sáu.",
+         "answers": [
+          "Cô Huyền thường về nhà trễ vào buổi chiều thứ Sáu.",
+          "Cô Huyền thường về nhà trễ vào chiều thứ Sáu.",
+          "Buổi chiều thứ Sáu cô Huyền thường về nhà trễ.",
+          "Chiều thứ Sáu cô Huyền thường về nhà trễ."
+         ],
+         "model": "Cô Huyền thường về nhà trễ vào buổi chiều thứ Sáu."
+        }
+       ]
+      },
+      {
+       "type": "dialogueFill",
+       "num": 18,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau.",
+       "instructionEn": "Complete the following dialogue.",
+       "lines": [
+        {
+         "speaker": "Giang:",
+         "template": "Chào Phong, bạn khoẻ không?",
+         "answers": []
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Mình khoẻ. Còn bạn?",
+         "answers": []
+        },
+        {
+         "speaker": "Giang:",
+         "template": "Mình cũng khoẻ. Bạn ăn sáng {0}?",
+         "answers": [
+          [
+           "chưa"
+          ]
+         ]
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Mình ăn sáng {0}. Bạn ăn sáng {1}?",
+         "answers": [
+          [
+           "rồi"
+          ],
+          [
+           "chưa"
+          ]
+         ]
+        },
+        {
+         "speaker": "Giang:",
+         "template": "Mình cũng ăn sáng {0}. Mình thường ăn sáng sớm. Hôm nay bạn có đi làm {1}?",
+         "answers": [
+          [
+           "rồi"
+          ],
+          [
+           "không"
+          ]
+         ]
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Mình không đi làm {0} sáng thứ Sáu. Mình {1} ở nhà. Còn bạn?",
+         "answers": [
+          [
+           "vào"
+          ],
+          [
+           "thường"
+          ]
+         ]
+        },
+        {
+         "speaker": "Giang:",
+         "template": "Mình cũng vậy. Hôm nay mình ở nhà. Bạn {0} thường đi chợ không?",
+         "answers": [
+          [
+           "có"
+          ]
+         ]
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Có. Bây giờ mình chuẩn bị đi chợ.",
+         "answers": []
         }
        ]
       }
