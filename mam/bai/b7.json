@@ -577,6 +577,213 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "may",
+     "label": "Thứ / Ngày / Tháng / Năm + mấy",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "THỨ / NGÀY / THÁNG / NĂM + MẤY",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "“Mấy” là từ dùng để hỏi về một số hoặc thứ tự không xác định.",
+         "en": "“Mấy” is used to ask about an unknown number or ordinal number."
+        },
+        {
+         "type": "heading",
+         "vi": "1. Thứ mấy?",
+         "en": "What day of the week?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "[thứ] + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi một ngày trong tuần là thứ mấy.",
+         "en": "Use “thứ mấy?” to ask which day of the week it is."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Hôm nay là thứ mấy?",
+           "en": "What day is it today?"
+          },
+          {
+           "vi": "Thứ mấy bạn đi làm?",
+           "en": "What day do you go to work?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cách trả lời",
+         "en": "How to answer"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Hôm nay là thứ Hai.",
+         "en": "Today is Monday."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Mình đi làm vào thứ Hai.",
+         "en": "I go to work on Monday."
+        },
+        {
+         "type": "heading",
+         "vi": "2. Ngày mấy?",
+         "en": "What date?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "ngày + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi ngày trong tháng.",
+         "en": "Use “ngày + number?” to ask for the date of the month."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Ngày mai là ngày mấy?",
+           "en": "What date is it tomorrow?"
+          },
+          {
+           "vi": "Ngày mai là ngày 12.",
+           "en": "Tomorrow is the 12th."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "3. Tháng mấy?",
+         "en": "What month?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "tháng + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi tháng nào trong năm.",
+         "en": "Use “tháng + number?” to ask which month it is."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bây giờ là tháng mấy?",
+           "en": "What month is it now?"
+          },
+          {
+           "vi": "Sinh nhật bạn là tháng mấy?",
+           "en": "What month is your birthday?"
+          },
+          {
+           "vi": "Bây giờ là tháng sáu.",
+           "en": "It is June."
+          },
+          {
+           "vi": "Sinh nhật mình là tháng mười.",
+           "en": "My birthday is in October."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "4. Năm mấy?",
+         "en": "What year?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "năm + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi năm nào.",
+         "en": "Use “năm + number?” to ask which year."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bây giờ là năm mấy?",
+           "en": "What year is it?"
+          },
+          {
+           "vi": "Bạn sinh năm mấy?",
+           "en": "What year were you born?"
+          },
+          {
+           "vi": "Mình sinh năm 2000.",
+           "en": "I was born in 2000."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Note"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong giao tiếp thực tế, không phải lúc nào câu hỏi và câu trả lời cũng phải khớp chính xác từng phần.",
+         "en": "In real-life conversations, the question and answer do not always have to match exactly in form."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Ví dụ:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "A: Sinh nhật bạn là ngày mấy?",
+         "en": "What date is your birthday?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "B: Ngày 15 tháng 6 năm 2000.",
+         "en": "June 15, 2000."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Người hỏi chỉ hỏi “ngày mấy?”, nhưng người trả lời có thể cung cấp thêm tháng và năm để đưa ra thông tin đầy đủ hơn.",
+         "en": "The speaker may only ask “What date?”, but the person answering can provide the month and year as well to give more complete information."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Similarly:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "A: Bạn đi Việt Nam vào ngày mấy?",
+         "en": "What date are you going to Vietnam?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "B: Ngày 25 tháng 12.",
+         "en": "December 25."
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
