@@ -54,7 +54,8 @@
       "id": "b7",
       "num": 7,
       "title": "Sinh nhật của bạn là ngày mấy?",
-      "status": "ready"
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b8",
