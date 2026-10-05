@@ -584,6 +584,75 @@
    "titleEn": "Grammar",
    "subtopics": [
     {
+     "id": "hom-nay",
+     "label": "Hôm nay / hôm qua / ngày mai",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Hôm nay / hôm qua / ngày mai + là ngày mấy?",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi ngày cụ thể trong tháng.",
+         "en": "Use “hôm nay / hôm qua / ngày mai + là ngày mấy?” to ask for the specific date."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Hôm nay là ngày mấy?",
+           "en": "What date is it today?"
+          },
+          {
+           "vi": "Hôm qua là ngày mấy?",
+           "en": "What date was it yesterday?"
+          },
+          {
+           "vi": "Ngày mai là ngày mấy?",
+           "en": "What date is it tomorrow?"
+          },
+          {
+           "vi": "Sinh nhật bạn là ngày mấy?",
+           "en": "What date is your birthday?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cách trả lời",
+         "en": "How to answer"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có thể trả lời bằng ngày, hoặc cung cấp thêm tháng và năm nếu cần.",
+         "en": "You can answer with just the date, or include the month and year if needed."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Hôm nay là ngày 2.",
+         "en": "Today is the 2nd."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Hôm nay là ngày 24 tháng 11.",
+         "en": "Today is November 24th."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Sinh nhật của mình là ngày 15 tháng 4 năm 2000.",
+         "en": "My birthday is April 15, 2000."
+        }
+       ]
+      }
+     ]
+    },
+    {
      "id": "may",
      "label": "Thứ / Ngày / Tháng / Năm + mấy",
      "exercises": [
@@ -778,75 +847,6 @@
          "type": "paragraph",
          "vi": "B: Ngày 25 tháng 12.",
          "en": "December 25."
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "hom-nay",
-     "label": "Hôm nay / hôm qua / ngày mai",
-     "exercises": [
-      {
-       "type": "grammarNote",
-       "noNum": true,
-       "instructionVi": "",
-       "blocks": [
-        {
-         "type": "heading",
-         "vi": "Hôm nay / hôm qua / ngày mai + là ngày mấy?",
-         "tone": "purple"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Dùng để hỏi ngày cụ thể trong tháng.",
-         "en": "Use “hôm nay / hôm qua / ngày mai + là ngày mấy?” to ask for the specific date."
-        },
-        {
-         "type": "examples",
-         "items": [
-          {
-           "vi": "Hôm nay là ngày mấy?",
-           "en": "What date is it today?"
-          },
-          {
-           "vi": "Hôm qua là ngày mấy?",
-           "en": "What date was it yesterday?"
-          },
-          {
-           "vi": "Ngày mai là ngày mấy?",
-           "en": "What date is it tomorrow?"
-          },
-          {
-           "vi": "Sinh nhật bạn là ngày mấy?",
-           "en": "What date is your birthday?"
-          }
-         ]
-        },
-        {
-         "type": "heading",
-         "vi": "Cách trả lời",
-         "en": "How to answer"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Có thể trả lời bằng ngày, hoặc cung cấp thêm tháng và năm nếu cần.",
-         "en": "You can answer with just the date, or include the month and year if needed."
-        },
-        {
-         "type": "paragraph",
-         "vi": "Hôm nay là ngày 2.",
-         "en": "Today is the 2nd."
-        },
-        {
-         "type": "paragraph",
-         "vi": "Hôm nay là ngày 24 tháng 11.",
-         "en": "Today is November 24th."
-        },
-        {
-         "type": "paragraph",
-         "vi": "Sinh nhật của mình là ngày 15 tháng 4 năm 2000.",
-         "en": "My birthday is April 15, 2000."
         }
        ]
       }
