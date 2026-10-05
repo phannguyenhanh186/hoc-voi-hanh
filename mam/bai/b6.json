@@ -1409,6 +1409,45 @@
      ]
     }
    ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 19,
+       "instructionVi": "Trả lời câu hỏi.",
+       "instructionEn": "Answer the questions.",
+       "items": [
+        {
+         "question": "Bạn thường đi làm vào thứ mấy?"
+        },
+        {
+         "question": "Bạn có thường uống cà phê vào buổi sáng không?"
+        },
+        {
+         "question": "Bạn thường đi chợ vào thứ mấy?"
+        },
+        {
+         "question": "Bạn có thường tập thể dục không?"
+        },
+        {
+         "question": "Bạn thường đi chơi vào thứ mấy?"
+        },
+        {
+         "question": "Bạn có thường ở nhà vào cuối tuần không?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
