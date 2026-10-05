@@ -1708,4 +1708,4 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-sound-line .bai-chip { min-width: 0; padding: 0 4px; }
 @media (max-width: 640px) { .bai-sound-line { gap: 4px; } .bai-sound-line .bai-chip { font-size: .95rem; } }
 
-.bai-hl { color: var(--accent-deep); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.bai-hl { color: #EB483F; }
