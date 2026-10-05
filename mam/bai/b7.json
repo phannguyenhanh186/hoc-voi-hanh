@@ -1,0 +1,216 @@
+{
+ "id": "b7",
+ "num": 7,
+ "title": "Sinh nhật của bạn là ngày mấy?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b7/nam: pron_<van>.mp3 (canh, banh, hanh, ...), pron_nh_<tu>.mp3 (nha, nhi, ...), ex2_01..05.mp3, ex5_01..05.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html).",
+  "confirm": "Bai 4 (phu am nh) dung lai dung 5 cau cua bai 2 (nguon de gui giong het) - CAN XAC NHAN; hien dung lai audio ex2_01..05."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "anh",
+     "label": "Âm \"anh\", \"ênh\", \"inh\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b7/{voice}/pron_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "anh",
+            "canh",
+            "bánh",
+            "hành",
+            "rảnh",
+            "mãnh",
+            "lạnh"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "ênh",
+            "chênh",
+            "bệnh"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "inh",
+            "xinh",
+            "tính",
+            "mình",
+            "nhỉnh",
+            "lĩnh",
+            "định"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Anh Minh ăn bánh.",
+         "audio": "audio/b7/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Hình như trời lạnh hơn.",
+         "audio": "audio/b7/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Trinh đi nhanh tới bệnh viện.",
+         "audio": "audio/b7/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Sáng mình thường ăn bánh canh.",
+         "audio": "audio/b7/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Linh thích uống nước chanh lạnh.",
+         "audio": "audio/b7/{voice}/ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "nh",
+     "label": "Phụ âm \"nh\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 3,
+       "instructionVi": "Nghe và lặp lại các âm sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b7/{voice}/pron_nh_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "nhà",
+            "nhi",
+            "nhẹ",
+            "nhỏ",
+            "nhô",
+            "nhú"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "như",
+            "nhản",
+            "nhân",
+            "nhắn",
+            "nhen",
+            "nhện"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "nhịn",
+            "nhón",
+            "nhún",
+            "nhàng",
+            "nhung",
+            "nhưng"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 4,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Anh Minh ăn bánh.",
+         "audio": "audio/b7/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Hình như trời lạnh hơn.",
+         "audio": "audio/b7/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Trinh đi nhanh tới bệnh viện.",
+         "audio": "audio/b7/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Sáng mình thường ăn bánh canh.",
+         "audio": "audio/b7/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Linh thích uống nước chanh lạnh.",
+         "audio": "audio/b7/{voice}/ex2_05.mp3"
+        }
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 5,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Nhi thường nhớ nhà.",
+         "audio": "audio/b7/{voice}/ex5_01.mp3"
+        },
+        {
+         "text": "Nhà này hơi nhiều nhện.",
+         "audio": "audio/b7/{voice}/ex5_02.mp3"
+        },
+        {
+         "text": "Nhà của Nhung hơi nhỏ.",
+         "audio": "audio/b7/{voice}/ex5_03.mp3"
+        },
+        {
+         "text": "Bước nhảy của nhân vật rất nhịp nhàng.",
+         "audio": "audio/b7/{voice}/ex5_04.mp3"
+        },
+        {
+         "text": "Công việc nhân viên nhà hàng không nhẹ nhàng.",
+         "audio": "audio/b7/{voice}/ex5_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
