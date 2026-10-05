@@ -1117,17 +1117,27 @@
           return;
         }
         seq++;
-        q.appendChild(document.createTextNode(seq + '\u00A0\u00A0' + it.question + ' '));
-        if (it.hint) q.appendChild(el('span', 'bai-example', '(' + it.hint + ')'));
-        row.appendChild(q);
+        if (!it.given) {
+          q.appendChild(document.createTextNode(seq + '\u00A0\u00A0' + it.question + ' '));
+          if (it.hint) q.appendChild(el('span', 'bai-example', '(' + it.hint + ')'));
+          row.appendChild(q);
+        }
         const line = el('div', 'bai-fill-line');
-        line.appendChild(document.createTextNode('→\u00A0' + (it.prefix ? it.prefix + '\u00A0' : '')));
+        // it.given: bài đảo — ô trống là CÂU HỎI, câu trả lời cho sẵn bên dưới
+        line.appendChild(document.createTextNode(it.given ? (seq + '\u00A0\u00A0') : ('→\u00A0' + (it.prefix ? it.prefix + '\u00A0' : ''))));
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
         input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
         const mark = el('span', 'bai-mark');
-        line.appendChild(input); line.appendChild(mark);
+        line.appendChild(input);
+        if (it.given) line.appendChild(document.createTextNode('?'));
+        line.appendChild(mark);
         row.appendChild(line);
+        if (it.given) {
+          const gl = el('div', 'bai-fill-line', '→\u00A0' + it.given);
+          gl.style.marginTop = '4px';
+          row.appendChild(gl);
+        }
         const accepted = [];
         (it.answers || []).forEach(function (a) {
           (it.pronouns && a.indexOf('{p}') !== -1 ? it.pronouns : [null]).forEach(function (p) {
