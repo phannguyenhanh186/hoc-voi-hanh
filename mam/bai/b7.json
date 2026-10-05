@@ -649,6 +649,51 @@
          "en": "My birthday is April 15, 2000."
         }
        ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 9,
+       "instructionVi": "Hoàn thành câu trả lời.",
+       "instructionEn": "Complete the answers.",
+       "items": [
+        {
+         "given": "Hôm nay là ngày 4.",
+         "answers": [
+          "Hôm nay là ngày mấy"
+         ],
+         "model": "Hôm nay là ngày mấy"
+        },
+        {
+         "given": "Hôm qua là ngày 31.",
+         "answers": [
+          "Hôm qua là ngày mấy"
+         ],
+         "model": "Hôm qua là ngày mấy"
+        },
+        {
+         "given": "Ngày mai là ngày 20.",
+         "answers": [
+          "Ngày mai là ngày mấy"
+         ],
+         "model": "Ngày mai là ngày mấy"
+        },
+        {
+         "given": "Sinh nhật của mình là ngày 15 tháng 4",
+         "answers": [
+          "Sinh nhật của bạn là ngày mấy",
+          "Sinh nhật bạn là ngày mấy"
+         ],
+         "model": "Sinh nhật của bạn là ngày mấy"
+        },
+        {
+         "given": "Sinh nhật của Trang là ngày 8 tháng 11",
+         "answers": [
+          "Sinh nhật của Trang là ngày mấy",
+          "Sinh nhật Trang là ngày mấy"
+         ],
+         "model": "Sinh nhật của Trang là ngày mấy"
+        }
+       ]
       }
      ]
     },
@@ -847,6 +892,67 @@
          "type": "paragraph",
          "vi": "B: Ngày 25 tháng 12.",
          "en": "December 25."
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 10,
+       "instructionVi": "Trả lời câu hỏi bằng thông tin gợi ý.",
+       "instructionEn": "Answer the questions using the prompts.",
+       "items": [
+        {
+         "example": true,
+         "question": "Hôm nay - ngày 14",
+         "answers": [
+          "Hôm nay là ngày mấy? Hôm nay là ngày 14."
+         ],
+         "model": "Hôm nay là ngày mấy? Hôm nay là ngày 14."
+        },
+        {
+         "question": "Sinh nhật của bạn - 15/6/2001",
+         "answers": [
+          "Sinh nhật của bạn là ngày mấy? Sinh nhật của mình là ngày 15 tháng 6 năm 2001.",
+          "Sinh nhật của bạn là ngày mấy? Sinh nhật mình là ngày 15 tháng 6 năm 2001.",
+          "Sinh nhật bạn là ngày mấy? Sinh nhật của mình là ngày 15 tháng 6 năm 2001.",
+          "Sinh nhật bạn là ngày mấy? Sinh nhật mình là ngày 15 tháng 6 năm 2001."
+         ],
+         "model": "Sinh nhật của bạn là ngày mấy? Sinh nhật của mình là ngày 15 tháng 6 năm 2001."
+        },
+        {
+         "question": "Đi Việt Nam - thứ Năm, 21/4",
+         "answers": [
+          "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào thứ Năm, ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào thứ Năm.",
+          "Bạn đi Việt Nam vào thứ mấy? Mình đi Việt Nam vào thứ Năm, ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào thứ mấy? Mình đi Việt Nam vào ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào thứ mấy? Mình đi Việt Nam vào thứ Năm."
+         ],
+         "model": "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào thứ Năm, ngày 21 tháng 4."
+        },
+        {
+         "question": "Sinh nhật của Thành - năm 1998",
+         "answers": [
+          "Thành sinh năm mấy? Thành sinh năm 1998.",
+          "Thành sinh năm mấy? Sinh nhật của Thành là năm 1998.",
+          "Thành sinh năm mấy? Sinh nhật Thành là năm 1998.",
+          "Sinh nhật của Thành là năm mấy? Thành sinh năm 1998.",
+          "Sinh nhật của Thành là năm mấy? Sinh nhật của Thành là năm 1998.",
+          "Sinh nhật của Thành là năm mấy? Sinh nhật Thành là năm 1998.",
+          "Sinh nhật Thành là năm mấy? Thành sinh năm 1998.",
+          "Sinh nhật Thành là năm mấy? Sinh nhật của Thành là năm 1998.",
+          "Sinh nhật Thành là năm mấy? Sinh nhật Thành là năm 1998."
+         ],
+         "model": "Thành sinh năm mấy? Thành sinh năm 1998."
+        },
+        {
+         "question": "Bây giờ - tháng 10",
+         "answers": [
+          "Bây giờ là tháng mấy? Bây giờ là tháng mười.",
+          "Bây giờ là tháng mấy? Bây giờ là tháng 10."
+         ],
+         "model": "Bây giờ là tháng mấy? Bây giờ là tháng mười."
         }
        ]
       }
