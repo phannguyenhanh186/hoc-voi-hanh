@@ -833,31 +833,6 @@
          "type": "paragraph",
          "vi": "Không. Mình không thường đi chợ.",
          "en": "No. I don't usually go to the market."
-        },
-        {
-         "type": "heading",
-         "vi": "So sánh",
-         "en": "Compare"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Bạn có đi chợ không?",
-         "en": "Do you go to the market?"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Bạn có thường đi chợ không?",
-         "en": "Do you usually go to the market?"
-        },
-        {
-         "type": "paragraph",
-         "vi": "“Có…không?” hỏi một hành động có xảy ra hay không.",
-         "en": "“Có…không?” asks whether an action happens or not."
-        },
-        {
-         "type": "paragraph",
-         "vi": "“Có thường…không?” hỏi một hành động có xảy ra thường xuyên / như một thói quen hay không.",
-         "en": "“Có thường…không?” asks whether an action happens regularly or as a habit."
         }
        ]
       },
@@ -1015,6 +990,56 @@
           "Nga không thường đi chơi."
          ],
          "model": "Cô Nga không thường đi chơi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 14,
+       "instructionVi": "Đọc nhật ký của Long và trả lời câu hỏi.",
+       "instructionEn": "Read Long's diary and answer the questions.",
+       "passage": "Mình thường dậy sớm và ăn sáng ở nhà. Sau đó, mình thường uống cà phê và đi làm. Mình không thường đi chợ vì mình thường về nhà trễ.\nBuổi trưa, mình thường ăn cơm và ngủ trưa. Buổi chiều, mình đi làm tiếp. Mình không thường uống cà phê vào buổi chiều.\nBuổi tối, mình thường ăn tối ở quán ăn. Sau đó, mình dọn nhà và tắm. Mình không thường đi chơi vào buổi tối. Cuối tuần, mình thường đi cà phê với bạn.",
+       "questions": [
+        {
+         "q": "Long có thường dậy sớm không?",
+         "a": "Có. Long thường dậy sớm."
+        },
+        {
+         "q": "Long thường ăn sáng ở đâu?",
+         "a": "Long thường ăn sáng ở nhà."
+        },
+        {
+         "q": "Long thường làm gì sau khi ăn sáng?",
+         "a": "Sau khi ăn sáng, Long thường uống cà phê và đi làm."
+        },
+        {
+         "q": "Long có thường đi chợ không?",
+         "a": "Không. Long không thường đi chợ."
+        },
+        {
+         "q": "Long thường làm gì vào buổi trưa?",
+         "a": "Buổi trưa, Long thường ăn cơm và ngủ trưa."
+        },
+        {
+         "q": "Long thường làm gì vào buổi tối?",
+         "a": "Buổi tối, Long thường ăn tối ở quán ăn, dọn nhà và tắm."
+        },
+        {
+         "q": "Long có thường ở nhà vào cuối tuần không?",
+         "a": "Không. Cuối tuần, Long thường đi cà phê với bạn."
         }
        ]
       }
