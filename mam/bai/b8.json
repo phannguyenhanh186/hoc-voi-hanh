@@ -657,6 +657,14 @@
          "tone": "purple"
         },
         {
+         "type": "structure",
+         "vi": "Bây giờ là mấy giờ?"
+        },
+        {
+         "type": "structure",
+         "vi": "→ Bây giờ là + [X] giờ (+ [Y] phút)"
+        },
+        {
          "type": "examples",
          "items": [
           {
@@ -681,7 +689,7 @@
         },
         {
          "type": "structure",
-         "vi": "→ [Chủ ngữ] + [hành động] + lúc + [giờ]."
+         "vi": "→ [Chủ ngữ] + [hành động] + lúc + [X] giờ (+ [Y] phút)"
         },
         {
          "type": "examples",
@@ -711,6 +719,210 @@
            "en": "Phong went to the airport at 3:15."
           }
          ]
+        }
+       ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 10,
+       "instructionVi": "Điền “là” hoặc “lúc”.",
+       "instructionEn": "Fill in each blank with “là” or “lúc”.",
+       "items": [
+        {
+         "template": "Bây giờ {0} mấy giờ?",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "là"
+          }
+         ]
+        },
+        {
+         "template": "Bạn đi làm {0} mấy giờ?",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "lúc"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay {0} thứ mấy?",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "là"
+          }
+         ]
+        },
+        {
+         "template": "Lan ăn sáng {0} bảy giờ.",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "lúc"
+          }
+         ]
+        },
+        {
+         "template": "Bây giờ {0} tám giờ.",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "là"
+          }
+         ]
+        },
+        {
+         "template": "Bạn về nhà {0} mấy giờ?",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "lúc"
+          }
+         ]
+        },
+        {
+         "template": "Mình đi học {0} bảy giờ.",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "lúc"
+          }
+         ]
+        },
+        {
+         "template": "Bây giờ {0} mấy giờ rồi?",
+         "blanks": [
+          {
+           "options": [
+            "là",
+            "lúc"
+           ],
+           "answer": "là"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 11,
+       "instructionVi": "Chọn câu hỏi phù hợp.",
+       "instructionEn": "Choose the appropriate question for each situation.",
+       "items": [
+        {
+         "prompt": "You want to know the current time.",
+         "options": [
+          "Bạn đi làm lúc mấy giờ?",
+          "Bây giờ là mấy giờ?"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "You want to know what time Lan goes to school.",
+         "options": [
+          "Bây giờ là mấy giờ?",
+          "Lan đi học lúc mấy giờ?"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "You want to know what time Nam gets home.",
+         "options": [
+          "Nam về nhà lúc mấy giờ?",
+          "Nam về nhà vào mấy phút?"
+         ],
+         "answer": "a"
+        },
+        {
+         "prompt": "You want to know what time your friend eats breakfast.",
+         "options": [
+          "Bạn ăn sáng lúc mấy ngày?",
+          "Bạn ăn sáng lúc mấy giờ?"
+         ],
+         "answer": "b"
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 12,
+       "instructionVi": "Hoàn thành câu hỏi.",
+       "instructionEn": "Use the prompts to write complete questions.",
+       "questionMark": true,
+       "items": [
+        {
+         "example": true,
+         "question": "Em / về nhà",
+         "answers": [
+          "Em về nhà lúc mấy giờ"
+         ],
+         "model": "Em về nhà lúc mấy giờ?"
+        },
+        {
+         "question": "bây giờ",
+         "answers": [
+          "Bây giờ là mấy giờ",
+          "Bây giờ là mấy giờ rồi"
+         ],
+         "model": "Bây giờ là mấy giờ"
+        },
+        {
+         "question": "anh Đăng / đi làm",
+         "answers": [
+          "Anh Đăng đi làm lúc mấy giờ"
+         ],
+         "model": "Anh Đăng đi làm lúc mấy giờ"
+        },
+        {
+         "question": "Giang / tập thể dục",
+         "answers": [
+          "Giang tập thể dục lúc mấy giờ"
+         ],
+         "model": "Giang tập thể dục lúc mấy giờ"
+        },
+        {
+         "question": "chú Kiên / ăn tối",
+         "answers": [
+          "Chú Kiên ăn tối lúc mấy giờ"
+         ],
+         "model": "Chú Kiên ăn tối lúc mấy giờ"
+        },
+        {
+         "question": "chị Hân / đi ngủ",
+         "answers": [
+          "Chị Hân đi ngủ lúc mấy giờ"
+         ],
+         "model": "Chị Hân đi ngủ lúc mấy giờ"
+        },
+        {
+         "question": "Minh / tới bệnh viện",
+         "answers": [
+          "Minh tới bệnh viện lúc mấy giờ"
+         ],
+         "model": "Minh tới bệnh viện lúc mấy giờ"
         }
        ]
       }
