@@ -1,0 +1,441 @@
+{
+ "id": "b8",
+ "num": 8,
+ "title": "Bây giờ là mấy giờ?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b8/nam: pron_<van>.mp3 (ay, bay, ...), pron_dgi_<tu>.mp3 (d, da, ..., gi, gia, ...), ex2_01..07.mp3, ex4_01..05.mp3, vocab_gio_HHMM.mp3 (15 file, vd vocab_gio_0100.mp3) - chua thu am. Ten file theo Telex (xem audioKey trong bai.html).",
+  "images": "images/b8/gio/clock_HHMM.svg: dong ho tu tao bang SVG, co the thay bang anh that (giu ten file hoac sua 'img')."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "ay",
+     "label": "Âm \"ay\", \"ây\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b8/{voice}/pron_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ay",
+            "bay",
+            "máy",
+            "này",
+            "nhảy",
+            "nãy",
+            "dạy"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "ây",
+            "mây",
+            "ấy",
+            "thầy",
+            "tẩy",
+            "dậy"
+           ]
+          ]
+         }
+        ]
+       ],
+       "num": 1
+      },
+      {
+       "type": "repeatSentences",
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Cây này rất cao.",
+         "audio": "audio/b8/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Hãy chạy thật nhanh.",
+         "audio": "audio/b8/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Thầy Châu rất dạy hay.",
+         "audio": "audio/b8/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Hôm nay mây bay đầy trời.",
+         "audio": "audio/b8/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Hôm nay mình ngủ dậy lúc bảy giờ.",
+         "audio": "audio/b8/{voice}/ex2_05.mp3"
+        },
+        {
+         "text": "Mấy ngày nay thay đổi rất nhiều.",
+         "audio": "audio/b8/{voice}/ex2_06.mp3"
+        },
+        {
+         "text": "Cô Bảy may váy mới cho bé Mây.",
+         "audio": "audio/b8/{voice}/ex2_07.mp3"
+        }
+       ],
+       "num": 2
+      }
+     ]
+    },
+    {
+     "id": "d-gi",
+     "label": "Phụ âm \"d\", \"gi\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "instructionVi": "Nghe và lặp lại các âm sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b8/{voice}/pron_dgi_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "d",
+            "da",
+            "dân",
+            "do",
+            "dặn",
+            "dư"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "dậy",
+            "dạy",
+            "dòng",
+            "dưa",
+            "dâu"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "gi",
+            "giá",
+            "giỏ",
+            "giờ",
+            "giận",
+            "giày"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "giấy",
+            "giang",
+            "giống",
+            "giàu"
+           ]
+          ]
+         }
+        ]
+       ],
+       "num": 3
+      },
+      {
+       "type": "repeatSentences",
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Dì đưa Giang mau giày.",
+         "audio": "audio/b8/{voice}/ex4_01.mp3"
+        },
+        {
+         "text": "Dũng đưa dì Giang đi chợ.",
+         "audio": "audio/b8/{voice}/ex4_02.mp3"
+        },
+        {
+         "text": "Danh giúp dì dọn đồ vô giỏ.",
+         "audio": "audio/b8/{voice}/ex4_03.mp3"
+        },
+        {
+         "text": "Duy dạy Dương đọc tiếng Việt.",
+         "audio": "audio/b8/{voice}/ex4_04.mp3"
+        },
+        {
+         "text": "Diệp đi dạo và với Diễm rồi đi mua dừa.",
+         "audio": "audio/b8/{voice}/ex4_05.mp3"
+        }
+       ],
+       "num": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "gio",
+     "label": "Giờ",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "columns": 3,
+       "highlight": [
+        "giờ",
+        "phút",
+        "rưỡi",
+        "sáng",
+        "trưa",
+        "chiều",
+        "tối",
+        "đêm"
+       ],
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "img": "images/b8/gio/clock_0100.svg",
+         "big": "01:00",
+         "caption": "Một giờ sáng",
+         "audio": "audio/b8/{voice}/vocab_gio_0100.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_2330.svg",
+         "big": "23:30",
+         "caption": "Mười một giờ ba mươi phút đêm / mười một rưỡi đêm",
+         "audio": "audio/b8/{voice}/vocab_gio_2330.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_0515.svg",
+         "big": "05:15",
+         "caption": "Năm giờ mười lăm phút sáng",
+         "audio": "audio/b8/{voice}/vocab_gio_0515.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_0805.svg",
+         "big": "08:05",
+         "caption": "Tám giờ năm phút sáng",
+         "audio": "audio/b8/{voice}/vocab_gio_0805.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_1027.svg",
+         "big": "10:27",
+         "caption": "Mười giờ hai bảy phút sáng",
+         "audio": "audio/b8/{voice}/vocab_gio_1027.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_1128.svg",
+         "big": "11:28",
+         "caption": "Mười một giờ hai tám phút trưa",
+         "audio": "audio/b8/{voice}/vocab_gio_1128.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_1230.svg",
+         "big": "12:30",
+         "caption": "Mười hai giờ ba mươi phút trưa / mười hai rưỡi trưa",
+         "audio": "audio/b8/{voice}/vocab_gio_1230.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_1314.svg",
+         "big": "13:14",
+         "caption": "Một giờ mười bốn phút trưa",
+         "audio": "audio/b8/{voice}/vocab_gio_1314.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_1445.svg",
+         "big": "14:45",
+         "caption": "Hai giờ bốn lăm phút chiều",
+         "audio": "audio/b8/{voice}/vocab_gio_1445.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_1636.svg",
+         "big": "16:36",
+         "caption": "Bốn giờ ba sáu phút chiều",
+         "audio": "audio/b8/{voice}/vocab_gio_1636.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_1800.svg",
+         "big": "18:00",
+         "caption": "Sáu giờ tối",
+         "audio": "audio/b8/{voice}/vocab_gio_1800.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_2012.svg",
+         "big": "20:12",
+         "caption": "Tám giờ mười hai phút tối",
+         "audio": "audio/b8/{voice}/vocab_gio_2012.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_2253.svg",
+         "big": "22:53",
+         "caption": "Mười giờ năm ba phút tối",
+         "audio": "audio/b8/{voice}/vocab_gio_2253.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_2325.svg",
+         "big": "23:25",
+         "caption": "Mười một giờ hai lăm phút đêm",
+         "audio": "audio/b8/{voice}/vocab_gio_2325.mp3"
+        },
+        {
+         "img": "images/b8/gio/clock_0030.svg",
+         "big": "00:30",
+         "caption": "Mười hai rưỡi đêm",
+         "audio": "audio/b8/{voice}/vocab_gio_0030.mp3"
+        }
+       ],
+       "num": 5
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "30ch",
+       "instructionVi": "Đọc giờ bằng tiếng Việt.",
+       "instructionEn": "Read the time in Vietnamese.",
+       "items": [
+        {
+         "template": "06:00 → {0} sáng.",
+         "answers": [
+          [
+           "sáu giờ"
+          ]
+         ]
+        },
+        {
+         "template": "09:15 → {0} sáng.",
+         "answers": [
+          [
+           "chín giờ mười lăm",
+           "chín giờ mười lăm phút"
+          ]
+         ]
+        },
+        {
+         "template": "11:30 → {0} trưa.",
+         "answers": [
+          [
+           "mười một giờ ba mươi",
+           "mười một giờ ba mươi phút",
+           "mười một rưỡi",
+           "mười một giờ rưỡi"
+          ]
+         ]
+        },
+        {
+         "template": "13:18 → {0} trưa.",
+         "answers": [
+          [
+           "một giờ mười tám",
+           "một giờ mười tám phút"
+          ]
+         ]
+        },
+        {
+         "template": "15:24 → {0} chiều.",
+         "answers": [
+          [
+           "ba giờ hai mươi tư",
+           "ba giờ hai mươi tư phút",
+           "ba giờ hai mươi bốn",
+           "ba giờ hai mươi bốn phút",
+           "ba giờ hai tư",
+           "ba giờ hai tư phút",
+           "ba giờ hai bốn",
+           "ba giờ hai bốn phút"
+          ]
+         ]
+        },
+        {
+         "template": "17:43 → {0} chiều.",
+         "answers": [
+          [
+           "năm giờ bốn mươi ba",
+           "năm giờ bốn mươi ba phút",
+           "năm giờ bốn ba",
+           "năm giờ bốn ba phút"
+          ]
+         ]
+        },
+        {
+         "template": "19:04 → {0} tối.",
+         "answers": [
+          [
+           "bảy giờ bốn",
+           "bảy giờ bốn phút",
+           "bảy giờ lẻ bốn",
+           "bảy giờ lẻ bốn phút",
+           "bảy giờ không bốn",
+           "bảy giờ không bốn phút"
+          ]
+         ]
+        },
+        {
+         "template": "21:51 → {0} tối.",
+         "answers": [
+          [
+           "chín giờ năm mươi mốt",
+           "chín giờ năm mươi mốt phút",
+           "chín giờ năm mươi một",
+           "chín giờ năm mươi một phút",
+           "chín giờ năm mốt",
+           "chín giờ năm mốt phút",
+           "chín giờ năm một",
+           "chín giờ năm một phút"
+          ]
+         ]
+        },
+        {
+         "template": "23:09 → {0} đêm.",
+         "answers": [
+          [
+           "mười một giờ chín",
+           "mười một giờ chín phút",
+           "mười một giờ lẻ chín",
+           "mười một giờ lẻ chín phút",
+           "mười một giờ không chín",
+           "mười một giờ không chín phút"
+          ]
+         ]
+        },
+        {
+         "template": "00:25 → {0} đêm.",
+         "answers": [
+          [
+           "mười hai giờ hai mươi lăm",
+           "mười hai giờ hai mươi lăm phút",
+           "mười hai giờ hai lăm",
+           "mười hai giờ hai lăm phút"
+          ]
+         ]
+        }
+       ],
+       "num": 6
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
