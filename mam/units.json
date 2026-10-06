@@ -61,7 +61,8 @@
       "id": "b8",
       "num": 8,
       "title": "Bây giờ là mấy giờ?",
-      "status": "todo"
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b9",
