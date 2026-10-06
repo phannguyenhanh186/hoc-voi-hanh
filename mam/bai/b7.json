@@ -391,6 +391,97 @@
         "lăm",
         "lẻ"
        ]
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "16ch",
+       "instructionVi": "Đọc các số sau bằng tiếng Việt.",
+       "instructionEn": "Read the following numbers in Vietnamese.",
+       "items": [
+        {
+         "template": "12 → {0}",
+         "answers": [
+          [
+           "mười hai"
+          ]
+         ]
+        },
+        {
+         "template": "20 → {0}",
+         "answers": [
+          [
+           "hai mươi"
+          ]
+         ]
+        },
+        {
+         "template": "15 → {0}",
+         "answers": [
+          [
+           "mười lăm"
+          ]
+         ]
+        },
+        {
+         "template": "8 → {0}",
+         "answers": [
+          [
+           "tám"
+          ]
+         ]
+        },
+        {
+         "template": "31 → {0}",
+         "answers": [
+          [
+           "ba mươi mốt",
+           "ba mươi một"
+          ]
+         ]
+        },
+        {
+         "template": "24 → {0}",
+         "answers": [
+          [
+           "hai mươi tư",
+           "hai mươi bốn"
+          ]
+         ]
+        },
+        {
+         "template": "19 → {0}",
+         "answers": [
+          [
+           "mười chín"
+          ]
+         ]
+        },
+        {
+         "template": "4 → {0}",
+         "answers": [
+          [
+           "bốn"
+          ]
+         ]
+        },
+        {
+         "template": "11 → {0}",
+         "answers": [
+          [
+           "mười một"
+          ]
+         ]
+        },
+        {
+         "template": "27 → {0}",
+         "answers": [
+          [
+           "hai mươi bảy"
+          ]
+         ]
+        }
+       ],
+       "num": 7
       }
      ]
     },
@@ -400,7 +491,7 @@
      "exercises": [
       {
        "type": "photoVocab",
-       "num": 7,
+       "num": 8,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
        "columns": 4,
@@ -472,6 +563,112 @@
         "lăm",
         "lẻ"
        ]
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "18ch",
+       "instructionVi": "Đọc các tháng sau bằng tiếng Việt.",
+       "instructionEn": "Read the following months in Vietnamese.",
+       "items": [
+        {
+         "template": "June → {0}",
+         "answers": [
+          [
+           "tháng sáu"
+          ]
+         ]
+        },
+        {
+         "template": "November → {0}",
+         "answers": [
+          [
+           "tháng mười một"
+          ]
+         ]
+        },
+        {
+         "template": "May → {0}",
+         "answers": [
+          [
+           "tháng năm"
+          ]
+         ]
+        },
+        {
+         "template": "October → {0}",
+         "answers": [
+          [
+           "tháng mười"
+          ]
+         ]
+        },
+        {
+         "template": "December → {0}",
+         "answers": [
+          [
+           "tháng mười hai"
+          ]
+         ]
+        },
+        {
+         "template": "January → {0}",
+         "answers": [
+          [
+           "tháng một"
+          ]
+         ]
+        },
+        {
+         "template": "March → {0}",
+         "answers": [
+          [
+           "tháng ba"
+          ]
+         ]
+        },
+        {
+         "template": "February → {0}",
+         "answers": [
+          [
+           "tháng hai"
+          ]
+         ]
+        },
+        {
+         "template": "September → {0}",
+         "answers": [
+          [
+           "tháng chín"
+          ]
+         ]
+        },
+        {
+         "template": "April → {0}",
+         "answers": [
+          [
+           "tháng tư",
+           "tháng bốn"
+          ]
+         ]
+        },
+        {
+         "template": "August → {0}",
+         "answers": [
+          [
+           "tháng tám"
+          ]
+         ]
+        },
+        {
+         "template": "July → {0}",
+         "answers": [
+          [
+           "tháng bảy"
+          ]
+         ]
+        }
+       ],
+       "num": 9
       }
      ]
     },
@@ -481,7 +678,7 @@
      "exercises": [
       {
        "type": "photoVocab",
-       "num": 8,
+       "num": 10,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
        "columns": 4,
@@ -573,6 +770,120 @@
         "lăm",
         "lẻ"
        ]
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "36ch",
+       "instructionVi": "Đọc các năm sau bằng tiếng Việt.",
+       "instructionEn": "Read the following years in Vietnamese.",
+       "items": [
+        {
+         "template": "1900 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm"
+          ]
+         ]
+        },
+        {
+         "template": "1975 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm bảy mươi lăm"
+          ]
+         ]
+        },
+        {
+         "template": "1980 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm tám mươi"
+          ]
+         ]
+        },
+        {
+         "template": "1998 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm chín mươi tám"
+          ]
+         ]
+        },
+        {
+         "template": "2000 → {0}",
+         "answers": [
+          [
+           "hai ngàn"
+          ]
+         ]
+        },
+        {
+         "template": "2001 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm lẻ một",
+           "hai ngàn lẻ một"
+          ]
+         ]
+        },
+        {
+         "template": "2010 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm mười",
+           "hai ngàn mười"
+          ]
+         ]
+        },
+        {
+         "template": "2015 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm mười lăm",
+           "hai ngàn mười lăm"
+          ]
+         ]
+        },
+        {
+         "template": "2020 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi",
+           "hai ngàn hai mươi"
+          ]
+         ]
+        },
+        {
+         "template": "2024 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi tư",
+           "hai ngàn hai mươi bốn",
+           "hai ngàn hai mươi tư",
+           "hai ngàn không trăm hai mươi bốn"
+          ]
+         ]
+        },
+        {
+         "template": "2025 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi lăm",
+           "hai ngàn hai mươi lăm"
+          ]
+         ]
+        },
+        {
+         "template": "2026 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi sáu",
+           "hai ngàn hai mươi sáu"
+          ]
+         ]
+        }
+       ],
+       "num": 11
       }
      ]
     }
@@ -652,7 +963,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 9,
+       "num": 12,
        "instructionVi": "Hoàn thành câu trả lời.",
        "instructionEn": "Complete the answers.",
        "items": [
@@ -897,7 +1208,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 10,
+       "num": 13,
        "instructionVi": "Trả lời câu hỏi bằng thông tin gợi ý.",
        "instructionEn": "Answer the questions using the prompts.",
        "items": [
