@@ -679,7 +679,7 @@
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-achoice-row');
         const head = el('div', 'bai-achoice-head');
-        head.appendChild(el('div', 'bai-achoice-text', String(i + 1) + '.'));
+        head.appendChild(el('div', 'bai-achoice-text', String(i + 1) + '.' + (item.prompt ? '\u00A0\u00A0' + item.prompt : '')));
         row.appendChild(head);
         const opts = el('div', 'bai-achoice-opts');
         (item.options || []).forEach(function (opt, oi) {
@@ -1130,7 +1130,7 @@
         input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
         const mark = el('span', 'bai-mark');
         line.appendChild(input);
-        if (it.given) line.appendChild(document.createTextNode('?'));
+        if (it.given || ex.questionMark) line.appendChild(document.createTextNode('?'));
         line.appendChild(mark);
         row.appendChild(line);
         if (it.given) {
