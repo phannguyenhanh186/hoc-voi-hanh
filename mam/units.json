@@ -67,19 +67,20 @@
     {
       "id": "b9",
       "num": 9,
-      "title": "Hôm qua chị đi ngủ lúc mấy giờ?",
-      "status": "ready"
+      "title": "Mẹ của bạn mấy tuổi?",
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b10",
       "num": 10,
-      "title": "Mẹ của bạn mấy tuổi?",
+      "title": "Khi nào bạn đi Việt Nam?",
       "status": "todo"
     },
     {
       "id": "b11",
       "num": 11,
-      "title": "Khi nào bạn đi Việt Nam?",
+      "title": "Đi từ Hà Nội tới Sài Gòn mất bao lâu?",
       "status": "todo"
     },
     {
