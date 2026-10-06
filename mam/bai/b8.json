@@ -5,7 +5,8 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b8/nam: pron_<van>.mp3 (ay, bay, ...), pron_dgi_<tu>.mp3 (d, da, ..., gi, gia, ...), ex2_01..07.mp3, ex4_01..05.mp3, vocab_gio_HHMM.mp3 (15 file, vd vocab_gio_0100.mp3) - chua thu am. Ten file theo Telex (xem audioKey trong bai.html).",
-  "images": "images/b8/gio/clock_HHMM.svg: dong ho tu tao bang SVG, co the thay bang anh that (giu ten file hoac sua 'img')."
+  "images": "images/b8/gio/clock_HHMM.svg: dong ho tu tao bang SVG, co the thay bang anh that (giu ten file hoac sua 'img').",
+  "todo_audio_nghe": "audio/b8/nam: nghe1_01..05.mp3 (nghe va chon), nghe2_01..05.mp3 (nghe va viet gio), nghe3_01..03.mp3 (nghe va tra loi) - SE BO SUNG SAU."
  },
  "sections": [
   {
@@ -432,6 +433,203 @@
         }
        ],
        "num": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "gio",
+     "label": "Giờ",
+     "exercises": [
+      {
+       "type": "audioChoice",
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b8/{voice}/nghe1_01.mp3",
+         "options": [
+          "07:10",
+          "10:07",
+          "07:17"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe1_02.mp3",
+         "options": [
+          "12:45",
+          "12:54",
+          "04:12"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe1_03.mp3",
+         "options": [
+          "08:30",
+          "05:30",
+          "20:30"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe1_04.mp3",
+         "options": [
+          "02:15",
+          "02:25",
+          "14:25"
+         ],
+         "answer": "c"
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe1_05.mp3",
+         "options": [
+          "12:25",
+          "12:52",
+          "00:25"
+         ],
+         "answer": "c"
+        }
+       ],
+       "num": 7
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "34ch",
+       "instructionVi": "Nghe và viết giờ.",
+       "instructionEn": "Listen and write the time.",
+       "items": [
+        {
+         "audio": "audio/b8/{voice}/nghe2_01.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "tám giờ mười phút sáng",
+           "tám giờ mười sáng"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe2_02.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ba giờ hai lăm phút chiều",
+           "ba giờ hai mươi lăm chiều",
+           "ba giờ hai mươi lăm phút chiều",
+           "ba giờ hai lăm chiều"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe2_03.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "mười hai giờ mười bốn phút trưa",
+           "mười hai giờ mười bốn trưa"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe2_04.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "bốn rưỡi chiều",
+           "bốn giờ ba mươi chiều",
+           "bốn giờ ba mươi phút chiều",
+           "bốn giờ rưỡi chiều"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe2_05.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "chín giờ bốn ba phút tối",
+           "chín giờ bốn mươi ba tối",
+           "chín giờ bốn mươi ba phút tối",
+           "chín giờ bốn ba tối"
+          ]
+         ]
+        }
+       ],
+       "num": 8
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "26ch",
+       "instructionVi": "Nghe và trả lời câu hỏi.",
+       "instructionEn": "Listen and answer the questions.",
+       "items": [
+        {
+         "audio": "audio/b8/{voice}/nghe3_01.mp3",
+         "template": "Bây giờ là mấy giờ? {0}",
+         "answers": [
+          [
+           "10:42",
+           "10h42",
+           "10 giờ 42",
+           "mười giờ bốn mươi hai",
+           "mười giờ bốn mươi hai phút",
+           "mười giờ bốn hai",
+           "mười giờ bốn hai phút"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe3_02.mp3",
+         "template": "Hiền đi làm lúc mấy giờ? {0}",
+         "answers": [
+          [
+           "7:00",
+           "07:00",
+           "7h00",
+           "07h00",
+           "7 giờ 0",
+           "07 giờ 00",
+           "7h",
+           "7 giờ",
+           "07h",
+           "bảy giờ",
+           "bảy giờ sáng"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b8/{voice}/nghe3_03.mp3",
+         "template": "Hôm qua cô Tư đi ngủ lúc mấy giờ? {0}",
+         "answers": [
+          [
+           "23:30",
+           "23h30",
+           "23 giờ 30",
+           "mười một giờ ba mươi",
+           "mười một giờ ba mươi phút",
+           "mười một rưỡi",
+           "mười một giờ rưỡi",
+           "mười một giờ ba mươi đêm",
+           "mười một giờ ba mươi tối",
+           "mười một giờ ba mươi phút đêm",
+           "mười một giờ ba mươi phút tối",
+           "mười một rưỡi đêm",
+           "mười một rưỡi tối",
+           "mười một giờ rưỡi đêm",
+           "mười một giờ rưỡi tối"
+          ]
+         ]
+        }
+       ],
+       "num": 9
       }
      ]
     }
