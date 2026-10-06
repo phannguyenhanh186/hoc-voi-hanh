@@ -567,7 +567,7 @@
       },
       {
        "type": "audioFill",
-       "blankWidth": "26ch",
+       "blankWidth": "16ch",
        "instructionVi": "Nghe và trả lời câu hỏi.",
        "instructionEn": "Listen and answer the questions.",
        "items": [
@@ -630,6 +630,89 @@
         }
        ],
        "num": 9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "hoi-gio",
+     "label": "Hỏi và trả lời giờ giấc",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "HỎI VÀ TRẢ LỜI GIỜ GIẤC · ASKING AND TELLING THE TIME",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Hỏi giờ hiện tại",
+         "en": "Ask the current time",
+         "tone": "purple"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bây giờ là mấy giờ?",
+           "en": "What time is it?"
+          },
+          {
+           "vi": "Bây giờ là tám rưỡi.",
+           "en": "It's half past 8 now."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "2. Hỏi giờ của một hoạt động",
+         "en": "Ask the time of an activity",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + [hành động] + lúc mấy giờ?"
+        },
+        {
+         "type": "structure",
+         "vi": "→ [Chủ ngữ] + [hành động] + lúc + [giờ]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn đi làm lúc mấy giờ?",
+           "en": "What time do you go to work?"
+          },
+          {
+           "vi": "Mình đi làm lúc tám giờ sáng.",
+           "en": "I go to work at eight in the morning."
+          },
+          {
+           "vi": "Anh ăn sáng lúc mấy giờ?",
+           "en": "What time do you eat breakfast?"
+          },
+          {
+           "vi": "Anh ăn sáng lúc bảy rưỡi.",
+           "en": "I eat breakfast at half past seven."
+          },
+          {
+           "vi": "Phong tới sân bay lúc mấy giờ?",
+           "en": "What time did Phong go to the airport?"
+          },
+          {
+           "vi": "Phong tới sân bay lúc ba giờ mười lăm phút.",
+           "en": "Phong went to the airport at 3:15."
+          }
+         ]
+        }
+       ]
       }
      ]
     }
