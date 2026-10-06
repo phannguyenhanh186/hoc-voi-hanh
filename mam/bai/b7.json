@@ -6,7 +6,8 @@
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b7/nam: pron_<van>.mp3 (canh, banh, hanh, ...), pron_nh_<tu>.mp3 (nha, nhi, ...), ex2_01..05.mp3, ex5_01..05.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html).",
   "confirm": "Bai 4 (phu am nh) dung lai dung 5 cau cua bai 2 (nguon de gui giong het) - CAN XAC NHAN; hien dung lai audio ex2_01..05.",
-  "todo_audio_tu_vung": "audio/b7/nam: vocab_ngay_01..31.mp3, vocab_thang_01..12.mp3, vocab_nam_<nam>.mp3 (1900, 1940, 1951, 1964, 1975, 2000, 2001, 2005, 2010, 2014, 2020..2025) - chua thu am. Thang 4 doc 'tu'; cac nam doc theo kieu mien Nam ('ngan', 'le') - CAN XAC NHAN."
+  "todo_audio_tu_vung": "audio/b7/nam: vocab_ngay_01..31.mp3, vocab_thang_01..12.mp3, vocab_nam_<nam>.mp3 (1900, 1940, 1951, 1964, 1975, 2000, 2001, 2005, 2010, 2014, 2020..2025) - chua thu am. Thang 4 doc 'tu'; cac nam doc theo kieu mien Nam ('ngan', 'le') - CAN XAC NHAN.",
+  "todo_audio_nghe": "audio/b7/nam: nghe1_01..08.mp3 (nghe va viet ngay thang), nghe2_01..05.mp3 (nghe va chon), nghe3_01..03.mp3 (nghe va tra loi) - SE BO SUNG SAU."
  },
  "sections": [
   {
@@ -890,6 +891,202 @@
    ]
   },
   {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "ngay-thang",
+     "label": "Ngày tháng",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "blankWidth": "26ch",
+       "instructionVi": "Nghe và viết ngày tháng.",
+       "instructionEn": "Listen and write the date.",
+       "items": [
+        {
+         "audio": "audio/b7/{voice}/nghe1_01.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 5 tháng 10",
+           "5 tháng 10"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_02.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 15 tháng 1",
+           "15 tháng 1"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_03.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 9 tháng 4",
+           "9 tháng 4"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_04.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "31 tháng 12",
+           "ngày 31 tháng 12"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_05.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 20 tháng 2",
+           "20 tháng 2"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_06.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 14 tháng 8",
+           "14 tháng 8"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_07.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "tháng 3 năm 2024"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_08.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "tháng 6 năm 2025"
+          ]
+         ]
+        }
+       ],
+       "num": 12
+      },
+      {
+       "type": "audioChoice",
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b7/{voice}/nghe2_01.mp3",
+         "options": [
+          "12/6",
+          "21/6",
+          "21/7"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_02.mp3",
+         "options": [
+          "15/8/2010",
+          "15/8/2000",
+          "15/9/2000"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_03.mp3",
+         "options": [
+          "24/4/2001",
+          "14/4/2001",
+          "14/4/2011"
+         ],
+         "answer": "c"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_04.mp3",
+         "options": [
+          "31/12/2020",
+          "30/12/2021",
+          "31/11/2020"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_05.mp3",
+         "options": [
+          "5/10/2026",
+          "15/10/2026",
+          "5/11/2026"
+         ],
+         "answer": "c"
+        }
+       ],
+       "num": 13
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "26ch",
+       "instructionVi": "Nghe và trả lời câu hỏi.",
+       "instructionEn": "Listen and answer the questions.",
+       "items": [
+        {
+         "audio": "audio/b7/{voice}/nghe3_01.mp3",
+         "template": "Hôm nay là ngày mấy? {0}",
+         "answers": [
+          [
+           "ngày 8 tháng 9",
+           "8 tháng 9",
+           "Hôm nay là ngày 8 tháng 9"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe3_02.mp3",
+         "template": "Sinh nhật của Nam là ngày mấy? {0}",
+         "answers": [
+          [
+           "ngày 14 tháng 6 năm 2002",
+           "14 tháng 6 năm 2002",
+           "Sinh nhật của Nam là ngày 14 tháng 6 năm 2002",
+           "Sinh nhật Nam là ngày 14 tháng 6 năm 2002"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe3_03.mp3",
+         "template": "Linh về Việt Nam vào ngày mấy? {0}",
+         "answers": [
+          [
+           "ngày 3 tháng 11",
+           "3 tháng 11",
+           "Linh về Việt Nam vào ngày 3 tháng 11"
+          ]
+         ]
+        }
+       ],
+       "num": 14
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "ngu-phap",
    "titleVi": "Ngữ pháp",
    "titleEn": "Grammar",
@@ -963,7 +1160,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 12,
+       "num": 15,
        "instructionVi": "Hoàn thành câu trả lời.",
        "instructionEn": "Complete the answers.",
        "items": [
@@ -1208,7 +1405,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 13,
+       "num": 16,
        "instructionVi": "Trả lời câu hỏi bằng thông tin gợi ý.",
        "instructionEn": "Answer the questions using the prompts.",
        "items": [
