@@ -1253,6 +1253,7 @@
         }
         row.appendChild(num);
         const built = buildFillLine(item.template, item.answers || [], 'Câu ' + (i + 1));
+        if (ex.blankWidth) built.cells.forEach(function (c) { c.input.style.width = ex.blankWidth; c.input.style.maxWidth = '100%'; });
         const mark = el('span', 'bai-mark'); built.line.appendChild(mark);
         row.appendChild(built.line);
         wrap.appendChild(row);
