@@ -510,6 +510,75 @@
       return box;
     }
 
+    // Hoàn thành câu theo sơ đồ: ảnh (tuỳ chọn) + ngân hàng từ + câu có chỗ trống.
+    // Câu ví dụ (example:true) hiện đáp án tô đỏ, và từ đó bị gạch trong ngân hàng từ.
+    function renderBankSentences(ex, n) {
+      const box = el('div');
+      if (ex.image) {
+        const im = document.createElement('img');
+        im.src = ex.image; im.alt = ex.imageAlt || '';
+        im.style.cssText = 'display:block;width:100%;max-width:' + (ex.imageMaxWidth || 640) + 'px;height:auto;margin:4px 0 18px';
+        box.appendChild(im);
+      }
+      let activeInput = null;
+      const exItem = (ex.items || []).filter(function (x) { return x.example; })[0];
+      const usedWord = exItem && exItem.answers && exItem.answers[0] ? normName(exItem.answers[0][0]) : '';
+      const bank = el('div', 'bai-wordbank');
+      (ex.words || []).forEach(function (w) {
+        const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+        if (normName(w) === usedWord) {
+          chip.disabled = true;
+          chip.style.textDecoration = 'line-through'; chip.style.opacity = '.55';
+          chip.style.outline = '2px solid var(--stroke)'; chip.style.outlineOffset = '2px'; chip.style.cursor = 'default';
+        } else {
+          chip.addEventListener('click', function () {
+            if (!activeInput) return;
+            activeInput.value = w;
+            activeInput.dispatchEvent(new Event('input'));
+          });
+        }
+        bank.appendChild(chip);
+      });
+      box.appendChild(bank);
+      const list = el('div', 'bai-fill');
+      const cells = [];
+      let seq = 0;
+      (ex.items || []).forEach(function (it) {
+        if (it.example) {
+          const line = el('div', 'bai-fill-line');
+          line.appendChild(document.createTextNode('Ví dụ\u00A0\u00A0'));
+          String(it.template).split(/(\{0\})/).forEach(function (part) {
+            if (part === '{0}') line.appendChild(el('span', 'bai-fill-example', (it.answers[0] || [''])[0]));
+            else if (part) line.appendChild(document.createTextNode(part));
+          });
+          list.appendChild(line);
+          return;
+        }
+        seq++;
+        const built = buildFillLine(seq + '\u00A0\u00A0' + it.template, it.answers || [], 'Câu ' + seq);
+        const mark = el('span', 'bai-mark');
+        built.line.appendChild(mark);
+        built.cells.forEach(function (c) {
+          c.input.style.width = '12ch';
+          c.input.addEventListener('focus', function () { activeInput = c.input; });
+          cells.push({ input: c.input, answers: c.answers, mark: mark });
+        });
+        list.appendChild(built.line);
+      });
+      box.appendChild(list);
+      function check() {
+        cells.forEach(function (c) {
+          const v = normName(c.input.value);
+          const ok = v && c.answers.some(function (a) { return normName(a) === v; });
+          markCell(c.input, c.mark, !v ? '' : (ok ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() { cells.forEach(function (c) { c.input.value = c.answers[0] || ''; markCell(c.input, c.mark, 'ok'); }); }
+      cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+      box.appendChild(fillCheckBar(cells, check, reveal));
+      return box;
+    }
+
     // Bài 7: nghe và đánh số hình theo thứ tự nghe được. Có 'answer' thì mới chấm được.
     function renderPhotoOrder(ex, n) {
       const box = el('div');
@@ -1288,7 +1357,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs, audioFill: renderAudioFill };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs, audioFill: renderAudioFill };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
