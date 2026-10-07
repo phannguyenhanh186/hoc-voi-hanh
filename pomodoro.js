@@ -68,7 +68,7 @@
     + 'box-shadow:5px 5px 0 0 var(--stroke,#1B1B28);font-family:var(--font-body,sans-serif);'
     + 'color:var(--ink,#000);user-select:none;}'
     + '.pomo-widget.pomo-collapsed{width:auto;}'
-    + '.pomo-header{display:flex;align-items:center;gap:8px;padding:10px 12px;'
+    + '.pomo-header{touch-action:none;display:flex;align-items:center;gap:8px;padding:10px 12px;'
     + 'background:var(--primary,#C0BFF9);border-bottom:1.5px solid var(--stroke,#1B1B28);'
     + 'border-radius:calc(var(--radius,16px) - 1.5px) calc(var(--radius,16px) - 1.5px) 0 0;cursor:grab;}'
     + '.pomo-collapsed .pomo-header{border-bottom:none;border-radius:calc(var(--radius,16px) - 1.5px);}'
@@ -111,7 +111,7 @@
     + 'border-radius:10px;padding:8px 4px;font-size:.78rem;font-weight:700;cursor:pointer;line-height:1.2;}'
     + '.pomo-mode:hover{transform:translate(-1px,-1px);box-shadow:2px 2px 0 0 var(--stroke,#1B1B28);}'
     + '.pomo-mode.active{background:var(--tint,#F2F1FD);border-color:var(--accent,#6F6CE0);color:var(--accent-deep,#514FC4);}'
-    + '.pomo-fab{position:fixed;z-index:9999;width:52px;height:52px;border-radius:50%;'
+    + '.pomo-fab{touch-action:none;position:fixed;z-index:9999;width:52px;height:52px;border-radius:50%;'
     + 'background:var(--accent-deep,#514FC4);color:#fff;border:1.5px solid var(--stroke,#1B1B28);'
     + 'box-shadow:3px 3px 0 0 var(--stroke,#1B1B28);font-size:1.3rem;cursor:pointer;'
     + 'font-family:var(--font-display,inherit);font-weight:700;}'
@@ -222,15 +222,20 @@
     els.start.addEventListener('click', toggleRunning);
     els.reset.addEventListener('click', resetTimer);
 
-    makeDraggable(els.dragHandle, els.wrap, function (pos) { saveState({ pos: pos }); });
+    makeDraggable(els.dragHandle, els.wrap, function (pos) { state.pos = pos; saveState({ pos: pos }); });
     makeDraggable(els.fab, els.fab, function (pos) { saveState({ posFab: pos }); }, true);
   }
 
   function makeDraggable(handle, target, onEnd, isSelfDraggable) {
-    var dragging = false, startX, startY, origLeft, origTop;
+    var dragging = false, moved = false, startX, startY, origLeft, origTop;
+    // Kéo xong thì không tính là "bấm" (tránh nút tròn tự mở lại sau khi kéo)
+    handle.addEventListener('click', function (e) {
+      if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; }
+    }, true);
     handle.addEventListener('pointerdown', function (e) {
+      if (e.button != null && e.button > 0) return;
       if (isSelfDraggable !== true && e.target.closest('button') && e.target.closest('button') !== handle) return;
-      dragging = true;
+      dragging = true; moved = false;
       var rect = target.getBoundingClientRect();
       origLeft = rect.left; origTop = rect.top;
       startX = e.clientX; startY = e.clientY;
@@ -243,6 +248,8 @@
     handle.addEventListener('pointermove', function (e) {
       if (!dragging) return;
       var dx = e.clientX - startX, dy = e.clientY - startY;
+      if (!moved && Math.abs(dx) + Math.abs(dy) < 4) return;
+      moved = true;
       var newLeft = Math.min(Math.max(0, origLeft + dx), window.innerWidth - target.offsetWidth);
       var newTop = Math.min(Math.max(0, origTop + dy), window.innerHeight - target.offsetHeight);
       target.style.left = newLeft + 'px';
@@ -251,7 +258,8 @@
     function endDrag(e) {
       if (!dragging) return;
       dragging = false;
-      onEnd({ left: target.style.left, top: target.style.top });
+      try { handle.releasePointerCapture(e.pointerId); } catch (err) {}
+      if (moved) onEnd({ left: target.style.left, top: target.style.top });
     }
     handle.addEventListener('pointerup', endDrag);
     handle.addEventListener('pointercancel', endDrag);
