@@ -22,7 +22,7 @@
   </header>
 
   <div class="page-back-bar wrap">
-    <a class="back-link" id="back-link" href="lessons.html">← Back</a>
+    <a class="back-link" id="back-link" href="lessons.html">← Quay lại</a>
   </div>
 
   <main class="wrap">
@@ -1427,6 +1427,8 @@
 
       const shell = buildSectionShell('', function () { location.href = 'lessons.html?level=' + encodeURIComponent(level); });
       const pill = shell.querySelector('.gram2-tab-pill');
+      const topbar = shell.querySelector('.gram2-topbar');
+      if (topbar) topbar.remove();   // bỏ ô mũi tên + tên phần (đã có nút Quay lại ở trên)
       $panel.appendChild(shell);
 
       const body = el('div', 'gram2-body');
