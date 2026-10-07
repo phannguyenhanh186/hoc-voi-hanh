@@ -174,6 +174,21 @@
          "maxWidth": 640
         }
        ]
+      },
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "Nhìn hình và đọc tên các thành viên trong gia đình.",
+       "instructionEn": "Look at the picture and read the names of the family members.",
+       "title": "",
+       "blocks": [
+        {
+         "type": "image",
+         "src": "images/b9/gia-dinh/family_names.svg",
+         "alt": "Sơ đồ gia đình: ông Sáu, bà Thơm; ba Phú, mẹ Chi, cô Mai, chú Thắng; Nam, Trà, Bình, Giang",
+         "maxWidth": 648
+        }
+       ]
       }
      ]
     }
