@@ -1709,3 +1709,12 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 @media (max-width: 640px) { .bai-sound-line { gap: 4px; } .bai-sound-line .bai-chip { font-size: .95rem; } }
 
 .bai-hl { color: #EB483F; }
+
+/* ============================================================
+   TẠM ẨN: "How this works?", "Contact", chuông thông báo, đăng nhập/tài khoản.
+   Muốn hiện lại: xoá cả khối này.
+   ============================================================ */
+.site-header .nav-links,
+.site-header .nav-right,
+#account-widget-slot,
+.account-menu { display: none !important; }
