@@ -1709,15 +1709,3 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 @media (max-width: 640px) { .bai-sound-line { gap: 4px; } .bai-sound-line .bai-chip { font-size: .95rem; } }
 
 .bai-hl { color: #EB483F; }
-
-/* Sơ đồ cây gia đình (familyTree) */
-.bai-tree-scroll { overflow-x: auto; padding: 4px 2px 10px; max-width: 700px; }
-.bai-tree { position: relative; min-width: 520px; display: flex; flex-direction: column; gap: 52px; }
-.bai-tree-lines { position: absolute; left: 0; top: 0; pointer-events: none; overflow: visible; }
-.bai-tree-lines line { stroke: var(--stroke); stroke-width: 2; stroke-linecap: round; }
-.bai-tree-row { position: relative; display: flex; justify-content: center; align-items: stretch; gap: 16px; }
-.bai-tree-group { display: flex; align-items: stretch; gap: 6px; }
-.bai-tree-group.is-couple { gap: 20px; }
-.bai-tree-node { flex-direction: column; gap: 4px; min-width: 74px; min-height: 64px; padding: 8px 4px; line-height: 1.1; }
-.bai-tree-vi { font-size: 1.05rem; }
-.bai-tree-en { font-family: var(--font-body); font-weight: 600; font-size: .64rem; color: var(--muted); line-height: 1.15; text-align: center; }
