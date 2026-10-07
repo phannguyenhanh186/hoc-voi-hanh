@@ -64,7 +64,7 @@ a { color: var(--accent-deep); text-decoration: none; }
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 10001; /* phải cao hơn widget Pomodoro nổi (z-index: 9999) để menu tài khoản luôn bắt được click */
+  z-index: 10001; /* Pomodoro nổi dùng z-index 10002 nên nằm đè lên thanh menu */
   background: var(--bg);
   padding: 14px 0;
 }
