@@ -354,12 +354,12 @@
          "audio": "audio/b4/{voice}/ex6_05.mp3"
         },
         {
-         "img": "images/b4/bai5/tam.jpg",
+         "img": "images/b4/bai5/nau_com.jpg",
          "name": "Hình 6",
          "template": "Hiền {0} rồi.",
          "answers": [
           [
-           "tắm"
+           "nấu cơm"
           ]
          ],
          "audio": "audio/b4/{voice}/ex6_06.mp3"
