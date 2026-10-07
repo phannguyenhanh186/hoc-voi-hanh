@@ -4,7 +4,7 @@
  "title": "Mẹ của bạn mấy tuổi?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b9/nam: pron_<van>.mp3 (chuoi, muoi, tuoi, ...), pron_t_<tu>.mp3 (ten, tuoi, tien, tay, tim, tao), ex2_01..06.mp3, ex4_01..06.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html). Them: audio/b9/nam/vocab_gd_<tu>.mp3 cho 12 tu gia dinh (ong, ba, me, co, chu, bac, anh, chi, em, anh ho, chi ho, em ho) va bà (vocab_gd_baf.mp3) - ten file theo Telex."
+  "todo_audio": "audio/b9/nam: pron_<van>.mp3 (chuoi, muoi, tuoi, ...), pron_t_<tu>.mp3 (ten, tuoi, tien, tay, tim, tao), ex2_01..06.mp3, ex4_01..06.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html)."
  },
  "sections": [
   {
@@ -161,143 +161,17 @@
      "label": "Gia đình",
      "exercises": [
       {
-       "type": "familyTree",
-       "instructionVi": "Nhìn sơ đồ gia đình và nghe từ vựng.",
-       "instructionEn": "Look at the family tree and listen to the words.",
-       "audio": "audio/b9/{voice}/vocab_gd_{key}.mp3",
-       "rows": [
-        [
-         {
-          "id": "g1",
-          "kind": "couple",
-          "color": "#FCEFCD",
-          "nodes": [
-           {
-            "id": "ong",
-            "vi": "ông",
-            "en": "grandfather"
-           },
-           {
-            "id": "grandma",
-            "vi": "bà",
-            "en": "grandmother"
-           }
-          ]
-         }
-        ],
-        [
-         {
-          "id": "g2",
-          "kind": "couple",
-          "color": "#FDDCDB",
-          "nodes": [
-           {
-            "id": "ba",
-            "vi": "ba",
-            "en": "father"
-           },
-           {
-            "id": "me",
-            "vi": "mẹ",
-            "en": "mother"
-           }
-          ]
-         },
-         {
-          "id": "g3",
-          "kind": "siblings",
-          "color": "#FDDCDB",
-          "nodes": [
-           {
-            "id": "co",
-            "vi": "cô",
-            "en": "aunt (father’s sister)"
-           },
-           {
-            "id": "chu",
-            "vi": "chú",
-            "en": "uncle (father’s younger brother)"
-           },
-           {
-            "id": "bac",
-            "vi": "bác",
-            "en": "uncle / aunt (father’s older sibling)"
-           }
-          ]
-         }
-        ],
-        [
-         {
-          "id": "g4",
-          "kind": "siblings",
-          "color": "#D6F1FD",
-          "nodes": [
-           {
-            "id": "anh",
-            "vi": "anh",
-            "en": "older brother"
-           },
-           {
-            "id": "chi",
-            "vi": "chị",
-            "en": "older sister"
-           },
-           {
-            "id": "em",
-            "vi": "em",
-            "en": "younger sibling"
-           }
-          ]
-         },
-         {
-          "id": "g5",
-          "kind": "siblings",
-          "color": "#D6F1FD",
-          "nodes": [
-           {
-            "id": "anh_ho",
-            "vi": "anh họ",
-            "en": "older male cousin"
-           },
-           {
-            "id": "chi_ho",
-            "vi": "chị họ",
-            "en": "older female cousin"
-           },
-           {
-            "id": "em_ho",
-            "vi": "em họ",
-            "en": "younger cousin"
-           }
-          ]
-         }
-        ]
-       ],
-       "links": [
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "Nhìn sơ đồ gia đình.",
+       "instructionEn": "Look at the family tree.",
+       "title": "GIA ĐÌNH · FAMILY",
+       "blocks": [
         {
-         "from": "g1",
-         "to": [
-          "ba",
-          "co",
-          "chu",
-          "bac"
-         ]
-        },
-        {
-         "from": "g2",
-         "to": [
-          "anh",
-          "chi",
-          "em"
-         ]
-        },
-        {
-         "from": "g3",
-         "to": [
-          "anh_ho",
-          "chi_ho",
-          "em_ho"
-         ]
+         "type": "image",
+         "src": "images/b9/gia-dinh/family_tree.svg",
+         "alt": "Sơ đồ gia đình: ông bà; bác, ba, mẹ, cô, chú; anh, mình, chị, anh họ, chị họ, em họ",
+         "maxWidth": 640
         }
        ]
       }
