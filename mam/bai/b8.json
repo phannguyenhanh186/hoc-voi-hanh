@@ -929,6 +929,421 @@
      ]
     }
    ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "gio",
+     "label": "Giờ",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "instructionVi": "Đọc nhật ký của Lan và trả lời câu hỏi.",
+       "instructionEn": "Read Lan's diary and answer the questions.",
+       "passage": "Sáng hôm nay mình ngủ dậy và đánh răng lúc 7 giờ. Sau đó, mình ăn sáng lúc 7 rưỡi và đi làm lúc 8 giờ.\nMình ăn trưa lúc 12 giờ. Buổi chiều, mình về nhà lúc 5 rưỡi.\nBây giờ là 6 giờ 45 phút tối, mình đang đi ăn với Giang và Ngân. Mình thường tắm lúc 9 giờ tối và đi ngủ lúc 12 giờ đêm.",
+       "questions": [
+        {
+         "q": "Lan làm gì lúc 7 giờ sáng?",
+         "a": "Lan ngủ dậy và đánh răng."
+        },
+        {
+         "q": "Lan ăn sáng và đi làm lúc mấy giờ?",
+         "a": "Lan ăn sáng lúc 7 rưỡi và đi làm lúc 8 giờ."
+        },
+        {
+         "q": "Lan ăn trưa lúc mấy giờ?",
+         "a": "Lan ăn trưa lúc 12 giờ."
+        },
+        {
+         "q": "Lan về nhà lúc mấy giờ?",
+         "a": "Lan về nhà lúc 5 rưỡi."
+        },
+        {
+         "q": "Bây giờ là mấy giờ?",
+         "a": "Bây giờ là 6 giờ 45 phút tối."
+        },
+        {
+         "q": "Bây giờ Lan đang đi làm gì?",
+         "a": "Bây giờ Lan đang đi ăn với Giang và Ngân."
+        },
+        {
+         "q": "Lan thường tắm lúc mấy giờ?",
+         "a": "Lan thường tắm lúc 9 giờ tối."
+        },
+        {
+         "q": "Lan thường làm gì lúc 12 giờ đêm?",
+         "a": "Lan thường đi ngủ lúc 12 giờ đêm."
+        }
+       ],
+       "num": 13
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "gio",
+     "label": "Giờ",
+     "exercises": [
+      {
+       "type": "chooseWord",
+       "num": 14,
+       "instructionVi": "Chọn từ đúng.",
+       "instructionEn": "Choose the correct words.",
+       "items": [
+        {
+         "template": "Bây {0} là mấy giờ?",
+         "blanks": [
+          {
+           "options": [
+            "giờ",
+            "lúc",
+            "là"
+           ],
+           "answer": "giờ"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay bạn đi làm {0} mấy giờ?",
+         "blanks": [
+          {
+           "options": [
+            "lúc",
+            "là",
+            "giờ"
+           ],
+           "answer": "lúc"
+          }
+         ]
+        },
+        {
+         "template": "Chị Minh thường đi chợ {0} 5 giờ chiều.",
+         "blanks": [
+          {
+           "options": [
+            "lúc",
+            "là",
+            "giờ"
+           ],
+           "answer": "lúc"
+          }
+         ]
+        },
+        {
+         "template": "Chú Sáu thường đi ngủ {0} 12 giờ đêm.",
+         "blanks": [
+          {
+           "options": [
+            "lúc",
+            "là",
+            "giờ"
+           ],
+           "answer": "lúc"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 15,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau. Viết câu trả lời.",
+       "instructionEn": "Complete the following dialogue. Write answers based on the information provided.",
+       "items": [
+        {
+         "question": "A: Bây giờ là mấy giờ?\nB: 11:00",
+         "answers": [
+          "Bây giờ là 11 giờ",
+          "Bây giờ là mười một giờ",
+          "Bây giờ là 11 giờ trưa",
+          "Bây giờ là mười một giờ trưa"
+         ],
+         "model": "Bây giờ là 11 giờ."
+        },
+        {
+         "question": "A: Bạn đi làm lúc mấy giờ?\nB: 8:00",
+         "answers": [
+          "Mình đi làm lúc 8 giờ",
+          "Mình đi làm lúc tám giờ",
+          "Mình đi làm lúc 8 giờ sáng",
+          "Mình đi làm lúc tám giờ sáng",
+          "Tôi đi làm lúc 8 giờ",
+          "Tôi đi làm lúc tám giờ",
+          "Tôi đi làm lúc 8 giờ sáng",
+          "Tôi đi làm lúc tám giờ sáng",
+          "Em đi làm lúc 8 giờ",
+          "Em đi làm lúc tám giờ",
+          "Em đi làm lúc 8 giờ sáng",
+          "Em đi làm lúc tám giờ sáng",
+          "Anh đi làm lúc 8 giờ",
+          "Anh đi làm lúc tám giờ",
+          "Anh đi làm lúc 8 giờ sáng",
+          "Anh đi làm lúc tám giờ sáng",
+          "Chị đi làm lúc 8 giờ",
+          "Chị đi làm lúc tám giờ",
+          "Chị đi làm lúc 8 giờ sáng",
+          "Chị đi làm lúc tám giờ sáng",
+          "Tớ đi làm lúc 8 giờ",
+          "Tớ đi làm lúc tám giờ",
+          "Tớ đi làm lúc 8 giờ sáng",
+          "Tớ đi làm lúc tám giờ sáng"
+         ],
+         "model": "Mình đi làm lúc 8 giờ."
+        },
+        {
+         "question": "A: Anh Phong tới sân bay lúc mấy giờ?\nB: 14:30",
+         "answers": [
+          "Anh Phong tới sân bay lúc 14 giờ 30 phút",
+          "Anh Phong tới sân bay lúc 14 giờ 30 phút chiều",
+          "Anh Phong tới sân bay lúc 14 giờ 30",
+          "Anh Phong tới sân bay lúc 14 giờ 30 chiều",
+          "Anh Phong tới sân bay lúc 14 giờ rưỡi",
+          "Anh Phong tới sân bay lúc 14 giờ rưỡi chiều",
+          "Anh Phong tới sân bay lúc 2 giờ 30 phút",
+          "Anh Phong tới sân bay lúc 2 giờ 30 phút chiều",
+          "Anh Phong tới sân bay lúc 2 giờ rưỡi",
+          "Anh Phong tới sân bay lúc 2 giờ rưỡi chiều",
+          "Anh Phong tới sân bay lúc 2 rưỡi",
+          "Anh Phong tới sân bay lúc 2 rưỡi chiều",
+          "Anh Phong tới sân bay lúc hai giờ rưỡi",
+          "Anh Phong tới sân bay lúc hai giờ rưỡi chiều",
+          "Anh Phong tới sân bay lúc hai rưỡi",
+          "Anh Phong tới sân bay lúc hai rưỡi chiều",
+          "Anh Phong tới sân bay lúc hai giờ ba mươi phút",
+          "Anh Phong tới sân bay lúc hai giờ ba mươi phút chiều",
+          "Anh Phong tới sân bay lúc mười bốn giờ ba mươi phút",
+          "Anh Phong tới sân bay lúc mười bốn giờ ba mươi phút chiều",
+          "Anh Phong tới sân bay lúc mười bốn giờ rưỡi",
+          "Anh Phong tới sân bay lúc mười bốn giờ rưỡi chiều",
+          "Anh ấy tới sân bay lúc 14 giờ 30 phút",
+          "Anh ấy tới sân bay lúc 14 giờ 30 phút chiều",
+          "Anh ấy tới sân bay lúc 14 giờ 30",
+          "Anh ấy tới sân bay lúc 14 giờ 30 chiều",
+          "Anh ấy tới sân bay lúc 14 giờ rưỡi",
+          "Anh ấy tới sân bay lúc 14 giờ rưỡi chiều",
+          "Anh ấy tới sân bay lúc 2 giờ 30 phút",
+          "Anh ấy tới sân bay lúc 2 giờ 30 phút chiều",
+          "Anh ấy tới sân bay lúc 2 giờ rưỡi",
+          "Anh ấy tới sân bay lúc 2 giờ rưỡi chiều",
+          "Anh ấy tới sân bay lúc 2 rưỡi",
+          "Anh ấy tới sân bay lúc 2 rưỡi chiều",
+          "Anh ấy tới sân bay lúc hai giờ rưỡi",
+          "Anh ấy tới sân bay lúc hai giờ rưỡi chiều",
+          "Anh ấy tới sân bay lúc hai rưỡi",
+          "Anh ấy tới sân bay lúc hai rưỡi chiều",
+          "Anh ấy tới sân bay lúc hai giờ ba mươi phút",
+          "Anh ấy tới sân bay lúc hai giờ ba mươi phút chiều",
+          "Anh ấy tới sân bay lúc mười bốn giờ ba mươi phút",
+          "Anh ấy tới sân bay lúc mười bốn giờ ba mươi phút chiều",
+          "Anh ấy tới sân bay lúc mười bốn giờ rưỡi",
+          "Anh ấy tới sân bay lúc mười bốn giờ rưỡi chiều",
+          "Anh tới sân bay lúc 14 giờ 30 phút",
+          "Anh tới sân bay lúc 14 giờ 30 phút chiều",
+          "Anh tới sân bay lúc 14 giờ 30",
+          "Anh tới sân bay lúc 14 giờ 30 chiều",
+          "Anh tới sân bay lúc 14 giờ rưỡi",
+          "Anh tới sân bay lúc 14 giờ rưỡi chiều",
+          "Anh tới sân bay lúc 2 giờ 30 phút",
+          "Anh tới sân bay lúc 2 giờ 30 phút chiều",
+          "Anh tới sân bay lúc 2 giờ rưỡi",
+          "Anh tới sân bay lúc 2 giờ rưỡi chiều",
+          "Anh tới sân bay lúc 2 rưỡi",
+          "Anh tới sân bay lúc 2 rưỡi chiều",
+          "Anh tới sân bay lúc hai giờ rưỡi",
+          "Anh tới sân bay lúc hai giờ rưỡi chiều",
+          "Anh tới sân bay lúc hai rưỡi",
+          "Anh tới sân bay lúc hai rưỡi chiều",
+          "Anh tới sân bay lúc hai giờ ba mươi phút",
+          "Anh tới sân bay lúc hai giờ ba mươi phút chiều",
+          "Anh tới sân bay lúc mười bốn giờ ba mươi phút",
+          "Anh tới sân bay lúc mười bốn giờ ba mươi phút chiều",
+          "Anh tới sân bay lúc mười bốn giờ rưỡi",
+          "Anh tới sân bay lúc mười bốn giờ rưỡi chiều"
+         ],
+         "model": "Anh Phong tới sân bay lúc 14 giờ 30 phút."
+        },
+        {
+         "question": "A: Bây giờ là mấy giờ?\nB: 18:40",
+         "answers": [
+          "Bây giờ là 18 giờ 40 phút",
+          "Bây giờ là 18 giờ 40 phút tối",
+          "Bây giờ là 18 giờ 40",
+          "Bây giờ là 18 giờ 40 tối",
+          "Bây giờ là 6 giờ 40 phút",
+          "Bây giờ là 6 giờ 40 phút tối",
+          "Bây giờ là 6 giờ 40",
+          "Bây giờ là 6 giờ 40 tối",
+          "Bây giờ là sáu giờ bốn mươi phút",
+          "Bây giờ là sáu giờ bốn mươi phút tối",
+          "Bây giờ là mười tám giờ bốn mươi phút",
+          "Bây giờ là mười tám giờ bốn mươi phút tối"
+         ],
+         "model": "Bây giờ là 18 giờ 40 phút."
+        },
+        {
+         "question": "A: Bạn thường tắm lúc mấy giờ?\nB: 20:00",
+         "answers": [
+          "Mình tắm lúc 20 giờ",
+          "Mình thường tắm lúc 20 giờ",
+          "Mình tắm lúc 20 giờ tối",
+          "Mình thường tắm lúc 20 giờ tối",
+          "Mình tắm lúc 8 giờ",
+          "Mình thường tắm lúc 8 giờ",
+          "Mình tắm lúc 8 giờ tối",
+          "Mình thường tắm lúc 8 giờ tối",
+          "Mình tắm lúc tám giờ",
+          "Mình thường tắm lúc tám giờ",
+          "Mình tắm lúc tám giờ tối",
+          "Mình thường tắm lúc tám giờ tối",
+          "Mình tắm lúc hai mươi giờ",
+          "Mình thường tắm lúc hai mươi giờ",
+          "Mình tắm lúc hai mươi giờ tối",
+          "Mình thường tắm lúc hai mươi giờ tối",
+          "Tôi tắm lúc 20 giờ",
+          "Tôi thường tắm lúc 20 giờ",
+          "Tôi tắm lúc 20 giờ tối",
+          "Tôi thường tắm lúc 20 giờ tối",
+          "Tôi tắm lúc 8 giờ",
+          "Tôi thường tắm lúc 8 giờ",
+          "Tôi tắm lúc 8 giờ tối",
+          "Tôi thường tắm lúc 8 giờ tối",
+          "Tôi tắm lúc tám giờ",
+          "Tôi thường tắm lúc tám giờ",
+          "Tôi tắm lúc tám giờ tối",
+          "Tôi thường tắm lúc tám giờ tối",
+          "Tôi tắm lúc hai mươi giờ",
+          "Tôi thường tắm lúc hai mươi giờ",
+          "Tôi tắm lúc hai mươi giờ tối",
+          "Tôi thường tắm lúc hai mươi giờ tối",
+          "Em tắm lúc 20 giờ",
+          "Em thường tắm lúc 20 giờ",
+          "Em tắm lúc 20 giờ tối",
+          "Em thường tắm lúc 20 giờ tối",
+          "Em tắm lúc 8 giờ",
+          "Em thường tắm lúc 8 giờ",
+          "Em tắm lúc 8 giờ tối",
+          "Em thường tắm lúc 8 giờ tối",
+          "Em tắm lúc tám giờ",
+          "Em thường tắm lúc tám giờ",
+          "Em tắm lúc tám giờ tối",
+          "Em thường tắm lúc tám giờ tối",
+          "Em tắm lúc hai mươi giờ",
+          "Em thường tắm lúc hai mươi giờ",
+          "Em tắm lúc hai mươi giờ tối",
+          "Em thường tắm lúc hai mươi giờ tối",
+          "Anh tắm lúc 20 giờ",
+          "Anh thường tắm lúc 20 giờ",
+          "Anh tắm lúc 20 giờ tối",
+          "Anh thường tắm lúc 20 giờ tối",
+          "Anh tắm lúc 8 giờ",
+          "Anh thường tắm lúc 8 giờ",
+          "Anh tắm lúc 8 giờ tối",
+          "Anh thường tắm lúc 8 giờ tối",
+          "Anh tắm lúc tám giờ",
+          "Anh thường tắm lúc tám giờ",
+          "Anh tắm lúc tám giờ tối",
+          "Anh thường tắm lúc tám giờ tối",
+          "Anh tắm lúc hai mươi giờ",
+          "Anh thường tắm lúc hai mươi giờ",
+          "Anh tắm lúc hai mươi giờ tối",
+          "Anh thường tắm lúc hai mươi giờ tối",
+          "Chị tắm lúc 20 giờ",
+          "Chị thường tắm lúc 20 giờ",
+          "Chị tắm lúc 20 giờ tối",
+          "Chị thường tắm lúc 20 giờ tối",
+          "Chị tắm lúc 8 giờ",
+          "Chị thường tắm lúc 8 giờ",
+          "Chị tắm lúc 8 giờ tối",
+          "Chị thường tắm lúc 8 giờ tối",
+          "Chị tắm lúc tám giờ",
+          "Chị thường tắm lúc tám giờ",
+          "Chị tắm lúc tám giờ tối",
+          "Chị thường tắm lúc tám giờ tối",
+          "Chị tắm lúc hai mươi giờ",
+          "Chị thường tắm lúc hai mươi giờ",
+          "Chị tắm lúc hai mươi giờ tối",
+          "Chị thường tắm lúc hai mươi giờ tối",
+          "Tớ tắm lúc 20 giờ",
+          "Tớ thường tắm lúc 20 giờ",
+          "Tớ tắm lúc 20 giờ tối",
+          "Tớ thường tắm lúc 20 giờ tối",
+          "Tớ tắm lúc 8 giờ",
+          "Tớ thường tắm lúc 8 giờ",
+          "Tớ tắm lúc 8 giờ tối",
+          "Tớ thường tắm lúc 8 giờ tối",
+          "Tớ tắm lúc tám giờ",
+          "Tớ thường tắm lúc tám giờ",
+          "Tớ tắm lúc tám giờ tối",
+          "Tớ thường tắm lúc tám giờ tối",
+          "Tớ tắm lúc hai mươi giờ",
+          "Tớ thường tắm lúc hai mươi giờ",
+          "Tớ tắm lúc hai mươi giờ tối",
+          "Tớ thường tắm lúc hai mươi giờ tối"
+         ],
+         "model": "Mình thường tắm lúc 20 giờ."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "gio",
+     "label": "Giờ",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "instructionVi": "Trả lời câu hỏi sau.",
+       "instructionEn": "Answer the following questions.",
+       "items": [
+        {
+         "question": "Sáng nay bạn thức dậy lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn ăn sáng lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn thường đi làm / đi học lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn ăn trưa lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn về nhà lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn thường đi chợ lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn thường tập thể dục lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn thường ăn tối lúc mấy giờ?"
+        },
+        {
+         "question": "Bạn thường đi ngủ lúc mấy giờ?"
+        }
+       ],
+       "num": 16
+      }
+     ]
+    }
+   ]
   }
  ]
 }
