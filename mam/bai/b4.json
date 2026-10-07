@@ -395,7 +395,8 @@
          ],
          "audio": "audio/b4/{voice}/listen_ex6_10.mp3"
         }
-       ]
+       ],
+       "columns": 3
       }
      ]
     }
