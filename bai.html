@@ -79,6 +79,24 @@
       });
       return out + tone;
     }
+    // Không có file audio → dùng giọng đọc tiếng Việt của trình duyệt (Web Speech API).
+    let ttsEl = null;
+    function speak(text, elm) {
+      if (!('speechSynthesis' in window)) { toast('Trình duyệt chưa hỗ trợ đọc tiếng Việt'); return; }
+      try { player.pause(); } catch (e) {}
+      window.speechSynthesis.cancel();
+      if (ttsEl) ttsEl.classList.remove('playing');
+      const u = new SpeechSynthesisUtterance(String(text));
+      u.lang = 'vi-VN';
+      u.rate = 0.8;
+      const vi = window.speechSynthesis.getVoices().filter(function (v) { return /^vi/i.test(v.lang); })[0];
+      if (vi) u.voice = vi;
+      ttsEl = elm || null;
+      if (ttsEl) ttsEl.classList.add('playing');
+      const done = function () { if (ttsEl) ttsEl.classList.remove('playing'); };
+      u.onend = done; u.onerror = done;
+      window.speechSynthesis.speak(u);
+    }
     function audioSrc(template, text) {
       if (!template) return '';
       return resolveAudio(template.replace('{key}', audioKey(text)));
@@ -96,7 +114,9 @@
       b.type = 'button';
       b.dataset.text = text;
       b.setAttribute('aria-label', 'Nghe “' + text + '”');
-      b.addEventListener('click', function () { play(audioSrc(template, text), b); });
+      b.addEventListener('click', function () {
+        if (!template) speak(text, b); else play(audioSrc(template, text), b);
+      });
       return b;
     }
 
@@ -279,7 +299,10 @@
         const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
         num.type = 'button'; num.dataset.text = 'câu ' + (i + 1);
         num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
-        num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
+        num.addEventListener('click', function () {
+          const src = resolveAudio(item.audio || ex.audio);
+          if (src) play(src, num); else speak(item.text, num);
+        });
         row.appendChild(num);
         row.appendChild(el('div', 'bai-fill-line', item.text));
         wrap.appendChild(row);
