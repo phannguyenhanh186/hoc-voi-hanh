@@ -1,0 +1,1792 @@
+{
+ "id": "b7",
+ "num": 7,
+ "title": "Sinh nhật của bạn là ngày mấy?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b7/nam: pron_<van>.mp3 (canh, banh, hanh, ...), pron_nh_<tu>.mp3 (nha, nhi, ...), ex2_01..05.mp3, ex5_01..05.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html).",
+  "confirm": "Bai 4 (phu am nh) dung lai dung 5 cau cua bai 2 (nguon de gui giong het) - CAN XAC NHAN; hien dung lai audio ex2_01..05.",
+  "todo_audio_tu_vung": "audio/b7/nam: vocab_ngay_01..31.mp3, vocab_thang_01..12.mp3, vocab_nam_<nam>.mp3 (1900, 1940, 1951, 1964, 1975, 2000, 2001, 2005, 2010, 2014, 2020..2025) - chua thu am. Thang 4 doc 'tu'; cac nam doc theo kieu mien Nam ('ngan', 'le') - CAN XAC NHAN.",
+  "todo_audio_nghe": "audio/b7/nam: nghe1_01..08.mp3 (nghe va viet ngay thang), nghe2_01..05.mp3 (nghe va chon), nghe3_01..03.mp3 (nghe va tra loi) - SE BO SUNG SAU."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "anh",
+     "label": "Âm \"anh\", \"ênh\", \"inh\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b7/{voice}/pron_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "anh",
+            "canh",
+            "bánh",
+            "hành",
+            "rảnh",
+            "mãnh",
+            "lạnh"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "ênh",
+            "chênh",
+            "bệnh"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "inh",
+            "xinh",
+            "tính",
+            "mình",
+            "nhỉnh",
+            "lĩnh",
+            "định"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Anh Minh ăn bánh.",
+         "audio": "audio/b7/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Hình như trời lạnh hơn.",
+         "audio": "audio/b7/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Trinh đi nhanh tới bệnh viện.",
+         "audio": "audio/b7/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Sáng mình thường ăn bánh canh.",
+         "audio": "audio/b7/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Linh thích uống nước chanh lạnh.",
+         "audio": "audio/b7/{voice}/ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "nh",
+     "label": "Phụ âm \"nh\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 3,
+       "instructionVi": "Nghe và lặp lại các âm sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b7/{voice}/pron_nh_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "nhà",
+            "nhi",
+            "nhẹ",
+            "nhỏ",
+            "nhô",
+            "nhú"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "như",
+            "nhản",
+            "nhân",
+            "nhắn",
+            "nhen",
+            "nhện"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "nhịn",
+            "nhón",
+            "nhún",
+            "nhàng",
+            "nhung",
+            "nhưng"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 4,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Anh Minh ăn bánh.",
+         "audio": "audio/b7/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Hình như trời lạnh hơn.",
+         "audio": "audio/b7/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Trinh đi nhanh tới bệnh viện.",
+         "audio": "audio/b7/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Sáng mình thường ăn bánh canh.",
+         "audio": "audio/b7/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Linh thích uống nước chanh lạnh.",
+         "audio": "audio/b7/{voice}/ex2_05.mp3"
+        }
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 5,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Nhi thường nhớ nhà.",
+         "audio": "audio/b7/{voice}/ex5_01.mp3"
+        },
+        {
+         "text": "Nhà này hơi nhiều nhện.",
+         "audio": "audio/b7/{voice}/ex5_02.mp3"
+        },
+        {
+         "text": "Nhà của Nhung hơi nhỏ.",
+         "audio": "audio/b7/{voice}/ex5_03.mp3"
+        },
+        {
+         "text": "Bước nhảy của nhân vật rất nhịp nhàng.",
+         "audio": "audio/b7/{voice}/ex5_04.mp3"
+        },
+        {
+         "text": "Công việc nhân viên nhà hàng không nhẹ nhàng.",
+         "audio": "audio/b7/{voice}/ex5_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "ngay",
+     "label": "Ngày",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 6,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "1",
+         "caption": "Ngày một",
+         "audio": "audio/b7/{voice}/vocab_ngay_01.mp3"
+        },
+        {
+         "big": "2",
+         "caption": "Ngày hai",
+         "audio": "audio/b7/{voice}/vocab_ngay_02.mp3"
+        },
+        {
+         "big": "3",
+         "caption": "Ngày ba",
+         "audio": "audio/b7/{voice}/vocab_ngay_03.mp3"
+        },
+        {
+         "big": "4",
+         "caption": "Ngày bốn",
+         "audio": "audio/b7/{voice}/vocab_ngay_04.mp3"
+        },
+        {
+         "big": "5",
+         "caption": "Ngày năm",
+         "audio": "audio/b7/{voice}/vocab_ngay_05.mp3"
+        },
+        {
+         "big": "6",
+         "caption": "Ngày sáu",
+         "audio": "audio/b7/{voice}/vocab_ngay_06.mp3"
+        },
+        {
+         "big": "7",
+         "caption": "Ngày bảy",
+         "audio": "audio/b7/{voice}/vocab_ngay_07.mp3"
+        },
+        {
+         "big": "8",
+         "caption": "Ngày tám",
+         "audio": "audio/b7/{voice}/vocab_ngay_08.mp3"
+        },
+        {
+         "big": "9",
+         "caption": "Ngày chín",
+         "audio": "audio/b7/{voice}/vocab_ngay_09.mp3"
+        },
+        {
+         "big": "10",
+         "caption": "Ngày mười",
+         "audio": "audio/b7/{voice}/vocab_ngay_10.mp3"
+        },
+        {
+         "big": "11",
+         "caption": "Ngày mười một",
+         "audio": "audio/b7/{voice}/vocab_ngay_11.mp3"
+        },
+        {
+         "big": "12",
+         "caption": "Ngày mười hai",
+         "audio": "audio/b7/{voice}/vocab_ngay_12.mp3"
+        },
+        {
+         "big": "13",
+         "caption": "Ngày mười ba",
+         "audio": "audio/b7/{voice}/vocab_ngay_13.mp3"
+        },
+        {
+         "big": "14",
+         "caption": "Ngày mười bốn",
+         "audio": "audio/b7/{voice}/vocab_ngay_14.mp3"
+        },
+        {
+         "big": "15",
+         "caption": "Ngày mười lăm",
+         "audio": "audio/b7/{voice}/vocab_ngay_15.mp3"
+        },
+        {
+         "big": "16",
+         "caption": "Ngày mười sáu",
+         "audio": "audio/b7/{voice}/vocab_ngay_16.mp3"
+        },
+        {
+         "big": "17",
+         "caption": "Ngày mười bảy",
+         "audio": "audio/b7/{voice}/vocab_ngay_17.mp3"
+        },
+        {
+         "big": "18",
+         "caption": "Ngày mười tám",
+         "audio": "audio/b7/{voice}/vocab_ngay_18.mp3"
+        },
+        {
+         "big": "19",
+         "caption": "Ngày mười chín",
+         "audio": "audio/b7/{voice}/vocab_ngay_19.mp3"
+        },
+        {
+         "big": "20",
+         "caption": "Ngày hai mươi",
+         "audio": "audio/b7/{voice}/vocab_ngay_20.mp3"
+        },
+        {
+         "big": "21",
+         "caption": "Ngày hai mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_ngay_21.mp3"
+        },
+        {
+         "big": "22",
+         "caption": "Ngày hai mươi hai",
+         "audio": "audio/b7/{voice}/vocab_ngay_22.mp3"
+        },
+        {
+         "big": "23",
+         "caption": "Ngày hai mươi ba",
+         "audio": "audio/b7/{voice}/vocab_ngay_23.mp3"
+        },
+        {
+         "big": "24",
+         "caption": "Ngày hai mươi tư",
+         "audio": "audio/b7/{voice}/vocab_ngay_24.mp3"
+        },
+        {
+         "big": "25",
+         "caption": "Ngày hai mươi lăm",
+         "audio": "audio/b7/{voice}/vocab_ngay_25.mp3"
+        },
+        {
+         "big": "26",
+         "caption": "Ngày hai mươi sáu",
+         "audio": "audio/b7/{voice}/vocab_ngay_26.mp3"
+        },
+        {
+         "big": "27",
+         "caption": "Ngày hai mươi bảy",
+         "audio": "audio/b7/{voice}/vocab_ngay_27.mp3"
+        },
+        {
+         "big": "28",
+         "caption": "Ngày hai mươi tám",
+         "audio": "audio/b7/{voice}/vocab_ngay_28.mp3"
+        },
+        {
+         "big": "29",
+         "caption": "Ngày hai mươi chín",
+         "audio": "audio/b7/{voice}/vocab_ngay_29.mp3"
+        },
+        {
+         "big": "30",
+         "caption": "Ngày ba mươi",
+         "audio": "audio/b7/{voice}/vocab_ngay_30.mp3"
+        },
+        {
+         "big": "31",
+         "caption": "Ngày ba mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_ngay_31.mp3"
+        }
+       ],
+       "highlight": [
+        "mốt",
+        "tư",
+        "lăm",
+        "lẻ"
+       ]
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "16ch",
+       "instructionVi": "Đọc các số sau bằng tiếng Việt.",
+       "instructionEn": "Read the following numbers in Vietnamese.",
+       "items": [
+        {
+         "template": "12 → {0}",
+         "answers": [
+          [
+           "mười hai"
+          ]
+         ]
+        },
+        {
+         "template": "20 → {0}",
+         "answers": [
+          [
+           "hai mươi"
+          ]
+         ]
+        },
+        {
+         "template": "15 → {0}",
+         "answers": [
+          [
+           "mười lăm"
+          ]
+         ]
+        },
+        {
+         "template": "8 → {0}",
+         "answers": [
+          [
+           "tám"
+          ]
+         ]
+        },
+        {
+         "template": "31 → {0}",
+         "answers": [
+          [
+           "ba mươi mốt",
+           "ba mươi một"
+          ]
+         ]
+        },
+        {
+         "template": "24 → {0}",
+         "answers": [
+          [
+           "hai mươi tư",
+           "hai mươi bốn"
+          ]
+         ]
+        },
+        {
+         "template": "19 → {0}",
+         "answers": [
+          [
+           "mười chín"
+          ]
+         ]
+        },
+        {
+         "template": "4 → {0}",
+         "answers": [
+          [
+           "bốn"
+          ]
+         ]
+        },
+        {
+         "template": "11 → {0}",
+         "answers": [
+          [
+           "mười một"
+          ]
+         ]
+        },
+        {
+         "template": "27 → {0}",
+         "answers": [
+          [
+           "hai mươi bảy"
+          ]
+         ]
+        }
+       ],
+       "num": 7
+      }
+     ]
+    },
+    {
+     "id": "thang",
+     "label": "Tháng",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 8,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "1",
+         "caption": "Tháng một",
+         "audio": "audio/b7/{voice}/vocab_thang_01.mp3"
+        },
+        {
+         "big": "2",
+         "caption": "Tháng hai",
+         "audio": "audio/b7/{voice}/vocab_thang_02.mp3"
+        },
+        {
+         "big": "3",
+         "caption": "Tháng ba",
+         "audio": "audio/b7/{voice}/vocab_thang_03.mp3"
+        },
+        {
+         "big": "4",
+         "caption": "Tháng tư",
+         "audio": "audio/b7/{voice}/vocab_thang_04.mp3"
+        },
+        {
+         "big": "5",
+         "caption": "Tháng năm",
+         "audio": "audio/b7/{voice}/vocab_thang_05.mp3"
+        },
+        {
+         "big": "6",
+         "caption": "Tháng sáu",
+         "audio": "audio/b7/{voice}/vocab_thang_06.mp3"
+        },
+        {
+         "big": "7",
+         "caption": "Tháng bảy",
+         "audio": "audio/b7/{voice}/vocab_thang_07.mp3"
+        },
+        {
+         "big": "8",
+         "caption": "Tháng tám",
+         "audio": "audio/b7/{voice}/vocab_thang_08.mp3"
+        },
+        {
+         "big": "9",
+         "caption": "Tháng chín",
+         "audio": "audio/b7/{voice}/vocab_thang_09.mp3"
+        },
+        {
+         "big": "10",
+         "caption": "Tháng mười",
+         "audio": "audio/b7/{voice}/vocab_thang_10.mp3"
+        },
+        {
+         "big": "11",
+         "caption": "Tháng mười một",
+         "audio": "audio/b7/{voice}/vocab_thang_11.mp3"
+        },
+        {
+         "big": "12",
+         "caption": "Tháng mười hai",
+         "audio": "audio/b7/{voice}/vocab_thang_12.mp3"
+        }
+       ],
+       "highlight": [
+        "mốt",
+        "tư",
+        "lăm",
+        "lẻ"
+       ]
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "18ch",
+       "instructionVi": "Đọc các tháng sau bằng tiếng Việt.",
+       "instructionEn": "Read the following months in Vietnamese.",
+       "items": [
+        {
+         "template": "June → {0}",
+         "answers": [
+          [
+           "tháng sáu"
+          ]
+         ]
+        },
+        {
+         "template": "November → {0}",
+         "answers": [
+          [
+           "tháng mười một"
+          ]
+         ]
+        },
+        {
+         "template": "May → {0}",
+         "answers": [
+          [
+           "tháng năm"
+          ]
+         ]
+        },
+        {
+         "template": "October → {0}",
+         "answers": [
+          [
+           "tháng mười"
+          ]
+         ]
+        },
+        {
+         "template": "December → {0}",
+         "answers": [
+          [
+           "tháng mười hai"
+          ]
+         ]
+        },
+        {
+         "template": "January → {0}",
+         "answers": [
+          [
+           "tháng một"
+          ]
+         ]
+        },
+        {
+         "template": "March → {0}",
+         "answers": [
+          [
+           "tháng ba"
+          ]
+         ]
+        },
+        {
+         "template": "February → {0}",
+         "answers": [
+          [
+           "tháng hai"
+          ]
+         ]
+        },
+        {
+         "template": "September → {0}",
+         "answers": [
+          [
+           "tháng chín"
+          ]
+         ]
+        },
+        {
+         "template": "April → {0}",
+         "answers": [
+          [
+           "tháng tư",
+           "tháng bốn"
+          ]
+         ]
+        },
+        {
+         "template": "August → {0}",
+         "answers": [
+          [
+           "tháng tám"
+          ]
+         ]
+        },
+        {
+         "template": "July → {0}",
+         "answers": [
+          [
+           "tháng bảy"
+          ]
+         ]
+        }
+       ],
+       "num": 9
+      }
+     ]
+    },
+    {
+     "id": "nam",
+     "label": "Năm",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 10,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "1900",
+         "caption": "Một ngàn chín trăm",
+         "audio": "audio/b7/{voice}/vocab_nam_1900.mp3"
+        },
+        {
+         "big": "1940",
+         "caption": "Một ngàn chín trăm bốn mươi",
+         "audio": "audio/b7/{voice}/vocab_nam_1940.mp3"
+        },
+        {
+         "big": "1951",
+         "caption": "Một ngàn chín trăm năm mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_nam_1951.mp3"
+        },
+        {
+         "big": "1964",
+         "caption": "Một ngàn chín trăm sáu mươi tư",
+         "audio": "audio/b7/{voice}/vocab_nam_1964.mp3"
+        },
+        {
+         "big": "1975",
+         "caption": "Một ngàn chín trăm bảy mươi lăm",
+         "audio": "audio/b7/{voice}/vocab_nam_1975.mp3"
+        },
+        {
+         "big": "2000",
+         "caption": "Hai ngàn",
+         "audio": "audio/b7/{voice}/vocab_nam_2000.mp3"
+        },
+        {
+         "big": "2001",
+         "caption": "Hai ngàn không trăm lẻ một",
+         "audio": "audio/b7/{voice}/vocab_nam_2001.mp3"
+        },
+        {
+         "big": "2005",
+         "caption": "Hai ngàn không trăm lẻ năm",
+         "audio": "audio/b7/{voice}/vocab_nam_2005.mp3"
+        },
+        {
+         "big": "2010",
+         "caption": "Hai ngàn không trăm mười",
+         "audio": "audio/b7/{voice}/vocab_nam_2010.mp3"
+        },
+        {
+         "big": "2014",
+         "caption": "Hai ngàn không trăm mười bốn",
+         "audio": "audio/b7/{voice}/vocab_nam_2014.mp3"
+        },
+        {
+         "big": "2020",
+         "caption": "Hai ngàn không trăm hai mươi",
+         "audio": "audio/b7/{voice}/vocab_nam_2020.mp3"
+        },
+        {
+         "big": "2021",
+         "caption": "Hai ngàn không trăm hai mươi mốt",
+         "audio": "audio/b7/{voice}/vocab_nam_2021.mp3"
+        },
+        {
+         "big": "2022",
+         "caption": "Hai ngàn không trăm hai mươi hai",
+         "audio": "audio/b7/{voice}/vocab_nam_2022.mp3"
+        },
+        {
+         "big": "2023",
+         "caption": "Hai ngàn không trăm hai mươi ba",
+         "audio": "audio/b7/{voice}/vocab_nam_2023.mp3"
+        },
+        {
+         "big": "2024",
+         "caption": "Hai ngàn không trăm hai mươi tư",
+         "audio": "audio/b7/{voice}/vocab_nam_2024.mp3"
+        },
+        {
+         "big": "2025",
+         "caption": "Hai ngàn không trăm hai mươi lăm",
+         "audio": "audio/b7/{voice}/vocab_nam_2025.mp3"
+        }
+       ],
+       "highlight": [
+        "mốt",
+        "tư",
+        "lăm",
+        "lẻ"
+       ]
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "36ch",
+       "instructionVi": "Đọc các năm sau bằng tiếng Việt.",
+       "instructionEn": "Read the following years in Vietnamese.",
+       "items": [
+        {
+         "template": "1900 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm"
+          ]
+         ]
+        },
+        {
+         "template": "1975 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm bảy mươi lăm"
+          ]
+         ]
+        },
+        {
+         "template": "1980 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm tám mươi"
+          ]
+         ]
+        },
+        {
+         "template": "1998 → {0}",
+         "answers": [
+          [
+           "một ngàn chín trăm chín mươi tám"
+          ]
+         ]
+        },
+        {
+         "template": "2000 → {0}",
+         "answers": [
+          [
+           "hai ngàn"
+          ]
+         ]
+        },
+        {
+         "template": "2001 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm lẻ một",
+           "hai ngàn lẻ một"
+          ]
+         ]
+        },
+        {
+         "template": "2010 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm mười",
+           "hai ngàn mười"
+          ]
+         ]
+        },
+        {
+         "template": "2015 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm mười lăm",
+           "hai ngàn mười lăm"
+          ]
+         ]
+        },
+        {
+         "template": "2020 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi",
+           "hai ngàn hai mươi"
+          ]
+         ]
+        },
+        {
+         "template": "2024 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi tư",
+           "hai ngàn hai mươi bốn",
+           "hai ngàn hai mươi tư",
+           "hai ngàn không trăm hai mươi bốn"
+          ]
+         ]
+        },
+        {
+         "template": "2025 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi lăm",
+           "hai ngàn hai mươi lăm"
+          ]
+         ]
+        },
+        {
+         "template": "2026 → {0}",
+         "answers": [
+          [
+           "hai ngàn không trăm hai mươi sáu",
+           "hai ngàn hai mươi sáu"
+          ]
+         ]
+        }
+       ],
+       "num": 11
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "ngay-thang",
+     "label": "Ngày tháng",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "blankWidth": "26ch",
+       "instructionVi": "Nghe và viết ngày tháng.",
+       "instructionEn": "Listen and write the date.",
+       "items": [
+        {
+         "audio": "audio/b7/{voice}/nghe1_01.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 5 tháng 10",
+           "5 tháng 10"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_02.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 15 tháng 1",
+           "15 tháng 1"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_03.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 9 tháng 4",
+           "9 tháng 4"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_04.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "31 tháng 12",
+           "ngày 31 tháng 12"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_05.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 20 tháng 2",
+           "20 tháng 2"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_06.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "ngày 14 tháng 8",
+           "14 tháng 8"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_07.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "tháng 3 năm 2024"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe1_08.mp3",
+         "template": "{0}",
+         "answers": [
+          [
+           "tháng 6 năm 2025"
+          ]
+         ]
+        }
+       ],
+       "num": 12
+      },
+      {
+       "type": "audioChoice",
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b7/{voice}/nghe2_01.mp3",
+         "options": [
+          "12/6",
+          "21/6",
+          "21/7"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_02.mp3",
+         "options": [
+          "15/8/2010",
+          "15/8/2000",
+          "15/9/2000"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_03.mp3",
+         "options": [
+          "24/4/2001",
+          "14/4/2001",
+          "14/4/2011"
+         ],
+         "answer": "c"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_04.mp3",
+         "options": [
+          "31/12/2020",
+          "30/12/2021",
+          "31/11/2020"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe2_05.mp3",
+         "options": [
+          "5/10/2026",
+          "15/10/2026",
+          "5/11/2026"
+         ],
+         "answer": "c"
+        }
+       ],
+       "num": 13
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "26ch",
+       "instructionVi": "Nghe và trả lời câu hỏi.",
+       "instructionEn": "Listen and answer the questions.",
+       "items": [
+        {
+         "audio": "audio/b7/{voice}/nghe3_01.mp3",
+         "template": "Hôm nay là ngày mấy? {0}",
+         "answers": [
+          [
+           "ngày 8 tháng 9",
+           "8 tháng 9",
+           "Hôm nay là ngày 8 tháng 9"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe3_02.mp3",
+         "template": "Sinh nhật của Nam là ngày mấy? {0}",
+         "answers": [
+          [
+           "ngày 14 tháng 6 năm 2002",
+           "14 tháng 6 năm 2002",
+           "Sinh nhật của Nam là ngày 14 tháng 6 năm 2002",
+           "Sinh nhật Nam là ngày 14 tháng 6 năm 2002"
+          ]
+         ]
+        },
+        {
+         "audio": "audio/b7/{voice}/nghe3_03.mp3",
+         "template": "Linh về Việt Nam vào ngày mấy? {0}",
+         "answers": [
+          [
+           "ngày 3 tháng 11",
+           "3 tháng 11",
+           "Linh về Việt Nam vào ngày 3 tháng 11"
+          ]
+         ]
+        }
+       ],
+       "num": 14
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "hom-nay",
+     "label": "Hôm nay / hôm qua / ngày mai là ngày mấy",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Hôm nay / hôm qua / ngày mai + là ngày mấy?",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi ngày cụ thể trong tháng.",
+         "en": "Use “hôm nay / hôm qua / ngày mai + là ngày mấy?” to ask for the specific date."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Hôm nay là ngày mấy?",
+           "en": "What date is it today?"
+          },
+          {
+           "vi": "Hôm qua là ngày mấy?",
+           "en": "What date was it yesterday?"
+          },
+          {
+           "vi": "Ngày mai là ngày mấy?",
+           "en": "What date is it tomorrow?"
+          },
+          {
+           "vi": "Sinh nhật bạn là ngày mấy?",
+           "en": "What date is your birthday?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cách trả lời",
+         "en": "How to answer"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có thể trả lời bằng ngày, hoặc cung cấp thêm tháng và năm nếu cần.",
+         "en": "You can answer with just the date, or include the month and year if needed."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Hôm nay là ngày 2.",
+         "en": "Today is the 2nd."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Hôm nay là ngày 24 tháng 11.",
+         "en": "Today is November 24th."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Sinh nhật của mình là ngày 15 tháng 4 năm 2000.",
+         "en": "My birthday is April 15, 2000."
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 15,
+       "instructionVi": "Hoàn thành câu trả lời.",
+       "instructionEn": "Complete the answers.",
+       "items": [
+        {
+         "given": "Hôm nay là ngày 4.",
+         "answers": [
+          "Hôm nay là ngày mấy"
+         ],
+         "model": "Hôm nay là ngày mấy"
+        },
+        {
+         "given": "Hôm qua là ngày 31.",
+         "answers": [
+          "Hôm qua là ngày mấy"
+         ],
+         "model": "Hôm qua là ngày mấy"
+        },
+        {
+         "given": "Ngày mai là ngày 20.",
+         "answers": [
+          "Ngày mai là ngày mấy"
+         ],
+         "model": "Ngày mai là ngày mấy"
+        },
+        {
+         "given": "Sinh nhật của mình là ngày 15 tháng 4",
+         "answers": [
+          "Sinh nhật của bạn là ngày mấy",
+          "Sinh nhật bạn là ngày mấy"
+         ],
+         "model": "Sinh nhật của bạn là ngày mấy"
+        },
+        {
+         "given": "Sinh nhật của Trang là ngày 8 tháng 11",
+         "answers": [
+          "Sinh nhật của Trang là ngày mấy",
+          "Sinh nhật Trang là ngày mấy"
+         ],
+         "model": "Sinh nhật của Trang là ngày mấy"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "may",
+     "label": "Thứ / Ngày / Tháng / Năm + mấy",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "THỨ / NGÀY / THÁNG / NĂM + MẤY",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "“Mấy” là từ dùng để hỏi về một số hoặc thứ tự không xác định.",
+         "en": "“Mấy” is used to ask about an unknown number or ordinal number."
+        },
+        {
+         "type": "heading",
+         "vi": "1. Thứ mấy?",
+         "en": "What day of the week?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "[thứ] + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi một ngày trong tuần là thứ mấy.",
+         "en": "Use “thứ mấy?” to ask which day of the week it is."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Hôm nay là thứ mấy?",
+           "en": "What day is it today?"
+          },
+          {
+           "vi": "Thứ mấy bạn đi làm?",
+           "en": "What day do you go to work?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cách trả lời",
+         "en": "How to answer"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Hôm nay là thứ Hai.",
+         "en": "Today is Monday."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Mình đi làm vào thứ Hai.",
+         "en": "I go to work on Monday."
+        },
+        {
+         "type": "heading",
+         "vi": "2. Ngày mấy?",
+         "en": "What date?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "ngày + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi ngày trong tháng.",
+         "en": "Use “ngày + number?” to ask for the date of the month."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Ngày mai là ngày mấy?",
+           "en": "What date is it tomorrow?"
+          },
+          {
+           "vi": "Ngày mai là ngày 12.",
+           "en": "Tomorrow is the 12th."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "3. Tháng mấy?",
+         "en": "What month?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "tháng + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi tháng nào trong năm.",
+         "en": "Use “tháng + number?” to ask which month it is."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bây giờ là tháng mấy?",
+           "en": "What month is it now?"
+          },
+          {
+           "vi": "Sinh nhật bạn là tháng mấy?",
+           "en": "What month is your birthday?"
+          },
+          {
+           "vi": "Bây giờ là tháng sáu.",
+           "en": "It is June."
+          },
+          {
+           "vi": "Sinh nhật mình là tháng mười.",
+           "en": "My birthday is in October."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "4. Năm mấy?",
+         "en": "What year?",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "năm + mấy?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng để hỏi năm nào.",
+         "en": "Use “năm + number?” to ask which year."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bây giờ là năm mấy?",
+           "en": "What year is it?"
+          },
+          {
+           "vi": "Bạn sinh năm mấy?",
+           "en": "What year were you born?"
+          },
+          {
+           "vi": "Mình sinh năm 2000.",
+           "en": "I was born in 2000."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Note"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong giao tiếp thực tế, không phải lúc nào câu hỏi và câu trả lời cũng phải khớp chính xác từng phần.",
+         "en": "In real-life conversations, the question and answer do not always have to match exactly in form."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Ví dụ:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "A: Sinh nhật bạn là ngày mấy?",
+         "en": "What date is your birthday?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "B: Ngày 15 tháng 6 năm 2000.",
+         "en": "June 15, 2000."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Người hỏi chỉ hỏi “ngày mấy?”, nhưng người trả lời có thể cung cấp thêm tháng và năm để đưa ra thông tin đầy đủ hơn.",
+         "en": "The speaker may only ask “What date?”, but the person answering can provide the month and year as well to give more complete information."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Similarly:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "A: Bạn đi Việt Nam vào ngày mấy?",
+         "en": "What date are you going to Vietnam?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "B: Ngày 25 tháng 12.",
+         "en": "December 25."
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 16,
+       "instructionVi": "Trả lời câu hỏi bằng thông tin gợi ý.",
+       "instructionEn": "Answer the questions using the prompts.",
+       "items": [
+        {
+         "example": true,
+         "question": "Hôm nay - ngày 14",
+         "answers": [
+          "Hôm nay là ngày mấy? Hôm nay là ngày 14."
+         ],
+         "model": "Hôm nay là ngày mấy? Hôm nay là ngày 14."
+        },
+        {
+         "question": "Sinh nhật của bạn - 15/6/2001",
+         "answers": [
+          "Sinh nhật của bạn là ngày mấy? Sinh nhật của mình là ngày 15 tháng 6 năm 2001.",
+          "Sinh nhật của bạn là ngày mấy? Sinh nhật mình là ngày 15 tháng 6 năm 2001.",
+          "Sinh nhật bạn là ngày mấy? Sinh nhật của mình là ngày 15 tháng 6 năm 2001.",
+          "Sinh nhật bạn là ngày mấy? Sinh nhật mình là ngày 15 tháng 6 năm 2001."
+         ],
+         "model": "Sinh nhật của bạn là ngày mấy? Sinh nhật của mình là ngày 15 tháng 6 năm 2001."
+        },
+        {
+         "question": "Đi Việt Nam - thứ Năm, 21/4",
+         "answers": [
+          "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào thứ Năm, ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào thứ Năm.",
+          "Bạn đi Việt Nam vào thứ mấy? Mình đi Việt Nam vào thứ Năm, ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào thứ mấy? Mình đi Việt Nam vào ngày 21 tháng 4.",
+          "Bạn đi Việt Nam vào thứ mấy? Mình đi Việt Nam vào thứ Năm."
+         ],
+         "model": "Bạn đi Việt Nam vào ngày mấy? Mình đi Việt Nam vào thứ Năm, ngày 21 tháng 4."
+        },
+        {
+         "question": "Sinh nhật của Thành - năm 1998",
+         "answers": [
+          "Thành sinh năm mấy? Thành sinh năm 1998.",
+          "Thành sinh năm mấy? Sinh nhật của Thành là năm 1998.",
+          "Thành sinh năm mấy? Sinh nhật Thành là năm 1998.",
+          "Sinh nhật của Thành là năm mấy? Thành sinh năm 1998.",
+          "Sinh nhật của Thành là năm mấy? Sinh nhật của Thành là năm 1998.",
+          "Sinh nhật của Thành là năm mấy? Sinh nhật Thành là năm 1998.",
+          "Sinh nhật Thành là năm mấy? Thành sinh năm 1998.",
+          "Sinh nhật Thành là năm mấy? Sinh nhật của Thành là năm 1998.",
+          "Sinh nhật Thành là năm mấy? Sinh nhật Thành là năm 1998."
+         ],
+         "model": "Thành sinh năm mấy? Thành sinh năm 1998."
+        },
+        {
+         "question": "Bây giờ - tháng 10",
+         "answers": [
+          "Bây giờ là tháng mấy? Bây giờ là tháng mười.",
+          "Bây giờ là tháng mấy? Bây giờ là tháng 10."
+         ],
+         "model": "Bây giờ là tháng mấy? Bây giờ là tháng mười."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "ngay-thang",
+     "label": "Ngày tháng",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "instructionVi": "Đọc và trả lời câu hỏi.",
+       "instructionEn": "Read the passage and answer the questions.",
+       "passage": "Mình tên là Lan. Mình sinh ngày 15 tháng 7 năm 1995. Anh của mình tên là Long. Anh Long sinh ngày 21 tháng 3 năm 1990. Em gái mình tên là Quỳnh. Quỳnh sinh ngày 24 tháng 8 năm 2001. Mẹ của mình sinh ngày 30 tháng 11 năm 1970. Ba mình sinh ngày 5 tháng 10 năm 1968.\nMình tính đi Hàn vào tháng 12 năm nay và đi Mỹ vào tháng 5 năm sau.",
+       "questions": [
+        {
+         "q": "Sinh nhật của Lan là ngày mấy tháng mấy?",
+         "a": "Sinh nhật của Lan là ngày 15 tháng 7."
+        },
+        {
+         "q": "Sinh nhật của Long là ngày mấy tháng mấy?",
+         "a": "Sinh nhật của anh Long là ngày 21 tháng 3."
+        },
+        {
+         "q": "Sinh nhật của Quỳnh là ngày mấy tháng mấy?",
+         "a": "Sinh nhật của Quỳnh là ngày 24 tháng 8."
+        },
+        {
+         "q": "Sinh nhật của mẹ Lan là ngày mấy tháng mấy?",
+         "a": "Sinh nhật của mẹ Lan là ngày 30 tháng 11."
+        },
+        {
+         "q": "Sinh nhật của ba Lan là ngày mấy tháng mấy?",
+         "a": "Sinh nhật của ba Lan là ngày 5 tháng 10."
+        },
+        {
+         "q": "Lan tính đi Hàn vào tháng mấy năm mấy?",
+         "a": "Lan tính đi Hàn vào tháng 12 năm nay."
+        },
+        {
+         "q": "Lan tính đi Mỹ vào tháng mấy năm mấy?",
+         "a": "Lan tính đi Mỹ vào tháng 5 năm sau."
+        }
+       ],
+       "num": 17
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "ngay-thang",
+     "label": "Ngày tháng",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "blankWidth": "20ch",
+       "instructionVi": "Viết các số sau bằng tiếng Việt.",
+       "instructionEn": "Write the following numbers in Vietnamese.",
+       "items": [
+        {
+         "template": "3 → {0}",
+         "answers": [
+          [
+           "ba"
+          ]
+         ]
+        },
+        {
+         "template": "7 → {0}",
+         "answers": [
+          [
+           "bảy"
+          ]
+         ]
+        },
+        {
+         "template": "11 → {0}",
+         "answers": [
+          [
+           "mười một"
+          ]
+         ]
+        },
+        {
+         "template": "15 → {0}",
+         "answers": [
+          [
+           "mười lăm"
+          ]
+         ]
+        },
+        {
+         "template": "20 → {0}",
+         "answers": [
+          [
+           "hai mươi"
+          ]
+         ]
+        },
+        {
+         "template": "21 → {0}",
+         "answers": [
+          [
+           "hai mươi mốt"
+          ]
+         ]
+        },
+        {
+         "template": "24 → {0}",
+         "answers": [
+          [
+           "hai mươi tư",
+           "hai mươi bốn"
+          ]
+         ]
+        },
+        {
+         "template": "25 → {0}",
+         "answers": [
+          [
+           "hai mươi lăm"
+          ]
+         ]
+        },
+        {
+         "template": "30 → {0}",
+         "answers": [
+          [
+           "ba mươi"
+          ]
+         ]
+        },
+        {
+         "template": "31 → {0}",
+         "answers": [
+          [
+           "ba mươi mốt",
+           "ba mươi một"
+          ]
+         ]
+        }
+       ],
+       "num": 18
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "20ch",
+       "instructionVi": "Viết tháng.",
+       "instructionEn": "Write the month in Vietnamese.",
+       "items": [
+        {
+         "template": "January → {0}",
+         "answers": [
+          [
+           "tháng một"
+          ]
+         ]
+        },
+        {
+         "template": "March → {0}",
+         "answers": [
+          [
+           "tháng ba"
+          ]
+         ]
+        },
+        {
+         "template": "May → {0}",
+         "answers": [
+          [
+           "tháng năm"
+          ]
+         ]
+        },
+        {
+         "template": "June → {0}",
+         "answers": [
+          [
+           "tháng sáu"
+          ]
+         ]
+        },
+        {
+         "template": "August → {0}",
+         "answers": [
+          [
+           "tháng tám"
+          ]
+         ]
+        },
+        {
+         "template": "October → {0}",
+         "answers": [
+          [
+           "tháng mười"
+          ]
+         ]
+        },
+        {
+         "template": "December → {0}",
+         "answers": [
+          [
+           "tháng mười hai"
+          ]
+         ]
+        },
+        {
+         "template": "July → {0}",
+         "answers": [
+          [
+           "tháng bảy"
+          ]
+         ]
+        }
+       ],
+       "num": 19
+      },
+      {
+       "type": "audioFill",
+       "blankWidth": "28ch",
+       "instructionVi": "Viết ngày tháng năm.",
+       "instructionEn": "Write the dates using numbers.",
+       "items": [
+        {
+         "template": "12/1 → {0}",
+         "answers": [
+          [
+           "ngày 12 tháng 1",
+           "12 tháng 1"
+          ]
+         ]
+        },
+        {
+         "template": "21/3 → {0}",
+         "answers": [
+          [
+           "ngày 21 tháng 3",
+           "21 tháng 3"
+          ]
+         ]
+        },
+        {
+         "template": "15/8 → {0}",
+         "answers": [
+          [
+           "ngày 15 tháng 8",
+           "15 tháng 8"
+          ]
+         ]
+        },
+        {
+         "template": "10/4 → {0}",
+         "answers": [
+          [
+           "ngày 10 tháng 4",
+           "10 tháng 4"
+          ]
+         ]
+        },
+        {
+         "template": "1/3/2025 → {0}",
+         "answers": [
+          [
+           "ngày 1 tháng 3 năm 2025",
+           "1 tháng 3 năm 2025"
+          ]
+         ]
+        },
+        {
+         "template": "31/12/2000 → {0}",
+         "answers": [
+          [
+           "ngày 31 tháng 12 năm 2000",
+           "31 tháng 12 năm 2000"
+          ]
+         ]
+        }
+       ],
+       "num": 20
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "ngay-thang",
+     "label": "Ngày tháng",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "instructionVi": "Trả lời các câu hỏi sau.",
+       "instructionEn": "Answer the following questions.",
+       "items": [
+        {
+         "question": "Sinh nhật của bạn là ngày mấy tháng mấy?"
+        },
+        {
+         "question": "Bạn sinh vào năm mấy?"
+        },
+        {
+         "question": "Bạn tính đi Việt Nam vào tháng mấy?"
+        }
+       ],
+       "num": 21
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

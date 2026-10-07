@@ -1,0 +1,1453 @@
+{
+ "id": "b6",
+ "num": 6,
+ "title": "Em thường đi chơi vào tối Chủ Nhật.",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo": "Audio audio/b6/nam: pron_<van/tu>.mp3 (ươ, uô va cac tu trong bang), ex2_01..05.mp3, ex3_01..05.mp3, vocab_so_<khong|mot|hai|ba|bon|nam|sau|bay|tam|chin|muoi>.mp3, vocab_thu_<hai|ba|tu|nam|sau|bay>.mp3 + vocab_chu_nhat.mp3 - chua thu am. Hinh so: images/b6/bai4/so_0..so_10.jpg (chua co thi app hien o chu so lon). Thu trong tuan khong dung hinh.",
+  "confirm": "De ghi 'so 0-10' va 11 hinh nhung chi liet ke tu mot..muoi; da them 'khong' cho so 0 - CAN XAC NHAN. Cac bai tu vung danh so 4, 5 tam thoi.",
+  "todo_ex": "Hinh so: images/b6/bai5/hinh1..9.jpg; audio thu: audio/b6/nam/ex_thu_01..06.mp3 - chua co. Bai so khong co audio. Cau vi du 'ba' to dam/do theo kieu vi du chung.",
+  "todo_nghe": "audio/b6/nam: ex8_01..05.mp3, ex9_01..06.mp3 - chua thu am. Bai 8: cau lenh 'chon cau tra loi dung' nhung de la dien so, dang lam kieu dien (nhan so hoac chu); bai 9: nhan 4302 hoac '4 3 0 2'."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "uo",
+     "label": "Nguyên âm \"ươ\"/\"uô\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b6/{voice}/pron_{key}.mp3",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ươ",
+            "nước",
+            "sườn",
+            "thường",
+            "lượm",
+            "cướp",
+            "mượt"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "uô",
+            "thuốc",
+            "muốn",
+            "uống",
+            "nhuộm",
+            "chuột"
+           ]
+          ]
+         }
+        ]
+       ],
+       "layout": "rows"
+      },
+      {
+       "type": "repeatSentences",
+       "num": 2,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Bên đường có con chuột.",
+         "audio": "audio/b6/{voice}/ex2_01.mp3"
+        },
+        {
+         "text": "Trời mới mưa nên đường còn ướt.",
+         "audio": "audio/b6/{voice}/ex2_02.mp3"
+        },
+        {
+         "text": "Cường muốn ra vườn uống nước.",
+         "audio": "audio/b6/{voice}/ex2_03.mp3"
+        },
+        {
+         "text": "Cô Phương thường nấu rau muống.",
+         "audio": "audio/b6/{voice}/ex2_04.mp3"
+        },
+        {
+         "text": "Chị Hương thường đi bộ qua đường để mua mướp.",
+         "audio": "audio/b6/{voice}/ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "label": "Phụ âm \"th\"",
+     "exercises": [
+      {
+       "type": "repeatSentences",
+       "num": 3,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Thành thích ăn thịt.",
+         "audio": "audio/b6/{voice}/ex3_01.mp3"
+        },
+        {
+         "text": "Chị Thảo rất thích thể thao.",
+         "audio": "audio/b6/{voice}/ex3_02.mp3"
+        },
+        {
+         "text": "Thời tiết tháng mười thường thay đổi.",
+         "audio": "audio/b6/{voice}/ex3_03.mp3"
+        },
+        {
+         "text": "Thiên thường mua thịt và rau ở chợ.",
+         "audio": "audio/b6/{voice}/ex3_04.mp3"
+        },
+        {
+         "text": "Thầy Tường thường thức dậy thật sớm để đi thể dục.",
+         "audio": "audio/b6/{voice}/ex3_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "so",
+     "label": "Số 0–10",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 4,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "img": "images/b6/bai4/so_0.jpg",
+         "big": "0",
+         "caption": "Không",
+         "audio": "audio/b6/{voice}/vocab_so_khong.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_1.jpg",
+         "big": "1",
+         "caption": "Một",
+         "audio": "audio/b6/{voice}/vocab_so_mot.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_2.jpg",
+         "big": "2",
+         "caption": "Hai",
+         "audio": "audio/b6/{voice}/vocab_so_hai.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_3.jpg",
+         "big": "3",
+         "caption": "Ba",
+         "audio": "audio/b6/{voice}/vocab_so_ba.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_4.jpg",
+         "big": "4",
+         "caption": "Bốn",
+         "audio": "audio/b6/{voice}/vocab_so_bon.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_5.jpg",
+         "big": "5",
+         "caption": "Năm",
+         "audio": "audio/b6/{voice}/vocab_so_nam.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_6.jpg",
+         "big": "6",
+         "caption": "Sáu",
+         "audio": "audio/b6/{voice}/vocab_so_sau.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_7.jpg",
+         "big": "7",
+         "caption": "Bảy",
+         "audio": "audio/b6/{voice}/vocab_so_bay.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_8.jpg",
+         "big": "8",
+         "caption": "Tám",
+         "audio": "audio/b6/{voice}/vocab_so_tam.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_9.jpg",
+         "big": "9",
+         "caption": "Chín",
+         "audio": "audio/b6/{voice}/vocab_so_chin.mp3"
+        },
+        {
+         "img": "images/b6/bai4/so_10.jpg",
+         "big": "10",
+         "caption": "Mười",
+         "audio": "audio/b6/{voice}/vocab_so_muoi.mp3"
+        }
+       ]
+      },
+      {
+       "type": "photoFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu sau với số phù hợp.",
+       "instructionEn": "Complete the following sentences with the appropriate numbers.",
+       "columns": 3,
+       "items": [
+        {
+         "img": "images/b6/bai5/hinh1.jpg",
+         "name": "Hình 1",
+         "template": "{0} quả táo.",
+         "answers": [
+          [
+           "ba"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "img": "images/b6/bai5/hinh2.jpg",
+         "name": "Hình 2",
+         "template": "{0} con chó.",
+         "answers": [
+          [
+           "bốn"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh3.jpg",
+         "name": "Hình 3",
+         "template": "{0} cuốn sách.",
+         "answers": [
+          [
+           "bảy"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh4.jpg",
+         "name": "Hình 4",
+         "template": "{0} quả cam.",
+         "answers": [
+          [
+           "chín"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh5.jpg",
+         "name": "Hình 5",
+         "template": "{0} ly nước.",
+         "answers": [
+          [
+           "năm"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh6.jpg",
+         "name": "Hình 6",
+         "template": "{0} người.",
+         "answers": [
+          [
+           "hai"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh7.jpg",
+         "name": "Hình 7",
+         "template": "{0} cái ghế và {1} cái bàn.",
+         "answers": [
+          [
+           "mười"
+          ],
+          [
+           "một"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh8.jpg",
+         "name": "Hình 8",
+         "template": "{0} cái điện thoại.",
+         "answers": [
+          [
+           "ba"
+          ]
+         ]
+        },
+        {
+         "img": "images/b6/bai5/hinh9.jpg",
+         "name": "Hình 9",
+         "template": "{0} cái chén.",
+         "answers": [
+          [
+           "sáu"
+          ]
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "thu",
+     "label": "Thứ trong tuần",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 6,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "columns": 4,
+       "items": [
+        {
+         "big": "2",
+         "caption": "Thứ hai",
+         "audio": "audio/b6/{voice}/vocab_thu_hai.mp3"
+        },
+        {
+         "big": "3",
+         "caption": "Thứ ba",
+         "audio": "audio/b6/{voice}/vocab_thu_ba.mp3"
+        },
+        {
+         "big": "4",
+         "caption": "Thứ tư",
+         "audio": "audio/b6/{voice}/vocab_thu_tu.mp3"
+        },
+        {
+         "big": "5",
+         "caption": "Thứ năm",
+         "audio": "audio/b6/{voice}/vocab_thu_nam.mp3"
+        },
+        {
+         "big": "6",
+         "caption": "Thứ sáu",
+         "audio": "audio/b6/{voice}/vocab_thu_sau.mp3"
+        },
+        {
+         "big": "7",
+         "caption": "Thứ bảy",
+         "audio": "audio/b6/{voice}/vocab_thu_bay.mp3"
+        },
+        {
+         "big": "CN",
+         "caption": "Chủ nhật",
+         "audio": "audio/b6/{voice}/vocab_chu_nhat.mp3"
+        }
+       ]
+      },
+      {
+       "type": "audioFill",
+       "num": 7,
+       "instructionVi": "Điền tên thứ thích hợp vào chỗ trống.",
+       "instructionEn": "Fill in the blanks with the correct day of the week.",
+       "items": [
+        {
+         "template": "Thứ hai, thứ ba, {0}, thứ năm.",
+         "answers": [
+          [
+           "thứ tư"
+          ]
+         ]
+        },
+        {
+         "template": "Thứ năm, {0}, thứ bảy.",
+         "answers": [
+          [
+           "thứ sáu"
+          ]
+         ]
+        },
+        {
+         "template": "{0}, thứ hai, thứ ba.",
+         "answers": [
+          [
+           "chủ nhật"
+          ]
+         ]
+        },
+        {
+         "template": "Thứ ba, thứ tư, {0}, thứ sáu.",
+         "answers": [
+          [
+           "thứ năm"
+          ]
+         ]
+        },
+        {
+         "template": "Thứ sáu, {0}, chủ nhật.",
+         "answers": [
+          [
+           "thứ bảy"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "type": "wordOrder",
+       "num": 8,
+       "instructionVi": "Sắp xếp các thứ sau theo thứ tự trong tuần.",
+       "instructionEn": "Put the days in the correct order.",
+       "items": [
+        {
+         "words": [
+          "thứ năm",
+          "thứ hai",
+          "thứ tư",
+          "thứ ba"
+         ],
+         "answers": [
+          "thứ hai thứ ba thứ tư thứ năm"
+         ]
+        },
+        {
+         "words": [
+          "chủ nhật",
+          "thứ sáu",
+          "thứ bảy",
+          "thứ năm"
+         ],
+         "answers": [
+          "thứ năm thứ sáu thứ bảy chủ nhật"
+         ]
+        },
+        {
+         "words": [
+          "thứ ba",
+          "thứ bảy",
+          "thứ tư",
+          "thứ hai"
+         ],
+         "answers": [
+          "thứ hai thứ ba thứ tư thứ bảy"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "so",
+     "label": "Số",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "num": 9,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "template": "Xe buýt số {0}.",
+         "answers": [
+          [
+           "8",
+           "tám"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_01.mp3"
+        },
+        {
+         "template": "Nhà Nhật có {0} người.",
+         "answers": [
+          [
+           "5",
+           "năm"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_02.mp3"
+        },
+        {
+         "template": "Linh năm nay {0} tuổi.",
+         "answers": [
+          [
+           "10",
+           "mười"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_03.mp3"
+        },
+        {
+         "template": "Phòng số {0}.",
+         "answers": [
+          [
+           "147",
+           "một bốn bảy"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_04.mp3"
+        },
+        {
+         "template": "Số điện thoại của chị Tuyền là 083 153 {0}.",
+         "answers": [
+          [
+           "0592"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex8_05.mp3"
+        }
+       ]
+      },
+      {
+       "type": "audioFill",
+       "num": 10,
+       "instructionVi": "Nghe và điền số vào chỗ trống.",
+       "instructionEn": "Listen and fill in the blanks.",
+       "items": [
+        {
+         "template": "091 151 {0}",
+         "answers": [
+          [
+           "4302"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_01.mp3"
+        },
+        {
+         "template": "093 227 {0}",
+         "answers": [
+          [
+           "8143"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_02.mp3"
+        },
+        {
+         "template": "083 {0} {1}",
+         "answers": [
+          [
+           "562"
+          ],
+          [
+           "7891"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_03.mp3"
+        },
+        {
+         "template": "028 {0} {1}",
+         "answers": [
+          [
+           "304"
+          ],
+          [
+           "7740"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_04.mp3"
+        },
+        {
+         "template": "{0} {1} {2}",
+         "answers": [
+          [
+           "094"
+          ],
+          [
+           "321"
+          ],
+          [
+           "8692"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_05.mp3"
+        },
+        {
+         "template": "{0} {1} {2}",
+         "answers": [
+          [
+           "070"
+          ],
+          [
+           "304"
+          ],
+          [
+           "5852"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex9_06.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "thu",
+     "label": "Thứ trong tuần",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "num": 11,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "items": [
+        {
+         "template": "Tối {0} Thư ở nhà.",
+         "answers": [
+          [
+           "thứ sáu"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_01.mp3"
+        },
+        {
+         "template": "Chiều {0} mình đi ăn với anh Kiên.",
+         "answers": [
+          [
+           "thứ ba"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_02.mp3"
+        },
+        {
+         "template": "Mình thường đi chợ vào {0}.",
+         "answers": [
+          [
+           "thứ bảy"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_03.mp3"
+        },
+        {
+         "template": "{0} mình đi về nhà ba mẹ.",
+         "answers": [
+          [
+           "thứ tư"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_04.mp3"
+        },
+        {
+         "distinct": true,
+         "template": "{0} và {1} Nam không đi làm.",
+         "answers": [
+          [
+           "thứ năm",
+           "chủ nhật"
+          ],
+          [
+           "chủ nhật",
+           "thứ năm"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_05.mp3"
+        },
+        {
+         "template": "Sáng {0} Quỳnh đi cà phê.",
+         "answers": [
+          [
+           "thứ hai"
+          ]
+         ],
+         "audio": "audio/b6/{voice}/ex_thu_06.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Thường + hành động",
+         "en": "Thường + action",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Thường được dùng để nói về một hành động hoặc thói quen xảy ra nhiều lần hoặc thường xuyên.",
+         "en": "Thường is used to talk about an action or habit that happens regularly or frequently."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + thường + [hành động].",
+         "en": "[Subject] + thường + [action]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình thường đi học.",
+           "en": "I usually go to school."
+          },
+          {
+           "vi": "Chị thường uống cà phê.",
+           "en": "I usually drink coffee."
+          },
+          {
+           "vi": "Hồng thường đi chợ.",
+           "en": "Hồng usually goes to the market."
+          },
+          {
+           "vi": "Anh Nam thường tập thể dục vào buổi chiều.",
+           "en": "Nam usually exercises in the afternoon."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Không thường + hành động",
+         "en": "Không thường + action",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Để nói một hành động không thường xuyên xảy ra, dùng không thường trước hành động.",
+         "en": "To say that an action does not happen regularly, use không thường before the action."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + không thường + [hành động].",
+         "en": "[Subject] + không thường + [action]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình không thường đi chợ.",
+           "en": "I don't usually go to the market."
+          },
+          {
+           "vi": "Anh không thường tập thể dục.",
+           "en": "I don't usually exercise."
+          },
+          {
+           "vi": "Phương không thường ăn sáng.",
+           "en": "Phương doesn't usually eat breakfast."
+          },
+          {
+           "vi": "Cô Sáu không thường uống cà phê.",
+           "en": "Mrs. Sáu doesn't usually drink coffee."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "… có thường + hành động + không?",
+         "en": "… có thường + action + không?",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "“… có thường + hành động + không?” dùng để hỏi một người có thường xuyên làm một việc gì đó hay không.",
+         "en": "“… có thường + action + không?” is used to ask whether someone usually does something."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + có thường + [hành động] + không?",
+         "en": "[Subject] + có thường + [action] + không?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn có thường đi làm không?",
+           "en": "Do you usually go to work?"
+          },
+          {
+           "vi": "Chị có thường uống cà phê không?",
+           "en": "Do you usually drink coffee?"
+          },
+          {
+           "vi": "Anh Phong có thường tập thể dục không?",
+           "en": "Does Phong usually exercise?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cách trả lời",
+         "en": "How to answer"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có thể trả lời ngắn:",
+         "en": "You can give a short answer:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có.",
+         "en": "Yes."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Không.",
+         "en": "No."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Bạn cũng có thể trả lời bằng một câu đầy đủ:",
+         "en": "You can also answer with a full sentence:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có. Mình thường đi làm.",
+         "en": "Yes. I usually go to work."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Không. Mình không thường đi chợ.",
+         "en": "No. I don't usually go to the market."
+        }
+       ]
+      },
+      {
+       "type": "wordOrder",
+       "num": 12,
+       "instructionVi": "Sắp xếp các từ sau để tạo thành câu hoàn chỉnh.",
+       "instructionEn": "Put the words in the correct order to make complete sentences.",
+       "items": [
+        {
+         "words": [
+          "thường",
+          "mình",
+          "làm",
+          "đi"
+         ],
+         "answers": [
+          "Mình thường đi làm."
+         ]
+        },
+        {
+         "words": [
+          "không",
+          "Lan",
+          "đi",
+          "thường",
+          "chợ"
+         ],
+         "answers": [
+          "Lan không thường đi chợ."
+         ]
+        },
+        {
+         "words": [
+          "tập",
+          "Long",
+          "thường",
+          "dục",
+          "anh",
+          "thể"
+         ],
+         "answers": [
+          "Anh Long thường tập thể dục."
+         ]
+        },
+        {
+         "words": [
+          "không",
+          "sáng",
+          "Minh",
+          "ăn",
+          "thường"
+         ],
+         "answers": [
+          "Minh không thường ăn sáng."
+         ]
+        },
+        {
+         "words": [
+          "dọn",
+          "Mai",
+          "thường",
+          "nhà"
+         ],
+         "answers": [
+          "Mai thường dọn nhà."
+         ]
+        },
+        {
+         "words": [
+          "đi",
+          "thường",
+          "không",
+          "Nam",
+          "chợ"
+         ],
+         "answers": [
+          "Nam không thường đi chợ."
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 13,
+       "instructionVi": "Trả lời các câu hỏi theo gợi ý.",
+       "instructionEn": "Answer the questions using the prompts.",
+       "items": [
+        {
+         "question": "Bạn có thường đi làm không?",
+         "prefix": "Có.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} thường đi làm."
+         ],
+         "model": "{p} thường đi làm."
+        },
+        {
+         "question": "Bạn có thường đi chợ không?",
+         "prefix": "Không.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ"
+         ],
+         "answers": [
+          "{p} không thường đi chợ."
+         ],
+         "model": "{p} không thường đi chợ."
+        },
+        {
+         "question": "Chị Hường có thường tập thể dục không?",
+         "prefix": "Có.",
+         "answers": [
+          "Chị Hường thường tập thể dục.",
+          "Chị ấy thường tập thể dục.",
+          "Chị thường tập thể dục.",
+          "Hường thường tập thể dục."
+         ],
+         "model": "Chị Hường thường tập thể dục."
+        },
+        {
+         "question": "Anh Bình có thường ăn sáng không?",
+         "prefix": "Không.",
+         "answers": [
+          "Anh Bình không thường ăn sáng.",
+          "Anh ấy không thường ăn sáng.",
+          "Anh không thường ăn sáng.",
+          "Bình không thường ăn sáng."
+         ],
+         "model": "Anh Bình không thường ăn sáng."
+        },
+        {
+         "question": "Chú Tám có thường dọn nhà không?",
+         "prefix": "Có.",
+         "answers": [
+          "Chú Tám thường dọn nhà.",
+          "Chú ấy thường dọn nhà.",
+          "Chú thường dọn nhà.",
+          "Tám thường dọn nhà."
+         ],
+         "model": "Chú Tám thường dọn nhà."
+        },
+        {
+         "question": "Cô Nga có thường đi chơi không?",
+         "prefix": "Không.",
+         "answers": [
+          "Cô Nga không thường đi chơi.",
+          "Cô ấy không thường đi chơi.",
+          "Cô không thường đi chơi.",
+          "Nga không thường đi chơi."
+         ],
+         "model": "Cô Nga không thường đi chơi."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "buoi-thu",
+     "label": "Thời gian: Buổi + Thứ",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "Thời gian: Buổi + Thứ",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, khi nói một thời điểm cụ thể trong ngày, “buổi” đứng trước “thứ”.",
+         "en": "In Vietnamese, when talking about a specific time of day on a particular day, “buổi” comes before the day of the week."
+        },
+        {
+         "type": "structure",
+         "vi": "buổi + [thời gian trong ngày] + [thứ]",
+         "en": "buổi + [time of day] + [day of the week]"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "buổi sáng thứ Hai",
+           "en": "Monday morning"
+          },
+          {
+           "vi": "buổi chiều thứ Ba",
+           "en": "Tuesday afternoon"
+          },
+          {
+           "vi": "buổi tối thứ Sáu",
+           "en": "Friday evening"
+          },
+          {
+           "vi": "buổi trưa thứ Bảy",
+           "en": "Saturday noon"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "1. Thời gian ở cuối câu",
+         "en": "Time at the end",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi thời gian đứng ở cuối câu, có thể dùng “vào” trước cụm thời gian để nói một hành động xảy ra vào thời điểm hoặc khoảng thời gian đó.",
+         "en": "When the time expression comes at the end of the sentence, “vào” can be used before the time expression to say when an action happens."
+        },
+        {
+         "type": "structure",
+         "vi": "[hành động/sự kiện] + vào + [thời gian].",
+         "en": "[action/event] + vào + [time]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình đi làm vào buổi sáng.",
+           "en": "I go to work in the morning."
+          },
+          {
+           "vi": "Chị Minh đi ăn với bạn vào buổi tối thứ Sáu.",
+           "en": "Minh eats out with friends on Friday night."
+          },
+          {
+           "vi": "Em thường tập thể dục vào thứ Tư và thứ Bảy.",
+           "en": "I often do exercises on Wednesdays and Saturdays."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Thời gian ở đầu câu",
+         "en": "Time at the beginning",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi thời gian đứng ở đầu câu, thường không dùng “vào”.",
+         "en": "When the time expression comes at the beginning of the sentence, “vào” is usually not used."
+        },
+        {
+         "type": "structure",
+         "vi": "[Thời gian] + [chủ ngữ] + [hành động].",
+         "en": "[Time] + [subject] + [action]."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Thứ Hai, mình đi làm.",
+           "en": "On Monday, I go to work."
+          },
+          {
+           "vi": "Thứ Bảy, mình đi chợ.",
+           "en": "On Saturday, I go to the market."
+          },
+          {
+           "vi": "Buổi sáng, mình uống cà phê.",
+           "en": "In the morning, I drink coffee."
+          },
+          {
+           "vi": "Buổi tối, mình thường ở nhà.",
+           "en": "In the evening, I usually stay home."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 14,
+       "instructionVi": "Chọn câu đúng.",
+       "instructionEn": "Choose the correct sentence.",
+       "items": [
+        {
+         "options": [
+          "Vào thứ Hai mình đi làm.",
+          "Thứ Hai mình đi làm."
+         ],
+         "answer": "b"
+        },
+        {
+         "options": [
+          "Buổi sáng mình uống cà phê.",
+          "Vào buổi sáng mình uống cà phê."
+         ],
+         "answer": "a"
+        },
+        {
+         "options": [
+          "Mình đi chợ vào thứ Bảy.",
+          "Mình đi chợ thứ Bảy."
+         ],
+         "answer": "a"
+        },
+        {
+         "options": [
+          "Mình uống cà phê vào buổi sáng thứ Năm.",
+          "Mình uống cà phê thứ Năm buổi sáng."
+         ],
+         "answer": "a"
+        },
+        {
+         "options": [
+          "Thứ Bảy buổi tối Hưng ở nhà.",
+          "Hưng ở nhà buổi tối thứ Bảy."
+         ],
+         "answer": "b"
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 15,
+       "instructionVi": "Viết lại câu.",
+       "instructionEn": "Rewrite each sentence using the time expression at the beginning.",
+       "items": [
+        {
+         "example": true,
+         "question": "Mình thường đi làm vào sáng thứ Hai.",
+         "answers": [
+          "Sáng thứ Hai mình thường đi làm."
+         ],
+         "model": "Sáng thứ Hai mình thường đi làm."
+        },
+        {
+         "question": "Em đi chợ vào thứ Bảy.",
+         "answers": [
+          "Thứ Bảy em đi chợ."
+         ],
+         "model": "Thứ Bảy em đi chợ."
+        },
+        {
+         "question": "Buổi sáng, anh Nam thường uống cà phê.",
+         "answers": [
+          "Buổi sáng anh Nam thường uống cà phê.",
+          "Anh Nam thường uống cà phê vào buổi sáng."
+         ],
+         "model": "Buổi sáng anh Nam thường uống cà phê."
+        },
+        {
+         "question": "Mình về nhà vào buổi tối.",
+         "answers": [
+          "Buổi tối mình về nhà."
+         ],
+         "model": "Buổi tối mình về nhà."
+        },
+        {
+         "question": "Chú Quân không thường tập thể dục vào buổi trưa.",
+         "answers": [
+          "Buổi trưa chú Quân không thường tập thể dục."
+         ],
+         "model": "Buổi trưa chú Quân không thường tập thể dục."
+        },
+        {
+         "question": "Cuối tuần chị Ly không thường đi du lịch.",
+         "answers": [
+          "Cuối tuần chị Ly không thường đi du lịch.",
+          "Chị Ly không thường đi du lịch vào cuối tuần."
+         ],
+         "model": "Cuối tuần chị Ly không thường đi du lịch."
+        },
+        {
+         "question": "Tối thứ Năm Nghĩa thường đi học tiếng Anh.",
+         "answers": [
+          "Tối thứ Năm Nghĩa thường đi học tiếng Anh.",
+          "Nghĩa thường đi học tiếng Anh vào tối thứ Năm."
+         ],
+         "model": "Tối thứ Năm Nghĩa thường đi học tiếng Anh."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 16,
+       "instructionVi": "Đọc nhật ký của Long và trả lời câu hỏi.",
+       "instructionEn": "Read Long's diary and answer the questions.",
+       "passage": "Mình thường dậy sớm và ăn sáng ở nhà. Sau đó, mình thường uống cà phê và đi làm. Mình không thường đi chợ vì mình thường về nhà trễ.\nBuổi trưa, mình thường ăn cơm và ngủ trưa. Buổi chiều, mình đi làm tiếp. Mình không thường uống cà phê vào buổi chiều.\nBuổi tối, mình thường ăn tối ở quán ăn. Sau đó, mình dọn nhà và tắm. Mình không thường đi chơi vào buổi tối. Cuối tuần, mình thường đi cà phê với bạn.",
+       "questions": [
+        {
+         "q": "Long có thường dậy sớm không?",
+         "a": "Có. Long thường dậy sớm."
+        },
+        {
+         "q": "Long thường ăn sáng ở đâu?",
+         "a": "Long thường ăn sáng ở nhà."
+        },
+        {
+         "q": "Long thường làm gì sau khi ăn sáng?",
+         "a": "Sau khi ăn sáng, Long thường uống cà phê và đi làm."
+        },
+        {
+         "q": "Long có thường đi chợ không?",
+         "a": "Không. Long không thường đi chợ."
+        },
+        {
+         "q": "Long thường làm gì vào buổi trưa?",
+         "a": "Buổi trưa, Long thường ăn cơm và ngủ trưa."
+        },
+        {
+         "q": "Long thường làm gì vào buổi tối?",
+         "a": "Buổi tối, Long thường ăn tối ở quán ăn, dọn nhà và tắm."
+        },
+        {
+         "q": "Long có thường ở nhà vào cuối tuần không?",
+         "a": "Không. Cuối tuần, Long thường đi cà phê với bạn."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "writeAnswer",
+       "num": 17,
+       "instructionVi": "Hoàn thành câu theo gợi ý sử dụng “thường” và thời gian phù hợp.",
+       "instructionEn": "Complete the sentences using the prompts with “thường” and the appropriate time expression.",
+       "items": [
+        {
+         "question": "Minh/ngủ dậy sớm/sáng/thứ Hai.",
+         "answers": [
+          "Minh thường ngủ dậy sớm vào buổi sáng thứ Hai.",
+          "Minh thường ngủ dậy sớm vào sáng thứ Hai.",
+          "Buổi sáng thứ Hai minh thường ngủ dậy sớm.",
+          "Sáng thứ Hai minh thường ngủ dậy sớm."
+         ],
+         "model": "Minh thường ngủ dậy sớm vào buổi sáng thứ Hai."
+        },
+        {
+         "question": "Chị Phương/ở nhà/thứ Năm.",
+         "answers": [
+          "Chị Phương thường ở nhà vào thứ Năm.",
+          "Thứ Năm chị Phương thường ở nhà."
+         ],
+         "model": "Chị Phương thường ở nhà vào thứ Năm."
+        },
+        {
+         "question": "Ân/đi siêu thị/trưa/thứ Bảy.",
+         "answers": [
+          "Ân thường đi siêu thị vào buổi trưa thứ Bảy.",
+          "Ân thường đi siêu thị vào trưa thứ Bảy.",
+          "Buổi trưa thứ Bảy ân thường đi siêu thị.",
+          "Trưa thứ Bảy ân thường đi siêu thị."
+         ],
+         "model": "Ân thường đi siêu thị vào buổi trưa thứ Bảy."
+        },
+        {
+         "question": "Chú Tám/tới sân bay/cuối tuần.",
+         "answers": [
+          "Chú Tám thường tới sân bay vào cuối tuần.",
+          "Cuối tuần chú Tám thường tới sân bay."
+         ],
+         "model": "Chú Tám thường tới sân bay vào cuối tuần."
+        },
+        {
+         "question": "Cô Huyền/về nhà trễ/chiều/thứ Sáu.",
+         "answers": [
+          "Cô Huyền thường về nhà trễ vào buổi chiều thứ Sáu.",
+          "Cô Huyền thường về nhà trễ vào chiều thứ Sáu.",
+          "Buổi chiều thứ Sáu cô Huyền thường về nhà trễ.",
+          "Chiều thứ Sáu cô Huyền thường về nhà trễ."
+         ],
+         "model": "Cô Huyền thường về nhà trễ vào buổi chiều thứ Sáu."
+        }
+       ]
+      },
+      {
+       "type": "dialogueFill",
+       "num": 18,
+       "instructionVi": "Hoàn thành đoạn hội thoại sau.",
+       "instructionEn": "Complete the following dialogue.",
+       "lines": [
+        {
+         "speaker": "Giang:",
+         "template": "Chào Phong, bạn khoẻ không?",
+         "answers": []
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Mình khoẻ. Còn bạn?",
+         "answers": []
+        },
+        {
+         "speaker": "Giang:",
+         "template": "Mình cũng khoẻ. Bạn ăn sáng {0}?",
+         "answers": [
+          [
+           "chưa"
+          ]
+         ]
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Mình ăn sáng {0}. Bạn ăn sáng {1}?",
+         "answers": [
+          [
+           "rồi"
+          ],
+          [
+           "chưa"
+          ]
+         ]
+        },
+        {
+         "speaker": "Giang:",
+         "template": "Mình cũng ăn sáng {0}. Mình thường ăn sáng sớm. Hôm nay bạn có đi làm {1}?",
+         "answers": [
+          [
+           "rồi"
+          ],
+          [
+           "không"
+          ]
+         ]
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Mình không đi làm {0} sáng thứ Sáu. Mình {1} ở nhà. Còn bạn?",
+         "answers": [
+          [
+           "vào"
+          ],
+          [
+           "thường"
+          ]
+         ]
+        },
+        {
+         "speaker": "Giang:",
+         "template": "Mình cũng vậy. Hôm nay mình ở nhà. Bạn {0} thường đi chợ không?",
+         "answers": [
+          [
+           "có"
+          ]
+         ]
+        },
+        {
+         "speaker": "Phong:",
+         "template": "Có. Bây giờ mình chuẩn bị đi chợ.",
+         "answers": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "thuong",
+     "label": "Thường",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 19,
+       "instructionVi": "Trả lời câu hỏi.",
+       "instructionEn": "Answer the questions.",
+       "items": [
+        {
+         "question": "Bạn thường đi làm vào thứ mấy?"
+        },
+        {
+         "question": "Bạn có thường uống cà phê vào buổi sáng không?"
+        },
+        {
+         "question": "Bạn thường đi chợ vào thứ mấy?"
+        },
+        {
+         "question": "Bạn có thường tập thể dục không?"
+        },
+        {
+         "question": "Bạn thường đi chơi vào thứ mấy?"
+        },
+        {
+         "question": "Bạn có thường ở nhà vào cuối tuần không?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
