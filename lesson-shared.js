@@ -557,7 +557,7 @@ function setupLessonFlow(currentKey, itemId, level) {
       const shell = el('div', 'gram2-shell');
       const topbar = el('div', 'gram2-topbar');
       const backBtn = el('button', 'gram2-back-btn', '←'); backBtn.type = 'button';
-      backBtn.setAttribute('aria-label', 'Back');
+      backBtn.setAttribute('aria-label', 'Quay lại');
       backBtn.addEventListener('click', onBack);
       topbar.appendChild(backBtn);
       topbar.appendChild(el('div', 'gram2-tab-pill', labelText));
@@ -602,7 +602,7 @@ function setupLessonFlow(currentKey, itemId, level) {
         nav.innerHTML = '';
         const isLast = i >= steps.length - 1;
         if (!opts.noBack) {
-          const prev = el('button', 'btn-check btn-secondary', '← Back'); prev.type = 'button';
+          const prev = el('button', 'btn-check btn-secondary', '← Quay lại'); prev.type = 'button';
           prev.style.visibility = i === 0 ? 'hidden' : 'visible';
           prev.addEventListener('click', function () { i--; draw(); });
           nav.appendChild(prev);
