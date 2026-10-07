@@ -4,7 +4,7 @@
  "title": "Mẹ của bạn mấy tuổi?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b9/nam: pron_<van>.mp3 (chuoi, muoi, tuoi, ...), pron_t_<tu>.mp3 (ten, tuoi, tien, tay, tim, tao), ex2_01..06.mp3, ex4_01..06.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html)."
+  "todo_audio": "audio/b9/nam: pron_<van>.mp3 (chuoi, muoi, tuoi, ...), pron_t_<tu>.mp3 (ten, tuoi, tien, tay, tim, tao), ex2_01..06.mp3, ex4_01..06.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html). Them: audio/b9/nam/vocab_gd_<tu>.mp3 cho chong, vo, con gai, con trai, chau gai, chau trai, em trai, em gai (ten file Telex, tu 2 chu giu dau cach, vd 'vocab_gd_con gais.mp3')."
  },
  "sections": [
   {
@@ -176,17 +176,206 @@
        ]
       },
       {
-       "type": "grammarNote",
-       "noNum": true,
-       "instructionVi": "Nhìn hình và đọc tên các thành viên trong gia đình.",
-       "instructionEn": "Look at the picture and read the names of the family members.",
-       "title": "",
-       "blocks": [
+       "type": "sounds",
+       "instructionVi": "Nghe và lặp lại các từ sau.",
+       "instructionEn": "Listen and repeat the following words.",
+       "audio": "audio/b9/{voice}/vocab_gd_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "chồng",
+            "vợ"
+           ],
+           [
+            "con gái",
+            "con trai"
+           ],
+           [
+            "cháu gái",
+            "cháu trai"
+           ],
+           [
+            "em trai",
+            "em gái"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu theo sơ đồ gia đình.",
+       "instructionEn": "Complete the sentences according to the family tree.",
+       "image": "images/b9/gia-dinh/family_names.svg",
+       "imageAlt": "Sơ đồ gia đình: ông Sáu, bà Thơm; Phú và Chi, Mai và Thắng; Nam, Trà, Bình, Giang",
+       "imageMaxWidth": 560,
+       "words": [
+        "ông",
+        "bà",
+        "bố",
+        "mẹ",
+        "cô",
+        "chú",
+        "anh",
+        "chị"
+       ],
+       "items": [
         {
-         "type": "image",
-         "src": "images/b9/gia-dinh/family_names.svg",
-         "alt": "Sơ đồ gia đình: ông Sáu, bà Thơm; ba Phú, mẹ Chi, cô Mai, chú Thắng; Nam, Trà, Bình, Giang",
-         "maxWidth": 648
+         "template": "Sáu là {0} của Trà.",
+         "answers": [
+          [
+           "ông"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "template": "Thơm là {0} của Bình.",
+         "answers": [
+          [
+           "bà"
+          ]
+         ]
+        },
+        {
+         "template": "Chi là {0} của Trà.",
+         "answers": [
+          [
+           "mẹ"
+          ]
+         ]
+        },
+        {
+         "template": "Phú là {0} của Mai.",
+         "answers": [
+          [
+           "anh"
+          ]
+         ]
+        },
+        {
+         "template": "Mai là {0} của Nam.",
+         "answers": [
+          [
+           "cô"
+          ]
+         ]
+        },
+        {
+         "template": "Thắng là {0} của Trà.",
+         "answers": [
+          [
+           "chú"
+          ]
+         ]
+        },
+        {
+         "template": "Sáu là {0} của Mai.",
+         "answers": [
+          [
+           "bố"
+          ]
+         ]
+        },
+        {
+         "template": "Giang là {0} của Bình.",
+         "answers": [
+          [
+           "chị"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 6,
+       "instructionVi": "Hoàn thành các câu theo sơ đồ gia đình.",
+       "instructionEn": "Complete the sentences according to the family tree.",
+       "image": "images/b9/gia-dinh/family_names.svg",
+       "imageAlt": "Sơ đồ gia đình: ông Sáu, bà Thơm; Phú và Chi, Mai và Thắng; Nam, Trà, Bình, Giang",
+       "imageMaxWidth": 560,
+       "words": [
+        "vợ",
+        "chồng",
+        "anh họ",
+        "chị họ",
+        "cháu trai",
+        "cháu gái",
+        "con gái",
+        "con trai"
+       ],
+       "items": [
+        {
+         "template": "Chi là {0} của Phú.",
+         "answers": [
+          [
+           "vợ"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "template": "Nam là {0} của Giang.",
+         "answers": [
+          [
+           "anh họ"
+          ]
+         ]
+        },
+        {
+         "template": "Phú là {0} của Thơm.",
+         "answers": [
+          [
+           "con trai"
+          ]
+         ]
+        },
+        {
+         "template": "Bình là {0} của Phú.",
+         "answers": [
+          [
+           "cháu trai"
+          ]
+         ]
+        },
+        {
+         "template": "Thắng là {0} của Mai.",
+         "answers": [
+          [
+           "chồng"
+          ]
+         ]
+        },
+        {
+         "template": "Giang là {0} của Thắng.",
+         "answers": [
+          [
+           "con gái"
+          ]
+         ]
+        },
+        {
+         "template": "Trà là {0} của Bình.",
+         "answers": [
+          [
+           "chị họ"
+          ]
+         ]
+        },
+        {
+         "template": "Giang là {0} của Sáu.",
+         "answers": [
+          [
+           "cháu gái"
+          ]
+         ]
         }
        ]
       }
