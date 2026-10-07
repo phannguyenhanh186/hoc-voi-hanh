@@ -1107,6 +1107,7 @@
       (ex.items || []).forEach(function (it, i) {
         const row = el('div', 'bai-write-row');
         const q = el('div', 'bai-write-q');
+        if (/\n/.test(it.question || '')) q.style.whiteSpace = 'pre-line';
         if (it.example) {
           q.appendChild(document.createTextNode('Ví dụ\u00A0\u00A0' + it.question));
           row.appendChild(q);
