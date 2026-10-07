@@ -81,6 +81,7 @@
     }
     // Không có file audio → dùng giọng đọc tiếng Việt của trình duyệt (Web Speech API).
     let ttsEl = null;
+    let ttsFallback = null;   // {elm, text}: file audio lỗi/chưa có → tự chuyển sang giọng đọc
     function speak(text, elm) {
       if (!('speechSynthesis' in window)) { toast('Trình duyệt chưa hỗ trợ đọc tiếng Việt'); return; }
       try { player.pause(); } catch (e) {}
@@ -106,6 +107,11 @@
     player.addEventListener('error', function () {
       if (!currentEl) return;
       currentEl.classList.remove('playing');
+      if (ttsFallback && ttsFallback.elm === currentEl) {
+        const t = ttsFallback; ttsFallback = null;
+        speak(t.text, t.elm);
+        return;
+      }
       toast('Chưa có audio cho “' + (currentEl.dataset.text || '') + '”');
     });
 
@@ -115,7 +121,8 @@
       b.dataset.text = text;
       b.setAttribute('aria-label', 'Nghe “' + text + '”');
       b.addEventListener('click', function () {
-        if (!template) speak(text, b); else play(audioSrc(template, text), b);
+        if (!template) speak(text, b);
+        else { ttsFallback = { elm: b, text: text }; play(audioSrc(template, text), b); }
       });
       return b;
     }
@@ -301,7 +308,7 @@
         num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
         num.addEventListener('click', function () {
           const src = resolveAudio(item.audio || ex.audio);
-          if (src) play(src, num); else speak(item.text, num);
+          if (src) { ttsFallback = { elm: num, text: item.text }; play(src, num); } else speak(item.text, num);
         });
         row.appendChild(num);
         row.appendChild(el('div', 'bai-fill-line', item.text));
