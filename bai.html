@@ -505,6 +505,82 @@
       return box;
     }
 
+    // Sơ đồ cây gia đình: hàng (rows) → nhóm (groups: couple/siblings) → thẻ từ (nodes). Đường nối (links) vẽ bằng SVG.
+    function renderFamilyTree(ex, n) {
+      const SVGNS = 'http://www.w3.org/2000/svg';
+      const wrap = el('div', 'bai-tree-scroll');
+      const inner = el('div', 'bai-tree');
+      const svg = document.createElementNS(SVGNS, 'svg');
+      svg.setAttribute('class', 'bai-tree-lines');
+      svg.setAttribute('aria-hidden', 'true');
+      inner.appendChild(svg);
+      const nodeEls = {}, groupEls = {}, couples = [];
+      (ex.rows || []).forEach(function (row) {
+        const rowEl = el('div', 'bai-tree-row');
+        row.forEach(function (g) {
+          const gEl = el('div', 'bai-tree-group' + (g.kind === 'couple' ? ' is-couple' : ''));
+          if (g.id) groupEls[g.id] = gEl;
+          const made = [];
+          (g.nodes || []).forEach(function (nd) {
+            const b = el('button', 'bai-chip bai-tree-node');
+            b.type = 'button'; b.dataset.text = nd.vi;
+            b.style.setProperty('--chip-bg', nd.color || g.color || '#D4C9FB');
+            b.setAttribute('aria-label', 'Nghe “' + nd.vi + '”' + (nd.en ? ' – ' + nd.en : ''));
+            b.appendChild(el('span', 'bai-tree-vi', nd.vi));
+            if (nd.en) b.appendChild(el('span', 'bai-tree-en', nd.en));
+            b.addEventListener('click', function () { play(audioSrc(nd.audio || ex.audio, nd.vi), b); });
+            gEl.appendChild(b);
+            if (nd.id) nodeEls[nd.id] = b;
+            made.push(b);
+          });
+          if (g.kind === 'couple' && made.length === 2) couples.push(made);
+          rowEl.appendChild(gEl);
+        });
+        inner.appendChild(rowEl);
+      });
+      wrap.appendChild(inner);
+
+      function line(x1, y1, x2, y2) {
+        const l = document.createElementNS(SVGNS, 'line');
+        l.setAttribute('x1', x1); l.setAttribute('y1', y1); l.setAttribute('x2', x2); l.setAttribute('y2', y2);
+        svg.appendChild(l);
+      }
+      function draw() {
+        const base = inner.getBoundingClientRect();
+        if (!base.width) return;
+        svg.setAttribute('width', base.width); svg.setAttribute('height', base.height);
+        svg.setAttribute('viewBox', '0 0 ' + base.width + ' ' + base.height);
+        while (svg.firstChild) svg.removeChild(svg.firstChild);
+        function box(e) {
+          const r = e.getBoundingClientRect();
+          return { l: r.left - base.left, r: r.right - base.left, t: r.top - base.top, b: r.bottom - base.top };
+        }
+        couples.forEach(function (p) {
+          const a = box(p[0]), b = box(p[1]), y = (a.t + a.b) / 2;
+          line(a.r, y, b.l, y);
+        });
+        (ex.links || []).forEach(function (lk) {
+          const src = groupEls[lk.from]; if (!src) return;
+          const g = box(src);
+          const ax = (g.l + g.r) / 2;
+          const ay = src.classList.contains('is-couple') ? (g.t + g.b) / 2 : g.b;
+          const kids = (lk.to || []).map(function (id) { return nodeEls[id]; }).filter(Boolean).map(box);
+          if (!kids.length) return;
+          const kidTop = Math.min.apply(null, kids.map(function (k) { return k.t; }));
+          const midY = ay + (kidTop - ay) / 2;
+          const xs = kids.map(function (k) { return (k.l + k.r) / 2; }).concat([ax]);
+          line(ax, ay, ax, midY);
+          line(Math.min.apply(null, xs), midY, Math.max.apply(null, xs), midY);
+          kids.forEach(function (k) { line((k.l + k.r) / 2, midY, (k.l + k.r) / 2, k.t); });
+        });
+      }
+      if (window.ResizeObserver) new ResizeObserver(draw).observe(inner);
+      window.addEventListener('resize', draw);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+      setTimeout(draw, 0);
+      return wrap;
+    }
+
     // Bài 7: nghe và đánh số hình theo thứ tự nghe được. Có 'answer' thì mới chấm được.
     function renderPhotoOrder(ex, n) {
       const box = el('div');
@@ -1283,7 +1359,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs, audioFill: renderAudioFill };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, familyTree: renderFamilyTree, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs, audioFill: renderAudioFill };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
