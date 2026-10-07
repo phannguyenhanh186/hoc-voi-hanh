@@ -63,7 +63,7 @@
   };
 
   var CSS = ''
-    + '.pomo-widget{position:fixed;z-index:9999;width:300px;max-width:calc(100vw - 16px);background:var(--surface,#fff);'
+    + '.pomo-widget{position:fixed;z-index:10002;width:300px;max-width:calc(100vw - 16px);background:var(--surface,#fff);'
     + 'border:1.5px solid var(--stroke,#1B1B28);border-radius:var(--radius,16px);'
     + 'box-shadow:5px 5px 0 0 var(--stroke,#1B1B28);font-family:var(--font-body,sans-serif);'
     + 'color:var(--ink,#000);user-select:none;}'
@@ -111,7 +111,7 @@
     + 'border-radius:10px;padding:8px 4px;font-size:.78rem;font-weight:700;cursor:pointer;line-height:1.2;}'
     + '.pomo-mode:hover{transform:translate(-1px,-1px);box-shadow:2px 2px 0 0 var(--stroke,#1B1B28);}'
     + '.pomo-mode.active{background:var(--tint,#F2F1FD);border-color:var(--accent,#6F6CE0);color:var(--accent-deep,#514FC4);}'
-    + '.pomo-fab{touch-action:none;position:fixed;z-index:9999;width:52px;height:52px;border-radius:50%;'
+    + '.pomo-fab{touch-action:none;position:fixed;z-index:10002;width:52px;height:52px;border-radius:50%;'
     + 'background:var(--accent-deep,#514FC4);color:#fff;border:1.5px solid var(--stroke,#1B1B28);'
     + 'box-shadow:3px 3px 0 0 var(--stroke,#1B1B28);font-size:1.3rem;cursor:pointer;'
     + 'font-family:var(--font-display,inherit);font-weight:700;}'
