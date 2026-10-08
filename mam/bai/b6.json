@@ -138,7 +138,7 @@
        "num": 4,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
-       "columns": 4,
+       "columns": 3,
        "items": [
         {
          "img": "images/b6/bai4/so_0.jpg",
@@ -322,7 +322,7 @@
        "num": 6,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
-       "columns": 4,
+       "columns": 3,
        "items": [
         {
          "big": "2",
