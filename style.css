@@ -1718,3 +1718,12 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .site-header .nav-right,
 #account-widget-slot,
 .account-menu { display: none !important; }
+
+/* Bài tập có hình bên trái, câu hỏi bên phải (layout: "side") */
+.bai-side { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.bai-side-img { position: sticky; top: 84px; }
+.bai-side-right { min-width: 0; }
+@media (max-width: 820px) {
+  .bai-side { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .bai-side-img { position: static; }
+}
