@@ -384,6 +384,117 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "hoi-tuoi",
+     "label": "Hỏi và trả lời tuổi",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "HỎI VÀ TRẢ LỜI TUỔI · ASKING AND TELLING THE AGE",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Hỏi tuổi",
+         "en": "Asking about age",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + mấy tuổi?",
+         "en": "[Subject] + mấy tuổi?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn mấy tuổi?",
+           "en": "How old are you?"
+          },
+          {
+           "vi": "Chị mấy tuổi?",
+           "en": "How old are you?"
+          },
+          {
+           "vi": "Lan mấy tuổi?",
+           "en": "How old is Lan?"
+          },
+          {
+           "vi": "Chú Thanh mấy tuổi?",
+           "en": "How old is Thanh?"
+          },
+          {
+           "vi": "Anh trai của bạn mấy tuổi?",
+           "en": "How old is your older brother?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "2. Trả lời tuổi",
+         "en": "Telling the age",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + [X] + tuổi.",
+         "en": "[Subject] + [X] + years old."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình 20 tuổi.",
+           "en": "I am 20 years old."
+          },
+          {
+           "vi": "Chị 35 tuổi.",
+           "en": "I am 35 years old."
+          },
+          {
+           "vi": "Lan 24 tuổi.",
+           "en": "Lan is 24 years old."
+          },
+          {
+           "vi": "Chú Thanh 63 tuổi.",
+           "en": "Thanh is 63 years old."
+          },
+          {
+           "vi": "Anh trai của mình 38 tuổi.",
+           "en": "My brother is 38 years old."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Có thể trả lời ngắn:",
+         "en": "You can answer in short:"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "A: Bạn mấy tuổi?",
+           "en": "A: How old are you?"
+          },
+          {
+           "vi": "B: 20 tuổi.",
+           "en": "B: 20."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
