@@ -519,11 +519,16 @@
     // Câu ví dụ (example:true) hiện đáp án tô đỏ, và từ đó bị gạch trong ngân hàng từ.
     function renderBankSentences(ex, n) {
       const box = el('div');
+      // layout "side": hình bên trái (đứng yên khi cuộn), câu hỏi bên phải
+      const side = ex.layout === 'side' && !!ex.image;
+      const right = side ? el('div', 'bai-side-right') : box;
+      let imgEl = null;
       if (ex.image) {
         const im = document.createElement('img');
         im.src = ex.image; im.alt = ex.imageAlt || '';
-        im.style.cssText = 'display:block;width:100%;max-width:' + (ex.imageMaxWidth || 640) + 'px;height:auto;margin:4px 0 18px';
-        box.appendChild(im);
+        im.style.cssText = side ? 'display:block;width:100%;height:auto;margin:0'
+          : 'display:block;width:100%;max-width:' + (ex.imageMaxWidth || 640) + 'px;height:auto;margin:4px 0 18px';
+        if (side) imgEl = im; else box.appendChild(im);
       }
       let activeInput = null;
       const exItem = (ex.items || []).filter(function (x) { return x.example; })[0];
@@ -544,7 +549,7 @@
         }
         bank.appendChild(chip);
       });
-      box.appendChild(bank);
+      right.appendChild(bank);
       const list = el('div', 'bai-fill');
       const cells = [];
       let seq = 0;
@@ -570,7 +575,7 @@
         });
         list.appendChild(built.line);
       });
-      box.appendChild(list);
+      right.appendChild(list);
       function check() {
         cells.forEach(function (c) {
           const v = normName(c.input.value);
@@ -580,7 +585,15 @@
       }
       function reveal() { cells.forEach(function (c) { c.input.value = c.answers[0] || ''; markCell(c.input, c.mark, 'ok'); }); }
       cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
-      box.appendChild(fillCheckBar(cells, check, reveal));
+      right.appendChild(fillCheckBar(cells, check, reveal));
+      if (side) {
+        const wrap = el('div', 'bai-side');
+        const left = el('div', 'bai-side-img');
+        left.appendChild(imgEl);
+        wrap.appendChild(left);
+        wrap.appendChild(right);
+        box.appendChild(wrap);
+      }
       return box;
     }
 
