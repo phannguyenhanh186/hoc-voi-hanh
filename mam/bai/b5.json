@@ -569,7 +569,7 @@
          "audio": "audio/b5/{voice}/ex9_06.mp3"
         },
         {
-         "before": "Bây giờ đang tới ",
+         "before": "Bây giờ Linh đang tới ",
          "after": ".",
          "answers": [
           "khách sạn"
