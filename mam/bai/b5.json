@@ -4,7 +4,7 @@
  "title": "Bạn đang ở đâu?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b5/nam: pron_<van>.mp3 (au, đau, màu, âu, đâu, lầu, êu, kêu, lều, iu, chịu, xíu, ưu, lưu, cừu) va ex2_01..05.mp3 - chua thu am. Ten file pron_ theo cach b2/b3 (xem audio/b2/nam/_pron_phatam_filenames.txt).",
+  "todo_audio": "audio/b5/nam: pron_<van>.mp3 (au, đau, giàu, âu, đâu, lầu, êu, kêu, lều, iu, chịu, xíu, ưu, lưu, cừu) va ex2_01..05.mp3 - chua thu am. Ten file pron_ theo cach b2/b3 (xem audio/b2/nam/_pron_phatam_filenames.txt).",
   "todo_images": "images/b5/bai3/<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.jpg va images/b5/bai4/hinh1..8.jpg - chua co, se bo sung.",
   "todo_audio_tu_vung": "audio/b5/nam: vocab_<nha|van_phong|quan_an|quan_ca_phe|khach_san|sieu_thi|san_bay|benh_vien>.mp3 va ex4_01..08.mp3 - chua thu am.",
   "todo_answers": "Bai 4: cau vi du (Hinh 1) = nha. Tu 'Khi Toi dung truoc mot danh...' trong de bi cut, tam viet thanh 'mot dia diem' - CAN XAC NHAN.",
@@ -37,7 +37,7 @@
            [
             "au",
             "đau",
-            "màu"
+            "giàu"
            ]
           ]
          },
