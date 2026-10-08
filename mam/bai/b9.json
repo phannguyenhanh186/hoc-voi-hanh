@@ -291,7 +291,8 @@
           ]
          ]
         }
-       ]
+       ],
+       "layout": "side"
       },
       {
        "type": "bankSentences",
@@ -377,7 +378,8 @@
           ]
          ]
         }
-       ]
+       ],
+       "layout": "side"
       }
      ]
     }
