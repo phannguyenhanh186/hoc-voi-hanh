@@ -1571,7 +1571,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-listen:hover { box-shadow: 2px 2px 0 0 var(--stroke); }
 .bai-listen.playing { background: #FCEFCD; }
 .bai-listen:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 2px; }
-.bai-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; max-width: 440px; }
+.bai-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; max-width: 690px; }
 .bai-photo { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .bai-photo-img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; border: 2px solid var(--stroke); background: #fff; }
 .bai-photo-cap { align-self: flex-start; font-weight: 600; color: var(--ink); }
