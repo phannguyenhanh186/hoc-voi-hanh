@@ -1215,9 +1215,14 @@
         const q = el('div', 'bai-write-q');
         if (/\n/.test(it.question || '')) q.style.whiteSpace = 'pre-line';
         if (it.example) {
-          q.appendChild(document.createTextNode('Ví dụ\u00A0\u00A0' + it.question));
+          // it.numbered: ví dụ được đánh số như câu 1 (thay vì chữ "Ví dụ"); it.redExample: cả dòng đáp án in đỏ
+          const lead = it.numbered ? (++seq) + '\u00A0\u00A0' : 'Ví dụ\u00A0\u00A0';
+          q.appendChild(document.createTextNode(lead + it.question));
           row.appendChild(q);
-          const sample = el('div', 'bai-fill-line', '\u2192\u00A0' + it.model);
+          const sample = el('div', 'bai-fill-line');
+          sample.appendChild(document.createTextNode('\u2192\u00A0'));
+          if (it.redExample) sample.appendChild(el('span', 'bai-fill-example', it.model));
+          else sample.appendChild(document.createTextNode(it.model));
           sample.style.margin = '2px 0 18px';
           row.appendChild(sample);
           box.appendChild(row);
