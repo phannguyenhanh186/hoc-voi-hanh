@@ -386,6 +386,159 @@
    ]
   },
   {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "nghe-tuoi",
+     "label": "Nghe và hoàn thành câu",
+     "exercises": [
+      {
+       "type": "bankSentences",
+       "num": 7,
+       "instructionVi": "Hoàn thành các câu sau.",
+       "instructionEn": "Complete the following sentences.",
+       "words": [
+        "chú",
+        "cô",
+        "ông",
+        "bà",
+        "ba",
+        "mẹ",
+        "anh",
+        "chị",
+        "em họ",
+        "vợ"
+       ],
+       "items": [
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "chú"
+          ],
+          [
+           "46"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "vợ"
+          ],
+          [
+           "27"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_01.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "bà"
+          ],
+          [
+           "79"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_02.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "em họ"
+          ],
+          [
+           "15"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_03.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "ông"
+          ],
+          [
+           "68"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_04.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "cô"
+          ],
+          [
+           "43"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_05.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "chị"
+          ],
+          [
+           "30"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_06.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "ba"
+          ],
+          [
+           "55"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_07.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "anh"
+          ],
+          [
+           "34"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_08.mp3"
+        },
+        {
+         "template": "{0} của mình {1} tuổi.",
+         "answers": [
+          [
+           "mẹ"
+          ],
+          [
+           "51"
+          ]
+         ],
+         "audio": "audio/b9/{voice}/ex7_09.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "ngu-phap",
    "titleVi": "Ngữ pháp",
    "titleEn": "Grammar",
@@ -491,6 +644,97 @@
          ]
         }
        ]
+      },
+      {
+       "type": "matchPairs",
+       "num": 8,
+       "instructionVi": "Nối câu hỏi với yêu cầu phù hợp.",
+       "instructionEn": "Match each question with the appropriate prompts.",
+       "questions": [
+        {
+         "q": "You want to ask Mai's age.",
+         "answer": "c"
+        },
+        {
+         "q": "You want to ask one of your friends' age.",
+         "answer": "e"
+        },
+        {
+         "q": "You want to ask aunt Hiền's age.",
+         "answer": "d"
+        },
+        {
+         "q": "You want to ask how old your friend's father is.",
+         "answer": "a"
+        },
+        {
+         "q": "You want to ask how old your friend's wife is.",
+         "answer": "b"
+        }
+       ],
+       "options": [
+        {
+         "key": "a",
+         "text": "Ba của bạn mấy tuổi?"
+        },
+        {
+         "key": "b",
+         "text": "Vợ của bạn mấy tuổi?"
+        },
+        {
+         "key": "c",
+         "text": "Mai mấy tuổi?"
+        },
+        {
+         "key": "d",
+         "text": "Cô Hiền mấy tuổi?"
+        },
+        {
+         "key": "e",
+         "text": "Bạn mấy tuổi?"
+        }
+       ],
+       "items": null
+      },
+      {
+       "type": "readingQA",
+       "num": 9,
+       "instructionVi": "Viết câu hỏi cho mỗi câu trả lời sau.",
+       "instructionEn": "Write a question for each answer.",
+       "questions": [
+        {
+         "num": "Ví dụ",
+         "q": "Mình 25 tuổi.",
+         "a": "Bạn bao nhiêu tuổi?",
+         "example": true
+        },
+        {
+         "num": 1,
+         "q": "→ Chị 32 tuổi.",
+         "a": "Chị mấy tuổi?"
+        },
+        {
+         "num": 2,
+         "q": "→ Anh của em 34 tuổi.",
+         "a": "Anh của em mấy tuổi?"
+        },
+        {
+         "num": 3,
+         "q": "→ Mẹ của chị 57 tuổi.",
+         "a": "Mẹ của chị mấy tuổi?"
+        },
+        {
+         "num": 4,
+         "q": "→ Ông của anh Hưng 84 tuổi.",
+         "a": "Ông của anh Hưng mấy tuổi?"
+        },
+        {
+         "num": 5,
+         "q": "→ Vợ của Phong 46 tuổi.",
+         "a": "Vợ của Phong mấy tuổi?"
+        }
+       ],
+       "items": null
       }
      ]
     }
