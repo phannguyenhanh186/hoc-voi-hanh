@@ -646,6 +646,78 @@
        ]
       },
       {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "HỎI SỐ NGƯỜI TRONG GIA ĐÌNH · ASKING HOW MANY PEOPLE ARE IN A FAMILY",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Cấu trúc câu hỏi",
+         "en": "Question structure",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "Nhà / Gia đình của [chủ ngữ] có mấy người?",
+         "en": "How many people are there in [subject]’s family?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Nhà của bạn có mấy người?",
+           "en": "How many people are there in your family?"
+          },
+          {
+           "vi": "Gia đình của chị có mấy người?",
+           "en": "How many people are there in your family?"
+          },
+          {
+           "vi": "Gia đình Hiền có mấy người?",
+           "en": "How many people are there in Hiền's family?"
+          },
+          {
+           "vi": "Nhà chú Thắng có mấy người?",
+           "en": "How many people are there in Thắng's family?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "2. Cấu trúc câu trả lời",
+         "en": "Answer structure",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "Nhà / Gia đình của [chủ ngữ] có [X] người.",
+         "en": "There are [X] people in [subject]’s family."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Nhà mình có bốn người.",
+           "en": "There are four people in my family."
+          },
+          {
+           "vi": "Gia đình chị có năm người.",
+           "en": "There are five people in my family."
+          },
+          {
+           "vi": "Gia đình Hiền có ba người.",
+           "en": "There are three people in Hiền’s family."
+          },
+          {
+           "vi": "Nhà chú Thắng có sáu người.",
+           "en": "There are six people in Thắng’s family."
+          }
+         ]
+        }
+       ]
+      },
+      {
        "type": "matchPairs",
        "num": 8,
        "instructionVi": "Nối câu hỏi với yêu cầu phù hợp.",
@@ -783,6 +855,147 @@
    ]
   },
   {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "gia-dinh",
+     "label": "Gia đình",
+     "exercises": [
+      {
+       "type": "bankSentences",
+       "num": 11,
+       "instructionVi": "Hoàn thành các câu sau với từ cho sẵn.",
+       "instructionEn": "Complete the sentences using the words provided.",
+       "words": [
+        "của",
+        "tuổi",
+        "người",
+        "tuổi",
+        "bao nhiêu",
+        "nhà"
+       ],
+       "items": [
+        {
+         "template": "Chị Mai {0} tuổi?",
+         "answers": [
+          [
+           "bao nhiêu"
+          ]
+         ]
+        },
+        {
+         "template": "Anh Hưng hai tám {0}.",
+         "answers": [
+          [
+           "tuổi"
+          ]
+         ]
+        },
+        {
+         "template": "Minh là em trai {0} mình.",
+         "answers": [
+          [
+           "của"
+          ]
+         ]
+        },
+        {
+         "template": "Nhà anh có bốn {0}, ba mẹ, anh và em gái.",
+         "answers": [
+          [
+           "người"
+          ]
+         ]
+        },
+        {
+         "template": "Em gái của Nam bao nhiêu {0}?",
+         "answers": [
+          [
+           "tuổi"
+          ]
+         ]
+        },
+        {
+         "template": "{0} của chị có năm người.",
+         "answers": [
+          [
+           "nhà"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 12,
+       "instructionVi": "Viết câu trả lời theo gợi ý cho sẵn.",
+       "instructionEn": "Write answers based on the information provided.",
+       "items": [
+        {
+         "example": true,
+         "numbered": true,
+         "redExample": true,
+         "question": "A: Chị My bao nhiêu tuổi?\nB: 35",
+         "answers": [
+          "Chị My 35 tuổi"
+         ],
+         "model": "Chị My 35 tuổi."
+        },
+        {
+         "question": "A: Anh bao nhiêu tuổi?\nB: 42",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} 42 tuổi",
+          "{p} bốn mươi hai tuổi"
+         ],
+         "model": "{p} 42 tuổi."
+        },
+        {
+         "question": "A: Em gái của bạn bao nhiêu tuổi?\nB: 13",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "Em gái của {p} 13 tuổi",
+          "Em gái của {p} mười ba tuổi"
+         ],
+         "model": "Em gái của {p} 13 tuổi."
+        },
+        {
+         "question": "A: Ông của Linh bao nhiêu tuổi?\nB: 76",
+         "answers": [
+          "Ông của Linh 76 tuổi",
+          "Ông của Linh bảy mươi sáu tuổi"
+         ],
+         "model": "Ông của Linh 76 tuổi."
+        },
+        {
+         "question": "A: Chồng của cô Hà bao nhiêu tuổi?\nB: 68",
+         "answers": [
+          "Chồng của cô Hà 68 tuổi",
+          "Chồng của cô Hà sáu mươi tám tuổi"
+         ],
+         "model": "Chồng của cô Hà 68 tuổi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "noi",
    "titleVi": "Nói",
    "titleEn": "Speaking",
@@ -793,7 +1006,7 @@
      "exercises": [
       {
        "type": "openAnswer",
-       "num": 11,
+       "num": 13,
        "instructionVi": "Trả lời câu hỏi.",
        "instructionEn": "Answer the questions.",
        "items": [
