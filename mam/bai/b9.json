@@ -1,7 +1,7 @@
 {
  "id": "b9",
  "num": 9,
- "title": "Mẹ của bạn mấy tuổi?",
+ "title": "Mẹ của bạn bao nhiêu tuổi?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b9/nam: pron_<van>.mp3 (chuoi, muoi, tuoi, ...), pron_t_<tu>.mp3 (ten, tuoi, tien, tay, tim, tao), ex2_01..06.mp3, ex4_01..06.mp3 - chua thu am. Ten file theo Telex (xem audioKey trong bai.html). Them: audio/b9/nam/vocab_gd_<tu>.mp3 cho chong, vo, con gai, con trai, chau gai, chau trai, em trai, em gai (ten file Telex, tu 2 chu giu dau cach, vd 'vocab_gd_con gais.mp3')."
@@ -561,30 +561,30 @@
         },
         {
          "type": "structure",
-         "vi": "[Chủ ngữ] + mấy tuổi?",
-         "en": "[Subject] + mấy tuổi?"
+         "vi": "[Chủ ngữ] + bao nhiêu tuổi?",
+         "en": "[Subject] + bao nhiêu tuổi?"
         },
         {
          "type": "examples",
          "items": [
           {
-           "vi": "Bạn mấy tuổi?",
+           "vi": "Bạn bao nhiêu tuổi?",
            "en": "How old are you?"
           },
           {
-           "vi": "Chị mấy tuổi?",
+           "vi": "Chị bao nhiêu tuổi?",
            "en": "How old are you?"
           },
           {
-           "vi": "Lan mấy tuổi?",
+           "vi": "Lan bao nhiêu tuổi?",
            "en": "How old is Lan?"
           },
           {
-           "vi": "Chú Thanh mấy tuổi?",
+           "vi": "Chú Thanh bao nhiêu tuổi?",
            "en": "How old is Thanh?"
           },
           {
-           "vi": "Anh trai của bạn mấy tuổi?",
+           "vi": "Anh trai của bạn bao nhiêu tuổi?",
            "en": "How old is your older brother?"
           }
          ]
@@ -634,7 +634,7 @@
          "type": "examples",
          "items": [
           {
-           "vi": "A: Bạn mấy tuổi?",
+           "vi": "A: Bạn bao nhiêu tuổi?",
            "en": "A: How old are you?"
           },
           {
@@ -675,23 +675,23 @@
        "options": [
         {
          "key": "a",
-         "text": "Ba của bạn mấy tuổi?"
+         "text": "Ba của bạn bao nhiêu tuổi?"
         },
         {
          "key": "b",
-         "text": "Vợ của bạn mấy tuổi?"
+         "text": "Vợ của bạn bao nhiêu tuổi?"
         },
         {
          "key": "c",
-         "text": "Mai mấy tuổi?"
+         "text": "Mai bao nhiêu tuổi?"
         },
         {
          "key": "d",
-         "text": "Cô Hiền mấy tuổi?"
+         "text": "Cô Hiền bao nhiêu tuổi?"
         },
         {
          "key": "e",
-         "text": "Bạn mấy tuổi?"
+         "text": "Bạn bao nhiêu tuổi?"
         }
        ],
        "items": null
@@ -711,30 +711,108 @@
         {
          "num": 1,
          "q": "→ Chị 32 tuổi.",
-         "a": "Chị mấy tuổi?"
+         "a": "Chị bao nhiêu tuổi?"
         },
         {
          "num": 2,
          "q": "→ Anh của em 34 tuổi.",
-         "a": "Anh của em mấy tuổi?"
+         "a": "Anh của em bao nhiêu tuổi?"
         },
         {
          "num": 3,
          "q": "→ Mẹ của chị 57 tuổi.",
-         "a": "Mẹ của chị mấy tuổi?"
+         "a": "Mẹ của chị bao nhiêu tuổi?"
         },
         {
          "num": 4,
          "q": "→ Ông của anh Hưng 84 tuổi.",
-         "a": "Ông của anh Hưng mấy tuổi?"
+         "a": "Ông của anh Hưng bao nhiêu tuổi?"
         },
         {
          "num": 5,
          "q": "→ Vợ của Phong 46 tuổi.",
-         "a": "Vợ của Phong mấy tuổi?"
+         "a": "Vợ của Phong bao nhiêu tuổi?"
         }
        ],
        "items": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "gia-dinh",
+     "label": "Gia đình",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 10,
+       "instructionVi": "Đọc nhật ký của Tiên và trả lời câu hỏi.",
+       "instructionEn": "Read Tiên's diary and answer the questions.",
+       "passage": "Mình tên là Tiên. Mình 22 tuổi. Mình sống với gia đình ở Sài Gòn. Gia đình mình có bốn người: ông, ba, mẹ, em gái và mình.\nÔng mình 88 tuổi. Ba mình 58 tuổi. Ba mình là công an. Mẹ mình 53 tuổi. Mẹ mình là nhân viên văn phòng. Em gái mình 20 tuổi. Em gái mình tên là Hoa. Hoa đang là sinh viên. Mình có một người bạn thân tên là Minh. Minh 22 tuổi. Mình đang sống một mình ở Sài Gòn.",
+       "questions": [
+        {
+         "q": "Tiên bao nhiêu tuổi?",
+         "a": "Tiên 22 tuổi."
+        },
+        {
+         "q": "Ông của Tiên bao nhiêu tuổi?",
+         "a": "Ông của Tiên 88 tuổi."
+        },
+        {
+         "q": "Ba mẹ của Tiên bao nhiêu tuổi? Ba mẹ của Tiên làm nghề gì?",
+         "a": "Ba của Tiên 58 tuổi, mẹ của Tiên 53 tuổi. Ba của Tiên là công an, mẹ của Tiên là nhân viên văn phòng."
+        },
+        {
+         "q": "Em gái của Tiên tên là gì? Em gái của Tiên bao nhiêu tuổi và làm nghề gì?",
+         "a": "Em gái của Tiên tên là Hoa. Hoa 20 tuổi và là sinh viên."
+        },
+        {
+         "q": "Minh bao nhiêu tuổi? Minh đang sống ở đâu?",
+         "a": "Minh 22 tuổi. Minh đang sống ở Sài Gòn."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "gia-dinh",
+     "label": "Gia đình",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 11,
+       "instructionVi": "Trả lời câu hỏi.",
+       "instructionEn": "Answer the questions.",
+       "items": [
+        {
+         "question": "Bạn bao nhiêu tuổi?"
+        },
+        {
+         "question": "Mẹ bạn bao nhiêu tuổi?"
+        },
+        {
+         "question": "Bố bạn bao nhiêu tuổi?"
+        },
+        {
+         "question": "Bạn có anh, chị hay em không?"
+        },
+        {
+         "question": "Anh, chị hay em của bạn bao nhiêu tuổi?"
+        }
+       ]
       }
      ]
     }
