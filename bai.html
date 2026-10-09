@@ -557,15 +557,17 @@
         if (it.example) {
           const line = el('div', 'bai-fill-line');
           line.appendChild(document.createTextNode('Ví dụ\u00A0\u00A0'));
-          String(it.template).split(/(\{0\})/).forEach(function (part) {
-            if (part === '{0}') line.appendChild(el('span', 'bai-fill-example', (it.answers[0] || [''])[0]));
+          String(it.template).split(/(\{\d+\})/).forEach(function (part) {
+            const m = /^\{(\d+)\}$/.exec(part);
+            if (m) line.appendChild(el('span', 'bai-fill-example', (it.answers[Number(m[1])] || [''])[0]));
             else if (part) line.appendChild(document.createTextNode(part));
           });
           list.appendChild(line);
           return;
         }
         seq++;
-        const built = buildFillLine(seq + '\u00A0\u00A0' + it.template, it.answers || [], 'Câu ' + seq);
+        const hasAudio = !!it.audio;
+        const built = buildFillLine(hasAudio ? it.template : seq + '\u00A0\u00A0' + it.template, it.answers || [], 'Câu ' + seq);
         const mark = el('span', 'bai-mark');
         built.line.appendChild(mark);
         built.cells.forEach(function (c) {
@@ -573,7 +575,19 @@
           c.input.addEventListener('focus', function () { activeInput = c.input; });
           cells.push({ input: c.input, answers: c.answers, mark: mark });
         });
-        list.appendChild(built.line);
+        if (hasAudio) {
+          // Có audio: số câu là nút nghe (giống dạng "nghe và hoàn thành câu")
+          const row = el('div', 'bai-fill-row');
+          const num = el('button', 'bai-chip bai-tone-lav bai-num', String(seq));
+          num.type = 'button'; num.dataset.text = 'câu ' + seq;
+          num.setAttribute('aria-label', 'Nghe câu ' + seq);
+          num.addEventListener('click', function () { play(resolveAudio(it.audio), num); });
+          row.appendChild(num);
+          row.appendChild(built.line);
+          list.appendChild(row);
+        } else {
+          list.appendChild(built.line);
+        }
       });
       right.appendChild(list);
       function check() {
