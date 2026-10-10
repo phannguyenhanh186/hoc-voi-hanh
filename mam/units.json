@@ -75,7 +75,8 @@
       "id": "b10",
       "num": 10,
       "title": "Khi nào bạn đi Việt Nam?",
-      "status": "todo"
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b11",
