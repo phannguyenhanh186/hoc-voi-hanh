@@ -640,7 +640,7 @@
          "audio": "audio/b6/{voice}/ex_thu_03.mp3"
         },
         {
-         "template": "{0} mình đi về nhà ba mẹ.",
+         "template": "{0} mình về nhà ba mẹ.",
          "answers": [
           [
            "thứ tư"
