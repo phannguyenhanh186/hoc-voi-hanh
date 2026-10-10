@@ -1,0 +1,184 @@
+{
+ "id": "b10",
+ "num": 10,
+ "title": "Khi nào bạn đi Việt Nam?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "ua-ue-uy",
+     "label": "Âm \"uâ\", \"uê\", \"uy\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b10/{voice}/pron_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "uâ",
+            "xuân",
+            "tuần",
+            "luật",
+            "xuất"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "uê",
+            "thuê",
+            "huệ",
+            "uể",
+            "khuê"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "uy",
+            "suy",
+            "tuỳ",
+            "huỷ",
+            "luỹ"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 2,
+       "instructionVi": "Nghe và chọn âm đúng.",
+       "instructionEn": "Listen and choose the correct sounds.",
+       "items": [
+        {
+         "audio": "audio/b10/{voice}/listen_ex2_01.mp3",
+         "text": "Anh đang ở nhà ___.",
+         "options": [
+          "thuê",
+          "thuâ"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b10/{voice}/listen_ex2_02.mp3",
+         "text": "___ sau mình về quê.",
+         "options": [
+          "Tuền",
+          "Tuần"
+         ],
+         "answer": "b"
+        },
+        {
+         "audio": "audio/b10/{voice}/listen_ex2_03.mp3",
+         "text": "Đừng ___ nghĩ nhiều nữa.",
+         "options": [
+          "suy",
+          "suâ"
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b10/{voice}/listen_ex2_04.mp3",
+         "text": "Bạn thích đi đâu thì ___.",
+         "options": [
+          "tuỳ",
+          "tuề"
+         ],
+         "answer": "a"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "qu",
+     "label": "Phụ âm \"qu\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 3,
+       "instructionVi": "Nghe và lặp lại các âm sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "audio": "audio/b10/{voice}/pron_{key}.mp3",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "qu",
+            "qua",
+            "quán",
+            "quăn",
+            "quất",
+            "que"
+           ],
+           [
+            "quê",
+            "quen",
+            "quên",
+            "quơ",
+            "quốc",
+            "quýt",
+            "quạu"
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "type": "repeatSentences",
+       "num": 4,
+       "instructionVi": "Nghe và lặp lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Tuần sau Tuấn về quê.",
+         "audio": "audio/b10/{voice}/ex4_01.mp3"
+        },
+        {
+         "text": "Chị Khuê là sinh viên luật.",
+         "audio": "audio/b10/{voice}/ex4_02.mp3"
+        },
+        {
+         "text": "Cây quýt quê chú Quốc rất to.",
+         "audio": "audio/b10/{voice}/ex4_03.mp3"
+        },
+        {
+         "text": "Hôm qua Tuệ thấy uể oải nên Tuệ ở nhà.",
+         "audio": "audio/b10/{voice}/ex4_04.mp3"
+        },
+        {
+         "text": "Tham gia giao thông phải tuân thủ luật pháp.",
+         "audio": "audio/b10/{voice}/ex4_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
