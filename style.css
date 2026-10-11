@@ -1729,7 +1729,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 }
 
 /* ============================================================
-   FONT: Helvetica Neue — heading Bold, body Light, subtitle UltraLight
+   FONT: Helvetica Neue — heading Roman, body Light, subtitle Light
    - Máy Apple có sẵn Helvetica Neue (dùng qua local()).
    - Máy khác: bỏ file font vào fonts/ với đúng tên bên dưới
      (HelveticaNeue-UltraLight / -Light / -Roman / -Bold, đuôi .woff2 hoặc .otf); nếu không có
@@ -1760,13 +1760,13 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 /* Body: Light */
 body { font-weight: 300; }
 
-/* Heading: Bold */
+/* Heading: Roman (đổi 400 → 700 nếu muốn Bold) */
 h1, h2, h3, h4, h5, h6,
 .bai-grammar-title, .bai-grammar-heading-vi, .gram2-content-title,
-.lesson-tile-title, .gram2-sub-heading, .bai-pairs-head-vi { font-weight: 700; }
+.lesson-tile-title, .gram2-sub-heading, .bai-pairs-head-vi { font-weight: 400; }
 
-/* Subtitle (dòng tiếng Anh bên dưới): UltraLight */
+/* Subtitle (dòng tiếng Anh bên dưới): Light */
 .title-en, .scene-en, .ex-en, .bai-ex-en,
 .bai-grammar-heading-en, .bai-grammar-structure-en, .bai-grammar-p-en,
 .bai-pairs-intro-en, .bai-pairs-head-en, .gram2-section-title-en,
-.phrase .en, .sentence-translation { font-weight: 100; }
+.phrase .en, .sentence-translation { font-weight: 300; }
