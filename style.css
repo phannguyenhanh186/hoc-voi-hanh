@@ -1771,3 +1771,8 @@ h1, h2, h3, h4, h5, h6,
 .bai-grammar-heading-en, .bai-grammar-structure-en, .bai-grammar-p-en,
 .bai-pairs-intro-en, .bai-pairs-head-en, .gram2-section-title-en,
 .phrase .en, .sentence-translation { font-weight: 300; }
+
+/* Trong phần bài học (bai.html): yêu cầu bài = Roman, mọi nội dung còn lại = Light */
+.gram2-content, .gram2-content * { font-weight: 300 !important; }
+.gram2-content .bai-ex-head,
+.gram2-content .bai-ex-head * { font-weight: 400 !important; }
