@@ -1727,3 +1727,42 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   .bai-side { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .bai-side-img { position: static; }
 }
+
+/* ============================================================
+   FONT: Helvetica Neue — heading Bold, body Light, subtitle UltraLight
+   - Máy Apple có sẵn Helvetica Neue (dùng qua local()).
+   - Máy khác: bỏ file font vào fonts/ với đúng tên bên dưới
+     (HelveticaNeue-UltraLight / -Light / -Roman / -Bold .woff2); nếu không có
+     thì tự dùng Helvetica / Arial.
+   ============================================================ */
+@font-face { font-family: "HelveticaNeue"; font-weight: 100; font-style: normal;
+  src: local("HelveticaNeue-UltraLight"), local("Helvetica Neue UltraLight"),
+       url("fonts/HelveticaNeue-UltraLight.woff2") format("woff2"); }
+@font-face { font-family: "HelveticaNeue"; font-weight: 300; font-style: normal;
+  src: local("HelveticaNeue-Light"), local("Helvetica Neue Light"),
+       url("fonts/HelveticaNeue-Light.woff2") format("woff2"); }
+@font-face { font-family: "HelveticaNeue"; font-weight: 400; font-style: normal;
+  src: local("HelveticaNeue"), local("Helvetica Neue"),
+       url("fonts/HelveticaNeue-Roman.woff2") format("woff2"); }
+@font-face { font-family: "HelveticaNeue"; font-weight: 700; font-style: normal;
+  src: local("HelveticaNeue-Bold"), local("Helvetica Neue Bold"),
+       url("fonts/HelveticaNeue-Bold.woff2") format("woff2"); }
+
+:root {
+  --font-body:    "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Body: Light */
+body { font-weight: 300; }
+
+/* Heading: Bold */
+h1, h2, h3, h4, h5, h6,
+.bai-grammar-title, .bai-grammar-heading-vi, .gram2-content-title,
+.lesson-tile-title, .gram2-sub-heading, .bai-pairs-head-vi { font-weight: 700; }
+
+/* Subtitle (dòng tiếng Anh bên dưới): UltraLight */
+.title-en, .scene-en, .ex-en, .bai-ex-en,
+.bai-grammar-heading-en, .bai-grammar-structure-en, .bai-grammar-p-en,
+.bai-pairs-intro-en, .bai-pairs-head-en, .gram2-section-title-en,
+.phrase .en, .sentence-translation { font-weight: 100; }
