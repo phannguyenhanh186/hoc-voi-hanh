@@ -1763,7 +1763,8 @@ body { font-weight: 300; }
 /* Heading: Roman (đổi 400 → 700 nếu muốn Bold) */
 h1, h2, h3, h4, h5, h6,
 .bai-grammar-title, .bai-grammar-heading-vi, .gram2-content-title,
-.lesson-tile-title, .gram2-sub-heading, .bai-pairs-head-vi { font-weight: 400; }
+.lesson-tile-title, .gram2-sub-heading, .bai-pairs-head-vi,
+.bai-ex-head, .bai-ex-num, .bai-ex-vi, .gram2-section-title-vi { font-weight: 400; }
 
 /* Subtitle (dòng tiếng Anh bên dưới): Light */
 .title-en, .scene-en, .ex-en, .bai-ex-en,
