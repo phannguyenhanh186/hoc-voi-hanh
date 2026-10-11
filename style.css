@@ -1732,21 +1732,25 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
    FONT: Helvetica Neue — heading Bold, body Light, subtitle UltraLight
    - Máy Apple có sẵn Helvetica Neue (dùng qua local()).
    - Máy khác: bỏ file font vào fonts/ với đúng tên bên dưới
-     (HelveticaNeue-UltraLight / -Light / -Roman / -Bold .woff2); nếu không có
+     (HelveticaNeue-UltraLight / -Light / -Roman / -Bold, đuôi .woff2 hoặc .otf); nếu không có
      thì tự dùng Helvetica / Arial.
    ============================================================ */
 @font-face { font-family: "HelveticaNeue"; font-weight: 100; font-style: normal;
   src: local("HelveticaNeue-UltraLight"), local("Helvetica Neue UltraLight"),
-       url("fonts/HelveticaNeue-UltraLight.woff2") format("woff2"); }
+       url("fonts/HelveticaNeue-UltraLight.woff2") format("woff2"),
+       url("fonts/HelveticaNeue-UltraLight.otf") format("opentype"); }
 @font-face { font-family: "HelveticaNeue"; font-weight: 300; font-style: normal;
   src: local("HelveticaNeue-Light"), local("Helvetica Neue Light"),
-       url("fonts/HelveticaNeue-Light.woff2") format("woff2"); }
+       url("fonts/HelveticaNeue-Light.woff2") format("woff2"),
+       url("fonts/HelveticaNeue-Light.otf") format("opentype"); }
 @font-face { font-family: "HelveticaNeue"; font-weight: 400; font-style: normal;
   src: local("HelveticaNeue"), local("Helvetica Neue"),
-       url("fonts/HelveticaNeue-Roman.woff2") format("woff2"); }
+       url("fonts/HelveticaNeue-Roman.woff2") format("woff2"),
+       url("fonts/HelveticaNeue-Roman.otf") format("opentype"); }
 @font-face { font-family: "HelveticaNeue"; font-weight: 700; font-style: normal;
   src: local("HelveticaNeue-Bold"), local("Helvetica Neue Bold"),
-       url("fonts/HelveticaNeue-Bold.woff2") format("woff2"); }
+       url("fonts/HelveticaNeue-Bold.woff2") format("woff2"),
+       url("fonts/HelveticaNeue-Bold.otf") format("opentype"); }
 
 :root {
   --font-body:    "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
