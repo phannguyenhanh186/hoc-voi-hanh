@@ -210,7 +210,7 @@
          "type": "image",
          "src": "images/b10/dau_cuoi.svg",
          "alt": "Sơ đồ đầu – cuối với trước, này, sau",
-         "maxWidth": 780
+         "maxWidth": 1000
         },
         {
          "type": "examples",
