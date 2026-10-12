@@ -96,6 +96,11 @@
       b.type = 'button';
       b.dataset.text = text;
       b.setAttribute('aria-label', 'Nghe “' + text + '”');
+      if (!template) {   // không có audio → ô chỉ để xem (viền đen, không nền, không bấm được)
+        b.classList.add('is-static');
+        b.tabIndex = -1;
+        b.setAttribute('aria-label', text);
+      }
       b.addEventListener('click', function () {
         if (template) play(audioSrc(template, text), b);
       });
