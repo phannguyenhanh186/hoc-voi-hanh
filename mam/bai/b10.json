@@ -204,13 +204,18 @@
         {
          "type": "paragraph",
          "vi": "Dùng đầu / cuối + tuần / tháng / năm, rồi thêm trước, này hoặc sau.",
-         "en": "Use đầu / cuối + week / month / year, then add trước (last), này (this) or sau (next)."
+         "en": "Use đầu / cuối + week / month / year, then add trước (last), này/nay (this) or sau (next)."
         },
         {
          "type": "image",
          "src": "images/b10/dau_cuoi.svg",
          "alt": "Sơ đồ đầu – cuối với trước, này, sau",
          "maxWidth": 1000
+        },
+        {
+         "type": "paragraph",
+         "vi": "Với “năm”, mình dùng “năm nay” thay vì “năm này”.",
+         "en": "With “năm” (year), we use “năm nay” instead of “năm này”."
         },
         {
          "type": "examples",
@@ -244,11 +249,120 @@
            "en": "the beginning of this year"
           }
          ]
+        }
+       ]
+      },
+      {
+       "type": "matchPairs",
+       "num": 5,
+       "instructionVi": "Nối cụm từ với nghĩa phù hợp.",
+       "instructionEn": "Match each Vietnamese time expression with its English meaning.",
+       "questions": [
+        {
+         "q": "Tuần này",
+         "answer": "f"
         },
         {
-         "type": "paragraph",
-         "vi": "Lưu ý: nói “năm nay” (không nói “năm này”).",
-         "en": "Note: say “năm nay” (this year), not “năm này”."
+         "q": "Tuần sau",
+         "answer": "h"
+        },
+        {
+         "q": "Năm sau",
+         "answer": "d"
+        },
+        {
+         "q": "Tháng này",
+         "answer": "c"
+        },
+        {
+         "q": "Cuối tuần này",
+         "answer": "g"
+        },
+        {
+         "q": "Đầu tuần sau",
+         "answer": "j"
+        },
+        {
+         "q": "Đầu tháng sau",
+         "answer": "e"
+        },
+        {
+         "q": "Cuối tháng này",
+         "answer": "i"
+        },
+        {
+         "q": "Đầu năm sau",
+         "answer": "b"
+        },
+        {
+         "q": "Cuối năm sau",
+         "answer": "a"
+        },
+        {
+         "q": "Cuối tuần sau",
+         "answer": "k"
+        },
+        {
+         "q": "Đầu tháng này",
+         "answer": "l"
+        },
+        {
+         "q": "Cuối năm nay",
+         "answer": "m"
+        }
+       ],
+       "options": [
+        {
+         "key": "a",
+         "text": "The end of next year"
+        },
+        {
+         "key": "b",
+         "text": "The beginning of next year"
+        },
+        {
+         "key": "c",
+         "text": "This month"
+        },
+        {
+         "key": "d",
+         "text": "Next year"
+        },
+        {
+         "key": "e",
+         "text": "The beginning of next month"
+        },
+        {
+         "key": "f",
+         "text": "This week"
+        },
+        {
+         "key": "g",
+         "text": "The end of this week"
+        },
+        {
+         "key": "h",
+         "text": "Next week"
+        },
+        {
+         "key": "i",
+         "text": "The end of this month"
+        },
+        {
+         "key": "j",
+         "text": "The beginning of next week"
+        },
+        {
+         "key": "k",
+         "text": "The end of next week"
+        },
+        {
+         "key": "l",
+         "text": "The beginning of this month"
+        },
+        {
+         "key": "m",
+         "text": "The end of this year"
         }
        ]
       }
