@@ -179,6 +179,82 @@
      ]
     }
    ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "dau-cuoi",
+     "label": "Đầu – cuối",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "ĐẦU – CUỐI · BEGINNING – END",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Đầu – cuối",
+         "en": "Beginning – end",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Dùng đầu / cuối + tuần / tháng / năm, rồi thêm trước, này hoặc sau.",
+         "en": "Use đầu / cuối + week / month / year, then add trước (last), này (this) or sau (next)."
+        },
+        {
+         "type": "image",
+         "src": "images/b10/dau_cuoi.svg",
+         "alt": "Sơ đồ đầu – cuối với trước, này, sau",
+         "maxWidth": 780
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "đầu tuần",
+           "en": "the beginning of the week"
+          },
+          {
+           "vi": "cuối tuần",
+           "en": "the end of the week; the weekend"
+          },
+          {
+           "vi": "đầu tháng trước",
+           "en": "the beginning of last month"
+          },
+          {
+           "vi": "cuối tháng sau",
+           "en": "the end of next month"
+          },
+          {
+           "vi": "đầu năm sau",
+           "en": "the beginning of next year"
+          },
+          {
+           "vi": "cuối tuần này",
+           "en": "this weekend"
+          },
+          {
+           "vi": "đầu năm nay",
+           "en": "the beginning of this year"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Lưu ý: nói “năm nay” (không nói “năm này”).",
+         "en": "Note: say “năm nay” (this year), not “năm này”."
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
