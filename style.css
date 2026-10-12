@@ -1756,3 +1756,7 @@ h1, h2, h3, h4, h5, h6,
 .gram2-content, .gram2-content * { font-weight: 400 !important; }
 .gram2-content .bai-ex-head,
 .gram2-content .bai-ex-head * { font-weight: 400 !important; }
+
+/* Yêu cầu bài (VI + EN) = Xanh Mono; phần ghi chú / note = Space Mono cho dễ nhìn */
+.bai-ex-head, .bai-ex-num, .bai-ex-vi, .bai-ex-en { font-family: var(--font-body); }
+.grammar-callout, .grammar-callout *, .grammar-note { font-family: var(--font-display); }
