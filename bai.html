@@ -1110,9 +1110,11 @@
     // Bài 12 (viết): chọn từ đúng trong ngoặc. Mỗi item: template có {0},{1}... và blanks[] { options, answer }.
     function renderChooseWord(ex, n) {
       const wrap = el('div', 'bai-choose');
+      let itemNo = 0;
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-choose-row');
-        if (!ex.noItemNum) row.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
+        if (item.example) row.appendChild(document.createTextNode('Ví dụ:\u00A0\u00A0'));   // câu ví dụ: hiện sẵn đáp án (tô đỏ), không đánh số
+        else if (!ex.noItemNum) row.appendChild(document.createTextNode((++itemNo) + '\u00A0\u00A0'));
         let solvedCount = 0;
         const blanks = item.blanks || [];
         const total = blanks.filter(function (b) { return b.options && b.options.length; }).length;
@@ -1120,6 +1122,7 @@
           const m = /^\{(\d+)\}$/.exec(part);
           if (!m) { if (part) row.appendChild(document.createTextNode(part)); return; }
           const blank = blanks[Number(m[1])];
+          if (item.example) { row.appendChild(el('span', 'bai-fill-example', blank.answer)); return; }
           blank.options.forEach(function (opt, oi) {
             if (oi) row.appendChild(document.createTextNode(' / '));
             const b = el('button', 'bai-chip bai-tone-pink bai-opt', opt);
@@ -1370,6 +1373,117 @@
       return wrap;
     }
 
+    // Nối bằng kéo-thả: cột trái cố định (tiếng Việt), cột phải là các chip kéo để sắp xếp cho khớp từng dòng.
+    // Dữ liệu giống matchPairs (questions[{q,answer}] + options[{key,text}]); thứ tự ban đầu = thứ tự options.
+    function renderMatchDrag(ex) {
+      const wrap = el('div', 'bai-drag');
+      const list = el('div', 'bai-drag-list');
+      const opts = (ex.options || []);
+      const chips = opts.map(function (o) {
+        const c = el('div', 'bai-drag-chip');
+        c.tabIndex = 0;
+        c.setAttribute('role', 'button');
+        c.setAttribute('aria-label', o.text + ' (kéo để sắp xếp, hoặc dùng phím mũi tên lên xuống)');
+        c.appendChild(el('span', 'bai-drag-grip', '\u2807\u2807'));
+        c.appendChild(el('span', 'bai-drag-text', o.text));
+        c.dataset.key = o.key;
+        return c;
+      });
+      let order = chips.slice();            // order[i] = chip đang nằm ở dòng i
+      const slots = [], marks = [];
+      (ex.questions || []).forEach(function (q, i) {
+        const row = el('div', 'bai-drag-row');
+        row.appendChild(el('span', 'bai-drag-q', (i + 1) + '\u00A0\u00A0' + q.q));
+        const slot = el('div', 'bai-drag-slot');
+        const mark = el('span', 'bai-mark');
+        row.appendChild(slot); row.appendChild(mark);
+        list.appendChild(row);
+        slots.push(slot); marks.push(mark);
+      });
+      function place() { order.forEach(function (c, i) { if (slots[i]) slots[i].appendChild(c); }); }
+      function clearMarks() {
+        order.forEach(function (c, i) { if (marks[i]) markCell(c, marks[i], ''); });
+      }
+      function moveTo(chip, to) {
+        const from = order.indexOf(chip);
+        if (from < 0 || to === from) return false;
+        to = Math.max(0, Math.min(order.length - 1, to));
+        order.splice(from, 1); order.splice(to, 0, chip);
+        place(); return true;
+      }
+      chips.forEach(function (chip) {
+        let grab = 0, active = false;
+        function follow(e) {
+          const r = slots[order.indexOf(chip)].getBoundingClientRect();
+          chip.style.transform = 'translateY(' + (e.clientY - grab - (r.top + r.height / 2)) + 'px)';
+        }
+        function onMove(e) {
+          if (!active) return;
+          let target = order.indexOf(chip);
+          for (let i = 0; i < slots.length; i++) {
+            const r = slots[i].getBoundingClientRect();
+            if (e.clientY >= r.top && e.clientY <= r.bottom) { target = i; break; }
+          }
+          if (e.clientY < slots[0].getBoundingClientRect().top) target = 0;
+          if (e.clientY > slots[slots.length - 1].getBoundingClientRect().bottom) target = slots.length - 1;
+          moveTo(chip, target);
+          follow(e);
+          if (e.clientY < 50) window.scrollBy(0, -12);
+          else if (e.clientY > window.innerHeight - 50) window.scrollBy(0, 12);
+        }
+        function end() {
+          if (!active) return;
+          active = false;
+          chip.classList.remove('is-dragging');
+          chip.style.transform = '';
+          document.removeEventListener('pointermove', onMove);
+          document.removeEventListener('pointerup', end);
+          document.removeEventListener('pointercancel', end);
+        }
+        chip.addEventListener('pointerdown', function (e) {
+          if (e.button != null && e.button !== 0) return;
+          if (e.pointerType === 'touch' && !e.target.closest('.bai-drag-grip')) return;  // cảm ứng: chỉ kéo bằng tay nắm để vẫn cuộn trang được
+          const r = chip.getBoundingClientRect();
+          grab = e.clientY - (r.top + r.height / 2);
+          active = true;
+          chip.classList.add('is-dragging');
+          clearMarks();
+          // nghe ở document (không dùng pointer capture) vì chip bị chuyển sang ô khác trong lúc kéo
+          document.addEventListener('pointermove', onMove);
+          document.addEventListener('pointerup', end);
+          document.addEventListener('pointercancel', end);
+          e.preventDefault();
+        });
+        chip.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+          e.preventDefault();
+          clearMarks();
+          moveTo(chip, order.indexOf(chip) + (e.key === 'ArrowUp' ? -1 : 1));
+          chip.focus();
+        });
+      });
+      place();
+      const bar = el('div', 'bai-fill-actions');
+      const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button';
+      bCheck.addEventListener('click', function () {
+        (ex.questions || []).forEach(function (q, i) {
+          markCell(order[i], marks[i], order[i].dataset.key === q.answer ? 'ok' : 'bad');
+        });
+      });
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button';
+      bShow.addEventListener('click', function () {
+        const byKey = {}; chips.forEach(function (c) { byKey[c.dataset.key] = c; });
+        order = (ex.questions || []).map(function (q) { return byKey[q.answer]; });
+        const used = {}; order.forEach(function (c) { used[c.dataset.key] = 1; });
+        chips.forEach(function (c) { if (!used[c.dataset.key]) order.push(c); });
+        place();
+        (ex.questions || []).forEach(function (q, i) { markCell(order[i], marks[i], 'ok'); });
+      });
+      bar.appendChild(bCheck); bar.appendChild(bShow);
+      wrap.appendChild(list); wrap.appendChild(bar);
+      return wrap;
+    }
+
     // Nghe và điền (b6): mỗi câu có audio riêng, có thể nhiều chỗ trống. item.distinct = các ô phải khác nhau.
     function renderAudioFill(ex) {
       const wrap = el('div', 'bai-fill');
@@ -1415,7 +1529,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs, audioFill: renderAudioFill };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
