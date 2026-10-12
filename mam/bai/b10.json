@@ -253,7 +253,7 @@
        ]
       },
       {
-       "type": "matchPairs",
+       "type": "matchDrag",
        "num": 5,
        "instructionVi": "Nối cụm từ với nghĩa phù hợp.",
        "instructionEn": "Match each Vietnamese time expression with its English meaning.",
@@ -363,6 +363,160 @@
         {
          "key": "m",
          "text": "The end of this year"
+        }
+       ]
+      },
+      {
+       "type": "chooseWord",
+       "num": 6,
+       "instructionVi": "Hoàn thành câu theo thông tin cho sẵn.",
+       "instructionEn": "Complete each sentence using the information provided.",
+       "items": [
+        {
+         "template": "Bây giờ là tháng 6. Tháng {0} là tháng 7.",
+         "blanks": [
+          {
+           "options": [
+            "trước",
+            "này",
+            "sau"
+           ],
+           "answer": "sau"
+          }
+         ],
+         "example": true
+        },
+        {
+         "template": "Bây giờ là tháng 3. Tháng {0} là tháng 2.",
+         "blanks": [
+          {
+           "options": [
+            "trước",
+            "này",
+            "sau"
+           ],
+           "answer": "trước"
+          }
+         ]
+        },
+        {
+         "template": "Tháng {0} là tháng 10. Tháng sau là tháng 11.",
+         "blanks": [
+          {
+           "options": [
+            "trước",
+            "này",
+            "sau"
+           ],
+           "answer": "này"
+          }
+         ]
+        },
+        {
+         "template": "{0} tuần là thứ Hai. {1} tuần là thứ Bảy và Chủ Nhật.",
+         "blanks": [
+          {
+           "options": [
+            "Đầu",
+            "Cuối"
+           ],
+           "answer": "Đầu"
+          },
+          {
+           "options": [
+            "Đầu",
+            "Cuối"
+           ],
+           "answer": "Cuối"
+          }
+         ]
+        },
+        {
+         "template": "Năm nay là năm 2026. Năm {0} là năm 2025.",
+         "blanks": [
+          {
+           "options": [
+            "trước",
+            "nay",
+            "sau"
+           ],
+           "answer": "trước"
+          }
+         ]
+        },
+        {
+         "template": "Năm {0} là năm 2026. Năm sau là năm 2027.",
+         "blanks": [
+          {
+           "options": [
+            "trước",
+            "nay",
+            "sau"
+           ],
+           "answer": "nay"
+          }
+         ]
+        },
+        {
+         "template": "Tháng {0} năm là tháng Một.",
+         "blanks": [
+          {
+           "options": [
+            "đầu",
+            "cuối"
+           ],
+           "answer": "đầu"
+          }
+         ]
+        },
+        {
+         "template": "Tháng {0} năm là tháng Mười Hai.",
+         "blanks": [
+          {
+           "options": [
+            "đầu",
+            "cuối"
+           ],
+           "answer": "cuối"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay là thứ Ba ngày 20. Cuối tuần {0} là thứ Bảy ngày 24.",
+         "blanks": [
+          {
+           "options": [
+            "trước",
+            "này",
+            "sau"
+           ],
+           "answer": "này"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay là thứ Hai ngày 15. {0} tuần trước là ngày 8.",
+         "blanks": [
+          {
+           "options": [
+            "Đầu",
+            "Cuối"
+           ],
+           "answer": "Đầu"
+          }
+         ]
+        },
+        {
+         "template": "Hôm nay là thứ Sáu ngày 1. {0} tuần sau là ngày 9.",
+         "blanks": [
+          {
+           "options": [
+            "Đầu",
+            "Cuối"
+           ],
+           "answer": "Cuối"
+          }
+         ]
         }
        ]
       }
