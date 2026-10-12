@@ -1377,7 +1377,7 @@
     // Dữ liệu giống matchPairs (questions[{q,answer}] + options[{key,text}]); thứ tự ban đầu = thứ tự options.
     function renderMatchDrag(ex) {
       const wrap = el('div', 'bai-drag');
-      const list = el('div', 'bai-drag-list');
+      const list = el('div', 'bai-drag-cols');
       const opts = (ex.options || []);
       const chips = opts.map(function (o) {
         const c = el('div', 'bai-drag-chip');
@@ -1391,15 +1391,18 @@
       });
       let order = chips.slice();            // order[i] = chip đang nằm ở dòng i
       const slots = [], marks = [];
+      const colL = el('div', 'bai-drag-left'), colR = el('div', 'bai-drag-right');
       (ex.questions || []).forEach(function (q, i) {
-        const row = el('div', 'bai-drag-row');
-        row.appendChild(el('span', 'bai-drag-q', (i + 1) + '\u00A0\u00A0' + q.q));
-        const slot = el('div', 'bai-drag-slot');
+        const qc = el('div', 'bai-drag-q');
+        qc.appendChild(el('span', 'bai-drag-qt', (i + 1) + '\u00A0\u00A0' + q.q));
         const mark = el('span', 'bai-mark');
-        row.appendChild(slot); row.appendChild(mark);
-        list.appendChild(row);
+        qc.appendChild(mark);
+        colL.appendChild(qc);
+        const slot = el('div', 'bai-drag-slot');
+        colR.appendChild(slot);
         slots.push(slot); marks.push(mark);
       });
+      list.appendChild(colL); list.appendChild(colR);
       function place() { order.forEach(function (c, i) { if (slots[i]) slots[i].appendChild(c); }); }
       function clearMarks() {
         order.forEach(function (c, i) { if (marks[i]) markCell(c, marks[i], ''); });
