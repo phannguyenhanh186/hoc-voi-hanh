@@ -4,7 +4,7 @@
  "title": "Khi nào bạn đi Việt Nam?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am."
+  "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am. Them (phan Nghe): listen_ex7_01..05.mp3 (chon dap an), listen_ex8_01..05.mp3 (hoan thanh cau) - chua thu am. TODO: dien 'answer' (a/b) cho 5 cau bai 7 (hien de null = khong cham)."
  },
  "sections": [
   {
@@ -517,6 +517,132 @@
            "answer": "Cuối"
           }
          ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "nghe-dau-cuoi",
+     "label": "Đầu – cuối",
+     "exercises": [
+      {
+       "type": "audioChoice",
+       "num": 7,
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b10/{voice}/listen_ex7_01.mp3",
+         "text": "Giang đi Mỹ ___.",
+         "options": [
+          "cuối năm sau",
+          "cuối tháng sau"
+         ],
+         "answer": null
+        },
+        {
+         "audio": "audio/b10/{voice}/listen_ex7_02.mp3",
+         "text": "___, chị Luyến về quê.",
+         "options": [
+          "Tuần trước",
+          "Tháng trước"
+         ],
+         "answer": null
+        },
+        {
+         "audio": "audio/b10/{voice}/listen_ex7_03.mp3",
+         "text": "___, ông của Phú đi khám bệnh.",
+         "options": [
+          "Đầu năm sau",
+          "Cuối năm sau"
+         ],
+         "answer": null
+        },
+        {
+         "audio": "audio/b10/{voice}/listen_ex7_04.mp3",
+         "text": "Em trai của Uyên đi du lịch ___.",
+         "options": [
+          "cuối tuần sau",
+          "đầu tháng trước"
+         ],
+         "answer": null
+        },
+        {
+         "audio": "audio/b10/{voice}/listen_ex7_05.mp3",
+         "text": "Chú của Vy nghỉ làm ___.",
+         "options": [
+          "cuối tháng trước",
+          "đầu năm trước"
+         ],
+         "answer": null
+        }
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 8,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "tuần trước",
+        "đầu tuần sau",
+        "cuối tháng này",
+        "tháng sau",
+        "đầu năm sau"
+       ],
+       "items": [
+        {
+         "template": "Mai về nhà {0}.",
+         "answers": [
+          [
+           "tháng sau"
+          ]
+         ],
+         "audio": "audio/b10/{voice}/listen_ex8_01.mp3"
+        },
+        {
+         "template": "{0}, anh Nam tới bệnh viện.",
+         "answers": [
+          [
+           "tuần trước"
+          ]
+         ],
+         "audio": "audio/b10/{voice}/listen_ex8_02.mp3"
+        },
+        {
+         "template": "{0}, chú Sáu về Việt Nam.",
+         "answers": [
+          [
+           "đầu năm sau"
+          ]
+         ],
+         "audio": "audio/b10/{voice}/listen_ex8_03.mp3"
+        },
+        {
+         "template": "{0}, cô Huyền đi chợ.",
+         "answers": [
+          [
+           "đầu tuần sau"
+          ]
+         ],
+         "audio": "audio/b10/{voice}/listen_ex8_04.mp3"
+        },
+        {
+         "template": "Em gái của Phong đi du lịch {0}.",
+         "answers": [
+          [
+           "cuối tháng này"
+          ]
+         ],
+         "audio": "audio/b10/{voice}/listen_ex8_05.mp3"
         }
        ]
       }
