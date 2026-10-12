@@ -1761,6 +1761,6 @@ h1, h2, h3, h4, h5, h6,
 .bai-ex-head, .bai-ex-num, .bai-ex-vi, .bai-ex-en { font-family: var(--font-body); }
 .grammar-callout, .grammar-callout *, .grammar-note { font-family: var(--font-display); }
 
-/* Ô âm không có audio (phần phát âm): chỉ có viền đen, không màu nền, không bấm được */
-.bai-chip.is-static { background: transparent; border: 1.5px solid var(--stroke); cursor: default; }
+/* Ô vần đầu hàng (phần phát âm): viền đen, nền trắng, không audio, không bấm được */
+.bai-chip.is-static { background: #fff; border: 1.5px solid var(--stroke); cursor: default; }
 .bai-chip.is-static:hover, .bai-chip.is-static:active { transform: none; box-shadow: none; }
