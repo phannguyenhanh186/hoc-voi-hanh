@@ -1729,50 +1729,30 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 }
 
 /* ============================================================
-   FONT: Helvetica Neue — heading Roman, body Light, subtitle Light
-   - Máy Apple có sẵn Helvetica Neue (dùng qua local()).
-   - Máy khác: bỏ file font vào fonts/ với đúng tên bên dưới
-     (HelveticaNeue-UltraLight / -Light / -Roman / -Bold, đuôi .woff2 hoặc .otf); nếu không có
-     thì tự dùng Helvetica / Arial.
+   FONT (Google Fonts): heading = Space Mono, body = Xanh Mono
+   Xanh Mono chỉ có độ đậm Regular (400) nên body/phụ đề dùng 400.
    ============================================================ */
-@font-face { font-family: "HelveticaNeue"; font-weight: 100; font-style: normal;
-  src: local("HelveticaNeue-UltraLight"), local("Helvetica Neue UltraLight"),
-       url("fonts/HelveticaNeue-UltraLight.woff2") format("woff2"),
-       url("fonts/HelveticaNeue-UltraLight.otf") format("opentype"); }
-@font-face { font-family: "HelveticaNeue"; font-weight: 300; font-style: normal;
-  src: local("HelveticaNeue-Light"), local("Helvetica Neue Light"),
-       url("fonts/HelveticaNeue-Light.woff2") format("woff2"),
-       url("fonts/HelveticaNeue-Light.otf") format("opentype"); }
-@font-face { font-family: "HelveticaNeue"; font-weight: 400; font-style: normal;
-  src: local("HelveticaNeue"), local("Helvetica Neue"),
-       url("fonts/HelveticaNeue-Roman.woff2") format("woff2"),
-       url("fonts/HelveticaNeue-Roman.otf") format("opentype"); }
-@font-face { font-family: "HelveticaNeue"; font-weight: 700; font-style: normal;
-  src: local("HelveticaNeue-Bold"), local("Helvetica Neue Bold"),
-       url("fonts/HelveticaNeue-Bold.woff2") format("woff2"),
-       url("fonts/HelveticaNeue-Bold.otf") format("opentype"); }
-
 :root {
-  --font-body:    "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-body:    "Xanh Mono", "Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
-/* Body: Light */
-body { font-weight: 300; }
+/* Body: Regular (Xanh Mono chỉ có 400) */
+body { font-weight: 400; }
 
-/* Heading: Roman (đổi 400 → 700 nếu muốn Bold) */
+/* Heading: Regular (đổi 400 → 700 nếu muốn Space Mono Bold) */
 h1, h2, h3, h4, h5, h6,
 .bai-grammar-title, .bai-grammar-heading-vi, .gram2-content-title,
 .lesson-tile-title, .gram2-sub-heading, .bai-pairs-head-vi,
 .bai-ex-head, .bai-ex-num, .bai-ex-vi, .gram2-section-title-vi { font-weight: 400; }
 
-/* Subtitle (dòng tiếng Anh bên dưới): Light */
+/* Subtitle (dòng tiếng Anh bên dưới): Regular */
 .title-en, .scene-en, .ex-en, .bai-ex-en,
 .bai-grammar-heading-en, .bai-grammar-structure-en, .bai-grammar-p-en,
 .bai-pairs-intro-en, .bai-pairs-head-en, .gram2-section-title-en,
-.phrase .en, .sentence-translation { font-weight: 300; }
+.phrase .en, .sentence-translation { font-weight: 400; }
 
-/* Trong phần bài học (bai.html): yêu cầu bài = Roman, mọi nội dung còn lại = Light */
-.gram2-content, .gram2-content * { font-weight: 300 !important; }
+/* Trong phần bài học (bai.html): mọi chữ = Regular (Xanh Mono chỉ có 400) */
+.gram2-content, .gram2-content * { font-weight: 400 !important; }
 .gram2-content .bai-ex-head,
 .gram2-content .bai-ex-head * { font-weight: 400 !important; }
