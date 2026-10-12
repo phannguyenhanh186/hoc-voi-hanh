@@ -1791,3 +1791,4 @@ h1, h2, h3, h4, h5, h6,
   .bai-drag-text { font-size: .82rem; }
   .bai-drag-chip { padding: 0 8px; gap: 4px; }
 }
+.bai-grammar-td { white-space: pre-line; }
