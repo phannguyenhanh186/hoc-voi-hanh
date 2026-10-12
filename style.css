@@ -1764,3 +1764,8 @@ h1, h2, h3, h4, h5, h6,
 /* Ô vần đầu hàng (phần phát âm): viền đen, nền trắng, không audio, không bấm được */
 .bai-chip.is-static { background: #fff; border: 1.5px solid var(--stroke); cursor: default; }
 .bai-chip.is-static:hover, .bai-chip.is-static:active { transform: none; box-shadow: none; }
+
+/* Trong phần bài học: mọi nội dung (body) = Space Mono; riêng yêu cầu bài (VI + EN) giữ Xanh Mono */
+.gram2-content, .gram2-content * { font-family: var(--font-display) !important; }
+.gram2-content .bai-ex-head, .gram2-content .bai-ex-head *,
+.gram2-content .bai-ex-en { font-family: var(--font-body) !important; }
