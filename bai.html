@@ -91,18 +91,34 @@
       toast('Chưa có audio cho “' + (currentEl.dataset.text || '') + '”');
     });
 
-    function makeChip(text, template, extraClass) {
+    // Ô "vần" đầu hàng (ví dụ uôi trong: uôi, chuôi, muối…): chữ nằm trong từ kế bên (bỏ dấu) → không audio.
+    function plainSound(t) {
+      return String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u0111/g, 'd').replace(/\u0110/g, 'D').toLowerCase();
+    }
+    // Ô vần đứng đầu hàng: mọi từ cùng hàng đều chứa nó (bỏ dấu), và có ít nhất một từ dài hơn nó;
+    // hoặc là hàng 1 chip trùng vần của hàng đầu nhóm (vd: um / cúm / giùm … rồi ưm).
+    function isHeadSound(row, i, g) {
+      if (i !== 0 || row[0] == null) return false;
+      const a = plainSound(row[0]);
+      if (row.length === 1) {
+        const first = g && g.rows && g.rows[0];
+        return first === row || (!!first && first[0] != null && plainSound(first[0]) === a);
+      }
+      const rest = row.slice(1).filter(function (w) { return w != null; }).map(plainSound);
+      return rest.every(function (b) { return b.indexOf(a) !== -1; }) && rest.some(function (b) { return b.length > a.length; });
+    }
+    function makeChip(text, template, extraClass, isStatic) {
       const b = el('button', 'bai-chip' + (extraClass ? ' ' + extraClass : ''), text);
       b.type = 'button';
       b.dataset.text = text;
       b.setAttribute('aria-label', 'Nghe “' + text + '”');
-      if (!template) {   // không có audio → ô chỉ để xem (viền đen, không nền, không bấm được)
+      if (!template || isStatic) {   // ô vần đầu hàng / không có audio → chỉ để xem (viền đen, nền trắng, không bấm được)
         b.classList.add('is-static');
         b.tabIndex = -1;
         b.setAttribute('aria-label', text);
       }
       b.addEventListener('click', function () {
-        if (template) play(audioSrc(template, text), b);
+        if (template && !isStatic) play(audioSrc(template, text), b);
       });
       return b;
     }
@@ -139,7 +155,7 @@
             const line = el('div', 'bai-sound-line');
             line.style.gridTemplateColumns = 'repeat(' + maxN + ', minmax(0, 1fr))';
             (g.rows || []).forEach(function (row) {
-              row.forEach(function (t) { if (t != null) line.appendChild(makeChip(t, ex.audio, 'bai-tone-' + (g.tone || 'violet'))); });
+              row.forEach(function (t, i) { if (t != null) line.appendChild(makeChip(t, ex.audio, 'bai-tone-' + (g.tone || 'violet'), isHeadSound(row, i, g))); });
             });
             rowsWrap.appendChild(line);
           });
@@ -156,7 +172,7 @@
                 const gap = el('span'); gap.setAttribute('aria-hidden', 'true');
                 col.appendChild(gap);
               } else {
-                col.appendChild(makeChip(row[i], ex.audio, 'bai-tone-' + (g.tone || 'violet')));
+                col.appendChild(makeChip(row[i], ex.audio, 'bai-tone-' + (g.tone || 'violet'), isHeadSound(row, i, g)));
               }
             }
           });
