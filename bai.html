@@ -428,6 +428,7 @@
     // '.grammar-callout' cho cau truc, va 'makeToggleSection' cho vi du (bam de mo/thu gon).
     // Chu thich {{...}} trong text -> <span class="bai-hl bai-hl-<tone>"> (nhan manh "khi nào")
     function hlText(node, text, tone) {
+      if (/\{\{.*?\}\}/.test(String(text || ''))) node.classList.add('has-hl');   // dòng có highlight -> giãn dòng để các khung màu không dính nhau
       String(text || '').split(/(\{\{.*?\}\})/).forEach(function (part) {
         const m = /^\{\{(.*)\}\}$/.exec(part);
         if (m) {   // {{chữ}} = tone mặc định; {{chữ::lav}} / {{chữ::pink}} = chỉ định tone
@@ -494,8 +495,8 @@
             const list = el('div', 'grammar-examples');
             (b.items || []).forEach(function (it) {
               const row = el('div', 'example');
-              row.appendChild(el('div', 'ex-vi', it.vi || ''));
-              if (it.en) row.appendChild(el('div', 'ex-en', it.en));
+              row.appendChild(hlText(el('div', 'ex-vi'), it.vi || ''));
+              if (it.en) row.appendChild(hlText(el('div', 'ex-en'), it.en));
               list.appendChild(row);
             });
             return list;
