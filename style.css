@@ -1792,3 +1792,16 @@ h1, h2, h3, h4, h5, h6,
   .bai-drag-chip { padding: 0 8px; gap: 4px; }
 }
 .bai-grammar-td { white-space: pre-line; }
+
+/* ---- Ngữ pháp: nhóm ví dụ có nhãn màu + nhấn mạnh "khi nào" (dùng tone màu của website) ---- */
+.bai-hl { padding: 1px 6px; border-radius: 6px; color: var(--ink); }
+.bai-hl-blue { background: #CACFFB; }
+.bai-hl-pink { background: #F7CBCB; }
+.bai-exgroup { border: 1.5px solid var(--stroke); border-radius: 14px; padding: 12px 16px; margin: 10px 0 14px; background: #fff; }
+.bai-exgroup-item + .bai-exgroup-item { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 12px; }
+.bai-exgroup-label { display: inline-block; font-size: .78rem; letter-spacing: .04em; color: var(--ink); padding: 2px 10px; border: 1.5px solid var(--stroke); border-radius: 999px; margin-bottom: 6px; }
+.bai-exgroup.is-blue .bai-exgroup-label { background: #CACFFB; }
+.bai-exgroup.is-pink .bai-exgroup-label { background: #F7CBCB; }
+.bai-exgroup-vi { font-size: 1.05rem; color: var(--ink); }
+.bai-exgroup-en { font-style: italic; color: var(--muted); font-size: .95rem; }
+.bai-exgroup-note { margin-top: 4px; font-size: .85rem; color: var(--muted); }
