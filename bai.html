@@ -430,7 +430,10 @@
     function hlText(node, text, tone) {
       String(text || '').split(/(\{\{.*?\}\})/).forEach(function (part) {
         const m = /^\{\{(.*)\}\}$/.exec(part);
-        if (m) node.appendChild(el('span', 'bai-hl bai-hl-' + (tone || 'blue'), m[1]));
+        if (m) {   // {{chữ}} = tone mặc định; {{chữ::lav}} / {{chữ::pink}} = chỉ định tone
+          const bits = m[1].split('::');
+          node.appendChild(el('span', 'bai-hl bai-hl-' + (bits[1] || tone || 'blue'), bits[0]));
+        }
         else if (part) node.appendChild(document.createTextNode(part));
       });
       return node;
@@ -451,16 +454,20 @@
           wrap.appendChild(s);
         } else if (b.type === 'paragraph') {
           const p = el('div', 'bai-grammar-p');
-          p.appendChild(el('div', 'bai-grammar-p-vi', b.vi || ''));
-          if (b.en) p.appendChild(el('div', 'bai-grammar-p-en', b.en));
+          p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.vi, b.tone));
+          if (b.en) p.appendChild(hlText(el('div', 'bai-grammar-p-en'), b.en, b.tone));
           wrap.appendChild(p);
         } else if (b.type === 'exampleGroup') {
           const g = el('div', 'bai-exgroup is-' + (b.tone || 'blue'));
           (b.groups || []).forEach(function (it) {
             const row = el('div', 'bai-exgroup-item');
             if (it.label) row.appendChild(el('div', 'bai-exgroup-label', it.label));
-            row.appendChild(hlText(el('div', 'bai-exgroup-vi'), it.vi, b.tone));
-            if (it.en) row.appendChild(el('div', 'bai-exgroup-en', it.en));
+            (it.lines || [{ vi: it.vi, en: it.en }]).forEach(function (ln) {   // mỗi nhóm có thể có nhiều cặp vi/en (câu hỏi + câu trả lời)
+              const l = el('div', 'bai-exgroup-line');
+              l.appendChild(hlText(el('div', 'bai-exgroup-vi'), ln.vi, b.tone));
+              if (ln.en) l.appendChild(hlText(el('div', 'bai-exgroup-en'), ln.en, b.tone));
+              row.appendChild(l);
+            });
             if (it.note) row.appendChild(el('div', 'bai-exgroup-note', it.note));
             g.appendChild(row);
           });
