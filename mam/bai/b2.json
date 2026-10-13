@@ -580,8 +580,8 @@
        "blocks": [
         {
          "type": "paragraph",
-         "vi": "Thích có nghĩa là “like” trong tiếng Anh. Dùng thích để nói về người, đồ vật, món ăn, đồ uống hoặc hoạt động mà bạn yêu thích.",
-         "en": "Thích means “to like.” It is used to talk about things, food, drinks, or activities that you like."
+         "vi": "{{Thích::pink}} có nghĩa là “like” trong tiếng Anh. Dùng {{thích::pink}} để nói về người, đồ vật, món ăn, đồ uống hoặc hoạt động mà bạn yêu {{thích::pink}}.",
+         "en": "{{Thích::pink}} means “to like.” It is used to talk about things, food, drinks, or activities that you like."
         },
         {
          "type": "heading",
@@ -590,45 +590,45 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + thích + danh từ",
-         "en": "Subject + thích + noun"
+         "vi": "Chủ ngữ + {{thích::pink}} + danh từ",
+         "en": "Subject + {{thích::pink}} + noun"
         },
         {
          "type": "examples",
          "items": [
           {
-           "vi": "Mình thích phở.",
+           "vi": "Mình {{thích::pink}} phở.",
            "en": "I like phở."
           },
           {
-           "vi": "Chị Liên thích cà phê.",
+           "vi": "Chị Liên {{thích::pink}} cà phê.",
            "en": "Lien likes coffee."
           },
           {
-           "vi": "Ann thích tiếng Việt.",
+           "vi": "Ann {{thích::pink}} tiếng Việt.",
            "en": "Ann likes Vietnamese."
           }
          ]
         },
         {
          "type": "paragraph",
-         "vi": "Thích không thay đổi theo chủ ngữ.",
-         "en": "The word thích does not change according to the subject."
+         "vi": "{{Thích::pink}} {{không::blue}} thay đổi theo chủ ngữ.",
+         "en": "The word {{thích::pink}} does not change according to the subject."
         },
         {
          "type": "examples",
          "items": [
           {
-           "vi": "Mình thích phở."
+           "vi": "Mình {{thích::pink}} phở."
           },
           {
-           "vi": "Chị thích bún bò."
+           "vi": "Chị {{thích::pink}} bún bò."
           },
           {
-           "vi": "Mẹ của em thích trà."
+           "vi": "Mẹ của em {{thích::pink}} trà."
           },
           {
-           "vi": "Chú Bình thích cà phê."
+           "vi": "Chú Bình {{thích::pink}} cà phê."
           }
          ]
         },
@@ -639,34 +639,34 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + thích ăn + món ăn",
-         "en": "Subject + thích ăn + food"
+         "vi": "Chủ ngữ + {{thích::pink}} ăn + món ăn",
+         "en": "Subject + {{thích::pink}} ăn + food"
         },
         {
          "type": "examples",
          "items": [
           {
-           "vi": "Bạn thích ăn gì?",
+           "vi": "Bạn {{thích::pink}} ăn gì?",
            "en": "What do you like to eat?"
           },
           {
-           "vi": "Mình thích ăn phở. / Mình thích phở.",
+           "vi": "Mình {{thích::pink}} ăn phở. / Mình {{thích::pink}} phở.",
            "en": "I like to eat phở. / I like phở."
           },
           {
-           "vi": "Anh thích ăn gì?",
+           "vi": "Anh {{thích::pink}} ăn gì?",
            "en": "What do you like to eat?"
           },
           {
-           "vi": "Anh thích ăn cơm gà. / Anh thích cơm gà.",
+           "vi": "Anh {{thích::pink}} ăn cơm gà. / Anh {{thích::pink}} cơm gà.",
            "en": "I like to eat chicken rice. / I like chicken rice."
           }
          ]
         },
         {
          "type": "paragraph",
-         "vi": "Cả “Mình thích phở” và “Mình thích ăn phở” đều tự nhiên. Câu đầu tập trung vào món ăn; câu sau nhấn mạnh việc ăn món đó.",
-         "en": "Both “Mình thích phở” and “Mình thích ăn phở” are natural. The first focuses on the food; the second focuses on the activity of eating."
+         "vi": "Cả “Mình {{thích::pink}} phở” và “Mình {{thích::pink}} ăn phở” đều tự nhiên. Câu đầu tập trung vào món ăn; câu sau nhấn mạnh việc ăn món đó.",
+         "en": "Both “Mình {{thích::pink}} phở” and “Mình {{thích::pink}} ăn phở” are natural. The first focuses on the food; the second focuses on the activity of eating."
         },
         {
          "type": "heading",
@@ -675,26 +675,26 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + thích uống + đồ uống",
-         "en": "Subject + thích uống + drink"
+         "vi": "Chủ ngữ + {{thích::pink}} uống + đồ uống",
+         "en": "Subject + {{thích::pink}} uống + drink"
         },
         {
          "type": "examples",
          "items": [
           {
-           "vi": "Bạn thích uống gì?",
+           "vi": "Bạn {{thích::pink}} uống gì?",
            "en": "What do you like to drink?"
           },
           {
-           "vi": "Mình thích uống cà phê. / Mình thích cà phê.",
+           "vi": "Mình {{thích::pink}} uống cà phê. / Mình {{thích::pink}} cà phê.",
            "en": "I like to drink coffee. / I like coffee."
           },
           {
-           "vi": "Chị thích uống gì?",
+           "vi": "Chị {{thích::pink}} uống gì?",
            "en": "What do you like to drink?"
           },
           {
-           "vi": "Chị thích uống trà. / Chị thích trà.",
+           "vi": "Chị {{thích::pink}} uống trà. / Chị {{thích::pink}} trà.",
            "en": "I like to drink tea. / I like tea."
           }
          ]
@@ -706,27 +706,27 @@
         },
         {
          "type": "paragraph",
-         "vi": "Đặt không trước thích để tạo câu phủ định.",
-         "en": "Put không before thích to make a negative sentence."
+         "vi": "Đặt {{không::blue}} trước {{thích::pink}} để tạo câu phủ định.",
+         "en": "Put {{không::blue}} before {{thích::pink}} to make a negative sentence."
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + không thích + danh từ",
-         "en": "Subject + không thích + noun"
+         "vi": "Chủ ngữ + {{không::blue}} {{thích::pink}} + danh từ",
+         "en": "Subject + {{không::blue}} {{thích::pink}} + noun"
         },
         {
          "type": "examples",
          "items": [
           {
-           "vi": "Mình không thích cà phê.",
+           "vi": "Mình {{không::blue}} {{thích::pink}} cà phê.",
            "en": "I don't like coffee."
           },
           {
-           "vi": "Em không thích ăn thịt.",
+           "vi": "Em {{không::blue}} {{thích::pink}} ăn thịt.",
            "en": "I don't like eating meat."
           },
           {
-           "vi": "Ba của mình không thích uống trà.",
+           "vi": "Ba của mình {{không::blue}} {{thích::pink}} uống trà.",
            "en": "My father doesn't like drinking tea."
           }
          ]
@@ -890,13 +890,13 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + {{có::lav}} + nội dung chính + {{không::pink}}?",
-         "en": "Subject + {{có::lav}} + main information + {{không::pink}}?"
+         "vi": "Chủ ngữ + {{có::lav}} + động từ/tính từ + {{không::pink}}?",
+         "en": "Subject + {{có::lav}} + verb/adjective + {{không::pink}}?"
         },
         {
          "type": "paragraph",
-         "vi": "{{có::lav}} đứng trước nội dung chính của câu hỏi.",
-         "en": "{{có::lav}} comes before the main information."
+         "vi": "{{có::lav}} đứng trước động từ hoặc tính từ của câu hỏi.",
+         "en": "{{có::lav}} comes before the verb or adjective."
         },
         {
          "type": "paragraph",
