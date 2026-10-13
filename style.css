@@ -1805,3 +1805,6 @@ h1, h2, h3, h4, h5, h6,
 .bai-exgroup-vi { font-size: 1.05rem; color: var(--ink); }
 .bai-exgroup-en { font-style: italic; color: var(--muted); font-size: .95rem; }
 .bai-exgroup-note { margin-top: 4px; font-size: .85rem; color: var(--muted); }
+.bai-hl-lav { background: #D4C9FB; }
+.bai-exgroup.is-plain .bai-exgroup-label { background: #fff; }
+.bai-exgroup-line + .bai-exgroup-line { margin-top: 8px; }
