@@ -867,6 +867,231 @@
        ]
       }
      ]
+    },
+    {
+     "id": "co-khong",
+     "label": "Câu hỏi có…không?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "CÂU HỎI CÓ…KHÔNG? – YES/NO QUESTIONS",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Cấu trúc câu hỏi",
+         "en": "1. Question structure"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, {{có::lav}}...{{không::pink}}? được dùng để đặt câu hỏi có/không. Cấu trúc này tương tự như các câu hỏi bắt đầu bằng “Do/Does...?” trong tiếng Anh.",
+         "en": "In Vietnamese, {{có::lav}}...{{không::pink}}? is used to ask yes/no questions. It is similar to questions beginning with “Do/Does...?” in English."
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + {{có::lav}} + nội dung chính + {{không::pink}}?",
+         "en": "Subject + {{có::lav}} + main information + {{không::pink}}?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "{{có::lav}} đứng trước nội dung chính của câu hỏi.",
+         "en": "{{có::lav}} comes before the main information."
+        },
+        {
+         "type": "paragraph",
+         "vi": "{{không::pink}} đứng ở cuối câu hỏi.",
+         "en": "{{không::pink}} comes at the end of the question."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "plain",
+         "groups": [
+          {
+           "label": "Ví dụ 1 — Example 1",
+           "lines": [
+            {
+             "vi": "Bạn {{có::lav}} thích phở {{không::pink}}?",
+             "en": "Do you like phở?"
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 2 — Example 2",
+           "lines": [
+            {
+             "vi": "Anh {{có::lav}} uống cà phê {{không::pink}}?",
+             "en": "Do you drink coffee?"
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 3 — Example 3",
+           "lines": [
+            {
+             "vi": "Chị {{có::lav}} đi du lịch {{không::pink}}?",
+             "en": "Do you travel?"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "2. Câu trả lời ngắn",
+         "en": "2. Short answers"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Câu trả lời ngắn thường dùng chủ ngữ + {{có::lav}} để trả lời “Yes” và chủ ngữ + {{không::pink}} để trả lời “No”.",
+         "en": "Short answers usually use subject + {{có::lav}} for “Yes” and subject + {{không::pink}} for “No”."
+        },
+        {
+         "type": "structure",
+         "vi": "[Đại từ] + {{có::lav}}.",
+         "en": "→ Yes, [subject] do/does."
+        },
+        {
+         "type": "structure",
+         "vi": "[Đại từ] + {{không::pink}}.",
+         "en": "→ No, [subject] don't/doesn't."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "plain",
+         "groups": [
+          {
+           "label": "Ví dụ 1 — Example 1",
+           "lines": [
+            {
+             "vi": "Bạn có thích bún bò không?",
+             "en": "Do you like bún bò?"
+            },
+            {
+             "vi": "→ Mình {{có::lav}}. / Mình {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 2 — Example 2",
+           "lines": [
+            {
+             "vi": "Bạn có thích cà phê không?",
+             "en": "Do you like coffee?"
+            },
+            {
+             "vi": "→ Mình {{có::lav}}. / Mình {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 3 — Example 3",
+           "lines": [
+            {
+             "vi": "Cô có đi du lịch không?",
+             "en": "Do you travel?"
+            },
+            {
+             "vi": "→ Cô {{có::lav}}. / Cô {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 4 — Example 4",
+           "lines": [
+            {
+             "vi": "Anh có ăn thịt gà không?",
+             "en": "Do you eat chicken?"
+            },
+            {
+             "vi": "→ Anh {{có::lav}}. / Anh {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "3. Câu trả lời đầy đủ",
+         "en": "3. Full answers"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Bạn cũng có thể trả lời đầy đủ bằng cách lặp lại động từ hoặc cụm từ trong câu hỏi.",
+         "en": "You can also give a full answer by repeating the verb or phrase from the question."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + {{có::lav}} + [động từ/cụm từ].",
+         "en": "→ Yes, [subject] do/does."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + {{không::pink}} + [động từ/cụm từ].",
+         "en": "→ No, [subject] don't/doesn't."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "plain",
+         "groups": [
+          {
+           "label": "Ví dụ 1 — Example 1",
+           "lines": [
+            {
+             "vi": "Em có thích phở không?",
+             "en": "Do you like phở?"
+            },
+            {
+             "vi": "→ Em {{có::lav}} thích phở. / Em {{không::pink}} thích phở.",
+             "en": "Yes, I do like phở. / No, I don't like phở."
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 2 — Example 2",
+           "lines": [
+            {
+             "vi": "Chú có ăn trái cây không?",
+             "en": "Do you eat fruit?"
+            },
+            {
+             "vi": "→ Chú {{có::lav}} ăn trái cây. / Chú {{không::pink}} ăn trái cây.",
+             "en": "Yes, I do eat fruit. / No, I don't eat fruit."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "4. Ghi nhớ",
+         "en": "4. Remember"
+        },
+        {
+         "type": "paragraph",
+         "vi": "{{có::lav}}...{{không::pink}}? dùng để hỏi một người có làm gì hoặc có thích điều gì không.",
+         "en": "Use {{có::lav}}...{{không::pink}}? to ask whether someone does or likes something."
+        },
+        {
+         "type": "paragraph",
+         "vi": "{{Có::lav}}. = Yes."
+        },
+        {
+         "type": "paragraph",
+         "vi": "{{Không::pink}}. = No."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong câu trả lời đầy đủ, {{không::pink}} đứng trước động từ để tạo câu phủ định.",
+         "en": "In a full answer, {{không::pink}} comes before the verb to make a negative sentence."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
