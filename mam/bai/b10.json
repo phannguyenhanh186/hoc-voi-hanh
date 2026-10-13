@@ -49,7 +49,7 @@
           ]
          },
          {
-          "tone": "blue",
+          "tone": "pink",
           "rows": [
            [
             "uy",
@@ -706,61 +706,97 @@
         },
         {
          "type": "paragraph",
-         "vi": "“Khi nào” có thể đứng ở cuối câu hoặc đầu câu.",
-         "en": "“Khi nào” can appear at the end or beginning of a question."
+         "vi": "Vị trí của “khi nào” có thể giúp chúng ta hiểu người nói đang hỏi về thời gian của sự việc như thế nào.",
+         "en": "The position of “khi nào” can help us understand what kind of timing the speaker is asking about."
         },
         {
          "type": "heading",
-         "vi": "A. “Khi nào” ở cuối câu",
-         "en": "At the end"
+         "vi": "A. KHI NÀO ở cuối câu",
+         "en": "WHEN at the end of a question"
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + hành động + khi nào?",
-         "en": "Subject + action + when?"
+         "vi": "Chủ ngữ + hành động + {{KHI NÀO}}?",
+         "en": "Subject + action + WHEN?",
+         "tone": "blue"
         },
         {
-         "type": "examples",
-         "items": [
+         "type": "paragraph",
+         "vi": "Dùng để hỏi về thời gian một sự việc xảy ra, chẳng hạn như thói quen, lịch trình hoặc một sự việc đã xảy ra.",
+         "en": "Use this structure to ask when something happens, such as a routine, schedule, or an event that has already happened."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "blue",
+         "groups": [
           {
-           "vi": "Bạn học tiếng Việt khi nào?",
-           "en": "When do you study Vietnamese?"
+           "label": "THÓI QUEN — ROUTINES",
+           "vi": "Bạn đi làm {{khi nào}}?",
+           "en": "When do you go to work?",
+           "note": "→ Hỏi về lịch trình thường ngày. / Asking about a regular schedule."
           },
           {
-           "vi": "Bạn đi làm khi nào?",
-           "en": "When do you go to work?"
-          },
-          {
-           "vi": "Bạn về quê khi nào?",
-           "en": "When do you go back to your hometown?"
+           "label": "SỰ VIỆC ĐÃ XẢY RA — PAST EVENTS",
+           "vi": "Hôm qua bạn về nhà {{khi nào}}?",
+           "en": "When did you get home yesterday?",
+           "note": "→ Hỏi về thời gian một sự việc đã xảy ra. / Asking about the time of a past event."
           }
          ]
         },
         {
          "type": "heading",
-         "vi": "B. “Khi nào” ở đầu câu",
-         "en": "At the beginning"
+         "vi": "B. KHI NÀO ở đầu câu",
+         "en": "WHEN at the beginning of a question"
         },
         {
          "type": "structure",
-         "vi": "Khi nào + chủ ngữ + hành động?",
-         "en": "When + subject + action?"
+         "vi": "{{KHI NÀO}} + chủ ngữ + hành động?",
+         "en": "WHEN + subject + action?",
+         "tone": "pink"
         },
         {
-         "type": "examples",
-         "items": [
+         "type": "paragraph",
+         "vi": "Dùng để hỏi về thời điểm một sự việc sẽ xảy ra, đặc biệt khi muốn biết kế hoạch hoặc sự việc sắp tới.",
+         "en": "Use this structure to ask when something will happen, especially when asking about plans or upcoming events."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "pink",
+         "groups": [
           {
-           "vi": "Khi nào bạn học tiếng Việt?",
-           "en": "When do you study Vietnamese?"
+           "label": "KẾ HOẠCH — PLANS",
+           "vi": "{{Khi nào}} bạn đi du lịch?",
+           "en": "When are you going on vacation?",
+           "note": "→ Hỏi về kế hoạch sắp tới. / Asking about an upcoming plan."
           },
           {
-           "vi": "Khi nào bạn đi làm?",
-           "en": "When do you go to work?"
-          },
-          {
-           "vi": "Khi nào bạn về quê?",
-           "en": "When are you going back to your hometown?"
+           "label": "SỰ VIỆC SẮP XẢY RA — UPCOMING EVENTS",
+           "vi": "{{Khi nào}} lớp học bắt đầu?",
+           "en": "When does the class start?",
+           "note": "→ Hỏi về thời điểm một sự việc sẽ diễn ra. / Asking when an event will take place."
           }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "So sánh nhanh",
+         "en": "Quick comparison"
+        },
+        {
+         "type": "table",
+         "columns": [
+          "Vị trí — Position",
+          "Thường dùng để hỏi — Common use"
+         ],
+         "rows": [
+          [
+           "Cuối câu\nAt the end",
+           "Thói quen, lịch trình hoặc sự việc đã xảy ra.\nRoutines, schedules, or past events."
+          ],
+          [
+           "Đầu câu\nAt the beginning",
+           "Kế hoạch hoặc sự việc sẽ xảy ra.\nPlans or future events."
+          ]
          ]
         },
         {
@@ -770,8 +806,8 @@
         },
         {
          "type": "paragraph",
-         "vi": "Cả hai cách hỏi đều đúng. Nghĩa của câu có thể thay đổi tùy theo ngữ cảnh.",
-         "en": "Both word orders are correct. The meaning can depend on the context."
+         "vi": "Đây là cách dùng thường gặp, không phải quy tắc tuyệt đối. Cả hai vị trí đều có thể hỏi về tương lai hoặc thời gian nói chung, tùy ngữ cảnh.",
+         "en": "This is a common pattern, not an absolute rule. Both positions can ask about the future or timing in general, depending on the context."
         },
         {
          "type": "heading",
@@ -811,58 +847,6 @@
            "Khi nào bạn tốt nghiệp?\nWhen will you graduate?",
            "Năm sau.\nNext year."
           ]
-         ]
-        },
-        {
-         "type": "heading",
-         "vi": "4. “Khi nào?” và “Mấy giờ?”",
-         "en": "When? vs. What time?",
-         "tone": "purple"
-        },
-        {
-         "type": "structure",
-         "vi": "Khi nào?",
-         "en": "When?"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Hỏi về thời gian nói chung: ngày, tuần, tháng hoặc năm.",
-         "en": "Ask about time in general: a day, week, month, or year."
-        },
-        {
-         "type": "examples",
-         "items": [
-          {
-           "vi": "Khi nào bạn đi du lịch?",
-           "en": "When are you going on vacation?"
-          },
-          {
-           "vi": "Tháng sau.",
-           "en": "Next month."
-          }
-         ]
-        },
-        {
-         "type": "structure",
-         "vi": "Mấy giờ?",
-         "en": "What time?"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Hỏi về giờ cụ thể.",
-         "en": "Ask for a specific time."
-        },
-        {
-         "type": "examples",
-         "items": [
-          {
-           "vi": "Bạn đi làm mấy giờ?",
-           "en": "What time do you go to work?"
-          },
-          {
-           "vi": "Bảy giờ sáng.",
-           "en": "At seven in the morning."
-          }
          ]
         }
        ]
