@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261013" />
 </head>
 <body>
   <header class="site-header">
@@ -432,7 +432,11 @@
         const m = /^\{\{(.*)\}\}$/.exec(part);
         if (m) {   // {{chữ}} = tone mặc định; {{chữ::lav}} / {{chữ::pink}} = chỉ định tone
           const bits = m[1].split('::');
-          node.appendChild(el('span', 'bai-hl bai-hl-' + (bits[1] || tone || 'blue'), bits[0]));
+          const tn = bits[1] || tone || 'blue';
+          const sp = el('span', 'bai-hl bai-hl-' + tn, bits[0]);
+          // style nội tuyến để vẫn hiện màu kể cả khi trình duyệt còn giữ style.css cũ
+          sp.style.cssText = 'background:' + ({ lav: '#D4C9FB', pink: '#F7CBCB', blue: '#CACFFB' }[tn] || '#D4C9FB') + ';padding:1px 6px;border-radius:6px;color:#000;';
+          node.appendChild(sp);
         }
         else if (part) node.appendChild(document.createTextNode(part));
       });
