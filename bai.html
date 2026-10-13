@@ -426,6 +426,15 @@
     // Ghi chú ngữ pháp song ngữ (khong tuong tac, chi hien thi).
     // Dung lai style/ham co san cua grammar.html (lesson-shared.js): khung vang
     // '.grammar-callout' cho cau truc, va 'makeToggleSection' cho vi du (bam de mo/thu gon).
+    // Chu thich {{...}} trong text -> <span class="bai-hl bai-hl-<tone>"> (nhan manh "khi nào")
+    function hlText(node, text, tone) {
+      String(text || '').split(/(\{\{.*?\}\})/).forEach(function (part) {
+        const m = /^\{\{(.*)\}\}$/.exec(part);
+        if (m) node.appendChild(el('span', 'bai-hl bai-hl-' + (tone || 'blue'), m[1]));
+        else if (part) node.appendChild(document.createTextNode(part));
+      });
+      return node;
+    }
     function renderGrammarNote(ex) {
       const wrap = el('div', 'bai-grammar');
       if (ex.title) wrap.appendChild(el('h3', 'bai-grammar-title', ex.title));
@@ -437,14 +446,25 @@
           wrap.appendChild(h);
         } else if (b.type === 'structure') {
           const s = el('div', 'grammar-callout bai-grammar-structure');
-          s.appendChild(el('div', 'bai-grammar-structure-vi', b.vi || ''));
-          if (b.en) s.appendChild(el('div', 'bai-grammar-structure-en', b.en));
+          s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.vi, b.tone));
+          if (b.en) s.appendChild(hlText(el('div', 'bai-grammar-structure-en'), b.en, b.tone));
           wrap.appendChild(s);
         } else if (b.type === 'paragraph') {
           const p = el('div', 'bai-grammar-p');
           p.appendChild(el('div', 'bai-grammar-p-vi', b.vi || ''));
           if (b.en) p.appendChild(el('div', 'bai-grammar-p-en', b.en));
           wrap.appendChild(p);
+        } else if (b.type === 'exampleGroup') {
+          const g = el('div', 'bai-exgroup is-' + (b.tone || 'blue'));
+          (b.groups || []).forEach(function (it) {
+            const row = el('div', 'bai-exgroup-item');
+            if (it.label) row.appendChild(el('div', 'bai-exgroup-label', it.label));
+            row.appendChild(hlText(el('div', 'bai-exgroup-vi'), it.vi, b.tone));
+            if (it.en) row.appendChild(el('div', 'bai-exgroup-en', it.en));
+            if (it.note) row.appendChild(el('div', 'bai-exgroup-note', it.note));
+            g.appendChild(row);
+          });
+          wrap.appendChild(g);
         } else if (b.type === 'table') {
           const t = el('div', 'bai-grammar-table');
           t.style.gridTemplateColumns = 'repeat(' + (b.columns || []).length + ', minmax(0, 1fr))';
