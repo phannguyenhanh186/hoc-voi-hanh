@@ -1808,3 +1808,5 @@ h1, h2, h3, h4, h5, h6,
 .bai-hl-lav { background: #D4C9FB; }
 .bai-exgroup.is-plain .bai-exgroup-label { background: #fff; }
 .bai-exgroup-line + .bai-exgroup-line { margin-top: 8px; }
+.has-hl { line-height: 2.05 !important; }
+.bai-hl { display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
