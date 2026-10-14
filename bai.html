@@ -1104,6 +1104,17 @@
         const row = el('div', 'bai-fill-row bai-qa-row');
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
+        if (ex.blankFirst && q.example) {   // câu ví dụ: hiện sẵn câu hỏi mẫu (tô đỏ) + câu trả lời gợi ý, không có ô nhập
+          const exLine = el('div', 'bai-fill-line');
+          exLine.appendChild(document.createTextNode('Ví dụ:\u00A0\u00A0'));
+          exLine.appendChild(el('span', 'bai-fill-example', q.a));
+          exLine.style.margin = '0 0 6px';
+          box.appendChild(exLine);
+          const exHint = el('div', 'bai-fill-line', q.q);
+          exHint.style.margin = '0 0 20px';
+          box.appendChild(exHint);
+          return;
+        }
         if (ex.blankFirst) {
           // Dạng "đặt câu hỏi": số + chỗ trống cùng 1 dòng (sát nhau), gợi ý cách dòng trên 1 khoảng rõ.
           input.setAttribute('aria-label', 'Câu hỏi cho câu ' + num);
