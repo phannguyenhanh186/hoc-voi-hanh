@@ -850,6 +850,184 @@
          ]
         }
        ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 9,
+       "instructionVi": "Chọn đáp án chính xác.",
+       "instructionEn": "Choose the correct question.",
+       "items": [
+        {
+         "prompt": "You want to ask when your friend studies Vietnamese.",
+         "options": [
+          "Khi nào bạn học tiếng Việt?",
+          "Bạn học tiếng Việt khi nào?"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "You want to ask when your friend will travel.",
+         "options": [
+          "Khi nào bạn đi du lịch?",
+          "Bạn đi du lịch khi nào?"
+         ],
+         "answer": "a"
+        },
+        {
+         "prompt": "You want to ask when someone got home yesterday.",
+         "options": [
+          "Khi nào bạn về nhà hôm qua?",
+          "Hôm qua bạn về nhà khi nào?"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "You want to ask when the class starts.",
+         "options": [
+          "Khi nào lớp học bắt đầu?",
+          "Lớp học bắt đầu khi nào?"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "You want to ask when Mr. Tân will travel to Korea next week.",
+         "options": [
+          "Tuần sau khi nào chú Tân đi Hàn?",
+          "Tuần sau Chú Tân đi Hàn khi nào?"
+         ],
+         "answer": "a"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "khi-nao",
+     "label": "Khi nào?",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 10,
+       "instructionVi": "Đọc đoạn văn và trả lời câu hỏi.",
+       "instructionEn": "Read the passage and answer the questions.",
+       "passage": "Mình tên là Nhật. Mình đi làm lúc 8 giờ sáng từ thứ Hai đến thứ Sáu. Buổi tối, mình học tiếng Anh. Cuối tuần trước, mình đi Đà Lạt với bạn. Tháng sau, mình về quê thăm gia đình. Đầu năm sau, mình đi Hà Nội.",
+       "questions": [
+        {
+         "q": "Nhật đi làm khi nào?",
+         "a": "Nhật đi làm lúc 8 giờ sáng từ thứ Hai đến thứ Sáu."
+        },
+        {
+         "q": "Nhật học tiếng Anh khi nào?",
+         "a": "Nhật học tiếng Anh vào buổi tối."
+        },
+        {
+         "q": "Nhật đi Đà Lạt khi nào?",
+         "a": "Nhật đi Đà Lạt vào cuối tuần trước."
+        },
+        {
+         "q": "Khi nào Nhật về quê?",
+         "a": "Nhật về quê vào tháng sau."
+        },
+        {
+         "q": "Khi nào Nhật đi Hà Nội?",
+         "a": "Nhật đi Hà Nội vào đầu năm sau."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "khi-nao",
+     "label": "Khi nào?",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 11,
+       "blankFirst": true,
+       "instructionVi": "Viết câu hỏi phù hợp với câu trả lời.",
+       "instructionEn": "Write a suitable question for each answer.",
+       "questions": [
+        {
+         "example": true,
+         "q": "→ Tháng sau mình đi du lịch.",
+         "a": "Bạn đi du lịch khi nào?"
+        },
+        {
+         "q": "→ Mình học tiếng Việt vào buổi tối.",
+         "a": "Bạn học tiếng Việt khi nào?",
+         "num": 1
+        },
+        {
+         "q": "→ Mình về quê cuối tuần này.",
+         "a": "Bạn về quê khi nào?",
+         "num": 2
+        },
+        {
+         "q": "→ Chị đi làm lúc 8 giờ sáng.",
+         "a": "Chị đi làm khi nào?",
+         "num": 3
+        },
+        {
+         "q": "→ Mình đi Đà Lạt vào tháng 12.",
+         "a": "Bạn đi Đà Lạt khi nào?",
+         "num": 4
+        },
+        {
+         "q": "→ Hôm qua mình về nhà lúc 6 giờ chiều.",
+         "a": "Hôm qua bạn về nhà khi nào?",
+         "num": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "khi-nao",
+     "label": "Khi nào?",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 12,
+       "instructionVi": "Trả lời câu hỏi về bản thân.",
+       "instructionEn": "Answer the questions about yourself.",
+       "items": [
+        {
+         "question": "Bạn học tiếng Việt khi nào?"
+        },
+        {
+         "question": "Bạn đi làm hoặc đi học khi nào?"
+        },
+        {
+         "question": "Bạn thường đi chơi khi nào?"
+        },
+        {
+         "question": "Khi nào bạn về thăm gia đình?"
+        },
+        {
+         "question": "Khi nào bạn đi Việt Nam?"
+        }
+       ]
       }
      ]
     }
