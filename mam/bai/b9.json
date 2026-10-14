@@ -720,7 +720,7 @@
        ]
       },
       {
-       "type": "matchPairs",
+       "type": "matchDrag",
        "num": 8,
        "instructionVi": "Nối câu hỏi với yêu cầu phù hợp.",
        "instructionEn": "Match each question with the appropriate prompts.",
@@ -767,8 +767,7 @@
          "key": "e",
          "text": "Bạn bao nhiêu tuổi?"
         }
-       ],
-       "items": null
+       ]
       },
       {
        "type": "readingQA",
