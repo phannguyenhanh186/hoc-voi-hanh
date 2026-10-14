@@ -1518,6 +1518,21 @@
       });
       bar.appendChild(bCheck); bar.appendChild(bShow);
       wrap.appendChild(list); wrap.appendChild(bar);
+      // Chiều cao mỗi dòng = dòng cao nhất (câu dài xuống dòng vẫn không bị tràn, 2 cột luôn thẳng hàng)
+      let lastW = -1;
+      function fit() {
+        wrap.style.setProperty('--drag-row-h', 'auto');
+        let h = 56;
+        wrap.querySelectorAll('.bai-drag-q, .bai-drag-chip').forEach(function (n) { h = Math.max(h, n.offsetHeight); });
+        wrap.style.setProperty('--drag-row-h', h + 'px');
+      }
+      if (window.ResizeObserver) {
+        new ResizeObserver(function () {
+          const w = Math.round(wrap.clientWidth);
+          if (w === lastW || !w) return;
+          lastW = w; fit();
+        }).observe(wrap);
+      }
       return wrap;
     }
 
