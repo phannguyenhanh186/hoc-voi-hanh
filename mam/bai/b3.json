@@ -1,7 +1,22 @@
 {
+ "_guide": {
+  "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b2&level=mam. App bo qua key bat dau bang '_'.",
+  "status": "Da co section 'phat-am' (Bai 1-4: van cuoi n/m), 'tu-vung' (Bai 5: photoVocab, Bai 6: photoFill), 'nghe' (Bai 7: dung/sai, Bai 8: chon cau dung) va 'ngu-phap' (khong danh so - ghi chu 'Thich - Like', giong cach lam o b1). Cac phan sau (noi, doc, viet...) se bo sung sau.",
+  "exercise.grammarNote": "Ghi chu ngu phap song ngu, khong tuong tac (khong co dap an/audio). 'title' = tieu de lon. 'blocks' la mang cac khoi, moi khoi co 'type': 'paragraph' (doan van vi/en), 'heading' (tieu de nho vi/en), 'structure' (cong thuc vi/en, hien khung vang giong .grammar-callout co san), 'examples' (danh sach vi du dang an/hien - bam nut de mo, giong makeToggleSection cua grammar.html; moi item la {vi, en} - 'en' co the bo trong).",
+  "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong (null).",
+  "exercise.repeatSentences": "Nghe va lap lai ca cau (khong co cho trong). Moi item: 'text' (cau hien thi) + 'audio' (rieng, hoac dung chung ex.audio).",
+  "exercise.listenPick": "Nghe va khoanh tron am dung. Moi item: 'options' (4 lua chon) + 'answer' (dap an - PHAI xac nhan lai truoc khi thu am, xem todo_answers).",
+  "exercise.fillWords": "Giong fillNames nhung dien tu bat ky (khong chi ten). Moi item: before/after/answers[]/audio.",
+  "exercise.photoFill": "Anh + cau co 1 cho trong, dien tu nghe duoc. Item dau tien co the danh dau 'example: true' de hien dap an to do lam mau (khong co o nhap). Moi item: img/name/template ('{0}' la cho trong)/answers (mang cac mang dap an chap nhan)/audio.",
+  "exercise.audioChoice": "Item co the them 'text' (cau hien thi tren man hinh canh nut nghe) - dung cho dang dung/sai hoac can hien cau hoi ro rang. Neu khong co 'text' thi chi hien nut nghe + cac lua chon (dang nghe kin, khong hien chu).",
+  "todo_images": "Duong dan img la placeholder: Bai 5 (tu vung) trong thu muc images/b3/bai5/, Bai 6 (photoFill) trong thu muc images/b3/bai6/ (6 anh: minh, thu, tram, thom, han, giang) - chua co file that, se bo sung sau.",
+  "todo_audio_vocab": "9/10 tu (tu vung) da co san audio trong audio/b3/nam/. Rieng 'trai_cay' (trai cay) chua co file vocab_trai_cay.mp3, can thu am them.",
+  "todo_audio_phatam": "Toan bo audio phan Phat am (pron_*, ex2_*, ex4_*) CHUA THU AM, xem file audio/b3/_pron_phatam_filenames.txt de biet danh sach can thu.",
+  "todo_answers": "Bai 3 (listenPick) va Bai 4 (fillWords): dap an minh dien tam theo tu vung bai hoc, CAN BAN XAC NHAN LAI truoc khi thu am (vi dap an phai khop voi tu duoc doc trong file audio)."
+ },
  "id": "b3",
- "num": 2,
- "title": "Hôm nay bạn có đi làm không?",
+ "num": 3,
+ "title": "Buổi sáng chị thích ăn gì?",
  "sections": [
   {
    "id": "phat-am",
@@ -9,119 +24,295 @@
    "titleEn": "Pronunciation",
    "subtopics": [
     {
-     "id": "am-cuoi-ng",
-     "label": "Âm kết thúc bằng \"ng\"",
+     "id": "am-cuoi-n-m",
+     "label": "Âm cuối \"n\" và \"m\"",
      "exercises": [
       {
        "type": "sounds",
        "num": 1,
        "instructionVi": "Nghe và lặp lại các vần sau.",
        "instructionEn": "Listen and repeat the following sounds.",
-       "noteVi": "Trong tiếng miền Nam, các âm kết thúc bằng \"n\" khác với các âm kết thúc bằng \"ng\".",
-       "noteEn": "In Southern Vietnamese, final -n sounds different from final -ng.",
        "columns": [
         [
          {
           "tone": "yellow",
           "rows": [
            [
-            "ang",
-            "mang",
-            "hàng"
+            "am",
+            "cảm",
+            "làm"
            ],
            [
-            "âng",
-            "vâng",
-            "hẫng"
+            "ăm",
+            "nằm",
+            "tắm"
            ],
            [
-            "ăng",
-            "tăng",
-            "bằng"
+            "âm",
+            "tâm",
+            "châm"
            ]
           ]
-         }
-        ],
-        [
+         },
          {
           "tone": "pink",
           "rows": [
            [
-            "ong",
-            "trong",
-            "mỏng"
+            "em",
+            "kem",
+            "hẻm"
            ],
            [
-            "ông",
-            "không",
-            "đồng"
+            "êm",
+            "thêm",
+            "mềm"
+           ],
+           [
+            "im",
+            "chim",
+            "phim"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "om",
+            "xóm",
+            "gom"
+           ],
+           [
+            "ôm",
+            "chôm",
+            "tôm"
+           ],
+           [
+            "ơm",
+            "cơm",
+            "sớm"
+           ]
+          ]
+         },
+         {
+          "tone": "violet",
+          "rows": [
+           [
+            "um",
+            "cúm",
+            "giùm"
+           ],
+           [
+            "ưm"
            ]
           ]
          }
         ],
         [
          {
+          "tone": "yellow",
+          "rows": [
+           [
+            "an",
+            "bạn",
+            "đàn"
+           ],
+           [
+            "ăn",
+            "khăn",
+            "mặn"
+           ],
+           [
+            "ân",
+            "bận",
+            "chân"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "en",
+            "đen",
+            "chén"
+           ],
+           [
+            "ên",
+            "trên",
+            "lên"
+           ],
+           [
+            "in",
+            "chín",
+            "xin"
+           ]
+          ]
+         },
+         {
           "tone": "blue",
           "rows": [
            [
-            "ung",
-            "thùng",
-            "cũng"
+            "on",
+            "non",
+            "ngon"
            ],
            [
-            "ưng",
-            "mừng",
-            "bưng"
+            "ôn",
+            "trốn",
+            "bốn"
+           ],
+           [
+            "ơn",
+            "lớn",
+            "hơn"
+           ]
+          ]
+         },
+         {
+          "tone": "violet",
+          "rows": [
+           [
+            "un",
+            "bún",
+            "thun"
+           ],
+           [
+            "ưn"
            ]
           ]
          }
         ]
        ],
        "audio": "audio/b3/{voice}/pron_{key}.mp3"
-      }
-     ]
-    },
-    {
-     "id": "phu-am-ng-ngh",
-     "label": "Phụ âm \"ng\"/\"ngh\"",
-     "exercises": [
+      },
       {
        "type": "repeatSentences",
        "num": 2,
-       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionVi": "Nghe và lặp lại các câu sau.",
        "instructionEn": "Listen and repeat the following sentences.",
        "items": [
         {
-         "text": "Ngọc nghe nhạc.",
+         "text": "Mình thích cà phê đen.",
          "audio": "audio/b3/{voice}/ex2_01.mp3"
         },
         {
-         "text": "Nga nghe Nghi nói.",
+         "text": "Anh không thích trái cây.",
          "audio": "audio/b3/{voice}/ex2_02.mp3"
         },
         {
-         "text": "Nghỉ ngơi nhé Ngân.",
+         "text": "Chị của mình thích trà.",
          "audio": "audio/b3/{voice}/ex2_03.mp3"
         },
         {
-         "text": "Nghĩa nghe tiếng Nga.",
+         "text": "Cô không thích cơm thịt bò.",
          "audio": "audio/b3/{voice}/ex2_04.mp3"
         },
         {
-         "text": "Người này là Nghi.",
+         "text": "Chú thích thịt gà nhưng không thích rau.",
          "audio": "audio/b3/{voice}/ex2_05.mp3"
+        }
+       ]
+      },
+      {
+       "type": "listenPick",
+       "num": 3,
+       "instructionVi": "Nghe và khoanh tròn âm đúng.",
+       "instructionEn": "Listen and circle the correct sounds.",
+       "audio": "audio/b3/{voice}/pron_{key}.mp3",
+       "items": [
+        {
+         "options": [
+          "cơm",
+          "con",
+          "cam",
+          "can"
+         ],
+         "answer": "cơm"
         },
         {
-         "text": "Ngày mai Ngạn nghỉ.",
-         "audio": "audio/b3/{voice}/ex2_06.mp3"
+         "options": [
+          "ăm",
+          "ăn",
+          "âm",
+          "ân"
+         ],
+         "answer": "ăn"
         },
         {
-         "text": "Người Việt nấu ăn ngon.",
-         "audio": "audio/b3/{voice}/ex2_07.mp3"
+         "options": [
+          "lêm",
+          "lên",
+          "lơm",
+          "lơn"
+         ],
+         "answer": "lên"
         },
         {
-         "text": "Ngày nào mình cũng nghe tiếng Anh.",
-         "audio": "audio/b3/{voice}/ex2_08.mp3"
+         "options": [
+          "đem",
+          "đen",
+          "đom",
+          "đon"
+         ],
+         "answer": "đen"
+        },
+        {
+         "options": [
+          "tum",
+          "tun",
+          "tôm",
+          "tôn"
+         ],
+         "answer": "tôm"
+        }
+       ]
+      },
+      {
+       "type": "fillWords",
+       "num": 4,
+       "instructionVi": "Nghe và hoàn thành các câu bằng từ bạn nghe được.",
+       "instructionEn": "Listen and complete the sentences with the words you hear.",
+       "items": [
+        {
+         "before": "Mình thích ",
+         "after": " với rau.",
+         "answers": [
+          "cơm"
+         ],
+         "audio": "audio/b3/{voice}/ex4_01.mp3"
+        },
+        {
+         "before": "Anh Nam không thích cà phê ",
+         "after": ".",
+         "answers": [
+          "đen"
+         ],
+         "audio": "audio/b3/{voice}/ex4_02.mp3"
+        },
+        {
+         "before": "Em của mình thích ",
+         "after": " bò.",
+         "answers": [
+          "bún"
+         ],
+         "audio": "audio/b3/{voice}/ex4_03.mp3"
+        },
+        {
+         "before": "Cô Loan thích ",
+         "after": " trái cây đúng không?",
+         "answers": [
+          "ăn"
+         ],
+         "audio": "audio/b3/{voice}/ex4_04.mp3"
+        },
+        {
+         "before": "Chú ",
+         "after": " không thích thịt bò.",
+         "answers": [
+          "Tân"
+         ],
+         "audio": "audio/b3/{voice}/ex4_05.mp3"
         }
        ]
       }
@@ -135,173 +326,8 @@
    "titleEn": "Vocabulary",
    "subtopics": [
     {
-     "id": "di-dong-tu",
-     "label": "Đi + Động từ",
-     "exercises": [
-      {
-       "type": "photoVocab",
-       "num": 3,
-       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
-       "instructionEn": "Look at the photos and listen to the words.",
-       "noteTitleVi": "Đi + Động từ",
-       "noteVi": "Khi “Đi” đứng trước một động từ, nó có nghĩa là bạn di chuyển để thực hiện hành động đó.",
-       "noteTitleEn": "Đi + Verb",
-       "noteEn": "When “Đi” is placed before a verb, it means that you move (or go somewhere) to perform that action.",
-       "items": [
-        {
-         "img": "images/b3/bai3/di_lam.jpg",
-         "caption": "Đi làm",
-         "audio": "audio/b3/{voice}/vocab_di_lam.mp3"
-        },
-        {
-         "img": "images/b3/bai3/di_hoc.jpg",
-         "caption": "Đi học",
-         "audio": "audio/b3/{voice}/vocab_di_hoc.mp3"
-        },
-        {
-         "img": "images/b3/bai3/di_choi.jpg",
-         "caption": "Đi chơi",
-         "audio": "audio/b3/{voice}/vocab_di_choi.mp3"
-        },
-        {
-         "img": "images/b3/bai3/di_an.jpg",
-         "caption": "Đi ăn",
-         "audio": "audio/b3/{voice}/vocab_di_an.mp3"
-        },
-        {
-         "img": "images/b3/bai3/di_ngu.jpg",
-         "caption": "Đi ngủ",
-         "audio": "audio/b3/{voice}/vocab_di_ngu.mp3"
-        },
-        {
-         "img": "images/b3/bai3/di_du_lich.jpg",
-         "caption": "Đi du lịch",
-         "audio": "audio/b3/{voice}/vocab_di_du_lich.mp3"
-        },
-        {
-         "img": "images/b3/bai3/ve_nha.jpg",
-         "caption": "Về nhà",
-         "audio": "audio/b3/{voice}/vocab_ve_nha.mp3"
-        },
-        {
-         "img": "images/b3/bai3/di_ca_phe.jpg",
-         "caption": "Đi cà phê",
-         "audio": "audio/b3/{voice}/vocab_di_ca_phe.mp3"
-        }
-       ]
-      },
-      {
-       "type": "photoFill",
-       "num": 4,
-       "instructionVi": "Nghe và hoàn thành các câu sau.",
-       "instructionEn": "Listen and complete the following sentences.",
-       "words": [
-        "đi làm",
-        "đi học",
-        "đi chơi",
-        "đi ăn",
-        "đi ngủ",
-        "đi du lịch",
-        "về nhà",
-        "đi cà phê"
-       ],
-       "items": [
-        {
-         "img": "images/b3/bai4/hinh1.jpg",
-         "name": "Hình 1",
-         "template": "Hôm nay mình {0}.",
-         "answers": [
-          [
-           "đi chơi"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_01.mp3",
-         "example": true
-        },
-        {
-         "img": "images/b3/bai4/hinh2.jpg",
-         "name": "Hình 2",
-         "template": "Ngày mai chị {0}.",
-         "answers": [
-          [
-           "đi du lịch"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_02.mp3"
-        },
-        {
-         "img": "images/b3/bai4/hinh3.jpg",
-         "name": "Hình 3",
-         "template": "Hôm qua em không {0}.",
-         "answers": [
-          [
-           "đi học"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_03.mp3"
-        },
-        {
-         "img": "images/b3/bai4/hinh4.jpg",
-         "name": "Hình 4",
-         "template": "Hôm nay chú không {0}.",
-         "answers": [
-          [
-           "đi làm"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_04.mp3"
-        },
-        {
-         "img": "images/b3/bai4/hinh5.jpg",
-         "name": "Hình 5",
-         "template": "Buổi tối anh {0}.",
-         "answers": [
-          [
-           "đi ngủ"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_05.mp3"
-        },
-        {
-         "img": "images/b3/bai4/hinh6.jpg",
-         "name": "Hình 6",
-         "template": "Buổi sáng cô {0}.",
-         "answers": [
-          [
-           "đi ăn"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_06.mp3"
-        },
-        {
-         "img": "images/b3/bai4/hinh7.jpg",
-         "name": "Hình 7",
-         "template": "Buổi sáng ngày mai em {0}.",
-         "answers": [
-          [
-           "về nhà"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_07.mp3"
-        },
-        {
-         "img": "images/b3/bai4/hinh8.jpg",
-         "name": "Hình 8",
-         "template": "Buổi chiều hôm qua chị Hân {0}.",
-         "answers": [
-          [
-           "đi cà phê"
-          ]
-         ],
-         "audio": "audio/b3/{voice}/ex4_08.mp3"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "thoi-gian",
-     "label": "Thời gian trong ngày",
+     "id": "do-an-do-uong",
+     "label": "Đồ ăn và Đồ uống",
      "exercises": [
       {
        "type": "photoVocab",
@@ -310,305 +336,129 @@
        "instructionEn": "Look at the photos and listen to the words.",
        "items": [
         {
-         "img": "images/b3/bai3/buoi_sang.jpg",
-         "caption": "Buổi sáng",
-         "audio": "audio/b3/{voice}/vocab_buoi_sang.mp3"
+         "img": "images/b3/bai5/com.jpg",
+         "caption": "Cơm",
+         "audio": "audio/b3/{voice}/vocab_com.mp3"
         },
         {
-         "img": "images/b3/bai3/buoi_trua.jpg",
-         "caption": "Buổi trưa",
-         "audio": "audio/b3/{voice}/vocab_buoi_trua.mp3"
+         "img": "images/b3/bai5/rau.jpg",
+         "caption": "Rau",
+         "audio": "audio/b3/{voice}/vocab_rau.mp3"
         },
         {
-         "img": "images/b3/bai3/buoi_chieu.jpg",
-         "caption": "Buổi chiều",
-         "audio": "audio/b3/{voice}/vocab_buoi_chieu.mp3"
+         "img": "images/b3/bai5/canh.jpg",
+         "caption": "Canh",
+         "audio": "audio/b3/{voice}/vocab_canh.mp3"
         },
         {
-         "img": "images/b3/bai3/buoi_toi.jpg",
-         "caption": "Buổi tối",
-         "audio": "audio/b3/{voice}/vocab_buoi_toi.mp3"
+         "img": "images/b3/bai5/thit_ga.jpg",
+         "caption": "Thịt gà",
+         "audio": "audio/b3/{voice}/vocab_thit_ga.mp3"
+        },
+        {
+         "img": "images/b3/bai5/thit_bo.jpg",
+         "caption": "Thịt bò",
+         "audio": "audio/b3/{voice}/vocab_thit_bo.mp3"
+        },
+        {
+         "img": "images/b3/bai5/bun_bo.jpg",
+         "caption": "Bún bò",
+         "audio": "audio/b3/{voice}/vocab_bun_bo.mp3"
+        },
+        {
+         "img": "images/b3/bai5/ca_phe_den.jpg",
+         "caption": "Cà phê đen",
+         "audio": "audio/b3/{voice}/vocab_ca_phe_den.mp3"
+        },
+        {
+         "img": "images/b3/bai5/ca_phe_sua.jpg",
+         "caption": "Cà phê sữa",
+         "audio": "audio/b3/{voice}/vocab_ca_phe_sua.mp3"
+        },
+        {
+         "img": "images/b3/bai5/tra.jpg",
+         "caption": "Trà",
+         "audio": "audio/b3/{voice}/vocab_tra.mp3"
+        },
+        {
+         "img": "images/b3/bai5/trai_cay.jpg",
+         "caption": "Trái cây",
+         "audio": "audio/b3/{voice}/vocab_trai_cay.mp3"
         }
        ]
       },
       {
-       "type": "calendarFill",
+       "type": "photoFill",
        "num": 6,
-       "instructionVi": "Hoàn thành các câu sau dựa theo thời khoá biểu của Trân.",
-       "instructionEn": "Complete the sentences based on Trân’s schedule.",
-       "matrix": {
-        "columns": [
-         {
-          "title": "Trân",
-          "tone": "pink"
-         }
-        ],
-        "rows": [
-         {
-          "name": "8:00",
-          "tone": "yellow",
-          "cells": [
-           {
-            "text": "đi làm"
-           }
-          ]
-         },
-         {
-          "name": "12:00",
-          "tone": "yellow",
-          "cells": [
-           {
-            "text": "đi ăn"
-           }
-          ]
-         },
-         {
-          "name": "15:00",
-          "tone": "yellow",
-          "cells": [
-           {
-            "text": "đi cà phê"
-           }
-          ]
-         },
-         {
-          "name": "18:00",
-          "tone": "yellow",
-          "cells": [
-           {
-            "text": "về nhà"
-           }
-          ]
-         },
-         {
-          "name": "20:00",
-          "tone": "yellow",
-          "cells": [
-           {
-            "text": "đi chơi"
-           }
-          ]
-         },
-         {
-          "name": "23:00",
-          "tone": "yellow",
-          "cells": [
-           {
-            "text": "đi ngủ"
-           }
-          ]
-         }
-        ]
-       },
-       "words": [
-        "Buổi sáng",
-        "Buổi trưa",
-        "Buổi chiều",
-        "Buổi tối"
-       ],
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
        "items": [
         {
-         "template": "{0} Trân đi ăn.",
+         "img": "images/b3/bai6/minh.jpg",
+         "name": "Minh",
+         "example": true,
+         "template": "Minh thích ăn {0}.",
          "answers": [
           [
-           "Buổi trưa"
+           "bún bò"
           ]
          ],
-         "example": true
+         "audio": "audio/b3/{voice}/ex6_01.mp3"
         },
         {
-         "template": "{0} Trân đi làm.",
+         "img": "images/b3/bai6/thu.jpg",
+         "name": "Thư",
+         "template": "Chị Thư thích uống {0}.",
          "answers": [
           [
-           "Buổi sáng"
-          ]
-         ]
-        },
-        {
-         "template": "{0} Trân đi cà phê.",
-         "answers": [
-          [
-           "Buổi chiều"
-          ]
-         ]
-        },
-        {
-         "template": "{0} Trân về nhà.",
-         "answers": [
-          [
-           "Buổi tối"
-          ]
-         ]
-        },
-        {
-         "template": "{0} Trân đi chơi.",
-         "answers": [
-          [
-           "Buổi tối"
-          ]
-         ]
-        },
-        {
-         "template": "{0} Trân đi ngủ.",
-         "answers": [
-          [
-           "Buổi tối"
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "type": "calendarFill",
-       "num": 7,
-       "instructionVi": "Hoàn thành các câu sau dựa vào lịch bên dưới.",
-       "instructionEn": "Complete the following sentences based on the calendar below.",
-       "matrix": {
-        "columns": [
-         {
-          "title": "Buổi sáng",
-          "tone": "yellow"
-         },
-         {
-          "title": "Buổi trưa",
-          "tone": "pink"
-         },
-         {
-          "title": "Buổi chiều",
-          "tone": "blue"
-         },
-         {
-          "title": "Buổi tối",
-          "tone": "violet"
-         }
-        ],
-        "rows": [
-         {
-          "name": "Ngày 2",
-          "tone": "blue",
-          "cells": [
-           {
-            "img": "images/b3/bai3/di_hoc.jpg",
-            "alt": "đi học"
-           },
-           {
-            "img": "images/b3/bai3/di_an.jpg",
-            "alt": "đi ăn"
-           },
-           {
-            "img": "images/b3/bai3/di_ca_phe.jpg",
-            "alt": "đi cà phê"
-           },
-           {
-            "img": "images/b3/bai3/ve_nha.jpg",
-            "alt": "về nhà"
-           }
-          ]
-         },
-         {
-          "name": "Ngày 3",
-          "tone": "pink",
-          "cells": [
-           {
-            "img": "images/b3/bai3/di_lam.jpg",
-            "alt": "đi làm"
-           },
-           {
-            "img": "images/b3/bai3/di_ngu.jpg",
-            "alt": "đi ngủ"
-           },
-           null,
-           {
-            "img": "images/b3/bai3/ve_nha.jpg",
-            "alt": "về nhà"
-           }
-          ],
-          "label": "Hôm nay"
-         },
-         {
-          "name": "Ngày 4",
-          "tone": "yellow",
-          "cells": [
-           {
-            "img": "images/b3/bai3/di_ca_phe.jpg",
-            "alt": "đi cà phê"
-           },
-           {
-            "img": "images/b3/bai3/di_an.jpg",
-            "alt": "đi ăn"
-           },
-           {
-            "img": "images/b3/bai3/di_choi.jpg",
-            "alt": "đi chơi"
-           },
-           null
-          ]
-         }
-        ]
-       },
-       "words": [
-        "Hôm nay",
-        "Ngày mai",
-        "Hôm qua",
-        "Buổi sáng",
-        "Buổi trưa",
-        "Buổi chiều",
-        "Buổi tối"
-       ],
-       "items": [
-        {
-         "template": "{0} hôm qua mình đi học.",
-         "answers": [
-          [
-           "Buổi sáng"
-          ]
-         ]
-        },
-        {
-         "template": "Buổi trưa {0} mình không đi ăn.",
-         "answers": [
-          [
-           "hôm nay"
-          ]
-         ]
-        },
-        {
-         "template": "Buổi chiều {0} mình đi cà phê.",
-         "answers": [
-          [
-           "hôm qua"
-          ]
-         ]
-        },
-        {
-         "template": "{0} hôm qua mình về nhà.",
-         "answers": [
-          [
-           "Buổi tối"
-          ]
-         ]
-        },
-        {
-         "template": "Buổi chiều {0} mình đi chơi.",
-         "answers": [
-          [
-           "ngày mai"
-          ]
-         ]
-        },
-        {
-         "template": "Buổi tối {0} và {1} mình về nhà.",
-         "answers": [
-          [
-           "hôm qua",
-           "hôm nay"
-          ],
-          [
-           "hôm nay",
-           "hôm qua"
+           "cà phê sữa"
           ]
          ],
-         "distinct": true
+         "audio": "audio/b3/{voice}/ex6_02.mp3"
+        },
+        {
+         "img": "images/b3/bai6/tram.jpg",
+         "name": "Trâm",
+         "template": "Trâm không thích ăn {0}.",
+         "answers": [
+          [
+           "rau"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex6_03.mp3"
+        },
+        {
+         "img": "images/b3/bai6/thom.jpg",
+         "name": "Thơm",
+         "template": "Cô Thơm thích ăn cơm với {0}.",
+         "answers": [
+          [
+           "canh"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex6_04.mp3"
+        },
+        {
+         "img": "images/b3/bai6/han.jpg",
+         "name": "Hân",
+         "template": "Hân thích uống {0}.",
+         "answers": [
+          [
+           "trà"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex6_05.mp3"
+        },
+        {
+         "img": "images/b3/bai6/giang.jpg",
+         "name": "Giang",
+         "template": "Anh Giang không thích ăn {0}.",
+         "answers": [
+          [
+           "thịt gà"
+          ]
+         ],
+         "audio": "audio/b3/{voice}/ex6_06.mp3"
         }
        ]
       }
@@ -622,118 +472,36 @@
    "titleEn": "Listening",
    "subtopics": [
     {
-     "id": "di-dong-tu",
-     "label": "Đi + Động từ",
+     "id": "do-an-do-uong",
+     "label": "Đồ ăn và Đồ uống",
      "exercises": [
       {
-       "type": "fillWords",
-       "num": 8,
-       "instructionVi": "Nghe và hoàn thành các câu sau.",
-       "instructionEn": "Listen and complete the following sentences.",
-       "words": [
-        "đi làm",
-        "đi học",
-        "đi ăn",
-        "đi ngủ",
-        "đi chơi",
-        "đi du lịch"
-       ],
-       "items": [
-        {
-         "before": "Buổi sáng hôm nay cô Loan ",
-         "after": ".",
-         "answers": [
-          "đi chơi"
-         ],
-         "audio": "audio/b3/{voice}/ex6_01.mp3"
-        },
-        {
-         "before": "Ngày mai chị Hân không ",
-         "after": ".",
-         "answers": [
-          "đi du lịch"
-         ],
-         "audio": "audio/b3/{voice}/ex6_02.mp3"
-        },
-        {
-         "before": "Buổi chiều hôm qua anh Nghĩa ",
-         "after": ".",
-         "answers": [
-          "đi làm"
-         ],
-         "audio": "audio/b3/{voice}/ex6_03.mp3"
-        },
-        {
-         "before": "Buổi tối ngày mai An không ",
-         "after": ".",
-         "answers": [
-          "đi học"
-         ],
-         "audio": "audio/b3/{voice}/ex6_04.mp3"
-        },
-        {
-         "before": "Hôm qua chú Phúc không ",
-         "after": ".",
-         "answers": [
-          "đi ăn"
-         ],
-         "audio": "audio/b3/{voice}/ex6_05.mp3"
-        },
-        {
-         "before": "Buổi tối hôm qua Minh ",
-         "after": ".",
-         "answers": [
-          "đi ngủ"
-         ],
-         "audio": "audio/b3/{voice}/ex6_06.mp3"
-        }
-       ]
-      },
-      {
        "type": "audioChoice",
-       "num": 9,
+       "num": 7,
        "instructionVi": "Nghe và trả lời các câu hỏi sau.",
        "instructionEn": "Listen and answer the following questions.",
        "items": [
         {
          "audio": "audio/b3/{voice}/listen_ex7_01.mp3",
-         "text": "Hôm nay anh Giang đi làm.",
+         "text": "Chị Vân thích cà phê sữa.",
          "options": [
           "Đúng",
           "Sai"
          ],
-         "answer": "a"
+         "answer": "b"
         },
         {
          "audio": "audio/b3/{voice}/listen_ex7_02.mp3",
-         "text": "Ngày mai chị Ngân không đi ăn.",
+         "text": "Anh Khang không thích cơm thịt gà.",
          "options": [
           "Đúng",
           "Sai"
          ],
-         "answer": "a"
+         "answer": "b"
         },
         {
          "audio": "audio/b3/{voice}/listen_ex7_03.mp3",
-         "text": "Hôm qua Nghĩa đi học.",
-         "options": [
-          "Đúng",
-          "Sai"
-         ],
-         "answer": "b"
-        },
-        {
-         "audio": "audio/b3/{voice}/listen_ex7_04.mp3",
-         "text": "Hôm nay chị Lan không đi chơi.",
-         "options": [
-          "Đúng",
-          "Sai"
-         ],
-         "answer": "b"
-        },
-        {
-         "audio": "audio/b3/{voice}/listen_ex7_05.mp3",
-         "text": "Ngày mai chú Phong đi du lịch.",
+         "text": "Chú Tâm thích trái cây.",
          "options": [
           "Đúng",
           "Sai"
@@ -741,11 +509,51 @@
          "answer": "a"
         },
         {
-         "audio": "audio/b3/{voice}/listen_ex7_06.mp3",
-         "text": "Bây giờ Liên đi ngủ.",
+         "audio": "audio/b3/{voice}/listen_ex7_04.mp3",
+         "text": "Cô Hân không thích bún bò.",
          "options": [
           "Đúng",
           "Sai"
+         ],
+         "answer": "a"
+        }
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 8,
+       "instructionVi": "Nghe và chọn đáp án đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "audio": "audio/b3/{voice}/listen_ex8_01.mp3",
+         "options": [
+          "An thích phở bò.",
+          "An thích phở gà."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex8_02.mp3",
+         "options": [
+          "Chị Ngân không thích trà.",
+          "Chị Ngân không thích trái cây."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex8_03.mp3",
+         "options": [
+          "Trang không thích cà phê đen.",
+          "Trang không thích cà phê sữa."
+         ],
+         "answer": "a"
+        },
+        {
+         "audio": "audio/b3/{voice}/listen_ex8_04.mp3",
+         "options": [
+          "Quân thích ăn cơm với canh.",
+          "Quân thích ăn cơm với rau."
          ],
          "answer": "a"
         }
@@ -761,83 +569,454 @@
    "titleEn": "Grammar",
    "subtopics": [
     {
-     "id": "co-khong",
-     "label": "Có...không?",
+     "id": "thich",
+     "label": "Thích – Like",
      "exercises": [
       {
        "type": "grammarNote",
        "noNum": true,
        "instructionVi": "",
-       "title": "CÂU HỎI CÓ...KHÔNG? – YES/NO QUESTIONS",
+       "title": "THÍCH – LIKE",
        "blocks": [
         {
          "type": "paragraph",
-         "vi": "Trong tiếng Việt, có...không? được dùng để đặt câu hỏi có/không. Cấu trúc này tương tự như các câu hỏi bắt đầu bằng “Do/Does...?” trong tiếng Anh.",
-         "en": "In Vietnamese, có...không? is used to ask a yes/no question. It is similar to questions beginning with “Do/Does...?” in English."
+         "vi": "Thích có nghĩa là “like” trong tiếng Anh. Dùng thích để nói về người, đồ vật, món ăn, đồ uống hoặc hoạt động mà bạn yêu thích.",
+         "en": "Thích means “to like.” It is used to talk about things, food, drinks, or activities that you like."
+        },
+        {
+         "type": "heading",
+         "vi": "1. Thích + danh từ",
+         "en": "1. Thích + noun"
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + {{có::lav}} + ... + {{không::pink}}?",
-         "en": "Subject + {{có::lav}} + ... + {{không::pink}}?"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Có đứng trước nội dung chính của câu hỏi, còn không đứng ở cuối câu.",
-         "en": "The word có comes before the main information, and không comes at the end of the question."
+         "vi": "Chủ ngữ + {{thích::pink}} + danh từ",
+         "en": "Subject + {{thích::pink}} + noun"
         },
         {
          "type": "examples",
          "items": [
           {
-           "vi": "Bạn {{có::lav}} thích phở {{không::pink}}?",
-           "en": "Do you like phở?"
+           "vi": "Mình {{thích::pink}} phở.",
+           "en": "I like phở."
           },
           {
-           "vi": "Anh {{có::lav}} uống cà phê {{không::pink}}?",
-           "en": "Do you drink coffee?"
+           "vi": "Chị Liên {{thích::pink}} cà phê.",
+           "en": "Lien likes coffee."
           },
           {
-           "vi": "Chị {{có::lav}} đi du lịch {{không::pink}}?",
-           "en": "Do you travel?"
+           "vi": "Ann {{thích::pink}} tiếng Việt.",
+           "en": "Ann likes Vietnamese."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Thích không thay đổi theo chủ ngữ.",
+         "en": "The word thích does not change according to the subject."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình {{thích::pink}} phở."
+          },
+          {
+           "vi": "Chị {{thích::pink}} bún bò."
+          },
+          {
+           "vi": "Mẹ của em {{thích::pink}} trà."
+          },
+          {
+           "vi": "Chú Bình {{thích::pink}} cà phê."
           }
          ]
         },
         {
          "type": "heading",
-         "vi": "2. Short answers – Câu trả lời ngắn",
+         "vi": "2. Thích ăn gì?",
+         "en": "2. What do you like to eat?"
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + {{thích::pink}} ăn + món ăn",
+         "en": "Subject + {{thích::pink}} ăn + food"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn {{thích::pink}} ăn gì?",
+           "en": "What do you like to eat?"
+          },
+          {
+           "vi": "Mình {{thích::pink}} ăn phở. / Mình {{thích::pink}} phở.",
+           "en": "I like to eat phở. / I like phở."
+          },
+          {
+           "vi": "Anh {{thích::pink}} ăn gì?",
+           "en": "What do you like to eat?"
+          },
+          {
+           "vi": "Anh {{thích::pink}} ăn cơm gà. / Anh {{thích::pink}} cơm gà.",
+           "en": "I like to eat chicken rice. / I like chicken rice."
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "Cả “Mình thích phở” và “Mình thích ăn phở” đều tự nhiên. Câu đầu tập trung vào món ăn; câu sau nhấn mạnh việc ăn món đó.",
+         "en": "Both “Mình thích phở” and “Mình thích ăn phở” are natural. The first focuses on the food; the second focuses on the activity of eating."
+        },
+        {
+         "type": "heading",
+         "vi": "3. Thích uống gì?",
+         "en": "3. What do you like to drink?"
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + {{thích::pink}} uống + đồ uống",
+         "en": "Subject + {{thích::pink}} uống + drink"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn {{thích::pink}} uống gì?",
+           "en": "What do you like to drink?"
+          },
+          {
+           "vi": "Mình {{thích::pink}} uống cà phê. / Mình {{thích::pink}} cà phê.",
+           "en": "I like to drink coffee. / I like coffee."
+          },
+          {
+           "vi": "Chị {{thích::pink}} uống gì?",
+           "en": "What do you like to drink?"
+          },
+          {
+           "vi": "Chị {{thích::pink}} uống trà. / Chị {{thích::pink}} trà.",
+           "en": "I like to drink tea. / I like tea."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "4. Không thích",
+         "en": "4. Do not like"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Đặt không trước thích để tạo câu phủ định.",
+         "en": "Put không before thích to make a negative sentence."
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + {{không::blue}} {{thích::pink}} + danh từ",
+         "en": "Subject + {{không::blue}} {{thích::pink}} + noun"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Mình {{không::blue}} {{thích::pink}} cà phê.",
+           "en": "I don't like coffee."
+          },
+          {
+           "vi": "Em {{không::blue}} {{thích::pink}} ăn thịt.",
+           "en": "I don't like eating meat."
+          },
+          {
+           "vi": "Ba của mình {{không::blue}} {{thích::pink}} uống trà.",
+           "en": "My father doesn't like drinking tea."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "readingQA",
+       "num": 9,
+       "blankFirst": true,
+       "instructionVi": "Hoàn thành câu hỏi cho những câu trả lời sau.",
+       "instructionEn": "Complete the question for each answer below.",
+       "questions": [
+        {
+         "q": "→ Mình thích ăn cơm bò.",
+         "a": "Bạn thích ăn gì?"
+        },
+        {
+         "q": "→ Chị thích uống cà phê đen.",
+         "a": "Chị thích uống gì?"
+        },
+        {
+         "q": "→ Cô thích ăn phở gà.",
+         "a": "Cô thích ăn gì?"
+        },
+        {
+         "q": "→ Mẹ của em thích uống trà.",
+         "a": "Mẹ của em thích uống gì?"
+        }
+       ]
+      },
+      {
+       "type": "readingQA",
+       "num": 10,
+       "instructionVi": "Dựa vào bảng sau và hoàn thành câu.",
+       "instructionEn": "Use the table below to complete the sentences.",
+       "table": {
+        "rows": [
+         "Tâm",
+         "Lan",
+         "Kiên",
+         "Vân"
+        ],
+        "cols": [
+         "cà phê đen",
+         "cà phê sữa",
+         "trà",
+         "trái cây",
+         "bún bò",
+         "phở gà",
+         "canh",
+         "rau",
+         "cơm",
+         "thịt gà",
+         "thịt bò"
+        ],
+        "marks": {
+         "Tâm": {
+          "cà phê đen": "x",
+          "cà phê sữa": "✓",
+          "trà": "✓",
+          "phở gà": "✓",
+          "thịt gà": "✓",
+          "thịt bò": "x"
+         },
+         "Lan": {
+          "cà phê đen": "x",
+          "trà": "✓",
+          "trái cây": "✓",
+          "cơm": "✓",
+          "rau": "✓",
+          "thịt bò": "✓",
+          "thịt gà": "x",
+          "canh": "x"
+         },
+         "Kiên": {
+          "cà phê đen": "✓",
+          "bún bò": "✓",
+          "phở gà": "✓",
+          "trà": "x",
+          "trái cây": "x",
+          "cơm": "x"
+         },
+         "Vân": {
+          "cà phê đen": "x",
+          "cà phê sữa": "✓",
+          "cơm": "✓",
+          "thịt bò": "✓",
+          "canh": "✓",
+          "thịt gà": "x",
+          "phở gà": "x",
+          "trà": "x"
+         }
+        }
+       },
+       "questions": [
+        {
+         "num": 1,
+         "q": "Tâm có thích cà phê đen không?",
+         "a": "Tâm không thích cà phê đen.",
+         "example": true
+        },
+        {
+         "num": 2,
+         "q": "Lan có thích rau không?",
+         "a": "Lan thích rau."
+        },
+        {
+         "num": 3,
+         "q": "Kiên có thích cơm không?",
+         "a": "Kiên không thích cơm."
+        },
+        {
+         "num": 4,
+         "q": "Vân có thích trà không?",
+         "a": "Vân không thích trà."
+        },
+        {
+         "num": 5,
+         "q": "Ai thích cà phê đen?",
+         "a": "Kiên thích cà phê đen."
+        },
+        {
+         "num": 6,
+         "q": "Ai thích thịt bò?",
+         "a": "Lan và Vân thích thịt bò."
+        },
+        {
+         "num": 7,
+         "q": "Ai không thích trái cây?",
+         "a": "Kiên không thích trái cây."
+        },
+        {
+         "num": 8,
+         "q": "Ai không thích thịt gà?",
+         "a": "Lan và Vân không thích thịt gà."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "co-khong",
+     "label": "Câu hỏi có…không?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "CÂU HỎI CÓ…KHÔNG? – YES/NO QUESTIONS",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Cấu trúc câu hỏi",
+         "en": "1. Question structure"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, có...không? được dùng để đặt câu hỏi có/không. Cấu trúc này tương tự như các câu hỏi bắt đầu bằng “Do/Does...?” trong tiếng Anh.",
+         "en": "In Vietnamese, có...không? is used to ask yes/no questions. It is similar to questions beginning with “Do/Does...?” in English."
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + {{có::lav}} + động từ/tính từ + {{không::pink}}?",
+         "en": "Subject + {{có::lav}} + verb/adjective + {{không::pink}}?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "có đứng trước động từ hoặc tính từ của câu hỏi.",
+         "en": "có comes before the verb or adjective."
+        },
+        {
+         "type": "paragraph",
+         "vi": "không đứng ở cuối câu hỏi.",
+         "en": "không comes at the end of the question."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "plain",
+         "groups": [
+          {
+           "label": "Ví dụ 1 — Example 1",
+           "lines": [
+            {
+             "vi": "Bạn {{có::lav}} thích phở {{không::pink}}?",
+             "en": "Do you like phở?"
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 2 — Example 2",
+           "lines": [
+            {
+             "vi": "Anh {{có::lav}} uống cà phê {{không::pink}}?",
+             "en": "Do you drink coffee?"
+            }
+           ]
+          },
+          {
+           "label": "Ví dụ 3 — Example 3",
+           "lines": [
+            {
+             "vi": "Chị {{có::lav}} đi du lịch {{không::pink}}?",
+             "en": "Do you travel?"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "2. Câu trả lời ngắn",
          "en": "2. Short answers"
         },
         {
          "type": "paragraph",
-         "vi": "Câu trả lời ngắn thường lặp lại chủ ngữ và dùng có hoặc không.",
-         "en": "A short answer usually repeats the subject and uses có or không."
+         "vi": "Câu trả lời ngắn thường dùng chủ ngữ + có để trả lời “Yes” và chủ ngữ + không để trả lời “No”.",
+         "en": "Short answers usually use subject + có for “Yes” and subject + không for “No”."
         },
         {
          "type": "structure",
-         "vi": "[Đại từ] + {{có::lav}}. → Yes.\n[Đại từ] + {{không::pink}}. → No.",
-         "en": "[Pronoun] + {{có::lav}}. → Yes.\n[Pronoun] + {{không::pink}}. → No."
+         "vi": "[Đại từ] + {{có::lav}}.",
+         "en": "→ Yes, [subject] do/does."
         },
         {
-         "type": "examples",
-         "items": [
+         "type": "structure",
+         "vi": "[Đại từ] + {{không::pink}}.",
+         "en": "→ No, [subject] don't/doesn't."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "plain",
+         "groups": [
           {
-           "vi": "Bạn {{có::lav}} thích bún bò {{không::pink}}? → Mình {{có::lav}}. / Mình {{không::pink}}.",
-           "en": "Do you like beef noodle? → Yes, I do. / No, I don't."
+           "label": "Ví dụ 1 — Example 1",
+           "lines": [
+            {
+             "vi": "Bạn có thích bún bò không?",
+             "en": "Do you like bún bò?"
+            },
+            {
+             "vi": "→ Mình {{có::lav}}. / Mình {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
           },
           {
-           "vi": "Bạn {{có::lav}} thích cà phê {{không::pink}}? → Mình {{có::lav}}. / Mình {{không::pink}}."
+           "label": "Ví dụ 2 — Example 2",
+           "lines": [
+            {
+             "vi": "Bạn có thích cà phê không?",
+             "en": "Do you like coffee?"
+            },
+            {
+             "vi": "→ Mình {{có::lav}}. / Mình {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
           },
           {
-           "vi": "Cô {{có::lav}} đi du lịch {{không::pink}}? → Cô {{có::lav}}. / Cô {{không::pink}}."
+           "label": "Ví dụ 3 — Example 3",
+           "lines": [
+            {
+             "vi": "Cô có đi du lịch không?",
+             "en": "Do you travel?"
+            },
+            {
+             "vi": "→ Cô {{có::lav}}. / Cô {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
           },
           {
-           "vi": "Anh {{có::lav}} ăn thịt gà {{không::pink}}? → Anh {{có::lav}}. / Anh {{không::pink}}."
+           "label": "Ví dụ 4 — Example 4",
+           "lines": [
+            {
+             "vi": "Anh có ăn thịt gà không?",
+             "en": "Do you eat chicken?"
+            },
+            {
+             "vi": "→ Anh {{có::lav}}. / Anh {{không::pink}}.",
+             "en": "Yes, I do. / No, I don't."
+            }
+           ]
           }
          ]
         },
         {
          "type": "heading",
-         "vi": "3. Full answers – Câu trả lời đầy đủ",
+         "vi": "3. Câu trả lời đầy đủ",
          "en": "3. Full answers"
         },
         {
@@ -846,232 +1025,69 @@
          "en": "You can also give a full answer by repeating the verb or phrase from the question."
         },
         {
-         "type": "examples",
-         "items": [
+         "type": "structure",
+         "vi": "[Chủ ngữ] + {{có::lav}} + [động từ/cụm từ].",
+         "en": "→ Yes, [subject] do/does."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + {{không::pink}} + [động từ/cụm từ].",
+         "en": "→ No, [subject] don't/doesn't."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "plain",
+         "groups": [
           {
-           "vi": "Em {{có::lav}} thích phở {{không::pink}}? → Em {{có::lav}} thích phở. / Em {{không::pink}} thích phở.",
-           "en": "Do you like phở? → I do like phở. / I don't like phở."
+           "label": "Ví dụ 1 — Example 1",
+           "lines": [
+            {
+             "vi": "Em có thích phở không?",
+             "en": "Do you like phở?"
+            },
+            {
+             "vi": "→ Em {{có::lav}} thích phở. / Em {{không::pink}} thích phở.",
+             "en": "Yes, I do like phở. / No, I don't like phở."
+            }
+           ]
           },
           {
-           "vi": "Chú {{có::lav}} ăn trái cây {{không::pink}}? → Chú {{có::lav}} ăn trái cây. / Chú {{không::pink}} ăn trái cây.",
-           "en": "Do you eat fruits? → I do eat fruits. / I don't eat fruits."
+           "label": "Ví dụ 2 — Example 2",
+           "lines": [
+            {
+             "vi": "Chú có ăn trái cây không?",
+             "en": "Do you eat fruit?"
+            },
+            {
+             "vi": "→ Chú {{có::lav}} ăn trái cây. / Chú {{không::pink}} ăn trái cây.",
+             "en": "Yes, I do eat fruit. / No, I don't eat fruit."
+            }
+           ]
           }
          ]
-        }
-       ]
-      },
-      {
-       "type": "wordOrder",
-       "num": 10,
-       "instructionVi": "Sắp xếp các từ sau để tạo thành câu hỏi hoàn chỉnh.",
-       "instructionEn": "Put the words in the correct order to make complete questions.",
-       "items": [
-        {
-         "words": [
-          "bạn",
-          "làm",
-          "có",
-          "không",
-          "đi",
-          "hôm",
-          "qua"
-         ],
-         "answers": [
-          "Hôm qua bạn có đi làm không?"
-         ],
-         "example": true
         },
         {
-         "words": [
-          "có",
-          "mai",
-          "học",
-          "chị",
-          "ngày",
-          "đi",
-          "không"
-         ],
-         "answers": [
-          "Ngày mai chị có đi học không?",
-          "Chị có đi học ngày mai không?"
-         ]
+         "type": "heading",
+         "vi": "4. Ghi nhớ",
+         "en": "4. Remember"
         },
         {
-         "words": [
-          "không",
-          "ngủ",
-          "qua",
-          "chú",
-          "hôm",
-          "đi",
-          "có"
-         ],
-         "answers": [
-          "Hôm qua chú có đi ngủ không?",
-          "Chú có đi ngủ hôm qua không?"
-         ]
+         "type": "paragraph",
+         "vi": "có...không? dùng để hỏi một người có làm gì hoặc có thích điều gì không.",
+         "en": "Use có...không? to ask whether someone does or likes something."
         },
         {
-         "words": [
-          "chơi",
-          "mai",
-          "có",
-          "đi",
-          "không",
-          "ngày",
-          "anh"
-         ],
-         "answers": [
-          "Ngày mai anh có đi chơi không?",
-          "Anh có đi chơi ngày mai không?"
-         ]
+         "type": "paragraph",
+         "vi": "Có. = Yes."
         },
         {
-         "words": [
-          "qua",
-          "lịch",
-          "đi",
-          "không",
-          "có",
-          "em",
-          "hôm",
-          "du"
-         ],
-         "answers": [
-          "Hôm qua em có đi du lịch không?",
-          "Em có đi du lịch hôm qua không?"
-         ]
+         "type": "paragraph",
+         "vi": "Không. = No."
         },
         {
-         "words": [
-          "đi",
-          "hôm",
-          "có",
-          "ăn",
-          "không",
-          "cô",
-          "nay"
-         ],
-         "answers": [
-          "Hôm nay cô có đi ăn không?",
-          "Cô có đi ăn hôm nay không?"
-         ]
-        },
-        {
-         "words": [
-          "làm",
-          "mai",
-          "chị",
-          "không",
-          "đi",
-          "có",
-          "ngày"
-         ],
-         "answers": [
-          "Ngày mai chị có đi làm không?",
-          "Chị có đi làm ngày mai không?"
-         ]
-        }
-       ]
-      },
-      {
-       "type": "writeAnswer",
-       "num": 11,
-       "instructionVi": "Viết câu trả lời phù hợp cho từng câu hỏi theo gợi ý.",
-       "instructionEn": "Write an appropriate answer for each question using the prompts.",
-       "noteTitleVi": "Gợi ý",
-       "noteVi": "Có thể trả lời ngắn (Mình có.) hoặc đầy đủ (Mình có đi học.). Với câu trả lời “không”, hãy thêm hoạt động em sẽ làm.",
-       "noteTitleEn": "Hint",
-       "noteEn": "You can answer briefly (Mình có.) or fully (Mình có đi học.). For a “không” answer, add what you will do instead.",
-       "items": [
-        {
-         "question": "Hôm nay bạn có đi học không?",
-         "hint": "Có",
-         "pronouns": [
-          "mình",
-          "tôi",
-          "tớ"
-         ],
-         "answers": [
-          "{p} có.",
-          "{p} có đi học.",
-          "Có.",
-          "Có, {p} đi học."
-         ],
-         "model": "{p} có đi học."
-        },
-        {
-         "question": "Ngày mai bạn có đi làm không?",
-         "hint": "Không, đi du lịch",
-         "pronouns": [
-          "mình",
-          "tôi",
-          "tớ"
-         ],
-         "answers": [
-          "{p} không đi làm. {p} đi du lịch.",
-          "{p} không. {p} đi du lịch.",
-          "Không, {p} đi du lịch.",
-          "Không, {p} không đi làm. {p} đi du lịch.",
-          "{p} không đi làm, {p} đi du lịch.",
-          "{p} không đi làm. Ngày mai {p} đi du lịch.",
-          "{p} không đi làm. {p} đi du lịch ngày mai."
-         ],
-         "model": "{p} không đi làm. {p} đi du lịch."
-        },
-        {
-         "question": "Hôm qua bạn có đi ăn không?",
-         "hint": "Có",
-         "pronouns": [
-          "mình",
-          "tôi",
-          "tớ"
-         ],
-         "answers": [
-          "{p} có.",
-          "{p} có đi ăn.",
-          "Có.",
-          "Có, {p} đi ăn."
-         ],
-         "model": "{p} có đi ăn."
-        },
-        {
-         "question": "Ngày mai bạn có đi du lịch không?",
-         "hint": "Không, đi làm",
-         "pronouns": [
-          "mình",
-          "tôi",
-          "tớ"
-         ],
-         "answers": [
-          "{p} không đi du lịch. {p} đi làm.",
-          "{p} không. {p} đi làm.",
-          "Không, {p} đi làm.",
-          "Không, {p} không đi du lịch. {p} đi làm.",
-          "{p} không đi du lịch, {p} đi làm.",
-          "{p} không đi du lịch. Ngày mai {p} đi làm.",
-          "{p} không đi du lịch. {p} đi làm ngày mai."
-         ],
-         "model": "{p} không đi du lịch. {p} đi làm."
-        },
-        {
-         "question": "Hôm nay chị có đi chơi không?",
-         "hint": "Không, đi ngủ",
-         "pronouns": [
-          "chị",
-          "mình",
-          "tôi"
-         ],
-         "answers": [
-          "{p} không đi chơi. {p} đi ngủ.",
-          "{p} không. {p} đi ngủ.",
-          "Không, {p} đi ngủ.",
-          "Không, {p} không đi chơi. {p} đi ngủ.",
-          "{p} không đi chơi, {p} đi ngủ.",
-          "{p} không đi chơi. Hôm nay {p} đi ngủ.",
-          "{p} không đi chơi. {p} đi ngủ hôm nay."
-         ],
-         "model": "{p} không đi chơi. {p} đi ngủ."
+         "type": "paragraph",
+         "vi": "Trong câu trả lời đầy đủ, không đứng trước động từ để tạo câu phủ định.",
+         "en": "In a full answer, không comes before the verb to make a negative sentence."
         }
        ]
       }
@@ -1085,39 +1101,39 @@
    "titleEn": "Reading",
    "subtopics": [
     {
-     "id": "co-khong",
-     "label": "Có...không?",
+     "id": "thich",
+     "label": "Thích",
      "exercises": [
       {
        "type": "readingQA",
-       "num": 12,
-       "instructionVi": "Đọc nhật ký của Nghĩa và trả lời câu hỏi.",
-       "instructionEn": "Read Nghĩa's diary and answer the questions.",
-       "passage": "Hôm nay mình không đi làm, nhưng buổi sáng hôm qua mình đi học và đi chơi với Kiên buổi tối. Hôm nay mình không đi làm. Buổi trưa mình đi cà phê. Buổi sáng ngày mai mình đi làm và buổi tối mình đi ăn với Hùng và Ngân.",
+       "num": 11,
+       "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
+       "instructionEn": "Read the following paragraph and answer the questions.",
+       "passage": "Mình là Phương. Mình thích cà phê sữa và trà. Mình cũng thích phở bò và cơm gà. Tâm, bạn của mình, thích cà phê đen. Tâm không thích phở bò nhưng Tâm thích bún bò với rau.",
        "questions": [
         {
-         "q": "Hôm nay Nghĩa có đi làm không?",
-         "a": "Hôm nay Nghĩa không đi làm."
+         "q": "Phương thích uống gì?",
+         "a": "Phương thích uống cà phê sữa và trà."
         },
         {
-         "q": "Hôm nay Nghĩa làm gì?",
-         "a": "Buổi trưa hôm nay Nghĩa đi cà phê."
+         "q": "Phương thích ăn gì?",
+         "a": "Phương thích ăn phở bò và cơm gà."
         },
         {
-         "q": "Hôm qua Nghĩa có đi học không?",
-         "a": "Hôm qua Nghĩa có đi học."
+         "q": "Phương không thích uống gì?",
+         "a": "Phương không thích uống cà phê đen."
         },
         {
-         "q": "Buổi tối hôm qua Nghĩa làm gì?",
-         "a": "Buổi tối hôm qua Nghĩa đi chơi với Kiên."
+         "q": "Tâm thích uống gì?",
+         "a": "Tâm thích uống cà phê đen."
         },
         {
-         "q": "Buổi sáng ngày mai Nghĩa làm gì?",
-         "a": "Buổi sáng ngày mai Nghĩa đi làm."
+         "q": "Tâm thích ăn gì?",
+         "a": "Tâm thích ăn bún bò với rau."
         },
         {
-         "q": "Buổi tối ngày mai Nghĩa có về nhà không?",
-         "a": "Không. Buổi tối ngày mai Nghĩa đi ăn với Hùng và Ngân."
+         "q": "Tâm không thích ăn gì?",
+         "a": "Tâm không thích ăn phở bò."
         }
        ]
       }
@@ -1131,122 +1147,72 @@
    "titleEn": "Writing",
    "subtopics": [
     {
-     "id": "co-khong",
-     "label": "Có...không?",
+     "id": "thich",
+     "label": "Thích",
      "exercises": [
       {
        "type": "chooseWord",
-       "num": 13,
+       "num": 12,
        "instructionVi": "Chọn từ đúng.",
        "instructionEn": "Choose the correct words.",
        "items": [
         {
-         "template": "{0} nay bạn có đi ăn không?",
+         "template": "Em thích cà phê {0}.",
          "blanks": [
           {
            "options": [
-            "Hôm",
-            "Hom"
+            "đem",
+            "đen"
            ],
-           "answer": "Hôm"
+           "answer": "đen"
           }
          ]
         },
         {
-         "template": "Ngày mai em có đi {0} không?",
+         "template": "Anh Phong {0} thích trà.",
          "blanks": [
           {
            "options": [
-            "học",
-            "hộc"
+            "khôn",
+            "không"
            ],
-           "answer": "học"
+           "answer": "không"
           }
          ]
         },
         {
-         "template": "{0} sáng hôm qua chị Nga có đi {1} không?",
+         "template": "Chị Hiền thích {0} phở gà.",
          "blanks": [
           {
            "options": [
-            "Buối",
-            "Buổi"
+            "ăn",
+            "ăm"
            ],
-           "answer": "Buổi"
-          },
-          {
-           "options": [
-            "lờm",
-            "làm"
-           ],
-           "answer": "làm"
+           "answer": "ăn"
           }
          ]
         },
         {
-         "template": "Hôm nay cô có đi {0} không?",
+         "template": "Nga thích {0} cà phê sữa.",
          "blanks": [
           {
            "options": [
-            "chai",
-            "chơi"
+            "uốn",
+            "uống"
            ],
-           "answer": "chơi"
+           "answer": "uống"
           }
          ]
         },
         {
-         "template": "Không. Chú không đi du {0}.",
+         "template": "Hân thích {0} gà và rau.",
          "blanks": [
           {
            "options": [
-            "lịch",
-            "lệch"
+            "cơn",
+            "cơm"
            ],
-           "answer": "lịch"
-          }
-         ]
-        },
-        {
-         "template": "Buổi {0} hôm qua chị không đi {1}.",
-         "blanks": [
-          {
-           "options": [
-            "tôi",
-            "tối"
-           ],
-           "answer": "tối"
-          },
-          {
-           "options": [
-            "ngú",
-            "ngủ"
-           ],
-           "answer": "ngủ"
-          }
-         ]
-        },
-        {
-         "template": "Buổi {0} hôm qua chú không về nhà.",
-         "blanks": [
-          {
-           "options": [
-            "chìu",
-            "chiều"
-           ],
-           "answer": "chiều"
-          }
-         ]
-        },
-        {
-         "template": "Buổi {0} hôm nay em đi cà phê với đồng nghiệp.",
-         "blanks": [
-          {
-           "options": [
-            "chưa",
-            "trưa"
-           ],
-           "answer": "trưa"
+           "answer": "cơm"
           }
          ]
         }
@@ -1254,50 +1220,61 @@
       },
       {
        "type": "chooseWord",
-       "num": 14,
+       "num": 13,
        "noItemNum": true,
        "instructionVi": "Hoàn thành đoạn hội thoại sau.",
        "instructionEn": "Complete the following dialogue.",
        "items": [
         {
-         "template": "Nghi: Chào anh Ninh, anh {0} khoẻ không?",
+         "template": "Mai: Anh Kiên thích ăn {0}?",
          "blanks": [
           {
            "options": [
-            "là",
-            "có"
+            "gì",
+            "không"
            ],
-           "answer": "có"
+           "answer": "gì"
           }
          ]
         },
         {
-         "template": "Ninh: Chào Nghi, anh khoẻ. Còn em?"
-        },
-        {
-         "template": "Nghi: Em {0} khoẻ, cám ơn anh. Hôm nay anh {1} đi làm không?",
+         "template": "Kiên: Anh thích {0} phở bò. Còn em?",
          "blanks": [
           {
            "options": [
-            "không",
-            "cũng"
+            "ăn",
+            "uống"
            ],
-           "answer": "cũng"
-          },
-          {
-           "options": [
-            "là",
-            "có"
-           ],
-           "answer": "có"
+           "answer": "ăn"
           }
          ]
         },
         {
-         "template": "Ninh: Anh có. Còn em?"
+         "template": "Mai: Em cũng thích ăn phở bò {0} em không thích ăn với rau.",
+         "blanks": [
+          {
+           "options": [
+            "nhưng",
+            "với"
+           ],
+           "answer": "nhưng"
+          }
+         ]
         },
         {
-         "template": "Nghi: Hôm nay em {0} đi làm. Hôm nay em ở nhà.",
+         "template": "Kiên: Em có thích uống cà phê {0}?",
+         "blanks": [
+          {
+           "options": [
+            "gì",
+            "không"
+           ],
+           "answer": "không"
+          }
+         ]
+        },
+        {
+         "template": "Mai: Em có, nhưng em {0} thích uống cà phê đen.",
          "blanks": [
           {
            "options": [
@@ -1309,25 +1286,7 @@
          ]
         },
         {
-         "template": "Ninh: Vậy hả? {0} mai em có đi ăn với chị Mai không?",
-         "blanks": [
-          {
-           "options": [
-            "Ngày",
-            "Hôm"
-           ],
-           "answer": "Ngày"
-          }
-         ]
-        },
-        {
-         "template": "Nghi: Em có. Còn anh?"
-        },
-        {
-         "template": "Ninh: Anh cũng có."
-        },
-        {
-         "template": "Nghi: Hẹn gặp anh ngày mai nhé!"
+         "template": "Kiên: Anh cũng vậy."
         }
        ]
       }
@@ -1341,30 +1300,30 @@
    "titleEn": "Speaking",
    "subtopics": [
     {
-     "id": "co-khong",
-     "label": "Có...không?",
+     "id": "thich",
+     "label": "Thích – Like",
      "exercises": [
       {
-       "type": "openAnswer",
-       "num": 15,
-       "instructionVi": "Dùng Có hoặc Không để trả lời.",
-       "instructionEn": "Use Yes or No to answer.",
-       "example": {
-        "question": "Hôm nay bạn có đi làm không?",
-        "answer": "Mình có. / Mình không. Hôm nay mình ở nhà."
-       },
-       "items": [
+       "type": "readingQA",
+       "num": 14,
+       "instructionVi": "Trả lời những câu hỏi sau.",
+       "instructionEn": "Answer the following questions.",
+       "questions": [
         {
-         "question": "Buổi chiều hôm qua bạn có đi cà phê không?"
+         "q": "Bạn thích ăn gì?",
+         "a": "Mình thích ăn bún bò."
         },
         {
-         "question": "Buổi tối hôm nay bạn có đi ăn không?"
+         "q": "Bạn thích uống gì?",
+         "a": "Mình thích uống trà."
         },
         {
-         "question": "Buổi chiều ngày mai bạn có đi chơi không?"
+         "q": "Mẹ của bạn thích ăn gì?",
+         "a": "Mẹ của mình thích ăn thịt gà."
         },
         {
-         "question": "Buổi trưa hôm nay bạn có đi ngủ không?"
+         "q": "Ba của bạn thích ăn gì?",
+         "a": "Ba của mình thích ăn trái cây."
         }
        ]
       }
@@ -1372,21 +1331,5 @@
     }
    ]
   }
- ],
- "_guide": {
-  "doc": "App bo qua key bat dau bang '_'.",
-  "exercise.photoFill.words": "Neu ex co 'words' thi hien ngan hang tu phia tren; tu trung voi dap an cua item 'example' se bi gach + khung, khong chon duoc.",
-  "exercise.calendarFill": "Lich (days[]: date, tone, label, imgs[{img,alt}]) + ngan hang tu 'words' + items[{template,answers,distinct}]. distinct=true: 2 o phai khac nhau (dap an chap nhan ca 2 thu tu).",
-  "exercise.noteVi": "Bat ky exercise nao cung co the co ghi chu: noteTitleVi/noteVi/noteTitleEn/noteEn (khung vang duoi bai tap).",
-  "todo_images": "images/b3/bai3, bai4 (hinh1..6.jpg), bai5 (ngay2_di_hoc.jpg ...) chua co - se bo sung sau.",
-  "todo_audio": "audio/b3/nam: vocab_di_lam.mp3... (6 tu), ex4_01..06.mp3 - chua thu am.",
-  "todo_answers": "Bai 4: cau vi du (Hinh 1) tam dat la 'di choi' (tu con lai sau 5 dap an) - CAN XAC NHAN.",
-  "exercise.fillWords.words": "Neu ex co 'words' thi hien ngan hang tu phia tren; bam tu de dien vao o dang focus (giong photoFill/calendarFill).",
-  "audio_script_bai6": "Bai 6 la nghe-chep chinh ta: moi cau audio doc dung y cau da dien dap an, vd 'Hom nay co Loan di hoc.' 'Ngay mai chi Han khong di du lich.' 'Hom qua anh Nghia di lam.' 'Ngay mai An khong di choi.' 'Hom qua chu Phuc khong di an.' 'Bay gio Minh di ngu.'",
-  "audio_script_bai7": "Bai 7 - noi dung hoi thoai can thu am (audio khac voi text hien tren man hinh, day la dang nghe-hieu suy luan): 1) Hom nay anh co di lam khong? / Anh co. 2) Ngay mai chi co di an voi gia dinh khong? / Chi khong, ngay mai chi o nha. 3) Hom qua em co di hoc khong? / Em khong, hom qua em bi benh. 4) Hom nay chi Lan co di choi khong? / Chi khong. Hom nay chi di lam. 5) Hom qua chu Phong co di du lich khong? / Khong, ngay mai chu moi di du lich. 6) Bay gio ban di an dung khong? / Khong, bay gio minh di ngu.",
-  "todo_audio_nghe": "audio/b3/nam: ex6_01..06.mp3 (theo audio_script_bai6), listen_ex7_01..06.mp3 (theo audio_script_bai7) - chua thu am.",
-  "todo_thoi_gian": "Hinh/audio moi: images/b3/bai3/{ve_nha,di_ca_phe,buoi_sang,buoi_trua,buoi_chieu,buoi_toi}.jpg; audio/b3/nam/{vocab_ve_nha(da copy tu b4),vocab_di_ca_phe,vocab_buoi_sang,vocab_buoi_trua,vocab_buoi_chieu,vocab_buoi_toi}.mp3. Thoi khoa bieu: vi du sua 'Buoi sang' -> 'Buoi trua' (12:00 di an) - CAN XAC NHAN; cau 4-6 them chu ngu 'Tran'; 18:00 ve nha tinh la 'Buoi toi' - CAN XAC NHAN.",
-  "lich": "Bai lich cuoi muc Thoi gian trong ngay: hinh dung lai images/b3/bai3/*.jpg.",
-  "todo_audio_ex8": "Bai 8: cau 1, 3, 4, 6 doi noi dung (them buoi) - can thu lai audio/b3/nam/ex6_01, ex6_03, ex6_04, ex6_06.mp3."
- }
+ ]
 }
