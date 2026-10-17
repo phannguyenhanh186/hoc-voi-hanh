@@ -15,7 +15,6 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <div id="account-widget-slot"></div>
         </div>
       </nav>
     </div>
@@ -905,7 +904,7 @@
       return box;
     }
 
-    // Bài 5 (b3): lịch 3 ngày (ảnh hoạt động mỗi ngày) + ngân hàng từ + câu điền chỗ trống.
+    // Bài 5 (b2): lịch 3 ngày (ảnh hoạt động mỗi ngày) + ngân hàng từ + câu điền chỗ trống.
     // Item có 'distinct: true' (2 ô, đáp án gồm cả 2 thứ tự) thì 2 ô phải khác nhau.
     function renderCalendarFill(ex, n) {
       const box = el('div');
@@ -1185,7 +1184,7 @@
       return wrap;
     }
 
-    // Bài 8 (b3): sắp xếp các từ thành câu hỏi. Bấm từ ở ngân hàng để đưa lên dòng câu, bấm lại để bỏ xuống.
+    // Bài 8 (b2): sắp xếp các từ thành câu hỏi. Bấm từ ở ngân hàng để đưa lên dòng câu, bấm lại để bỏ xuống.
     // item: { words:[...], answers:[câu chấp nhận...], example:true }
     function normSentence(s) {
       return String(s).normalize('NFC').toLowerCase().replace(/[.,!?;:]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -1275,7 +1274,7 @@
       return box;
     }
 
-    // Bài 9 (b3): viết câu trả lời theo gợi ý. answers dùng {p} = đại từ xưng hô (pronouns[]).
+    // Bài 9 (b2): viết câu trả lời theo gợi ý. answers dùng {p} = đại từ xưng hô (pronouns[]).
     function renderWriteAnswer(ex, n) {
       const box = el('div', 'bai-write-list');
       let seq = 0;
@@ -1349,7 +1348,7 @@
       return box;
     }
 
-    // Bài 10 (b3): bài nói, trả lời mở. Có ví dụ + ô ghi chú tự do (không chấm điểm).
+    // Bài 10 (b2): bài nói, trả lời mở. Có ví dụ + ô ghi chú tự do (không chấm điểm).
     function renderOpenAnswer(ex, n) {
       const box = el('div', 'bai-write-list');
       if (ex.example) {
@@ -1782,9 +1781,5 @@
     })();
   </script>
   <script src="pomodoro.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-  <script src="account-widget.js"></script>
 </body>
 </html>
