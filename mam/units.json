@@ -1,8 +1,8 @@
 {
   "_guide": {
     "doc": "Master index cho 1 level. App bo qua key bat dau bang '_'.",
-    "page": "Neu bai co truong page (vd bai.html) thi bam Hoc se vao thang trang do (bai kieu slide, du lieu o <level>/bai/<id>.json). Khong co thi vao vocabulary.html nhu cu.",
-    "structure": "Moi 'lesson' = 1 Bai hoan chinh (id trong mam/items/<id>.json), dung khung 6 tab: vocab/grammar/listening/reading/preClass/postClass. Khong con chia A/B/C/D/Practical/Revise nua.",
+    "page": "Bai co truong page (vd bai.html) thi bam Hoc se vao thang trang do (bai kieu slide, du lieu o <level>/bai/<id>.json). Khong co page thi mac dinh cung vao bai.html.",
+    "structure": "Moi 'lesson' = 1 Bai, du lieu o mam/bai/<id>.json (kieu slide: Phat am/Tu vung/Nghe/Ngu phap/Doc/Viet/Noi).",
     "status": "'ready' = da co file noi dung | 'todo' = chua soan, the se mo 'sap ra mat'"
   },
   "level": "mam",
@@ -16,14 +16,14 @@
       "status": "ready"
     },
     {
-      "id": "b3",
+      "id": "b2",
       "num": 2,
       "title": "Hôm nay bạn có đi làm không?",
       "status": "ready",
       "page": "bai.html"
     },
     {
-      "id": "b2",
+      "id": "b3",
       "num": 3,
       "title": "Buổi sáng chị thích ăn gì?",
       "page": "bai.html",
@@ -112,7 +112,7 @@
       "id": "b16",
       "num": 16,
       "title": "Cho em một phở và một trà đá!",
-      "status": "ready"
+      "status": "todo"
     },
     {
       "id": "b17",
@@ -124,13 +124,13 @@
       "id": "b18",
       "num": 18,
       "title": "Trời đang mưa to.",
-      "status": "ready"
+      "status": "todo"
     },
     {
       "id": "b19",
       "num": 19,
       "title": "Ra đường phải đội nón bảo hiểm",
-      "status": "ready"
+      "status": "todo"
     },
     {
       "id": "b20",
