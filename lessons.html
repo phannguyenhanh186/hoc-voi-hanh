@@ -15,7 +15,6 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
-          <div id="account-widget-slot"></div>
         </div>
       </nav>
     </div>
@@ -176,7 +175,7 @@
           // Bấm "Học" là vào thẳng bài (từ Từ vựng), giống Duolingo — không còn
           // màn hình trung gian để chọn Vocabulary/Grammar/Reading/Listening.
           // Bài có trường "page" (vd bai.html — bài kiểu slide dạy học) thì vào thẳng trang đó.
-          const base = (b.page || 'vocabulary.html') + '?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel);
+          const base = (b.page || 'bai.html') + '?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel);
           cards.appendChild(makeTile({
             eyebrow: 'BÀI ' + b.num,
             title: b.title,
@@ -189,9 +188,5 @@
     })();
   </script>
   <script src="pomodoro.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-  <script src="account-widget.js"></script>
 </body>
 </html>
