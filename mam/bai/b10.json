@@ -550,10 +550,10 @@
         },
         {
          "audio": "audio/b10/{voice}/listen_ex7_02.mp3",
-         "text": "___, chị Luyến về quê.",
+         "text": "Chị Luyến về quê ___.",
          "options": [
-          "Tuần trước",
-          "Tháng trước"
+          "tuần trước",
+          "tháng trước"
          ],
          "answer": null
         },
