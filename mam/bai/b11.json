@@ -4,7 +4,8 @@
  "title": "Anh ấy là người Pháp đúng không?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b11/nam: pron_<van/tu>.mp3 (ap, ăp, âp... va cac tu; p, ph va cac tu; ten file theo Telex, xem audioKey trong bai.html; 'pa-tê' -> pron_pa-tee.mp3), listen_ex2_01..05.mp3, ex4_01..05.mp3 - chua thu am."
+  "todo_audio": "audio/b11/nam: pron_<van/tu>.mp3 (ap, ăp, âp... va cac tu; p, ph va cac tu; ten file theo Telex, xem audioKey trong bai.html; 'pa-tê' -> pron_pa-tee.mp3), listen_ex2_01..05.mp3, ex4_01..05.mp3 - chua thu am.",
+  "todo_audio_tu_vung": "audio/b11/nam: vocab_nuoc_01..12.mp3 (Anh, My, Phap, Duc, Tay Ban Nha, Uc, Thai, Trung, Han, Nhat, Lao, Viet) - chua thu am."
  },
  "sections": [
   {
@@ -275,6 +276,130 @@
          "audio": "audio/b11/{voice}/ex4_05.mp3"
         }
        ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "ten-nuoc",
+     "label": "Tên nước",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 5,
+       "columns": 4,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "img": "images/b11/quoc-gia/flag_01_anh.svg",
+         "caption": "Anh",
+         "audio": "audio/b11/{voice}/vocab_nuoc_01.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_02_my.svg",
+         "caption": "Mỹ",
+         "audio": "audio/b11/{voice}/vocab_nuoc_02.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_03_phap.svg",
+         "caption": "Pháp",
+         "audio": "audio/b11/{voice}/vocab_nuoc_03.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_04_duc.svg",
+         "caption": "Đức",
+         "audio": "audio/b11/{voice}/vocab_nuoc_04.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_05_tay-ban-nha.svg",
+         "caption": "Tây Ban Nha",
+         "audio": "audio/b11/{voice}/vocab_nuoc_05.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_06_uc.svg",
+         "caption": "Úc",
+         "audio": "audio/b11/{voice}/vocab_nuoc_06.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_07_thai.svg",
+         "caption": "Thái / Thái Lan",
+         "audio": "audio/b11/{voice}/vocab_nuoc_07.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_08_trung.svg",
+         "caption": "Trung / Trung Quốc",
+         "audio": "audio/b11/{voice}/vocab_nuoc_08.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_09_han.svg",
+         "caption": "Hàn / Hàn Quốc",
+         "audio": "audio/b11/{voice}/vocab_nuoc_09.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_10_nhat.svg",
+         "caption": "Nhật / Nhật Bản",
+         "audio": "audio/b11/{voice}/vocab_nuoc_10.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_11_lao.svg",
+         "caption": "Lào",
+         "audio": "audio/b11/{voice}/vocab_nuoc_11.mp3"
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_12_viet.svg",
+         "caption": "Việt / Việt Nam",
+         "audio": "audio/b11/{voice}/vocab_nuoc_12.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "quoc-tich",
+     "label": "Quốc tịch",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Quốc tịch",
+         "en": "Nationality",
+         "tone": "purple"
+        },
+        {
+         "type": "structure",
+         "vi": "{{Người::red}} + {{tên nước::blueText}}",
+         "en": "{{Người::red}} + {{country name::blueText}}"
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "blue",
+         "groups": [
+          {
+           "vi": "Phúc là {{người::red}} {{Việt Nam::blueText}}."
+          },
+          {
+           "vi": "Mike là {{người::red}} {{Anh::blueText}}."
+          },
+          {
+           "vi": "Lee là {{người::red}} {{Hàn::blueText}}."
+          },
+          {
+           "vi": "Mẹ của anh Lộc là {{người::red}} {{Trung::blueText}}."
+          }
+         ]
+        }
+       ],
+       "noNum": true,
+       "instructionVi": ""
       }
      ]
     }
