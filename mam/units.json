@@ -81,8 +81,9 @@
     {
       "id": "b11",
       "num": 11,
-      "title": "Đi từ Hà Nội tới Sài Gòn mất bao lâu?",
-      "status": "todo"
+      "title": "Anh ấy là người Pháp đúng không?",
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b12",
