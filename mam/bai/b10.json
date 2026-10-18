@@ -600,7 +600,7 @@
        ],
        "items": [
         {
-         "template": "Mai về nhà {0}.",
+         "template": "{0} Mai về nhà.",
          "answers": [
           [
            "tháng sau"
@@ -609,7 +609,7 @@
          "audio": "audio/b10/{voice}/listen_ex8_01.mp3"
         },
         {
-         "template": "{0}, anh Nam tới bệnh viện.",
+         "template": "Anh Nam tới bệnh viện {0}.",
          "answers": [
           [
            "tuần trước"
@@ -636,7 +636,7 @@
          "audio": "audio/b10/{voice}/listen_ex8_04.mp3"
         },
         {
-         "template": "Em gái của Phong đi du lịch {0}.",
+         "template": "{0} em gái của Phong đi du lịch.",
          "answers": [
           [
            "cuối tháng này"
