@@ -1,0 +1,284 @@
+{
+ "id": "b11",
+ "num": 11,
+ "title": "Anh ấy là người Pháp đúng không?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b11/nam: pron_<van/tu>.mp3 (ap, ăp, âp... va cac tu; p, ph va cac tu; ten file theo Telex, xem audioKey trong bai.html; 'pa-tê' -> pron_pa-tee.mp3), listen_ex2_01..05.mp3, ex4_01..05.mp3 - chua thu am."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "ap",
+     "label": "Âm \"ap\", \"ăp\", \"âp\", \"ep\", \"êp\", \"op\", \"ôp\", \"ơp\", \"up\", \"ươp\", \"uyp\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các vần sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ap",
+            "pháp",
+            "chạp"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "ăp",
+            "lặp",
+            "tắp"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "âp",
+            "tập",
+            "gấp"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ep",
+            "kẹp",
+            "dép"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "êp",
+            "tệp",
+            "xếp"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "op",
+            "móp",
+            "cọp"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ôp",
+            "lốp",
+            "hộp"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "ơp",
+            "lớp",
+            "hợp"
+           ]
+          ]
+         },
+         {
+          "tone": "blue",
+          "rows": [
+           [
+            "up",
+            "cúp",
+            "chụp"
+           ]
+          ]
+         },
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "ươp",
+            "mướp",
+            "nượp"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "uyp",
+            "tuýp"
+           ]
+          ]
+         }
+        ]
+       ],
+       "audio": "audio/b11/{voice}/pron_{key}.mp3"
+      },
+      {
+       "type": "bankSentences",
+       "num": 2,
+       "instructionVi": "Nghe và điền từ cho sẵn vào chỗ trống.",
+       "instructionEn": "Listen and fill out the blank with the given words.",
+       "words": [
+        "xếp",
+        "lớp",
+        "tập",
+        "hộp",
+        "gấp",
+        "dép"
+       ],
+       "items": [
+        {
+         "template": "Em bé {0} đi.",
+         "answers": [
+          [
+           "tập"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex2_01.mp3"
+        },
+        {
+         "template": "Hiệp đang xếp {0}.",
+         "answers": [
+          [
+           "dép"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex2_02.mp3"
+        },
+        {
+         "template": "Tuần trước mình đi họp {0}.",
+         "answers": [
+          [
+           "lớp"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex2_03.mp3"
+        },
+        {
+         "template": "Mẹ đang {0} quần áo và {1} đồ.",
+         "answers": [
+          [
+           "gấp"
+          ],
+          [
+           "xếp"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex2_04.mp3"
+        },
+        {
+         "template": "Cô Phụng đang chụp hình {0} quà.",
+         "answers": [
+          [
+           "hộp"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex2_05.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "p-ph",
+     "label": "Phụ âm \"p\" và \"ph\"",
+     "exercises": [
+      {
+       "type": "sounds",
+       "num": 3,
+       "instructionVi": "Nghe và lặp lại các âm sau.",
+       "instructionEn": "Listen and repeat the following sounds.",
+       "layout": "rows",
+       "columns": [
+        [
+         {
+          "tone": "yellow",
+          "rows": [
+           [
+            "p",
+            "pin",
+            "pa-tê"
+           ]
+          ]
+         },
+         {
+          "tone": "pink",
+          "rows": [
+           [
+            "ph",
+            "pha",
+            "phở",
+            "phí",
+            "phim",
+            "phụ"
+           ],
+           [
+            "phải",
+            "phơi",
+            "phòng",
+            "phường"
+           ]
+          ]
+         }
+        ]
+       ],
+       "audio": "audio/b11/{voice}/pron_{key}.mp3"
+      },
+      {
+       "type": "repeatSentences",
+       "num": 4,
+       "instructionVi": "Nghe và đọc lại các câu sau.",
+       "instructionEn": "Listen and repeat the following sentences.",
+       "items": [
+        {
+         "text": "Phương đi mua pin rồi.",
+         "audio": "audio/b11/{voice}/ex4_01.mp3"
+        },
+        {
+         "text": "Chú Phước thích ăn pa-tê.",
+         "audio": "audio/b11/{voice}/ex4_02.mp3"
+        },
+        {
+         "text": "Cô Phụng đang pha cà phê.",
+         "audio": "audio/b11/{voice}/ex4_03.mp3"
+        },
+        {
+         "text": "Phong phụ mẹ phơi quần áo.",
+         "audio": "audio/b11/{voice}/ex4_04.mp3"
+        },
+        {
+         "text": "Tiếng Pháp không phổ biến ở Việt Nam.",
+         "audio": "audio/b11/{voice}/ex4_05.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
