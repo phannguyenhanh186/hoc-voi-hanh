@@ -375,6 +375,11 @@
          "tone": "purple"
         },
         {
+         "type": "paragraph",
+         "vi": "Dùng để nói một người đến từ đâu hoặc thuộc quốc gia nào.",
+         "en": "Used to say where a person is from or which country they belong to."
+        },
+        {
          "type": "structure",
          "vi": "{{Người::red}} + {{tên nước::blueText}}",
          "en": "{{Người::red}} + {{country name::blueText}}"
