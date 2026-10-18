@@ -256,7 +256,7 @@
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank'; input.autocomplete = 'off';
         input.setAttribute('aria-label', 'Tên trong câu ' + (i + 1));
-        if (ex.words) { input.style.width = '12ch'; input.addEventListener('focus', function () { activeInput = input; }); }
+        if (ex.words) { input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch'); input.addEventListener('focus', function () { activeInput = input; }); }
         line.appendChild(input);
         line.appendChild(document.createTextNode(item.after || ''));
         const mark = el('span', 'bai-mark'); line.appendChild(mark);
@@ -393,7 +393,7 @@
           built.line.appendChild(mark);
           cap.appendChild(built.line);
           built.cells.forEach(function (c) {
-            if (ex.words) { c.input.style.width = '12ch'; c.input.addEventListener('focus', function () { activeInput = c.input; }); }
+            if (ex.words) { c.input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch'); c.input.addEventListener('focus', function () { activeInput = c.input; }); }
             allCells.push({ input: c.input, answers: c.answers, mark: mark });
           });
         }
@@ -625,7 +625,7 @@
         const mark = el('span', 'bai-mark');
         built.line.appendChild(mark);
         built.cells.forEach(function (c) {
-          c.input.style.width = '12ch';
+          c.input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch');
           c.input.addEventListener('focus', function () { activeInput = c.input; });
           cells.push({ input: c.input, answers: c.answers, mark: mark });
         });
