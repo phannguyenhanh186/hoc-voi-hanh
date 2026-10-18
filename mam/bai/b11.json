@@ -381,24 +381,24 @@
         },
         {
          "type": "structure",
-         "vi": "{{Người::red}} + {{tên nước::blueText}}",
-         "en": "{{Người::red}} + {{country name::blueText}}"
+         "vi": "{{Người::pink}} + {{tên nước::blue}}",
+         "en": "{{Người::pink}} + {{country name::blue}}"
         },
         {
          "type": "exampleGroup",
          "tone": "blue",
          "groups": [
           {
-           "vi": "Phúc là {{người::red}} {{Việt Nam::blueText}}."
+           "vi": "Phúc là {{người::pink}} {{Việt Nam::blue}}."
           },
           {
-           "vi": "Mike là {{người::red}} {{Anh::blueText}}."
+           "vi": "Mike là {{người::pink}} {{Anh::blue}}."
           },
           {
-           "vi": "Lee là {{người::red}} {{Hàn::blueText}}."
+           "vi": "Lee là {{người::pink}} {{Hàn::blue}}."
           },
           {
-           "vi": "Mẹ của anh Lộc là {{người::red}} {{Trung::blueText}}."
+           "vi": "Mẹ của anh Lộc là {{người::pink}} {{Trung::blue}}."
           }
          ]
         }
