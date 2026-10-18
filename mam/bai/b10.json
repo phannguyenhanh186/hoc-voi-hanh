@@ -546,25 +546,25 @@
           "cuối năm sau",
           "cuối tháng sau"
          ],
-         "answer": null
+         "answer": "a"
         },
         {
          "audio": "audio/b10/{voice}/listen_ex7_02.mp3",
          "text": "Chị Luyến về quê ___.",
          "options": [
-          "tuần trước",
-          "tháng trước"
+          "tháng trước",
+          "tuần trước"
          ],
-         "answer": null
+         "answer": "b"
         },
         {
          "audio": "audio/b10/{voice}/listen_ex7_03.mp3",
          "text": "___, ông của Phú đi khám bệnh.",
          "options": [
-          "Đầu năm sau",
-          "Cuối năm sau"
+          "Cuối năm sau",
+          "Đầu năm sau"
          ],
-         "answer": null
+         "answer": "b"
         },
         {
          "audio": "audio/b10/{voice}/listen_ex7_04.mp3",
@@ -573,16 +573,16 @@
           "cuối tuần sau",
           "đầu tháng trước"
          ],
-         "answer": null
+         "answer": "a"
         },
         {
          "audio": "audio/b10/{voice}/listen_ex7_05.mp3",
          "text": "Chú của Vy nghỉ làm ___.",
          "options": [
-          "cuối tháng trước",
-          "đầu năm trước"
+          "đầu năm trước",
+          "cuối tháng trước"
          ],
-         "answer": null
+         "answer": "b"
         }
        ]
       },
