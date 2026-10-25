@@ -110,7 +110,7 @@
 
     function makeTile(opts) {
       // opts: { eyebrow, title, locked, href, hrefReview, progress: {done,total} }
-      const PALETTE = ['#F1C6D0', '#C7F2DC', '#F2E7C7', '#EAC6F1', '#E1F2C7', '#C7D6F2'];   // hồng, mint, vàng, tím nhạt, xanh lá nhạt, xanh dương
+      const PALETTE = ['#EBC8D0', '#D0F0DF', '#F0E6CB', '#CBCFEF'];   // hồng, mint, be, xanh tím nhạt (xoay vòng 4 màu như thiết kế)
       window.__tileIdx = (window.__tileIdx || 0);
       const tile = el('div', 'lesson-tile' + (opts.locked ? ' lesson-tile-locked' : ''));
       tile.style.background = PALETTE[window.__tileIdx++ % PALETTE.length];
