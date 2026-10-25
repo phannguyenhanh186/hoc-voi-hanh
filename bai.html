@@ -210,8 +210,9 @@
     // Bài 4: bảng thanh điệu. Cột đầu là nhãn thanh, các ô sau bấm để nghe.
     function renderTones(ex) {
       const wrap = el('div', 'bai-tones');
-      (ex.rows || []).forEach(function (row) {
-        const tone = 'bai-tone-' + (row.tone || 'lav');
+      (ex.rows || []).forEach(function (row, ri) {
+        // Thanh điệu: xen kẽ xanh dương / hồng theo hàng (nếu dữ liệu không chỉ định màu riêng)
+        const tone = 'bai-tone-' + ((row.tone && row.tone !== 'lav') ? row.tone : (ri % 2 === 0 ? 'blue' : 'pink'));
         wrap.appendChild(el('div', 'bai-chip bai-label ' + tone, row.label));
         for (let i = 0; i < 4; i++) {
           if (row.words[i] == null) { const gap = el('span'); gap.setAttribute('aria-hidden', 'true'); wrap.appendChild(gap); }
