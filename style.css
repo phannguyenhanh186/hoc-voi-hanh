@@ -716,10 +716,10 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .gram2-subtopic-list.gram2-collapsed { display: none; }
 .gram2-subtopic-btn {
   font: inherit; text-align: left; border: 1.5px solid transparent; border-radius: 10px; padding: 9px 12px;
-  background: rgba(255, 255, 255, .55); color: var(--ink); font-weight: 600; font-size: .88rem; cursor: pointer;
+  background: rgba(247, 247, 245, .55); color: var(--ink); font-weight: 600; font-size: .88rem; cursor: pointer;
 }
-.gram2-subtopic-btn:hover { background: rgba(255, 255, 255, .8); }
-.gram2-subtopic-btn.active { background: #fff; border-color: var(--stroke); font-weight: 800; }
+.gram2-subtopic-btn:hover { background: rgba(247, 247, 245, .8); }
+.gram2-subtopic-btn.active { background: #F7F7F5; border-color: var(--stroke); font-weight: 800; }
 
 .gram2-content {
   border: 1.5px solid var(--stroke); border-radius: 20px; padding: 26px 28px; background: var(--surface);
@@ -1856,3 +1856,19 @@ a.lesson-row:focus-visible { outline: 3px solid var(--accent); outline-offset: 2
   .lesson-row-label { font-size: 1rem; }
   .lesson-row-title { font-size: 1.05rem; }
 }
+
+/* ---- Mục Phát âm: các khung âm dùng bảng màu nhạt ---- */
+.is-phat-am .bai-chip { --chip-bg: #C6E2FF; }
+.is-phat-am .bai-tone-yellow { --chip-bg: #FFFDC6; }
+.is-phat-am .bai-tone-pink   { --chip-bg: #FFC6EF; }
+.is-phat-am .bai-tone-blue   { --chip-bg: #C6E2FF; }
+.is-phat-am .bai-tone-violet { --chip-bg: #FFDCC6; }
+.is-phat-am .bai-tone-lav    { --chip-bg: #E6FFC6; }
+/* Bảng chữ cái: xoay vòng 7 màu nhạt */
+.is-phat-am .bai-letters .bai-chip:nth-child(7n+1) { --chip-bg: #FFC6EF; }
+.is-phat-am .bai-letters .bai-chip:nth-child(7n+2) { --chip-bg: #E6FFC6; }
+.is-phat-am .bai-letters .bai-chip:nth-child(7n+3) { --chip-bg: #C6FFF9; }
+.is-phat-am .bai-letters .bai-chip:nth-child(7n+4) { --chip-bg: #FFC6C7; }
+.is-phat-am .bai-letters .bai-chip:nth-child(7n+5) { --chip-bg: #FFFDC6; }
+.is-phat-am .bai-letters .bai-chip:nth-child(7n+6) { --chip-bg: #C6E2FF; }
+.is-phat-am .bai-letters .bai-chip:nth-child(7n+7) { --chip-bg: #FFDCC6; }
