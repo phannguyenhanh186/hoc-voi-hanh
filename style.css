@@ -696,14 +696,14 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   border: 1.5px solid var(--stroke); border-radius: 20px; padding: 14px; background: var(--surface);
   display: flex; flex-direction: column; gap: 12px;
 }
-.gram2-section { border-radius: 14px; overflow: hidden; }
-.gram2-section:nth-of-type(7n+1) { background: #FF94E1; }
-.gram2-section:nth-of-type(7n+2) { background: #D1FF94; }
-.gram2-section:nth-of-type(7n+3) { background: #94FFF4; }
-.gram2-section:nth-of-type(7n+4) { background: #FF9496; }
-.gram2-section:nth-of-type(7n+5) { background: #FFFB94; }
-.gram2-section:nth-of-type(7n+6) { background: #94CAFF; }
-.gram2-section:nth-of-type(7n+7) { background: #FFBD94; }
+.gram2-section { border: 2px solid var(--stroke); border-radius: 14px; overflow: hidden; }
+.gram2-section:nth-of-type(7n+1) { background: #FFC6EF; }
+.gram2-section:nth-of-type(7n+2) { background: #E6FFC6; }
+.gram2-section:nth-of-type(7n+3) { background: #C6FFF9; }
+.gram2-section:nth-of-type(7n+4) { background: #FFC6C7; }
+.gram2-section:nth-of-type(7n+5) { background: #FFFDC6; }
+.gram2-section:nth-of-type(7n+6) { background: #C6E2FF; }
+.gram2-section:nth-of-type(7n+7) { background: #FFDCC6; }
 .gram2-section-header {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
   background: transparent; border: none; padding: 12px 14px; cursor: pointer; text-align: left; font: inherit;
