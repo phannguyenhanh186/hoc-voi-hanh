@@ -108,33 +108,29 @@
       return { done: 0, total: 0 };
     }
 
+    // ===== Danh sách bài dạng hàng: nhãn "Bài N" tô màu + tiêu đề + nút mũi tên =====
+    const ROW_COLORS = ['#D1FF94', '#FF94E1', '#94FFF4', '#FF9496', '#FFFB94', '#94CAFF'];   // xoay vòng theo thứ tự
+    const ARROW_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
+
     function makeTile(opts) {
-      // opts: { eyebrow, title, locked, href, hrefReview, progress: {done,total} }
-      const PALETTE = ['#EBC8D0', '#D0F0DF', '#F0E6CB', '#CBCFEF'];   // hồng, mint, be, xanh tím nhạt (xoay vòng 4 màu như thiết kế)
-      window.__tileIdx = (window.__tileIdx || 0);
-      const tile = el('div', 'lesson-tile' + (opts.locked ? ' lesson-tile-locked' : ''));
-      tile.style.background = PALETTE[window.__tileIdx++ % PALETTE.length];
+      // opts: { eyebrow, title, locked, href }
+      const idx = (window.__rowIdx = (window.__rowIdx || 0));
+      window.__rowIdx++;
+      const row = el(opts.locked ? 'div' : 'a', 'lesson-row' + (opts.locked ? ' lesson-row-locked' : ''));
+      if (!opts.locked) row.href = opts.href; else row.title = 'Sắp ra mắt';
 
-      const badge = el('span', 'lesson-tile-badge'); badge.textContent = opts.eyebrow;
-      tile.appendChild(badge);
+      const labelWrap = el('span', 'lesson-row-label-wrap');
+      const label = el('span', 'lesson-row-label'); label.textContent = opts.eyebrow;
+      label.style.background = ROW_COLORS[idx % ROW_COLORS.length];
+      labelWrap.appendChild(label);
+      row.appendChild(labelWrap);
 
-      const title = el('h3', 'lesson-tile-title'); title.textContent = opts.title;
-      tile.appendChild(title);
+      const title = el('span', 'lesson-row-title'); title.textContent = opts.title;
+      row.appendChild(title);
 
-      const actions = el('div', 'lesson-tile-actions');
-      if (opts.locked) {
-        const soon = el('span', 'lesson-tile-btn lesson-tile-btn-disabled'); soon.textContent = 'Sắp ra mắt';
-        actions.appendChild(soon);
-      } else {
-        const learnBtn = el('a', 'lesson-tile-btn'); learnBtn.textContent = 'Học'; learnBtn.href = opts.href;
-        actions.appendChild(learnBtn);
-        if (opts.hrefReview) {
-          const reviewBtn = el('a', 'lesson-tile-btn lesson-tile-btn-secondary'); reviewBtn.textContent = 'Ôn tập ›'; reviewBtn.href = opts.hrefReview;
-          actions.appendChild(reviewBtn);
-        }
-      }
-      tile.appendChild(actions);
-      return tile;
+      const go = el('span', 'lesson-row-go'); go.innerHTML = ARROW_SVG;
+      row.appendChild(go);
+      return row;
     }
 
     (async function () {
