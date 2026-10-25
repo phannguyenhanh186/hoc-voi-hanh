@@ -11,7 +11,7 @@
 @font-face { font-family: "Gustavo"; src: url("fonts/gustavo-bold.woff2") format("woff2"); font-weight: 601 900; font-style: normal; font-display: swap; }
 
 :root {
-  --bg:            #FFFFFF;
+  --bg:            #F7F7F5;
   --surface:       #FFFFFF;
   --primary:       #C0BFF9;  /* tím nhạt: header bar, khung hover */
   --primary-border:#9F9DF2;  /* viền tím đậm hơn */
@@ -1829,7 +1829,7 @@ h1:has(> .title-hl) { line-height: 1.55; }
 .lesson-tile-title { font-size: 1.1rem; }
 
 /* ---- Danh sách bài học dạng hàng (lessons.html) ---- */
-.lesson-grid { display: flex; flex-direction: column; gap: 18px; max-width: 756px; }
+.lesson-grid { display: flex; flex-direction: column; gap: 18px; }
 .lesson-row {
   display: flex; align-items: center; box-sizing: border-box;
   min-height: 78px; padding: 12px 22px 12px 16px;
