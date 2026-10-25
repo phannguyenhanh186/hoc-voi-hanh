@@ -211,8 +211,10 @@
     function renderTones(ex) {
       const wrap = el('div', 'bai-tones');
       (ex.rows || []).forEach(function (row, ri) {
-        // Thanh điệu: xen kẽ xanh dương / hồng theo hàng (nếu dữ liệu không chỉ định màu riêng)
-        const tone = 'bai-tone-' + ((row.tone && row.tone !== 'lav') ? row.tone : (ri % 2 === 0 ? 'blue' : 'pink'));
+        // Thanh điệu: chỉ thanh hỏi và thanh ngã màu hồng, các thanh còn lại màu xanh dương
+        const lbl = String(row.label || '').normalize('NFC').toLowerCase();
+        const isPink = lbl.indexOf('hỏi') !== -1 || lbl.indexOf('ngã') !== -1;
+        const tone = 'bai-tone-' + (isPink ? 'pink' : 'blue');
         wrap.appendChild(el('div', 'bai-chip bai-label ' + tone, row.label));
         for (let i = 0; i < 4; i++) {
           if (row.words[i] == null) { const gap = el('span'); gap.setAttribute('aria-hidden', 'true'); wrap.appendChild(gap); }
