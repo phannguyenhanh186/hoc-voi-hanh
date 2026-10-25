@@ -693,7 +693,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 @media (max-width: 720px) { .gram2-body { grid-template-columns: 1fr; } .gram2-sidebar, .gram2-content { max-height: none; overflow-y: visible; } }
 
 .gram2-sidebar {
-  border: 1.5px solid var(--stroke); border-radius: 20px; padding: 14px; background: var(--surface);
+  border: 1.5px solid var(--stroke); border-radius: 20px; padding: 14px; background: #F7F7F5;
   display: flex; flex-direction: column; gap: 12px;
 }
 .gram2-section { border: 2px solid var(--stroke); border-radius: 14px; overflow: hidden; }
