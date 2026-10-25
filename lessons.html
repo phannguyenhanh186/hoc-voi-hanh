@@ -110,12 +110,10 @@
 
     function makeTile(opts) {
       // opts: { eyebrow, title, locked, href, hrefReview, progress: {done,total} }
-      const theme = nextTileTheme();
+      const PALETTE = ['#F1C6D0', '#C7F2DC', '#F2E7C7', '#C7D0F2'];   // hồng, mint, vàng, xanh dương
+      window.__tileIdx = (window.__tileIdx || 0);
       const tile = el('div', 'lesson-tile' + (opts.locked ? ' lesson-tile-locked' : ''));
-      tile.style.background = theme.bg;
-      tile.style.backgroundImage = patternSvg(theme.pattern, theme.pat);
-      tile.style.backgroundRepeat = 'repeat';
-      tile.style.backgroundSize = '28px 28px';
+      tile.style.background = PALETTE[window.__tileIdx++ % PALETTE.length];
 
       const badge = el('span', 'lesson-tile-badge'); badge.textContent = opts.eyebrow;
       tile.appendChild(badge);
@@ -123,22 +121,12 @@
       const title = el('h3', 'lesson-tile-title'); title.textContent = opts.title;
       tile.appendChild(title);
 
-      const status = el('div', 'lesson-tile-status');
-      if (opts.locked) {
-        status.textContent = '🔒 Sắp ra mắt';
-      } else if (opts.progress) {
-        const p = opts.progress;
-        const pct = p.total ? Math.round((p.done / p.total) * 100) : 0;
-        status.textContent = p.total ? ('✓ ' + p.done + '/' + p.total + ' (' + pct + '%)') : 'Chưa bắt đầu học';
-      }
-      tile.appendChild(status);
-
       const actions = el('div', 'lesson-tile-actions');
       if (opts.locked) {
         const soon = el('span', 'lesson-tile-btn lesson-tile-btn-disabled'); soon.textContent = 'Sắp ra mắt';
         actions.appendChild(soon);
       } else {
-        const learnBtn = el('a', 'lesson-tile-btn'); learnBtn.textContent = 'Học ›'; learnBtn.href = opts.href;
+        const learnBtn = el('a', 'lesson-tile-btn'); learnBtn.textContent = 'Học'; learnBtn.href = opts.href;
         actions.appendChild(learnBtn);
         if (opts.hrefReview) {
           const reviewBtn = el('a', 'lesson-tile-btn lesson-tile-btn-secondary'); reviewBtn.textContent = 'Ôn tập ›'; reviewBtn.href = opts.hrefReview;
@@ -174,7 +162,7 @@
           // Bài có trường "page" (vd bai.html — bài kiểu slide dạy học) thì vào thẳng trang đó.
           const base = (b.page || 'bai.html') + '?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel);
           cards.appendChild(makeTile({
-            eyebrow: 'BÀI ' + b.num,
+            eyebrow: 'Bài ' + b.num,
             title: b.title,
             locked: locked,
             progress: locked ? null : readLessonProgress(activeLevel, b.id),
