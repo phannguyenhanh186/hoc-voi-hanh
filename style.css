@@ -1864,11 +1864,7 @@ a.lesson-row:focus-visible { outline: 3px solid var(--accent); outline-offset: 2
 .is-phat-am .bai-tone-blue   { --chip-bg: #C6E2FF; }
 .is-phat-am .bai-tone-violet { --chip-bg: #FFDCC6; }
 .is-phat-am .bai-tone-lav    { --chip-bg: #E6FFC6; }
-/* Bảng chữ cái: xoay vòng 7 màu nhạt */
-.is-phat-am .bai-letters .bai-chip:nth-child(7n+1) { --chip-bg: #FFC6EF; }
-.is-phat-am .bai-letters .bai-chip:nth-child(7n+2) { --chip-bg: #E6FFC6; }
-.is-phat-am .bai-letters .bai-chip:nth-child(7n+3) { --chip-bg: #C6FFF9; }
-.is-phat-am .bai-letters .bai-chip:nth-child(7n+4) { --chip-bg: #FFC6C7; }
-.is-phat-am .bai-letters .bai-chip:nth-child(7n+5) { --chip-bg: #FFFDC6; }
-.is-phat-am .bai-letters .bai-chip:nth-child(7n+6) { --chip-bg: #C6E2FF; }
-.is-phat-am .bai-letters .bai-chip:nth-child(7n+7) { --chip-bg: #FFDCC6; }
+/* Bảng chữ cái: một màu hồng nhạt */
+.is-phat-am .bai-letters .bai-chip { --chip-bg: #FFC6EF; }
+/* Mọi khung/nút trong mục Phát âm đều có viền đen */
+.is-phat-am .bai-chip { border: 1.5px solid var(--stroke); }
