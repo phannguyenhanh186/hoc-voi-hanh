@@ -1760,7 +1760,7 @@
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const item = await res.json();
         document.title = 'Bài ' + item.num + ': ' + item.title + ' — hoc voi hanh';
-        $title.textContent = 'Bài ' + item.num + ': ' + item.title;
+        $title.textContent = ''; const hl = document.createElement('span'); hl.className = 'title-hl'; hl.textContent = 'Bài ' + item.num + ': ' + item.title; $title.appendChild(hl);
         buildLesson(item);
       } catch (err) {
         console.error(err);
