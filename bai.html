@@ -433,7 +433,7 @@
           const sp = el('span', 'bai-hl bai-hl-' + tn, bits[0]);
           // style nội tuyến để vẫn hiện màu kể cả khi trình duyệt còn giữ style.css cũ
           if (tn === 'red' || tn === 'blueText') { sp.className = 'bai-hl-text'; sp.style.cssText = 'font-weight:700;color:' + (tn === 'red' ? '#EB483F' : '#2F5FD0') + ';'; node.appendChild(sp); return; }   // chỉ tô màu chữ, không nền
-          sp.style.cssText = 'background:' + ({ lav: '#D4C9FB', pink: '#F1C6D0', blue: '#C7D0F2' }[tn] || '#D4C9FB') + ';padding:0 4px;border-radius:0;color:#000;';
+          sp.style.cssText = 'background:' + ({ lav: '#D4C9FB', pink: '#FF94E1', blue: '#94CAFF' }[tn] || '#D4C9FB') + ';padding:0 4px;border-radius:0;color:#000;';
           node.appendChild(sp);
         }
         else if (part) node.appendChild(document.createTextNode(part));
