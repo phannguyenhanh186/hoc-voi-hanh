@@ -1692,6 +1692,7 @@
         }
 
         pill.textContent = entry.section.titleVi;
+        content.classList.toggle('is-phat-am', entry.section.id === 'phat-am');   // mục Phát âm dùng bảng màu nhạt
         content.innerHTML = '';
         if (entry.sub) {
           content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));
