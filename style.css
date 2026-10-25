@@ -695,10 +695,12 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   display: flex; flex-direction: column; gap: 12px;
 }
 .gram2-section { border-radius: 14px; overflow: hidden; }
-.gram2-section:nth-of-type(4n+1) { background: #F1C6D0; }
-.gram2-section:nth-of-type(4n+2) { background: #C7F2DC; }
-.gram2-section:nth-of-type(4n+3) { background: #F2E7C7; }
-.gram2-section:nth-of-type(4n+4) { background: #C7D0F2; }
+.gram2-section:nth-of-type(6n+1) { background: #F1C6D0; }
+.gram2-section:nth-of-type(6n+2) { background: #C7F2DC; }
+.gram2-section:nth-of-type(6n+3) { background: #F2E7C7; }
+.gram2-section:nth-of-type(6n+4) { background: #EAC6F1; }
+.gram2-section:nth-of-type(6n+5) { background: #E1F2C7; }
+.gram2-section:nth-of-type(6n+6) { background: #C7D6F2; }
 .gram2-section-header {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
   background: transparent; border: none; padding: 12px 14px; cursor: pointer; text-align: left; font: inherit;
@@ -1814,3 +1816,11 @@ h1:has(> .title-hl) { line-height: 1.55; }
 .lesson-tile-btn { border: 1px solid var(--stroke); border-radius: 2px; padding: 6px 14px; font-size: .85rem; }
 .lesson-tile-btn:hover { transform: none; box-shadow: none; background: #f5f5f5; }
 .lesson-grid { gap: 14px; }
+
+/* 3 thẻ / hàng, viền đậm hơn */
+.lesson-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) { .lesson-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .lesson-grid { grid-template-columns: 1fr; } }
+.lesson-tile { border-width: 2px; }
+.lesson-tile-btn { border-width: 2px; }
+.lesson-tile-title { font-size: 1.1rem; }
