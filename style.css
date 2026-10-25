@@ -696,7 +696,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
   border: 1.5px solid var(--stroke); border-radius: 20px; padding: 14px; background: #F7F7F5;
   display: flex; flex-direction: column; gap: 12px;
 }
-.gram2-section { border: 2px solid var(--stroke); border-radius: 14px; overflow: hidden; }
+.gram2-section { flex: none; border: 2px solid var(--stroke); border-radius: 14px; overflow: hidden; }   /* flex:none = không bị co lại, mở tab ra là hiện đủ mục con */
 .gram2-section:nth-of-type(7n+1) { background: #FFC6EF; }
 .gram2-section:nth-of-type(7n+2) { background: #E6FFC6; }
 .gram2-section:nth-of-type(7n+3) { background: #C6FFF9; }
@@ -722,7 +722,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .gram2-subtopic-btn.active { background: #F7F7F5; border-color: var(--stroke); font-weight: 800; }
 
 .gram2-content {
-  border: 1.5px solid var(--stroke); border-radius: 20px; padding: 26px 28px; background: var(--surface);
+  border: 1.5px solid var(--stroke); border-radius: 20px; padding: 26px 28px; background: #F7F7F5;
 }
 .gram2-content-title { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; letter-spacing: .01em; margin: 0 0 12px; }
 .gram2-intro { color: var(--muted); font-size: .92rem; line-height: 1.6; margin: 0 0 8px; }
