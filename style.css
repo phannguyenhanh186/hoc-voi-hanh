@@ -1,22 +1,14 @@
 /* ============================================================
    hoc voi hanh — stylesheet (theo prototype)
    bg #F8F8F8 · purple #C0BFF9 · yellow #FFDC9A
-   Font: tự host — đặt file vào fonts/main.<ext> (xem @font-face)
+   Font: Gustavo, tự host trong fonts/ (xem @font-face)
    ============================================================ */
 
-/* Font tự host: bỏ 1 file font vào thư mục fonts/ với tên main.<ext>.
-   Hỗ trợ woff2 / woff / ttf / otf — trình duyệt tự chọn file có sẵn.
-   Font PHẢI đủ dấu tiếng Việt (ă â ê ô ơ ư + thanh). */
-@font-face {
-  font-family: "Main";
-  src: url("fonts/main.woff2") format("woff2"),
-       url("fonts/main.woff")  format("woff"),
-       url("fonts/main.ttf")   format("truetype"),
-       url("fonts/main.otf")   format("opentype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+/* Font tự host: Gustavo (Lift Type) — file woff2 nằm trong fonts/. Có đủ dấu tiếng Việt. */
+@font-face { font-family: "Gustavo"; src: url("fonts/gustavo-regular.woff2") format("woff2"); font-weight: 100 450; font-style: normal; font-display: swap; }
+@font-face { font-family: "Gustavo"; src: url("fonts/gustavo-italic.woff2") format("woff2"); font-weight: 100 450; font-style: italic; font-display: swap; }
+@font-face { font-family: "Gustavo"; src: url("fonts/gustavo-medium.woff2") format("woff2"); font-weight: 451 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Gustavo"; src: url("fonts/gustavo-bold.woff2") format("woff2"); font-weight: 601 900; font-style: normal; font-display: swap; }
 
 :root {
   --bg:            #FFFFFF;
@@ -42,8 +34,8 @@
   --radius:        16px;
   --maxw:          1180px;
   --maxw-wide:      1320px;
-  --font-body:    "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Main", "Nunito", system-ui, sans-serif;  /* VNM Sans cho heading/UI */
+  --font-body:    "Gustavo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Gustavo", system-ui, sans-serif;  /* heading/UI */
 }
 
 * { box-sizing: border-box; }
@@ -1729,18 +1721,18 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 }
 
 /* ============================================================
-   FONT (Google Fonts): heading = Space Mono, body = Xanh Mono
-   Xanh Mono chỉ có độ đậm Regular (400) nên body/phụ đề dùng 400.
+   FONT: Gustavo (Lift Type), tự host trong fonts/ — dùng cho cả heading và body.
+   Đổi font: sửa 2 biến dưới đây (và @font-face ở đầu file).
    ============================================================ */
 :root {
-  --font-display: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  --font-body:    "Xanh Mono", "Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-display: "Gustavo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body:    "Gustavo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Body: Regular (Xanh Mono chỉ có 400) */
+/* Body: Regular (400) */
 body { font-weight: 400; }
 
-/* Heading: Regular (đổi 400 → 700 nếu muốn Space Mono Bold) */
+/* Heading: Regular (đổi 400 → 500 / 700 nếu muốn Medium / Bold) */
 h1, h2, h3, h4, h5, h6,
 .bai-grammar-title, .bai-grammar-heading-vi, .gram2-content-title,
 .lesson-tile-title, .gram2-sub-heading, .bai-pairs-head-vi,
@@ -1752,12 +1744,12 @@ h1, h2, h3, h4, h5, h6,
 .bai-pairs-intro-en, .bai-pairs-head-en, .gram2-section-title-en,
 .phrase .en, .sentence-translation { font-weight: 400; }
 
-/* Trong phần bài học (bai.html): mọi chữ = Regular (Xanh Mono chỉ có 400) */
+/* Trong phần bài học (bai.html): mọi chữ = Regular (Regular 400) */
 .gram2-content, .gram2-content * { font-weight: 400 !important; }
 .gram2-content .bai-ex-head,
 .gram2-content .bai-ex-head * { font-weight: 400 !important; }
 
-/* Yêu cầu bài (VI + EN) = Xanh Mono; phần ghi chú / note = Space Mono cho dễ nhìn */
+/* Yêu cầu bài và ghi chú: cùng font Gustavo */
 .bai-ex-head, .bai-ex-num, .bai-ex-vi, .bai-ex-en { font-family: var(--font-body); }
 .grammar-callout, .grammar-callout *, .grammar-note { font-family: var(--font-display); }
 
@@ -1765,7 +1757,7 @@ h1, h2, h3, h4, h5, h6,
 .bai-chip.is-static { background: #fff; border: 1.5px solid var(--stroke); cursor: default; }
 .bai-chip.is-static:hover, .bai-chip.is-static:active { transform: none; box-shadow: none; }
 
-/* Trong phần bài học: mọi nội dung (body) = Space Mono; riêng yêu cầu bài (VI + EN) giữ Xanh Mono */
+/* Trong phần bài học: mọi nội dung dùng Gustavo */
 .gram2-content, .gram2-content * { font-family: var(--font-display) !important; }
 .gram2-content .bai-ex-head, .gram2-content .bai-ex-head *,
 .gram2-content .bai-ex-en { font-family: var(--font-body) !important; }
