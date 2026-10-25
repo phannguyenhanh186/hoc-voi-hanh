@@ -33,7 +33,7 @@
   <script>
     const LEVELS = { mam: 'mầm', choi: 'chồi', la: 'lá' };
     const activeLevel = new URLSearchParams(location.search).get('level') || 'mam';
-    document.getElementById('title').textContent = 'Cấp ' + (LEVELS[activeLevel] || activeLevel);
+    (function () { const t = document.getElementById('title'); t.textContent = ''; const hl = document.createElement('span'); hl.className = 'title-hl'; hl.textContent = String(LEVELS[activeLevel] || activeLevel).toUpperCase(); t.appendChild(hl); })();
     document.title = 'Cấp ' + (LEVELS[activeLevel] || activeLevel) + ' — hoc voi hanh';
 
     function el(tag, cls) { const n = document.createElement(tag); if (cls) n.className = cls; return n; }
