@@ -358,6 +358,155 @@
          "audio": "audio/b11/{voice}/vocab_nuoc_12.mp3"
         }
        ]
+      },
+      {
+       "type": "photoFill",
+       "num": 6,
+       "columns": 3,
+       "instructionVi": "Nhìn vào hình và hoàn thành các câu sau.",
+       "instructionEn": "Look at the pictures and complete the following sentences.",
+       "words": [
+        "Pháp",
+        "Thái Lan",
+        "Hàn Quốc",
+        "Đức",
+        "Nhật Bản",
+        "Tây Ban Nha",
+        "Trung Quốc",
+        "Mỹ",
+        "Lào",
+        "Úc",
+        "Việt Nam",
+        "Anh"
+       ],
+       "items": [
+        {
+         "img": "images/b11/quoc-gia/flag_03_phap.svg",
+         "name": "Hình 1",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Pháp"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_07_thai.svg",
+         "name": "Hình 2",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Thái Lan",
+           "Thái"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_09_han.svg",
+         "name": "Hình 3",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Hàn Quốc",
+           "Hàn"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_04_duc.svg",
+         "name": "Hình 4",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Đức"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_10_nhat.svg",
+         "name": "Hình 5",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Nhật Bản",
+           "Nhật"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_05_tay-ban-nha.svg",
+         "name": "Hình 6",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Tây Ban Nha"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_08_trung.svg",
+         "name": "Hình 7",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Trung Quốc",
+           "Trung"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_02_my.svg",
+         "name": "Hình 8",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Mỹ"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_11_lao.svg",
+         "name": "Hình 9",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Lào"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_06_uc.svg",
+         "name": "Hình 10",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Úc"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_12_viet.svg",
+         "name": "Hình 11",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Việt Nam",
+           "Việt"
+          ]
+         ]
+        },
+        {
+         "img": "images/b11/quoc-gia/flag_01_anh.svg",
+         "name": "Hình 12",
+         "template": "Đây là nước {0}.",
+         "answers": [
+          [
+           "Anh"
+          ]
+         ]
+        }
+       ]
       }
      ]
     },
