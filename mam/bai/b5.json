@@ -1071,7 +1071,7 @@
        "num": 10,
        "instructionVi": "Đọc nhật ký của Châu và trả lời câu hỏi.",
        "instructionEn": "Read Châu's diary and answer the questions.",
-       "passage": "25/8\nHôm nay mình đi làm. Buổi sáng, mình tới văn phòng. Buổi trưa, mình đi ăn với đồng nghiệp. Buổi chiều, mình tới siêu thị mua đồ ăn. Hôm nay mình không đi ăn. Hôm nay mình ăn ở nhà.\n\n26/8\nHôm qua mình không đi làm. Mình ở nhà. Buổi chiều, mình tới nhà Ngân ăn cơm.\n\n27/8\nHôm nay mình đi du lịch. Mình tới sân bay từ buổi sáng. Mình sẽ về nhà vào ngày 30.",
+       "passage": "Ngày 25 tháng 8\nHôm nay mình đi làm. Buổi sáng, mình tới văn phòng. Buổi trưa, mình đi ăn với đồng nghiệp. Buổi chiều, mình tới siêu thị mua đồ ăn.\n\nNgày 30 tháng 8\nHôm qua mình không đi làm. Mình làm ở nhà. Buổi chiều, mình tới nhà Ngân ăn cơm.\n\nNgày 2 tháng 9\nHôm nay mình đi du lịch. Mình tới sân bay từ buổi sáng. Mình sẽ về nhà vào ngày 5.",
        "questions": [
         {
          "q": "Ngày 25 tháng 8, Châu đi đâu vào buổi sáng?",
@@ -1082,20 +1082,16 @@
          "a": "Buổi trưa ngày 25 tháng 8, Châu đi ăn với đồng nghiệp."
         },
         {
-         "q": "Ngày 25 tháng 8 Châu có đi ăn không?",
-         "a": "Có. Buổi trưa Châu đi ăn với đồng nghiệp."
+         "q": "Ngày 30 tháng 8 Châu đi làm ở đâu?",
+         "a": "Ngày 30 tháng 8, Châu không đi làm. Châu làm ở nhà."
         },
         {
-         "q": "Ngày 26 tháng 8, Châu đi làm ở đâu?",
-         "a": "Ngày 26 tháng 8, Châu không đi làm. Châu ở nhà."
+         "q": "Buổi chiều ngày 30 tháng 8, Châu đi đâu?",
+         "a": "Buổi chiều ngày 30 tháng 8, Châu tới nhà Ngân ăn cơm."
         },
         {
-         "q": "Buổi chiều ngày 26 tháng 8, Châu đi đâu?",
-         "a": "Buổi chiều ngày 26 tháng 8, Châu tới nhà Ngân ăn cơm."
-        },
-        {
-         "q": "Châu đi đâu vào ngày 27 tháng 8?",
-         "a": "Ngày 27 tháng 8, Châu đi du lịch. Châu tới sân bay."
+         "q": "Châu đi đâu vào ngày 2 tháng 9?",
+         "a": "Ngày 2 tháng 9, Châu đi du lịch. Châu tới sân bay."
         }
        ]
       }
