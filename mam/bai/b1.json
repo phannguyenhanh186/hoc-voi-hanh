@@ -287,37 +287,37 @@
            "name": "Ngang",
            "letter": "a",
            "path": "M12 60 L88 60",
-           "color": "#F1C6D0"
+           "color": "#C6C9FF"
           },
           {
            "name": "Huyền",
            "letter": "à",
            "path": "M14 66 Q40 66 86 100",
-           "color": "#C7F2DC"
+           "color": "#FFC6EF"
           },
           {
            "name": "Hỏi",
            "letter": "ả",
            "path": "M12 66 C26 122 50 122 88 40",
-           "color": "#F2E7C7"
+           "color": "#E6FFC6"
           },
           {
            "name": "Ngã",
            "letter": "ã",
            "path": "M12 66 C26 122 50 122 88 40",
-           "color": "#EAC6F1"
+           "color": "#C6FFF9"
           },
           {
            "name": "Sắc",
            "letter": "á",
            "path": "M22 92 L78 20",
-           "color": "#E1F2C7"
+           "color": "#FFC6C7"
           },
           {
            "name": "Nặng",
            "letter": "ạ",
            "path": "M30 98 L70 110",
-           "color": "#C7D6F2"
+           "color": "#FFFDC6"
           }
          ]
         },
