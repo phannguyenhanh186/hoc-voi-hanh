@@ -109,32 +109,20 @@
     }
 
     function makeTile(opts) {
-      // opts: { eyebrow, title, locked, href, hrefReview, progress: {done,total} }
-      const PALETTE = ['#C6C9FF', '#FFC6EF', '#E6FFC6', '#C6FFF9', '#FFC6C7', '#FFFDC6', '#C6E2FF', '#FFDCC6'];   // nền nhạt, xoay vòng 8 màu
+      // opts: { eyebrow, title, locked, href }  — mỗi bài là 1 hàng: nhãn "Bài N" (highlight màu) · tên bài · nút mũi tên
+      const HL = ['#D1FF94', '#FF94E1', '#C6FFF9', '#FF9496', '#FAFF94', '#94CAFF', '#FFBD94', '#949AFF'];
       window.__tileIdx = (window.__tileIdx || 0);
-      const tile = el('div', 'lesson-tile' + (opts.locked ? ' lesson-tile-locked' : ''));
-      tile.style.background = PALETTE[window.__tileIdx++ % PALETTE.length];
-
-      const badge = el('span', 'lesson-tile-badge'); badge.textContent = opts.eyebrow;
-      tile.appendChild(badge);
-
-      const title = el('h3', 'lesson-tile-title'); title.textContent = opts.title;
-      tile.appendChild(title);
-
-      const actions = el('div', 'lesson-tile-actions');
-      if (opts.locked) {
-        const soon = el('span', 'lesson-tile-btn lesson-tile-btn-disabled'); soon.textContent = 'Sắp ra mắt';
-        actions.appendChild(soon);
-      } else {
-        const learnBtn = el('a', 'lesson-tile-btn'); learnBtn.textContent = 'Học'; learnBtn.href = opts.href;
-        actions.appendChild(learnBtn);
-        if (opts.hrefReview) {
-          const reviewBtn = el('a', 'lesson-tile-btn lesson-tile-btn-secondary'); reviewBtn.textContent = 'Ôn tập ›'; reviewBtn.href = opts.hrefReview;
-          actions.appendChild(reviewBtn);
-        }
-      }
-      tile.appendChild(actions);
-      return tile;
+      const color = HL[window.__tileIdx++ % HL.length];
+      const row = el(opts.locked ? 'div' : 'a', 'lesson-row' + (opts.locked ? ' is-locked' : ''));
+      if (!opts.locked) row.href = opts.href;
+      const badge = el('span', 'lesson-row-badge'); badge.textContent = opts.eyebrow; badge.style.background = color;
+      row.appendChild(badge);
+      const title = el('span', 'lesson-row-title'); title.textContent = opts.title;
+      row.appendChild(title);
+      const go = el('span', 'lesson-row-go'); go.textContent = opts.locked ? '🔒' : '→';
+      if (opts.locked) go.setAttribute('title', 'Sắp ra mắt');
+      row.appendChild(go);
+      return row;
     }
 
     (async function () {
