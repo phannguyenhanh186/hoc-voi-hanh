@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bài học — hoc voi hanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css?v=20261013" />
 </head>
 <body>
@@ -12,6 +15,7 @@
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
         <div class="nav-right">
+          <div id="account-widget-slot"></div>
         </div>
       </nav>
     </div>
@@ -210,11 +214,8 @@
     // Bài 4: bảng thanh điệu. Cột đầu là nhãn thanh, các ô sau bấm để nghe.
     function renderTones(ex) {
       const wrap = el('div', 'bai-tones');
-      (ex.rows || []).forEach(function (row, ri) {
-        // Thanh điệu: chỉ thanh hỏi và thanh ngã màu hồng, các thanh còn lại màu xanh dương
-        const lbl = String(row.label || '').normalize('NFC').toLowerCase();
-        const isPink = lbl.indexOf('hỏi') !== -1 || lbl.indexOf('ngã') !== -1;
-        const tone = 'bai-tone-' + (isPink ? 'pink' : 'blue');
+      (ex.rows || []).forEach(function (row) {
+        const tone = 'bai-tone-' + (row.tone || 'lav');
         wrap.appendChild(el('div', 'bai-chip bai-label ' + tone, row.label));
         for (let i = 0; i < 4; i++) {
           if (row.words[i] == null) { const gap = el('span'); gap.setAttribute('aria-hidden', 'true'); wrap.appendChild(gap); }
@@ -256,7 +257,7 @@
         const input = document.createElement('input');
         input.type = 'text'; input.className = 'bai-blank'; input.autocomplete = 'off';
         input.setAttribute('aria-label', 'Tên trong câu ' + (i + 1));
-        if (ex.words) { input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch'); input.addEventListener('focus', function () { activeInput = input; }); }
+        if (ex.words) { input.style.width = '12ch'; input.addEventListener('focus', function () { activeInput = input; }); }
         line.appendChild(input);
         line.appendChild(document.createTextNode(item.after || ''));
         const mark = el('span', 'bai-mark'); line.appendChild(mark);
@@ -393,7 +394,7 @@
           built.line.appendChild(mark);
           cap.appendChild(built.line);
           built.cells.forEach(function (c) {
-            if (ex.words) { c.input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch'); c.input.addEventListener('focus', function () { activeInput = c.input; }); }
+            if (ex.words) { c.input.style.width = '12ch'; c.input.addEventListener('focus', function () { activeInput = c.input; }); }
             allCells.push({ input: c.input, answers: c.answers, mark: mark });
           });
         }
@@ -435,8 +436,7 @@
           const tn = bits[1] || tone || 'blue';
           const sp = el('span', 'bai-hl bai-hl-' + tn, bits[0]);
           // style nội tuyến để vẫn hiện màu kể cả khi trình duyệt còn giữ style.css cũ
-          if (tn === 'red' || tn === 'blueText') { sp.className = 'bai-hl-text'; sp.style.cssText = 'font-weight:700;color:' + (tn === 'red' ? '#EB483F' : '#2F5FD0') + ';'; node.appendChild(sp); return; }   // chỉ tô màu chữ, không nền
-          sp.style.cssText = 'background:' + ({ lav: '#D4C9FB', pink: '#FF94E1', blue: '#94CAFF' }[tn] || '#D4C9FB') + ';padding:0 4px;border-radius:0;color:#000;';
+          sp.style.cssText = 'background:' + ({ lav: '#D4C9FB', pink: '#F7CBCB', blue: '#CACFFB' }[tn] || '#D4C9FB') + ';padding:1px 6px;border-radius:6px;color:#000;';
           node.appendChild(sp);
         }
         else if (part) node.appendChild(document.createTextNode(part));
@@ -485,6 +485,10 @@
           (b.columns || []).forEach(function (c, ci) { t.appendChild(el('div', 'bai-grammar-th' + (ci === nCols - 1 ? ' is-last-col' : '') + (nRows === 0 ? ' is-last-row' : ''), c)); });
           (b.rows || []).forEach(function (r, ri) { r.forEach(function (c, ci) { t.appendChild(el('div', 'bai-grammar-td' + (ci === nCols - 1 ? ' is-last-col' : '') + (ri === nRows - 1 ? ' is-last-row' : ''), c)); }); });
           wrap.appendChild(t);
+        } else if (b.type === 'wordRow') {   // hàng chữ ví dụ (không bấm được); {{ơ}} tô nguyên âm mang dấu
+          const r = el('div', 'bai-wordrow');
+          (b.words || []).forEach(function (w) { r.appendChild(hlText(el('span', 'bai-wordrow-chip'), w, b.tone || 'lav')); });
+          wrap.appendChild(r);
         } else if (b.type === 'image') {
           const im = document.createElement('img');
           im.src = b.src; im.alt = b.alt || '';
@@ -626,7 +630,7 @@
         const mark = el('span', 'bai-mark');
         built.line.appendChild(mark);
         built.cells.forEach(function (c) {
-          c.input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch');
+          c.input.style.width = '12ch';
           c.input.addEventListener('focus', function () { activeInput = c.input; });
           cells.push({ input: c.input, answers: c.answers, mark: mark });
         });
@@ -905,7 +909,7 @@
       return box;
     }
 
-    // Bài 5 (b2): lịch 3 ngày (ảnh hoạt động mỗi ngày) + ngân hàng từ + câu điền chỗ trống.
+    // Bài 5 (b3): lịch 3 ngày (ảnh hoạt động mỗi ngày) + ngân hàng từ + câu điền chỗ trống.
     // Item có 'distinct: true' (2 ô, đáp án gồm cả 2 thứ tự) thì 2 ô phải khác nhau.
     function renderCalendarFill(ex, n) {
       const box = el('div');
@@ -1185,7 +1189,7 @@
       return wrap;
     }
 
-    // Bài 8 (b2): sắp xếp các từ thành câu hỏi. Bấm từ ở ngân hàng để đưa lên dòng câu, bấm lại để bỏ xuống.
+    // Bài 8 (b3): sắp xếp các từ thành câu hỏi. Bấm từ ở ngân hàng để đưa lên dòng câu, bấm lại để bỏ xuống.
     // item: { words:[...], answers:[câu chấp nhận...], example:true }
     function normSentence(s) {
       return String(s).normalize('NFC').toLowerCase().replace(/[.,!?;:]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -1275,7 +1279,7 @@
       return box;
     }
 
-    // Bài 9 (b2): viết câu trả lời theo gợi ý. answers dùng {p} = đại từ xưng hô (pronouns[]).
+    // Bài 9 (b3): viết câu trả lời theo gợi ý. answers dùng {p} = đại từ xưng hô (pronouns[]).
     function renderWriteAnswer(ex, n) {
       const box = el('div', 'bai-write-list');
       let seq = 0;
@@ -1349,7 +1353,7 @@
       return box;
     }
 
-    // Bài 10 (b2): bài nói, trả lời mở. Có ví dụ + ô ghi chú tự do (không chấm điểm).
+    // Bài 10 (b3): bài nói, trả lời mở. Có ví dụ + ô ghi chú tự do (không chấm điểm).
     function renderOpenAnswer(ex, n) {
       const box = el('div', 'bai-write-list');
       if (ex.example) {
@@ -1695,7 +1699,6 @@
         }
 
         pill.textContent = entry.section.titleVi;
-        content.classList.toggle('is-phat-am', entry.section.id === 'phat-am');   // mục Phát âm dùng bảng màu nhạt
         content.innerHTML = '';
         if (entry.sub) {
           content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));
@@ -1764,7 +1767,7 @@
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const item = await res.json();
         document.title = 'Bài ' + item.num + ': ' + item.title + ' — hoc voi hanh';
-        $title.textContent = ''; const hl = document.createElement('span'); hl.className = 'title-hl'; hl.textContent = 'Bài ' + item.num + ': ' + item.title; $title.appendChild(hl);
+        $title.textContent = 'Bài ' + item.num + ': ' + item.title;
         buildLesson(item);
       } catch (err) {
         console.error(err);
@@ -1783,5 +1786,9 @@
     })();
   </script>
   <script src="pomodoro.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="account-widget.js"></script>
 </body>
 </html>
