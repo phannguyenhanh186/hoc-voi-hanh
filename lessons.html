@@ -4,7 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bài học — hoc voi hanh</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261104b" />
+  <style>
+/* ---- Danh sách bài (lessons.html): mỗi bài 1 hàng, 2 cột ---- */
+.lesson-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 700px) { .lesson-grid { grid-template-columns: 1fr; } }
+.lesson-row, .lesson-row:visited { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 14px 10px 14px; background: #fff; border: 2px solid var(--stroke); border-radius: 16px; color: var(--ink); text-decoration: none; }
+a.lesson-row:hover { background: #FAFAF7; }
+.lesson-row-badge { flex: none; padding: 0 3px; font-family: var(--font-display); font-weight: 700; font-size: .95rem; white-space: nowrap; }
+.lesson-row-title { flex: 1; min-width: 0; font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.25; }
+.lesson-row-go { flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--stroke); border-radius: 6px; background: #FFBD94; font-size: .95rem; }
+.lesson-row.is-locked { opacity: .6; }
+.lesson-row.is-locked .lesson-row-go { background: #eee; font-size: .8rem; }
+  .navbar { background: #fff; }
+  </style>
 </head>
 <body>
   <header class="site-header">
