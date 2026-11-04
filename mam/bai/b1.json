@@ -218,23 +218,23 @@
        "type": "grammarNote",
        "noNum": true,
        "instructionVi": "",
-       "title": "THANH ĐIỆU – TONE MARKS",
        "blocks": [
         {
          "type": "heading",
-         "vi": "1. Pitches and Formation"
+         "text": "1. Pitches and Formation",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
-         "vi": "Vietnamese is a tonal language with 6 tones and 5 tone marks."
+         "text": "Vietnamese is a tonal language with 6 tones and 5 tone marks."
         },
         {
          "type": "paragraph",
-         "vi": "There are various ways to translate the name of these tones. The table below combines two approaches; one is the literal translation, and the other is based on the pitches when forming the tone:"
+         "text": "There are various ways to translate the name of these tones. The table below combines two approaches; one is the literal translation, and the other is based on the pitches when forming the tone:"
         },
         {
          "type": "paragraph",
-         "vi": "Literal Translation and Pitch Contours of Vietnamese Tones"
+         "text": "Literal Translation and Pitch Contours of Vietnamese Tones"
         },
         {
          "type": "table",
@@ -278,73 +278,117 @@
         },
         {
          "type": "paragraph",
-         "vi": "The diagram below shows the pitch level when forming the tones:"
+         "text": "The diagram below shows the pitch level when forming the tones:"
         },
         {
-         "type": "image",
-         "src": "images/b1/thanh-dieu/tone_pitch.svg",
-         "alt": "Pitch contours of the six Vietnamese tones: ngang, huyền, hỏi, ngã, sắc, nặng",
-         "maxWidth": 900
-        },
-        {
-         "type": "heading",
-         "vi": "2. How to write tone marks in a word"
-        },
-        {
-         "type": "paragraph",
-         "vi": "When writing tone marks in a word, make sure to put them on a vowel, not a consonant:"
-        },
-        {
-         "type": "paragraph",
-         "vi": "• If there is only one vowel, the tone mark is put on that vowel."
-        },
-        {
-         "type": "wordRow",
-         "tone": "lav",
-         "words": [
-          "Đ{{ã}}",
-          "M{{ì}}nh",
-          "B{{ạ}}n",
-          "C{{ó}}",
-          "C{{ả}}m"
-         ]
-        },
-        {
-         "type": "paragraph",
-         "vi": "• If there are two or three vowels, but no consonant at the end, the tone mark is put on the second to last vowel."
-        },
-        {
-         "type": "wordRow",
-         "tone": "lav",
-         "words": [
-          "H{{ò}}a",
-          "Ki{{ể}}u",
-          "Ph{{ả}}i",
-          "M{{ỗ}}i",
-          "Lo{{ạ}}i"
-         ]
-        },
-        {
-         "type": "paragraph",
-         "vi": "• If there are two or three vowels, and there is a consonant at the end, the tone mark is put on the last vowel."
-        },
-        {
-         "type": "wordRow",
-         "tone": "lav",
-         "words": [
-          "Ti{{ế}}ng",
-          "Vi{{ệ}}t",
-          "Nguy{{ễ}}n",
-          "Qu{{ỳ}}nh"
+         "type": "toneChart",
+         "tones": [
+          {
+           "name": "Ngang",
+           "letter": "a",
+           "path": "M12 60 L88 60",
+           "color": "#F1C6D0"
+          },
+          {
+           "name": "Huyền",
+           "letter": "à",
+           "path": "M14 66 Q40 66 86 100",
+           "color": "#C7F2DC"
+          },
+          {
+           "name": "Hỏi",
+           "letter": "ả",
+           "path": "M12 66 C26 122 50 122 88 40",
+           "color": "#F2E7C7"
+          },
+          {
+           "name": "Ngã",
+           "letter": "ã",
+           "path": "M12 66 C26 122 50 122 88 40",
+           "color": "#EAC6F1"
+          },
+          {
+           "name": "Sắc",
+           "letter": "á",
+           "path": "M22 92 L78 20",
+           "color": "#E1F2C7"
+          },
+          {
+           "name": "Nặng",
+           "letter": "ạ",
+           "path": "M30 98 L70 110",
+           "color": "#C7D6F2"
+          }
          ]
         },
         {
          "type": "heading",
-         "vi": "3. Importance of Tones and Tone Marks"
+         "text": "2. How to write tone marks in a word",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
-         "vi": "The use of tones is extremely important, as a different tone may cause the word to have an entirely new meaning. For example:"
+         "text": "When writing tone marks in a word, make sure to put them on a vowel, not a consonant:"
+        },
+        {
+         "type": "paragraph",
+         "text": "If there is only one vowel, the tone mark is put on that vowel."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "blue",
+         "groups": [
+          {
+           "lines": [
+            {
+             "vi": "Đã  ·  Mình  ·  Bạn  ·  Có  ·  Cảm"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "text": "If there are two or three vowels, but no consonant at the end, the tone mark is put on the second to last vowel."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "blue",
+         "groups": [
+          {
+           "lines": [
+            {
+             "vi": "Hòa  ·  Kiểu  ·  Phải  ·  Mỗi  ·  Loại"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "text": "If there are two or three vowels, and there is a consonant at the end, the tone mark is put on the last vowel."
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "blue",
+         "groups": [
+          {
+           "lines": [
+            {
+             "vi": "Tiếng  ·  Việt  ·  Nguyễn  ·  Quỳnh"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "text": "3. Importance of Tones and Tone Marks",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "text": "The use of tones is extremely important, as a different tone may cause the word to have an entirely new meaning. For example:"
         },
         {
          "type": "table",
@@ -377,7 +421,8 @@
            "Mạ",
            "Young rice stalk, Coating"
           ]
-         ]
+         ],
+         "sysFont": true
         }
        ]
       },
