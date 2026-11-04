@@ -207,6 +207,179 @@
          "answer": "la"
         }
        ]
+      }
+     ]
+    },
+    {
+     "id": "thanh-dieu",
+     "label": "Thanh điệu",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "THANH ĐIỆU – TONE MARKS",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Pitches and Formation"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Vietnamese is a tonal language with 6 tones and 5 tone marks."
+        },
+        {
+         "type": "paragraph",
+         "vi": "There are various ways to translate the name of these tones. The table below combines two approaches; one is the literal translation, and the other is based on the pitches when forming the tone:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Literal Translation and Pitch Contours of Vietnamese Tones"
+        },
+        {
+         "type": "table",
+         "columns": [
+          "Vietnamese tone",
+          "Literal translation",
+          "Pitch contour / formation"
+         ],
+         "rows": [
+          [
+           "Thanh ngang",
+           "Level tone",
+           "Mid-level tone"
+          ],
+          [
+           "Thanh sắc",
+           "Sharp tone",
+           "High-rising tone"
+          ],
+          [
+           "Thanh huyền",
+           "Grave tone",
+           "Low-falling tone"
+          ],
+          [
+           "Thanh hỏi",
+           "Question tone",
+           "Low-rising tone"
+          ],
+          [
+           "Thanh ngã",
+           "Tilde tone / Broken tone",
+           "Rising-broken tone"
+          ],
+          [
+           "Thanh nặng",
+           "Heavy tone",
+           "Low-falling or low-dropping tone"
+          ]
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "The diagram below shows the pitch level when forming the tones:"
+        },
+        {
+         "type": "image",
+         "src": "images/b1/thanh-dieu/tone_pitch.svg",
+         "alt": "Pitch contours of the six Vietnamese tones: ngang, huyền, hỏi, ngã, sắc, nặng",
+         "maxWidth": 900
+        },
+        {
+         "type": "heading",
+         "vi": "2. How to write tone marks in a word"
+        },
+        {
+         "type": "paragraph",
+         "vi": "When writing tone marks in a word, make sure to put them on a vowel, not a consonant:"
+        },
+        {
+         "type": "paragraph",
+         "vi": "• If there is only one vowel, the tone mark is put on that vowel."
+        },
+        {
+         "type": "wordRow",
+         "tone": "lav",
+         "words": [
+          "Đ{{ã}}",
+          "M{{ì}}nh",
+          "B{{ạ}}n",
+          "C{{ó}}",
+          "C{{ả}}m"
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "• If there are two or three vowels, but no consonant at the end, the tone mark is put on the second to last vowel."
+        },
+        {
+         "type": "wordRow",
+         "tone": "lav",
+         "words": [
+          "H{{ò}}a",
+          "Ki{{ể}}u",
+          "Ph{{ả}}i",
+          "M{{ỗ}}i",
+          "Lo{{ạ}}i"
+         ]
+        },
+        {
+         "type": "paragraph",
+         "vi": "• If there are two or three vowels, and there is a consonant at the end, the tone mark is put on the last vowel."
+        },
+        {
+         "type": "wordRow",
+         "tone": "lav",
+         "words": [
+          "Ti{{ế}}ng",
+          "Vi{{ệ}}t",
+          "Nguy{{ễ}}n",
+          "Qu{{ỳ}}nh"
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "3. Importance of Tones and Tone Marks"
+        },
+        {
+         "type": "paragraph",
+         "vi": "The use of tones is extremely important, as a different tone may cause the word to have an entirely new meaning. For example:"
+        },
+        {
+         "type": "table",
+         "columns": [
+          "Word",
+          "Meaning"
+         ],
+         "rows": [
+          [
+           "Ma",
+           "Ghost"
+          ],
+          [
+           "Mà",
+           "But"
+          ],
+          [
+           "Má",
+           "Mother / Cheek"
+          ],
+          [
+           "Mả",
+           "Grave"
+          ],
+          [
+           "Mã",
+           "Horse (Chinese origin), Appearance"
+          ],
+          [
+           "Mạ",
+           "Young rice stalk, Coating"
+          ]
+         ]
+        }
+       ]
       },
       {
        "type": "tones",
@@ -274,7 +447,8 @@
           "tự"
          ]
         }
-       ]
+       ],
+       "num": 4
       },
       {
        "type": "fillNames",
@@ -322,7 +496,8 @@
          ],
          "audio": "audio/b1/{voice}/ex5_05.mp3"
         }
-       ]
+       ],
+       "num": 5
       }
      ]
     }
