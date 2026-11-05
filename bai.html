@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bài học — hoc voi hanh</title>
   <link rel="stylesheet" href="style.css?v=20261104b" />
-  <style>.navbar { background: #fff; }</style>
+  <style>
+  .navbar { background: #fff; }
+  .lesson-nav { display: flex; justify-content: space-between; gap: 14px; margin: 22px 0 8px; }
+  .lesson-nav-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; background: #fff; border: 2px solid var(--stroke, #1B1B28); border-radius: 16px; color: var(--ink, #000); text-decoration: none; font-family: var(--font-display, inherit); font-weight: 700; font-size: 1rem; line-height: 1.2; }
+  a.lesson-nav-btn:hover { background: #FFDCC6; }
+  .lesson-nav-btn.is-disabled { opacity: .4; pointer-events: none; }
+  .lesson-nav-btn.is-next { margin-left: auto; text-align: right; }
+  @media (max-width: 520px) { .lesson-nav-btn { padding: 10px 14px; font-size: .9rem; } }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -27,6 +35,7 @@
       <h1 id="title">Đang tải…</h1>
     </div>
     <section class="tab-panel" id="panel"></section>
+    <nav class="lesson-nav" id="lesson-nav" aria-label="Chuyển bài"></nav>
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
@@ -493,8 +502,10 @@
             col.appendChild(head);
             col.appendChild(el('div', 'bai-tonechart-letter', t.letter));
             const cell = el('div', 'bai-tonechart-cell');
-            cell.innerHTML = '<svg viewBox="0 0 100 120" preserveAspectRatio="none" aria-hidden="true">'
-              + '<g class="bai-tonechart-grid"><line x1="0" y1="15" x2="100" y2="15"/><line x1="0" y1="45" x2="100" y2="45"/><line x1="0" y1="75" x2="100" y2="75"/><line x1="0" y1="105" x2="100" y2="105"/></g>'
+            let g = ''; for (let r = 1; r < 7; r++) g += '<line x1="0" y1="' + (r * 20) + '" x2="100" y2="' + (r * 20) + '"/>';   // 7 hàng cao độ
+            cell.style.height = '210px';
+            cell.innerHTML = '<svg viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">'
+              + '<g class="bai-tonechart-grid">' + g + '</g>'
               + '<path class="bai-tonechart-line" d="' + t.path + '"/></svg>';
             col.appendChild(cell);
             chart.appendChild(col);
@@ -1771,6 +1782,31 @@
       if (first) select(first);
     }
 
+    // ---------- Nút chuyển bài (trước / sau) ----------
+    async function buildLessonNav() {
+      const nav = document.getElementById('lesson-nav');
+      if (!nav) return;
+      try {
+        const res = await fetch(level + '/units.json', { cache: 'no-cache' });
+        const lessons = ((await res.json()).lessons || []).slice().sort(function (a, b) { return a.num - b.num; });
+        const i = lessons.findIndex(function (l) { return l.id === itemId; });
+        if (i < 0) return;
+        const open = function (l) { return l && l.status !== 'todo'; };
+        let prev = null, next = null;
+        for (let k = i - 1; k >= 0; k--) { if (open(lessons[k])) { prev = lessons[k]; break; } }
+        for (let k = i + 1; k < lessons.length; k++) { if (open(lessons[k])) { next = lessons[k]; break; } }
+        const mk = function (l, cls, label) {
+          const a = document.createElement(l ? 'a' : 'span');
+          a.className = 'lesson-nav-btn ' + cls + (l ? '' : ' is-disabled');
+          a.textContent = label;
+          if (l) a.href = (l.page || 'bai.html') + '?id=' + encodeURIComponent(l.id) + '&level=' + encodeURIComponent(level);
+          return a;
+        };
+        nav.appendChild(mk(prev, 'is-prev', '← Bài ' + (prev ? prev.num : 'trước')));
+        nav.appendChild(mk(next, 'is-next', 'Bài ' + (next ? next.num : 'sau') + ' →'));
+      } catch (e) { console.error(e); }
+    }
+
     // ---------- Load ----------
     (async function () {
       try {
@@ -1781,6 +1817,7 @@
         document.title = 'Bài ' + item.num + ': ' + item.title + ' — hoc voi hanh';
         $title.textContent = ''; const hl = document.createElement('span'); hl.className = 'title-hl'; hl.textContent = 'Bài ' + item.num + ': ' + item.title; $title.appendChild(hl);
         buildLesson(item);
+        buildLessonNav();
       } catch (err) {
         console.error(err);
         $title.textContent = 'Không tải được bài học';
