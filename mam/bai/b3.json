@@ -877,6 +877,186 @@
        ]
       }
      ]
+    },
+    {
+     "id": "gi",
+     "label": "Gì?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "TỪ ĐỂ HỎI “GÌ” – ASKING QUESTIONS WITH “GÌ”",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Cách sử dụng từ “gì”",
+         "en": "1. How to use “gì”"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong tiếng Việt, gì là từ dùng để hỏi về một sự vật, sự việc hoặc thông tin mà chúng ta chưa biết.",
+         "en": "In Vietnamese, “gì” means “what.” It is used to ask about something we do not know."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi muốn hỏi về sở thích của một người, chúng ta có thể sử dụng từ gì để hỏi người đó thích ăn gì, thích uống gì hoặc thích làm gì.",
+         "en": "When asking about someone's preferences, we can use gì to ask what they like to eat, drink, or do."
+        },
+        {
+         "type": "heading",
+         "vi": "2. Cấu trúc câu hỏi",
+         "en": "2. Question Structures"
+        },
+        {
+         "type": "heading",
+         "vi": "A. Hỏi về sở thích ăn uống",
+         "en": "A. Asking about food and drink preferences"
+        },
+        {
+         "type": "heading",
+         "vi": "Cấu trúc 1",
+         "en": "Structure 1"
+        },
+        {
+         "type": "structure",
+         "vi": "Bạn thích ăn {{gì::pink}}?",
+         "en": "What do you like to eat?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Cấu trúc trả lời:",
+         "en": "Answer structure:"
+        },
+        {
+         "type": "structure",
+         "vi": "Tôi thích ăn + tên món ăn.",
+         "en": "I like to eat + food."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Tôi thích ăn phở.",
+           "en": "I like to eat pho."
+          },
+          {
+           "vi": "Tôi thích ăn cơm.",
+           "en": "I like to eat rice."
+          },
+          {
+           "vi": "Tôi thích ăn bánh mì.",
+           "en": "I like to eat banh mi."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cấu trúc 2",
+         "en": "Structure 2"
+        },
+        {
+         "type": "structure",
+         "vi": "Bạn thích uống {{gì::pink}}?",
+         "en": "What do you like to drink?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Cấu trúc trả lời:",
+         "en": "Answer structure:"
+        },
+        {
+         "type": "structure",
+         "vi": "Tôi thích uống + tên đồ uống.",
+         "en": "I like to drink + drink."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Tôi thích uống cà phê.",
+           "en": "I like to drink coffee."
+          },
+          {
+           "vi": "Tôi thích uống trà.",
+           "en": "I like to drink tea."
+          },
+          {
+           "vi": "Tôi thích uống sữa.",
+           "en": "I like to drink milk."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "B. Hỏi về sở thích nói chung",
+         "en": "B. Asking about general preferences"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Chúng ta cũng có thể sử dụng gì để hỏi về những hoạt động mà một người thích làm.",
+         "en": "We can also use gì to ask about activities someone enjoys doing."
+        },
+        {
+         "type": "structure",
+         "vi": "Bạn thích làm {{gì::pink}}?",
+         "en": "What do you like to do?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Tôi thích đọc sách.",
+           "en": "I like reading books."
+          },
+          {
+           "vi": "Tôi thích nghe nhạc.",
+           "en": "I like listening to music."
+          },
+          {
+           "vi": "Tôi thích xem phim.",
+           "en": "I like watching movies."
+          },
+          {
+           "vi": "Tôi thích đi du lịch.",
+           "en": "I like traveling."
+          },
+          {
+           "vi": "Tôi thích nấu ăn.",
+           "en": "I like cooking."
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "3. Vị trí của từ “gì” trong câu",
+         "en": "3. Word Order"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Trong những câu hỏi trên, từ gì thường đứng ở cuối câu, sau động từ hoặc cụm động từ.",
+         "en": "In these questions, gì usually comes at the end of the sentence, after the verb or verb phrase."
+        },
+        {
+         "type": "table",
+         "columns": [
+          "Câu hỏi",
+          "English"
+         ],
+         "rows": [
+          [
+           "Bạn thích ăn gì?",
+           "What do you like to eat?"
+          ],
+          [
+           "Bạn thích uống gì?",
+           "What do you like to drink?"
+          ]
+         ]
+        }
+       ]
+      }
+     ]
     }
    ]
   },
