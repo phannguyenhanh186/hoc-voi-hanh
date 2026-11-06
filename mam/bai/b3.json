@@ -915,8 +915,7 @@
         },
         {
          "type": "heading",
-         "vi": "Cấu trúc 1",
-         "en": "Structure 1"
+         "vi": "Thích ăn gì?"
         },
         {
          "type": "structure",
@@ -952,8 +951,7 @@
         },
         {
          "type": "heading",
-         "vi": "Cấu trúc 2",
-         "en": "Structure 2"
+         "vi": "Thích uống gì?"
         },
         {
          "type": "structure",
