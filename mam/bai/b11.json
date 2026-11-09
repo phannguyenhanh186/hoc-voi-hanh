@@ -558,8 +558,8 @@
       {
        "type": "photoSpeak",
        "num": 7,
-       "instructionVi": "Luyện nói về tên, nghề nghiệp và quốc tịch của những người sau. Câu 1 là ví dụ.",
-       "instructionEn": "Practice introducing names, jobs, and nationalities of the following people. Item 1 is an example.",
+       "instructionVi": "Luyện nói về tên, nghề nghiệp và quốc tịch của những người sau.",
+       "instructionEn": "Practice introducing names, jobs, and nationalities of the following people.",
        "items": [
         {
          "img": "images/b11/quoc-tich/adele.jpg",
