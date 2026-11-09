@@ -554,6 +554,103 @@
        ],
        "noNum": true,
        "instructionVi": ""
+      },
+      {
+       "type": "photoSpeak",
+       "num": 7,
+       "instructionVi": "Luyện nói về tên, nghề nghiệp và quốc tịch của những người sau. Câu 1 là ví dụ.",
+       "instructionEn": "Practice introducing names, jobs, and nationalities of the following people. Item 1 is an example.",
+       "items": [
+        {
+         "img": "images/b11/quoc-tich/adele.jpg",
+         "name": "Adele",
+         "job": "ca sĩ",
+         "pronoun": "Cô ấy",
+         "country": "Anh",
+         "example": true
+        },
+        {
+         "img": "images/b11/quoc-tich/michael.jpg",
+         "name": "Michael",
+         "job": "cầu thủ bóng rổ",
+         "pronoun": "Anh ấy",
+         "country": "Mỹ"
+        },
+        {
+         "img": "images/b11/quoc-tich/my-linh.jpg",
+         "name": "Mỹ Linh",
+         "job": "ca sĩ",
+         "pronoun": "Cô ấy",
+         "country": "Việt Nam"
+        },
+        {
+         "img": "images/b11/quoc-tich/kommasith.jpg",
+         "name": "Kommasith",
+         "job": "thủ tướng",
+         "pronoun": "Ông ấy",
+         "country": "Lào"
+        },
+        {
+         "img": "images/b11/quoc-tich/akina.jpg",
+         "name": "Akina",
+         "job": "diễn viên",
+         "pronoun": "Cô ấy",
+         "country": "Nhật"
+        },
+        {
+         "img": "images/b11/quoc-tich/jae-suk.jpg",
+         "name": "Jae-suk",
+         "job": "MC",
+         "pronoun": "Anh ấy",
+         "country": "Hàn"
+        },
+        {
+         "img": "images/b11/quoc-tich/ton-van.jpg",
+         "name": "Tôn Văn",
+         "job": "cầu thủ bóng đá",
+         "pronoun": "Chị ấy",
+         "country": "Trung"
+        },
+        {
+         "img": "images/b11/quoc-tich/kanchai.jpg",
+         "name": "Kanchai",
+         "job": "MC",
+         "pronoun": "Anh ấy",
+         "country": "Thái"
+        },
+        {
+         "img": "images/b11/quoc-tich/nicole.jpg",
+         "name": "Nicole",
+         "job": "diễn viên",
+         "pronoun": "Cô ấy",
+         "country": "Úc"
+        },
+        {
+         "img": "images/b11/quoc-tich/xavi.jpg",
+         "name": "Xavi",
+         "job": "cầu thủ bóng đá",
+         "pronoun": "Anh ấy",
+         "country": "Tây Ban Nha"
+        },
+        {
+         "img": "images/b11/quoc-tich/merz.jpg",
+         "name": "Merz",
+         "job": "thủ tướng",
+         "pronoun": "Ông ấy",
+         "country": "Đức"
+        },
+        {
+         "img": "images/b11/quoc-tich/camille.jpg",
+         "name": "Camille",
+         "job": "ca sĩ",
+         "pronoun": "Cô ấy",
+         "country": "Pháp"
+        }
+       ],
+       "dialogue": {
+        "q": "Bạn có biết {name} là ai không?",
+        "a": "{name} là {job}. {pronoun} là người {country}."
+       }
       }
      ]
     }
