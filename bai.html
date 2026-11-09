@@ -1099,10 +1099,12 @@
         const lineA = el('div', 'bai-fill-line');
         const lineB = el('div', 'bai-fill-line');
         if (it.example) {
-          lineA.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0A: '));
-          lineA.appendChild(el('span', 'bai-example', qFull));
-          lineB.appendChild(document.createTextNode('B: '));
-          lineB.appendChild(el('span', 'bai-example', aFull));
+          lineA.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0A: ' + qFull));
+          lineB.appendChild(document.createTextNode('B: ' + it.name + ' là '));
+          lineB.appendChild(el('span', 'bai-example', it.job));
+          lineB.appendChild(document.createTextNode('. ' + it.pronoun + ' là người '));
+          lineB.appendChild(el('span', 'bai-example', it.country));
+          lineB.appendChild(document.createTextNode('.'));
           fig.appendChild(lineA); fig.appendChild(lineB);
         } else {
           lineA.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0A: '));
