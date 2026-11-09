@@ -1102,8 +1102,8 @@
           lineA.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0A: ' + qFull));
           lineB.appendChild(document.createTextNode('B: ' + it.name + ' là '));
           lineB.appendChild(el('span', 'bai-example', it.job));
-          lineB.appendChild(document.createTextNode('. ' + it.pronoun + ' là người '));
-          lineB.appendChild(el('span', 'bai-example', it.country));
+          lineB.appendChild(document.createTextNode('. ' + it.pronoun + ' là '));
+          lineB.appendChild(el('span', 'bai-example', 'người ' + it.country));
           lineB.appendChild(document.createTextNode('.'));
           fig.appendChild(lineA); fig.appendChild(lineB);
         } else {
@@ -1112,9 +1112,7 @@
           lineA.appendChild(document.createTextNode('?'));
           lineB.appendChild(document.createTextNode('B: ' + it.name + ' là '));
           lineB.appendChild(mkBlank('Nghề nghiệp'));
-          lineB.appendChild(document.createTextNode('. '));
-          lineB.appendChild(mkBlank('Đại từ'));
-          lineB.appendChild(document.createTextNode(' là người '));
+          lineB.appendChild(document.createTextNode('. ' + it.pronoun + ' là '));
           lineB.appendChild(mkBlank('Quốc tịch'));
           lineB.appendChild(document.createTextNode('.'));
           const key = el('details', 'bai-speak-key');
