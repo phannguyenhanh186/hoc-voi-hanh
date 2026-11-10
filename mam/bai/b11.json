@@ -655,6 +655,114 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "dung-khong",
+     "label": "Đúng không?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "ĐÚNG KHÔNG? – ASKING FOR CONFIRMATION",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "1. Cách dùng",
+         "en": "Usage",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi muốn xác nhận một thông tin nào đó, chúng ta có thể dùng cấu trúc này để hỏi.",
+         "en": "We can use this structure to confirm some information."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Đúng không? được đặt ở cuối câu để hỏi người nghe xem thông tin mình vừa nói có chính xác hay không.",
+         "en": "Đúng không? is placed at the end of a sentence to ask whether the information stated is correct."
+        },
+        {
+         "type": "structure",
+         "vi": "[Chủ ngữ] + [Thông tin] + {{đúng không::pink}}?",
+         "en": "[Subject] + [Information] + {{đúng không::pink}}?"
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn là người Việt Nam, {{đúng không::pink}}?",
+           "en": "You're Vietnamese, right?"
+          },
+          {
+           "vi": "Bạn là người Mỹ, {{đúng không::pink}}?",
+           "en": "You're American, right?"
+          },
+          {
+           "vi": "Anh ấy là cầu thủ bóng đá, {{đúng không::pink}}?",
+           "en": "He's a football player, right?"
+          },
+          {
+           "vi": "Mai 25 tuổi, {{đúng không::pink}}?",
+           "en": "Mai's 25 years old, right?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "2. Cách trả lời",
+         "en": "How to answer",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi thông tin đúng, chúng ta có thể trả lời bằng Đúng hoặc Đúng rồi.",
+         "en": "When the information is correct, we can answer with Đúng or Đúng rồi."
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi thông tin không đúng, chúng ta dùng Không hoặc Không phải và đưa ra thông tin chính xác.",
+         "en": "When the information is incorrect, we can answer with Không or Không phải and provide the correct information."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "A: Bạn là người Việt Nam, {{đúng không::pink}}?",
+           "en": "A: You're Vietnamese, right?"
+          },
+          {
+           "vi": "B: {{Đúng rồi::blue}}. Mình là người Việt Nam.",
+           "en": "B: That's right. I'm Vietnamese."
+          },
+          {
+           "vi": "A: Bạn là người Mỹ, {{đúng không::pink}}?",
+           "en": "A: You're American, right?"
+          },
+          {
+           "vi": "B: {{Không::blue}}. Mình là người Canada.",
+           "en": "B: No. I'm Canadian."
+          },
+          {
+           "vi": "A: Anh ấy là người Nhật Bản, {{đúng không::pink}}?",
+           "en": "A: He's Japanese, right?"
+          },
+          {
+           "vi": "B: {{Không phải::blue}}. Anh ấy là người Hàn Quốc.",
+           "en": "B: No. He's Korean."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
