@@ -6,7 +6,7 @@
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b11/nam: pron_<van/tu>.mp3 (ap, ăp, âp... va cac tu; p, ph va cac tu; ten file theo Telex, xem audioKey trong bai.html; 'pa-tê' -> pron_pa-tee.mp3), listen_ex2_01..05.mp3, ex4_01..05.mp3 - chua thu am.",
   "todo_audio_tu_vung": "audio/b11/nam: vocab_nuoc_01..12.mp3 (Anh, My, Phap, Duc, Tay Ban Nha, Uc, Thai, Trung, Han, Nhat, Lao, Viet) - chua thu am.",
-  "todo_nghe": "audio/b11/nam: listen_ex7_01..12.mp3 (12 cau 'X la nguoi ...', xem template trong muc nghe) - chua thu am. Dap an chap nhan ca ten ngan va ten day du (Viet/Viet Nam, Trung/Trung Quoc, Nhat/Nhat Ban, Thai/Thai Lan, Han/Han Quoc)."
+  "todo_nghe": "audio/b11/nam: listen_ex7_01..12.mp3 (12 cau 'X la nguoi ...', xem template trong muc nghe) - chua thu am. Dap an chap nhan ca ten ngan va ten day du (Viet/Viet Nam, Trung/Trung Quoc, Nhat/Nhat Ban, Thai/Thai Lan, Han/Han Quoc). Bai 9 (chon dap an): audio/b11/nam/listen_ex8_01..05.mp3 - chua thu am."
  },
  "sections": [
   {
@@ -786,6 +786,64 @@
          "audio": "audio/b11/{voice}/listen_ex7_12.mp3"
         }
        ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 9,
+       "instructionVi": "Nghe và chọn câu trả lời đúng.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "items": [
+        {
+         "text": "Anh ấy là người ____.",
+         "options": [
+          "Pháp",
+          "Đức",
+          "Anh"
+         ],
+         "answer": "a",
+         "audio": "audio/b11/{voice}/listen_ex8_01.mp3"
+        },
+        {
+         "text": "Cô ấy là người ____.",
+         "options": [
+          "Trung",
+          "Hàn",
+          "Nhật"
+         ],
+         "answer": "c",
+         "audio": "audio/b11/{voice}/listen_ex8_02.mp3"
+        },
+        {
+         "text": "Chị ấy là người ____.",
+         "options": [
+          "Úc",
+          "Đức",
+          "Thái"
+         ],
+         "answer": "a",
+         "audio": "audio/b11/{voice}/listen_ex8_03.mp3"
+        },
+        {
+         "text": "Diễn viên đó là người ____.",
+         "options": [
+          "Lào",
+          "Mỹ",
+          "Nhật"
+         ],
+         "answer": "b",
+         "audio": "audio/b11/{voice}/listen_ex8_04.mp3"
+        },
+        {
+         "text": "Mẹ của Linh là người ____.",
+         "options": [
+          "Anh",
+          "Trung",
+          "Hàn"
+         ],
+         "answer": "b",
+         "audio": "audio/b11/{voice}/listen_ex8_05.mp3"
+        }
+       ]
       }
      ]
     }
@@ -897,7 +955,7 @@
       },
       {
        "type": "wordOrder",
-       "num": 9,
+       "num": 10,
        "instructionVi": "Sắp xếp từ thành câu hoàn chỉnh.",
        "instructionEn": "Put the words in the correct order to make complete sentences.",
        "items": [
@@ -960,7 +1018,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 10,
+       "num": 11,
        "instructionVi": "Đặt câu hỏi với “Đúng không?”",
        "instructionEn": "Make confirmation questions using “Đúng không?”",
        "items": [
