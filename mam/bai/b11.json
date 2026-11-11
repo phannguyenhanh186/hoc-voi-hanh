@@ -759,6 +759,120 @@
          ]
         }
        ]
+      },
+      {
+       "type": "wordOrder",
+       "num": 8,
+       "instructionVi": "Sắp xếp từ thành câu hoàn chỉnh.",
+       "instructionEn": "Put the words in the correct order to make complete sentences.",
+       "items": [
+        {
+         "words": [
+          "đúng không",
+          "là",
+          "Bạn",
+          "người Mỹ"
+         ],
+         "answers": [
+          "Bạn là người Mỹ, đúng không?"
+         ]
+        },
+        {
+         "words": [
+          "người Nhật Bản",
+          "Anh ấy",
+          "đúng không",
+          "là"
+         ],
+         "answers": [
+          "Anh ấy là người Nhật Bản, đúng không?"
+         ]
+        },
+        {
+         "words": [
+          "đúng không",
+          "Cô ấy",
+          "người Pháp",
+          "là"
+         ],
+         "answers": [
+          "Cô ấy là người Pháp, đúng không?"
+         ]
+        },
+        {
+         "words": [
+          "người Canada",
+          "Họ",
+          "đúng không",
+          "là"
+         ],
+         "answers": [
+          "Họ là người Canada, đúng không?"
+         ]
+        },
+        {
+         "words": [
+          "người Anh",
+          "Bạn",
+          "đúng không",
+          "là"
+         ],
+         "answers": [
+          "Bạn là người Anh, đúng không?"
+         ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 9,
+       "instructionVi": "Đặt câu hỏi với “Đúng không?”",
+       "instructionEn": "Make confirmation questions using “Đúng không?”",
+       "items": [
+        {
+         "example": true,
+         "question": "Thông tin: Bạn – người Hàn Quốc",
+         "model": "Bạn là người Hàn Quốc, đúng không?",
+         "answers": [
+          "Bạn là người Hàn Quốc, đúng không?"
+         ]
+        },
+        {
+         "question": "Anh ấy – người Trung Quốc",
+         "answers": [
+          "Anh ấy là người Trung Quốc, đúng không?"
+         ],
+         "model": "Anh ấy là người Trung Quốc, đúng không?"
+        },
+        {
+         "question": "Cô ấy – người Pháp",
+         "answers": [
+          "Cô ấy là người Pháp, đúng không?"
+         ],
+         "model": "Cô ấy là người Pháp, đúng không?"
+        },
+        {
+         "question": "Bạn – người Canada",
+         "answers": [
+          "Bạn là người Canada, đúng không?"
+         ],
+         "model": "Bạn là người Canada, đúng không?"
+        },
+        {
+         "question": "Chú ấy – người Mỹ",
+         "answers": [
+          "Chú ấy là người Mỹ, đúng không?"
+         ],
+         "model": "Chú ấy là người Mỹ, đúng không?"
+        },
+        {
+         "question": "Chị ấy – người Anh",
+         "answers": [
+          "Chị ấy là người Anh, đúng không?"
+         ],
+         "model": "Chị ấy là người Anh, đúng không?"
+        }
+       ]
       }
      ]
     }
