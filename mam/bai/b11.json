@@ -5,7 +5,8 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b11/nam: pron_<van/tu>.mp3 (ap, ăp, âp... va cac tu; p, ph va cac tu; ten file theo Telex, xem audioKey trong bai.html; 'pa-tê' -> pron_pa-tee.mp3), listen_ex2_01..05.mp3, ex4_01..05.mp3 - chua thu am.",
-  "todo_audio_tu_vung": "audio/b11/nam: vocab_nuoc_01..12.mp3 (Anh, My, Phap, Duc, Tay Ban Nha, Uc, Thai, Trung, Han, Nhat, Lao, Viet) - chua thu am."
+  "todo_audio_tu_vung": "audio/b11/nam: vocab_nuoc_01..12.mp3 (Anh, My, Phap, Duc, Tay Ban Nha, Uc, Thai, Trung, Han, Nhat, Lao, Viet) - chua thu am.",
+  "todo_nghe": "audio/b11/nam: listen_ex7_01..12.mp3 (12 cau 'X la nguoi ...', xem template trong muc nghe) - chua thu am. Dap an chap nhan ca ten ngan va ten day du (Viet/Viet Nam, Trung/Trung Quoc, Nhat/Nhat Ban, Thai/Thai Lan, Han/Han Quoc)."
  },
  "sections": [
   {
@@ -657,6 +658,140 @@
    ]
   },
   {
+   "id": "nghe",
+   "titleVi": "Nghe",
+   "titleEn": "Listening",
+   "subtopics": [
+    {
+     "id": "quoc-tich",
+     "label": "Nghe và hoàn thành câu",
+     "exercises": [
+      {
+       "type": "audioFill",
+       "num": 8,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "items": [
+        {
+         "template": "Anh Phong là người {0}.",
+         "answers": [
+          [
+           "Việt Nam",
+           "Việt"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_01.mp3"
+        },
+        {
+         "template": "Chị ấy là người {0}.",
+         "answers": [
+          [
+           "Anh"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_02.mp3"
+        },
+        {
+         "template": "Cô ấy là người {0}.",
+         "answers": [
+          [
+           "Pháp"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_03.mp3"
+        },
+        {
+         "template": "Chú ấy là người {0}.",
+         "answers": [
+          [
+           "Nhật",
+           "Nhật Bản"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_04.mp3"
+        },
+        {
+         "template": "Bạn ấy là người {0}.",
+         "answers": [
+          [
+           "Trung",
+           "Trung Quốc"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_05.mp3"
+        },
+        {
+         "template": "Ông ấy là người {0}.",
+         "answers": [
+          [
+           "Tây Ban Nha"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_06.mp3"
+        },
+        {
+         "template": "Bà ấy là người {0}.",
+         "answers": [
+          [
+           "Úc"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_07.mp3"
+        },
+        {
+         "template": "Em ấy là người {0}.",
+         "answers": [
+          [
+           "Mỹ"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_08.mp3"
+        },
+        {
+         "template": "Diễn viên đó là người {0}.",
+         "answers": [
+          [
+           "Thái",
+           "Thái Lan"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_09.mp3"
+        },
+        {
+         "template": "Mấy người đó là người {0}.",
+         "answers": [
+          [
+           "Đức"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_10.mp3"
+        },
+        {
+         "template": "Bố của Mai là người {0}.",
+         "answers": [
+          [
+           "Lào"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_11.mp3"
+        },
+        {
+         "template": "Ca sĩ đó là người {0}.",
+         "answers": [
+          [
+           "Hàn",
+           "Hàn Quốc"
+          ]
+         ],
+         "audio": "audio/b11/{voice}/listen_ex7_12.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "ngu-phap",
    "titleVi": "Ngữ pháp",
    "titleEn": "Grammar",
@@ -762,7 +897,7 @@
       },
       {
        "type": "wordOrder",
-       "num": 8,
+       "num": 9,
        "instructionVi": "Sắp xếp từ thành câu hoàn chỉnh.",
        "instructionEn": "Put the words in the correct order to make complete sentences.",
        "items": [
@@ -825,7 +960,7 @@
       },
       {
        "type": "writeAnswer",
-       "num": 9,
+       "num": 10,
        "instructionVi": "Đặt câu hỏi với “Đúng không?”",
        "instructionEn": "Make confirmation questions using “Đúng không?”",
        "items": [
