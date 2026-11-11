@@ -664,7 +664,7 @@
    "subtopics": [
     {
      "id": "quoc-tich",
-     "label": "Nghe và hoàn thành câu",
+     "label": "Quốc tịch",
      "exercises": [
       {
        "type": "audioFill",
@@ -994,13 +994,13 @@
         },
         {
          "words": [
-          "người Canada",
+          "người Tây Ban Nha",
           "Họ",
           "đúng không",
           "là"
          ],
          "answers": [
-          "Họ là người Canada, đúng không?"
+          "Họ là người Tây Ban Nha, đúng không?"
          ]
         },
         {
