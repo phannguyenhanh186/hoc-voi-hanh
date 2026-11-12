@@ -1070,6 +1070,100 @@
      ]
     }
    ]
+  },
+  {
+   "id": "doc",
+   "titleVi": "Đọc",
+   "titleEn": "Reading",
+   "subtopics": [
+    {
+     "id": "quoc-tich",
+     "label": "Quốc tịch",
+     "exercises": [
+      {
+       "type": "readingQA",
+       "num": 12,
+       "instructionVi": "Đọc nhật ký của Phương và trả lời câu hỏi.",
+       "instructionEn": "Read Phương's diary and answer the questions.",
+       "passage": "Lớp học tiếng Việt của mình có nhiều học sinh tới từ nhiều nước khác nhau. Anna là người Mỹ và làm ở bệnh viện. David là người Anh. Anh ấy tới từ Luân Đôn và bây giờ đang là giáo viên tiếng Anh ở Sài Gòn. Minji là người Hàn Quốc. Minji là sinh viên đại học và thích học tiếng Việt. Còn Ken là người Nhật Bản. Anh ấy ở Tokyo và làm việc ở nhà hàng.\nMình chơi thân với Lisa. Lisa tới từ Úc. Lisa biết nói tiếng Anh và tiếng Pháp. Cô ấy rất thích Việt Nam và muốn đi Hà Nội vào năm sau.",
+       "questions": [
+        {
+         "q": "Anna là người nước nào?",
+         "a": "Anna là người Mỹ."
+        },
+        {
+         "q": "David đang làm nghề gì?",
+         "a": "David đang là giáo viên tiếng Anh."
+        },
+        {
+         "q": "Minji là người nước nào?",
+         "a": "Minji là người Hàn Quốc."
+        },
+        {
+         "q": "Ken làm việc ở đâu?",
+         "a": "Ken làm việc ở nhà hàng."
+        },
+        {
+         "q": "Lisa nói những ngôn ngữ nào?",
+         "a": "Lisa nói tiếng Anh và tiếng Pháp."
+        },
+        {
+         "q": "Lisa muốn đi đâu vào năm sau?",
+         "a": "Lisa muốn đi Hà Nội vào năm sau."
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 13,
+       "instructionVi": "Đúng hay sai?",
+       "instructionEn": "True or false?",
+       "items": [
+        {
+         "prompt": "Anna làm việc ở siêu thị.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "David bây giờ đang ở Luân Đôn.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "Minji là giáo viên đại học.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "Ken không phải là người Nhật Bản.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "b"
+        },
+        {
+         "prompt": "Lisa là bạn thân của Phương.",
+         "options": [
+          "Đúng",
+          "Sai"
+         ],
+         "answer": "a"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
