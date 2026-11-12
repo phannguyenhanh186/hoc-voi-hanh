@@ -166,6 +166,17 @@
             rowsWrap.appendChild(line);
           });
         });
+        if (ex.split > 1) {   // chia các hàng làm N cột đặt cạnh nhau (nửa đầu bên trái, nửa sau bên phải)
+          const lines = Array.prototype.slice.call(rowsWrap.children);
+          const per = Math.ceil(lines.length / ex.split);
+          const split = el('div', 'bai-sounds-split');
+          for (let c = 0; c < ex.split; c++) {
+            const col = el('div', 'bai-sounds-rows');
+            lines.slice(c * per, (c + 1) * per).forEach(function (l) { col.appendChild(l); });
+            split.appendChild(col);
+          }
+          return split;
+        }
         return rowsWrap;
       }
       const wrap = el('div', 'bai-sounds');
@@ -1448,6 +1459,30 @@
       return box;
     }
 
+    // Viết đoạn văn tự do: danh sách câu hỏi gợi ý + (tuỳ chọn) đoạn mẫu + khung viết nhiều dòng.
+    // ex.questions = ["...", ...]; ex.example = { label: "Mẫu", text: "..." }; ex.rows = số dòng khung viết.
+    function renderWriteParagraph(ex) {
+      const box = el('div', 'bai-write-list');
+      (ex.questions || []).forEach(function (q) {
+        const row = el('div', 'bai-write-q', '\u2022\u00A0\u00A0' + q);
+        row.style.whiteSpace = 'pre-line';
+        box.appendChild(row);
+      });
+      if (ex.example) {
+        const mau = el('div', 'bai-write-q');
+        mau.style.margin = '14px 0 6px';
+        mau.appendChild(el('span', 'bai-example', (ex.example.label || 'Mẫu') + ':'));
+        box.appendChild(mau);
+        const ps = el('p', 'bai-passage', ex.example.text); ps.style.whiteSpace = 'pre-line';
+        box.appendChild(ps);
+      }
+      const ta = document.createElement('textarea');
+      ta.className = 'bai-textarea'; ta.rows = ex.rows || 6; ta.autocomplete = 'off';
+      ta.setAttribute('aria-label', 'Đoạn văn của bạn');
+      box.appendChild(ta);
+      return box;
+    }
+
     // Nối câu hỏi với câu trả lời (b4): mỗi câu hỏi chọn chữ cái của câu trả lời phù hợp.
     // ex.questions = [{q, answer:'b'}], ex.options = [{key:'a', text:'...'}]
     function renderMatchPairs(ex) {
@@ -1664,7 +1699,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
