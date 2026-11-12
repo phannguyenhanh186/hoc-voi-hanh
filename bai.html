@@ -1670,6 +1670,8 @@
       const box = el('div', 'bai-exercise');
       n = ex.num != null ? ex.num : n;   // 'num' trong JSON = số bài in trong sách (vd. 6, 7)
       box.appendChild(exerciseHead(ex, n));
+      // Bài đọc nhiều phần: bài sau (vd. Đúng/Sai) vẫn hiện đoạn văn ở trên (readingQA tự vẽ passage nên bỏ qua)
+      if (ex.passage && ex.type !== 'readingQA') { const ps = el('p', 'bai-passage', ex.passage); ps.style.whiteSpace = 'pre-line'; box.appendChild(ps); }
       const fn = RENDERERS[ex.type];
       box.appendChild(fn ? fn(ex, n) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
       if (ex.noteVi) {
