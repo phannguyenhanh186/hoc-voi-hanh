@@ -24,6 +24,7 @@
        "instructionVi": "Nghe và lặp lại các vần sau.",
        "instructionEn": "Listen and repeat the following sounds.",
        "layout": "rows",
+       "split": 2,
        "columns": [
         [
          {
@@ -1159,6 +1160,68 @@
           "Sai"
          ],
          "answer": "a"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "viet",
+   "titleVi": "Viết",
+   "titleEn": "Writing",
+   "subtopics": [
+    {
+     "id": "quoc-tich",
+     "label": "Quốc tịch",
+     "exercises": [
+      {
+       "type": "writeParagraph",
+       "num": 14,
+       "instructionVi": "Viết một đoạn văn nói về bản thân bằng cách trả lời những câu hỏi sau:",
+       "instructionEn": "Write a paragraph about yourself, answering the following questions:",
+       "questions": [
+        "Bạn là người nước nào?",
+        "Bạn bây giờ đang làm nghề gì? Bạn đang ở thành phố nào?",
+        "Bạn nói những ngôn ngữ nào?"
+       ],
+       "example": {
+        "label": "Mẫu",
+        "text": "Mình là người Việt Nam. Mình bây giờ đang làm giáo viên ở Sài Gòn. Mình nói tiếng Việt và tiếng Anh."
+       },
+       "rows": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "noi",
+   "titleVi": "Nói",
+   "titleEn": "Speaking",
+   "subtopics": [
+    {
+     "id": "quoc-tich",
+     "label": "Quốc tịch",
+     "exercises": [
+      {
+       "type": "openAnswer",
+       "num": 15,
+       "instructionVi": "Trả lời câu hỏi về bản thân.",
+       "instructionEn": "Answer the questions about yourself.",
+       "items": [
+        {
+         "question": "Bạn đang ở nước nào?"
+        },
+        {
+         "question": "Bạn thích những nước nào?"
+        },
+        {
+         "question": "Bạn thích những ngôn ngữ nào?"
+        },
+        {
+         "question": "Bạn có người thân hay bạn bè là người nước ngoài không? Họ là người Việt Nam đúng không?"
         }
        ]
       }
