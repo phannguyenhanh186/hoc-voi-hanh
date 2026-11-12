@@ -1706,9 +1706,10 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 
 /* Bảng âm: mỗi âm một hàng (layout: "rows"), luôn nằm trên một dòng */
 .bai-sounds-rows { display: flex; flex-direction: column; gap: 14px; max-width: 760px; }
+.bai-sounds-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; align-items: start; }
 .bai-sound-line { display: grid; gap: 8px; }
 .bai-sound-line .bai-chip { min-width: 0; padding: 0 4px; }
-@media (max-width: 640px) { .bai-sound-line { gap: 4px; } .bai-sound-line .bai-chip { font-size: .95rem; } }
+@media (max-width: 640px) { .bai-sounds-split { grid-template-columns: 1fr; } .bai-sound-line { gap: 4px; } .bai-sound-line .bai-chip { font-size: .95rem; } }
 
 .bai-hl { color: #EB483F; }
 
@@ -1860,3 +1861,7 @@ a.lesson-row:hover { background: #FAFAF7; }
 .lesson-row-go { flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--stroke); border-radius: 6px; background: #FFBD94; font-size: .95rem; }
 .lesson-row.is-locked { opacity: .6; }
 .lesson-row.is-locked .lesson-row-go { background: #eee; font-size: .8rem; }
+
+/* Khung viết đoạn văn (writeParagraph) */
+.bai-textarea { display: block; width: 100%; max-width: 640px; margin-top: 14px; padding: 12px 14px; font: inherit; line-height: 1.7; color: var(--ink); background: #fff; border: 2px solid var(--stroke); border-radius: 12px; resize: vertical; }
+.bai-textarea:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 1px; }
