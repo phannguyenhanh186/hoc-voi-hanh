@@ -27,7 +27,7 @@
        "columns": [
         [
          {
-          "tone": "yellow",
+          "tone": "lav",
           "rows": [
            [
             "ap",
@@ -37,7 +37,7 @@
           ]
          },
          {
-          "tone": "pink",
+          "tone": "lav",
           "rows": [
            [
             "ăp",
@@ -47,7 +47,7 @@
           ]
          },
          {
-          "tone": "blue",
+          "tone": "lav",
           "rows": [
            [
             "âp",
@@ -57,7 +57,7 @@
           ]
          },
          {
-          "tone": "yellow",
+          "tone": "lav",
           "rows": [
            [
             "ep",
@@ -67,7 +67,7 @@
           ]
          },
          {
-          "tone": "pink",
+          "tone": "lav",
           "rows": [
            [
             "êp",
@@ -77,7 +77,7 @@
           ]
          },
          {
-          "tone": "blue",
+          "tone": "lav",
           "rows": [
            [
             "op",
@@ -87,7 +87,7 @@
           ]
          },
          {
-          "tone": "yellow",
+          "tone": "lav",
           "rows": [
            [
             "ôp",
@@ -97,7 +97,7 @@
           ]
          },
          {
-          "tone": "pink",
+          "tone": "lav",
           "rows": [
            [
             "ơp",
@@ -107,7 +107,7 @@
           ]
          },
          {
-          "tone": "blue",
+          "tone": "lav",
           "rows": [
            [
             "up",
@@ -117,7 +117,7 @@
           ]
          },
          {
-          "tone": "yellow",
+          "tone": "lav",
           "rows": [
            [
             "ươp",
@@ -127,7 +127,7 @@
           ]
          },
          {
-          "tone": "pink",
+          "tone": "lav",
           "rows": [
            [
             "uyp",
@@ -218,7 +218,7 @@
        "columns": [
         [
          {
-          "tone": "yellow",
+          "tone": "lav",
           "rows": [
            [
             "p",
@@ -228,7 +228,7 @@
           ]
          },
          {
-          "tone": "pink",
+          "tone": "lav",
           "rows": [
            [
             "ph",
@@ -1118,6 +1118,7 @@
        "num": 13,
        "instructionVi": "Đúng hay sai?",
        "instructionEn": "True or false?",
+       "passage": "Lớp học tiếng Việt của mình có nhiều học sinh tới từ nhiều nước khác nhau. Anna là người Mỹ và làm ở bệnh viện. David là người Anh. Anh ấy tới từ Luân Đôn và bây giờ đang là giáo viên tiếng Anh ở Sài Gòn. Minji là người Hàn Quốc. Minji là sinh viên đại học và thích học tiếng Việt. Còn Ken là người Nhật Bản. Anh ấy ở Tokyo và làm việc ở nhà hàng.\nMình chơi thân với Lisa. Lisa tới từ Úc. Lisa biết nói tiếng Anh và tiếng Pháp. Cô ấy rất thích Việt Nam và muốn đi Hà Nội vào năm sau.",
        "items": [
         {
          "prompt": "Anna làm việc ở siêu thị.",
