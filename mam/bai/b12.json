@@ -4,7 +4,7 @@
  "title": "Bạn biết Nghĩa bao lâu rồi?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an). Muc n-l: audio/b12/nam/pron_nawngs.mp3, pron_nooif_cowm.mp3, pron_naaus_awn.mp3, pron_nawm_thangs.mp3, pron_lichj.mp3, pron_lanhj_lungf.mp3, pron_lo_lawngs.mp3, pron_caauf_loong.mp3.",
+  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an). Muc n-l: audio/b12/nam/pron_nawngs.mp3, pron_nooif_cowm.mp3, pron_naaus_cowm.mp3, pron_nawm_thangs.mp3, pron_lichj.mp3, pron_lanhj_lungf.mp3, pron_lo_lawngs.mp3, pron_caauf_loong.mp3.",
   "todo_hinh": "Muc tu-vung: chua co hinh (dang hien khung 'Hinh' tam). Thay \"placeholder\": \"Hinh\" bang \"img\": \"images/b12/hoat-dong/<ten>.png\" cho tung item. Audio: audio/b12/nam/vocab_hoat_dong_01..09.mp3."
  },
  "sections": [
@@ -202,10 +202,10 @@
            "audio": "audio/b12/{voice}/pron_nooif_cowm.mp3"
           },
           {
-           "text": "nấu ăn",
+           "text": "nấu cơm",
            "hl": "n",
-           "gloss": "to cook",
-           "audio": "audio/b12/{voice}/pron_naaus_awn.mp3"
+           "gloss": "to cook rice",
+           "audio": "audio/b12/{voice}/pron_naaus_cowm.mp3"
           },
           {
            "text": "năm tháng",
@@ -252,6 +252,63 @@
          ]
         }
        ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 4,
+       "instructionVi": "Điền chữ n hoặc l.",
+       "instructionEn": "Fill in the blanks with n or l.",
+       "words": [
+        "n",
+        "l"
+       ],
+       "blankWidth": "2ch",
+       "items": [
+        {
+         "template": "Anh {0}inh thích chơi cầu {1}ông.",
+         "answers": [
+          [
+           "l"
+          ],
+          [
+           "l"
+          ]
+         ]
+        },
+        {
+         "template": "Hôm {0}ay trời {1}ắng cả ngày.",
+         "answers": [
+          [
+           "n"
+          ],
+          [
+           "n"
+          ]
+         ]
+        },
+        {
+         "template": "Cô {0}ương ở Đà {1}ạt hơn mười {2}ăm rồi.",
+         "answers": [
+          [
+           "l"
+          ],
+          [
+           "l"
+          ],
+          [
+           "n"
+          ]
+         ]
+        },
+        {
+         "template": "Mình không thường {0}ấu cơm vào cuối tuần.",
+         "answers": [
+          [
+           "n"
+          ]
+         ]
+        }
+       ]
       }
      ]
     }
@@ -268,7 +325,7 @@
      "exercises": [
       {
        "type": "photoVocab",
-       "num": 4,
+       "num": 5,
        "columns": 3,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
