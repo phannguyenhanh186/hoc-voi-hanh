@@ -4,7 +4,7 @@
  "title": "Bạn biết Nghĩa bao lâu rồi?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am."
+  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an)."
  },
  "sections": [
   {
@@ -99,6 +99,76 @@
            "audio": "audio/b12/{voice}/pron_cuwar_tieemj.mp3"
           }
          ]
+        }
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 2,
+       "instructionVi": "Nghe và điền từ cho sẵn vào chỗ trống.",
+       "instructionEn": "Listen and fill out the blank with the given words.",
+       "words": [
+        "biết",
+        "biển",
+        "phía",
+        "bia",
+        "địa",
+        "nhiều"
+       ],
+       "items": [
+        {
+         "template": "Đi về {0} trước.",
+         "answers": [
+          [
+           "phía"
+          ]
+         ],
+         "audio": "audio/b12/{voice}/listen_ex2_01.mp3"
+        },
+        {
+         "template": "Cám ơn em {0}.",
+         "answers": [
+          [
+           "nhiều"
+          ]
+         ],
+         "audio": "audio/b12/{voice}/listen_ex2_02.mp3"
+        },
+        {
+         "template": "Chị Loan rất thích tắm {0}.",
+         "answers": [
+          [
+           "biển"
+          ]
+         ],
+         "audio": "audio/b12/{voice}/listen_ex2_03.mp3"
+        },
+        {
+         "template": "Cho em một ly {0}.",
+         "answers": [
+          [
+           "bia"
+          ]
+         ],
+         "audio": "audio/b12/{voice}/listen_ex2_04.mp3"
+        },
+        {
+         "template": "Mình {0} Trang hơn mười năm rồi.",
+         "answers": [
+          [
+           "biết"
+          ]
+         ],
+         "audio": "audio/b12/{voice}/listen_ex2_05.mp3"
+        },
+        {
+         "template": "{0} chỉ nhà bạn là gì?",
+         "answers": [
+          [
+           "địa"
+          ]
+         ],
+         "audio": "audio/b12/{voice}/listen_ex2_06.mp3"
         }
        ]
       }
