@@ -4,7 +4,7 @@
  "title": "Bạn biết Nghĩa bao lâu rồi?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an).",
+  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an). Muc n-l: audio/b12/nam/pron_nawngs.mp3, pron_nooif_cowm.mp3, pron_naaus_awn.mp3, pron_nawm_thangs.mp3, pron_lichj.mp3, pron_lanhj_lungf.mp3, pron_lo_lawngs.mp3, pron_caauf_loong.mp3.",
   "todo_hinh": "Muc tu-vung: chua co hinh (dang hien khung 'Hinh' tam). Thay \"placeholder\": \"Hinh\" bang \"img\": \"images/b12/hoat-dong/<ten>.png\" cho tung item. Audio: audio/b12/nam/vocab_hoat_dong_01..09.mp3."
  },
  "sections": [
@@ -174,6 +174,86 @@
        ]
       }
      ]
+    },
+    {
+     "id": "n-l",
+     "label": "Phụ âm đầu \"n\" và \"l\"",
+     "exercises": [
+      {
+       "type": "wordList",
+       "num": 3,
+       "instructionVi": "Nghe và lặp lại các từ sau.",
+       "instructionEn": "Listen and repeat the following words.",
+       "groups": [
+        {
+         "sound": "n",
+         "tone": "lime",
+         "items": [
+          {
+           "text": "nắng",
+           "hl": "n",
+           "gloss": "sunny",
+           "audio": "audio/b12/{voice}/pron_nawngs.mp3"
+          },
+          {
+           "text": "nồi cơm",
+           "hl": "n",
+           "gloss": "rice cooker",
+           "audio": "audio/b12/{voice}/pron_nooif_cowm.mp3"
+          },
+          {
+           "text": "nấu ăn",
+           "hl": "n",
+           "gloss": "to cook",
+           "audio": "audio/b12/{voice}/pron_naaus_awn.mp3"
+          },
+          {
+           "text": "năm tháng",
+           "hl": "n",
+           "gloss": "years",
+           "audio": "audio/b12/{voice}/pron_nawm_thangs.mp3"
+          }
+         ]
+        },
+        {
+         "sound": "l",
+         "tone": "lime",
+         "items": [
+          {
+           "text": "lịch",
+           "hl": "l",
+           "gloss": "calendar",
+           "audio": "audio/b12/{voice}/pron_lichj.mp3"
+          },
+          {
+           "text": "lạnh lùng",
+           "hl": [
+            "l",
+            "l"
+           ],
+           "gloss": "cold; aloof",
+           "audio": "audio/b12/{voice}/pron_lanhj_lungf.mp3"
+          },
+          {
+           "text": "lo lắng",
+           "hl": [
+            "l",
+            "l"
+           ],
+           "gloss": "worried",
+           "audio": "audio/b12/{voice}/pron_lo_lawngs.mp3"
+          },
+          {
+           "text": "cầu lông",
+           "hl": "l",
+           "gloss": "badminton",
+           "audio": "audio/b12/{voice}/pron_caauf_loong.mp3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -188,7 +268,7 @@
      "exercises": [
       {
        "type": "photoVocab",
-       "num": 3,
+       "num": 4,
        "columns": 3,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
