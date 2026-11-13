@@ -4,7 +4,8 @@
  "title": "Bạn biết Nghĩa bao lâu rồi?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an)."
+  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an).",
+  "todo_hinh": "Muc tu-vung: chua co hinh (dang hien o 'Hinh' tam). Them \"img\": \"images/b12/hoat-dong/<ten>.png\" cho tung item; 'big' se thanh chu du phong neu anh loi. Audio: audio/b12/nam/vocab_hoat_dong_01..09.mp3."
  },
  "sections": [
   {
@@ -169,6 +170,73 @@
           ]
          ],
          "audio": "audio/b12/{voice}/listen_ex2_06.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-vung",
+   "titleVi": "Từ vựng",
+   "titleEn": "Vocabulary",
+   "subtopics": [
+    {
+     "id": "hoat-dong",
+     "label": "Hoạt động",
+     "exercises": [
+      {
+       "type": "photoVocab",
+       "num": 3,
+       "columns": 3,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "items": [
+        {
+         "caption": "chơi bóng đá",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_01.mp3"
+        },
+        {
+         "caption": "chơi cầu lông",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_02.mp3"
+        },
+        {
+         "caption": "chơi bóng rổ",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_03.mp3"
+        },
+        {
+         "caption": "bơi",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_04.mp3"
+        },
+        {
+         "caption": "chạy bộ",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_05.mp3"
+        },
+        {
+         "caption": "vẽ",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_06.mp3"
+        },
+        {
+         "caption": "hát",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_07.mp3"
+        },
+        {
+         "caption": "đánh đàn",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_08.mp3"
+        },
+        {
+         "caption": "chơi cờ vua",
+         "big": "Hình",
+         "audio": "audio/b12/{voice}/vocab_hoat_dong_09.mp3"
         }
        ]
       }
