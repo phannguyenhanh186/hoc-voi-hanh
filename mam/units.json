@@ -88,13 +88,14 @@
     {
       "id": "b12",
       "num": 12,
-      "title": "Mình chỉ có một chị gái thôi.",
-      "status": "todo"
+      "title": "Bạn đi Việt Nam mất bao lâu?",
+      "status": "ready",
+      "page": "bai.html"
     },
     {
       "id": "b13",
       "num": 13,
-      "title": "Anh ấy là người Pháp đúng không?",
+      "title": "Đi từ Hà Nội tới Sài Gòn bằng máy bay mất bao lâu?",
       "status": "todo"
     },
     {
