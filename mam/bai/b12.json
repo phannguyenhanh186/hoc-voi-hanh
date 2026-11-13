@@ -35,21 +35,25 @@
           {
            "text": "phía sau",
            "hl": "ía",
+           "gloss": "behind",
            "audio": "audio/b12/{voice}/pron_phias_sau.mp3"
           },
           {
            "text": "chìa khoá",
            "hl": "ìa",
+           "gloss": "key",
            "audio": "audio/b12/{voice}/pron_chiaf_khoas.mp3"
           },
           {
            "text": "dĩa cơm",
            "hl": "ĩa",
+           "gloss": "plate of rice",
            "audio": "audio/b12/{voice}/pron_diax_cowm.mp3"
           },
           {
            "text": "địa chỉ",
            "hl": "ịa",
+           "gloss": "address",
            "audio": "audio/b12/{voice}/pron_ddiaj_chir.mp3"
           }
          ]
@@ -67,16 +71,19 @@
           {
            "text": "tiền",
            "hl": "iề",
+           "gloss": "money",
            "audio": "audio/b12/{voice}/pron_tieenf.mp3"
           },
           {
            "text": "biển",
            "hl": "iể",
+           "gloss": "sea",
            "audio": "audio/b12/{voice}/pron_bieenr.mp3"
           },
           {
            "text": "nhiều",
            "hl": "iề",
+           "gloss": "many; much",
            "audio": "audio/b12/{voice}/pron_nhieeuf.mp3"
           },
           {
@@ -88,6 +95,7 @@
           {
            "text": "cửa tiệm",
            "hl": "iệ",
+           "gloss": "shop",
            "audio": "audio/b12/{voice}/pron_cuwar_tieemj.mp3"
           }
          ]
