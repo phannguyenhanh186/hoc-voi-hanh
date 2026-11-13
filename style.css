@@ -1498,6 +1498,7 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-tone-pink   { --chip-bg: #FFC6EF; }
 .bai-tone-blue   { --chip-bg: #C6E2FF; }
 .bai-tone-violet { --chip-bg: #FFDCC6; }
+.bai-tone-lime   { --chip-bg: #D1FF94; }
 
 .bai-toast {
   position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 10002;
@@ -1873,5 +1874,5 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-wl-head { min-width: 64px; padding: 0 14px; }
 .bai-wl-cell { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .bai-wl-chip { padding: 0 12px; white-space: nowrap; }
-.bai-wl-hl { background: var(--l-yellow); border-radius: 4px; padding: 0 2px; }
+.bai-wl-hl { color: #E0338A; font-weight: 700; }
 .bai-wl-gloss { font-size: .8rem; line-height: 1.2; color: var(--muted); text-align: center; max-width: 12em; }
