@@ -1478,14 +1478,18 @@
           b.type = 'button';
           b.dataset.text = it.text;
           b.setAttribute('aria-label', 'Nghe “' + it.text + '”');
-          const i = it.hl ? it.text.indexOf(it.hl) : -1;
           const txt = el('span', 'bai-wl-text');   // gói trong 1 span: chip là flex nên nếu không sẽ bị tách khoảng trắng quanh phần tô đỏ
-          if (i < 0) txt.appendChild(document.createTextNode(it.text));
-          else {
-            txt.appendChild(document.createTextNode(it.text.slice(0, i)));
-            txt.appendChild(el('span', 'bai-wl-hl', it.hl));
-            txt.appendChild(document.createTextNode(it.text.slice(i + it.hl.length)));
-          }
+          // hl: một đoạn chữ, hoặc mảng nhiều đoạn (mỗi đoạn tìm tiếp theo sau đoạn trước, vd. ["l","l"] cho "lo lắng")
+          const hls = it.hl ? (Array.isArray(it.hl) ? it.hl : [it.hl]) : [];
+          let pos = 0;
+          hls.forEach(function (h) {
+            const i = it.text.indexOf(h, pos);
+            if (i < 0) return;
+            if (i > pos) txt.appendChild(document.createTextNode(it.text.slice(pos, i)));
+            txt.appendChild(el('span', 'bai-wl-hl', h));
+            pos = i + h.length;
+          });
+          if (pos < it.text.length) txt.appendChild(document.createTextNode(it.text.slice(pos)));
           b.appendChild(txt);
           b.addEventListener('click', function () { if (it.audio) play(resolveAudio(it.audio), b); });
           cell.appendChild(b);
