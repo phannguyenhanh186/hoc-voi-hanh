@@ -1,0 +1,102 @@
+{
+ "id": "b12",
+ "num": 12,
+ "title": "Bạn biết Nghĩa bao lâu rồi?",
+ "_guide": {
+  "doc": "App bo qua key bat dau bang '_'.",
+  "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am."
+ },
+ "sections": [
+  {
+   "id": "phat-am",
+   "titleVi": "Phát âm",
+   "titleEn": "Pronunciation",
+   "subtopics": [
+    {
+     "id": "ia-ie",
+     "label": "Âm bắt đầu bằng \"i\"",
+     "exercises": [
+      {
+       "type": "wordList",
+       "num": 1,
+       "instructionVi": "Nghe và lặp lại các từ sau.",
+       "instructionEn": "Listen and repeat the following words.",
+       "groups": [
+        {
+         "sound": "ia",
+         "tone": "lav",
+         "items": [
+          {
+           "text": "ly bia",
+           "hl": "ia",
+           "gloss": "beer glass",
+           "audio": "audio/b12/{voice}/pron_ly_bia.mp3"
+          },
+          {
+           "text": "phía sau",
+           "hl": "ía",
+           "audio": "audio/b12/{voice}/pron_phias_sau.mp3"
+          },
+          {
+           "text": "chìa khoá",
+           "hl": "ìa",
+           "audio": "audio/b12/{voice}/pron_chiaf_khoas.mp3"
+          },
+          {
+           "text": "dĩa cơm",
+           "hl": "ĩa",
+           "audio": "audio/b12/{voice}/pron_diax_cowm.mp3"
+          },
+          {
+           "text": "địa chỉ",
+           "hl": "ịa",
+           "audio": "audio/b12/{voice}/pron_ddiaj_chir.mp3"
+          }
+         ]
+        },
+        {
+         "sound": "iê",
+         "tone": "lav",
+         "items": [
+          {
+           "text": "quen biết",
+           "hl": "iế",
+           "gloss": "acquainted",
+           "audio": "audio/b12/{voice}/pron_quen_bieets.mp3"
+          },
+          {
+           "text": "tiền",
+           "hl": "iề",
+           "audio": "audio/b12/{voice}/pron_tieenf.mp3"
+          },
+          {
+           "text": "biển",
+           "hl": "iể",
+           "audio": "audio/b12/{voice}/pron_bieenr.mp3"
+          },
+          {
+           "text": "nhiều",
+           "hl": "iề",
+           "audio": "audio/b12/{voice}/pron_nhieeuf.mp3"
+          },
+          {
+           "text": "công việc",
+           "hl": "iệ",
+           "gloss": "work",
+           "audio": "audio/b12/{voice}/pron_coong_vieecj.mp3"
+          },
+          {
+           "text": "cửa tiệm",
+           "hl": "iệ",
+           "audio": "audio/b12/{voice}/pron_cuwar_tieemj.mp3"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
