@@ -1875,7 +1875,7 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-wl-cell { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .bai-wl-chip { padding: 0 12px; white-space: nowrap; }
 .bai-wl-hl { color: #EB483F; font-weight: 700; }
-.bai-wl-gloss { font-size: .8rem; line-height: 1.2; color: var(--muted); text-align: center; max-width: 12em; }
+.bai-wl-gloss { font-size: .8rem; line-height: 1.2; color: var(--muted); text-align: center; width: 0; min-width: 100%; }   /* nghĩa không làm rộng ô: xuống dòng theo bề rộng chip */
 
 /* Khung hình tạm của photoVocab (chưa có ảnh): khung đen như ảnh thật, rộng bằng cột nên thẳng hàng với chữ bên dưới */
 .bai-photo-media:has(.bai-photo-ph) { width: 100%; }
