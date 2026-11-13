@@ -344,6 +344,10 @@
       t.style.cssText = 'display:flex;align-items:center;justify-content:center;width:100%;min-height:130px;aspect-ratio:4/3;font-size:3rem;font-weight:700;border-radius:14px;background:#F1ECFF;color:#4a3d8f;';
       return t;
     }
+    // Khung hình tạm (chưa có ảnh): cùng khung đen, tỉ lệ vuông như ảnh thật; dùng item.placeholder = "Hình"
+    function makePhotoPlaceholder(text) {
+      return el('div', 'bai-photo-img bai-photo-ph', typeof text === 'string' ? text : 'Hình');
+    }
     function makePhoto(src, alt, fallbackText) {
       const img = document.createElement('img');
       img.src = src; img.alt = alt || ''; img.loading = 'lazy'; img.className = 'bai-photo-img';
@@ -587,7 +591,7 @@
       (ex.items || []).forEach(function (it, i) {
         const fig = el('figure', 'bai-photo');
         const media = el('div', 'bai-photo-media');
-        media.appendChild(it.img ? makePhoto(it.img, it.caption, it.big) : makeTextTile(it.big != null ? it.big : it.caption));
+        media.appendChild(it.img ? makePhoto(it.img, it.caption, it.big) : it.placeholder ? makePhotoPlaceholder(it.placeholder) : makeTextTile(it.big != null ? it.big : it.caption));
         const btn = el('button', 'bai-photo-listen', '▶');
         btn.type = 'button'; btn.dataset.text = it.caption;
         btn.setAttribute('aria-label', 'Nghe: ' + it.caption);
