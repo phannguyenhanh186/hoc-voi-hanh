@@ -1459,6 +1459,42 @@
       return box;
     }
 
+    // Danh sách từ/cụm từ có phần âm cần học tô đỏ + nghĩa nhỏ bên dưới (ngoài khung chip).
+    // ex.groups = [{ sound: "ia", tone: "lav", items: [{ text, hl, gloss, audio }] }]
+    //   hl = đoạn chữ tô đỏ (đúng như trong text, kể cả dấu thanh); gloss = nghĩa (tuỳ chọn); audio = đường dẫn riêng (có thể chứa {voice}).
+    function renderWordList(ex) {
+      const wrap = el('div', 'bai-wl');
+      (ex.groups || []).forEach(function (g) {
+        const row = el('div', 'bai-wl-row');
+        if (g.sound) {
+          const head = el('div', 'bai-chip is-static bai-wl-head', g.sound);
+          row.appendChild(head);
+        }
+        (g.items || []).forEach(function (it) {
+          const cell = el('div', 'bai-wl-cell');
+          const b = el('button', 'bai-chip bai-wl-chip bai-tone-' + (g.tone || 'lav'));
+          b.type = 'button';
+          b.dataset.text = it.text;
+          b.setAttribute('aria-label', 'Nghe “' + it.text + '”');
+          const i = it.hl ? it.text.indexOf(it.hl) : -1;
+          const txt = el('span', 'bai-wl-text');   // gói trong 1 span: chip là flex nên nếu không sẽ bị tách khoảng trắng quanh phần tô đỏ
+          if (i < 0) txt.appendChild(document.createTextNode(it.text));
+          else {
+            txt.appendChild(document.createTextNode(it.text.slice(0, i)));
+            txt.appendChild(el('span', 'bai-wl-hl', it.hl));
+            txt.appendChild(document.createTextNode(it.text.slice(i + it.hl.length)));
+          }
+          b.appendChild(txt);
+          b.addEventListener('click', function () { if (it.audio) play(resolveAudio(it.audio), b); });
+          cell.appendChild(b);
+          if (it.gloss) cell.appendChild(el('div', 'bai-wl-gloss', it.gloss));
+          row.appendChild(cell);
+        });
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
     // Viết đoạn văn tự do: danh sách câu hỏi gợi ý + (tuỳ chọn) đoạn mẫu + khung viết nhiều dòng.
     // ex.questions = ["...", ...]; ex.example = { label: "Mẫu", text: "..." }; ex.rows = số dòng khung viết.
     function renderWriteParagraph(ex) {
@@ -1699,7 +1735,7 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill };
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, wordList: renderWordList, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
