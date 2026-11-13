@@ -258,10 +258,6 @@
        "num": 4,
        "instructionVi": "Điền chữ n hoặc l.",
        "instructionEn": "Fill in the blanks with n or l.",
-       "words": [
-        "n",
-        "l"
-       ],
        "blankWidth": "2ch",
        "items": [
         {
