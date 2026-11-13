@@ -669,6 +669,7 @@
         built.line.appendChild(mark);
         built.cells.forEach(function (c) {
           c.input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch');
+          if (ex.blankWidth) c.input.style.margin = '0 1px';   // ô điền ngắn (1 chữ cái) dính sát chữ xung quanh để đọc liền như một từ
           c.input.addEventListener('focus', function () { activeInput = c.input; });
           cells.push({ input: c.input, answers: c.answers, mark: mark });
         });
