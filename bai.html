@@ -1465,11 +1465,9 @@
     function renderWordList(ex) {
       const wrap = el('div', 'bai-wl');
       (ex.groups || []).forEach(function (g) {
+        const grp = el('div', 'bai-wl-group');
+        if (g.sound) grp.appendChild(el('div', 'bai-chip is-static bai-wl-head', g.sound));   // âm đang học: ô trắng nằm trên hàng từ
         const row = el('div', 'bai-wl-row');
-        if (g.sound) {
-          const head = el('div', 'bai-chip is-static bai-wl-head', g.sound);
-          row.appendChild(head);
-        }
         (g.items || []).forEach(function (it) {
           const cell = el('div', 'bai-wl-cell');
           const b = el('button', 'bai-chip bai-wl-chip bai-tone-' + (g.tone || 'lav'));
@@ -1490,7 +1488,8 @@
           if (it.gloss) cell.appendChild(el('div', 'bai-wl-gloss', it.gloss));
           row.appendChild(cell);
         });
-        wrap.appendChild(row);
+        grp.appendChild(row);
+        wrap.appendChild(grp);
       });
       return wrap;
     }
