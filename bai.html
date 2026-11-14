@@ -389,7 +389,7 @@
       (ex.items || []).forEach(function (it) {
         const fig = el('figure', 'bai-photo');
         const media = el('div', 'bai-photo-media');
-        media.appendChild(makePhoto(it.img, it.name));
+        media.appendChild(!it.img && it.placeholder ? makePhotoPlaceholder(it.placeholder) : makePhoto(it.img, it.name));
         if (it.audio || ex.audio) {
           const btn = el('button', 'bai-photo-listen', '▶');
           btn.type = 'button'; btn.dataset.text = it.name;
