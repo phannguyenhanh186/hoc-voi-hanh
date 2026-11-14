@@ -5,7 +5,7 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an). Muc n-l: audio/b12/nam/pron_nawngs.mp3, pron_nooif_cowm.mp3, pron_naaus_cowm.mp3, pron_nawm_thangs.mp3, pron_lichj.mp3, pron_lanhj_lungf.mp3, pron_lo_lawngs.mp3, pron_caauf_loong.mp3.",
-  "todo_hinh": "Muc tu-vung: chua co hinh (dang hien khung 'Hinh' tam). Thay \"placeholder\": \"Hinh\" bang \"img\": \"images/b12/hoat-dong/<ten>.png\" cho tung item. Audio: audio/b12/nam/vocab_hoat_dong_01..09.mp3. Bai 6 (photoFill): hinh dao thu tu, dung lai cung file act_NN_*.jpg cua bai 5: Hinh1=act_04_boi, H2=act_03_choi-bong-ro, H3=act_07_hat, H4=act_05_chay-bo, H5=act_09_choi-co-vua, H6=act_01_choi-bong-da, H7=act_08_danh-dan, H8=act_06_ve, H9=act_02_choi-cau-long."
+  "todo_hinh": "Hinh tu vung: images/b12/hoat-dong/act_NN_<ten>.jpg (NN=01..09 theo thu tu bai 5; xem danh sach trong b12.json). Doi duoi .jpg neu file that khac duoi."
  },
  "sections": [
   {
@@ -328,47 +328,56 @@
        "items": [
         {
          "caption": "chơi bóng đá",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_01_choi-bong-da.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_01.mp3"
         },
         {
          "caption": "chơi cầu lông",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_02_choi-cau-long.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_02.mp3"
         },
         {
          "caption": "chơi bóng rổ",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_03_choi-bong-ro.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_03.mp3"
         },
         {
          "caption": "bơi",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_04_boi.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_04.mp3"
         },
         {
          "caption": "chạy bộ",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_05_chay-bo.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_05.mp3"
         },
         {
          "caption": "vẽ",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_06_ve.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_06.mp3"
         },
         {
          "caption": "hát",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_07_hat.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_07.mp3"
         },
         {
          "caption": "đánh đàn",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_08_danh-dan.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_08.mp3"
         },
         {
          "caption": "chơi cờ vua",
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_09_choi-co-vua.jpg",
+         "big": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_09.mp3"
         }
        ]
@@ -392,7 +401,7 @@
        ],
        "items": [
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_04_boi.jpg",
          "name": "Hình 1",
          "template": "{0}",
          "answers": [
@@ -403,7 +412,7 @@
          "example": true
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_03_choi-bong-ro.jpg",
          "name": "Hình 2",
          "template": "{0}",
          "answers": [
@@ -413,7 +422,7 @@
          ]
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_07_hat.jpg",
          "name": "Hình 3",
          "template": "{0}",
          "answers": [
@@ -423,7 +432,7 @@
          ]
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_05_chay-bo.jpg",
          "name": "Hình 4",
          "template": "{0}",
          "answers": [
@@ -433,7 +442,7 @@
          ]
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_09_choi-co-vua.jpg",
          "name": "Hình 5",
          "template": "{0}",
          "answers": [
@@ -443,7 +452,7 @@
          ]
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_01_choi-bong-da.jpg",
          "name": "Hình 6",
          "template": "{0}",
          "answers": [
@@ -453,7 +462,7 @@
          ]
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_08_danh-dan.jpg",
          "name": "Hình 7",
          "template": "{0}",
          "answers": [
@@ -463,7 +472,7 @@
          ]
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_06_ve.jpg",
          "name": "Hình 8",
          "template": "{0}",
          "answers": [
@@ -473,7 +482,7 @@
          ]
         },
         {
-         "placeholder": "Hình",
+         "img": "images/b12/hoat-dong/act_02_choi-cau-long.jpg",
          "name": "Hình 9",
          "template": "{0}",
          "answers": [
