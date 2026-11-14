@@ -5,7 +5,7 @@
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
   "todo_audio": "audio/b12/nam: xem danh sach 'audio' trong muc phat-am (pron_<tu>.mp3, tu nhieu am tiet noi bang '_', ten Telex) - chua thu am. Bai 2: audio/b12/nam/listen_ex2_01..06.mp3 (doc ca cau, co dap an). Muc n-l: audio/b12/nam/pron_nawngs.mp3, pron_nooif_cowm.mp3, pron_naaus_cowm.mp3, pron_nawm_thangs.mp3, pron_lichj.mp3, pron_lanhj_lungf.mp3, pron_lo_lawngs.mp3, pron_caauf_loong.mp3.",
-  "todo_hinh": "Muc tu-vung: chua co hinh (dang hien khung 'Hinh' tam). Thay \"placeholder\": \"Hinh\" bang \"img\": \"images/b12/hoat-dong/<ten>.png\" cho tung item. Audio: audio/b12/nam/vocab_hoat_dong_01..09.mp3."
+  "todo_hinh": "Muc tu-vung: chua co hinh (dang hien khung 'Hinh' tam). Thay \"placeholder\": \"Hinh\" bang \"img\": \"images/b12/hoat-dong/<ten>.png\" cho tung item. Audio: audio/b12/nam/vocab_hoat_dong_01..09.mp3. Bai 6 (photoFill): hinh dao thu tu, dung lai cung file act_NN_*.jpg cua bai 5: Hinh1=act_04_boi, H2=act_03_choi-bong-ro, H3=act_07_hat, H4=act_05_chay-bo, H5=act_09_choi-co-vua, H6=act_01_choi-bong-da, H7=act_08_danh-dan, H8=act_06_ve, H9=act_02_choi-cau-long."
  },
  "sections": [
   {
@@ -370,6 +370,117 @@
          "caption": "chơi cờ vua",
          "placeholder": "Hình",
          "audio": "audio/b12/{voice}/vocab_hoat_dong_09.mp3"
+        }
+       ]
+      },
+      {
+       "type": "photoFill",
+       "num": 6,
+       "columns": 3,
+       "instructionVi": "Nhìn vào hình và điền từ thích hợp.",
+       "instructionEn": "Look at the pictures and fill in the appropriate words.",
+       "words": [
+        "chơi bóng đá",
+        "chơi cầu lông",
+        "chơi bóng rổ",
+        "bơi",
+        "chạy bộ",
+        "vẽ",
+        "hát",
+        "đánh đàn",
+        "chơi cờ vua"
+       ],
+       "items": [
+        {
+         "placeholder": "Hình",
+         "name": "Hình 1",
+         "template": "{0}",
+         "answers": [
+          [
+           "bơi"
+          ]
+         ],
+         "example": true
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 2",
+         "template": "{0}",
+         "answers": [
+          [
+           "chơi bóng rổ"
+          ]
+         ]
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 3",
+         "template": "{0}",
+         "answers": [
+          [
+           "hát"
+          ]
+         ]
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 4",
+         "template": "{0}",
+         "answers": [
+          [
+           "chạy bộ"
+          ]
+         ]
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 5",
+         "template": "{0}",
+         "answers": [
+          [
+           "chơi cờ vua"
+          ]
+         ]
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 6",
+         "template": "{0}",
+         "answers": [
+          [
+           "chơi bóng đá"
+          ]
+         ]
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 7",
+         "template": "{0}",
+         "answers": [
+          [
+           "đánh đàn"
+          ]
+         ]
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 8",
+         "template": "{0}",
+         "answers": [
+          [
+           "vẽ"
+          ]
+         ]
+        },
+        {
+         "placeholder": "Hình",
+         "name": "Hình 9",
+         "template": "{0}",
+         "answers": [
+          [
+           "chơi cầu lông"
+          ]
+         ]
         }
        ]
       }
