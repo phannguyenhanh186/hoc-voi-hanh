@@ -890,12 +890,13 @@
         {
          "type": "exampleGroup",
          "tone": "blue",
+         "cols": 2,
          "groups": [
           {
            "label": "Khẳng định – Positive sentence",
            "lines": [
             {
-             "vi": "Mình là giáo viên.",
+             "vi": "Mình {{là::green}} giáo viên.",
              "en": "I am a teacher."
             }
            ]
@@ -913,7 +914,7 @@
            "label": "Khẳng định – Positive sentence",
            "lines": [
             {
-             "vi": "Chị ấy là người Hàn Quốc.",
+             "vi": "Chị ấy {{là::green}} người Hàn Quốc.",
              "en": "She is a Korean."
             }
            ]
@@ -931,7 +932,7 @@
            "label": "Khẳng định – Positive sentence",
            "lines": [
             {
-             "vi": "Đây là sách của Mai.",
+             "vi": "Đây {{là::green}} sách của Mai.",
              "en": "This is Mai's book."
             }
            ]
