@@ -458,7 +458,7 @@
           const sp = el('span', 'bai-hl bai-hl-' + tn, bits[0]);
           // style nội tuyến để vẫn hiện màu kể cả khi trình duyệt còn giữ style.css cũ
           if (tn === 'red' || tn === 'blueText') { sp.className = 'bai-hl-text'; sp.style.cssText = 'font-weight:700;color:' + (tn === 'red' ? '#EB483F' : '#2F5FD0') + ';'; node.appendChild(sp); return; }   // chỉ tô màu chữ, không nền
-          sp.style.cssText = 'background:' + ({ lav: '#C6C9FF', pink: '#FFC6EF', blue: '#C6E2FF' }[tn] || '#C6C9FF') + ';padding:0 4px;border-radius:0;color:#000;';
+          sp.style.cssText = 'background:' + ({ lav: '#C6C9FF', pink: '#FFC6EF', blue: '#C6E2FF', green: '#D1FF94' }[tn] || '#C6C9FF') + ';padding:0 4px;border-radius:0;color:#000;';
           node.appendChild(sp);
         }
         else if (part) node.appendChild(document.createTextNode(part));
@@ -486,6 +486,7 @@
           wrap.appendChild(p);
         } else if (b.type === 'exampleGroup') {
           const g = el('div', 'bai-exgroup is-' + (b.tone || 'blue'));
+          if (b.cols > 1) { g.classList.add('is-cols'); g.style.setProperty('--exg-cols', b.cols); }   // cols: các nhóm xếp cạnh nhau (vd. khẳng định | phủ định), tự xuống dòng khi khung hẹp
           (b.groups || []).forEach(function (it) {
             const row = el('div', 'bai-exgroup-item');
             if (it.label) row.appendChild(el('div', 'bai-exgroup-label', it.label));
