@@ -1880,3 +1880,9 @@ a.lesson-row:hover { background: #FAFAF7; }
 /* Khung hình tạm của photoVocab (chưa có ảnh): khung đen như ảnh thật, rộng bằng cột nên thẳng hàng với chữ bên dưới */
 .bai-photo-media:has(.bai-photo-ph) { width: 100%; }
 .bai-photo-ph { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 600; color: var(--muted); }
+
+/* exampleGroup nhiều cột (cols): các nhóm cạnh nhau, không có đường kẻ; khung hẹp thì xuống 1 cột */
+.bai-exgroup.is-cols { display: grid; grid-template-columns: repeat(var(--exg-cols, 2), minmax(0, 1fr)); gap: 16px 28px; }
+.bai-grammar { container-type: inline-size; }   /* để @container đo bề rộng khung ngữ pháp */
+.bai-exgroup.is-cols .bai-exgroup-item + .bai-exgroup-item { border-top: 0; margin-top: 0; padding-top: 0; }
+@container (max-width: 600px) { .bai-exgroup.is-cols { grid-template-columns: 1fr; } }
