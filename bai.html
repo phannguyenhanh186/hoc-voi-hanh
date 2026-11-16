@@ -500,6 +500,25 @@
             g.appendChild(row);
           });
           wrap.appendChild(g);
+        } else if (b.type === 'examplePairs') {
+          // Ví dụ theo cặp (vd. khẳng định | phủ định): nằm trong nút bấm "Ví dụ / Examples"; mỗi cặp 1 khung riêng,
+          // 2 cột cạnh nhau (khung hẹp thì xuống dòng), không có đường kẻ giữa hai câu.
+          const build = function () {
+            const list = el('div', 'bai-expairs');
+            (b.pairs || []).forEach(function (pair) {
+              const card = el('div', 'bai-expair');
+              pair.forEach(function (it) {
+                const cell = el('div', 'bai-expair-cell');
+                if (it.label) cell.appendChild(el('div', 'bai-exgroup-label', it.label));
+                cell.appendChild(hlText(el('div', 'bai-exgroup-vi'), it.vi, b.tone));
+                if (it.en) cell.appendChild(hlText(el('div', 'bai-exgroup-en'), it.en, b.tone));
+                card.appendChild(cell);
+              });
+              list.appendChild(card);
+            });
+            return list;
+          };
+          wrap.appendChild(b.toggle === false ? build() : makeToggleSection('Ví dụ / Examples', build));
         } else if (b.type === 'table') {
           const t = el('div', 'bai-grammar-table' + (b.sysFont ? ' is-sysfont' : ''));
           t.style.gridTemplateColumns = 'repeat(' + (b.columns || []).length + ', minmax(0, 1fr))';
