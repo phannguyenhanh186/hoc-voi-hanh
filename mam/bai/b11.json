@@ -888,64 +888,45 @@
          "tone": "purple"
         },
         {
-         "type": "exampleGroup",
+         "type": "examplePairs",
          "tone": "blue",
-         "cols": 2,
-         "groups": [
-          {
-           "label": "Khẳng định – Positive sentence",
-           "lines": [
-            {
-             "vi": "Mình {{là::green}} giáo viên.",
-             "en": "I am a teacher."
-            }
-           ]
-          },
-          {
-           "label": "Phủ định – Negative sentence",
-           "lines": [
-            {
-             "vi": "Mình {{không phải là::pink}} giáo viên.",
-             "en": "I am not a teacher."
-            }
-           ]
-          },
-          {
-           "label": "Khẳng định – Positive sentence",
-           "lines": [
-            {
-             "vi": "Chị ấy {{là::green}} người Hàn Quốc.",
-             "en": "She is a Korean."
-            }
-           ]
-          },
-          {
-           "label": "Phủ định – Negative sentence",
-           "lines": [
-            {
-             "vi": "Chị ấy {{không phải là::pink}} người Hàn Quốc.",
-             "en": "She is not a Korean."
-            }
-           ]
-          },
-          {
-           "label": "Khẳng định – Positive sentence",
-           "lines": [
-            {
-             "vi": "Đây {{là::green}} sách của Mai.",
-             "en": "This is Mai's book."
-            }
-           ]
-          },
-          {
-           "label": "Phủ định – Negative sentence",
-           "lines": [
-            {
-             "vi": "Đây {{không phải là::pink}} sách của Mai.",
-             "en": "This is not Mai's book."
-            }
-           ]
-          }
+         "pairs": [
+          [
+           {
+            "label": "Khẳng định – Positive sentence",
+            "vi": "Mình {{là::green}} giáo viên.",
+            "en": "I am a teacher."
+           },
+           {
+            "label": "Phủ định – Negative sentence",
+            "vi": "Mình {{không phải là::pink}} giáo viên.",
+            "en": "I am not a teacher."
+           }
+          ],
+          [
+           {
+            "label": "Khẳng định – Positive sentence",
+            "vi": "Chị ấy {{là::green}} người Hàn Quốc.",
+            "en": "She is a Korean."
+           },
+           {
+            "label": "Phủ định – Negative sentence",
+            "vi": "Chị ấy {{không phải là::pink}} người Hàn Quốc.",
+            "en": "She is not a Korean."
+           }
+          ],
+          [
+           {
+            "label": "Khẳng định – Positive sentence",
+            "vi": "Đây {{là::green}} sách của Mai.",
+            "en": "This is Mai's book."
+           },
+           {
+            "label": "Phủ định – Negative sentence",
+            "vi": "Đây {{không phải là::pink}} sách của Mai.",
+            "en": "This is not Mai's book."
+           }
+          ]
          ]
         },
         {
