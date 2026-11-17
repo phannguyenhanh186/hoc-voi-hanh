@@ -496,6 +496,139 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ngu-phap",
+   "titleVi": "Ngữ pháp",
+   "titleEn": "Grammar",
+   "subtopics": [
+    {
+     "id": "bao-lau",
+     "label": "Bao lâu",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "title": "BAO LÂU – ASKING ABOUT DURATION",
+       "blocks": [
+        {
+         "type": "paragraph",
+         "vi": "“Bao lâu” được dùng để hỏi về khoảng thời gian cần thiết để thực hiện một hành động, hoặc khoảng thời gian một sự việc diễn ra. Câu hỏi với “bao lâu” thường muốn biết một hoạt động kéo dài trong bao nhiêu thời gian.",
+         "en": "“Bao lâu” is used to ask about the amount of time needed to complete an action or how long an event or activity lasts. Questions with “bao lâu” usually ask about the duration of an activity or event."
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + Động từ + ... + {{bao lâu::pink}} + {{rồi::pink}}?",
+         "en": "Subject + Verb + ... + {{bao lâu::pink}} + {{rồi::pink}}?"
+        },
+        {
+         "type": "paragraph",
+         "vi": "“Rồi” được dùng ở cuối câu để diễn tả một hành động hoặc trạng thái đã bắt đầu trong quá khứ và vẫn tiếp tục đến hiện tại. Khi kết hợp với khoảng thời gian, “rồi” nhấn mạnh rằng sự việc đã diễn ra được một khoảng thời gian tính đến thời điểm nói.",
+         "en": "“Rồi” is used at the end of a sentence to indicate that an action or state started in the past and continues up to the present. When used with a duration, “rồi” emphasizes how long the action or state has continued until now."
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn học tiếng Việt {{bao lâu::pink}}?",
+           "en": "How long have you studied Vietnamese?"
+          },
+          {
+           "vi": "Anh Minh ở Sài Gòn {{bao lâu::pink}} {{rồi::pink}}?",
+           "en": "How long has Minh been living in Saigon?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Cách trả lời",
+         "en": "How to answer",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "vi": "Khi trả lời câu hỏi với “bao lâu”, chúng ta thường sử dụng các đơn vị thời gian như: phút, giờ, ngày, tuần, tháng, năm.",
+         "en": "When answering questions with “bao lâu”, we usually use units of time such as minutes, hours, days, weeks, months, and years."
+        },
+        {
+         "type": "structure",
+         "vi": "Chủ ngữ + Động từ + {{[Khoảng thời gian]::blue}} + {{rồi::pink}}.",
+         "en": "Subject + Verb + {{[Duration]::blue}} + {{rồi::pink}}."
+        },
+        {
+         "type": "heading",
+         "vi": "Một số đơn vị thời gian",
+         "en": "Common units of time",
+         "tone": "purple"
+        },
+        {
+         "type": "table",
+         "columns": [
+          "Tiếng Việt",
+          "English"
+         ],
+         "rows": [
+          [
+           "5 phút",
+           "5 minutes"
+          ],
+          [
+           "2 tiếng / 2 giờ",
+           "2 hours"
+          ],
+          [
+           "3 ngày",
+           "3 days"
+          ],
+          [
+           "2 tuần",
+           "2 weeks"
+          ],
+          [
+           "6 tháng",
+           "6 months"
+          ],
+          [
+           "1 năm",
+           "1 year"
+          ]
+         ]
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "A: Chị chơi bóng rổ {{bao lâu::pink}} {{rồi::pink}}?",
+           "en": "A: How long have you been playing basketball?"
+          },
+          {
+           "vi": "B: Chị chơi bóng rổ {{6 tháng::blue}} {{rồi::pink}}.",
+           "en": "B: I have been playing basketball for six months."
+          },
+          {
+           "vi": "A: Cô Ánh làm việc ở bệnh viện {{bao lâu::pink}} {{rồi::pink}}?",
+           "en": "A: How long has Ms. Ánh been working in the hospital?"
+          },
+          {
+           "vi": "B: Cô làm việc ở bệnh viện {{hơn 12 năm::blue}} {{rồi::pink}}.",
+           "en": "B: I've been working in the hospital for over 12 years now."
+          },
+          {
+           "vi": "A: Em học bài {{bao lâu::pink}} {{rồi::pink}}?",
+           "en": "A: How long have you been learning?"
+          },
+          {
+           "vi": "B: Em học {{khoảng 3 tiếng::blue}} {{rồi::pink}}.",
+           "en": "B: I have been learning for about 3 hours now."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
