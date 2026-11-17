@@ -1892,3 +1892,30 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-expair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; border: 1.5px solid var(--stroke); border-radius: 14px; padding: 12px 16px; background: #fff; }
 .bai-expair .bai-exgroup-label { background: #C6E2FF; }
 @container (max-width: 600px) { .bai-expair { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   Màn hình lớn (iMac, TV…) — mở rộng ngang + phóng to như slide
+   Dùng zoom theo độ rộng cửa sổ; nội dung được kéo rộng theo.
+   ============================================================ */
+:root { --z: 1; }
+.wrap, .wrap-wide { max-width: none; }
+@media (min-width: 1400px) {
+  :root { --z: 1.1; --blk: 820px; }
+  body { zoom: var(--z); }
+  .gram2-sidebar, .gram2-content { max-height: calc(78vh / var(--z)); }
+}
+@media (min-width: 1680px) { :root { --z: 1.25; --blk: 940px; } }
+@media (min-width: 1920px) { :root { --z: 1.4;  --blk: 1040px; } }
+@media (min-width: 2200px) { :root { --z: 1.6;  --blk: 1120px; } }
+@media (min-width: 2560px) { :root { --z: 1.8;  --blk: 1200px; } }
+@media (min-width: 3000px) { :root { --z: 2.1;  --blk: 1300px; } }
+@media (min-width: 3600px) { :root { --z: 2.5;  --blk: 1400px; } }
+
+/* các khối bài tập không còn bị khoá ở 640–760px */
+@media (min-width: 1400px) {
+  .bai-pick, .bai-fill, .bai-choose, .bai-achoice, .bai-dialog, .bai-tones,
+  .bai-grammar, .bai-pairs, .bai-match, .bai-sounds-rows, .bai-sounds,
+  .bai-letters, .bai-photos, .bai-photos-speak, .bai-grammar-table { max-width: var(--blk); }
+  .bai-write-row .bai-blank-full { max-width: var(--blk); }
+  .gram2-body { grid-template-columns: 280px 1fr; }
+}
