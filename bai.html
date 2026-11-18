@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bài học — hoc voi hanh</title>
-  <link rel="stylesheet" href="style.css?v=20261118e" />
+  <link rel="stylesheet" href="style.css?v=20261118f" />
   <style>
   .navbar { background: #fff; }
   .lesson-nav { display: flex; justify-content: space-between; gap: 14px; margin: 22px 0 8px; }
@@ -488,6 +488,11 @@
           // danh sách từ ví dụ: mỗi từ là một nút riêng (chỉ để nhìn, không phát audio)
           const row = el('div', 'bai-wordchips');
           (b.items || []).forEach(function (w) { row.appendChild(el('span', 'bai-wordchip bai-tone-' + (b.tone || 'lav'), w)); });
+          wrap.appendChild(row);
+        } else if (b.type === 'exampleGroup' && (b.groups || []).length === 1 && (b.groups[0].lines || []).length === 1 && !b.groups[0].lines[0].en && String(b.groups[0].lines[0].vi || '').indexOf('·') > -1) {
+          // dữ liệu cũ dạng "Đã · Mình · Bạn": tự tách thành từng nút
+          const row = el('div', 'bai-wordchips');
+          String(b.groups[0].lines[0].vi).split('·').forEach(function (w) { w = w.trim(); if (w) row.appendChild(el('span', 'bai-wordchip bai-tone-lav', w)); });
           wrap.appendChild(row);
         } else if (b.type === 'exampleGroup') {
           const g = el('div', 'bai-exgroup is-' + (b.tone || 'blue'));
