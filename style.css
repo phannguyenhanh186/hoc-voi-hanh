@@ -1964,3 +1964,7 @@ a.lesson-row:hover { background: #FAFAF7; }
 .gram2-sidebar { gap: 10px; }
 .gram2-section { flex: none; }
 .gram2-sidebar { background: #fff; }
+
+/* Danh sách từ ví dụ dạng nút */
+.bai-wordchips { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 18px; }
+.bai-wordchip { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 10px; background: var(--chip-bg, #C6C9FF); color: var(--ink); font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; line-height: 1; }
