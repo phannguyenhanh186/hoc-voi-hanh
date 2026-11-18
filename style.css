@@ -1926,7 +1926,7 @@ a.lesson-row:hover { background: #FAFAF7; }
    ============================================================ */
 .gram2-body { grid-template-columns: 290px minmax(0, 1fr); gap: 20px; }
 .gram2-sidebar { background: #FFFDF2; border: 2px solid var(--stroke); border-radius: 22px; padding: 14px; gap: 6px; }
-.gram2-section, .gram2-section:nth-of-type(n) { background: transparent; border: 2px solid transparent; border-radius: 16px; overflow: hidden; }
+.gram2-section, .gram2-section:nth-of-type(n) { background: #fff; border: 2px solid var(--stroke); border-radius: 16px; overflow: hidden; }
 .gram2-section.is-current { background: #fff; border-color: var(--stroke); }
 .gram2-section-header { justify-content: flex-start; gap: 12px; padding: 10px 12px; }
 .gram2-section-header:hover { background: rgba(27,27,40,.04); }
@@ -1957,3 +1957,9 @@ a.lesson-row:hover { background: #FAFAF7; }
   .bai-sec-big { font-size: 2.6rem; }
   .bai-sec-name { font-size: 1.3rem; }
 }
+
+/* Sidebar bài học: luôn có viền; khung nội dung nền trắng; mọi kỹ năng màu tím */
+.gram2-section, .gram2-section:nth-of-type(n) { border-color: var(--stroke); background: #fff; }
+.gram2-section.is-current { background: #fff; }
+.gram2-sidebar { gap: 10px; }
+.gram2-section { flex: none; }
