@@ -1847,6 +1847,9 @@
       shell.appendChild(body);
 
       const entries = [];   // { key, section, sub, btn, header, list, chevron }
+      // màu từng phần: ô số (nhạt) + nền khung nội dung (rất nhạt)
+      const SEC_SQ   = ['#C6C9FF', '#FFC6EF', '#D1FF94', '#C6FFF9', '#FFC6C7', '#FAFF94', '#C6E2FF', '#FFDCC6'];
+      const SEC_PALE = ['#F0F1FF', '#FFF0FA', '#F5FFE6', '#EBFFFD', '#FFF0F0', '#FFFEEA', '#EDF5FF', '#FFF3EA'];
 
       function scrollToContentOnMobile() {
         if (!window.matchMedia('(max-width: 720px)').matches) return;
@@ -1869,6 +1872,21 @@
 
         pill.textContent = entry.section.titleVi;
         content.innerHTML = '';
+        entries.forEach(function (e) { if (e.secBox) e.secBox.classList.toggle('is-current', e.section === entry.section); });
+        content.style.setProperty('--ch', SEC_SQ[entry.si % SEC_SQ.length]);
+        content.style.setProperty('--ch-l', SEC_PALE[entry.si % SEC_PALE.length]);
+        const head = el('div', 'bai-sec-head');
+        const segs = el('div', 'bai-sec-segs');
+        sections.forEach(function (_, i) { segs.appendChild(el('i', i <= entry.si ? 'on' : '')); });
+        head.appendChild(segs);
+        const hrow = el('div', 'bai-sec-row');
+        hrow.appendChild(el('span', 'bai-sec-big', String(entry.si + 1).padStart(2, '0')));
+        const htx = el('div', 'bai-sec-tx');
+        htx.appendChild(el('div', 'bai-sec-name', entry.section.titleVi));
+        if (entry.section.titleEn) htx.appendChild(el('div', 'bai-sec-en', entry.section.titleEn));
+        hrow.appendChild(htx);
+        head.appendChild(hrow);
+        content.appendChild(head);
         if (entry.sub) {
           content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));
           if (entry.sub.exercises && entry.sub.exercises.length) renderExercises(content, entry.sub.exercises);
@@ -1884,9 +1902,11 @@
 
       sections.forEach(function (section, si) {
         const secBox = el('div', 'gram2-section');
+        secBox.style.setProperty('--ch', SEC_SQ[si % SEC_SQ.length]);
         const header = el('button', 'gram2-section-header'); header.type = 'button';
         const titles = el('div', 'gram2-section-titles');
-        titles.appendChild(el('div', 'gram2-section-title-vi', (si + 1) + '. ' + section.titleVi));
+        header.appendChild(el('span', 'gram2-section-num', String(si + 1)));
+        titles.appendChild(el('div', 'gram2-section-title-vi', section.titleVi));
         if (section.titleEn) titles.appendChild(el('div', 'gram2-section-title-en', section.titleEn));
         header.appendChild(titles);
         const chevron = el('span', 'gram2-chevron', '▾');
@@ -1897,14 +1917,14 @@
         if (!subs.length) {
           // Section chưa có mục con: bấm vào tiêu đề là chọn luôn section.
           header.classList.add('is-static');
-          const entry = { key: section.id, section: section, sub: null, header: header, isStatic: true };
+          const entry = { key: section.id, section: section, sub: null, header: header, isStatic: true, secBox: secBox, si: si };
           entries.push(entry);
           header.addEventListener('click', function () { select(entry, { scroll: true }); });
         } else {
           const list = el('div', 'gram2-subtopic-list');
           subs.forEach(function (sub) {
             const btn = el('button', 'gram2-subtopic-btn', sub.label); btn.type = 'button';
-            const entry = { key: section.id + '/' + sub.id, section: section, sub: sub, btn: btn, list: list, chevron: chevron };
+            const entry = { key: section.id + '/' + sub.id, section: section, sub: sub, btn: btn, list: list, chevron: chevron, secBox: secBox, si: si };
             entries.push(entry);
             btn.addEventListener('click', function () { select(entry, { scroll: true }); });
             list.appendChild(btn);
