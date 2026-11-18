@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bài học — hoc voi hanh</title>
-  <link rel="stylesheet" href="style.css?v=20261118c" />
+  <link rel="stylesheet" href="style.css?v=20261118d" />
   <style>
   .navbar { background: #fff; }
   .lesson-nav { display: flex; justify-content: space-between; gap: 14px; margin: 22px 0 8px; }
@@ -1848,7 +1848,10 @@
 
       const entries = [];   // { key, section, sub, btn, header, list, chevron }
       // màu từng phần: ô số (nhạt) + nền khung nội dung (rất nhạt)
-      const SEC_SQ   = ['#C6C9FF'];   // tất cả kỹ năng cùng màu tím
+      // màu chủ đạo theo chương: Bài 1–10 tím, Bài 11–20 xanh lá mạ, ...
+      const CH_ACCENTS = ['#C6C9FF', '#D1FF94', '#C6E2FF', '#FFC6EF', '#FFDCC6', '#FAFF94', '#FFC6C7', '#C6FFF9'];
+      const lessonNum = parseInt((String(itemId).match(/\d+/) || ['1'])[0], 10) || 1;
+      const SEC_SQ   = [CH_ACCENTS[Math.floor((lessonNum - 1) / 10) % CH_ACCENTS.length]];
       const SEC_PALE = ['#FFFFFF'];   // nền khung nội dung: trắng
 
       function scrollToContentOnMobile() {
