@@ -1919,3 +1919,41 @@ a.lesson-row:hover { background: #FAFAF7; }
   .bai-write-row .bai-blank-full { max-width: var(--blk); }
   .gram2-body { grid-template-columns: 280px 1fr; }
 }
+
+/* ============================================================
+   Trang bài học — cùng phong cách với trang danh sách bài
+   (sidebar kem + ô số, khung nội dung nền nhạt, viền đen)
+   ============================================================ */
+.gram2-body { grid-template-columns: 290px minmax(0, 1fr); gap: 20px; }
+.gram2-sidebar { background: #FFFDF2; border: 2px solid var(--stroke); border-radius: 22px; padding: 14px; gap: 6px; }
+.gram2-section, .gram2-section:nth-of-type(n) { background: transparent; border: 2px solid transparent; border-radius: 16px; overflow: hidden; }
+.gram2-section.is-current { background: #fff; border-color: var(--stroke); }
+.gram2-section-header { justify-content: flex-start; gap: 12px; padding: 10px 12px; }
+.gram2-section-header:hover { background: rgba(27,27,40,.04); }
+.gram2-section-num {
+  flex: none; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  border-radius: 10px; background: var(--ch); font-family: var(--font-display); font-weight: 700; font-size: 1rem;
+}
+.gram2-section-titles { flex: 1; min-width: 0; }
+.gram2-section-title-vi { font-size: 1rem; font-weight: 700; line-height: 1.2; }
+.gram2-section-title-en { font-size: .85rem; opacity: .6; }
+.gram2-chevron { margin-left: auto; }
+.gram2-subtopic-list { padding: 0 10px 12px 10px; gap: 4px; }
+.gram2-subtopic-btn { background: transparent; border: 2px solid transparent; border-radius: 10px; font-weight: 400; padding: 8px 12px 8px 14px; }
+.gram2-subtopic-btn:hover { background: rgba(27,27,40,.05); }
+.gram2-subtopic-btn.active { background: var(--ch); border-color: var(--stroke); font-weight: 700; }
+
+.gram2-content { border: 2px solid var(--stroke); border-radius: 26px; background: var(--ch-l, #fff); padding: 26px 30px 30px; }
+.bai-sec-segs { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 6px; margin-bottom: 18px; }
+.bai-sec-segs i { height: 6px; border-radius: 99px; background: rgba(27,27,40,.12); }
+.bai-sec-segs i.on { background: var(--ch); border: 1px solid rgba(27,27,40,.35); }
+.bai-sec-row { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+.bai-sec-big { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 3.6rem; line-height: 1; }
+.bai-sec-name { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1.15; }
+.bai-sec-en { color: var(--muted); }
+.gram2-content-title { font-weight: 700; font-size: 1.1rem; margin: 16px 0 14px; padding-top: 14px; border-top: 2px solid rgba(27,27,40,.15); }
+@media (max-width: 720px) {
+  .gram2-body { grid-template-columns: 1fr; }
+  .bai-sec-big { font-size: 2.6rem; }
+  .bai-sec-name { font-size: 1.3rem; }
+}
