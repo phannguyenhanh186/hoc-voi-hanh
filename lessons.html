@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bài học — hoc voi hanh</title>
-  <link rel="stylesheet" href="style.css?v=20261118c" />
+  <link rel="stylesheet" href="style.css?v=20261118d" />
   <style>
   .navbar { background: #fff; }
   .ch-hint { margin: 0 0 18px; }
@@ -20,7 +20,7 @@
 
   /* ---- Khung: sidebar chương + bảng bài ---- */
   .ch-shell { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 20px; align-items: start; }
-  .ch-side { display: flex; flex-direction: column; gap: 8px; padding: 14px; background: #FFFDF2; border: 2px solid var(--stroke); border-radius: 22px; }
+  .ch-side { display: flex; flex-direction: column; gap: 8px; padding: 14px; background: #fff; border: 2px solid var(--stroke); border-radius: 22px; }
   .ch-side-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 2px solid transparent; border-radius: 16px; background: transparent; font: inherit; text-align: left; cursor: pointer; color: var(--ink); width: 100%; }
   .ch-side-item:hover { background: rgba(27,27,40,.04); }
   .ch-side-item.is-active { background: #fff; border-color: var(--stroke); }
@@ -97,8 +97,8 @@
     const PER_CHAPTER = 10;
     // màu mỗi chương (đậm / nhạt) lấy từ bảng màu của site
     const CH_COLORS = [
-      ['#D1FF94', '#F1FFDD'], ['#FFC6EF', '#FFF0FA'], ['#C6E2FF', '#EDF5FF'], ['#FFDCC6', '#FFF3EA'],
-      ['#C6C9FF', '#F0F1FF'], ['#FAFF94', '#FFFEEA'], ['#FFC6C7', '#FFF0F0'], ['#C6FFF9', '#EBFFFD']
+      ['#C6C9FF', '#F0F1FF'], ['#D1FF94', '#F1FFDD'], ['#C6E2FF', '#EDF5FF'], ['#FFC6EF', '#FFF0FA'],
+      ['#FFDCC6', '#FFF3EA'], ['#FAFF94', '#FFFEEA'], ['#FFC6C7', '#FFF0F0'], ['#C6FFF9', '#EBFFFD']
     ];
 
     function el(tag, cls, text) { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
@@ -138,7 +138,7 @@
 
         // --- thanh tổng ---
         const over = el('div', 'ch-overall');
-        over.style.setProperty('--ch', '#C8E96E');
+        over.style.setProperty('--ch', '#C6C9FF');
         over.appendChild(el('span', 'ch-overall-text', st.done + ' / ' + st.total + ' bài đã dạy'));
         const bar = el('div', 'ch-bar'); const fill = document.createElement('i'); fill.style.width = (st.total ? st.done / st.total * 100 : 0) + '%'; bar.appendChild(fill); over.appendChild(bar);
         const next = all.find(b => b.status !== 'todo' && !isDone(b.id));
