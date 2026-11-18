@@ -4,19 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bài học — hoc voi hanh</title>
-  <link rel="stylesheet" href="style.css?v=20261104b" />
+  <link rel="stylesheet" href="style.css?v=20261118a" />
   <style>
-/* ---- Danh sách bài (lessons.html): mỗi bài 1 hàng, 2 cột ---- */
-.lesson-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
-@media (max-width: 700px) { .lesson-grid { grid-template-columns: 1fr; } }
-.lesson-row, .lesson-row:visited { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 14px 10px 14px; background: #fff; border: 2px solid var(--stroke); border-radius: 16px; color: var(--ink); text-decoration: none; }
-a.lesson-row:hover { background: #FAFAF7; }
-.lesson-row-badge { flex: none; padding: 0 3px; font-family: var(--font-display); font-weight: 700; font-size: .95rem; white-space: nowrap; }
-.lesson-row-title { flex: 1; min-width: 0; font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.25; }
-.lesson-row-go { flex: none; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--stroke); border-radius: 6px; background: #FFBD94; font-size: .95rem; }
-.lesson-row.is-locked { opacity: .6; }
-.lesson-row.is-locked .lesson-row-go { background: #eee; font-size: .8rem; }
   .navbar { background: #fff; }
+  .ch-hint { margin: 0 0 18px; }
+
+  /* ---- Thanh tiến độ tổng + "Tiếp theo" ---- */
+  .ch-overall { display: flex; align-items: center; gap: 18px; padding: 14px 22px; margin-bottom: 22px; background: #FFFDC6; border: 2px solid var(--stroke); border-radius: 20px; }
+  .ch-overall-text { font-family: var(--font-display); font-weight: 700; white-space: nowrap; }
+  .ch-bar { flex: 1; min-width: 40px; height: 10px; border-radius: 99px; background: rgba(27,27,40,.12); overflow: hidden; }
+  .ch-bar > i { display: block; height: 100%; width: 0; border-radius: 99px; background: var(--ch, #949AFF); transition: width .3s; }
+  .ch-next { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 12px; background: var(--stroke); color: #fff; font-family: var(--font-display); font-weight: 700; text-decoration: none; }
+  .ch-next b { color: #D1FF94; font-weight: 700; }
+  .ch-next[hidden] { display: none; }
+
+  /* ---- Khung: sidebar chương + bảng bài ---- */
+  .ch-shell { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 20px; align-items: start; }
+  .ch-side { display: flex; flex-direction: column; gap: 8px; padding: 14px; background: #FFFDF2; border: 2px solid var(--stroke); border-radius: 22px; }
+  .ch-side-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 2px solid transparent; border-radius: 16px; background: transparent; font: inherit; text-align: left; cursor: pointer; color: var(--ink); width: 100%; }
+  .ch-side-item:hover { background: rgba(27,27,40,.04); }
+  .ch-side-item.is-active { background: #fff; border-color: var(--stroke); }
+  .ch-side-num { flex: none; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: var(--ch); font-family: var(--font-display); font-weight: 700; }
+  .ch-side-txt { flex: 1; min-width: 0; }
+  .ch-side-name { display: block; font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
+  .ch-side-sub { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 4px; }
+  .ch-side-item .ch-bar { height: 5px; }
+
+  .ch-panel { padding: 26px 28px 30px; border: 2px solid var(--stroke); border-radius: 26px; background: var(--ch-l); }
+  .ch-segs { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 6px; margin-bottom: 22px; }
+  .ch-segs i { height: 6px; border-radius: 99px; background: rgba(27,27,40,.14); }
+  .ch-segs i.on { background: var(--ch); border: 1px solid rgba(27,27,40,.35); }
+  .ch-big { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 4.5rem; line-height: 1; margin: 0; }
+  .ch-title { font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; margin: 6px 0 2px; }
+  .ch-range { color: var(--muted); margin: 0 0 14px; }
+  .ch-prog { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; font-family: var(--font-display); font-weight: 700; }
+
+  .ch-list { display: grid; grid-auto-flow: column; grid-template-rows: repeat(var(--rows, 5), auto); column-gap: 28px; }
+  .ch-row { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 8px 0; border-top: 2px solid rgba(27,27,40,.18); }
+  .ch-row-n { flex: none; width: 2.6rem; text-align: center; font-style: italic; color: var(--muted); font-size: 1.15rem; }
+  .ch-row-t { flex: 1; min-width: 0; font-family: var(--font-display); font-weight: 700; line-height: 1.25; color: var(--ink); text-decoration: none; }
+  a.ch-row-t:hover { text-decoration: underline; }
+  .ch-row.is-locked .ch-row-t { color: var(--muted); font-weight: 400; }
+  .ch-soon { flex: none; font-size: .8rem; padding: 3px 10px; border: 1.5px solid var(--stroke); border-radius: 99px; background: rgba(255,255,255,.6); }
+  .ch-check { flex: none; width: 34px; height: 34px; border-radius: 10px; border: 2px solid rgba(27,27,40,.45); background: transparent; cursor: pointer; font-size: 1rem; line-height: 1; color: #fff; padding: 0; }
+  .ch-check:hover { border-color: var(--stroke); background: rgba(255,255,255,.7); }
+  .ch-check.is-done { background: #5E8C3A; border-color: #5E8C3A; }
+
+  .ch-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; }
+  .ch-nav button { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; border: 2px solid var(--stroke); border-radius: 16px; background: #fff; font: inherit; font-family: var(--font-display); font-weight: 700; cursor: pointer; }
+  .ch-nav button:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 var(--stroke); }
+  .ch-nav button[hidden] { display: none; }
+
+  @media (max-width: 900px) {
+    .ch-shell { grid-template-columns: 1fr; }
+    .ch-side { flex-direction: row; overflow-x: auto; }
+    .ch-side-item { width: auto; flex: none; }
+    .ch-list { grid-auto-flow: row; grid-template-rows: none; }
+    .ch-overall { flex-wrap: wrap; }
+    .ch-big { font-size: 3.2rem; }
+  }
   </style>
 </head>
 <body>
@@ -24,8 +70,7 @@ a.lesson-row:hover { background: #FAFAF7; }
     <div class="wrap">
       <nav class="navbar">
         <a class="brand" href="index.html">hoc voi hanh</a>
-        <div class="nav-right">
-        </div>
+        <div class="nav-right"></div>
       </nav>
     </div>
   </header>
@@ -38,7 +83,7 @@ a.lesson-row:hover { background: #FAFAF7; }
     <div class="lesson-head">
       <h1 id="title">Đang tải…</h1>
     </div>
-    <div class="lesson-grid" id="cards"><p class="note">Đang tải…</p></div>
+    <div id="app"><p class="note">Đang tải…</p></div>
   </main>
 
   <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
@@ -49,128 +94,123 @@ a.lesson-row:hover { background: #FAFAF7; }
     (function () { const t = document.getElementById('title'); t.textContent = ''; const hl = document.createElement('span'); hl.className = 'title-hl'; hl.textContent = String(LEVELS[activeLevel] || activeLevel).toUpperCase(); t.appendChild(hl); })();
     document.title = 'Cấp ' + (LEVELS[activeLevel] || activeLevel) + ' — hoc voi hanh';
 
-    function el(tag, cls) { const n = document.createElement(tag); if (cls) n.className = cls; return n; }
-
-    // ===== Bảng màu + hoạ tiết xoay tua (độc lập với nhau) =====
-    const TILE_COLORS = [
-      { bg: '#7A63EE', pat: '#8C78F1' }, // tím
-      { bg: '#F8C670', pat: '#F7B749' }, // cam
-      { bg: '#BDE5F9', pat: '#9AD7F5' }, // cyan
-      { bg: '#F1CDDE', pat: '#EBB5CF' }, // hồng
-      { bg: '#4E58EC', pat: '#5C65E6' }, // xanh dương
-      { bg: '#FB7476', pat: '#F89697' }  // đỏ
+    const PER_CHAPTER = 10;
+    // màu mỗi chương (đậm / nhạt) lấy từ bảng màu của site
+    const CH_COLORS = [
+      ['#D1FF94', '#E6FFC6'], ['#FF94E1', '#FFC6EF'], ['#94CAFF', '#C6E2FF'], ['#FFBD94', '#FFDCC6'],
+      ['#949AFF', '#C6C9FF'], ['#FAFF94', '#FFFDC6'], ['#FF9496', '#FFC6C7'], ['#C6FFF9', '#E3FFFC']
     ];
-    const TILE_PATTERNS = ['diagonal', 'dots-filled', 'wave-h', 'diamond', 'stripes-v', 'polka', 'rings', 'stripes-h', 'wave-v', 'plaid'];
 
-    function patternSvg(name, color) {
-      const S = 28, sw = 2, op = 0.4;
-      let inner = '';
-      if (name === 'diagonal') {
-        inner = '<path d="M-7 7 L7 -7" stroke="' + color + '" stroke-width="' + sw + '" opacity="' + op + '"/>'
-          + '<path d="M7 35 L35 7" stroke="' + color + '" stroke-width="' + sw + '" opacity="' + op + '"/>'
-          + '<path d="M-7 35 L21 7" stroke="' + color + '" stroke-width="' + sw + '" opacity="' + op + '"/>';
-      } else if (name === 'dots-filled') {
-        inner = '<circle cx="7" cy="7" r="4.5" fill="' + color + '" opacity="' + op + '"/>'
-          + '<circle cx="21" cy="21" r="4.5" fill="' + color + '" opacity="' + op + '"/>';
-      } else if (name === 'wave-h') {
-        inner = '<path d="M0 14 Q7 5 14 14 T28 14" stroke="' + color + '" stroke-width="' + sw + '" fill="none" opacity="' + op + '"/>';
-      } else if (name === 'diamond') {
-        inner = '<rect x="9" y="9" width="10" height="10" transform="rotate(45 14 14)" fill="none" stroke="' + color + '" stroke-width="' + sw + '" opacity="' + op + '"/>';
-      } else if (name === 'stripes-v') {
-        inner = '<line x1="5" y1="0" x2="5" y2="28" stroke="' + color + '" stroke-width="3" opacity="' + op + '"/>'
-          + '<line x1="19" y1="0" x2="19" y2="28" stroke="' + color + '" stroke-width="3" opacity="' + op + '"/>';
-      } else if (name === 'polka') {
-        inner = '<circle cx="7" cy="7" r="2.2" fill="' + color + '" opacity="' + op + '"/>'
-          + '<circle cx="21" cy="21" r="2.2" fill="' + color + '" opacity="' + op + '"/>'
-          + '<circle cx="21" cy="7" r="1" fill="' + color + '" opacity="' + (op * 0.7) + '"/>'
-          + '<circle cx="7" cy="21" r="1" fill="' + color + '" opacity="' + (op * 0.7) + '"/>';
-      } else if (name === 'rings') {
-        inner = '<circle cx="14" cy="14" r="7" fill="none" stroke="' + color + '" stroke-width="' + sw + '" opacity="' + op + '"/>';
-      } else if (name === 'stripes-h') {
-        inner = '<line x1="0" y1="5" x2="28" y2="5" stroke="' + color + '" stroke-width="3" opacity="' + op + '"/>'
-          + '<line x1="0" y1="19" x2="28" y2="19" stroke="' + color + '" stroke-width="3" opacity="' + op + '"/>';
-      } else if (name === 'wave-v') {
-        inner = '<path d="M14 0 Q5 7 14 14 T14 28" stroke="' + color + '" stroke-width="' + sw + '" fill="none" opacity="' + op + '"/>';
-      } else if (name === 'plaid') {
-        inner = '<line x1="0" y1="9" x2="28" y2="9" stroke="' + color + '" stroke-width="1.5" opacity="' + op + '"/>'
-          + '<line x1="0" y1="20" x2="28" y2="20" stroke="' + color + '" stroke-width="1.5" opacity="' + op + '"/>'
-          + '<line x1="9" y1="0" x2="9" y2="28" stroke="' + color + '" stroke-width="1.5" opacity="' + op + '"/>'
-          + '<line x1="20" y1="0" x2="20" y2="28" stroke="' + color + '" stroke-width="1.5" opacity="' + op + '"/>';
-      }
-      const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + S + '" height="' + S + '">' + inner + '</svg>';
-      return 'url("data:image/svg+xml,' + encodeURIComponent(svg) + '")';
-    }
-
-    let tileIndex = 0;
-    function nextTileTheme() {
-      const c = TILE_COLORS[tileIndex % TILE_COLORS.length];
-      const p = TILE_PATTERNS[tileIndex % TILE_PATTERNS.length];
-      tileIndex++;
-      return { bg: c.bg, pat: c.pat, pattern: p };
-    }
-
-    function readLessonProgress(level, id) {
-      try {
-        const saved = JSON.parse(localStorage.getItem('progress:' + level + ':' + id) || 'null');
-        if (saved && typeof saved === 'object') {
-          const total = saved.total || 0;
-          const done = saved.done ? Object.keys(saved.done).filter(function (k) { return saved.done[k]; }).length : 0;
-          return { done: Math.min(done, total || done), total: total };
-        }
-      } catch (e) {}
-      return { done: 0, total: 0 };
-    }
-
-    function makeTile(opts) {
-      // opts: { eyebrow, title, locked, href }  — mỗi bài là 1 hàng: nhãn "Bài N" (highlight màu) · tên bài · nút mũi tên
-      const HL = ['#D1FF94', '#FF94E1', '#C6FFF9', '#FF9496', '#FAFF94', '#94CAFF', '#FFBD94', '#949AFF'];
-      window.__tileIdx = (window.__tileIdx || 0);
-      const color = HL[window.__tileIdx++ % HL.length];
-      const row = el(opts.locked ? 'div' : 'a', 'lesson-row' + (opts.locked ? ' is-locked' : ''));
-      if (!opts.locked) row.href = opts.href;
-      const badge = el('span', 'lesson-row-badge'); badge.textContent = opts.eyebrow; badge.style.background = color;
-      row.appendChild(badge);
-      const title = el('span', 'lesson-row-title'); title.textContent = opts.title;
-      row.appendChild(title);
-      const go = el('span', 'lesson-row-go'); go.textContent = opts.locked ? '🔒' : '→';
-      if (opts.locked) go.setAttribute('title', 'Sắp ra mắt');
-      row.appendChild(go);
-      return row;
-    }
+    function el(tag, cls, text) { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+    const doneKey = id => 'lessonDone:' + activeLevel + ':' + id;
+    function isDone(id) { try { return localStorage.getItem(doneKey(id)) === '1'; } catch (e) { return false; } }
+    function setDone(id, v) { try { v ? localStorage.setItem(doneKey(id), '1') : localStorage.removeItem(doneKey(id)); } catch (e) {} }
+    const hrefOf = b => (b.page || 'bai.html') + '?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel);
 
     (async function () {
-      const cards = document.getElementById('cards');
+      const app = document.getElementById('app');
+      let lessons = [];
       try {
         const data = await (await fetch(activeLevel + '/units.json', { cache: 'no-cache' })).json();
-        cards.innerHTML = '';
+        lessons = data.lessons || [];
+      } catch (e) { app.innerHTML = '<p class="note">Could not load the lesson list.</p>'; return; }
+      if (!lessons.length) { app.innerHTML = '<p class="note">Chưa có bài nào ở cấp này.</p>'; return; }
 
-        (data.selfStudy || []).forEach(s => {
-          const locked = s.status === 'todo';
-          // Vào thẳng bài (Từ vựng trước tiên), không qua màn hình chọn kỹ năng nữa.
-          const href = s.id === 'tones' ? 'tones.html' : ('vocabulary.html?id=' + encodeURIComponent(s.id) + '&level=' + encodeURIComponent(activeLevel));
-          cards.appendChild(makeTile({
-            eyebrow: 'Tự học', title: s.title, locked: locked, href: href
-          }));
+      // chia chương theo số bài: Chương 1 = Bài 1–10, Chương 2 = Bài 11–20, ...
+      const chapters = [];
+      lessons.forEach(b => {
+        const i = Math.floor((b.num - 1) / PER_CHAPTER);
+        (chapters[i] = chapters[i] || []).push(b);
+      });
+      for (let i = 0; i < chapters.length; i++) if (!chapters[i]) chapters[i] = [];
+
+      let current = 0;
+      try { current = Math.min(parseInt(sessionStorage.getItem('chapter:' + activeLevel) || localStorage.getItem('chapter:' + activeLevel) || '0', 10) || 0, chapters.length - 1); } catch (e) {}
+      const h = parseInt((location.hash || '').replace('#chuong', ''), 10);
+      if (h >= 1 && h <= chapters.length) current = h - 1;
+
+      const stat = list => { const ready = list.filter(b => b.status !== 'todo'); return { done: list.filter(b => isDone(b.id)).length, total: list.length, ready: ready.length }; };
+      const colorOf = i => CH_COLORS[i % CH_COLORS.length];
+
+      function render() {
+        app.innerHTML = '';
+        const all = lessons, st = stat(all);
+
+        // --- thanh tổng ---
+        const over = el('div', 'ch-overall');
+        over.style.setProperty('--ch', '#C8E96E');
+        over.appendChild(el('span', 'ch-overall-text', st.done + ' / ' + st.total + ' bài đã dạy'));
+        const bar = el('div', 'ch-bar'); const fill = document.createElement('i'); fill.style.width = (st.total ? st.done / st.total * 100 : 0) + '%'; bar.appendChild(fill); over.appendChild(bar);
+        const next = all.find(b => b.status !== 'todo' && !isDone(b.id));
+        if (next) {
+          const a = el('a', 'ch-next'); a.href = hrefOf(next);
+          a.append('Tiếp theo: ', Object.assign(el('b'), { textContent: 'Bài ' + next.num }), ' →');
+          over.appendChild(a);
+        }
+        app.appendChild(over);
+
+        const shell = el('div', 'ch-shell'); app.appendChild(shell);
+
+        // --- sidebar ---
+        const side = el('nav', 'ch-side'); side.setAttribute('aria-label', 'Chương');
+        chapters.forEach((list, i) => {
+          const s = stat(list), c = colorOf(i);
+          const b = el('button', 'ch-side-item' + (i === current ? ' is-active' : '')); b.type = 'button';
+          b.style.setProperty('--ch', c[0]);
+          b.appendChild(el('span', 'ch-side-num', String(i + 1)));
+          const t = el('span', 'ch-side-txt');
+          t.appendChild(el('span', 'ch-side-name', 'Chương ' + (i + 1)));
+          t.appendChild(el('span', 'ch-side-sub', s.done + '/' + s.total + ' bài đã dạy'));
+          const bar = el('div', 'ch-bar'); const f = document.createElement('i'); f.style.width = (s.total ? s.done / s.total * 100 : 0) + '%'; bar.appendChild(f); t.appendChild(bar);
+          b.appendChild(t);
+          b.onclick = () => go(i);
+          side.appendChild(b);
         });
+        shell.appendChild(side);
 
-        const lessons = data.lessons || [];
-        if (!lessons.length) { cards.innerHTML += '<p class="note">Chưa có bài nào ở cấp này.</p>'; return; }
+        // --- bảng bài của chương đang chọn ---
+        const list = chapters[current], c = colorOf(current), cs = stat(list);
+        const panel = el('section', 'ch-panel');
+        panel.style.setProperty('--ch', c[0]); panel.style.setProperty('--ch-l', c[1]);
+        const segs = el('div', 'ch-segs');
+        chapters.forEach((_, i) => segs.appendChild(el('i', i <= current ? 'on' : '')));
+        panel.appendChild(segs);
+        panel.appendChild(el('p', 'ch-big', String(current + 1).padStart(2, '0')));
+        panel.appendChild(el('h2', 'ch-title', 'Chương ' + (current + 1)));
+        const first = list[0] && list[0].num, last = list.length && list[list.length - 1].num;
+        panel.appendChild(el('p', 'ch-range', 'Bài ' + first + ' – ' + last));
+        const prog = el('div', 'ch-prog');
+        prog.appendChild(el('span', '', cs.done + '/' + cs.total));
+        const pb = el('div', 'ch-bar'); const pf = document.createElement('i'); pf.style.width = (cs.total ? cs.done / cs.total * 100 : 0) + '%'; pb.appendChild(pf); prog.appendChild(pb);
+        panel.appendChild(prog);
 
-        lessons.forEach(function (b) {
+        const ul = el('div', 'ch-list'); ul.style.setProperty('--rows', Math.ceil(list.length / 2));
+        list.forEach(b => {
           const locked = b.status === 'todo';
-          // Bấm "Học" là vào thẳng bài (từ Từ vựng), giống Duolingo — không còn
-          // màn hình trung gian để chọn Vocabulary/Grammar/Reading/Listening.
-          // Bài có trường "page" (vd bai.html — bài kiểu slide dạy học) thì vào thẳng trang đó.
-          const base = (b.page || 'bai.html') + '?id=' + encodeURIComponent(b.id) + '&level=' + encodeURIComponent(activeLevel);
-          cards.appendChild(makeTile({
-            eyebrow: 'Bài ' + b.num,
-            title: b.title,
-            locked: locked,
-            progress: locked ? null : readLessonProgress(activeLevel, b.id),
-            href: base
-          }));
+          const row = el('div', 'ch-row' + (locked ? ' is-locked' : ''));
+          row.appendChild(el('span', 'ch-row-n', String(b.num)));
+          if (locked) row.appendChild(el('span', 'ch-row-t', b.title));
+          else { const a = el('a', 'ch-row-t', b.title); a.href = hrefOf(b); row.appendChild(a); }
+          if (locked) row.appendChild(el('span', 'ch-soon', 'Sắp ra mắt'));
+          else {
+            const done = isDone(b.id);
+            const cb = el('button', 'ch-check' + (done ? ' is-done' : ''), done ? '✓' : ''); cb.type = 'button';
+            cb.setAttribute('aria-label', 'Đánh dấu đã dạy Bài ' + b.num); cb.title = done ? 'Bỏ đánh dấu' : 'Đánh dấu đã dạy';
+            cb.onclick = () => { setDone(b.id, !isDone(b.id)); render(); };
+            row.appendChild(cb);
+          }
+          ul.appendChild(row);
         });
-      } catch (e) { cards.innerHTML = '<p class="note">Could not load the lesson list.</p>'; }
+        panel.appendChild(ul);
+
+        const nav = el('div', 'ch-nav');
+        const prev = el('button', '', '← Chương ' + current); prev.type = 'button'; prev.hidden = current === 0; prev.onclick = () => go(current - 1);
+        const nx = el('button', '', 'Chương ' + (current + 2) + ' →'); nx.type = 'button'; nx.hidden = current >= chapters.length - 1; nx.onclick = () => go(current + 1);
+        nav.append(prev, nx); panel.appendChild(nav);
+        shell.appendChild(panel);
+      }
+      function go(i) { current = i; try { sessionStorage.setItem('chapter:' + activeLevel, String(i)); localStorage.setItem('chapter:' + activeLevel, String(i)); } catch (e) {} render(); }
+      render();
     })();
   </script>
   <script src="pomodoro.js" defer></script>
