@@ -21,7 +21,7 @@
    "subtopics": [
     {
      "id": "bang-chu-cai",
-     "label": "Bảng chữ cái",
+     "label": "Bảng chữ cái (Alphabet)",
      "exercises": [
       {
        "type": "letters",
@@ -212,7 +212,7 @@
     },
     {
      "id": "thanh-dieu",
-     "label": "Thanh điệu",
+     "label": "Thanh điệu (Tones)",
      "exercises": [
       {
        "type": "grammarNote",
@@ -548,7 +548,7 @@
    "subtopics": [
     {
      "id": "nghe-nghiep",
-     "label": "Nghề nghiệp",
+     "label": "Nghề nghiệp (Jobs)",
      "exercises": [
       {
        "type": "photoVocab",
@@ -639,7 +639,7 @@
    "subtopics": [
     {
      "id": "chao-hoi",
-     "label": "Chào hỏi",
+     "label": "Chào hỏi (Greetings)",
      "exercises": [
       {
        "type": "dialogueFill",
@@ -802,7 +802,7 @@
    "subtopics": [
     {
      "id": "danh-xung",
-     "label": "Danh xưng",
+     "label": "Danh xưng (Pronouns)",
      "exercises": [
       {
        "type": "pronounPairs",
@@ -1070,7 +1070,7 @@
    "subtopics": [
     {
      "id": "chao-hoi",
-     "label": "Chào hỏi",
+     "label": "Chào hỏi (Greetings)",
      "exercises": [
       {
        "type": "readingQA",
@@ -1104,7 +1104,7 @@
    "subtopics": [
     {
      "id": "danh-xung",
-     "label": "Danh xưng",
+     "label": "Danh xưng (Pronouns)",
      "exercises": [
       {
        "type": "chooseWord",
@@ -1273,7 +1273,7 @@
    "subtopics": [
     {
      "id": "chao-hoi",
-     "label": "Chào hỏi",
+     "label": "Chào hỏi (Greetings)",
      "exercises": [
       {
        "type": "openIntro",
