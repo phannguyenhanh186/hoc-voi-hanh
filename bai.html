@@ -683,6 +683,7 @@
       const box = el('div');
       const grid = el('div', 'bai-photos bai-photos-xl bai-photos-sent');
       const allCells = [];
+      if (ex.columns) { grid.style.gridTemplateColumns = 'repeat(' + ex.columns + ', minmax(0, 1fr))'; grid.style.maxWidth = (ex.columns * 300) + 'px'; }
       (ex.items || []).forEach(function (it) {
         const fig = el('figure', 'bai-photo');
         fig.appendChild(makePhoto(it.img, it.name));
@@ -691,10 +692,11 @@
         const built = buildFillLine(it.template, it.answers || [], it.name);
         const mark = el('span', 'bai-mark');
         built.line.appendChild(mark);
+        if (ex.blankMin) built.line.classList.add('is-wide');   // ô điền cả câu: mũi tên + ô trống chiếm hết chiều ngang dòng
         cap.appendChild(built.line);
         built.cells.forEach(function (c) {
           const longest = c.answers.reduce(function (m, a) { return Math.max(m, String(a).length); }, 0);
-          c.input.style.width = (longest * 0.8 + 1.5) + 'ch';
+          if (!ex.blankMin) c.input.style.width = (longest * 0.8 + 1.5) + 'ch';
           c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
           allCells.push({ input: c.input, answers: c.answers, mark: mark });
         });
@@ -1879,6 +1881,12 @@
         if (ex.noteTitleEn) { const t2 = el('div', 'grammar-note', ex.noteTitleEn); t2.style.fontWeight = '700'; t2.style.marginBottom = '0'; note.appendChild(t2); }
         if (ex.noteEn) { const en = el('div', 'grammar-note', (ex.noteTitleEn ? '' : 'Note: ') + ex.noteEn); en.style.whiteSpace = 'pre-line'; note.appendChild(en); }
         box.appendChild(note);
+      } else if (ex.noteEn) {
+        // Ghi chú chỉ tiếng Anh: dùng khung note của phần Ngữ pháp (nền be, viền đen)
+        const gn = el('div', 'bai-grammar-note');
+        if (ex.noteTitleEn) gn.appendChild(el('div', 'bai-grammar-note-title', ex.noteTitleEn));
+        gn.appendChild(hlText(el('div', 'bai-grammar-note-text'), ex.noteEn));
+        box.appendChild(gn);
       }
       return box;
     }
