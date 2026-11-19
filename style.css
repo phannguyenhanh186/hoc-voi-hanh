@@ -1687,7 +1687,9 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-pairs-intro { background: #fff; }
 .bai-pairs-ex-line, .bai-pairs-example.bai-tone-lav .bai-pairs-ex-line { background: #fff; }
 /* Hai dòng ví dụ sát nhau -> hàng thấp lại, các nút mỏng hơn */
-.bai-pairs-example { gap: 0; }
+/* Ví dụ nằm trong 1 khung: nền trắng, viền đen, bo góc */
+.bai-pairs-example, .bai-pairs-example.bai-tone-lav { gap: 0; background: #fff; border: 1.5px solid var(--stroke); border-radius: 14px; padding: 4px 8px; }
+.bai-pairs-example .bai-pairs-ex-line { background: transparent; }
 .bai-pairs-ex-line { padding: 4px 12px; line-height: 1.3; }
 .bai-pairs-sub { padding: 8px 10px; }
 
