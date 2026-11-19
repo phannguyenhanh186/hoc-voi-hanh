@@ -989,6 +989,70 @@
               "noNum": true
             }
           ]
+        },
+        {
+          "id": "chao-hoi",
+          "label": "Chào hỏi (Greetings)",
+          "exercises": [
+            {
+              "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "blocks": [
+                {
+                  "type": "heading",
+                  "text": "Basic Vietnamese Greetings",
+                  "tone": "purple"
+                },
+                {
+                  "type": "structure",
+                  "vi": "Chào + [2P Pronoun] – Hello / Goodbye\nCám ơn + [2P Pronoun] – Thank you\nXin lỗi + [2P Pronoun] – Sorry",
+                  "en": "Chào + [2P Pronoun] – Hello / Goodbye\nCám ơn + [2P Pronoun] – Thank you\nXin lỗi + [2P Pronoun] – Sorry"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "[2P Pronoun] refers to the person you are talking to.",
+                  "italic": true
+                },
+                {
+                  "type": "note",
+                  "title": "Culture Note:",
+                  "text": "These greetings are usually followed by the other person's pronoun to sound more natural and polite."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "To ask \"How are you?\", use:"
+                },
+                {
+                  "type": "structure",
+                  "vi": "[2P Pronoun] + khỏe không?",
+                  "en": "[2P Pronoun] + khỏe không?"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "The pronoun refers to the person you are talking to."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "To say \"I'm fine / I'm good\", use:"
+                },
+                {
+                  "type": "structure",
+                  "vi": "[Your Pronoun] + khỏe.",
+                  "en": "[Your Pronoun] + khỏe."
+                },
+                {
+                  "type": "note",
+                  "title": "Cultural Note:",
+                  "bullets": [
+                    "Khỏe means healthy or well.",
+                    "Không is used at the end a question to form a yes/no question.",
+                    "You can add cảm ơn (thank you) to make your answer more polite: Mình khỏe, cảm ơn!"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
