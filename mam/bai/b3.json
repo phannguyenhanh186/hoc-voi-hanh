@@ -763,8 +763,7 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + {{thích::pink}} + danh từ",
-         "en": "Subject + {{thích::pink}} + noun"
+         "vi": "[Subject] + {{thích::pink}} + [noun]"
         },
         {
          "type": "examples",
@@ -856,8 +855,7 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + {{thích::pink}} ăn + đồ ăn",
-         "en": "Subject + {{thích::pink}} ăn + food"
+         "vi": "[Subject] + {{thích::pink}} ăn + [food]"
         },
         {
          "type": "examples",
@@ -995,8 +993,7 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + {{thích::pink}} uống + đồ uống",
-         "en": "Subject + {{thích::pink}} uống + drink"
+         "vi": "[Subject] + {{thích::pink}} uống + [drink]"
         },
         {
          "type": "examples",
@@ -1127,8 +1124,7 @@
         },
         {
          "type": "structure",
-         "vi": "Chủ ngữ + {{không::blue}} {{thích::pink}} + danh từ",
-         "en": "Subject + {{không::blue}} {{thích::pink}} + noun"
+         "vi": "[Subject] + {{không::blue}} {{thích::pink}} + [noun]"
         },
         {
          "type": "examples",
@@ -1395,8 +1391,7 @@
         },
         {
          "type": "structure",
-         "vi": "Subject + {{có::lav}} + {{thích::pink}} + ... + {{không::blue}}?",
-         "en": "Subject + {{có::lav}} + {{thích::pink}} + ... + {{không::blue}}?"
+         "vi": "[Subject] + {{có::lav}} {{thích::pink}} + [noun / activity] + {{không::blue}}?"
         },
         {
          "type": "bullets",
@@ -1439,8 +1434,7 @@
         },
         {
          "type": "structure",
-         "vi": "[Pronoun] + {{có::lav}}. → Yes, [I do].\n[Pronoun] + {{không::blue}}. → No, [I don't].",
-         "en": "[Pronoun] + {{có::lav}}. → Yes, [I do].\n[Pronoun] + {{không::blue}}. → No, [I don't]."
+         "vi": "[Pronoun] + {{có::lav}}.\n[Pronoun] + {{không::blue}}."
         },
         {
          "type": "paragraph",
@@ -1494,8 +1488,7 @@
         },
         {
          "type": "structure",
-         "vi": "[Pronoun] + {{thích::pink}} + ... → Yes, [I] like...\n[Pronoun] + {{không::blue}} {{thích::pink}} + ... → No, [I] don't like...",
-         "en": "[Pronoun] + {{thích::pink}} + ... → Yes, [I] like...\n[Pronoun] + {{không::blue}} {{thích::pink}} + ... → No, [I] don't like..."
+         "vi": "[Pronoun] + {{thích::pink}} + [noun / activity]\n[Pronoun] + {{không::blue}} {{thích::pink}} + [noun / activity]"
         },
         {
          "type": "paragraph",
@@ -1750,8 +1743,7 @@
         },
         {
          "type": "structure",
-         "vi": "Bạn thích ăn {{gì::pink}}?",
-         "en": "What do you like to eat?"
+         "vi": "[Subject] + thích ăn + {{gì::pink}}?"
         },
         {
          "type": "paragraph",
@@ -1760,8 +1752,7 @@
         },
         {
          "type": "structure",
-         "vi": "Tôi thích ăn + tên món ăn.",
-         "en": "I like to eat + food."
+         "vi": "[Subject] + thích ăn + [food]"
         },
         {
          "type": "examples",
@@ -1787,8 +1778,7 @@
         },
         {
          "type": "structure",
-         "vi": "Bạn thích uống {{gì::pink}}?",
-         "en": "What do you like to drink?"
+         "vi": "[Subject] + thích uống + {{gì::pink}}?"
         },
         {
          "type": "paragraph",
@@ -1797,8 +1787,7 @@
         },
         {
          "type": "structure",
-         "vi": "Tôi thích uống + tên đồ uống.",
-         "en": "I like to drink + drink."
+         "vi": "[Subject] + thích uống + [drink]"
         },
         {
          "type": "examples",
@@ -1829,8 +1818,7 @@
         },
         {
          "type": "structure",
-         "vi": "Bạn thích làm {{gì::pink}}?",
-         "en": "What do you like to do?"
+         "vi": "[Subject] + thích làm + {{gì::pink}}?"
         },
         {
          "type": "examples",
