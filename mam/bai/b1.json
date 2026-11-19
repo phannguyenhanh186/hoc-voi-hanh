@@ -1,1316 +1,1407 @@
 {
- "_guide": {
-  "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b1&level=mam. App bo qua key bat dau bang '_'.",
-  "section": "Moi section co titleVi + titleEn. Co 'subtopics' thi hien danh sach muc con ben duoi; khong co thi bam vao se hien 'dang soan'.",
-  "exercise.letters": "Luoi cac chu cai. 'rows' = danh sach hang, moi hang la danh sach chu.",
-  "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong.",
-  "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt",
-  "exercise.photoVocab": "Anh + chu thich + 1 nut nghe cho ca bai ('audio' la duong dan file). 'num' = so bai in trong sach.",
-  "exercise.photoOrder": "Nghe va danh so hinh. Moi item co 'example' (so cho san, khoa) hoac 'answer' (dap an, dien so 1-6). Chua co 'answer' thi khong hien nut Kiem tra.",
-  "exercise.pronounPairs": "Bang 'danh xung theo cap' (tu xung / xung ho / vi du), khong tuong tac, khong dap an. 'intro' = doan gioi thieu (khung vang). 'columns' = 3 tieu de cot {vi,en}. 'rows' = danh sach hang; moi hang co 'self' va 'other' (mang 1-2 item {text, tone: yellow|blue|pink} - 2 item thi chia doi o, mau khac nhau) va 'examples' (mang cau vi du, nen tim).",
-  "noNum": "Them 'noNum': true vao bat ky exercise nao de an so bai (khung tron so) tren tieu de - dung cho noi dung tham khao khong phai bai tap co dem so."
- },
- "id": "b1",
- "num": 1,
- "title": "Chào bạn, bạn khoẻ không?",
- "sections": [
-  {
-   "id": "phat-am",
-   "titleVi": "Phát âm",
-   "titleEn": "Pronunciation",
-   "subtopics": [
+  "_guide": {
+    "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b1&level=mam. App bo qua key bat dau bang '_'.",
+    "section": "Moi section co titleVi + titleEn. Co 'subtopics' thi hien danh sach muc con ben duoi; khong co thi bam vao se hien 'dang soan'.",
+    "exercise.letters": "Luoi cac chu cai. 'rows' = danh sach hang, moi hang la danh sach chu.",
+    "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong.",
+    "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt",
+    "exercise.photoVocab": "Anh + chu thich + 1 nut nghe cho ca bai ('audio' la duong dan file). 'num' = so bai in trong sach.",
+    "exercise.photoOrder": "Nghe va danh so hinh. Moi item co 'example' (so cho san, khoa) hoac 'answer' (dap an, dien so 1-6). Chua co 'answer' thi khong hien nut Kiem tra.",
+    "exercise.pronounPairs": "Bang 'danh xung theo cap' (tu xung / xung ho / vi du), khong tuong tac, khong dap an. 'intro' = doan gioi thieu (khung vang). 'columns' = 3 tieu de cot {vi,en}. 'rows' = danh sach hang; moi hang co 'self' va 'other' (mang 1-2 item {text, tone: yellow|blue|pink} - 2 item thi chia doi o, mau khac nhau) va 'examples' (mang cau vi du, nen tim).",
+    "noNum": "Them 'noNum': true vao bat ky exercise nao de an so bai (khung tron so) tren tieu de - dung cho noi dung tham khao khong phai bai tap co dem so."
+  },
+  "id": "b1",
+  "num": 1,
+  "title": "Chào bạn, bạn khoẻ không?",
+  "sections": [
     {
-     "id": "bang-chu-cai",
-     "label": "Bảng chữ cái (Alphabet)",
-     "exercises": [
-      {
-       "type": "letters",
-       "instructionVi": "Nghe và lặp lại bảng chữ cái sau.",
-       "instructionEn": "Listen and repeat the following alphabet.",
-       "audio": "audio/b1/{voice}/pron_{key}.mp3",
-       "rows": [
-        [
-         "a",
-         "ă",
-         "â",
-         "b",
-         "c",
-         "d",
-         "đ",
-         "e",
-         "ê"
-        ],
-        [
-         "g",
-         "h",
-         "i",
-         "k",
-         "l",
-         "m",
-         "n",
-         "o",
-         "ô"
-        ],
-        [
-         "ơ",
-         "p",
-         "q",
-         "r",
-         "s",
-         "t",
-         "u",
-         "ư",
-         "v"
-        ],
-        [
-         "x",
-         "y"
-        ]
-       ]
-      },
-      {
-       "type": "sounds",
-       "instructionVi": "Nghe và lặp lại các vần sau.",
-       "instructionEn": "Listen and repeat the following sounds.",
-       "columns": [
-        [
-         {
-          "tone": "yellow",
-          "rows": [
-           [
-            "a",
-            "ba",
-            "ra"
-           ],
-           [
-            "ă"
-           ],
-           [
-            "â"
-           ]
-          ]
-         },
-         {
-          "tone": "pink",
-          "rows": [
-           [
-            "e",
-            "be",
-            "xe"
-           ],
-           [
-            "ê",
-            "tê",
-            "mê"
-           ],
-           [
-            "i",
-            "đi",
-            "bi"
-           ]
-          ]
-         }
-        ],
-        [
-         {
-          "tone": "blue",
-          "rows": [
-           [
-            "o",
-            "to",
-            "lo"
-           ],
-           [
-            "ô",
-            "cô",
-            "tô"
-           ],
-           [
-            "ơ",
-            "bơ",
-            "mơ"
-           ]
-          ]
-         },
-         {
-          "tone": "violet",
-          "rows": [
-           [
-            "u",
-            "xu",
-            "vu"
-           ],
-           [
-            "ư",
-            "tư",
-            "dư"
-           ],
-           [
-            "y",
-            "ly"
-           ]
-          ]
-         }
-        ]
-       ],
-       "audio": "audio/b1/{voice}/pron_{key}.mp3"
-      },
-      {
-       "type": "listenPick",
-       "instructionVi": "Nghe và khoanh tròn âm đúng.",
-       "instructionEn": "Listen and circle the correct sounds.",
-       "audio": "audio/b1/{voice}/pron_{key}.mp3",
-       "items": [
+      "id": "phat-am",
+      "titleVi": "Phát âm",
+      "titleEn": "Pronunciation",
+      "subtopics": [
         {
-         "options": [
-          "ca",
-          "co",
-          "cô",
-          "cơ"
-         ],
-         "answer": "cô"
+          "id": "bang-chu-cai",
+          "label": "Bảng chữ cái (Alphabet)",
+          "exercises": [
+            {
+              "type": "letters",
+              "instructionVi": "Nghe và lặp lại bảng chữ cái sau.",
+              "instructionEn": "Listen and repeat the following alphabet.",
+              "audio": "audio/b1/{voice}/pron_{key}.mp3",
+              "rows": [
+                [
+                  "a",
+                  "ă",
+                  "â",
+                  "b",
+                  "c",
+                  "d",
+                  "đ",
+                  "e",
+                  "ê"
+                ],
+                [
+                  "g",
+                  "h",
+                  "i",
+                  "k",
+                  "l",
+                  "m",
+                  "n",
+                  "o",
+                  "ô"
+                ],
+                [
+                  "ơ",
+                  "p",
+                  "q",
+                  "r",
+                  "s",
+                  "t",
+                  "u",
+                  "ư",
+                  "v"
+                ],
+                [
+                  "x",
+                  "y"
+                ]
+              ]
+            },
+            {
+              "type": "sounds",
+              "instructionVi": "Nghe và lặp lại các vần sau.",
+              "instructionEn": "Listen and repeat the following sounds.",
+              "columns": [
+                [
+                  {
+                    "tone": "yellow",
+                    "rows": [
+                      [
+                        "a",
+                        "ba",
+                        "ra"
+                      ],
+                      [
+                        "ă"
+                      ],
+                      [
+                        "â"
+                      ]
+                    ]
+                  },
+                  {
+                    "tone": "pink",
+                    "rows": [
+                      [
+                        "e",
+                        "be",
+                        "xe"
+                      ],
+                      [
+                        "ê",
+                        "tê",
+                        "mê"
+                      ],
+                      [
+                        "i",
+                        "đi",
+                        "bi"
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "tone": "blue",
+                    "rows": [
+                      [
+                        "o",
+                        "to",
+                        "lo"
+                      ],
+                      [
+                        "ô",
+                        "cô",
+                        "tô"
+                      ],
+                      [
+                        "ơ",
+                        "bơ",
+                        "mơ"
+                      ]
+                    ]
+                  },
+                  {
+                    "tone": "violet",
+                    "rows": [
+                      [
+                        "u",
+                        "xu",
+                        "vu"
+                      ],
+                      [
+                        "ư",
+                        "tư",
+                        "dư"
+                      ],
+                      [
+                        "y",
+                        "ly"
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "audio": "audio/b1/{voice}/pron_{key}.mp3"
+            },
+            {
+              "type": "listenPick",
+              "instructionVi": "Nghe và khoanh tròn âm đúng.",
+              "instructionEn": "Listen and circle the correct sounds.",
+              "audio": "audio/b1/{voice}/pron_{key}.mp3",
+              "items": [
+                {
+                  "options": [
+                    "ca",
+                    "co",
+                    "cô",
+                    "cơ"
+                  ],
+                  "answer": "cô"
+                },
+                {
+                  "options": [
+                    "be",
+                    "bê",
+                    "bu",
+                    "bư"
+                  ],
+                  "answer": "bê"
+                },
+                {
+                  "options": [
+                    "đi",
+                    "đa",
+                    "đo",
+                    "đô"
+                  ],
+                  "answer": "đi"
+                },
+                {
+                  "options": [
+                    "tu",
+                    "tư",
+                    "tô",
+                    "tơ"
+                  ],
+                  "answer": "tư"
+                },
+                {
+                  "options": [
+                    "lu",
+                    "lư",
+                    "la",
+                    "li"
+                  ],
+                  "answer": "la"
+                }
+              ]
+            }
+          ]
         },
         {
-         "options": [
-          "be",
-          "bê",
-          "bu",
-          "bư"
-         ],
-         "answer": "bê"
-        },
-        {
-         "options": [
-          "đi",
-          "đa",
-          "đo",
-          "đô"
-         ],
-         "answer": "đi"
-        },
-        {
-         "options": [
-          "tu",
-          "tư",
-          "tô",
-          "tơ"
-         ],
-         "answer": "tư"
-        },
-        {
-         "options": [
-          "lu",
-          "lư",
-          "la",
-          "li"
-         ],
-         "answer": "la"
+          "id": "thanh-dieu",
+          "label": "Thanh điệu (Tones)",
+          "exercises": [
+            {
+              "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "blocks": [
+                {
+                  "type": "heading",
+                  "text": "1. Pitches and Formation",
+                  "tone": "purple"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Vietnamese is a tonal language with 6 tones and 5 tone marks."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "There are various ways to translate the name of these tones. The table below combines two approaches; one is the literal translation, and the other is based on the pitches when forming the tone:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Literal Translation and Pitch Contours of Vietnamese Tones"
+                },
+                {
+                  "type": "table",
+                  "columns": [
+                    "Vietnamese tone",
+                    "Literal translation",
+                    "Pitch contour / formation"
+                  ],
+                  "rows": [
+                    [
+                      "Thanh ngang",
+                      "Level tone",
+                      "Mid-level tone"
+                    ],
+                    [
+                      "Thanh sắc",
+                      "Sharp tone",
+                      "High-rising tone"
+                    ],
+                    [
+                      "Thanh huyền",
+                      "Grave tone",
+                      "Low-falling tone"
+                    ],
+                    [
+                      "Thanh hỏi",
+                      "Question tone",
+                      "Low-rising tone"
+                    ],
+                    [
+                      "Thanh ngã",
+                      "Tilde tone / Broken tone",
+                      "Rising-broken tone"
+                    ],
+                    [
+                      "Thanh nặng",
+                      "Heavy tone",
+                      "Low-falling or low-dropping tone"
+                    ]
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "The diagram below shows the pitch level when forming the tones:"
+                },
+                {
+                  "type": "toneChart",
+                  "tones": [
+                    {
+                      "name": "Ngang",
+                      "letter": "a",
+                      "path": "M12 70 L88 70",
+                      "color": "#C6C9FF"
+                    },
+                    {
+                      "name": "Huyền",
+                      "letter": "à",
+                      "path": "M14 70 Q40 70 86 90",
+                      "color": "#FFC6EF"
+                    },
+                    {
+                      "name": "Hỏi",
+                      "letter": "ả",
+                      "path": "M12 88 C26 128 50 128 88 84",
+                      "color": "#E6FFC6"
+                    },
+                    {
+                      "name": "Ngã",
+                      "letter": "ã",
+                      "path": "M12 88 C26 128 50 128 88 84",
+                      "color": "#C6FFF9"
+                    },
+                    {
+                      "name": "Sắc",
+                      "letter": "á",
+                      "path": "M22 72 L78 10",
+                      "color": "#FFC6C7"
+                    },
+                    {
+                      "name": "Nặng",
+                      "letter": "ạ",
+                      "path": "M30 126 L70 136",
+                      "color": "#FFFDC6"
+                    }
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "text": "2. How to write tone marks in a word",
+                  "tone": "purple"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "When writing tone marks in a word, make sure to put them on a vowel, not a consonant:"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "If there is only one vowel, the tone mark is put on that vowel."
+                },
+                {
+                  "type": "wordChips",
+                  "tone": "lav",
+                  "items": [
+                    "Đã",
+                    "Mình",
+                    "Bạn",
+                    "Có",
+                    "Cảm"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "If there are two or three vowels, but no consonant at the end, the tone mark is put on the second to last vowel."
+                },
+                {
+                  "type": "wordChips",
+                  "tone": "lav",
+                  "items": [
+                    "Hòa",
+                    "Kiểu",
+                    "Phải",
+                    "Mỗi",
+                    "Loại"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "If there are two or three vowels, and there is a consonant at the end, the tone mark is put on the last vowel."
+                },
+                {
+                  "type": "wordChips",
+                  "tone": "lav",
+                  "items": [
+                    "Tiếng",
+                    "Việt",
+                    "Nguyễn",
+                    "Quỳnh"
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "text": "3. Importance of Tones and Tone Marks",
+                  "tone": "purple"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "The use of tones is extremely important, as a different tone may cause the word to have an entirely new meaning. For example:"
+                },
+                {
+                  "type": "table",
+                  "columns": [
+                    "Word",
+                    "Meaning"
+                  ],
+                  "rows": [
+                    [
+                      "Ma",
+                      "Ghost"
+                    ],
+                    [
+                      "Mà",
+                      "But"
+                    ],
+                    [
+                      "Má",
+                      "Mother / Cheek"
+                    ],
+                    [
+                      "Mả",
+                      "Grave"
+                    ],
+                    [
+                      "Mã",
+                      "Horse (Chinese origin), Appearance"
+                    ],
+                    [
+                      "Mạ",
+                      "Young rice stalk, Coating"
+                    ]
+                  ],
+                  "sysFont": true
+                }
+              ]
+            },
+            {
+              "type": "tones",
+              "instructionVi": "Nghe và lặp lại các kết hợp có thanh điệu.",
+              "instructionEn": "Listen and repeat combinations with tones.",
+              "audio": "audio/b1/{voice}/pron_{key}.mp3",
+              "rows": [
+                {
+                  "label": "thanh ngang (-)",
+                  "tone": "lav",
+                  "words": [
+                    "ly",
+                    "to",
+                    "đi",
+                    "đi"
+                  ]
+                },
+                {
+                  "label": "thanh sắc (´)",
+                  "tone": "lav",
+                  "words": [
+                    "bố",
+                    "chú",
+                    "cố",
+                    "phí"
+                  ]
+                },
+                {
+                  "label": "thanh huyền (`)",
+                  "tone": "lav",
+                  "words": [
+                    "mà",
+                    "từ",
+                    "là",
+                    "về"
+                  ]
+                },
+                {
+                  "label": "thanh hỏi (ʾ)",
+                  "tone": "pink",
+                  "words": [
+                    "lẻ",
+                    "tủ",
+                    "phở",
+                    "nhỏ"
+                  ]
+                },
+                {
+                  "label": "thanh ngã (~)",
+                  "tone": "pink",
+                  "words": [
+                    "đã",
+                    "cũ",
+                    "sẽ",
+                    "lỡ"
+                  ]
+                },
+                {
+                  "label": "thanh nặng (.)",
+                  "tone": "lav",
+                  "words": [
+                    "mẹ",
+                    "tệ",
+                    "bộ",
+                    "tự"
+                  ]
+                }
+              ],
+              "num": 4
+            },
+            {
+              "type": "fillNames",
+              "instructionVi": "Nghe và hoàn thành các câu bằng tên bạn nghe được.",
+              "instructionEn": "Listen and complete the sentences with the names you hear.",
+              "items": [
+                {
+                  "before": "Chào bạn, mình là ",
+                  "after": ".",
+                  "answers": [
+                    "Chi"
+                  ],
+                  "audio": "audio/b1/{voice}/ex5_01.mp3"
+                },
+                {
+                  "before": "Chào chị, em tên là ",
+                  "after": ".",
+                  "answers": [
+                    "Vi",
+                    "Vy"
+                  ],
+                  "audio": "audio/b1/{voice}/ex5_02.mp3"
+                },
+                {
+                  "before": "Chào em, anh tên là ",
+                  "after": ".",
+                  "answers": [
+                    "Phú"
+                  ],
+                  "audio": "audio/b1/{voice}/ex5_03.mp3"
+                },
+                {
+                  "before": "Chào cô, con tên là ",
+                  "after": ".",
+                  "answers": [
+                    "Thư"
+                  ],
+                  "audio": "audio/b1/{voice}/ex5_04.mp3"
+                },
+                {
+                  "before": "Chào ông, con tên là ",
+                  "after": ".",
+                  "answers": [
+                    "Nga"
+                  ],
+                  "audio": "audio/b1/{voice}/ex5_05.mp3"
+                }
+              ],
+              "num": 5
+            }
+          ]
         }
-       ]
-      }
-     ]
+      ]
     },
     {
-     "id": "thanh-dieu",
-     "label": "Thanh điệu (Tones)",
-     "exercises": [
-      {
-       "type": "grammarNote",
-       "noNum": true,
-       "instructionVi": "",
-       "blocks": [
+      "id": "tu-vung",
+      "titleVi": "Từ vựng",
+      "titleEn": "Vocabulary",
+      "subtopics": [
         {
-         "type": "heading",
-         "text": "1. Pitches and Formation",
-         "tone": "purple"
-        },
-        {
-         "type": "paragraph",
-         "text": "Vietnamese is a tonal language with 6 tones and 5 tone marks."
-        },
-        {
-         "type": "paragraph",
-         "text": "There are various ways to translate the name of these tones. The table below combines two approaches; one is the literal translation, and the other is based on the pitches when forming the tone:"
-        },
-        {
-         "type": "paragraph",
-         "text": "Literal Translation and Pitch Contours of Vietnamese Tones"
-        },
-        {
-         "type": "table",
-         "columns": [
-          "Vietnamese tone",
-          "Literal translation",
-          "Pitch contour / formation"
-         ],
-         "rows": [
-          [
-           "Thanh ngang",
-           "Level tone",
-           "Mid-level tone"
-          ],
-          [
-           "Thanh sắc",
-           "Sharp tone",
-           "High-rising tone"
-          ],
-          [
-           "Thanh huyền",
-           "Grave tone",
-           "Low-falling tone"
-          ],
-          [
-           "Thanh hỏi",
-           "Question tone",
-           "Low-rising tone"
-          ],
-          [
-           "Thanh ngã",
-           "Tilde tone / Broken tone",
-           "Rising-broken tone"
-          ],
-          [
-           "Thanh nặng",
-           "Heavy tone",
-           "Low-falling or low-dropping tone"
+          "id": "nghe-nghiep",
+          "label": "Nghề nghiệp (Jobs)",
+          "exercises": [
+            {
+              "type": "photoVocab",
+              "instructionVi": "Nhìn vào hình và nghe mọi người nói.",
+              "instructionEn": "Look at the photos and listen to the people.",
+              "audio": "audio/b1/{voice}/vocab_ex6.mp3",
+              "items": [
+                {
+                  "img": "images/b1/bai6/ha.jpg",
+                  "caption": "Giáo viên",
+                  "audio": "audio/b1/{voice}/vocab_ex6_ha.mp3"
+                },
+                {
+                  "img": "images/b1/bai6/phu.jpg",
+                  "caption": "Bác sĩ",
+                  "audio": "audio/b1/{voice}/vocab_ex6_phu.mp3"
+                },
+                {
+                  "img": "images/b1/bai6/tu.jpg",
+                  "caption": "Kỹ sư",
+                  "audio": "audio/b1/{voice}/vocab_ex6_tu.mp3"
+                }
+              ],
+              "num": 6
+            },
+            {
+              "type": "photoSentenceFill",
+              "noNum": true,
+              "instructionVi": "Hoàn thành các câu.",
+              "instructionEn": "Complete the sentences.",
+              "items": [
+                {
+                  "img": "images/b1/bai6/ha.jpg",
+                  "name": "Hà",
+                  "en": "Ms. Hà is a teacher.",
+                  "template": "→ Cô Hà là {0}.",
+                  "answers": [
+                    [
+                      "giáo viên"
+                    ]
+                  ]
+                },
+                {
+                  "img": "images/b1/bai6/phu.jpg",
+                  "name": "Phú",
+                  "en": "Mr. Phú is a doctor.",
+                  "template": "→ Anh Phú là {0}.",
+                  "answers": [
+                    [
+                      "bác sĩ"
+                    ]
+                  ]
+                },
+                {
+                  "img": "images/b1/bai6/tu.jpg",
+                  "name": "Tú",
+                  "en": "Tú is an engineer.",
+                  "template": "→ Tú là {0}.",
+                  "answers": [
+                    [
+                      "kỹ sư"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "photoVocab",
+              "instructionVi": "Nhìn vào hình và nghe mọi người nói.",
+              "instructionEn": "Look at the photos and listen to the people.",
+              "audio": "audio/b1/{voice}/vocab_ex6.mp3",
+              "items": [
+                {
+                  "img": "images/b1/bai6/chi.jpg",
+                  "caption": "Công an",
+                  "audio": "audio/b1/{voice}/vocab_ex6_chi.mp3"
+                },
+                {
+                  "img": "images/b1/bai6/an.jpg",
+                  "caption": "Nhân viên văn phòng",
+                  "audio": "audio/b1/{voice}/vocab_ex6_an.mp3"
+                },
+                {
+                  "img": "images/b1/bai6/my.jpg",
+                  "caption": "Ca sĩ",
+                  "audio": "audio/b1/{voice}/vocab_ex6_my.mp3"
+                }
+              ],
+              "noNum": true
+            },
+            {
+              "type": "photoSentenceFill",
+              "noNum": true,
+              "instructionVi": "Hoàn thành các câu.",
+              "instructionEn": "Complete the sentences.",
+              "items": [
+                {
+                  "img": "images/b1/bai6/chi.jpg",
+                  "name": "Chi",
+                  "en": "Ms. Chi is a police officer.",
+                  "template": "→ Chị Chi là {0}.",
+                  "answers": [
+                    [
+                      "công an"
+                    ]
+                  ]
+                },
+                {
+                  "img": "images/b1/bai6/an.jpg",
+                  "name": "An",
+                  "en": "Mr. An is an office staff.",
+                  "template": "→ Anh An là {0}.",
+                  "answers": [
+                    [
+                      "nhân viên văn phòng"
+                    ]
+                  ]
+                },
+                {
+                  "img": "images/b1/bai6/my.jpg",
+                  "name": "My",
+                  "en": "My is a singer.",
+                  "template": "→ My là {0}.",
+                  "answers": [
+                    [
+                      "ca sĩ"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "photoOrder",
+              "num": 7,
+              "instructionVi": "Nghe và đánh số các hình theo thứ tự bạn nghe được.",
+              "instructionEn": "Listen and number the pictures in the order you hear.",
+              "audio": "audio/b1/{voice}/vocab_ex7.mp3",
+              "items": [
+                {
+                  "img": "images/b1/bai7/cong-an.jpg",
+                  "caption": "Chi, công an",
+                  "answer": null
+                },
+                {
+                  "img": "images/b1/bai7/ky-su.jpg",
+                  "caption": "Tú, kỹ sư",
+                  "example": 1
+                },
+                {
+                  "img": "images/b1/bai7/ca-si.jpg",
+                  "caption": "My, ca sĩ",
+                  "answer": null
+                },
+                {
+                  "img": "images/b1/bai7/bac-si.jpg",
+                  "caption": "Phú, bác sĩ",
+                  "answer": null
+                },
+                {
+                  "img": "images/b1/bai7/giao-vien.jpg",
+                  "caption": "Hà, giáo viên.",
+                  "answer": null
+                },
+                {
+                  "img": "images/b1/bai7/nhan-vien-van-phong.jpg",
+                  "caption": "An, nhân viên văn phòng",
+                  "answer": null
+                }
+              ]
+            }
           ]
-         ]
-        },
-        {
-         "type": "paragraph",
-         "text": "The diagram below shows the pitch level when forming the tones:"
-        },
-        {
-         "type": "toneChart",
-         "tones": [
-          {
-           "name": "Ngang",
-           "letter": "a",
-           "path": "M12 70 L88 70",
-           "color": "#C6C9FF"
-          },
-          {
-           "name": "Huyền",
-           "letter": "à",
-           "path": "M14 70 Q40 70 86 90",
-           "color": "#FFC6EF"
-          },
-          {
-           "name": "Hỏi",
-           "letter": "ả",
-           "path": "M12 88 C26 128 50 128 88 84",
-           "color": "#E6FFC6"
-          },
-          {
-           "name": "Ngã",
-           "letter": "ã",
-           "path": "M12 88 C26 128 50 128 88 84",
-           "color": "#C6FFF9"
-          },
-          {
-           "name": "Sắc",
-           "letter": "á",
-           "path": "M22 72 L78 10",
-           "color": "#FFC6C7"
-          },
-          {
-           "name": "Nặng",
-           "letter": "ạ",
-           "path": "M30 126 L70 136",
-           "color": "#FFFDC6"
-          }
-         ]
-        },
-        {
-         "type": "heading",
-         "text": "2. How to write tone marks in a word",
-         "tone": "purple"
-        },
-        {
-         "type": "paragraph",
-         "text": "When writing tone marks in a word, make sure to put them on a vowel, not a consonant:"
-        },
-        {
-         "type": "paragraph",
-         "text": "If there is only one vowel, the tone mark is put on that vowel."
-        },
-        {
-         "type": "wordChips",
-         "tone": "lav",
-         "items": [
-          "Đã",
-          "Mình",
-          "Bạn",
-          "Có",
-          "Cảm"
-         ]
-        },
-        {
-         "type": "paragraph",
-         "text": "If there are two or three vowels, but no consonant at the end, the tone mark is put on the second to last vowel."
-        },
-        {
-         "type": "wordChips",
-         "tone": "lav",
-         "items": [
-          "Hòa",
-          "Kiểu",
-          "Phải",
-          "Mỗi",
-          "Loại"
-         ]
-        },
-        {
-         "type": "paragraph",
-         "text": "If there are two or three vowels, and there is a consonant at the end, the tone mark is put on the last vowel."
-        },
-        {
-         "type": "wordChips",
-         "tone": "lav",
-         "items": [
-          "Tiếng",
-          "Việt",
-          "Nguyễn",
-          "Quỳnh"
-         ]
-        },
-        {
-         "type": "heading",
-         "text": "3. Importance of Tones and Tone Marks",
-         "tone": "purple"
-        },
-        {
-         "type": "paragraph",
-         "text": "The use of tones is extremely important, as a different tone may cause the word to have an entirely new meaning. For example:"
-        },
-        {
-         "type": "table",
-         "columns": [
-          "Word",
-          "Meaning"
-         ],
-         "rows": [
-          [
-           "Ma",
-           "Ghost"
-          ],
-          [
-           "Mà",
-           "But"
-          ],
-          [
-           "Má",
-           "Mother / Cheek"
-          ],
-          [
-           "Mả",
-           "Grave"
-          ],
-          [
-           "Mã",
-           "Horse (Chinese origin), Appearance"
-          ],
-          [
-           "Mạ",
-           "Young rice stalk, Coating"
-          ]
-         ],
-         "sysFont": true
         }
-       ]
-      },
-      {
-       "type": "tones",
-       "instructionVi": "Nghe và lặp lại các kết hợp có thanh điệu.",
-       "instructionEn": "Listen and repeat combinations with tones.",
-       "audio": "audio/b1/{voice}/pron_{key}.mp3",
-       "rows": [
-        {
-         "label": "thanh ngang (-)",
-         "tone": "lav",
-         "words": [
-          "ly",
-          "to",
-          "đi",
-          "đi"
-         ]
-        },
-        {
-         "label": "thanh sắc (´)",
-         "tone": "lav",
-         "words": [
-          "bố",
-          "chú",
-          "cố",
-          "phí"
-         ]
-        },
-        {
-         "label": "thanh huyền (`)",
-         "tone": "lav",
-         "words": [
-          "mà",
-          "từ",
-          "là",
-          "về"
-         ]
-        },
-        {
-         "label": "thanh hỏi (ʾ)",
-         "tone": "pink",
-         "words": [
-          "lẻ",
-          "tủ",
-          "phở",
-          "nhỏ"
-         ]
-        },
-        {
-         "label": "thanh ngã (~)",
-         "tone": "pink",
-         "words": [
-          "đã",
-          "cũ",
-          "sẽ",
-          "lỡ"
-         ]
-        },
-        {
-         "label": "thanh nặng (.)",
-         "tone": "lav",
-         "words": [
-          "mẹ",
-          "tệ",
-          "bộ",
-          "tự"
-         ]
-        }
-       ],
-       "num": 4
-      },
-      {
-       "type": "fillNames",
-       "instructionVi": "Nghe và hoàn thành các câu bằng tên bạn nghe được.",
-       "instructionEn": "Listen and complete the sentences with the names you hear.",
-       "items": [
-        {
-         "before": "Chào bạn, mình là ",
-         "after": ".",
-         "answers": [
-          "Chi"
-         ],
-         "audio": "audio/b1/{voice}/ex5_01.mp3"
-        },
-        {
-         "before": "Chào chị, em tên là ",
-         "after": ".",
-         "answers": [
-          "Vi",
-          "Vy"
-         ],
-         "audio": "audio/b1/{voice}/ex5_02.mp3"
-        },
-        {
-         "before": "Chào em, anh tên là ",
-         "after": ".",
-         "answers": [
-          "Phú"
-         ],
-         "audio": "audio/b1/{voice}/ex5_03.mp3"
-        },
-        {
-         "before": "Chào cô, con tên là ",
-         "after": ".",
-         "answers": [
-          "Thư"
-         ],
-         "audio": "audio/b1/{voice}/ex5_04.mp3"
-        },
-        {
-         "before": "Chào ông, con tên là ",
-         "after": ".",
-         "answers": [
-          "Nga"
-         ],
-         "audio": "audio/b1/{voice}/ex5_05.mp3"
-        }
-       ],
-       "num": 5
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "tu-vung",
-   "titleVi": "Từ vựng",
-   "titleEn": "Vocabulary",
-   "subtopics": [
+      ]
+    },
     {
-     "id": "nghe-nghiep",
-     "label": "Nghề nghiệp (Jobs)",
-     "exercises": [
-      {
-       "type": "photoVocab",
-       "num": 6,
-       "instructionVi": "Nhìn vào hình và nghe mọi người nói.",
-       "instructionEn": "Look at the photos and listen to the people.",
-       "audio": "audio/b1/{voice}/vocab_ex6.mp3",
-       "items": [
+      "id": "nghe",
+      "titleVi": "Nghe",
+      "titleEn": "Listening",
+      "subtopics": [
         {
-         "img": "images/b1/bai6/ha.jpg",
-         "caption": "Hà, giáo viên.",
-         "audio": "audio/b1/{voice}/vocab_ex6_ha.mp3"
-        },
-        {
-         "img": "images/b1/bai6/phu.jpg",
-         "caption": "Phú, bác sĩ",
-         "audio": "audio/b1/{voice}/vocab_ex6_phu.mp3"
-        },
-        {
-         "img": "images/b1/bai6/tu.jpg",
-         "caption": "Tú, kỹ sư",
-         "audio": "audio/b1/{voice}/vocab_ex6_tu.mp3"
-        },
-        {
-         "img": "images/b1/bai6/chi.jpg",
-         "caption": "Chi, công an",
-         "audio": "audio/b1/{voice}/vocab_ex6_chi.mp3"
-        },
-        {
-         "img": "images/b1/bai6/an.jpg",
-         "caption": "An, nhân viên văn phòng",
-         "audio": "audio/b1/{voice}/vocab_ex6_an.mp3"
-        },
-        {
-         "img": "images/b1/bai6/my.jpg",
-         "caption": "My, ca sĩ",
-         "audio": "audio/b1/{voice}/vocab_ex6_my.mp3"
+          "id": "chao-hoi",
+          "label": "Chào hỏi (Greetings)",
+          "exercises": [
+            {
+              "type": "dialogueFill",
+              "num": 8,
+              "instructionVi": "Nghe và hoàn thành câu.",
+              "instructionEn": "Listen and complete the sentence.",
+              "audio": "audio/b1/{voice}/listen_ex8.mp3",
+              "lines": [
+                {
+                  "speaker": "Ann:",
+                  "template": "{0} bạn.",
+                  "answers": [
+                    [
+                      "Chào"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Tú:",
+                  "template": "Chào {0}. Xin lỗi, bạn {1} là gì?",
+                  "answers": [
+                    [
+                      "bạn"
+                    ],
+                    [
+                      "tên"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Ann:",
+                  "template": "{0} tên là Ann.",
+                  "answers": [
+                    [
+                      "Mình"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Tú:",
+                  "template": "Chào Ann. Bạn {0} không?",
+                  "answers": [
+                    [
+                      "khoẻ",
+                      "khỏe"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Ann:",
+                  "template": "Mình {0}. Bạn {1} là gì?",
+                  "answers": [
+                    [
+                      "khoẻ",
+                      "khỏe"
+                    ],
+                    [
+                      "tên"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Tú:",
+                  "template": "{0} tên {1} Tú.",
+                  "answers": [
+                    [
+                      "Mình"
+                    ],
+                    [
+                      "là"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Ann:",
+                  "template": "Tứ?",
+                  "answers": []
+                },
+                {
+                  "speaker": "Tú:",
+                  "template": "Không, Tú.",
+                  "answers": []
+                },
+                {
+                  "speaker": "Ann:",
+                  "template": "À, {0} {1} bạn.",
+                  "answers": [
+                    [
+                      "xin"
+                    ],
+                    [
+                      "lỗi"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Tú:",
+                  "template": "Không sao.",
+                  "answers": []
+                }
+              ]
+            },
+            {
+              "type": "audioChoice",
+              "num": 9,
+              "instructionVi": "Nghe và chọn câu trả lời đúng.",
+              "instructionEn": "Listen and choose the correct answer.",
+              "audio": "audio/b1/{voice}/listen_ex9.mp3",
+              "items": [
+                {
+                  "audio": "audio/b1/{voice}/listen_ex9_01.mp3",
+                  "options": [
+                    "Anh làm giáo viên.",
+                    "Anh làm nhân viên."
+                  ],
+                  "answer": "a"
+                },
+                {
+                  "audio": "audio/b1/{voice}/listen_ex9_02.mp3",
+                  "options": [
+                    "Chị Lâm làm bác sĩ.",
+                    "Chị Lan làm kỹ sư."
+                  ],
+                  "answer": "a"
+                },
+                {
+                  "audio": "audio/b1/{voice}/listen_ex9_03.mp3",
+                  "options": [
+                    "Em làm công an.",
+                    "Em làm nhân viên."
+                  ],
+                  "answer": "b"
+                },
+                {
+                  "audio": "audio/b1/{voice}/listen_ex9_04.mp3",
+                  "options": [
+                    "Chú Nam làm bác sĩ.",
+                    "Chú Nam làm ca sĩ."
+                  ],
+                  "answer": "b"
+                },
+                {
+                  "audio": "audio/b1/{voice}/listen_ex9_05.mp3",
+                  "options": [
+                    "Mẹ của mình làm giáo viên.",
+                    "Mẹ của mình làm kỹ sư."
+                  ],
+                  "answer": "b"
+                }
+              ]
+            }
+          ]
         }
-       ]
-      },
-      {
-       "type": "photoOrder",
-       "num": 7,
-       "instructionVi": "Nghe và đánh số các hình theo thứ tự bạn nghe được.",
-       "instructionEn": "Listen and number the pictures in the order you hear.",
-       "audio": "audio/b1/{voice}/vocab_ex7.mp3",
-       "items": [
-        {
-         "img": "images/b1/bai7/cong-an.jpg",
-         "caption": "Chi, công an",
-         "answer": null
-        },
-        {
-         "img": "images/b1/bai7/ky-su.jpg",
-         "caption": "Tú, kỹ sư",
-         "example": 1
-        },
-        {
-         "img": "images/b1/bai7/ca-si.jpg",
-         "caption": "My, ca sĩ",
-         "answer": null
-        },
-        {
-         "img": "images/b1/bai7/bac-si.jpg",
-         "caption": "Phú, bác sĩ",
-         "answer": null
-        },
-        {
-         "img": "images/b1/bai7/giao-vien.jpg",
-         "caption": "Hà, giáo viên.",
-         "answer": null
-        },
-        {
-         "img": "images/b1/bai7/nhan-vien-van-phong.jpg",
-         "caption": "An, nhân viên văn phòng",
-         "answer": null
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "nghe",
-   "titleVi": "Nghe",
-   "titleEn": "Listening",
-   "subtopics": [
+      ]
+    },
     {
-     "id": "chao-hoi",
-     "label": "Chào hỏi (Greetings)",
-     "exercises": [
-      {
-       "type": "dialogueFill",
-       "num": 8,
-       "instructionVi": "Nghe và hoàn thành câu.",
-       "instructionEn": "Listen and complete the sentence.",
-       "audio": "audio/b1/{voice}/listen_ex8.mp3",
-       "lines": [
+      "id": "ngu-phap",
+      "titleVi": "Ngữ pháp",
+      "titleEn": "Grammar",
+      "subtopics": [
         {
-         "speaker": "Ann:",
-         "template": "{0} bạn.",
-         "answers": [
-          [
-           "Chào"
+          "id": "danh-xung",
+          "label": "Danh xưng (Pronouns)",
+          "exercises": [
+            {
+              "type": "pronounPairs",
+              "noNum": true,
+              "instructionVi": "",
+              "intro": {
+                "vi": "Danh xưng tiếng Việt đi theo cặp. Từ xưng hô thay đổi tùy theo bạn đang nói chuyện với ai.",
+                "en": "Vietnamese address terms come in pairs. Pronouns change depending on the gender and age of whom you're speaking with."
+              },
+              "columns": [
+                {
+                  "vi": "tự xưng",
+                  "en": "self-reference"
+                },
+                {
+                  "vi": "xưng hô",
+                  "en": "term of address"
+                },
+                {
+                  "vi": "ví dụ",
+                  "en": "example"
+                }
+              ],
+              "rows": [
+                {
+                  "self": [
+                    {
+                      "text": "mình",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "bạn",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "examples": [
+                    "Bạn tên là gì?",
+                    "Mình tên là Minh."
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "em",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "anh",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "chị",
+                      "tone": "pink"
+                    }
+                  ],
+                  "examples": [
+                    "Chào anh. Em là Nhi.",
+                    "Em tên là Hà. Còn chị?"
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "anh",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "chị",
+                      "tone": "pink"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "em",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "examples": [
+                    "Anh khoẻ, cám ơn em.",
+                    "Chào em, anh là Nam."
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "con",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "chú",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "cô",
+                      "tone": "pink"
+                    }
+                  ],
+                  "examples": [
+                    "Chào cô. Con tên là Vy.",
+                    "Con khoẻ. Còn chú?"
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "chú",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "cô",
+                      "tone": "pink"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "con",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "examples": [
+                    "Cảm ơn con. Cô khoẻ.",
+                    "Chào con. Chú tên là Tân."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "dialogueFill",
+              "num": 10,
+              "instructionVi": "Hoàn thành các câu bằng đại từ thích hợp.",
+              "instructionEn": "Complete the sentences with the appropriate pronoun.",
+              "lines": [
+                {
+                  "speaker": "1  A:",
+                  "template": "Chào anh.",
+                  "answers": []
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Chào {0}.",
+                  "answers": [
+                    [
+                      "em"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "2  A:",
+                  "template": "{0} tên là gì?",
+                  "answers": [
+                    [
+                      "Bạn"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Mình tên là Bình.",
+                  "answers": []
+                },
+                {
+                  "speaker": "3  A:",
+                  "template": "{0} tên là gì?",
+                  "answers": [
+                    [
+                      "Bạn"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Mình tên là Bình.",
+                  "answers": []
+                },
+                {
+                  "speaker": "4  A:",
+                  "template": "{0} có khoẻ không?",
+                  "answers": [
+                    [
+                      "Cô"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Cô khoẻ, cám ơn {0}.",
+                  "answers": [
+                    [
+                      "con"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "5  A:",
+                  "template": "{0} tên là Linh. Còn chị?",
+                  "answers": [
+                    [
+                      "Em"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "{0} tên là Phương.",
+                  "answers": [
+                    [
+                      "Chị"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "wordBankFill",
+              "num": 11,
+              "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng thích hợp.",
+              "instructionEn": "Introduce the people below using the appropriate pronouns.",
+              "words": [
+                "anh",
+                "chị",
+                "cô",
+                "chú"
+              ],
+              "items": [
+                {
+                  "img": "images/b1/bai11/ha.jpg",
+                  "name": "Hà",
+                  "template": "{0}",
+                  "answers": "chị"
+                },
+                {
+                  "img": "images/b1/bai11/binh.jpg",
+                  "name": "Bình",
+                  "template": "{0}",
+                  "answers": "chú"
+                },
+                {
+                  "img": "images/b1/bai11/minh.jpg",
+                  "name": "Minh",
+                  "template": "{0}",
+                  "answers": "anh"
+                },
+                {
+                  "img": "images/b1/bai11/lien.jpg",
+                  "name": "Liên",
+                  "template": "{0}",
+                  "answers": "cô"
+                }
+              ]
+            }
           ]
-         ]
-        },
-        {
-         "speaker": "Tú:",
-         "template": "Chào {0}. Xin lỗi, bạn {1} là gì?",
-         "answers": [
-          [
-           "bạn"
-          ],
-          [
-           "tên"
-          ]
-         ]
-        },
-        {
-         "speaker": "Ann:",
-         "template": "{0} tên là Ann.",
-         "answers": [
-          [
-           "Mình"
-          ]
-         ]
-        },
-        {
-         "speaker": "Tú:",
-         "template": "Chào Ann. Bạn {0} không?",
-         "answers": [
-          [
-           "khoẻ",
-           "khỏe"
-          ]
-         ]
-        },
-        {
-         "speaker": "Ann:",
-         "template": "Mình {0}. Bạn {1} là gì?",
-         "answers": [
-          [
-           "khoẻ",
-           "khỏe"
-          ],
-          [
-           "tên"
-          ]
-         ]
-        },
-        {
-         "speaker": "Tú:",
-         "template": "{0} tên {1} Tú.",
-         "answers": [
-          [
-           "Mình"
-          ],
-          [
-           "là"
-          ]
-         ]
-        },
-        {
-         "speaker": "Ann:",
-         "template": "Tứ?",
-         "answers": []
-        },
-        {
-         "speaker": "Tú:",
-         "template": "Không, Tú.",
-         "answers": []
-        },
-        {
-         "speaker": "Ann:",
-         "template": "À, {0} {1} bạn.",
-         "answers": [
-          [
-           "xin"
-          ],
-          [
-           "lỗi"
-          ]
-         ]
-        },
-        {
-         "speaker": "Tú:",
-         "template": "Không sao.",
-         "answers": []
         }
-       ]
-      },
-      {
-       "type": "audioChoice",
-       "num": 9,
-       "instructionVi": "Nghe và chọn câu trả lời đúng.",
-       "instructionEn": "Listen and choose the correct answer.",
-       "audio": "audio/b1/{voice}/listen_ex9.mp3",
-       "items": [
-        {
-         "audio": "audio/b1/{voice}/listen_ex9_01.mp3",
-         "options": [
-          "Anh làm giáo viên.",
-          "Anh làm nhân viên."
-         ],
-         "answer": "a"
-        },
-        {
-         "audio": "audio/b1/{voice}/listen_ex9_02.mp3",
-         "options": [
-          "Chị Lâm làm bác sĩ.",
-          "Chị Lan làm kỹ sư."
-         ],
-         "answer": "a"
-        },
-        {
-         "audio": "audio/b1/{voice}/listen_ex9_03.mp3",
-         "options": [
-          "Em làm công an.",
-          "Em làm nhân viên."
-         ],
-         "answer": "b"
-        },
-        {
-         "audio": "audio/b1/{voice}/listen_ex9_04.mp3",
-         "options": [
-          "Chú Nam làm bác sĩ.",
-          "Chú Nam làm ca sĩ."
-         ],
-         "answer": "b"
-        },
-        {
-         "audio": "audio/b1/{voice}/listen_ex9_05.mp3",
-         "options": [
-          "Mẹ của mình làm giáo viên.",
-          "Mẹ của mình làm kỹ sư."
-         ],
-         "answer": "b"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "ngu-phap",
-   "titleVi": "Ngữ pháp",
-   "titleEn": "Grammar",
-   "subtopics": [
+      ]
+    },
     {
-     "id": "danh-xung",
-     "label": "Danh xưng (Pronouns)",
-     "exercises": [
-      {
-       "type": "pronounPairs",
-       "noNum": true,
-       "instructionVi": "",
-       "intro": {
-        "vi": "Danh xưng tiếng Việt đi theo cặp. Từ xưng hô thay đổi tùy theo bạn đang nói chuyện với ai.",
-        "en": "Vietnamese address terms come in pairs. Pronouns change depending on the gender and age of whom you're speaking with."
-       },
-       "columns": [
+      "id": "doc",
+      "titleVi": "Đọc",
+      "titleEn": "Reading",
+      "subtopics": [
         {
-         "vi": "tự xưng",
-         "en": "self-reference"
-        },
-        {
-         "vi": "xưng hô",
-         "en": "term of address"
-        },
-        {
-         "vi": "ví dụ",
-         "en": "example"
+          "id": "chao-hoi",
+          "label": "Chào hỏi (Greetings)",
+          "exercises": [
+            {
+              "type": "readingQA",
+              "num": 12,
+              "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
+              "instructionEn": "Read the following paragraph and answer the questions.",
+              "passage": "Hôm nay Tú gặp Ann và bạn của Ann. Tú chào Ann và hỏi tên bạn của Ann. Bạn của Ann tên là Mike.",
+              "questions": [
+                {
+                  "q": "Hôm nay Tú gặp ai?",
+                  "a": "Hôm nay Tú gặp Ann và bạn của Ann."
+                },
+                {
+                  "q": "Tú hỏi tên bạn của ai?",
+                  "a": "Tú hỏi tên bạn của Ann."
+                },
+                {
+                  "q": "Bạn của Ann tên là gì?",
+                  "a": "Bạn của Ann tên là Mike."
+                }
+              ]
+            }
+          ]
         }
-       ],
-       "rows": [
-        {
-         "self": [
-          {
-           "text": "mình",
-           "tone": "yellow"
-          }
-         ],
-         "other": [
-          {
-           "text": "bạn",
-           "tone": "yellow"
-          }
-         ],
-         "examples": [
-          "Bạn tên là gì?",
-          "Mình tên là Minh."
-         ]
-        },
-        {
-         "self": [
-          {
-           "text": "em",
-           "tone": "yellow"
-          }
-         ],
-         "other": [
-          {
-           "text": "anh",
-           "tone": "blue"
-          },
-          {
-           "text": "chị",
-           "tone": "pink"
-          }
-         ],
-         "examples": [
-          "Chào anh. Em là Nhi.",
-          "Em tên là Hà. Còn chị?"
-         ]
-        },
-        {
-         "self": [
-          {
-           "text": "anh",
-           "tone": "blue"
-          },
-          {
-           "text": "chị",
-           "tone": "pink"
-          }
-         ],
-         "other": [
-          {
-           "text": "em",
-           "tone": "yellow"
-          }
-         ],
-         "examples": [
-          "Anh khoẻ, cám ơn em.",
-          "Chào em, anh là Nam."
-         ]
-        },
-        {
-         "self": [
-          {
-           "text": "con",
-           "tone": "yellow"
-          }
-         ],
-         "other": [
-          {
-           "text": "chú",
-           "tone": "blue"
-          },
-          {
-           "text": "cô",
-           "tone": "pink"
-          }
-         ],
-         "examples": [
-          "Chào cô. Con tên là Vy.",
-          "Con khoẻ. Còn chú?"
-         ]
-        },
-        {
-         "self": [
-          {
-           "text": "chú",
-           "tone": "blue"
-          },
-          {
-           "text": "cô",
-           "tone": "pink"
-          }
-         ],
-         "other": [
-          {
-           "text": "con",
-           "tone": "yellow"
-          }
-         ],
-         "examples": [
-          "Cảm ơn con. Cô khoẻ.",
-          "Chào con. Chú tên là Tân."
-         ]
-        }
-       ]
-      },
-      {
-       "type": "dialogueFill",
-       "num": 10,
-       "instructionVi": "Hoàn thành các câu bằng đại từ thích hợp.",
-       "instructionEn": "Complete the sentences with the appropriate pronoun.",
-       "lines": [
-        {
-         "speaker": "1  A:",
-         "template": "Chào anh.",
-         "answers": []
-        },
-        {
-         "speaker": "   B:",
-         "template": "Chào {0}.",
-         "answers": [
-          [
-           "em"
-          ]
-         ]
-        },
-        {
-         "speaker": "2  A:",
-         "template": "{0} tên là gì?",
-         "answers": [
-          [
-           "Bạn"
-          ]
-         ]
-        },
-        {
-         "speaker": "   B:",
-         "template": "Mình tên là Bình.",
-         "answers": []
-        },
-        {
-         "speaker": "3  A:",
-         "template": "{0} tên là gì?",
-         "answers": [
-          [
-           "Bạn"
-          ]
-         ]
-        },
-        {
-         "speaker": "   B:",
-         "template": "Mình tên là Bình.",
-         "answers": []
-        },
-        {
-         "speaker": "4  A:",
-         "template": "{0} có khoẻ không?",
-         "answers": [
-          [
-           "Cô"
-          ]
-         ]
-        },
-        {
-         "speaker": "   B:",
-         "template": "Cô khoẻ, cám ơn {0}.",
-         "answers": [
-          [
-           "con"
-          ]
-         ]
-        },
-        {
-         "speaker": "5  A:",
-         "template": "{0} tên là Linh. Còn chị?",
-         "answers": [
-          [
-           "Em"
-          ]
-         ]
-        },
-        {
-         "speaker": "   B:",
-         "template": "{0} tên là Phương.",
-         "answers": [
-          [
-           "Chị"
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "type": "wordBankFill",
-       "num": 11,
-       "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng thích hợp.",
-       "instructionEn": "Introduce the people below using the appropriate pronouns.",
-       "words": [
-        "anh",
-        "chị",
-        "cô",
-        "chú"
-       ],
-       "items": [
-        {
-         "img": "images/b1/bai11/ha.jpg",
-         "name": "Hà",
-         "template": "{0}",
-         "answers": "chị"
-        },
-        {
-         "img": "images/b1/bai11/binh.jpg",
-         "name": "Bình",
-         "template": "{0}",
-         "answers": "chú"
-        },
-        {
-         "img": "images/b1/bai11/minh.jpg",
-         "name": "Minh",
-         "template": "{0}",
-         "answers": "anh"
-        },
-        {
-         "img": "images/b1/bai11/lien.jpg",
-         "name": "Liên",
-         "template": "{0}",
-         "answers": "cô"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "doc",
-   "titleVi": "Đọc",
-   "titleEn": "Reading",
-   "subtopics": [
+      ]
+    },
     {
-     "id": "chao-hoi",
-     "label": "Chào hỏi (Greetings)",
-     "exercises": [
-      {
-       "type": "readingQA",
-       "num": 12,
-       "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
-       "instructionEn": "Read the following paragraph and answer the questions.",
-       "passage": "Hôm nay Tú gặp Ann và bạn của Ann. Tú chào Ann và hỏi tên bạn của Ann. Bạn của Ann tên là Mike.",
-       "questions": [
+      "id": "viet",
+      "titleVi": "Viết",
+      "titleEn": "Writing",
+      "subtopics": [
         {
-         "q": "Hôm nay Tú gặp ai?",
-         "a": "Hôm nay Tú gặp Ann và bạn của Ann."
-        },
-        {
-         "q": "Tú hỏi tên bạn của ai?",
-         "a": "Tú hỏi tên bạn của Ann."
-        },
-        {
-         "q": "Bạn của Ann tên là gì?",
-         "a": "Bạn của Ann tên là Mike."
+          "id": "danh-xung",
+          "label": "Danh xưng (Pronouns)",
+          "exercises": [
+            {
+              "type": "chooseWord",
+              "num": 13,
+              "instructionVi": "Chọn từ đúng.",
+              "instructionEn": "Choose the correct words.",
+              "items": [
+                {
+                  "template": "Chào {0}.",
+                  "blanks": [
+                    {
+                      "options": [
+                        "chi",
+                        "chị"
+                      ],
+                      "answer": "chị"
+                    }
+                  ]
+                },
+                {
+                  "template": "Chào anh, anh {0} là gì?",
+                  "blanks": [
+                    {
+                      "options": [
+                        "ten",
+                        "tên"
+                      ],
+                      "answer": "tên"
+                    }
+                  ]
+                },
+                {
+                  "template": "Bạn có {0} không?",
+                  "blanks": [
+                    {
+                      "options": [
+                        "khoé",
+                        "khoẻ"
+                      ],
+                      "answer": "khoẻ"
+                    }
+                  ]
+                },
+                {
+                  "template": "Xin {0}, cô là Mai đúng không?",
+                  "blanks": [
+                    {
+                      "options": [
+                        "lỗi",
+                        "lổi"
+                      ],
+                      "answer": "lỗi"
+                    }
+                  ]
+                },
+                {
+                  "template": "Đây là {0} Bình.",
+                  "blanks": [
+                    {
+                      "options": [
+                        "chủ",
+                        "chú"
+                      ],
+                      "answer": "chú"
+                    }
+                  ]
+                },
+                {
+                  "template": "Bà {0}, {1} ơn con.",
+                  "blanks": [
+                    {
+                      "options": [
+                        "khoé",
+                        "khoẻ"
+                      ],
+                      "answer": "khoẻ"
+                    },
+                    {
+                      "options": [
+                        "cạm",
+                        "cám"
+                      ],
+                      "answer": "cám"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "dialogueFill",
+              "num": 14,
+              "instructionVi": "Hoàn thành đoạn hội thoại sau.",
+              "instructionEn": "Complete the following dialogue.",
+              "lines": [
+                {
+                  "speaker": "Nam:",
+                  "template": "Chào bạn.",
+                  "answers": []
+                },
+                {
+                  "speaker": "Hoa:",
+                  "template": "Chào bạn. Xin lỗi, bạn tên là {0}?",
+                  "answers": [
+                    [
+                      "gì"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Nam:",
+                  "template": "{0} tên là Nam. Còn {1} tên là {2}?",
+                  "answers": [
+                    [
+                      "Mình"
+                    ],
+                    [
+                      "bạn"
+                    ],
+                    [
+                      "gì"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Hoa:",
+                  "template": "{0} tên là Hoa.",
+                  "answers": [
+                    [
+                      "Mình"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Nam:",
+                  "template": "{0} có khoẻ không?",
+                  "answers": [
+                    [
+                      "Bạn"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "Hoa:",
+                  "template": "{0}, {1}.",
+                  "answers": [
+                    [
+                      "Khoẻ",
+                      "Khỏe"
+                    ],
+                    [
+                      "cám ơn",
+                      "cảm ơn"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "viet",
-   "titleVi": "Viết",
-   "titleEn": "Writing",
-   "subtopics": [
+      ]
+    },
     {
-     "id": "danh-xung",
-     "label": "Danh xưng (Pronouns)",
-     "exercises": [
-      {
-       "type": "chooseWord",
-       "num": 13,
-       "instructionVi": "Chọn từ đúng.",
-       "instructionEn": "Choose the correct words.",
-       "items": [
+      "id": "noi",
+      "titleVi": "Nói",
+      "titleEn": "Speaking",
+      "subtopics": [
         {
-         "template": "Chào {0}.",
-         "blanks": [
-          {
-           "options": [
-            "chi",
-            "chị"
-           ],
-           "answer": "chị"
-          }
-         ]
-        },
-        {
-         "template": "Chào anh, anh {0} là gì?",
-         "blanks": [
-          {
-           "options": [
-            "ten",
-            "tên"
-           ],
-           "answer": "tên"
-          }
-         ]
-        },
-        {
-         "template": "Bạn có {0} không?",
-         "blanks": [
-          {
-           "options": [
-            "khoé",
-            "khoẻ"
-           ],
-           "answer": "khoẻ"
-          }
-         ]
-        },
-        {
-         "template": "Xin {0}, cô là Mai đúng không?",
-         "blanks": [
-          {
-           "options": [
-            "lỗi",
-            "lổi"
-           ],
-           "answer": "lỗi"
-          }
-         ]
-        },
-        {
-         "template": "Đây là {0} Bình.",
-         "blanks": [
-          {
-           "options": [
-            "chủ",
-            "chú"
-           ],
-           "answer": "chú"
-          }
-         ]
-        },
-        {
-         "template": "Bà {0}, {1} ơn con.",
-         "blanks": [
-          {
-           "options": [
-            "khoé",
-            "khoẻ"
-           ],
-           "answer": "khoẻ"
-          },
-          {
-           "options": [
-            "cạm",
-            "cám"
-           ],
-           "answer": "cám"
-          }
-         ]
+          "id": "chao-hoi",
+          "label": "Chào hỏi (Greetings)",
+          "exercises": [
+            {
+              "type": "openIntro",
+              "num": 15,
+              "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng và nghề nghiệp thích hợp.",
+              "instructionEn": "Introduce the people below using the appropriate pronouns and jobs.",
+              "items": [
+                {
+                  "img": "images/b1/bai12/giang.jpg",
+                  "name": "Giang",
+                  "example": "Đây là chị Giang. Chị Giang làm bác sĩ."
+                },
+                {
+                  "img": "images/b1/bai12/mai.jpg",
+                  "name": "Mai"
+                },
+                {
+                  "img": "images/b1/bai12/chi.jpg",
+                  "name": "Chi"
+                },
+                {
+                  "img": "images/b1/bai12/sang.jpg",
+                  "name": "Sang"
+                },
+                {
+                  "img": "images/b1/bai12/hai.jpg",
+                  "name": "Hải"
+                },
+                {
+                  "img": "images/b1/bai12/thu.jpg",
+                  "name": "Thu"
+                }
+              ]
+            }
+          ]
         }
-       ]
-      },
-      {
-       "type": "dialogueFill",
-       "num": 14,
-       "instructionVi": "Hoàn thành đoạn hội thoại sau.",
-       "instructionEn": "Complete the following dialogue.",
-       "lines": [
-        {
-         "speaker": "Nam:",
-         "template": "Chào bạn.",
-         "answers": []
-        },
-        {
-         "speaker": "Hoa:",
-         "template": "Chào bạn. Xin lỗi, bạn tên là {0}?",
-         "answers": [
-          [
-           "gì"
-          ]
-         ]
-        },
-        {
-         "speaker": "Nam:",
-         "template": "{0} tên là Nam. Còn {1} tên là {2}?",
-         "answers": [
-          [
-           "Mình"
-          ],
-          [
-           "bạn"
-          ],
-          [
-           "gì"
-          ]
-         ]
-        },
-        {
-         "speaker": "Hoa:",
-         "template": "{0} tên là Hoa.",
-         "answers": [
-          [
-           "Mình"
-          ]
-         ]
-        },
-        {
-         "speaker": "Nam:",
-         "template": "{0} có khoẻ không?",
-         "answers": [
-          [
-           "Bạn"
-          ]
-         ]
-        },
-        {
-         "speaker": "Hoa:",
-         "template": "{0}, {1}.",
-         "answers": [
-          [
-           "Khoẻ",
-           "Khỏe"
-          ],
-          [
-           "cám ơn",
-           "cảm ơn"
-          ]
-         ]
-        }
-       ]
-      }
-     ]
+      ]
     }
-   ]
-  },
-  {
-   "id": "noi",
-   "titleVi": "Nói",
-   "titleEn": "Speaking",
-   "subtopics": [
-    {
-     "id": "chao-hoi",
-     "label": "Chào hỏi (Greetings)",
-     "exercises": [
-      {
-       "type": "openIntro",
-       "num": 15,
-       "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng và nghề nghiệp thích hợp.",
-       "instructionEn": "Introduce the people below using the appropriate pronouns and jobs.",
-       "items": [
-        {
-         "img": "images/b1/bai12/giang.jpg",
-         "name": "Giang",
-         "example": "Đây là chị Giang. Chị Giang làm bác sĩ."
-        },
-        {
-         "img": "images/b1/bai12/mai.jpg",
-         "name": "Mai"
-        },
-        {
-         "img": "images/b1/bai12/chi.jpg",
-         "name": "Chi"
-        },
-        {
-         "img": "images/b1/bai12/sang.jpg",
-         "name": "Sang"
-        },
-        {
-         "img": "images/b1/bai12/hai.jpg",
-         "name": "Hải"
-        },
-        {
-         "img": "images/b1/bai12/thu.jpg",
-         "name": "Thu"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  }
- ]
+  ]
 }
