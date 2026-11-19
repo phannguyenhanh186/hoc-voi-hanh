@@ -1,7 +1,7 @@
 {
  "_guide": {
   "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b2&level=mam. App bo qua key bat dau bang '_'.",
-  "status": "Thu tu section: phat-am (Bai 1-4: van cuoi n/m), tu-vung (Bai 5-8: 4 nhom hinh, moi nhom gom trang hinh + trang kiem tra; Bai 9: photoFill nghe va dien), ngu-phap (Bai 10-11, ghi chu 'Thich - Like' va 'Gi - What' khong danh so), nghe (Bai 12: dung/sai, Bai 13: chon cau dung), doc (Bai 14), viet (Bai 15-16), noi (Bai 17).",
+  "status": "Thu tu section: phat-am (Bai 1-4), tu-vung (Bai 5-8: 4 nhom hinh; Bai 9: photoFill), ngu-phap (muc Thich: 4 trang ghi chu xen 4 trang viet = Bai 10 [Thich + noun, Thich an, Thich uong, Khong thich]; Bai 11: hoan thanh cau hoi; Bai 12: bang; muc Gi: ghi chu), nghe (Bai 13-14), doc (Bai 15), viet (Bai 16-17), noi (Bai 18).",
   "exercise.grammarNote": "Ghi chu ngu phap song ngu, khong tuong tac (khong co dap an/audio). 'title' = tieu de lon. 'blocks' la mang cac khoi, moi khoi co 'type': 'paragraph' (doan van vi/en), 'heading' (tieu de nho vi/en), 'structure' (cong thuc vi/en, hien khung vang giong .grammar-callout co san), 'examples' (danh sach vi du dang an/hien - bam nut de mo, giong makeToggleSection cua grammar.html; moi item la {vi, en} - 'en' co the bo trong).",
   "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong (null).",
   "exercise.repeatSentences": "Nghe va lap lai ca cau (khong co cho trong). Moi item: 'text' (cau hien thi) + 'audio' (rieng, hoac dung chung ex.audio).",
@@ -746,9 +746,9 @@
      "exercises": [
       {
        "type": "grammarNote",
+       "title": "THÍCH – LIKE",
        "noNum": true,
        "instructionVi": "",
-       "title": "THÍCH – LIKE",
        "blocks": [
         {
          "type": "paragraph",
@@ -804,7 +804,62 @@
            "vi": "Chú Bình {{thích::pink}} cà phê."
           }
          ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 10,
+       "instructionVi": "Viết các câu sau bằng tiếng Việt.",
+       "instructionEn": "Write the following sentences in Vietnamese.",
+       "items": [
+        {
+         "question": "I like soup.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích canh",
+          "thích canh"
+         ],
+         "model": "{p} thích canh"
         },
+        {
+         "question": "I like black coffee.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích cà phê đen",
+          "thích cà phê đen"
+         ],
+         "model": "{p} thích cà phê đen"
+        },
+        {
+         "question": "Hương likes beef rice noodles.",
+         "answers": [
+          "Hương thích bún bò",
+          "Hương thích ăn bún bò"
+         ],
+         "model": "Hương thích bún bò"
+        }
+       ]
+      },
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "blocks": [
         {
          "type": "heading",
          "vi": "2. Thích ăn + Đồ ăn",
@@ -846,7 +901,104 @@
          "type": "paragraph",
          "vi": "Cả “Mình thích phở” và “Mình thích ăn phở” đều tự nhiên. Câu đầu tập trung vào món ăn; câu sau nhấn mạnh việc ăn món đó.",
          "en": "Both “Mình thích phở” and “Mình thích ăn phở” are natural. The first focuses on the food; the second focuses on the activity of eating."
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 10,
+       "instructionVi": "Viết các câu sau bằng tiếng Việt.",
+       "instructionEn": "Write the following sentences in Vietnamese.",
+       "items": [
+        {
+         "question": "I like eating fruits.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích ăn trái cây",
+          "thích ăn trái cây"
+         ],
+         "model": "{p} thích ăn trái cây"
         },
+        {
+         "question": "I like eating beef.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích ăn thịt bò",
+          "thích ăn thịt bò"
+         ],
+         "model": "{p} thích ăn thịt bò"
+        },
+        {
+         "question": "I like eating chicken.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích ăn thịt gà",
+          "thích ăn thịt gà"
+         ],
+         "model": "{p} thích ăn thịt gà"
+        },
+        {
+         "question": "I like eating beef rice.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích ăn cơm bò",
+          "thích ăn cơm bò",
+          "{p} thích ăn cơm thịt bò",
+          "thích ăn cơm thịt bò"
+         ],
+         "model": "{p} thích ăn cơm bò"
+        },
+        {
+         "question": "I like eating vegetable soup.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích ăn canh rau",
+          "thích ăn canh rau"
+         ],
+         "model": "{p} thích ăn canh rau"
+        }
+       ]
+      },
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "blocks": [
         {
          "type": "heading",
          "vi": "3. Thích uống + Đồ uống",
@@ -883,7 +1035,102 @@
            "en": "I like to drink tea. / I like tea."
           }
          ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 10,
+       "instructionVi": "Viết các câu sau bằng tiếng Việt.",
+       "instructionEn": "Write the following sentences in Vietnamese.",
+       "items": [
+        {
+         "question": "I like drinking tea.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích uống trà",
+          "thích uống trà"
+         ],
+         "model": "{p} thích uống trà"
         },
+        {
+         "question": "I like drinking black coffee.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích uống cà phê đen",
+          "thích uống cà phê đen"
+         ],
+         "model": "{p} thích uống cà phê đen"
+        },
+        {
+         "question": "I like drinking milk coffee.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích uống cà phê sữa",
+          "thích uống cà phê sữa"
+         ],
+         "model": "{p} thích uống cà phê sữa"
+        },
+        {
+         "question": "I like drinking fruit tea.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích uống trà trái cây",
+          "thích uống trà trái cây"
+         ],
+         "model": "{p} thích uống trà trái cây"
+        },
+        {
+         "question": "I like drinking milk tea.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} thích uống trà sữa",
+          "thích uống trà sữa"
+         ],
+         "model": "{p} thích uống trà sữa"
+        }
+       ]
+      },
+      {
+       "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
+       "blocks": [
         {
          "type": "heading",
          "vi": "4. Không thích",
@@ -920,8 +1167,98 @@
        ]
       },
       {
-       "type": "readingQA",
+       "type": "writeAnswer",
        "num": 10,
+       "instructionVi": "Viết các câu sau bằng tiếng Việt.",
+       "instructionEn": "Write the following sentences in Vietnamese.",
+       "items": [
+        {
+         "question": "I don't like vegetables.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} không thích rau",
+          "không thích rau"
+         ],
+         "model": "{p} không thích rau"
+        },
+        {
+         "question": "I don't like chicken rice.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} không thích cơm gà",
+          "không thích cơm gà",
+          "{p} không thích cơm thịt gà",
+          "không thích cơm thịt gà"
+         ],
+         "model": "{p} không thích cơm gà"
+        },
+        {
+         "question": "I don't like eating fruits.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} không thích ăn trái cây",
+          "không thích ăn trái cây"
+         ],
+         "model": "{p} không thích ăn trái cây"
+        },
+        {
+         "question": "I don't like drinking black coffee.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} không thích uống cà phê đen",
+          "không thích uống cà phê đen"
+         ],
+         "model": "{p} không thích uống cà phê đen"
+        },
+        {
+         "question": "I don't like drinking milk tea.",
+         "pronouns": [
+          "mình",
+          "tôi",
+          "tớ",
+          "em",
+          "anh",
+          "chị"
+         ],
+         "answers": [
+          "{p} không thích uống trà sữa",
+          "không thích uống trà sữa"
+         ],
+         "model": "{p} không thích uống trà sữa"
+        }
+       ]
+      },
+      {
+       "type": "readingQA",
+       "num": 11,
        "blankFirst": true,
        "instructionVi": "Hoàn thành câu hỏi cho những câu trả lời sau.",
        "instructionEn": "Complete the question for each answer below.",
@@ -946,7 +1283,7 @@
       },
       {
        "type": "readingQA",
-       "num": 11,
+       "num": 12,
        "instructionVi": "Dựa vào bảng sau và hoàn thành câu.",
        "instructionEn": "Use the table below to complete the sentences.",
        "table": {
@@ -1250,7 +1587,7 @@
      "exercises": [
       {
        "type": "audioChoice",
-       "num": 12,
+       "num": 13,
        "instructionVi": "Nghe và trả lời các câu hỏi sau.",
        "instructionEn": "Listen and answer the following questions.",
        "items": [
@@ -1294,7 +1631,7 @@
       },
       {
        "type": "audioChoice",
-       "num": 13,
+       "num": 14,
        "instructionVi": "Nghe và chọn đáp án đúng.",
        "instructionEn": "Listen and choose the correct answer.",
        "items": [
@@ -1347,7 +1684,7 @@
      "exercises": [
       {
        "type": "readingQA",
-       "num": 14,
+       "num": 15,
        "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
        "instructionEn": "Read the following paragraph and answer the questions.",
        "passage": "Mình là Phương. Mình thích cà phê sữa và trà. Mình cũng thích phở bò và cơm gà. Tâm, bạn của mình, thích cà phê đen. Tâm không thích phở bò nhưng Tâm thích bún bò với rau.",
@@ -1393,7 +1730,7 @@
      "exercises": [
       {
        "type": "chooseWord",
-       "num": 15,
+       "num": 16,
        "instructionVi": "Chọn từ đúng.",
        "instructionEn": "Choose the correct words.",
        "items": [
@@ -1461,7 +1798,7 @@
       },
       {
        "type": "chooseWord",
-       "num": 16,
+       "num": 17,
        "noItemNum": true,
        "instructionVi": "Hoàn thành đoạn hội thoại sau.",
        "instructionEn": "Complete the following dialogue.",
@@ -1546,7 +1883,7 @@
      "exercises": [
       {
        "type": "readingQA",
-       "num": 17,
+       "num": 18,
        "instructionVi": "Trả lời những câu hỏi sau.",
        "instructionEn": "Answer the following questions.",
        "questions": [
