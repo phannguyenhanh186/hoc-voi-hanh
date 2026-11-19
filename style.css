@@ -1990,3 +1990,11 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-wordchips { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 18px; }
 .bai-wordchip { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 10px; background: var(--chip-bg, #C6C9FF); color: var(--ink); font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; line-height: 1; }
 .bai-wordchip, .bai-wordchip.bai-tone-lav { background: #fff; border: 1.5px solid var(--stroke); }
+
+/* Từ vựng (Bài 1): ảnh + câu tiếng Anh + câu tiếng Việt cần điền */
+.bai-photos-sent { max-width: 780px; }
+.bai-sent-cap { align-self: stretch; display: grid; gap: 4px; }
+.bai-sent-en { color: var(--ink); font-weight: 600; line-height: 1.4; }
+.bai-photos-sent .bai-fill-line { line-height: 1.7; }
+.bai-photos-sent .bai-blank { margin: 0 2px; padding: 2px 3px; max-width: 100%; }
+.bai-photos-sent .bai-mark { margin-left: 2px; }
