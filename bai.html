@@ -586,8 +586,16 @@
           im.src = b.src; im.alt = b.alt || '';
           im.style.cssText = 'display:block;width:100%;max-width:' + (b.maxWidth || 640) + 'px;height:auto;margin:8px 0 16px';
           wrap.appendChild(im);
+        } else if (b.type === 'bullets') {
+          // danh sách gạch đầu dòng thường (không khung): items = [chuỗi, ...]; vi/en tách riêng nếu có
+          const ul = el('ul', 'bai-grammar-note-list bai-grammar-bullets');
+          (b.items || []).forEach(function (t) {
+            const txt = (typeof t === 'string') ? t : ((enOnly && t.en) ? t.en : (t.vi != null ? t.vi : t.text));
+            ul.appendChild(hlText(el('li'), txt, b.tone));
+          });
+          wrap.appendChild(ul);
         } else if (b.type === 'examples') {
-          wrap.appendChild(makeToggleSection(enOnly ? 'Examples' : 'Ví dụ / Examples', function () {
+          const build = function () {
             const list = el('div', 'grammar-examples');
             (b.items || []).forEach(function (it) {
               const row = el('div', 'example');
@@ -596,7 +604,8 @@
               list.appendChild(row);
             });
             return list;
-          }));
+          };
+          wrap.appendChild(b.toggle === false ? build() : makeToggleSection(enOnly ? 'Examples' : 'Ví dụ / Examples', build));   // toggle:false = hiện sẵn, không có nút bấm
         }
       });
       return wrap;
