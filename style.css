@@ -2026,3 +2026,7 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-grammar-note-title { font-weight: 700; color: var(--ink); }
 .bai-grammar-note-text { color: var(--ink); line-height: 1.6; }
 .bai-grammar-note-list { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; color: var(--ink); line-height: 1.6; }
+
+/* Chào hỏi (Bài 1): ghi chú nền vàng, khung cấu trúc nền trắng (block.white) */
+.bai-grammar-note { background: #FFEEC9; }
+.bai-grammar-structure.is-white { background: #fff; }
