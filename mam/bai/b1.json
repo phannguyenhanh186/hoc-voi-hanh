@@ -952,7 +952,6 @@
             },
             {
               "type": "wordBankFill",
-              "num": 11,
               "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng thích hợp.",
               "instructionEn": "Introduce the people below using the appropriate pronouns.",
               "words": [
@@ -986,7 +985,8 @@
                   "template": "{0}",
                   "answers": "cô"
                 }
-              ]
+              ],
+              "noNum": true
             }
           ]
         }
