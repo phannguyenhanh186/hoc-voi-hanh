@@ -2036,3 +2036,6 @@ a.lesson-row:hover { background: #FAFAF7; }
 /* photoSentenceFill: dòng điền cả câu (→ ________) */
 .bai-fill-line.is-wide { display: flex; align-items: baseline; gap: 6px; }
 .bai-fill-line.is-wide .bai-blank { flex: 1; min-width: 0; width: auto; }
+
+/* photoSentenceFill: dòng không hình (How to say…) chiếm cả hàng */
+.bai-photos-sent .bai-photo.is-textonly { grid-column: 1 / -1; }
