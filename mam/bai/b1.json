@@ -742,12 +742,12 @@
               },
               "columns": [
                 {
-                  "vi": "tự xưng",
-                  "en": "self-reference"
+                  "vi": "your pronoun",
+                  "en": "your pronoun"
                 },
                 {
-                  "vi": "xưng hô",
-                  "en": "term of address"
+                  "vi": "2P pronoun",
+                  "en": "2P pronoun"
                 },
                 {
                   "vi": "ví dụ",
@@ -764,7 +764,7 @@
                   ],
                   "other": [
                     {
-                      "text": "bạn",
+                      "text": "bạn (friend)",
                       "tone": "yellow"
                     }
                   ],
@@ -776,17 +776,17 @@
                 {
                   "self": [
                     {
-                      "text": "em",
+                      "text": "em (younger sibling)",
                       "tone": "yellow"
                     }
                   ],
                   "other": [
                     {
-                      "text": "anh",
+                      "text": "anh (older brother)",
                       "tone": "blue"
                     },
                     {
-                      "text": "chị",
+                      "text": "chị (older sister)",
                       "tone": "pink"
                     }
                   ],
@@ -798,17 +798,17 @@
                 {
                   "self": [
                     {
-                      "text": "anh",
+                      "text": "anh (older brother)",
                       "tone": "blue"
                     },
                     {
-                      "text": "chị",
+                      "text": "chị (older sister)",
                       "tone": "pink"
                     }
                   ],
                   "other": [
                     {
-                      "text": "em",
+                      "text": "em (younger sibling)",
                       "tone": "yellow"
                     }
                   ],
@@ -820,17 +820,17 @@
                 {
                   "self": [
                     {
-                      "text": "con",
+                      "text": "con (niece/nephew)",
                       "tone": "yellow"
                     }
                   ],
                   "other": [
                     {
-                      "text": "chú",
+                      "text": "chú (uncle)",
                       "tone": "blue"
                     },
                     {
-                      "text": "cô",
+                      "text": "cô (aunt)",
                       "tone": "pink"
                     }
                   ],
@@ -842,17 +842,17 @@
                 {
                   "self": [
                     {
-                      "text": "chú",
+                      "text": "chú (uncle)",
                       "tone": "blue"
                     },
                     {
-                      "text": "cô",
+                      "text": "cô (aunt)",
                       "tone": "pink"
                     }
                   ],
                   "other": [
                     {
-                      "text": "con",
+                      "text": "con (niece/nephew)",
                       "tone": "yellow"
                     }
                   ],
@@ -1052,6 +1052,128 @@
                     "Không is used at the end a question to form a yes/no question.",
                     "You can add cảm ơn (thank you) to make your answer more polite: Mình khỏe, cảm ơn!"
                   ]
+                }
+              ]
+            },
+            {
+              "type": "writeAnswer",
+              "num": 16,
+              "instructionVi": "Viết câu phù hợp cho từng tình huống.",
+              "instructionEn": "Write the appropriate sentence for each situation.",
+              "noteTitleVi": "Gợi ý",
+              "noteVi": "Chào / Cám ơn / Xin lỗi + danh xưng của người nghe. Khi trả lời “… khoẻ không?”, dùng chính danh xưng người kia gọi bạn để tự xưng.",
+              "noteTitleEn": "Hint",
+              "noteEn": "Chào / Cám ơn / Xin lỗi + the pronoun of the person you are talking to. When answering “… khoẻ không?”, refer to yourself with the same word the other person used to address you.",
+              "items": [
+                {
+                  "question": "How to say hello to someone who is like your younger sibling?",
+                  "answers": [
+                    "chào em",
+                    "xin chào em"
+                  ],
+                  "model": "Chào em."
+                },
+                {
+                  "question": "How to say hello to someone who's like your older brother?",
+                  "answers": [
+                    "chào anh",
+                    "xin chào anh"
+                  ],
+                  "model": "Chào anh."
+                },
+                {
+                  "question": "How to say thank you to someone who is like your older sister?",
+                  "answers": [
+                    "cám ơn chị",
+                    "cảm ơn chị"
+                  ],
+                  "model": "Cám ơn chị."
+                },
+                {
+                  "question": "How to say thank you to someone who's like your aunt?",
+                  "answers": [
+                    "cám ơn cô",
+                    "cảm ơn cô"
+                  ],
+                  "model": "Cám ơn cô."
+                },
+                {
+                  "question": "How to say sorry to someone who's like your uncle?",
+                  "answers": [
+                    "xin lỗi chú"
+                  ],
+                  "model": "Xin lỗi chú."
+                },
+                {
+                  "question": "How to say goodbye to someone who is like your niece or nephew?",
+                  "answers": [
+                    "chào con"
+                  ],
+                  "model": "Chào con."
+                },
+                {
+                  "question": "How to say goodbye to someone who's like your friend?",
+                  "answers": [
+                    "chào bạn"
+                  ],
+                  "model": "Chào bạn."
+                },
+                {
+                  "question": "How to ask how someone is and that person is like your younger sibling?",
+                  "answers": [
+                    "em khoẻ không",
+                    "em khỏe không"
+                  ],
+                  "model": "Em khoẻ không?"
+                },
+                {
+                  "question": "How to ask how someone is and that person is like your older sister?",
+                  "answers": [
+                    "chị khoẻ không",
+                    "chị khỏe không"
+                  ],
+                  "model": "Chị khoẻ không?"
+                },
+                {
+                  "question": "When someone asks \"Em khoẻ không?\", how would you answer?",
+                  "answers": [
+                    "em khoẻ",
+                    "em khỏe",
+                    "em khoẻ cám ơn",
+                    "em khoẻ cảm ơn",
+                    "em khỏe cám ơn",
+                    "em khỏe cảm ơn"
+                  ],
+                  "model": "Em khoẻ."
+                },
+                {
+                  "question": "When someone asks \"Con khoẻ không?\", how would you answer?",
+                  "answers": [
+                    "con khoẻ",
+                    "con khỏe",
+                    "con khoẻ cám ơn",
+                    "con khoẻ cảm ơn",
+                    "con khỏe cám ơn",
+                    "con khỏe cảm ơn"
+                  ],
+                  "model": "Con khoẻ."
+                },
+                {
+                  "question": "When someone asks \"Bạn khoẻ không?\", how would you answer?",
+                  "pronouns": [
+                    "mình",
+                    "tôi",
+                    "tớ"
+                  ],
+                  "answers": [
+                    "{p} khoẻ",
+                    "{p} khỏe",
+                    "{p} khoẻ cám ơn",
+                    "{p} khoẻ cảm ơn",
+                    "{p} khỏe cám ơn",
+                    "{p} khỏe cảm ơn"
+                  ],
+                  "model": "{p} khoẻ."
                 }
               ]
             }
