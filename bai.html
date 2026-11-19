@@ -686,7 +686,8 @@
       if (ex.columns) { grid.style.gridTemplateColumns = 'repeat(' + ex.columns + ', minmax(0, 1fr))'; grid.style.maxWidth = (ex.columns * 300) + 'px'; }
       (ex.items || []).forEach(function (it) {
         const fig = el('figure', 'bai-photo');
-        fig.appendChild(makePhoto(it.img, it.name));
+        if (it.img) fig.appendChild(makePhoto(it.img, it.name));
+        else fig.classList.add('is-textonly');   // dòng chỉ có chữ (vd. How to say…): không hình, chiếm hết chiều ngang
         const cap = el('figcaption', 'bai-photo-cap bai-sent-cap');
         if (it.en) cap.appendChild(el('div', 'bai-sent-en', it.en));
         const built = buildFillLine(it.template, it.answers || [], it.name);
