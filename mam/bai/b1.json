@@ -1345,40 +1345,6 @@
       ]
     },
     {
-      "id": "doc",
-      "titleVi": "Đọc",
-      "titleEn": "Reading",
-      "subtopics": [
-        {
-          "id": "chao-hoi",
-          "label": "Chào hỏi (Greetings)",
-          "exercises": [
-            {
-              "type": "readingQA",
-              "num": 12,
-              "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
-              "instructionEn": "Read the following paragraph and answer the questions.",
-              "passage": "Hôm nay Tú gặp Ann và bạn của Ann. Tú chào Ann và hỏi tên bạn của Ann. Bạn của Ann tên là Mike.",
-              "questions": [
-                {
-                  "q": "Hôm nay Tú gặp ai?",
-                  "a": "Hôm nay Tú gặp Ann và bạn của Ann."
-                },
-                {
-                  "q": "Tú hỏi tên bạn của ai?",
-                  "a": "Tú hỏi tên bạn của Ann."
-                },
-                {
-                  "q": "Bạn của Ann tên là gì?",
-                  "a": "Bạn của Ann tên là Mike."
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "viet",
       "titleVi": "Viết",
       "titleEn": "Writing",
