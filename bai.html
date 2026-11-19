@@ -132,13 +132,14 @@
     // ---------- Các dạng bài tập ----------
     function exerciseHead(ex, n) {
       const wrap = el('div');
-      if (!ex.noNum || ex.instructionVi) {
+      const useEn = enOnly && ex.instructionEn;   // ngữ pháp: chỉ tiếng Anh
+      if (!ex.noNum || ex.instructionVi || useEn) {
         const h = el('h3', 'bai-ex-head');
         if (!ex.noNum) h.appendChild(el('span', 'bai-ex-num', String(n)));
-        h.appendChild(el('span', 'bai-ex-vi', ex.instructionVi || ''));
+        h.appendChild(el('span', 'bai-ex-vi', useEn ? ex.instructionEn : (ex.instructionVi || '')));
         wrap.appendChild(h);
       }
-      if (ex.instructionEn) wrap.appendChild(el('p', 'bai-ex-en', ex.instructionEn));
+      if (ex.instructionEn && !useEn) wrap.appendChild(el('p', 'bai-ex-en', ex.instructionEn));
       return wrap;
     }
 
@@ -465,24 +466,37 @@
       });
       return node;
     }
+    // Phần Ngữ pháp (section id 'ngu-phap'): chỉ hiện tiếng Anh cho phần giải thích; câu ví dụ tiếng Việt giữ nguyên.
+    let enOnly = false;
     function renderGrammarNote(ex) {
       const wrap = el('div', 'bai-grammar');
-      if (ex.title) wrap.appendChild(el('h3', 'bai-grammar-title', ex.title));
+      // Tiêu đề dạng "TIẾNG VIỆT – ENGLISH" (hoặc dùng "·"): ngữ pháp chỉ giữ phần tiếng Anh
+      const gTitle = enOnly && ex.title ? String(ex.title).split(/\s+[–·]\s+/).pop() : ex.title;
+      if (gTitle) wrap.appendChild(el('h3', 'bai-grammar-title', gTitle));
       (ex.blocks || []).forEach(function (b) {
         if (b.type === 'heading') {
           const h = el('div', 'bai-grammar-heading' + (b.tone === 'purple' ? ' is-purple' : ''));
-          h.appendChild(el('div', 'bai-grammar-heading-vi', b.vi != null ? b.vi : (b.text || '')));
-          if (b.en) h.appendChild(el('div', 'bai-grammar-heading-en', b.en));
+          if (enOnly && b.en) h.appendChild(el('div', 'bai-grammar-heading-vi', b.en));
+          else {
+            h.appendChild(el('div', 'bai-grammar-heading-vi', b.vi != null ? b.vi : (b.text || '')));
+            if (b.en) h.appendChild(el('div', 'bai-grammar-heading-en', b.en));
+          }
           wrap.appendChild(h);
         } else if (b.type === 'structure') {
           const s = el('div', 'grammar-callout bai-grammar-structure');
-          s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.vi, b.tone));
-          if (b.en) s.appendChild(hlText(el('div', 'bai-grammar-structure-en'), b.en, b.tone));
+          if (enOnly && b.en) s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.en, b.tone));
+          else {
+            s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.vi, b.tone));
+            if (b.en) s.appendChild(hlText(el('div', 'bai-grammar-structure-en'), b.en, b.tone));
+          }
           wrap.appendChild(s);
         } else if (b.type === 'paragraph') {
           const p = el('div', 'bai-grammar-p');
-          p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.vi != null ? b.vi : b.text, b.tone));
-          if (b.en && b.vi != null) p.appendChild(hlText(el('div', 'bai-grammar-p-en'), b.en, b.tone));
+          if (enOnly && b.en) p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.en, b.tone));
+          else {
+            p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.vi != null ? b.vi : b.text, b.tone));
+            if (b.en && b.vi != null) p.appendChild(hlText(el('div', 'bai-grammar-p-en'), b.en, b.tone));
+          }
           wrap.appendChild(p);
         } else if (b.type === 'wordChips') {
           // danh sách từ ví dụ: mỗi từ là một nút riêng (chỉ để nhìn, không phát audio)
@@ -528,7 +542,7 @@
             });
             return list;
           };
-          wrap.appendChild(b.toggle === false ? build() : makeToggleSection('Ví dụ / Examples', build));
+          wrap.appendChild(b.toggle === false ? build() : makeToggleSection(enOnly ? 'Examples' : 'Ví dụ / Examples', build));
         } else if (b.type === 'table') {
           const t = el('div', 'bai-grammar-table' + (b.sysFont ? ' is-sysfont' : ''));
           t.style.gridTemplateColumns = 'repeat(' + (b.columns || []).length + ', minmax(0, 1fr))';
@@ -563,7 +577,7 @@
           im.style.cssText = 'display:block;width:100%;max-width:' + (b.maxWidth || 640) + 'px;height:auto;margin:8px 0 16px';
           wrap.appendChild(im);
         } else if (b.type === 'examples') {
-          wrap.appendChild(makeToggleSection('Ví dụ / Examples', function () {
+          wrap.appendChild(makeToggleSection(enOnly ? 'Examples' : 'Ví dụ / Examples', function () {
             const list = el('div', 'grammar-examples');
             (b.items || []).forEach(function (it) {
               const row = el('div', 'example');
@@ -590,15 +604,21 @@
       const wrap = el('div', 'bai-pairs');
       if (ex.intro) {
         const intro = el('div', 'bai-pairs-intro');
-        intro.appendChild(el('div', 'bai-pairs-intro-vi', ex.intro.vi || ''));
-        if (ex.intro.en) intro.appendChild(el('div', 'bai-pairs-intro-en', ex.intro.en));
+        if (enOnly && ex.intro.en) intro.appendChild(el('div', 'bai-pairs-intro-vi', ex.intro.en));
+        else {
+          intro.appendChild(el('div', 'bai-pairs-intro-vi', ex.intro.vi || ''));
+          if (ex.intro.en) intro.appendChild(el('div', 'bai-pairs-intro-en', ex.intro.en));
+        }
         wrap.appendChild(intro);
       }
       const table = el('div', 'bai-pairs-table');
       (ex.columns || []).forEach(function (col) {
         const h = el('div', 'bai-pairs-head');
-        h.appendChild(el('div', 'bai-pairs-head-vi', col.vi || ''));
-        if (col.en) h.appendChild(el('div', 'bai-pairs-head-en', col.en));
+        if (enOnly && col.en) h.appendChild(el('div', 'bai-pairs-head-vi', col.en));
+        else {
+          h.appendChild(el('div', 'bai-pairs-head-vi', col.vi || ''));
+          if (col.en) h.appendChild(el('div', 'bai-pairs-head-en', col.en));
+        }
         table.appendChild(h);
       });
       (ex.rows || []).forEach(function (row) {
@@ -1891,6 +1911,7 @@
 
         pill.textContent = entry.section.titleVi;
         content.innerHTML = '';
+        enOnly = entry.section.id === 'ngu-phap';
         entries.forEach(function (e) { if (e.secBox) e.secBox.classList.toggle('is-current', e.section === entry.section); });
         content.style.setProperty('--ch', SEC_SQ[entry.si % SEC_SQ.length]);
         content.style.setProperty('--ch-l', SEC_PALE[entry.si % SEC_PALE.length]);
