@@ -1,1408 +1,2086 @@
-{
-  "_guide": {
-    "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b1&level=mam. App bo qua key bat dau bang '_'.",
-    "section": "Moi section co titleVi + titleEn. Co 'subtopics' thi hien danh sach muc con ben duoi; khong co thi bam vao se hien 'dang soan'.",
-    "exercise.letters": "Luoi cac chu cai. 'rows' = danh sach hang, moi hang la danh sach chu.",
-    "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong.",
-    "audio": "Mau duong dan audio cua exercise. {voice} = nam/nu, {key} = ten o viet kieu Telex (a, aw = ă, aa = â, dd = đ, ee = ê, oo = ô, ow = ơ, uw = ư). Vi du: 'đi' -> ddi, 'bơ' -> bow. Danh sach file can thu: audio/b1/_pron_filenames.txt",
-    "exercise.photoVocab": "Anh + chu thich + 1 nut nghe cho ca bai ('audio' la duong dan file). 'num' = so bai in trong sach.",
-    "exercise.photoOrder": "Nghe va danh so hinh. Moi item co 'example' (so cho san, khoa) hoac 'answer' (dap an, dien so 1-6). Chua co 'answer' thi khong hien nut Kiem tra.",
-    "exercise.pronounPairs": "Bang 'danh xung theo cap' (tu xung / xung ho / vi du), khong tuong tac, khong dap an. 'intro' = doan gioi thieu (khung vang). 'columns' = 3 tieu de cot {vi,en}. 'rows' = danh sach hang; moi hang co 'self' va 'other' (mang 1-2 item {text, tone: yellow|blue|pink} - 2 item thi chia doi o, mau khac nhau) va 'examples' (mang cau vi du, nen tim).",
-    "noNum": "Them 'noNum': true vao bat ky exercise nao de an so bai (khung tron so) tren tieu de - dung cho noi dung tham khao khong phai bai tap co dem so."
-  },
-  "id": "b1",
-  "num": 1,
-  "title": "Chào bạn, bạn khoẻ không?",
-  "sections": [
-    {
-      "id": "phat-am",
-      "titleVi": "Phát âm",
-      "titleEn": "Pronunciation",
-      "subtopics": [
-        {
-          "id": "bang-chu-cai",
-          "label": "Bảng chữ cái (Alphabet)",
-          "exercises": [
-            {
-              "type": "letters",
-              "instructionVi": "Nghe và lặp lại bảng chữ cái sau.",
-              "instructionEn": "Listen and repeat the following alphabet.",
-              "audio": "audio/b1/{voice}/pron_{key}.mp3",
-              "rows": [
-                [
-                  "a",
-                  "ă",
-                  "â",
-                  "b",
-                  "c",
-                  "d",
-                  "đ",
-                  "e",
-                  "ê"
-                ],
-                [
-                  "g",
-                  "h",
-                  "i",
-                  "k",
-                  "l",
-                  "m",
-                  "n",
-                  "o",
-                  "ô"
-                ],
-                [
-                  "ơ",
-                  "p",
-                  "q",
-                  "r",
-                  "s",
-                  "t",
-                  "u",
-                  "ư",
-                  "v"
-                ],
-                [
-                  "x",
-                  "y"
-                ]
-              ]
-            },
-            {
-              "type": "sounds",
-              "instructionVi": "Nghe và lặp lại các vần sau.",
-              "instructionEn": "Listen and repeat the following sounds.",
-              "columns": [
-                [
-                  {
-                    "tone": "yellow",
-                    "rows": [
-                      [
-                        "a",
-                        "ba",
-                        "ra"
-                      ],
-                      [
-                        "ă"
-                      ],
-                      [
-                        "â"
-                      ]
-                    ]
-                  },
-                  {
-                    "tone": "pink",
-                    "rows": [
-                      [
-                        "e",
-                        "be",
-                        "xe"
-                      ],
-                      [
-                        "ê",
-                        "tê",
-                        "mê"
-                      ],
-                      [
-                        "i",
-                        "đi",
-                        "bi"
-                      ]
-                    ]
-                  }
-                ],
-                [
-                  {
-                    "tone": "blue",
-                    "rows": [
-                      [
-                        "o",
-                        "to",
-                        "lo"
-                      ],
-                      [
-                        "ô",
-                        "cô",
-                        "tô"
-                      ],
-                      [
-                        "ơ",
-                        "bơ",
-                        "mơ"
-                      ]
-                    ]
-                  },
-                  {
-                    "tone": "violet",
-                    "rows": [
-                      [
-                        "u",
-                        "xu",
-                        "vu"
-                      ],
-                      [
-                        "ư",
-                        "tư",
-                        "dư"
-                      ],
-                      [
-                        "y",
-                        "ly"
-                      ]
-                    ]
-                  }
-                ]
-              ],
-              "audio": "audio/b1/{voice}/pron_{key}.mp3"
-            },
-            {
-              "type": "listenPick",
-              "instructionVi": "Nghe và khoanh tròn âm đúng.",
-              "instructionEn": "Listen and circle the correct sounds.",
-              "audio": "audio/b1/{voice}/pron_{key}.mp3",
-              "items": [
-                {
-                  "options": [
-                    "ca",
-                    "co",
-                    "cô",
-                    "cơ"
-                  ],
-                  "answer": "cô"
-                },
-                {
-                  "options": [
-                    "be",
-                    "bê",
-                    "bu",
-                    "bư"
-                  ],
-                  "answer": "bê"
-                },
-                {
-                  "options": [
-                    "đi",
-                    "đa",
-                    "đo",
-                    "đô"
-                  ],
-                  "answer": "đi"
-                },
-                {
-                  "options": [
-                    "tu",
-                    "tư",
-                    "tô",
-                    "tơ"
-                  ],
-                  "answer": "tư"
-                },
-                {
-                  "options": [
-                    "lu",
-                    "lư",
-                    "la",
-                    "li"
-                  ],
-                  "answer": "la"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "thanh-dieu",
-          "label": "Thanh điệu (Tones)",
-          "exercises": [
-            {
-              "type": "grammarNote",
-              "noNum": true,
-              "instructionVi": "",
-              "blocks": [
-                {
-                  "type": "heading",
-                  "text": "1. Pitches and Formation",
-                  "tone": "purple"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Vietnamese is a tonal language with 6 tones and 5 tone marks."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "There are various ways to translate the name of these tones. The table below combines two approaches; one is the literal translation, and the other is based on the pitches when forming the tone:"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Literal Translation and Pitch Contours of Vietnamese Tones"
-                },
-                {
-                  "type": "table",
-                  "columns": [
-                    "Vietnamese tone",
-                    "Literal translation",
-                    "Pitch contour / formation"
-                  ],
-                  "rows": [
-                    [
-                      "Thanh ngang",
-                      "Level tone",
-                      "Mid-level tone"
-                    ],
-                    [
-                      "Thanh sắc",
-                      "Sharp tone",
-                      "High-rising tone"
-                    ],
-                    [
-                      "Thanh huyền",
-                      "Grave tone",
-                      "Low-falling tone"
-                    ],
-                    [
-                      "Thanh hỏi",
-                      "Question tone",
-                      "Low-rising tone"
-                    ],
-                    [
-                      "Thanh ngã",
-                      "Tilde tone / Broken tone",
-                      "Rising-broken tone"
-                    ],
-                    [
-                      "Thanh nặng",
-                      "Heavy tone",
-                      "Low-falling or low-dropping tone"
-                    ]
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "text": "The diagram below shows the pitch level when forming the tones:"
-                },
-                {
-                  "type": "toneChart",
-                  "tones": [
-                    {
-                      "name": "Ngang",
-                      "letter": "a",
-                      "path": "M12 70 L88 70",
-                      "color": "#C6C9FF"
-                    },
-                    {
-                      "name": "Huyền",
-                      "letter": "à",
-                      "path": "M14 70 Q40 70 86 90",
-                      "color": "#FFC6EF"
-                    },
-                    {
-                      "name": "Hỏi",
-                      "letter": "ả",
-                      "path": "M12 88 C26 128 50 128 88 84",
-                      "color": "#E6FFC6"
-                    },
-                    {
-                      "name": "Ngã",
-                      "letter": "ã",
-                      "path": "M12 88 C26 128 50 128 88 84",
-                      "color": "#C6FFF9"
-                    },
-                    {
-                      "name": "Sắc",
-                      "letter": "á",
-                      "path": "M22 72 L78 10",
-                      "color": "#FFC6C7"
-                    },
-                    {
-                      "name": "Nặng",
-                      "letter": "ạ",
-                      "path": "M30 126 L70 136",
-                      "color": "#FFFDC6"
-                    }
-                  ]
-                },
-                {
-                  "type": "heading",
-                  "text": "2. How to write tone marks in a word",
-                  "tone": "purple"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "When writing tone marks in a word, make sure to put them on a vowel, not a consonant:"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "If there is only one vowel, the tone mark is put on that vowel."
-                },
-                {
-                  "type": "wordChips",
-                  "tone": "lav",
-                  "items": [
-                    "Đã",
-                    "Mình",
-                    "Bạn",
-                    "Có",
-                    "Cảm"
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "text": "If there are two or three vowels, but no consonant at the end, the tone mark is put on the second to last vowel."
-                },
-                {
-                  "type": "wordChips",
-                  "tone": "lav",
-                  "items": [
-                    "Hòa",
-                    "Kiểu",
-                    "Phải",
-                    "Mỗi",
-                    "Loại"
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "text": "If there are two or three vowels, and there is a consonant at the end, the tone mark is put on the last vowel."
-                },
-                {
-                  "type": "wordChips",
-                  "tone": "lav",
-                  "items": [
-                    "Tiếng",
-                    "Việt",
-                    "Nguyễn",
-                    "Quỳnh"
-                  ]
-                },
-                {
-                  "type": "heading",
-                  "text": "3. Importance of Tones and Tone Marks",
-                  "tone": "purple"
-                },
-                {
-                  "type": "paragraph",
-                  "text": "The use of tones is extremely important, as a different tone may cause the word to have an entirely new meaning. For example:"
-                },
-                {
-                  "type": "table",
-                  "columns": [
-                    "Word",
-                    "Meaning"
-                  ],
-                  "rows": [
-                    [
-                      "Ma",
-                      "Ghost"
-                    ],
-                    [
-                      "Mà",
-                      "But"
-                    ],
-                    [
-                      "Má",
-                      "Mother / Cheek"
-                    ],
-                    [
-                      "Mả",
-                      "Grave"
-                    ],
-                    [
-                      "Mã",
-                      "Horse (Chinese origin), Appearance"
-                    ],
-                    [
-                      "Mạ",
-                      "Young rice stalk, Coating"
-                    ]
-                  ],
-                  "sysFont": true
-                }
-              ]
-            },
-            {
-              "type": "tones",
-              "instructionVi": "Nghe và lặp lại các kết hợp có thanh điệu.",
-              "instructionEn": "Listen and repeat combinations with tones.",
-              "audio": "audio/b1/{voice}/pron_{key}.mp3",
-              "rows": [
-                {
-                  "label": "thanh ngang (-)",
-                  "tone": "lav",
-                  "words": [
-                    "ly",
-                    "to",
-                    "đi",
-                    "đi"
-                  ]
-                },
-                {
-                  "label": "thanh sắc (´)",
-                  "tone": "lav",
-                  "words": [
-                    "bố",
-                    "chú",
-                    "cố",
-                    "phí"
-                  ]
-                },
-                {
-                  "label": "thanh huyền (`)",
-                  "tone": "lav",
-                  "words": [
-                    "mà",
-                    "từ",
-                    "là",
-                    "về"
-                  ]
-                },
-                {
-                  "label": "thanh hỏi (ʾ)",
-                  "tone": "pink",
-                  "words": [
-                    "lẻ",
-                    "tủ",
-                    "phở",
-                    "nhỏ"
-                  ]
-                },
-                {
-                  "label": "thanh ngã (~)",
-                  "tone": "pink",
-                  "words": [
-                    "đã",
-                    "cũ",
-                    "sẽ",
-                    "lỡ"
-                  ]
-                },
-                {
-                  "label": "thanh nặng (.)",
-                  "tone": "lav",
-                  "words": [
-                    "mẹ",
-                    "tệ",
-                    "bộ",
-                    "tự"
-                  ]
-                }
-              ],
-              "num": 4
-            },
-            {
-              "type": "fillNames",
-              "instructionVi": "Nghe và hoàn thành các câu bằng tên bạn nghe được.",
-              "instructionEn": "Listen and complete the sentences with the names you hear.",
-              "items": [
-                {
-                  "before": "Chào bạn, mình là ",
-                  "after": ".",
-                  "answers": [
-                    "Chi"
-                  ],
-                  "audio": "audio/b1/{voice}/ex5_01.mp3"
-                },
-                {
-                  "before": "Chào chị, em tên là ",
-                  "after": ".",
-                  "answers": [
-                    "Vi",
-                    "Vy"
-                  ],
-                  "audio": "audio/b1/{voice}/ex5_02.mp3"
-                },
-                {
-                  "before": "Chào em, anh tên là ",
-                  "after": ".",
-                  "answers": [
-                    "Phú"
-                  ],
-                  "audio": "audio/b1/{voice}/ex5_03.mp3"
-                },
-                {
-                  "before": "Chào cô, con tên là ",
-                  "after": ".",
-                  "answers": [
-                    "Thư"
-                  ],
-                  "audio": "audio/b1/{voice}/ex5_04.mp3"
-                },
-                {
-                  "before": "Chào ông, con tên là ",
-                  "after": ".",
-                  "answers": [
-                    "Nga"
-                  ],
-                  "audio": "audio/b1/{voice}/ex5_05.mp3"
-                }
-              ],
-              "num": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tu-vung",
-      "titleVi": "Từ vựng",
-      "titleEn": "Vocabulary",
-      "subtopics": [
-        {
-          "id": "nghe-nghiep",
-          "label": "Nghề nghiệp (Jobs)",
-          "exercises": [
-            {
-              "type": "photoVocab",
-              "instructionVi": "Nghe và lặp lại.",
-              "instructionEn": "Listen and repeat.",
-              "items": [
-                {
-                  "img": "images/b1/bai6/ha.jpg",
-                  "caption": "Giáo viên",
-                  "audio": "audio/b1/{voice}/vocab_giao-vien.mp3"
-                },
-                {
-                  "img": "images/b1/bai6/phu.jpg",
-                  "caption": "Bác sĩ",
-                  "audio": "audio/b1/{voice}/vocab_bac-si.mp3"
-                },
-                {
-                  "img": "images/b1/bai6/tu.jpg",
-                  "caption": "Kỹ sư",
-                  "audio": "audio/b1/{voice}/vocab_ky-su.mp3"
-                }
-              ],
-              "noNum": true,
-              "big": true
-            },
-            {
-              "type": "photoSentenceFill",
-              "noNum": true,
-              "instructionVi": "Hoàn thành các câu.",
-              "instructionEn": "Complete the sentences.",
-              "items": [
-                {
-                  "img": "images/b1/bai6/ha.jpg",
-                  "name": "Hà",
-                  "en": "Ms. Hà is a teacher.",
-                  "template": "→ Cô Hà là {0}.",
-                  "answers": [
-                    [
-                      "giáo viên"
-                    ]
-                  ]
-                },
-                {
-                  "img": "images/b1/bai6/phu.jpg",
-                  "name": "Phú",
-                  "en": "Mr. Phú is a doctor.",
-                  "template": "→ Anh Phú là {0}.",
-                  "answers": [
-                    [
-                      "bác sĩ"
-                    ]
-                  ]
-                },
-                {
-                  "img": "images/b1/bai6/tu.jpg",
-                  "name": "Tú",
-                  "en": "Tú is an engineer.",
-                  "template": "→ Tú là {0}.",
-                  "answers": [
-                    [
-                      "kỹ sư"
-                    ]
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "photoVocab",
-              "instructionVi": "Nghe và lặp lại.",
-              "instructionEn": "Listen and repeat.",
-              "items": [
-                {
-                  "img": "images/b1/bai6/chi.jpg",
-                  "caption": "Công an",
-                  "audio": "audio/b1/{voice}/vocab_cong-an.mp3"
-                },
-                {
-                  "img": "images/b1/bai6/an.jpg",
-                  "caption": "Nhân viên văn phòng",
-                  "audio": "audio/b1/{voice}/vocab_nhan-vien-van-phong.mp3"
-                },
-                {
-                  "img": "images/b1/bai6/my.jpg",
-                  "caption": "Ca sĩ",
-                  "audio": "audio/b1/{voice}/vocab_ca-si.mp3"
-                }
-              ],
-              "noNum": true,
-              "big": true
-            },
-            {
-              "type": "photoSentenceFill",
-              "noNum": true,
-              "instructionVi": "Hoàn thành các câu.",
-              "instructionEn": "Complete the sentences.",
-              "items": [
-                {
-                  "img": "images/b1/bai6/chi.jpg",
-                  "name": "Chi",
-                  "en": "Ms. Chi is a police officer.",
-                  "template": "→ Chị Chi là {0}.",
-                  "answers": [
-                    [
-                      "công an"
-                    ]
-                  ]
-                },
-                {
-                  "img": "images/b1/bai6/an.jpg",
-                  "name": "An",
-                  "en": "Mr. An is an office staff.",
-                  "template": "→ Anh An là {0}.",
-                  "answers": [
-                    [
-                      "nhân viên văn phòng"
-                    ]
-                  ]
-                },
-                {
-                  "img": "images/b1/bai6/my.jpg",
-                  "name": "My",
-                  "en": "My is a singer.",
-                  "template": "→ My là {0}.",
-                  "answers": [
-                    [
-                      "ca sĩ"
-                    ]
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "photoOrder",
-              "num": 7,
-              "instructionVi": "Nghe và đánh số các hình theo thứ tự bạn nghe được.",
-              "instructionEn": "Listen and number the pictures in the order you hear.",
-              "audio": "audio/b1/{voice}/vocab_ex7.mp3",
-              "items": [
-                {
-                  "img": "images/b1/bai7/cong-an.jpg",
-                  "caption": "Chi, công an",
-                  "answer": null
-                },
-                {
-                  "img": "images/b1/bai7/ky-su.jpg",
-                  "caption": "Tú, kỹ sư",
-                  "example": 1
-                },
-                {
-                  "img": "images/b1/bai7/ca-si.jpg",
-                  "caption": "My, ca sĩ",
-                  "answer": null
-                },
-                {
-                  "img": "images/b1/bai7/bac-si.jpg",
-                  "caption": "Phú, bác sĩ",
-                  "answer": null
-                },
-                {
-                  "img": "images/b1/bai7/giao-vien.jpg",
-                  "caption": "Hà, giáo viên.",
-                  "answer": null
-                },
-                {
-                  "img": "images/b1/bai7/nhan-vien-van-phong.jpg",
-                  "caption": "An, nhân viên văn phòng",
-                  "answer": null
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ngu-phap",
-      "titleVi": "Ngữ pháp",
-      "titleEn": "Grammar",
-      "subtopics": [
-        {
-          "id": "danh-xung",
-          "label": "Danh xưng (Pronouns)",
-          "exercises": [
-            {
-              "type": "pronounPairs",
-              "noNum": true,
-              "instructionVi": "",
-              "intro": {
-                "vi": "Danh xưng tiếng Việt đi theo cặp. Từ xưng hô thay đổi tùy theo bạn đang nói chuyện với ai.",
-                "en": "Vietnamese address terms come in pairs. Pronouns change depending on the gender and age of whom you're speaking with."
-              },
-              "columns": [
-                {
-                  "vi": "tự xưng",
-                  "en": "self-reference"
-                },
-                {
-                  "vi": "xưng hô",
-                  "en": "term of address"
-                },
-                {
-                  "vi": "ví dụ",
-                  "en": "example"
-                }
-              ],
-              "rows": [
-                {
-                  "self": [
-                    {
-                      "text": "mình",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "bạn",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "examples": [
-                    "Bạn tên là gì?",
-                    "Mình tên là Minh."
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "em",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "anh",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "chị",
-                      "tone": "pink"
-                    }
-                  ],
-                  "examples": [
-                    "Chào anh. Em là Nhi.",
-                    "Em tên là Hà. Còn chị?"
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "anh",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "chị",
-                      "tone": "pink"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "em",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "examples": [
-                    "Anh khoẻ, cám ơn em.",
-                    "Chào em, anh là Nam."
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "con",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "chú",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "cô",
-                      "tone": "pink"
-                    }
-                  ],
-                  "examples": [
-                    "Chào cô. Con tên là Vy.",
-                    "Con khoẻ. Còn chú?"
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "chú",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "cô",
-                      "tone": "pink"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "con",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "examples": [
-                    "Cảm ơn con. Cô khoẻ.",
-                    "Chào con. Chú tên là Tân."
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "dialogueFill",
-              "instructionVi": "Hoàn thành các câu bằng đại từ thích hợp.",
-              "instructionEn": "Complete the sentences with the appropriate pronoun.",
-              "lines": [
-                {
-                  "speaker": "1  A:",
-                  "template": "Chào anh.",
-                  "answers": []
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Chào {0}.",
-                  "answers": [
-                    [
-                      "em"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "2  A:",
-                  "template": "{0} tên là gì?",
-                  "answers": [
-                    [
-                      "Bạn"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Mình tên là Bình.",
-                  "answers": []
-                },
-                {
-                  "speaker": "3  A:",
-                  "template": "{0} tên là gì?",
-                  "answers": [
-                    [
-                      "Bạn"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Mình tên là Bình.",
-                  "answers": []
-                },
-                {
-                  "speaker": "4  A:",
-                  "template": "{0} có khoẻ không?",
-                  "answers": [
-                    [
-                      "Cô"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Cô khoẻ, cám ơn {0}.",
-                  "answers": [
-                    [
-                      "con"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "5  A:",
-                  "template": "{0} tên là Linh. Còn chị?",
-                  "answers": [
-                    [
-                      "Em"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "{0} tên là Phương.",
-                  "answers": [
-                    [
-                      "Chị"
-                    ]
-                  ]
-                }
-              ],
-              "noNum": true,
-              "framed": true
-            },
-            {
-              "type": "wordBankFill",
-              "num": 11,
-              "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng thích hợp.",
-              "instructionEn": "Introduce the people below using the appropriate pronouns.",
-              "words": [
-                "anh",
-                "chị",
-                "cô",
-                "chú"
-              ],
-              "items": [
-                {
-                  "img": "images/b1/bai11/ha.jpg",
-                  "name": "Hà",
-                  "template": "{0}",
-                  "answers": "chị"
-                },
-                {
-                  "img": "images/b1/bai11/binh.jpg",
-                  "name": "Bình",
-                  "template": "{0}",
-                  "answers": "chú"
-                },
-                {
-                  "img": "images/b1/bai11/minh.jpg",
-                  "name": "Minh",
-                  "template": "{0}",
-                  "answers": "anh"
-                },
-                {
-                  "img": "images/b1/bai11/lien.jpg",
-                  "name": "Liên",
-                  "template": "{0}",
-                  "answers": "cô"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nghe",
-      "titleVi": "Nghe",
-      "titleEn": "Listening",
-      "subtopics": [
-        {
-          "id": "chao-hoi",
-          "label": "Chào hỏi (Greetings)",
-          "exercises": [
-            {
-              "type": "dialogueFill",
-              "num": 8,
-              "instructionVi": "Nghe và hoàn thành câu.",
-              "instructionEn": "Listen and complete the sentence.",
-              "audio": "audio/b1/{voice}/listen_ex8.mp3",
-              "lines": [
-                {
-                  "speaker": "Ann:",
-                  "template": "{0} bạn.",
-                  "answers": [
-                    [
-                      "Chào"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Tú:",
-                  "template": "Chào {0}. Xin lỗi, bạn {1} là gì?",
-                  "answers": [
-                    [
-                      "bạn"
-                    ],
-                    [
-                      "tên"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Ann:",
-                  "template": "{0} tên là Ann.",
-                  "answers": [
-                    [
-                      "Mình"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Tú:",
-                  "template": "Chào Ann. Bạn {0} không?",
-                  "answers": [
-                    [
-                      "khoẻ",
-                      "khỏe"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Ann:",
-                  "template": "Mình {0}. Bạn {1} là gì?",
-                  "answers": [
-                    [
-                      "khoẻ",
-                      "khỏe"
-                    ],
-                    [
-                      "tên"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Tú:",
-                  "template": "{0} tên {1} Tú.",
-                  "answers": [
-                    [
-                      "Mình"
-                    ],
-                    [
-                      "là"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Ann:",
-                  "template": "Tứ?",
-                  "answers": []
-                },
-                {
-                  "speaker": "Tú:",
-                  "template": "Không, Tú.",
-                  "answers": []
-                },
-                {
-                  "speaker": "Ann:",
-                  "template": "À, {0} {1} bạn.",
-                  "answers": [
-                    [
-                      "xin"
-                    ],
-                    [
-                      "lỗi"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Tú:",
-                  "template": "Không sao.",
-                  "answers": []
-                }
-              ]
-            },
-            {
-              "type": "audioChoice",
-              "num": 9,
-              "instructionVi": "Nghe và chọn câu trả lời đúng.",
-              "instructionEn": "Listen and choose the correct answer.",
-              "audio": "audio/b1/{voice}/listen_ex9.mp3",
-              "items": [
-                {
-                  "audio": "audio/b1/{voice}/listen_ex9_01.mp3",
-                  "options": [
-                    "Anh làm giáo viên.",
-                    "Anh làm nhân viên."
-                  ],
-                  "answer": "a"
-                },
-                {
-                  "audio": "audio/b1/{voice}/listen_ex9_02.mp3",
-                  "options": [
-                    "Chị Lâm làm bác sĩ.",
-                    "Chị Lan làm kỹ sư."
-                  ],
-                  "answer": "a"
-                },
-                {
-                  "audio": "audio/b1/{voice}/listen_ex9_03.mp3",
-                  "options": [
-                    "Em làm công an.",
-                    "Em làm nhân viên."
-                  ],
-                  "answer": "b"
-                },
-                {
-                  "audio": "audio/b1/{voice}/listen_ex9_04.mp3",
-                  "options": [
-                    "Chú Nam làm bác sĩ.",
-                    "Chú Nam làm ca sĩ."
-                  ],
-                  "answer": "b"
-                },
-                {
-                  "audio": "audio/b1/{voice}/listen_ex9_05.mp3",
-                  "options": [
-                    "Mẹ của mình làm giáo viên.",
-                    "Mẹ của mình làm kỹ sư."
-                  ],
-                  "answer": "b"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "doc",
-      "titleVi": "Đọc",
-      "titleEn": "Reading",
-      "subtopics": [
-        {
-          "id": "chao-hoi",
-          "label": "Chào hỏi (Greetings)",
-          "exercises": [
-            {
-              "type": "readingQA",
-              "num": 12,
-              "instructionVi": "Đọc đoạn văn sau và trả lời câu hỏi.",
-              "instructionEn": "Read the following paragraph and answer the questions.",
-              "passage": "Hôm nay Tú gặp Ann và bạn của Ann. Tú chào Ann và hỏi tên bạn của Ann. Bạn của Ann tên là Mike.",
-              "questions": [
-                {
-                  "q": "Hôm nay Tú gặp ai?",
-                  "a": "Hôm nay Tú gặp Ann và bạn của Ann."
-                },
-                {
-                  "q": "Tú hỏi tên bạn của ai?",
-                  "a": "Tú hỏi tên bạn của Ann."
-                },
-                {
-                  "q": "Bạn của Ann tên là gì?",
-                  "a": "Bạn của Ann tên là Mike."
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "viet",
-      "titleVi": "Viết",
-      "titleEn": "Writing",
-      "subtopics": [
-        {
-          "id": "danh-xung",
-          "label": "Danh xưng (Pronouns)",
-          "exercises": [
-            {
-              "type": "chooseWord",
-              "num": 13,
-              "instructionVi": "Chọn từ đúng.",
-              "instructionEn": "Choose the correct words.",
-              "items": [
-                {
-                  "template": "Chào {0}.",
-                  "blanks": [
-                    {
-                      "options": [
-                        "chi",
-                        "chị"
-                      ],
-                      "answer": "chị"
-                    }
-                  ]
-                },
-                {
-                  "template": "Chào anh, anh {0} là gì?",
-                  "blanks": [
-                    {
-                      "options": [
-                        "ten",
-                        "tên"
-                      ],
-                      "answer": "tên"
-                    }
-                  ]
-                },
-                {
-                  "template": "Bạn có {0} không?",
-                  "blanks": [
-                    {
-                      "options": [
-                        "khoé",
-                        "khoẻ"
-                      ],
-                      "answer": "khoẻ"
-                    }
-                  ]
-                },
-                {
-                  "template": "Xin {0}, cô là Mai đúng không?",
-                  "blanks": [
-                    {
-                      "options": [
-                        "lỗi",
-                        "lổi"
-                      ],
-                      "answer": "lỗi"
-                    }
-                  ]
-                },
-                {
-                  "template": "Đây là {0} Bình.",
-                  "blanks": [
-                    {
-                      "options": [
-                        "chủ",
-                        "chú"
-                      ],
-                      "answer": "chú"
-                    }
-                  ]
-                },
-                {
-                  "template": "Bà {0}, {1} ơn con.",
-                  "blanks": [
-                    {
-                      "options": [
-                        "khoé",
-                        "khoẻ"
-                      ],
-                      "answer": "khoẻ"
-                    },
-                    {
-                      "options": [
-                        "cạm",
-                        "cám"
-                      ],
-                      "answer": "cám"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "dialogueFill",
-              "num": 14,
-              "instructionVi": "Hoàn thành đoạn hội thoại sau.",
-              "instructionEn": "Complete the following dialogue.",
-              "lines": [
-                {
-                  "speaker": "Nam:",
-                  "template": "Chào bạn.",
-                  "answers": []
-                },
-                {
-                  "speaker": "Hoa:",
-                  "template": "Chào bạn. Xin lỗi, bạn tên là {0}?",
-                  "answers": [
-                    [
-                      "gì"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Nam:",
-                  "template": "{0} tên là Nam. Còn {1} tên là {2}?",
-                  "answers": [
-                    [
-                      "Mình"
-                    ],
-                    [
-                      "bạn"
-                    ],
-                    [
-                      "gì"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Hoa:",
-                  "template": "{0} tên là Hoa.",
-                  "answers": [
-                    [
-                      "Mình"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Nam:",
-                  "template": "{0} có khoẻ không?",
-                  "answers": [
-                    [
-                      "Bạn"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "Hoa:",
-                  "template": "{0}, {1}.",
-                  "answers": [
-                    [
-                      "Khoẻ",
-                      "Khỏe"
-                    ],
-                    [
-                      "cám ơn",
-                      "cảm ơn"
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noi",
-      "titleVi": "Nói",
-      "titleEn": "Speaking",
-      "subtopics": [
-        {
-          "id": "chao-hoi",
-          "label": "Chào hỏi (Greetings)",
-          "exercises": [
-            {
-              "type": "openIntro",
-              "num": 15,
-              "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng và nghề nghiệp thích hợp.",
-              "instructionEn": "Introduce the people below using the appropriate pronouns and jobs.",
-              "items": [
-                {
-                  "img": "images/b1/bai12/giang.jpg",
-                  "name": "Giang",
-                  "example": "Đây là chị Giang. Chị Giang làm bác sĩ."
-                },
-                {
-                  "img": "images/b1/bai12/mai.jpg",
-                  "name": "Mai"
-                },
-                {
-                  "img": "images/b1/bai12/chi.jpg",
-                  "name": "Chi"
-                },
-                {
-                  "img": "images/b1/bai12/sang.jpg",
-                  "name": "Sang"
-                },
-                {
-                  "img": "images/b1/bai12/hai.jpg",
-                  "name": "Hải"
-                },
-                {
-                  "img": "images/b1/bai12/thu.jpg",
-                  "name": "Thu"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài học — hoc voi hanh</title>
+  <link rel="stylesheet" href="style.css?v=20261118f" />
+  <style>
+  .navbar { background: #fff; }
+  .lesson-nav { display: flex; justify-content: space-between; gap: 14px; margin: 22px 0 8px; }
+  .lesson-nav-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; background: #fff; border: 2px solid var(--stroke, #1B1B28); border-radius: 16px; color: var(--ink, #000); text-decoration: none; font-family: var(--font-display, inherit); font-weight: 700; font-size: 1rem; line-height: 1.2; }
+  a.lesson-nav-btn:hover { background: #FFDCC6; }
+  .lesson-nav-btn.is-disabled { opacity: .4; pointer-events: none; }
+  .lesson-nav-btn.is-next { margin-left: auto; text-align: right; }
+  @media (max-width: 520px) { .lesson-nav-btn { padding: 10px 14px; font-size: .9rem; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="navbar">
+        <a class="brand" href="index.html">hoc voi hanh</a>
+        <div class="nav-right">
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-back-bar wrap">
+    <a class="back-link" id="back-link" href="lessons.html">← Quay lại</a>
+  </div>
+
+  <main class="wrap">
+    <div class="lesson-head">
+      <h1 id="title">Đang tải…</h1>
+    </div>
+    <section class="tab-panel" id="panel"></section>
+    <nav class="lesson-nav" id="lesson-nav" aria-label="Chuyển bài"></nav>
+  </main>
+
+  <footer class="footer"><div class="wrap">hoc voi hanh · học đi đôi với hành</div></footer>
+
+  <div class="bai-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="lesson-shared.js"></script>
+  <script>
+    // ========================================================
+    // bai.html — bài học kiểu "slide dạy học"
+    // Dữ liệu: <level>/bai/<id>.json  (xem _guide trong file JSON)
+    // Khung: sidebar trái = các section (giống Grammar v2), nội dung bên phải.
+    // ========================================================
+    const params = new URLSearchParams(location.search);
+    const itemId = params.get('id') || 'b1';
+    const level = params.get('level') || 'mam';
+    const SAFE_ID = /^[a-z0-9_-]+$/i;
+
+    const $title = document.getElementById('title');
+    const $panel = document.getElementById('panel');
+    const $toast = document.getElementById('toast');
+    document.getElementById('back-link').href = 'lessons.html?level=' + encodeURIComponent(level);
+
+    // ---------- Thông báo nhỏ (dùng khi chưa có file audio) ----------
+    let toastTimer = null;
+    function toast(msg) {
+      $toast.textContent = msg;
+      $toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { $toast.classList.remove('show'); }, 2200);
     }
-  ]
-}
+
+    // ---------- Audio: tên file theo kiểu Telex ----------
+    // ă→aw  â→aa  đ→dd  ê→ee  ô→oo  ơ→ow  ư→uw ; các chữ khác giữ nguyên.
+    // Ví dụ: "đi" → ddi, "bơ" → bow, "tư" → tuw.
+    // Có thanh điệu thì thêm chữ Telex ở CUỐI âm tiết: sắc=s huyền=f hỏi=r ngã=x nặng=j.
+    // Ví dụ: "bố" → boos, "phở" → phowr, "đã" → ddax, "mẹ" → mej. Không dấu thì như cũ.
+    const TONE_MARK = { '\u0301': 's', '\u0300': 'f', '\u0309': 'r', '\u0303': 'x', '\u0323': 'j' };
+    function audioKey(text) {
+      let out = '', tone = '';
+      String(text).normalize('NFD').toLowerCase().split('').forEach(function (ch) {
+        if (TONE_MARK[ch]) tone = TONE_MARK[ch];
+        else if (ch === '\u0306' || ch === '\u031B') out += 'w';            // ă, ơ, ư
+        else if (ch === '\u0302') out += out.charAt(out.length - 1);          // â, ê, ô
+        else if (ch === '\u0111') out += 'dd';                                 // đ
+        else out += ch;
+      });
+      return out + tone;
+    }
+    function audioSrc(template, text) {
+      if (!template) return '';
+      return resolveAudio(template.replace('{key}', audioKey(text)));
+    }
+
+    // File audio chưa có → trình phát báo lỗi → hiện thông báo thay vì im lặng.
+    player.addEventListener('error', function () {
+      if (!currentEl) return;
+      currentEl.classList.remove('playing');
+      toast('Chưa có audio cho “' + (currentEl.dataset.text || '') + '”');
+    });
+
+    // Ô "vần" đầu hàng (ví dụ uôi trong: uôi, chuôi, muối…): chữ nằm trong từ kế bên (bỏ dấu) → không audio.
+    function plainSound(t) {
+      return String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u0111/g, 'd').replace(/\u0110/g, 'D').toLowerCase();
+    }
+    // Ô vần đứng đầu hàng: mọi từ cùng hàng đều chứa nó (bỏ dấu), và có ít nhất một từ dài hơn nó;
+    // hoặc là hàng 1 chip trùng vần của hàng đầu nhóm (vd: um / cúm / giùm … rồi ưm).
+    function isHeadSound(row, i, g) {
+      if (i !== 0 || row[0] == null) return false;
+      const a = plainSound(row[0]);
+      if (row.length === 1) {
+        const first = g && g.rows && g.rows[0];
+        return first === row || (!!first && first[0] != null && plainSound(first[0]) === a);
+      }
+      const rest = row.slice(1).filter(function (w) { return w != null; }).map(plainSound);
+      return rest.every(function (b) { return b.indexOf(a) !== -1; }) && rest.some(function (b) { return b.length > a.length; });
+    }
+    function makeChip(text, template, extraClass, isStatic) {
+      const b = el('button', 'bai-chip' + (extraClass ? ' ' + extraClass : ''), text);
+      b.type = 'button';
+      b.dataset.text = text;
+      b.setAttribute('aria-label', 'Nghe “' + text + '”');
+      if (!template || isStatic) {   // ô vần đầu hàng / không có audio → chỉ để xem (viền đen, nền trắng, không bấm được)
+        b.classList.add('is-static');
+        b.tabIndex = -1;
+        b.setAttribute('aria-label', text);
+      }
+      b.addEventListener('click', function () {
+        if (template && !isStatic) play(audioSrc(template, text), b);
+      });
+      return b;
+    }
+
+    // ---------- Các dạng bài tập ----------
+    function exerciseHead(ex, n) {
+      const wrap = el('div');
+      if (!ex.noNum || ex.instructionVi) {
+        const h = el('h3', 'bai-ex-head');
+        if (!ex.noNum) h.appendChild(el('span', 'bai-ex-num', String(n)));
+        h.appendChild(el('span', 'bai-ex-vi', ex.instructionVi || ''));
+        wrap.appendChild(h);
+      }
+      if (ex.instructionEn) wrap.appendChild(el('p', 'bai-ex-en', ex.instructionEn));
+      return wrap;
+    }
+
+    function renderLetters(ex) {
+      const grid = el('div', 'bai-letters');
+      (ex.rows || []).forEach(function (row) {
+        row.forEach(function (ch) { grid.appendChild(makeChip(ch, ex.audio)); });
+      });
+      return grid;
+    }
+
+    function renderSounds(ex) {
+      if (ex.layout === 'rows') {
+        // Mỗi âm một hàng: chip đầu là âm, các chip sau là từ ví dụ; tự xuống dòng nếu hẹp.
+        const rowsWrap = el('div', 'bai-sounds-rows');
+        let maxN = 1;
+        (ex.columns || []).forEach(function (groups) { groups.forEach(function (g) { (g.rows || []).forEach(function (r) { maxN = Math.max(maxN, r.length); }); }); });
+        (ex.columns || []).forEach(function (groups) {
+          groups.forEach(function (g) {
+            const line = el('div', 'bai-sound-line');
+            line.style.gridTemplateColumns = 'repeat(' + maxN + ', minmax(0, 1fr))';
+            (g.rows || []).forEach(function (row) {
+              row.forEach(function (t, i) { if (t != null) line.appendChild(makeChip(t, ex.audio, 'bai-tone-' + (g.tone || 'violet'), isHeadSound(row, i, g))); });
+            });
+            rowsWrap.appendChild(line);
+          });
+        });
+        if (ex.split > 1) {   // chia các hàng làm N cột đặt cạnh nhau (nửa đầu bên trái, nửa sau bên phải)
+          const lines = Array.prototype.slice.call(rowsWrap.children);
+          const per = Math.ceil(lines.length / ex.split);
+          const split = el('div', 'bai-sounds-split');
+          for (let c = 0; c < ex.split; c++) {
+            const col = el('div', 'bai-sounds-rows');
+            lines.slice(c * per, (c + 1) * per).forEach(function (l) { col.appendChild(l); });
+            split.appendChild(col);
+          }
+          return split;
+        }
+        return rowsWrap;
+      }
+      const wrap = el('div', 'bai-sounds');
+      (ex.columns || []).forEach(function (groups) {
+        const col = el('div', 'bai-sound-col');
+        groups.forEach(function (g) {
+          (g.rows || []).forEach(function (row) {
+            for (let i = 0; i < 3; i++) {
+              if (row[i] == null) {
+                const gap = el('span'); gap.setAttribute('aria-hidden', 'true');
+                col.appendChild(gap);
+              } else {
+                col.appendChild(makeChip(row[i], ex.audio, 'bai-tone-' + (g.tone || 'violet'), isHeadSound(row, i, g)));
+              }
+            }
+          });
+        });
+        wrap.appendChild(col);
+      });
+      return wrap;
+    }
+
+    // Bài 3: nghe & khoanh tròn. Bấm SỐ để nghe (phát âm của đáp án); bấm ô hồng để chọn.
+    function renderListenPick(ex) {
+      const wrap = el('div', 'bai-pick');
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-pick-row');
+        const num = makeChip(String(i + 1), ex.audio, 'bai-tone-lav bai-num');
+        num.dataset.text = 'câu ' + (i + 1);
+        num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        num.addEventListener('click', function () { play(audioSrc(ex.audio, item.answer), num); });
+        row.appendChild(num);
+        (item.options || []).forEach(function (opt) {
+          const b = el('button', 'bai-chip bai-tone-pink bai-opt', opt);
+          b.type = 'button';
+          b.addEventListener('click', function () {
+            if (row.classList.contains('solved')) return;
+            if (opt === item.answer) {
+              b.classList.remove('is-wrong'); b.classList.add('is-correct');
+              row.classList.add('solved');
+            } else {
+              b.classList.add('is-wrong');
+            }
+          });
+          row.appendChild(b);
+        });
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    // Bài 4: bảng thanh điệu. Cột đầu là nhãn thanh, các ô sau bấm để nghe.
+    function renderTones(ex) {
+      const wrap = el('div', 'bai-tones');
+      (ex.rows || []).forEach(function (row) {
+        const tone = 'bai-tone-' + (row.tone || 'lav');
+        wrap.appendChild(el('div', 'bai-chip bai-label ' + tone, row.label));
+        for (let i = 0; i < 4; i++) {
+          if (row.words[i] == null) { const gap = el('span'); gap.setAttribute('aria-hidden', 'true'); wrap.appendChild(gap); }
+          else wrap.appendChild(makeChip(row.words[i], ex.audio, tone));
+        }
+      });
+      return wrap;
+    }
+
+    // Bài 5: nghe tên, điền vào chỗ trống. Bấm SỐ để nghe cả câu.
+    function normName(t) { return String(t).normalize('NFC').trim().toLowerCase(); }
+    function renderFillNames(ex) {
+      const wrap = el('div', 'bai-fill');
+      let activeInput = null;
+      if (ex.words) {
+        const bank = el('div', 'bai-wordbank');
+        ex.words.forEach(function (w) {
+          const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+          chip.addEventListener('click', function () {
+            if (!activeInput) return;
+            activeInput.value = w;
+            activeInput.dispatchEvent(new Event('input'));
+          });
+          bank.appendChild(chip);
+        });
+        wrap.appendChild(bank);
+      }
+      const rows = [];
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-fill-row');
+        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
+        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1);
+        num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        num.addEventListener('click', function () { play(resolveAudio(item.audio), num); });
+        row.appendChild(num);
+
+        const line = el('div', 'bai-fill-line');
+        line.appendChild(document.createTextNode(item.before || ''));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Tên trong câu ' + (i + 1));
+        if (ex.words) { input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch'); input.addEventListener('focus', function () { activeInput = input; }); }
+        line.appendChild(input);
+        line.appendChild(document.createTextNode(item.after || ''));
+        const mark = el('span', 'bai-mark'); line.appendChild(mark);
+        row.appendChild(line);
+        wrap.appendChild(row);
+        rows.push({ item: item, input: input, mark: mark });
+      });
+
+      function check() {
+        rows.forEach(function (r) {
+          const v = normName(r.input.value);
+          const ok = v && r.item.answers.some(function (a) { return normName(a) === v; });
+          r.mark.textContent = !v ? '' : (ok ? '✓' : '✗');
+          r.mark.className = 'bai-mark ' + (!v ? '' : (ok ? 'ok' : 'bad'));
+          r.input.classList.toggle('is-correct', !!ok);
+          r.input.classList.toggle('is-wrong', !!v && !ok);
+        });
+      }
+      function reveal() {
+        rows.forEach(function (r) {
+          r.input.value = r.item.answers[0];
+          r.mark.textContent = '✓'; r.mark.className = 'bai-mark ok';
+          r.input.classList.add('is-correct'); r.input.classList.remove('is-wrong');
+        });
+      }
+      rows.forEach(function (r) {
+        r.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+      });
+      const bar = el('div', 'bai-fill-actions');
+      const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+      bar.appendChild(bCheck); bar.appendChild(bShow);
+      wrap.appendChild(bar);
+      return wrap;
+    }
+
+    // Nghe và lặp lại các câu (không có chỗ trống). Bấm SỐ để nghe cả câu.
+    function renderRepeatSentences(ex) {
+      const wrap = el('div', 'bai-fill');
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-fill-row');
+        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
+        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1);
+        num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        num.addEventListener('click', function () {
+          const src = resolveAudio(item.audio || ex.audio);
+          if (src) play(src, num);
+        });
+        row.appendChild(num);
+        row.appendChild(el('div', 'bai-fill-line', item.text));
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    // Nút nghe 1 đoạn audio cho cả bài (dùng cho bài từ vựng có ảnh).
+    function makeListenBtn(ex, n) {
+      const b = el('button', 'bai-listen', '▶ Nghe');
+      b.type = 'button'; b.dataset.text = 'bài ' + n;
+      b.setAttribute('aria-label', 'Nghe bài ' + n);
+      b.addEventListener('click', function () { play(resolveAudio(ex.audio), b); });
+      return b;
+    }
+    // Ô chữ lớn thay cho hình (dùng khi chưa có ảnh hoặc ảnh không tải được).
+    function makeTextTile(text) {
+      const t = el('div', 'bai-photo-text', text);
+      t.style.cssText = 'display:flex;align-items:center;justify-content:center;width:100%;min-height:130px;aspect-ratio:4/3;font-size:3rem;font-weight:700;border-radius:14px;background:#F1ECFF;color:#4a3d8f;';
+      return t;
+    }
+    // Khung hình tạm (chưa có ảnh): cùng khung đen, tỉ lệ vuông như ảnh thật; dùng item.placeholder = "Hình"
+    function makePhotoPlaceholder(text) {
+      return el('div', 'bai-photo-img bai-photo-ph', typeof text === 'string' ? text : 'Hình');
+    }
+    function makePhoto(src, alt, fallbackText) {
+      const img = document.createElement('img');
+      img.src = src; img.alt = alt || ''; img.loading = 'lazy'; img.className = 'bai-photo-img';
+      if (fallbackText != null) img.addEventListener('error', function () { if (img.parentNode) img.parentNode.replaceChild(makeTextTile(fallbackText), img); });
+      return img;
+    }
+
+    // Bài 6: nhìn hình, nghe mọi người nói. Mỗi người có nút nghe riêng.
+    // Ảnh + câu có chỗ trống (item.example=true thì hiện đáp án tô đỏ thay vì ô nhập).
+    function renderPhotoFill(ex, n) {
+      const box = el('div');
+      if (ex.audio) box.appendChild(makeListenBtn(ex, n));
+      let activeInput = null;
+      if (ex.words) {
+        // Có 'words': hiện ngân hàng từ phía trên; từ đã dùng ở câu ví dụ thì gạch khung, không chọn được.
+        const exItem = (ex.items || []).filter(function (x) { return x.example; })[0];
+        const usedWord = exItem && exItem.answers && exItem.answers[0] ? normName(exItem.answers[0][0]) : '';
+        const bank = el('div', 'bai-wordbank');
+        ex.words.forEach(function (w) {
+          const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+          if (normName(w) === usedWord) {
+            chip.disabled = true;
+            chip.style.textDecoration = 'line-through'; chip.style.opacity = '.55';
+            chip.style.outline = '2px solid var(--stroke)'; chip.style.outlineOffset = '2px'; chip.style.cursor = 'default';
+          } else {
+            chip.addEventListener('click', function () {
+              if (!activeInput) return;
+              activeInput.value = w;
+              activeInput.dispatchEvent(new Event('input'));
+            });
+          }
+          bank.appendChild(chip);
+        });
+        box.appendChild(bank);
+      }
+      const grid = el('div', 'bai-photos');
+      if (ex.columns) { grid.style.gridTemplateColumns = 'repeat(' + ex.columns + ', minmax(0, 1fr))'; grid.style.maxWidth = (ex.columns * 230) + 'px'; }
+      const allCells = [];
+      (ex.items || []).forEach(function (it) {
+        const fig = el('figure', 'bai-photo');
+        const media = el('div', 'bai-photo-media');
+        media.appendChild(!it.img && it.placeholder ? makePhotoPlaceholder(it.placeholder) : makePhoto(it.img, it.name));
+        if (it.audio || ex.audio) {
+          const btn = el('button', 'bai-photo-listen', '▶');
+          btn.type = 'button'; btn.dataset.text = it.name;
+          btn.setAttribute('aria-label', 'Nghe: ' + it.name);
+          btn.addEventListener('click', function () { play(resolveAudio(it.audio || ex.audio), btn); });
+          media.appendChild(btn);
+        }
+        fig.appendChild(media);
+
+        const cap = el('figcaption', 'bai-photo-cap');
+        if (it.example) {
+          String(it.template).split(/(\{0\})/).forEach(function (part) {
+            if (part === '{0}') {
+              const ans = (it.answers && it.answers[0] && it.answers[0][0]) || '';
+              cap.appendChild(el('span', 'bai-fill-example', ans));
+            } else if (part) {
+              cap.appendChild(document.createTextNode(part));
+            }
+          });
+        } else {
+          const built = buildFillLine(it.template, it.answers || [], it.name);
+          const mark = el('span', 'bai-mark');
+          built.line.appendChild(mark);
+          cap.appendChild(built.line);
+          built.cells.forEach(function (c) {
+            if (ex.words) { c.input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch'); c.input.addEventListener('focus', function () { activeInput = c.input; }); }
+            allCells.push({ input: c.input, answers: c.answers, mark: mark });
+          });
+        }
+        fig.appendChild(cap);
+        grid.appendChild(fig);
+      });
+      box.appendChild(grid);
+
+      if (allCells.length) {
+        function check() {
+          allCells.forEach(function (c) {
+            const v = normName(c.input.value);
+            const ok = v && c.answers.some(function (a) { return normName(a) === v; });
+            markCell(c.input, c.mark, !v ? '' : (ok ? 'ok' : 'bad'));
+          });
+        }
+        function reveal() {
+          allCells.forEach(function (c) {
+            c.input.value = c.answers[0] || '';
+            markCell(c.input, c.mark, 'ok');
+          });
+        }
+        allCells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+        box.appendChild(fillCheckBar(allCells, check, reveal));
+      }
+      return box;
+    }
+
+    // Ghi chú ngữ pháp song ngữ (khong tuong tac, chi hien thi).
+    // Dung lai style/ham co san cua grammar.html (lesson-shared.js): khung vang
+    // '.grammar-callout' cho cau truc, va 'makeToggleSection' cho vi du (bam de mo/thu gon).
+    // Chu thich {{...}} trong text -> <span class="bai-hl bai-hl-<tone>"> (nhan manh "khi nào")
+    function hlText(node, text, tone) {
+      if (/\{\{.*?\}\}/.test(String(text || ''))) node.classList.add('has-hl');   // dòng có highlight -> giãn dòng để các khung màu không dính nhau
+      String(text || '').split(/(\{\{.*?\}\})/).forEach(function (part) {
+        const m = /^\{\{(.*)\}\}$/.exec(part);
+        if (m) {   // {{chữ}} = tone mặc định; {{chữ::lav}} / {{chữ::pink}} = chỉ định tone
+          const bits = m[1].split('::');
+          const tn = bits[1] || tone || 'blue';
+          const sp = el('span', 'bai-hl bai-hl-' + tn, bits[0]);
+          // style nội tuyến để vẫn hiện màu kể cả khi trình duyệt còn giữ style.css cũ
+          if (tn === 'red' || tn === 'blueText') { sp.className = 'bai-hl-text'; sp.style.cssText = 'font-weight:700;color:' + (tn === 'red' ? '#EB483F' : '#2F5FD0') + ';'; node.appendChild(sp); return; }   // chỉ tô màu chữ, không nền
+          sp.style.cssText = 'background:' + ({ lav: '#C6C9FF', pink: '#FFC6EF', blue: '#C6E2FF', green: '#D1FF94' }[tn] || '#C6C9FF') + ';padding:0 4px;border-radius:0;color:#000;';
+          node.appendChild(sp);
+        }
+        else if (part) node.appendChild(document.createTextNode(part));
+      });
+      return node;
+    }
+    // Phần Ngữ pháp (section id 'ngu-phap'): chỉ hiện tiếng Anh cho phần giải thích; câu ví dụ tiếng Việt giữ nguyên.
+    let enOnly = false;
+    function renderGrammarNote(ex) {
+      const wrap = el('div', 'bai-grammar');
+      // Tiêu đề dạng "TIẾNG VIỆT – ENGLISH" (hoặc dùng "·"): ngữ pháp chỉ giữ phần tiếng Anh
+      const gTitle = enOnly && ex.title ? String(ex.title).split(/\s+[–·]\s+/).pop() : ex.title;
+      if (gTitle) wrap.appendChild(el('h3', 'bai-grammar-title', gTitle));
+      (ex.blocks || []).forEach(function (b) {
+        if (b.type === 'heading') {
+          const h = el('div', 'bai-grammar-heading' + (b.tone === 'purple' ? ' is-purple' : ''));
+          if (enOnly && b.en) h.appendChild(el('div', 'bai-grammar-heading-vi', b.en));
+          else {
+            h.appendChild(el('div', 'bai-grammar-heading-vi', b.vi != null ? b.vi : (b.text || '')));
+            if (b.en) h.appendChild(el('div', 'bai-grammar-heading-en', b.en));
+          }
+          wrap.appendChild(h);
+        } else if (b.type === 'structure') {
+          const s = el('div', 'grammar-callout bai-grammar-structure');
+          if (enOnly && b.en) s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.en, b.tone));
+          else {
+            s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.vi, b.tone));
+            if (b.en) s.appendChild(hlText(el('div', 'bai-grammar-structure-en'), b.en, b.tone));
+          }
+          wrap.appendChild(s);
+        } else if (b.type === 'paragraph') {
+          const p = el('div', 'bai-grammar-p');
+          if (enOnly && b.en) p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.en, b.tone));
+          else {
+            p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.vi != null ? b.vi : b.text, b.tone));
+            if (b.en && b.vi != null) p.appendChild(hlText(el('div', 'bai-grammar-p-en'), b.en, b.tone));
+          }
+          wrap.appendChild(p);
+        } else if (b.type === 'wordChips') {
+          // danh sách từ ví dụ: mỗi từ là một nút riêng (chỉ để nhìn, không phát audio)
+          const row = el('div', 'bai-wordchips');
+          (b.items || []).forEach(function (w) { row.appendChild(el('span', 'bai-wordchip bai-tone-' + (b.tone || 'lav'), w)); });
+          wrap.appendChild(row);
+        } else if (b.type === 'exampleGroup' && (b.groups || []).length === 1 && (b.groups[0].lines || []).length === 1 && !b.groups[0].lines[0].en && String(b.groups[0].lines[0].vi || '').indexOf('·') > -1) {
+          // dữ liệu cũ dạng "Đã · Mình · Bạn": tự tách thành từng nút
+          const row = el('div', 'bai-wordchips');
+          String(b.groups[0].lines[0].vi).split('·').forEach(function (w) { w = w.trim(); if (w) row.appendChild(el('span', 'bai-wordchip bai-tone-lav', w)); });
+          wrap.appendChild(row);
+        } else if (b.type === 'exampleGroup') {
+          const g = el('div', 'bai-exgroup is-' + (b.tone || 'blue'));
+          if (b.cols > 1) { g.classList.add('is-cols'); g.style.setProperty('--exg-cols', b.cols); }   // cols: các nhóm xếp cạnh nhau (vd. khẳng định | phủ định), tự xuống dòng khi khung hẹp
+          (b.groups || []).forEach(function (it) {
+            const row = el('div', 'bai-exgroup-item');
+            if (it.label) row.appendChild(el('div', 'bai-exgroup-label', it.label));
+            (it.lines || [{ vi: it.vi, en: it.en }]).forEach(function (ln) {   // mỗi nhóm có thể có nhiều cặp vi/en (câu hỏi + câu trả lời)
+              const l = el('div', 'bai-exgroup-line');
+              l.appendChild(hlText(el('div', 'bai-exgroup-vi'), ln.vi, b.tone));
+              if (ln.en) l.appendChild(hlText(el('div', 'bai-exgroup-en'), ln.en, b.tone));
+              row.appendChild(l);
+            });
+            if (it.note) row.appendChild(el('div', 'bai-exgroup-note', it.note));
+            g.appendChild(row);
+          });
+          wrap.appendChild(g);
+        } else if (b.type === 'examplePairs') {
+          // Ví dụ theo cặp (vd. khẳng định | phủ định): nằm trong nút bấm "Ví dụ / Examples"; mỗi cặp 1 khung riêng,
+          // 2 cột cạnh nhau (khung hẹp thì xuống dòng), không có đường kẻ giữa hai câu.
+          const build = function () {
+            const list = el('div', 'bai-expairs');
+            (b.pairs || []).forEach(function (pair) {
+              const card = el('div', 'bai-expair');
+              pair.forEach(function (it) {
+                const cell = el('div', 'bai-expair-cell');
+                if (it.label) cell.appendChild(el('div', 'bai-exgroup-label', it.label));
+                cell.appendChild(hlText(el('div', 'bai-exgroup-vi'), it.vi, b.tone));
+                if (it.en) cell.appendChild(hlText(el('div', 'bai-exgroup-en'), it.en, b.tone));
+                card.appendChild(cell);
+              });
+              list.appendChild(card);
+            });
+            return list;
+          };
+          wrap.appendChild(b.toggle === false ? build() : makeToggleSection(enOnly ? 'Examples' : 'Ví dụ / Examples', build));
+        } else if (b.type === 'table') {
+          const t = el('div', 'bai-grammar-table' + (b.sysFont ? ' is-sysfont' : ''));
+          t.style.gridTemplateColumns = 'repeat(' + (b.columns || []).length + ', minmax(0, 1fr))';
+          // đánh dấu ô cuối hàng / ô hàng cuối để bỏ viền đúng cho bảng 2, 3, 4… cột
+          const nCols = (b.columns || []).length, nRows = (b.rows || []).length;
+          (b.columns || []).forEach(function (c, ci) { t.appendChild(el('div', 'bai-grammar-th' + (ci === nCols - 1 ? ' is-last-col' : '') + (nRows === 0 ? ' is-last-row' : ''), c)); });
+          (b.rows || []).forEach(function (r, ri) { r.forEach(function (c, ci) { t.appendChild(el('div', 'bai-grammar-td' + (ci === nCols - 1 ? ' is-last-col' : '') + (ri === nRows - 1 ? ' is-last-row' : ''), c)); }); });
+          wrap.appendChild(t);
+        } else if (b.type === 'toneChart') {
+          // Biểu đồ cao độ của 6 thanh điệu (HTML + SVG, dùng font & màu của website)
+          const scroll = el('div', 'bai-tonechart-scroll');
+          const chart = el('div', 'bai-tonechart');
+          (b.tones || []).forEach(function (t) {
+            const col = el('div', 'bai-tonechart-col');
+            const head = el('div', 'bai-tonechart-head', t.name); head.style.background = t.color || '#FFC6EF';
+            col.appendChild(head);
+            col.appendChild(el('div', 'bai-tonechart-letter', t.letter));
+            const cell = el('div', 'bai-tonechart-cell');
+            let g = ''; for (let r = 1; r < 7; r++) g += '<line x1="0" y1="' + (r * 20) + '" x2="100" y2="' + (r * 20) + '"/>';   // 7 hàng cao độ
+            cell.style.height = '210px';
+            cell.innerHTML = '<svg viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">'
+              + '<g class="bai-tonechart-grid">' + g + '</g>'
+              + '<path class="bai-tonechart-line" d="' + t.path + '"/></svg>';
+            col.appendChild(cell);
+            chart.appendChild(col);
+          });
+          scroll.appendChild(chart);
+          wrap.appendChild(scroll);
+        } else if (b.type === 'image') {
+          const im = document.createElement('img');
+          im.src = b.src; im.alt = b.alt || '';
+          im.style.cssText = 'display:block;width:100%;max-width:' + (b.maxWidth || 640) + 'px;height:auto;margin:8px 0 16px';
+          wrap.appendChild(im);
+        } else if (b.type === 'examples') {
+          wrap.appendChild(makeToggleSection(enOnly ? 'Examples' : 'Ví dụ / Examples', function () {
+            const list = el('div', 'grammar-examples');
+            (b.items || []).forEach(function (it) {
+              const row = el('div', 'example');
+              row.appendChild(hlText(el('div', 'ex-vi'), it.vi || ''));
+              if (it.en) row.appendChild(hlText(el('div', 'ex-en'), it.en));
+              list.appendChild(row);
+            });
+            return list;
+          }));
+        }
+      });
+      return wrap;
+    }
+
+    // Bang "danh xung theo cap" (tu xung / xung ho / vi du), khong tuong tac.
+    function buildPairCell(items) {
+      const cell = el('div', 'bai-pairs-cell');
+      (items || []).forEach(function (it) {
+        cell.appendChild(el('div', 'bai-pairs-sub bai-tone-' + (it.tone || 'yellow'), it.text));
+      });
+      return cell;
+    }
+    function renderPronounPairs(ex) {
+      const wrap = el('div', 'bai-pairs');
+      if (ex.intro) {
+        const intro = el('div', 'bai-pairs-intro');
+        if (enOnly && ex.intro.en) intro.appendChild(el('div', 'bai-pairs-intro-vi', ex.intro.en));
+        else {
+          intro.appendChild(el('div', 'bai-pairs-intro-vi', ex.intro.vi || ''));
+          if (ex.intro.en) intro.appendChild(el('div', 'bai-pairs-intro-en', ex.intro.en));
+        }
+        wrap.appendChild(intro);
+      }
+      const table = el('div', 'bai-pairs-table');
+      (ex.columns || []).forEach(function (col) {
+        const h = el('div', 'bai-pairs-head');
+        if (enOnly && col.en) h.appendChild(el('div', 'bai-pairs-head-vi', col.en));
+        else {
+          h.appendChild(el('div', 'bai-pairs-head-vi', col.vi || ''));
+          if (col.en) h.appendChild(el('div', 'bai-pairs-head-en', col.en));
+        }
+        table.appendChild(h);
+      });
+      (ex.rows || []).forEach(function (row) {
+        table.appendChild(buildPairCell(row.self));
+        table.appendChild(buildPairCell(row.other));
+        const exCell = el('div', 'bai-pairs-cell bai-pairs-example bai-tone-lav');
+        (row.examples || []).forEach(function (line) {
+          exCell.appendChild(el('div', 'bai-pairs-ex-line', line));
+        });
+        table.appendChild(exCell);
+      });
+      wrap.appendChild(table);
+      return wrap;
+    }
+
+    function renderPhotoVocab(ex, n) {
+      const box = el('div');
+      const grid = el('div', 'bai-photos' + (ex.big ? ' bai-photos-xl' : ''));
+      if (ex.columns) { grid.style.gridTemplateColumns = 'repeat(' + ex.columns + ', minmax(0, 1fr))'; grid.style.maxWidth = (ex.columns * 210) + 'px'; }
+      (ex.items || []).forEach(function (it, i) {
+        const fig = el('figure', 'bai-photo');
+        const media = el('div', 'bai-photo-media');
+        media.appendChild(it.img ? makePhoto(it.img, it.caption, it.big) : it.placeholder ? makePhotoPlaceholder(it.placeholder) : makeTextTile(it.big != null ? it.big : it.caption));
+        const btn = el('button', 'bai-photo-listen', '▶');
+        btn.type = 'button'; btn.dataset.text = it.caption;
+        btn.setAttribute('aria-label', 'Nghe: ' + it.caption);
+        btn.addEventListener('click', function () { play(resolveAudio(it.audio || ex.audio), btn); });
+        media.appendChild(btn);
+        fig.appendChild(media);
+        const cap = el('figcaption', 'bai-photo-cap');
+        const hl = ex.highlight || [];
+        String(it.caption).split(' ').forEach(function (w, wi) {   // tô nổi các từ trong ex.highlight (vd. mốt, tư, lăm, lẻ)
+          if (wi) cap.appendChild(document.createTextNode(' '));
+          if (hl.indexOf(w.toLowerCase()) >= 0) cap.appendChild(el('span', 'bai-hl', w));
+          else cap.appendChild(document.createTextNode(w));
+        });
+        fig.appendChild(cap);
+        grid.appendChild(fig);
+      });
+      box.appendChild(grid);
+      return box;
+    }
+
+    // Vocab (Bài 1): ảnh + câu tiếng Anh + câu tiếng Việt cần điền (→ Cô Hà là ____.)
+    function renderPhotoSentenceFill(ex) {
+      const box = el('div');
+      const grid = el('div', 'bai-photos bai-photos-xl bai-photos-sent');
+      const allCells = [];
+      (ex.items || []).forEach(function (it) {
+        const fig = el('figure', 'bai-photo');
+        fig.appendChild(makePhoto(it.img, it.name));
+        const cap = el('figcaption', 'bai-photo-cap bai-sent-cap');
+        if (it.en) cap.appendChild(el('div', 'bai-sent-en', it.en));
+        const built = buildFillLine(it.template, it.answers || [], it.name);
+        const mark = el('span', 'bai-mark');
+        built.line.appendChild(mark);
+        cap.appendChild(built.line);
+        built.cells.forEach(function (c) {
+          const longest = c.answers.reduce(function (m, a) { return Math.max(m, String(a).length); }, 0);
+          c.input.style.width = (longest * 0.8 + 1.5) + 'ch';
+          c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+          allCells.push({ input: c.input, answers: c.answers, mark: mark });
+        });
+        fig.appendChild(cap);
+        grid.appendChild(fig);
+      });
+      box.appendChild(grid);
+      function check() {
+        allCells.forEach(function (c) {
+          const v = normName(c.input.value);
+          const ok = v && c.answers.some(function (a) { return normName(a) === v; });
+          markCell(c.input, c.mark, !v ? '' : (ok ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() {
+        allCells.forEach(function (c) { c.input.value = c.answers[0]; markCell(c.input, c.mark, 'ok'); });
+      }
+      box.appendChild(fillCheckBar(allCells, check, reveal));
+      return box;
+    }
+
+    // Hoàn thành câu theo sơ đồ: ảnh (tuỳ chọn) + ngân hàng từ + câu có chỗ trống.
+    // Câu ví dụ (example:true) hiện đáp án tô đỏ, và từ đó bị gạch trong ngân hàng từ.
+    function renderBankSentences(ex, n) {
+      const box = el('div');
+      // layout "side": hình bên trái (đứng yên khi cuộn), câu hỏi bên phải
+      const side = ex.layout === 'side' && !!ex.image;
+      const right = side ? el('div', 'bai-side-right') : box;
+      let imgEl = null;
+      if (ex.image) {
+        const im = document.createElement('img');
+        im.src = ex.image; im.alt = ex.imageAlt || '';
+        im.style.cssText = side ? 'display:block;width:100%;height:auto;margin:0'
+          : 'display:block;width:100%;max-width:' + (ex.imageMaxWidth || 640) + 'px;height:auto;margin:4px 0 18px';
+        if (side) imgEl = im; else box.appendChild(im);
+      }
+      let activeInput = null;
+      const exItem = (ex.items || []).filter(function (x) { return x.example; })[0];
+      const usedWord = exItem && exItem.answers && exItem.answers[0] ? normName(exItem.answers[0][0]) : '';
+      const bank = el('div', 'bai-wordbank');
+      (ex.words || []).forEach(function (w) {
+        const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+        if (normName(w) === usedWord) {
+          chip.disabled = true;
+          chip.style.textDecoration = 'line-through'; chip.style.opacity = '.55';
+          chip.style.outline = '2px solid var(--stroke)'; chip.style.outlineOffset = '2px'; chip.style.cursor = 'default';
+        } else {
+          chip.addEventListener('click', function () {
+            if (!activeInput) return;
+            activeInput.value = w;
+            activeInput.dispatchEvent(new Event('input'));
+          });
+        }
+        bank.appendChild(chip);
+      });
+      right.appendChild(bank);
+      const list = el('div', 'bai-fill');
+      const cells = [];
+      let seq = 0;
+      (ex.items || []).forEach(function (it) {
+        if (it.example) {
+          const line = el('div', 'bai-fill-line');
+          line.appendChild(document.createTextNode('Ví dụ\u00A0\u00A0'));
+          String(it.template).split(/(\{\d+\})/).forEach(function (part) {
+            const m = /^\{(\d+)\}$/.exec(part);
+            if (m) line.appendChild(el('span', 'bai-fill-example', (it.answers[Number(m[1])] || [''])[0]));
+            else if (part) line.appendChild(document.createTextNode(part));
+          });
+          list.appendChild(line);
+          return;
+        }
+        seq++;
+        const hasAudio = !!it.audio;
+        const built = buildFillLine(hasAudio ? it.template : seq + '\u00A0\u00A0' + it.template, it.answers || [], 'Câu ' + seq);
+        const mark = el('span', 'bai-mark');
+        built.line.appendChild(mark);
+        built.cells.forEach(function (c) {
+          c.input.style.width = (ex.blankWidth || Math.max(12, (ex.words || []).reduce(function (m, w) { return Math.max(m, String(w).length); }, 0) + 4) + 'ch');
+          if (ex.blankWidth) c.input.style.margin = '0 1px';   // ô điền ngắn (1 chữ cái) dính sát chữ xung quanh để đọc liền như một từ
+          c.input.addEventListener('focus', function () { activeInput = c.input; });
+          cells.push({ input: c.input, answers: c.answers, mark: mark });
+        });
+        if (hasAudio) {
+          // Có audio: số câu là nút nghe (giống dạng "nghe và hoàn thành câu")
+          const row = el('div', 'bai-fill-row');
+          const num = el('button', 'bai-chip bai-tone-lav bai-num', String(seq));
+          num.type = 'button'; num.dataset.text = 'câu ' + seq;
+          num.setAttribute('aria-label', 'Nghe câu ' + seq);
+          num.addEventListener('click', function () { play(resolveAudio(it.audio), num); });
+          row.appendChild(num);
+          row.appendChild(built.line);
+          list.appendChild(row);
+        } else {
+          list.appendChild(built.line);
+        }
+      });
+      right.appendChild(list);
+      function check() {
+        cells.forEach(function (c) {
+          const v = normName(c.input.value);
+          const ok = v && c.answers.some(function (a) { return normName(a) === v; });
+          markCell(c.input, c.mark, !v ? '' : (ok ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() { cells.forEach(function (c) { c.input.value = c.answers[0] || ''; markCell(c.input, c.mark, 'ok'); }); }
+      cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+      right.appendChild(fillCheckBar(cells, check, reveal));
+      if (side) {
+        const wrap = el('div', 'bai-side');
+        const left = el('div', 'bai-side-img');
+        left.appendChild(imgEl);
+        wrap.appendChild(left);
+        wrap.appendChild(right);
+        box.appendChild(wrap);
+      }
+      return box;
+    }
+
+    // Bài 7: nghe và đánh số hình theo thứ tự nghe được. Có 'answer' thì mới chấm được.
+    function renderPhotoOrder(ex, n) {
+      const box = el('div');
+      box.appendChild(makeListenBtn(ex, n));
+      const grid = el('div', 'bai-photos');
+      const cells = [];
+      (ex.items || []).forEach(function (it, i) {
+        const fig = el('figure', 'bai-photo');
+        fig.appendChild(makePhoto(it.img, 'Hình ' + (i + 1)));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-order'; input.maxLength = 1;
+        input.inputMode = 'numeric'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Số thứ tự hình ' + (i + 1));
+        if (it.example != null) { input.value = String(it.example); input.disabled = true; input.classList.add('is-example'); }
+        fig.appendChild(input);
+        const mark = el('span', 'bai-mark'); fig.appendChild(mark);
+        grid.appendChild(fig);
+        cells.push({ it: it, input: input, mark: mark });
+      });
+      box.appendChild(grid);
+
+      const gradable = cells.some(function (c) { return c.it.answer != null; });
+      if (gradable) {
+        function check() {
+          cells.forEach(function (c) {
+            if (c.it.answer == null) return;
+            const v = c.input.value.trim();
+            const ok = v === String(c.it.answer);
+            c.mark.textContent = !v ? '' : (ok ? '✓' : '✗');
+            c.mark.className = 'bai-mark ' + (!v ? '' : (ok ? 'ok' : 'bad'));
+            c.input.classList.toggle('is-correct', !!v && ok);
+            c.input.classList.toggle('is-wrong', !!v && !ok);
+          });
+        }
+        function reveal() {
+          cells.forEach(function (c) {
+            if (c.it.answer == null) return;
+            c.input.value = String(c.it.answer);
+            c.mark.textContent = '✓'; c.mark.className = 'bai-mark ok';
+            c.input.classList.add('is-correct'); c.input.classList.remove('is-wrong');
+          });
+        }
+        cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+        const bar = el('div', 'bai-fill-actions');
+        const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+        const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+        bar.appendChild(bCheck); bar.appendChild(bShow);
+        box.appendChild(bar);
+      }
+      return box;
+    }
+
+    // ---------- Dạng dùng chung: điền vào chỗ trống trong 1 dòng, có thể nhiều ô trống ----------
+    // template: "Chào {0}. Bạn {1} là gì?" — {n} là ô trống, answers[n] là mảng đáp án chấp nhận.
+    function buildFillLine(template, answers, prefix) {
+      const line = el('div', 'bai-fill-line');
+      let i = 0;
+      const cells = [];
+      String(template).split(/(\{\d+\})/).forEach(function (part) {
+        const m = /^\{(\d+)\}$/.exec(part);
+        if (!m) { if (part) line.appendChild(document.createTextNode(part)); return; }
+        const idx = Number(m[1]);
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', (prefix || 'Ô trống') + ' ' + (idx + 1));
+        line.appendChild(input);
+        cells.push({ input: input, answers: answers[idx] || [] });
+        i++;
+      });
+      return { line: line, cells: cells };
+    }
+    function fillCheckBar(allCells, onCheck, onReveal) {
+      const bar = el('div', 'bai-fill-actions');
+      const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', onCheck);
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', onReveal);
+      bar.appendChild(bCheck); bar.appendChild(bShow);
+      return bar;
+    }
+    function markCell(input, mark, state) {
+      // state: '' empty, 'ok', 'bad'
+      mark.textContent = state === 'ok' ? '✓' : state === 'bad' ? '✗' : '';
+      mark.className = 'bai-mark ' + (state === 'ok' ? 'ok' : state === 'bad' ? 'bad' : '');
+      input.classList.toggle('is-correct', state === 'ok');
+      input.classList.toggle('is-wrong', state === 'bad');
+    }
+
+    // Bài 8, 10, 13: hội thoại có nhiều chỗ trống. Có thể có 1 audio nghe cả bài (bài 8) hoặc không (bài 10, 13).
+    function renderDialogueFill(ex, n) {
+      const box = el('div');
+      if (ex.audio) box.appendChild(makeListenBtn(ex, n));
+      const wrap = el('div', 'bai-dialog');
+      const allCells = [];
+      let group = null;   // ex.framed: mỗi câu (bắt đầu bằng số thứ tự ở dòng đầu) nằm trong 1 khung
+      (ex.lines || []).forEach(function (ln) {
+        const row = el('div', 'bai-dialog-row');
+        row.appendChild(el('span', 'bai-dialog-speaker', ln.speaker));
+        const built = buildFillLine(ln.template, ln.answers || [], ln.speaker);
+        const mark = el('span', 'bai-mark');
+        built.line.appendChild(mark);
+        row.appendChild(built.line);
+        if (ex.framed) {
+          if (!group || /^\s*\d/.test(ln.speaker)) { group = el('div', 'bai-dialog-group'); wrap.appendChild(group); }
+          group.appendChild(row);
+        } else wrap.appendChild(row);
+        built.cells.forEach(function (c) { allCells.push({ input: c.input, answers: c.answers, mark: mark, multi: built.cells.length > 1 }); });
+      });
+      box.appendChild(wrap);
+      function marksFor(cell) {
+        // mỗi dòng dùng chung 1 ô ✓/✗ cuối dòng nếu chỉ có 1 ô trống, còn nhiều ô thì gộp theo dòng
+      }
+      function check() {
+        // gộp theo từng dòng: đúng khi mọi ô trong dòng đều khớp
+        const byMark = new Map();
+        allCells.forEach(function (c) { if (!byMark.has(c.mark)) byMark.set(c.mark, []); byMark.get(c.mark).push(c); });
+        byMark.forEach(function (cells) {
+          let anyFilled = false, allOk = true;
+          cells.forEach(function (c) {
+            const v = normName(c.input.value);
+            if (v) anyFilled = true;
+            const ok = v && c.answers.some(function (a) { return normName(a) === v; });
+            c.input.classList.toggle('is-correct', !!ok);
+            c.input.classList.toggle('is-wrong', !!v && !ok);
+            if (!ok) allOk = false;
+          });
+          const mark = cells[0].mark;
+          mark.textContent = !anyFilled ? '' : (allOk ? '✓' : '✗');
+          mark.className = 'bai-mark ' + (!anyFilled ? '' : (allOk ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() {
+        allCells.forEach(function (c) { c.input.value = c.answers[0] || ''; c.input.classList.add('is-correct'); c.input.classList.remove('is-wrong'); });
+        const marks = new Set(allCells.map(function (c) { return c.mark; }));
+        marks.forEach(function (m) { m.textContent = '✓'; m.className = 'bai-mark ok'; });
+      }
+      allCells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+      box.appendChild(fillCheckBar(allCells, check, reveal));
+      return box;
+    }
+
+    // Bài 9: nghe và chọn câu trả lời đúng (a/b). 'answer' để trống nếu chưa có audio để xác định.
+    function renderAudioChoice(ex, n) {
+      const wrap = el('div', 'bai-achoice');
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-achoice-row');
+        const head = el('div', 'bai-achoice-head');
+        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
+        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1); num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
+        head.appendChild(num);
+        if (item.text) head.appendChild(el('div', 'bai-achoice-text', item.text));
+        row.appendChild(head);
+        const opts = el('div', 'bai-achoice-opts');
+        (item.options || []).forEach(function (opt, oi) {
+          const letter = String.fromCharCode(97 + oi);
+          const b = el('button', 'bai-achoice-opt', letter + '.\u00A0\u00A0' + opt);
+          b.type = 'button';
+          b.addEventListener('click', function () {
+            if (row.classList.contains('solved') && item.answer != null) return;
+            Array.prototype.forEach.call(opts.children, function (c) { c.classList.remove('is-picked'); });
+            b.classList.add('is-picked');
+            if (item.answer == null) return;
+            if (letter === item.answer) { b.classList.add('is-correct'); row.classList.add('solved'); }
+            else b.classList.add('is-wrong');
+          });
+          opts.appendChild(b);
+        });
+        row.appendChild(opts);
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    // Chọn câu đúng (không audio): mỗi item { options:[...], answer:"a" }.
+    function renderChooseSentence(ex, n) {
+      const wrap = el('div', 'bai-achoice');
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-achoice-row');
+        const head = el('div', 'bai-achoice-head');
+        head.appendChild(el('div', 'bai-achoice-text', String(i + 1) + '.' + (item.prompt ? '\u00A0\u00A0' + item.prompt : '')));
+        row.appendChild(head);
+        const opts = el('div', 'bai-achoice-opts');
+        (item.options || []).forEach(function (opt, oi) {
+          const letter = String.fromCharCode(97 + oi);
+          const b = el('button', 'bai-achoice-opt', letter + '.\u00A0\u00A0' + opt);
+          b.type = 'button';
+          b.addEventListener('click', function () {
+            if (row.classList.contains('solved')) return;
+            if (letter === item.answer) { b.classList.add('is-correct'); row.classList.add('solved'); }
+            else b.classList.add('is-wrong');
+          });
+          opts.appendChild(b);
+        });
+        row.appendChild(opts);
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    // Bài 11 (ngữ pháp): ảnh + chỗ trống, có ô từ để bấm điền (anh/chị/cô/chú).
+    function renderWordBankFill(ex, n) {
+      const box = el('div');
+      const bank = el('div', 'bai-wordbank');
+      (ex.words || []).forEach(function (w) { bank.appendChild(el('div', 'bai-chip bai-tone-lav', w)); });
+      box.appendChild(bank);
+      const grid = el('div', 'bai-photos bai-photos-4');
+      let activeInput = null;
+      const cells = [];
+      (ex.items || []).forEach(function (it, i) {
+        const fig = el('figure', 'bai-photo');
+        fig.appendChild(makePhoto(it.img, it.name));
+        const built = buildFillLine((i + 1) + '\u00A0\u00A0Đây là ' + it.template + ' ' + it.name + '.', [it.answers], 'người ' + (i + 1));
+        const mark = el('span', 'bai-mark');
+        built.line.appendChild(mark);
+        fig.appendChild(built.line);
+        grid.appendChild(fig);
+        const input = built.cells[0].input;
+        input.addEventListener('focus', function () { activeInput = input; });
+        const answers = Array.isArray(it.answers) ? it.answers : [it.answers];
+        cells.push({ input: input, answers: answers, mark: mark });
+      });
+      box.appendChild(grid);
+      Array.prototype.forEach.call(bank.children, function (chip) {
+        chip.addEventListener('click', function () {
+          if (!activeInput) return;
+          activeInput.value = chip.textContent;
+          activeInput.dispatchEvent(new Event('input'));
+        });
+      });
+      function check() {
+        cells.forEach(function (c) {
+          const v = normName(c.input.value);
+          const ok = v && c.answers.some(function (a) { return normName(a) === v; });
+          markCell(c.input, c.mark, !v ? '' : (ok ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() {
+        cells.forEach(function (c) { c.input.value = c.answers[0]; markCell(c.input, c.mark, 'ok'); });
+      }
+      cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); });
+      box.appendChild(fillCheckBar(cells, check, reveal));
+      return box;
+    }
+
+    // Bài 5 (b2): lịch 3 ngày (ảnh hoạt động mỗi ngày) + ngân hàng từ + câu điền chỗ trống.
+    // Item có 'distinct: true' (2 ô, đáp án gồm cả 2 thứ tự) thì 2 ô phải khác nhau.
+    function renderCalendarFill(ex, n) {
+      const box = el('div');
+      const cal = el('div', 'bai-cal');
+      cal.style.display = 'grid'; cal.style.gap = '12px'; cal.style.maxWidth = '520px'; cal.style.marginBottom = '18px';
+      const days = ex.days || [];
+      cal.style.gridTemplateColumns = 'repeat(' + Math.max(days.length, 1) + ', minmax(0, 1fr))';
+      // Chế độ ma trận (b4 bài 5): hàng dọc = người, hàng ngang = ngày.
+      // ex.matrix = {columns:[{date,label,tone}...], rows:[{name,tone,cells:[{img,alt}|null...]}]}
+      if (ex.matrix) {
+        const mx = ex.matrix, ncol = (mx.columns || []).length;
+        cal.className = 'bai-cal bai-cal-matrix';
+        cal.style.maxWidth = (ncol < 3 ? '420px' : '600px'); cal.style.gap = '8px';
+        cal.style.gridTemplateColumns = 'minmax(64px, .8fr) repeat(' + ncol + ', minmax(0, 1fr))';
+        cal.appendChild(el('div'));
+        (mx.columns || []).forEach(function (c) {
+          const dh = el('div', 'bai-chip bai-tone-' + (c.tone || 'yellow'));
+          dh.style.flexDirection = 'column'; dh.style.height = 'auto'; dh.style.minHeight = '54px'; dh.style.padding = '6px'; dh.style.cursor = 'default';
+          dh.appendChild(el('div', '', c.title ? c.title : 'Ngày ' + c.date));
+          if (c.label) { const t = el('div', '', c.label); t.style.fontSize = '.8rem'; t.style.color = '#dc2626'; t.style.fontWeight = '700'; dh.appendChild(t); }
+          cal.appendChild(dh);
+        });
+        (mx.rows || []).forEach(function (r) {
+          const nm = el('div', 'bai-chip bai-tone-' + (r.tone || 'lav'));
+          nm.style.flexDirection = 'column'; nm.style.height = 'auto'; nm.style.minHeight = '44px'; nm.style.cursor = 'default';
+          nm.appendChild(el('div', '', r.name));
+          if (r.label) { const t = el('div', '', r.label); t.style.fontSize = '.8rem'; t.style.color = '#dc2626'; t.style.fontWeight = '700'; nm.appendChild(t); }
+          cal.appendChild(nm);
+          (r.cells || []).forEach(function (c) {
+            const cell = el('div'); cell.style.display = 'flex'; cell.style.alignItems = 'center'; cell.style.justifyContent = 'center';
+            if (c && c.img) cell.appendChild(makePhoto(c.img, c.alt));
+            else if (c && c.text) { const tc = el('div', 'bai-chip bai-tone-lav', c.text); tc.style.height = 'auto'; tc.style.minHeight = '44px'; tc.style.width = '100%'; tc.style.cursor = 'default'; cell.style.width = '100%'; cell.appendChild(tc); }
+            cal.appendChild(cell);
+          });
+        });
+      }
+      (ex.matrix ? [] : days).forEach(function (d) {
+        const col = el('div'); col.style.display = 'flex'; col.style.flexDirection = 'column'; col.style.gap = '10px';
+        const head = el('div', 'bai-chip bai-tone-' + (d.tone || 'yellow'));
+        head.style.flexDirection = 'column'; head.style.height = 'auto'; head.style.minHeight = '54px'; head.style.padding = '8px 6px'; head.style.cursor = 'default';
+        head.appendChild(el('div', '', 'Ngày ' + d.date));
+        if (d.label) { const t = el('div', '', d.label); t.style.fontSize = '.85rem'; t.style.color = '#dc2626'; t.style.fontWeight = '700'; head.appendChild(t); }
+        col.appendChild(head);
+        (d.imgs || []).forEach(function (im) { col.appendChild(makePhoto(im.img, im.alt)); });
+        cal.appendChild(col);
+      });
+      box.appendChild(cal);
+
+      let activeInput = null;
+      const bank = el('div', 'bai-wordbank');
+      (ex.words || []).forEach(function (w) {
+        const chip = el('button', 'bai-chip bai-tone-lav', w); chip.type = 'button';
+        chip.addEventListener('click', function () {
+          if (!activeInput) return;
+          activeInput.value = w;
+          activeInput.dispatchEvent(new Event('input'));
+        });
+        bank.appendChild(chip);
+      });
+      box.appendChild(bank);
+
+      const lines = el('div'); lines.style.display = 'grid'; lines.style.gap = '10px';
+      const groups = [];
+      (ex.items || []).forEach(function (it, i) {
+        if (it.example) {
+          const exLine = el('div', 'bai-fill-line');
+          const parts = it.template.split('{0}');
+          exLine.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
+          exLine.appendChild(el('span', 'bai-example', it.answers[0][0]));
+          exLine.appendChild(document.createTextNode(parts[1] || ''));
+          lines.appendChild(exLine);
+          return;
+        }
+        const built = buildFillLine((i + 1) + '\u00A0\u00A0' + it.template, it.answers || [], 'Câu ' + (i + 1));
+        const mark = el('span', 'bai-mark');
+        built.line.appendChild(mark);
+        lines.appendChild(built.line);
+        built.cells.forEach(function (c) {
+          c.input.style.width = '10ch';
+          c.input.addEventListener('focus', function () { activeInput = c.input; });
+        });
+        groups.push({ cells: built.cells, mark: mark, distinct: !!it.distinct });
+      });
+      box.appendChild(lines);
+
+      function check() {
+        groups.forEach(function (g) {
+          const vals = g.cells.map(function (c) { return normName(c.input.value); });
+          const oks = g.cells.map(function (c, k) { return !!vals[k] && c.answers.some(function (a) { return normName(a) === vals[k]; }); });
+          if (g.distinct && vals.length > 1 && vals[0] && vals[0] === vals[1]) oks.fill(false);
+          g.cells.forEach(function (c, k) { markCell(c.input, g.mark, !vals[k] ? '' : (oks[k] ? 'ok' : 'bad')); });
+          const all = oks.every(Boolean), any = vals.some(Boolean);
+          g.mark.textContent = !any ? '' : (all ? '✓' : '✗');
+          g.mark.className = 'bai-mark ' + (!any ? '' : (all ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() {
+        groups.forEach(function (g) {
+          g.cells.forEach(function (c) { c.input.value = c.answers[0] || ''; c.input.classList.remove('is-wrong'); c.input.classList.add('is-correct'); });
+          g.mark.textContent = '✓'; g.mark.className = 'bai-mark ok';
+        });
+      }
+      groups.forEach(function (g) { g.cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); }); });
+      box.appendChild(fillCheckBar(groups, check, reveal));
+      return box;
+    }
+
+    // Bài 11 (nói): ảnh + tự giới thiệu tên và nghề — luyện nói tự do, không chấm điểm.
+    function renderOpenIntro(ex, n) {
+      const grid = el('div', 'bai-photos bai-photos-2');
+      (ex.items || []).forEach(function (it, i) {
+        const fig = el('figure', 'bai-photo bai-photo-wide');
+        fig.appendChild(makePhoto(it.img, it.name));
+        if (it.example) {
+          // Câu ví dụ tách theo câu (mỗi câu 1 dòng) để không bị xuống dòng giữa chừng
+          const cap = el('div', 'bai-fill-line');
+          const parts = String(it.example).split(/(?<=[.!?])\s+/);
+          parts.forEach(function (part, k) {
+            const row = el('div');
+            row.appendChild(document.createTextNode(k === 0 ? (i + 1) + '\u00A0\u00A0' : '\u00A0\u00A0\u00A0\u00A0'));
+            row.appendChild(el('span', 'bai-example', part));
+            cap.appendChild(row);
+          });
+          fig.appendChild(cap);
+        } else {
+          // Dòng 1: "Đây là ___ Name." — dòng 2: "___ Name làm ___."
+          const line1 = el('div', 'bai-fill-line');
+          line1.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0Đây là '));
+          const p1 = document.createElement('input');
+          p1.type = 'text'; p1.className = 'bai-blank bai-blank-wide'; p1.autocomplete = 'off';
+          p1.setAttribute('aria-label', 'Đại từ cho ' + it.name);
+          line1.appendChild(p1);
+          line1.appendChild(document.createTextNode(' ' + it.name + '.'));
+
+          const line2 = el('div', 'bai-fill-line');
+          const p2 = document.createElement('input');
+          p2.type = 'text'; p2.className = 'bai-blank bai-blank-wide'; p2.autocomplete = 'off';
+          p2.setAttribute('aria-label', 'Đại từ cho ' + it.name + ' (câu 2)');
+          line2.appendChild(p2);
+          line2.appendChild(document.createTextNode(' ' + it.name + ' làm '));
+          const job = document.createElement('input');
+          job.type = 'text'; job.className = 'bai-blank bai-blank-wide'; job.autocomplete = 'off';
+          job.setAttribute('aria-label', 'Nghề nghiệp cho ' + it.name);
+          line2.appendChild(job);
+          line2.appendChild(document.createTextNode('.'));
+
+          fig.appendChild(line1);
+          fig.appendChild(line2);
+        }
+        grid.appendChild(fig);
+      });
+      return grid;
+    }
+
+    // Luyện nói theo hình: A hỏi "Bạn có biết X là ai không?", B trả lời nghề nghiệp + quốc tịch.
+    // Câu example hiện đáp án màu đỏ; các câu còn lại để trống 4 ô (câu hỏi, nghề, đại từ, quốc tịch) + nút xem đáp án.
+    function renderPhotoSpeak(ex, n) {
+      const grid = el('div', 'bai-photos bai-photos-speak');
+      (ex.items || []).forEach(function (it, i) {
+        const fig = el('figure', 'bai-photo bai-photo-wide');
+        fig.appendChild(makePhoto(it.img, it.name));
+        const qFull = 'Bạn có biết ' + it.name + ' là ai không?';
+        const aFull = it.name + ' là ' + it.job + '. ' + it.pronoun + ' là người ' + it.country + '.';
+        const mkBlank = function (label, cls) {
+          const inp = document.createElement('input');
+          inp.type = 'text'; inp.className = 'bai-blank ' + (cls || 'bai-blank-wide'); inp.autocomplete = 'off';
+          inp.setAttribute('aria-label', label + ' (' + it.name + ')');
+          return inp;
+        };
+        const lineA = el('div', 'bai-fill-line');
+        const lineB = el('div', 'bai-fill-line');
+        if (it.example) {
+          lineA.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0A: ' + qFull));
+          lineB.appendChild(document.createTextNode('B: ' + it.name + ' là '));
+          lineB.appendChild(el('span', 'bai-example', it.job));
+          lineB.appendChild(document.createTextNode('. ' + it.pronoun + ' là '));
+          lineB.appendChild(el('span', 'bai-example', 'người ' + it.country));
+          lineB.appendChild(document.createTextNode('.'));
+          fig.appendChild(lineA); fig.appendChild(lineB);
+        } else {
+          lineA.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0A: '));
+          lineA.appendChild(mkBlank('Câu hỏi', 'bai-blank-wide bai-blank-q'));
+          lineA.appendChild(document.createTextNode('?'));
+          lineB.appendChild(document.createTextNode('B: ' + it.name + ' là '));
+          lineB.appendChild(mkBlank('Nghề nghiệp'));
+          lineB.appendChild(document.createTextNode('. ' + it.pronoun + ' là '));
+          lineB.appendChild(mkBlank('Quốc tịch'));
+          lineB.appendChild(document.createTextNode('.'));
+          const key = el('details', 'bai-speak-key');
+          key.appendChild(el('summary', '', 'Xem đáp án'));
+          key.appendChild(el('div', '', 'A: ' + qFull));
+          key.appendChild(el('div', '', 'B: ' + aFull));
+          fig.appendChild(lineA); fig.appendChild(lineB); fig.appendChild(key);
+        }
+        grid.appendChild(fig);
+      });
+      return grid;
+    }
+
+    function buildQATable(t) {
+      const wrap = el('div');
+      wrap.style.overflowX = 'auto';
+      wrap.style.margin = '10px 0 20px';
+      const table = document.createElement('table');
+      table.className = 'grammar-table';
+      // rows: nhãn hàng (vd. tên người); cols: nhãn cột (vd. món ăn/uống); marks[rowVal][colVal] = '✓' | 'x'
+      const rowLabels = t.rows || t.people || [];
+      const colLabels = t.cols || t.items || [];
+      const thead = document.createElement('thead');
+      const headRow = document.createElement('tr');
+      headRow.appendChild(document.createElement('th'));
+      colLabels.forEach(function (c) {
+        const th = document.createElement('th'); th.textContent = c; th.style.textAlign = 'center';
+        headRow.appendChild(th);
+      });
+      thead.appendChild(headRow);
+      table.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      rowLabels.forEach(function (r) {
+        const tr = document.createElement('tr');
+        const th = document.createElement('td'); th.textContent = r;
+        tr.appendChild(th);
+        colLabels.forEach(function (c) {
+          const td = document.createElement('td');
+          td.style.textAlign = 'center';
+          const mark = (t.marks && t.marks[r] && t.marks[r][c]) || '';
+          td.textContent = mark;
+          if (mark === '✓') { td.style.color = '#1E7A43'; td.style.fontWeight = '800'; }
+          if (mark === 'x') { td.style.color = '#EB483F'; td.style.fontWeight = '800'; }
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      wrap.appendChild(table);
+      return wrap;
+    }
+
+    // Bài 11 (đọc): đoạn văn/bảng + câu hỏi, chỉ có nút xem đáp án (câu trả lời tự do, không chấm đúng/sai).
+    function renderReadingQA(ex, n) {
+      const box = el('div');
+      if (ex.table) box.appendChild(buildQATable(ex.table));
+      if (ex.passage) { const ps = el('p', 'bai-passage', ex.passage); ps.style.whiteSpace = 'pre-line'; box.appendChild(ps); }
+      const rows = [];
+      (ex.questions || []).forEach(function (q, i) {
+        const num = (q.num != null) ? q.num : (i + 1);
+        const row = el('div', 'bai-fill-row bai-qa-row');
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
+        if (ex.blankFirst && q.example) {   // câu ví dụ: hiện sẵn câu hỏi mẫu (tô đỏ) + câu trả lời gợi ý, không có ô nhập
+          const exLine = el('div', 'bai-fill-line');
+          exLine.appendChild(document.createTextNode('Ví dụ:\u00A0\u00A0'));
+          exLine.appendChild(el('span', 'bai-fill-example', q.a));
+          exLine.style.margin = '0 0 6px';
+          box.appendChild(exLine);
+          const exHint = el('div', 'bai-fill-line', q.q);
+          exHint.style.margin = '0 0 20px';
+          box.appendChild(exHint);
+          return;
+        }
+        if (ex.blankFirst) {
+          // Dạng "đặt câu hỏi": số + chỗ trống cùng 1 dòng (sát nhau), gợi ý cách dòng trên 1 khoảng rõ.
+          input.setAttribute('aria-label', 'Câu hỏi cho câu ' + num);
+          const line = el('div', 'bai-fill-row');
+          line.style.gridTemplateColumns = '24px 1fr';
+          line.style.columnGap = '8px';
+          const numSpan = el('span', 'bai-qa-q', String(num));
+          numSpan.style.marginBottom = '0';
+          line.appendChild(numSpan);
+          line.appendChild(input);
+          box.appendChild(line);
+          const hint = el('div', 'bai-fill-line', q.q);
+          hint.style.margin = '10px 0 20px';
+          box.appendChild(hint);
+          rows.push({ input: input, answer: q.a });
+          return;
+        }
+        row.appendChild(el('span', 'bai-qa-q', num + '\u00A0\u00A0' + q.q));
+        if (q.example) {
+          const sample = el('div', 'bai-fill-line', '\u2192\u00A0' + q.a);
+          sample.style.margin = '2px 0 14px';
+          row.appendChild(sample);
+        } else {
+          input.setAttribute('aria-label', 'Trả lời câu ' + num);
+          row.appendChild(input);
+          rows.push({ input: input, answer: q.a });
+        }
+        box.appendChild(row);
+      });
+      const bar = el('div', 'bai-fill-actions');
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án gợi ý'); bShow.type = 'button';
+      bShow.addEventListener('click', function () { rows.forEach(function (r) { r.input.value = r.answer; }); });
+      bar.appendChild(bShow);
+      box.appendChild(bar);
+      return box;
+    }
+
+    // Bài 12 (viết): chọn từ đúng trong ngoặc. Mỗi item: template có {0},{1}... và blanks[] { options, answer }.
+    function renderChooseWord(ex, n) {
+      const wrap = el('div', 'bai-choose');
+      let itemNo = 0;
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-choose-row');
+        if (item.example) row.appendChild(document.createTextNode('Ví dụ:\u00A0\u00A0'));   // câu ví dụ: hiện sẵn đáp án (tô đỏ), không đánh số
+        else if (!ex.noItemNum) row.appendChild(document.createTextNode((++itemNo) + '\u00A0\u00A0'));
+        let solvedCount = 0;
+        const blanks = item.blanks || [];
+        const total = blanks.filter(function (b) { return b.options && b.options.length; }).length;
+        String(item.template).split(/(\{\d+\})/).forEach(function (part) {
+          const m = /^\{(\d+)\}$/.exec(part);
+          if (!m) { if (part) row.appendChild(document.createTextNode(part)); return; }
+          const blank = blanks[Number(m[1])];
+          if (item.example) { row.appendChild(el('span', 'bai-fill-example', blank.answer)); return; }
+          blank.options.forEach(function (opt, oi) {
+            if (oi) row.appendChild(document.createTextNode(' / '));
+            const b = el('button', 'bai-chip bai-tone-pink bai-opt', opt);
+            b.type = 'button';
+            b.addEventListener('click', function () {
+              if (b.dataset.solved) return;
+              if (opt === blank.answer) { b.classList.add('is-correct'); b.dataset.solved = '1'; solvedCount++; }
+              else b.classList.add('is-wrong');
+            });
+            row.appendChild(b);
+          });
+        });
+        wrap.appendChild(row);
+      });
+      return wrap;
+    }
+
+    // Bài 8 (b2): sắp xếp các từ thành câu hỏi. Bấm từ ở ngân hàng để đưa lên dòng câu, bấm lại để bỏ xuống.
+    // item: { words:[...], answers:[câu chấp nhận...], example:true }
+    function normSentence(s) {
+      return String(s).normalize('NFC').toLowerCase().replace(/[.,!?;:]/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+    function renderWordOrder(ex, n) {
+      const box = el('div', 'bai-order-list');
+      const rows = [];
+      (ex.items || []).forEach(function (it, i) {
+        const row = el('div', 'bai-order-row');
+        row.appendChild(el('div', 'bai-order-num', it.example ? 'Ví dụ' : String(i + ((ex.items[0] && ex.items[0].example) ? 0 : 1))));
+        const body = el('div', 'bai-order-body');
+        const answerLine = el('div', 'bai-order-answer');
+        const mark = el('span', 'bai-mark');
+        const bank = el('div', 'bai-wordbank');
+        const chips = [];
+        const picked = [];
+        function refresh() {
+          answerLine.innerHTML = '';
+          picked.forEach(function (c) {
+            const b = el('button', 'bai-chip bai-tone-pink', c.word); b.type = 'button';
+            b.addEventListener('click', function () {
+              picked.splice(picked.indexOf(c), 1); c.used = false; refresh();
+            });
+            answerLine.appendChild(b);
+          });
+          chips.forEach(function (c) { c.btn.style.visibility = c.used ? 'hidden' : 'visible'; });
+          answerLine.classList.remove('is-correct', 'is-wrong');
+          mark.textContent = ''; mark.className = 'bai-mark';
+        }
+        (it.words || []).forEach(function (w) {
+          const c = { word: w, used: false };
+          c.btn = el('button', 'bai-chip bai-tone-lav', w); c.btn.type = 'button';
+          c.btn.addEventListener('click', function () {
+            if (c.used) return;
+            c.used = true; picked.push(c); refresh();
+          });
+          chips.push(c); bank.appendChild(c.btn);
+        });
+        function setAnswer(sentence) {
+          picked.length = 0;
+          chips.forEach(function (c) { c.used = false; });
+          const toks = String(sentence).replace(/[.,!?]/g, '').split(/\s+/).filter(Boolean);
+          let k = 0;
+          while (k < toks.length) {   // khớp cả chip nhiều chữ (vd. "thứ năm"), ưu tiên chip dài nhất
+            let best = null;
+            chips.forEach(function (x) {
+              if (x.used) return;
+              const n = normSentence(x.word).split(' ').length;
+              if (normSentence(toks.slice(k, k + n).join(' ')) === normSentence(x.word) && (!best || n > best.n)) best = { c: x, n: n };
+            });
+            if (best) { best.c.used = true; picked.push(best.c); k += best.n; } else k++;
+          }
+          refresh();
+        }
+        const accepted = (it.answers || []).map(normSentence);
+        function check() {
+          if (!picked.length) return;
+          const v = normSentence(picked.map(function (c) { return c.word; }).join(' '));
+          const ok = accepted.indexOf(v) !== -1;
+          answerLine.classList.toggle('is-correct', ok); answerLine.classList.toggle('is-wrong', !ok);
+          mark.textContent = ok ? '✓' : '✗'; mark.className = 'bai-mark ' + (ok ? 'ok' : 'bad');
+        }
+        function reveal() { setAnswer(it.answers[0]); answerLine.classList.add('is-correct'); mark.textContent = '✓'; mark.className = 'bai-mark ok'; }
+        function reset() { picked.length = 0; chips.forEach(function (c) { c.used = false; }); refresh(); }
+        body.appendChild(bank);
+        answerLine.setAttribute('aria-label', 'Câu bạn sắp xếp');
+        const lineWrap = el('div', 'bai-order-linewrap');
+        lineWrap.appendChild(answerLine); lineWrap.appendChild(mark);
+        body.appendChild(lineWrap);
+        if (it.example) {
+          setAnswer(it.answers[0]);
+          chips.forEach(function (c) { c.btn.disabled = true; });
+          answerLine.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
+          body.appendChild(el('div', 'bai-example', it.answers[0]));
+        } else {
+          const bar = el('div', 'bai-fill-actions');
+          const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+          const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+          const bReset = el('button', 'bai-btn bai-btn-ghost', 'Làm lại'); bReset.type = 'button'; bReset.addEventListener('click', reset);
+          bar.appendChild(bCheck); bar.appendChild(bShow); bar.appendChild(bReset);
+          body.appendChild(bar);
+          rows.push({ reveal: reveal });
+        }
+        row.appendChild(body);
+        box.appendChild(row);
+      });
+      return box;
+    }
+
+    // Bài 9 (b2): viết câu trả lời theo gợi ý. answers dùng {p} = đại từ xưng hô (pronouns[]).
+    function renderWriteAnswer(ex, n) {
+      const box = el('div', 'bai-write-list');
+      let seq = 0;
+      (ex.items || []).forEach(function (it, i) {
+        const row = el('div', 'bai-write-row');
+        const q = el('div', 'bai-write-q');
+        if (/\n/.test(it.question || '')) q.style.whiteSpace = 'pre-line';
+        if (it.example) {
+          // it.numbered: ví dụ được đánh số như câu 1 (thay vì chữ "Ví dụ"); it.redExample: cả dòng đáp án in đỏ
+          const lead = it.numbered ? (++seq) + '\u00A0\u00A0' : 'Ví dụ\u00A0\u00A0';
+          q.appendChild(document.createTextNode(lead + it.question));
+          row.appendChild(q);
+          const sample = el('div', 'bai-fill-line');
+          sample.appendChild(document.createTextNode('\u2192\u00A0'));
+          if (it.redExample) sample.appendChild(el('span', 'bai-fill-example', it.model));
+          else sample.appendChild(document.createTextNode(it.model));
+          sample.style.margin = '2px 0 18px';
+          row.appendChild(sample);
+          box.appendChild(row);
+          return;
+        }
+        seq++;
+        if (!it.given) {
+          q.appendChild(document.createTextNode(seq + '\u00A0\u00A0' + it.question + ' '));
+          if (it.hint) q.appendChild(el('span', 'bai-example', '(' + it.hint + ')'));
+          row.appendChild(q);
+        }
+        const line = el('div', 'bai-fill-line');
+        // it.given: bài đảo — ô trống là CÂU HỎI, câu trả lời cho sẵn bên dưới
+        line.appendChild(document.createTextNode(it.given ? (seq + '\u00A0\u00A0') : ('→\u00A0' + (it.prefix ? it.prefix + '\u00A0' : ''))));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
+        const mark = el('span', 'bai-mark');
+        line.appendChild(input);
+        if (it.given || ex.questionMark) line.appendChild(document.createTextNode('?'));
+        line.appendChild(mark);
+        row.appendChild(line);
+        if (it.given) {
+          const gl = el('div', 'bai-fill-line', '→\u00A0' + it.given);
+          gl.style.marginTop = '4px';
+          row.appendChild(gl);
+        }
+        const accepted = [];
+        (it.answers || []).forEach(function (a) {
+          (it.pronouns && a.indexOf('{p}') !== -1 ? it.pronouns : [null]).forEach(function (p) {
+            const full = p ? a.replace(/\{p\}/g, p) : a;
+            accepted.push(normSentence(full));
+            if (it.prefix) accepted.push(normSentence(it.prefix + ' ' + full));   // chấp nhận cả khi gõ lại "Có." / "Không."
+          });
+        });
+        const model = it.model || it.answers[0];
+        function modelText() {
+          const s = (it.pronouns ? model.replace(/\{p\}/g, it.pronouns[0]) : model);
+          return s.charAt(0).toUpperCase() + s.slice(1);
+        }
+        function check() {
+          const v = normSentence(input.value);
+          markCell(input, mark, !v ? '' : (accepted.indexOf(v) !== -1 ? 'ok' : 'bad'));
+        }
+        function reveal() { input.value = modelText(); markCell(input, mark, 'ok'); }
+        input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+        input.addEventListener('input', function () { markCell(input, mark, ''); });
+        const bar = el('div', 'bai-fill-actions');
+        const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button'; bCheck.addEventListener('click', check);
+        const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button'; bShow.addEventListener('click', reveal);
+        bar.appendChild(bCheck); bar.appendChild(bShow);
+        row.appendChild(bar);
+        box.appendChild(row);
+      });
+      return box;
+    }
+
+    // Bài 10 (b2): bài nói, trả lời mở. Có ví dụ + ô ghi chú tự do (không chấm điểm).
+    function renderOpenAnswer(ex, n) {
+      const box = el('div', 'bai-write-list');
+      if (ex.example) {
+        const row = el('div', 'bai-write-row');
+        row.appendChild(el('div', 'bai-write-q', ex.example.question));
+        const line = el('div', 'bai-fill-line');
+        line.appendChild(document.createTextNode('→\u00A0'));
+        line.appendChild(el('span', 'bai-example', ex.example.answer));
+        row.appendChild(line);
+        box.appendChild(row);
+      }
+      (ex.items || []).forEach(function (it, i) {
+        const row = el('div', 'bai-write-row');
+        row.appendChild(el('div', 'bai-write-q', (i + 1) + '\u00A0\u00A0' + it.question));
+        const line = el('div', 'bai-fill-line');
+        line.appendChild(document.createTextNode('→\u00A0' + (it.prefix ? it.prefix + '\u00A0' : '')));
+        const input = document.createElement('input');
+        input.type = 'text'; input.className = 'bai-blank bai-blank-full'; input.autocomplete = 'off';
+        input.setAttribute('aria-label', 'Câu trả lời ' + (i + 1));
+        line.appendChild(input);
+        row.appendChild(line);
+        box.appendChild(row);
+      });
+      return box;
+    }
+
+    // Danh sách từ/cụm từ có phần âm cần học tô đỏ + nghĩa nhỏ bên dưới (ngoài khung chip).
+    // ex.groups = [{ sound: "ia", tone: "lav", items: [{ text, hl, gloss, audio }] }]
+    //   hl = đoạn chữ tô đỏ (đúng như trong text, kể cả dấu thanh); gloss = nghĩa (tuỳ chọn); audio = đường dẫn riêng (có thể chứa {voice}).
+    function renderWordList(ex) {
+      const wrap = el('div', 'bai-wl');
+      (ex.groups || []).forEach(function (g) {
+        const grp = el('div', 'bai-wl-group');
+        if (g.sound) grp.appendChild(el('div', 'bai-chip is-static bai-wl-head', g.sound));   // âm đang học: ô trắng nằm trên hàng từ
+        const row = el('div', 'bai-wl-row');
+        (g.items || []).forEach(function (it) {
+          const cell = el('div', 'bai-wl-cell');
+          const b = el('button', 'bai-chip bai-wl-chip bai-tone-' + (g.tone || 'lav'));
+          b.type = 'button';
+          b.dataset.text = it.text;
+          b.setAttribute('aria-label', 'Nghe “' + it.text + '”');
+          const txt = el('span', 'bai-wl-text');   // gói trong 1 span: chip là flex nên nếu không sẽ bị tách khoảng trắng quanh phần tô đỏ
+          // hl: một đoạn chữ, hoặc mảng nhiều đoạn (mỗi đoạn tìm tiếp theo sau đoạn trước, vd. ["l","l"] cho "lo lắng")
+          const hls = it.hl ? (Array.isArray(it.hl) ? it.hl : [it.hl]) : [];
+          let pos = 0;
+          hls.forEach(function (h) {
+            const i = it.text.indexOf(h, pos);
+            if (i < 0) return;
+            if (i > pos) txt.appendChild(document.createTextNode(it.text.slice(pos, i)));
+            txt.appendChild(el('span', 'bai-wl-hl', h));
+            pos = i + h.length;
+          });
+          if (pos < it.text.length) txt.appendChild(document.createTextNode(it.text.slice(pos)));
+          b.appendChild(txt);
+          b.addEventListener('click', function () { if (it.audio) play(resolveAudio(it.audio), b); });
+          cell.appendChild(b);
+          if (it.gloss) cell.appendChild(el('div', 'bai-wl-gloss', it.gloss));
+          row.appendChild(cell);
+        });
+        grp.appendChild(row);
+        wrap.appendChild(grp);
+      });
+      return wrap;
+    }
+
+    // Viết đoạn văn tự do: danh sách câu hỏi gợi ý + (tuỳ chọn) đoạn mẫu + khung viết nhiều dòng.
+    // ex.questions = ["...", ...]; ex.example = { label: "Mẫu", text: "..." }; ex.rows = số dòng khung viết.
+    function renderWriteParagraph(ex) {
+      const box = el('div', 'bai-write-list');
+      (ex.questions || []).forEach(function (q) {
+        const row = el('div', 'bai-write-q', '\u2022\u00A0\u00A0' + q);
+        row.style.whiteSpace = 'pre-line';
+        box.appendChild(row);
+      });
+      if (ex.example) {
+        const mau = el('div', 'bai-write-q');
+        mau.style.margin = '14px 0 6px';
+        mau.appendChild(el('span', 'bai-example', (ex.example.label || 'Mẫu') + ':'));
+        box.appendChild(mau);
+        const ps = el('p', 'bai-passage', ex.example.text); ps.style.whiteSpace = 'pre-line';
+        box.appendChild(ps);
+      }
+      const ta = document.createElement('textarea');
+      ta.className = 'bai-textarea'; ta.rows = ex.rows || 6; ta.autocomplete = 'off';
+      ta.setAttribute('aria-label', 'Đoạn văn của bạn');
+      box.appendChild(ta);
+      return box;
+    }
+
+    // Nối câu hỏi với câu trả lời (b4): mỗi câu hỏi chọn chữ cái của câu trả lời phù hợp.
+    // ex.questions = [{q, answer:'b'}], ex.options = [{key:'a', text:'...'}]
+    function renderMatchPairs(ex) {
+      const wrap = el('div', 'bai-match');
+      const left = el('div', 'bai-match-left');
+      const right = el('div', 'bai-match-right');
+      const rows = [];
+      (ex.questions || []).forEach(function (q, i) {
+        const row = el('div', 'bai-match-row');
+        row.appendChild(el('span', 'bai-match-q', (i + 1) + '\u00A0\u00A0' + q.q));
+        const sel = document.createElement('select');
+        sel.className = 'bai-match-sel';
+        sel.setAttribute('aria-label', 'Chọn câu trả lời cho câu ' + (i + 1));
+        const blank = document.createElement('option'); blank.value = ''; blank.textContent = '—'; sel.appendChild(blank);
+        (ex.options || []).forEach(function (o) {
+          const op = document.createElement('option'); op.value = o.key; op.textContent = o.key; sel.appendChild(op);
+        });
+        const mark = el('span', 'bai-mark');
+        sel.addEventListener('change', function () { markCell(sel, mark, ''); });
+        row.appendChild(sel); row.appendChild(mark);
+        left.appendChild(row);
+        rows.push({ q: q, sel: sel, mark: mark });
+      });
+      (ex.options || []).forEach(function (o) {
+        right.appendChild(el('div', 'bai-match-opt', o.key + '.\u00A0\u00A0' + o.text));
+      });
+      const bar = el('div', 'bai-fill-actions');
+      const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button';
+      bCheck.addEventListener('click', function () {
+        rows.forEach(function (r) { markCell(r.sel, r.mark, !r.sel.value ? '' : (r.sel.value === r.q.answer ? 'ok' : 'bad')); });
+      });
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button';
+      bShow.addEventListener('click', function () {
+        rows.forEach(function (r) { r.sel.value = r.q.answer; markCell(r.sel, r.mark, 'ok'); });
+      });
+      bar.appendChild(bCheck); bar.appendChild(bShow);
+      const cols = el('div', 'bai-match-cols');
+      cols.appendChild(left); cols.appendChild(right);
+      wrap.appendChild(cols); wrap.appendChild(bar);
+      return wrap;
+    }
+
+    // Nối bằng kéo-thả: cột trái cố định (tiếng Việt), cột phải là các chip kéo để sắp xếp cho khớp từng dòng.
+    // Dữ liệu giống matchPairs (questions[{q,answer}] + options[{key,text}]); thứ tự ban đầu = thứ tự options.
+    function renderMatchDrag(ex) {
+      const wrap = el('div', 'bai-drag');
+      const list = el('div', 'bai-drag-cols');
+      const opts = (ex.options || []);
+      const chips = opts.map(function (o) {
+        const c = el('div', 'bai-drag-chip');
+        c.tabIndex = 0;
+        c.setAttribute('role', 'button');
+        c.setAttribute('aria-label', o.text + ' (kéo để sắp xếp, hoặc dùng phím mũi tên lên xuống)');
+        c.appendChild(el('span', 'bai-drag-grip', '\u2807\u2807'));
+        c.appendChild(el('span', 'bai-drag-text', o.text));
+        c.dataset.key = o.key;
+        return c;
+      });
+      let order = chips.slice();            // order[i] = chip đang nằm ở dòng i
+      const slots = [], marks = [];
+      const colL = el('div', 'bai-drag-left'), colR = el('div', 'bai-drag-right');
+      (ex.questions || []).forEach(function (q, i) {
+        const qc = el('div', 'bai-drag-q');
+        qc.appendChild(el('span', 'bai-drag-qt', (i + 1) + '\u00A0\u00A0' + q.q));
+        const mark = el('span', 'bai-mark');
+        qc.appendChild(mark);
+        colL.appendChild(qc);
+        const slot = el('div', 'bai-drag-slot');
+        colR.appendChild(slot);
+        slots.push(slot); marks.push(mark);
+      });
+      list.appendChild(colL); list.appendChild(colR);
+      function place() { order.forEach(function (c, i) { if (slots[i]) slots[i].appendChild(c); }); }
+      function clearMarks() {
+        order.forEach(function (c, i) { if (marks[i]) markCell(c, marks[i], ''); });
+      }
+      function moveTo(chip, to) {
+        const from = order.indexOf(chip);
+        if (from < 0 || to === from) return false;
+        to = Math.max(0, Math.min(order.length - 1, to));
+        order.splice(from, 1); order.splice(to, 0, chip);
+        place(); return true;
+      }
+      chips.forEach(function (chip) {
+        let grab = 0, active = false;
+        function follow(e) {
+          const r = slots[order.indexOf(chip)].getBoundingClientRect();
+          chip.style.transform = 'translateY(' + (e.clientY - grab - (r.top + r.height / 2)) + 'px)';
+        }
+        function onMove(e) {
+          if (!active) return;
+          let target = order.indexOf(chip);
+          for (let i = 0; i < slots.length; i++) {
+            const r = slots[i].getBoundingClientRect();
+            if (e.clientY >= r.top && e.clientY <= r.bottom) { target = i; break; }
+          }
+          if (e.clientY < slots[0].getBoundingClientRect().top) target = 0;
+          if (e.clientY > slots[slots.length - 1].getBoundingClientRect().bottom) target = slots.length - 1;
+          moveTo(chip, target);
+          follow(e);
+          if (e.clientY < 50) window.scrollBy(0, -12);
+          else if (e.clientY > window.innerHeight - 50) window.scrollBy(0, 12);
+        }
+        function end() {
+          if (!active) return;
+          active = false;
+          chip.classList.remove('is-dragging');
+          chip.style.transform = '';
+          document.removeEventListener('pointermove', onMove);
+          document.removeEventListener('pointerup', end);
+          document.removeEventListener('pointercancel', end);
+        }
+        chip.addEventListener('pointerdown', function (e) {
+          if (e.button != null && e.button !== 0) return;
+          if (e.pointerType === 'touch' && !e.target.closest('.bai-drag-grip')) return;  // cảm ứng: chỉ kéo bằng tay nắm để vẫn cuộn trang được
+          const r = chip.getBoundingClientRect();
+          grab = e.clientY - (r.top + r.height / 2);
+          active = true;
+          chip.classList.add('is-dragging');
+          clearMarks();
+          // nghe ở document (không dùng pointer capture) vì chip bị chuyển sang ô khác trong lúc kéo
+          document.addEventListener('pointermove', onMove);
+          document.addEventListener('pointerup', end);
+          document.addEventListener('pointercancel', end);
+          e.preventDefault();
+        });
+        chip.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+          e.preventDefault();
+          clearMarks();
+          moveTo(chip, order.indexOf(chip) + (e.key === 'ArrowUp' ? -1 : 1));
+          chip.focus();
+        });
+      });
+      place();
+      const bar = el('div', 'bai-fill-actions');
+      const bCheck = el('button', 'bai-btn', 'Kiểm tra'); bCheck.type = 'button';
+      bCheck.addEventListener('click', function () {
+        (ex.questions || []).forEach(function (q, i) {
+          markCell(order[i], marks[i], order[i].dataset.key === q.answer ? 'ok' : 'bad');
+        });
+      });
+      const bShow = el('button', 'bai-btn bai-btn-ghost', 'Xem đáp án'); bShow.type = 'button';
+      bShow.addEventListener('click', function () {
+        const byKey = {}; chips.forEach(function (c) { byKey[c.dataset.key] = c; });
+        order = (ex.questions || []).map(function (q) { return byKey[q.answer]; });
+        const used = {}; order.forEach(function (c) { used[c.dataset.key] = 1; });
+        chips.forEach(function (c) { if (!used[c.dataset.key]) order.push(c); });
+        place();
+        (ex.questions || []).forEach(function (q, i) { markCell(order[i], marks[i], 'ok'); });
+      });
+      bar.appendChild(bCheck); bar.appendChild(bShow);
+      wrap.appendChild(list); wrap.appendChild(bar);
+      // Chiều cao mỗi dòng = dòng cao nhất (câu dài xuống dòng vẫn không bị tràn, 2 cột luôn thẳng hàng)
+      let lastW = -1;
+      function fit() {
+        wrap.style.setProperty('--drag-row-h', 'auto');
+        let h = 56;
+        wrap.querySelectorAll('.bai-drag-q, .bai-drag-chip').forEach(function (n) { h = Math.max(h, n.offsetHeight); });
+        wrap.style.setProperty('--drag-row-h', h + 'px');
+      }
+      if (window.ResizeObserver) {
+        new ResizeObserver(function () {
+          const w = Math.round(wrap.clientWidth);
+          if (w === lastW || !w) return;
+          lastW = w; fit();
+        }).observe(wrap);
+      }
+      return wrap;
+    }
+
+    // Nghe và điền (b6): mỗi câu có audio riêng, có thể nhiều chỗ trống. item.distinct = các ô phải khác nhau.
+    function renderAudioFill(ex) {
+      const wrap = el('div', 'bai-fill');
+      const rows = [];
+      (ex.items || []).forEach(function (item, i) {
+        const row = el('div', 'bai-fill-row');
+        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
+        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1);
+        num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        if (item.audio || ex.audio) {
+          num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
+        } else {
+          num.disabled = true; num.style.cursor = 'default';   // bài điền không có audio
+        }
+        row.appendChild(num);
+        const built = buildFillLine(item.template, item.answers || [], 'Câu ' + (i + 1));
+        if (ex.blankWidth) built.cells.forEach(function (c) { c.input.style.width = ex.blankWidth; c.input.style.maxWidth = '100%'; });
+        const mark = el('span', 'bai-mark'); built.line.appendChild(mark);
+        row.appendChild(built.line);
+        wrap.appendChild(row);
+        rows.push({ item: item, cells: built.cells, mark: mark });
+      });
+      function nsp(t) { return normName(t).replace(/\s+/g, ''); }   // bỏ khoảng trắng: "1 4 7" = "147"
+      function check() {
+        rows.forEach(function (r) {
+          const vals = r.cells.map(function (c) { return normName(c.input.value); });
+          const filled = vals.every(Boolean);
+          let ok = filled && r.cells.every(function (c, k) { return c.answers.some(function (a) { return nsp(a) === nsp(vals[k]); }); });
+          if (ok && r.item.distinct && new Set(vals).size !== vals.length) ok = false;
+          r.cells.forEach(function (c, k) { markCell(c.input, r.mark, ''); c.input.classList.toggle('is-correct', ok); c.input.classList.toggle('is-wrong', filled && !ok); });
+          r.mark.textContent = !vals.some(Boolean) ? '' : (ok ? '✓' : '✗');
+          r.mark.className = 'bai-mark ' + (!vals.some(Boolean) ? '' : (ok ? 'ok' : 'bad'));
+        });
+      }
+      function reveal() {
+        rows.forEach(function (r) {
+          r.cells.forEach(function (c, k) { c.input.value = c.answers[0] || ''; c.input.classList.add('is-correct'); c.input.classList.remove('is-wrong'); });
+          r.mark.textContent = '✓'; r.mark.className = 'bai-mark ok';
+        });
+      }
+      rows.forEach(function (r) { r.cells.forEach(function (c) { c.input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); }); }); });
+      wrap.appendChild(fillCheckBar(null, check, reveal));
+      return wrap;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, photoSentenceFill: renderPhotoSentenceFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, wordList: renderWordList, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill };
+
+    function buildExercise(ex, n) {
+      const box = el('div', 'bai-exercise');
+      n = ex.num != null ? ex.num : n;   // 'num' trong JSON = số bài in trong sách (vd. 6, 7)
+      box.appendChild(exerciseHead(ex, n));
+      // Bài đọc nhiều phần: bài sau (vd. Đúng/Sai) vẫn hiện đoạn văn ở trên (readingQA tự vẽ passage nên bỏ qua)
+      if (ex.passage && ex.type !== 'readingQA') { const ps = el('p', 'bai-passage', ex.passage); ps.style.whiteSpace = 'pre-line'; box.appendChild(ps); }
+      const fn = RENDERERS[ex.type];
+      box.appendChild(fn ? fn(ex, n) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
+      if (ex.noteVi) {
+        const note = el('div', 'grammar-callout');
+        if (ex.noteTitleVi) { const t = el('div', '', ex.noteTitleVi); t.style.fontWeight = '700'; note.appendChild(t); }
+        const nv = el('div', '', (ex.noteTitleVi ? '' : 'Ghi chú: ') + ex.noteVi); nv.style.whiteSpace = 'pre-line'; note.appendChild(nv);
+        if (ex.noteTitleEn) { const t2 = el('div', 'grammar-note', ex.noteTitleEn); t2.style.fontWeight = '700'; t2.style.marginBottom = '0'; note.appendChild(t2); }
+        if (ex.noteEn) { const en = el('div', 'grammar-note', (ex.noteTitleEn ? '' : 'Note: ') + ex.noteEn); en.style.whiteSpace = 'pre-line'; note.appendChild(en); }
+        box.appendChild(note);
+      }
+      return box;
+    }
+
+    // Nhiều bài tập → mỗi bài 1 trang, bấm mũi tên (hoặc phím ← →) để chuyển.
+    let pagerKeyHandler = null;
+    function stopAudio() {
+      try { player.pause(); } catch (e) {}
+      if (currentEl) currentEl.classList.remove('playing');
+    }
+    function renderExercises(container, exercises) {
+      exercises = exercises || [];
+      if (pagerKeyHandler) { document.removeEventListener('keydown', pagerKeyHandler); pagerKeyHandler = null; }
+      if (exercises.length <= 1) {
+        exercises.forEach(function (ex, i) { container.appendChild(buildExercise(ex, i + 1)); });
+        return;
+      }
+      const stage = el('div', 'bai-stage');
+      const pager = el('div', 'bai-pager');
+      const prev = el('button', 'bai-arrow', '←'); prev.type = 'button'; prev.setAttribute('aria-label', 'Bài trước');
+      const next = el('button', 'bai-arrow', '→'); next.type = 'button'; next.setAttribute('aria-label', 'Bài tiếp theo');
+      const count = el('span', 'bai-pager-count');
+      pager.appendChild(prev); pager.appendChild(count); pager.appendChild(next);
+      container.appendChild(stage);
+      container.appendChild(pager);
+
+      let idx = 0;
+      function show(i) {
+        idx = Math.max(0, Math.min(exercises.length - 1, i));
+        stopAudio();
+        stage.innerHTML = '';
+        stage.appendChild(buildExercise(exercises[idx], idx + 1));
+        count.textContent = (idx + 1) + ' / ' + exercises.length;
+        prev.disabled = idx === 0;
+        next.disabled = idx === exercises.length - 1;
+      }
+      prev.addEventListener('click', function () { show(idx - 1); });
+      next.addEventListener('click', function () { show(idx + 1); });
+      pagerKeyHandler = function (e) {
+        const t = e.target && e.target.tagName;
+        if (t === 'INPUT' || t === 'TEXTAREA') return;
+        if (e.key === 'ArrowLeft') show(idx - 1);
+        else if (e.key === 'ArrowRight') show(idx + 1);
+      };
+      document.addEventListener('keydown', pagerKeyHandler);
+      show(0);
+    }
+
+    // ---------- Khung: sidebar (section → mục con) + nội dung ----------
+    function buildLesson(item) {
+      const sections = item.sections || [];
+      $panel.innerHTML = '';
+
+      const shell = buildSectionShell('', function () { location.href = 'lessons.html?level=' + encodeURIComponent(level); });
+      const pill = shell.querySelector('.gram2-tab-pill');
+      const topbar = shell.querySelector('.gram2-topbar');
+      if (topbar) topbar.remove();   // bỏ ô mũi tên + tên phần (đã có nút Quay lại ở trên)
+      $panel.appendChild(shell);
+
+      const body = el('div', 'gram2-body');
+      const sidebar = el('aside', 'gram2-sidebar');
+      const content = el('div', 'gram2-content');
+      body.appendChild(sidebar);
+      body.appendChild(content);
+      shell.appendChild(body);
+
+      const entries = [];   // { key, section, sub, btn, header, list, chevron }
+      // màu từng phần: ô số (nhạt) + nền khung nội dung (rất nhạt)
+      // màu chủ đạo theo chương: Bài 1–10 tím, Bài 11–20 xanh lá mạ, ...
+      const CH_ACCENTS = ['#C6C9FF', '#D1FF94', '#C6E2FF', '#FFC6EF', '#FFDCC6', '#FAFF94', '#FFC6C7', '#C6FFF9'];
+      const lessonNum = parseInt((String(itemId).match(/\d+/) || ['1'])[0], 10) || 1;
+      const SEC_SQ   = [CH_ACCENTS[Math.floor((lessonNum - 1) / 10) % CH_ACCENTS.length]];
+      const SEC_PALE = ['#FFFFFF'];   // nền khung nội dung: trắng
+
+      function scrollToContentOnMobile() {
+        if (!window.matchMedia('(max-width: 720px)').matches) return;
+        window.requestAnimationFrame(function () {
+          const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 0;
+          window.scrollTo({ top: content.getBoundingClientRect().top + window.scrollY - headerH - 12, behavior: 'smooth' });
+        });
+      }
+
+      function select(entry, opts) {
+        entries.forEach(function (e) {
+          e.btn && e.btn.classList.toggle('active', e === entry);
+          e.isStatic && e.header.classList.toggle('active', e === entry);
+        });
+        // Mở section chứa mục đang chọn
+        if (entry.list && entry.list.classList.contains('gram2-collapsed')) {
+          entry.list.classList.remove('gram2-collapsed');
+          entry.chevron.textContent = '▾';
+        }
+
+        pill.textContent = entry.section.titleVi;
+        content.innerHTML = '';
+        enOnly = entry.section.id === 'ngu-phap';
+        entries.forEach(function (e) { if (e.secBox) e.secBox.classList.toggle('is-current', e.section === entry.section); });
+        content.style.setProperty('--ch', SEC_SQ[entry.si % SEC_SQ.length]);
+        content.style.setProperty('--ch-l', SEC_PALE[entry.si % SEC_PALE.length]);
+        const head = el('div', 'bai-sec-head');
+        const segs = el('div', 'bai-sec-segs');
+        sections.forEach(function (_, i) { segs.appendChild(el('i', i <= entry.si ? 'on' : '')); });
+        head.appendChild(segs);
+        const hrow = el('div', 'bai-sec-row');
+        hrow.appendChild(el('span', 'bai-sec-big', String(entry.si + 1).padStart(2, '0')));
+        const htx = el('div', 'bai-sec-tx');
+        htx.appendChild(el('div', 'bai-sec-name', entry.section.titleVi));
+        if (entry.section.titleEn) htx.appendChild(el('div', 'bai-sec-en', entry.section.titleEn));
+        hrow.appendChild(htx);
+        head.appendChild(hrow);
+        content.appendChild(head);
+        if (entry.sub) {
+          content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));
+          if (entry.sub.exercises && entry.sub.exercises.length) renderExercises(content, entry.sub.exercises);
+          else content.appendChild(emptyNote('Mục này đang được soạn.'));
+        } else {
+          content.appendChild(el('h2', 'gram2-content-title', entry.section.titleVi));
+          content.appendChild(emptyNote('Phần “' + entry.section.titleVi + '” đang được soạn.'));
+        }
+
+        try { history.replaceState(null, '', '#' + entry.key); } catch (e) {}
+        if (opts && opts.scroll) scrollToContentOnMobile();
+      }
+
+      sections.forEach(function (section, si) {
+        const secBox = el('div', 'gram2-section');
+        secBox.style.setProperty('--ch', SEC_SQ[si % SEC_SQ.length]);
+        const header = el('button', 'gram2-section-header'); header.type = 'button';
+        const titles = el('div', 'gram2-section-titles');
+        header.appendChild(el('span', 'gram2-section-num', String(si + 1)));
+        titles.appendChild(el('div', 'gram2-section-title-vi', section.titleVi));
+        if (section.titleEn) titles.appendChild(el('div', 'gram2-section-title-en', section.titleEn));
+        header.appendChild(titles);
+        const chevron = el('span', 'gram2-chevron', '▾');
+        header.appendChild(chevron);
+        secBox.appendChild(header);
+
+        const subs = section.subtopics || [];
+        if (!subs.length) {
+          // Section chưa có mục con: bấm vào tiêu đề là chọn luôn section.
+          header.classList.add('is-static');
+          const entry = { key: section.id, section: section, sub: null, header: header, isStatic: true, secBox: secBox, si: si };
+          entries.push(entry);
+          header.addEventListener('click', function () { select(entry, { scroll: true }); });
+        } else {
+          const list = el('div', 'gram2-subtopic-list');
+          subs.forEach(function (sub) {
+            const btn = el('button', 'gram2-subtopic-btn', sub.label); btn.type = 'button';
+            const entry = { key: section.id + '/' + sub.id, section: section, sub: sub, btn: btn, list: list, chevron: chevron, secBox: secBox, si: si };
+            entries.push(entry);
+            btn.addEventListener('click', function () { select(entry, { scroll: true }); });
+            list.appendChild(btn);
+          });
+          secBox.appendChild(list);
+          // Chỉ mở section đầu tiên lúc đầu; select() sẽ tự mở section chứa mục được chọn.
+          if (si !== 0) { list.classList.add('gram2-collapsed'); chevron.textContent = '▸'; }
+          header.addEventListener('click', function () {
+            const collapsed = list.classList.toggle('gram2-collapsed');
+            chevron.textContent = collapsed ? '▸' : '▾';
+          });
+        }
+        sidebar.appendChild(secBox);
+      });
+
+      // Mở đúng chỗ đang dạy khi tải lại trang (#phat-am/bang-chu-cai), mặc định mục đầu tiên.
+      const wanted = decodeURIComponent(location.hash.replace(/^#/, ''));
+      const first = entries.filter(function (e) { return e.key === wanted; })[0]
+        || entries.filter(function (e) { return e.sub; })[0]
+        || entries[0];
+      if (first) select(first);
+    }
+
+    // ---------- Nút chuyển bài (trước / sau) ----------
+    async function buildLessonNav() {
+      const nav = document.getElementById('lesson-nav');
+      if (!nav) return;
+      try {
+        const res = await fetch(level + '/units.json', { cache: 'no-cache' });
+        const lessons = ((await res.json()).lessons || []).slice().sort(function (a, b) { return a.num - b.num; });
+        const i = lessons.findIndex(function (l) { return l.id === itemId; });
+        if (i < 0) return;
+        const open = function (l) { return l && l.status !== 'todo'; };
+        let prev = null, next = null;
+        for (let k = i - 1; k >= 0; k--) { if (open(lessons[k])) { prev = lessons[k]; break; } }
+        for (let k = i + 1; k < lessons.length; k++) { if (open(lessons[k])) { next = lessons[k]; break; } }
+        const mk = function (l, cls, label) {
+          const a = document.createElement(l ? 'a' : 'span');
+          a.className = 'lesson-nav-btn ' + cls + (l ? '' : ' is-disabled');
+          a.textContent = label;
+          if (l) a.href = (l.page || 'bai.html') + '?id=' + encodeURIComponent(l.id) + '&level=' + encodeURIComponent(level);
+          return a;
+        };
+        nav.appendChild(mk(prev, 'is-prev', '← Bài ' + (prev ? prev.num : 'trước')));
+        nav.appendChild(mk(next, 'is-next', 'Bài ' + (next ? next.num : 'sau') + ' →'));
+      } catch (e) { console.error(e); }
+    }
+
+    // ---------- Load ----------
+    (async function () {
+      try {
+        if (!SAFE_ID.test(itemId) || !SAFE_ID.test(level)) throw new Error('Bad id');
+        const res = await fetch(level + '/bai/' + itemId + '.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const item = await res.json();
+        document.title = 'Bài ' + item.num + ': ' + item.title + ' — hoc voi hanh';
+        $title.textContent = ''; const hl = document.createElement('span'); hl.className = 'title-hl'; hl.textContent = 'Bài ' + item.num + ': ' + item.title; $title.appendChild(hl);
+        buildLesson(item);
+        buildLessonNav();
+      } catch (err) {
+        console.error(err);
+        $title.textContent = 'Không tải được bài học';
+        $panel.innerHTML = '<p class="note">Không tìm thấy file <code>' + level + '/bai/' + itemId + '.json</code>.</p>';
+      }
+    })();
+
+    (function () {
+      const hdr = document.querySelector('.site-header');
+      if (!hdr) return;
+      function setH() { document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px'); }
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('load', setH);
+    })();
+  </script>
+  <script src="pomodoro.js" defer></script>
+</body>
+</html>
