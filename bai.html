@@ -902,7 +902,7 @@
     // Bài 8, 10, 13: hội thoại có nhiều chỗ trống. Có thể có 1 audio nghe cả bài (bài 8) hoặc không (bài 10, 13).
     function renderDialogueFill(ex, n) {
       const box = el('div');
-      if (ex.audio) box.appendChild(makeListenBtn(ex, n));
+      if (ex.audio) box.appendChild(renderAudioPlayer(ex.audio));   // thanh nghe có tạm dừng + tua
       const wrap = el('div', 'bai-dialog');
       const allCells = [];
       let group = null;   // ex.framed: mỗi câu (bắt đầu bằng số thứ tự ở dòng đầu) nằm trong 1 khung
@@ -955,12 +955,17 @@
     // Bài 9: nghe và chọn câu trả lời đúng (a/b). 'answer' để trống nếu chưa có audio để xác định.
     function renderAudioChoice(ex, n) {
       const wrap = el('div', 'bai-achoice');
+      if (ex.audio) wrap.appendChild(renderAudioPlayer(ex.audio));   // thanh nghe cả bài: tạm dừng + tua
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-achoice-row');
         const head = el('div', 'bai-achoice-head');
         const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
         num.type = 'button'; num.dataset.text = 'câu ' + (i + 1); num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
-        num.addEventListener('click', function () { play(resolveAudio(item.audio || ex.audio), num); });
+        num.addEventListener('click', function () {
+          // bấm lại khi đang phát -> tạm dừng
+          if (num.classList.contains('playing') && !player.paused) { player.pause(); num.classList.remove('playing'); return; }
+          play(resolveAudio(item.audio || ex.audio), num);
+        });
         head.appendChild(num);
         if (item.text) head.appendChild(el('div', 'bai-achoice-text', item.text));
         row.appendChild(head);
@@ -1882,6 +1887,7 @@
     let pagerKeyHandler = null;
     function stopAudio() {
       try { player.pause(); } catch (e) {}
+      customAudios.forEach(function (a) { try { a.pause(); } catch (e) {} });
       if (currentEl) currentEl.classList.remove('playing');
     }
     function renderExercises(container, exercises) {
