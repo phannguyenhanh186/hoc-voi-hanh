@@ -724,6 +724,275 @@
       ]
     },
     {
+      "id": "ngu-phap",
+      "titleVi": "Ngữ pháp",
+      "titleEn": "Grammar",
+      "subtopics": [
+        {
+          "id": "danh-xung",
+          "label": "Danh xưng (Pronouns)",
+          "exercises": [
+            {
+              "type": "pronounPairs",
+              "noNum": true,
+              "instructionVi": "",
+              "intro": {
+                "vi": "Danh xưng tiếng Việt đi theo cặp. Từ xưng hô thay đổi tùy theo bạn đang nói chuyện với ai.",
+                "en": "Vietnamese address terms come in pairs. Pronouns change depending on the gender and age of whom you're speaking with."
+              },
+              "columns": [
+                {
+                  "vi": "tự xưng",
+                  "en": "self-reference"
+                },
+                {
+                  "vi": "xưng hô",
+                  "en": "term of address"
+                },
+                {
+                  "vi": "ví dụ",
+                  "en": "example"
+                }
+              ],
+              "rows": [
+                {
+                  "self": [
+                    {
+                      "text": "mình",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "bạn",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "examples": [
+                    "Bạn tên là gì?",
+                    "Mình tên là Minh."
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "em",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "anh",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "chị",
+                      "tone": "pink"
+                    }
+                  ],
+                  "examples": [
+                    "Chào anh. Em là Nhi.",
+                    "Em tên là Hà. Còn chị?"
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "anh",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "chị",
+                      "tone": "pink"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "em",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "examples": [
+                    "Anh khoẻ, cám ơn em.",
+                    "Chào em, anh là Nam."
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "con",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "chú",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "cô",
+                      "tone": "pink"
+                    }
+                  ],
+                  "examples": [
+                    "Chào cô. Con tên là Vy.",
+                    "Con khoẻ. Còn chú?"
+                  ]
+                },
+                {
+                  "self": [
+                    {
+                      "text": "chú",
+                      "tone": "blue"
+                    },
+                    {
+                      "text": "cô",
+                      "tone": "pink"
+                    }
+                  ],
+                  "other": [
+                    {
+                      "text": "con",
+                      "tone": "yellow"
+                    }
+                  ],
+                  "examples": [
+                    "Cảm ơn con. Cô khoẻ.",
+                    "Chào con. Chú tên là Tân."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "dialogueFill",
+              "instructionVi": "Hoàn thành các câu bằng đại từ thích hợp.",
+              "instructionEn": "Complete the sentences with the appropriate pronoun.",
+              "lines": [
+                {
+                  "speaker": "1  A:",
+                  "template": "Chào anh.",
+                  "answers": []
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Chào {0}.",
+                  "answers": [
+                    [
+                      "em"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "2  A:",
+                  "template": "{0} tên là gì?",
+                  "answers": [
+                    [
+                      "Bạn"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Mình tên là Bình.",
+                  "answers": []
+                },
+                {
+                  "speaker": "3  A:",
+                  "template": "{0} tên là gì?",
+                  "answers": [
+                    [
+                      "Bạn"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Mình tên là Bình.",
+                  "answers": []
+                },
+                {
+                  "speaker": "4  A:",
+                  "template": "{0} có khoẻ không?",
+                  "answers": [
+                    [
+                      "Cô"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "Cô khoẻ, cám ơn {0}.",
+                  "answers": [
+                    [
+                      "con"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "5  A:",
+                  "template": "{0} tên là Linh. Còn chị?",
+                  "answers": [
+                    [
+                      "Em"
+                    ]
+                  ]
+                },
+                {
+                  "speaker": "   B:",
+                  "template": "{0} tên là Phương.",
+                  "answers": [
+                    [
+                      "Chị"
+                    ]
+                  ]
+                }
+              ],
+              "noNum": true,
+              "framed": true
+            },
+            {
+              "type": "wordBankFill",
+              "num": 11,
+              "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng thích hợp.",
+              "instructionEn": "Introduce the people below using the appropriate pronouns.",
+              "words": [
+                "anh",
+                "chị",
+                "cô",
+                "chú"
+              ],
+              "items": [
+                {
+                  "img": "images/b1/bai11/ha.jpg",
+                  "name": "Hà",
+                  "template": "{0}",
+                  "answers": "chị"
+                },
+                {
+                  "img": "images/b1/bai11/binh.jpg",
+                  "name": "Bình",
+                  "template": "{0}",
+                  "answers": "chú"
+                },
+                {
+                  "img": "images/b1/bai11/minh.jpg",
+                  "name": "Minh",
+                  "template": "{0}",
+                  "answers": "anh"
+                },
+                {
+                  "img": "images/b1/bai11/lien.jpg",
+                  "name": "Liên",
+                  "template": "{0}",
+                  "answers": "cô"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "nghe",
       "titleVi": "Nghe",
       "titleEn": "Listening",
@@ -879,274 +1148,6 @@
                     "Mẹ của mình làm kỹ sư."
                   ],
                   "answer": "b"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ngu-phap",
-      "titleVi": "Ngữ pháp",
-      "titleEn": "Grammar",
-      "subtopics": [
-        {
-          "id": "danh-xung",
-          "label": "Danh xưng (Pronouns)",
-          "exercises": [
-            {
-              "type": "pronounPairs",
-              "noNum": true,
-              "instructionVi": "",
-              "intro": {
-                "vi": "Danh xưng tiếng Việt đi theo cặp. Từ xưng hô thay đổi tùy theo bạn đang nói chuyện với ai.",
-                "en": "Vietnamese address terms come in pairs. Pronouns change depending on the gender and age of whom you're speaking with."
-              },
-              "columns": [
-                {
-                  "vi": "tự xưng",
-                  "en": "self-reference"
-                },
-                {
-                  "vi": "xưng hô",
-                  "en": "term of address"
-                },
-                {
-                  "vi": "ví dụ",
-                  "en": "example"
-                }
-              ],
-              "rows": [
-                {
-                  "self": [
-                    {
-                      "text": "mình",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "bạn",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "examples": [
-                    "Bạn tên là gì?",
-                    "Mình tên là Minh."
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "em",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "anh",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "chị",
-                      "tone": "pink"
-                    }
-                  ],
-                  "examples": [
-                    "Chào anh. Em là Nhi.",
-                    "Em tên là Hà. Còn chị?"
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "anh",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "chị",
-                      "tone": "pink"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "em",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "examples": [
-                    "Anh khoẻ, cám ơn em.",
-                    "Chào em, anh là Nam."
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "con",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "chú",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "cô",
-                      "tone": "pink"
-                    }
-                  ],
-                  "examples": [
-                    "Chào cô. Con tên là Vy.",
-                    "Con khoẻ. Còn chú?"
-                  ]
-                },
-                {
-                  "self": [
-                    {
-                      "text": "chú",
-                      "tone": "blue"
-                    },
-                    {
-                      "text": "cô",
-                      "tone": "pink"
-                    }
-                  ],
-                  "other": [
-                    {
-                      "text": "con",
-                      "tone": "yellow"
-                    }
-                  ],
-                  "examples": [
-                    "Cảm ơn con. Cô khoẻ.",
-                    "Chào con. Chú tên là Tân."
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "dialogueFill",
-              "num": 10,
-              "instructionVi": "Hoàn thành các câu bằng đại từ thích hợp.",
-              "instructionEn": "Complete the sentences with the appropriate pronoun.",
-              "lines": [
-                {
-                  "speaker": "1  A:",
-                  "template": "Chào anh.",
-                  "answers": []
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Chào {0}.",
-                  "answers": [
-                    [
-                      "em"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "2  A:",
-                  "template": "{0} tên là gì?",
-                  "answers": [
-                    [
-                      "Bạn"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Mình tên là Bình.",
-                  "answers": []
-                },
-                {
-                  "speaker": "3  A:",
-                  "template": "{0} tên là gì?",
-                  "answers": [
-                    [
-                      "Bạn"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Mình tên là Bình.",
-                  "answers": []
-                },
-                {
-                  "speaker": "4  A:",
-                  "template": "{0} có khoẻ không?",
-                  "answers": [
-                    [
-                      "Cô"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "Cô khoẻ, cám ơn {0}.",
-                  "answers": [
-                    [
-                      "con"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "5  A:",
-                  "template": "{0} tên là Linh. Còn chị?",
-                  "answers": [
-                    [
-                      "Em"
-                    ]
-                  ]
-                },
-                {
-                  "speaker": "   B:",
-                  "template": "{0} tên là Phương.",
-                  "answers": [
-                    [
-                      "Chị"
-                    ]
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "wordBankFill",
-              "num": 11,
-              "instructionVi": "Giới thiệu tên những người sau sử dụng danh xưng thích hợp.",
-              "instructionEn": "Introduce the people below using the appropriate pronouns.",
-              "words": [
-                "anh",
-                "chị",
-                "cô",
-                "chú"
-              ],
-              "items": [
-                {
-                  "img": "images/b1/bai11/ha.jpg",
-                  "name": "Hà",
-                  "template": "{0}",
-                  "answers": "chị"
-                },
-                {
-                  "img": "images/b1/bai11/binh.jpg",
-                  "name": "Bình",
-                  "template": "{0}",
-                  "answers": "chú"
-                },
-                {
-                  "img": "images/b1/bai11/minh.jpg",
-                  "name": "Minh",
-                  "template": "{0}",
-                  "answers": "anh"
-                },
-                {
-                  "img": "images/b1/bai11/lien.jpg",
-                  "name": "Liên",
-                  "template": "{0}",
-                  "answers": "cô"
                 }
               ]
             }
