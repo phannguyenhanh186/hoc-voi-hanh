@@ -1006,12 +1006,13 @@
                 },
                 {
                   "type": "structure",
-                  "vi": "Chào + [2P Pronoun] – Hello / Goodbye\nCám ơn + [2P Pronoun] – Thank you\nXin lỗi + [2P Pronoun] – Sorry",
-                  "en": "Chào + [2P Pronoun] – Hello / Goodbye\nCám ơn + [2P Pronoun] – Thank you\nXin lỗi + [2P Pronoun] – Sorry"
+                  "vi": "Chào + [{{2P Pronoun::pink}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::pink}}] – Thank you\nXin lỗi + [{{2P Pronoun::pink}}] – Sorry",
+                  "en": "Chào + [{{2P Pronoun::pink}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::pink}}] – Thank you\nXin lỗi + [{{2P Pronoun::pink}}] – Sorry",
+                  "white": true
                 },
                 {
                   "type": "paragraph",
-                  "text": "[2P Pronoun] refers to the person you are talking to.",
+                  "text": "[{{2P Pronoun::pink}}] refers to the person you are talking to.",
                   "italic": true
                 },
                 {
@@ -1025,8 +1026,9 @@
                 },
                 {
                   "type": "structure",
-                  "vi": "[2P Pronoun] + khỏe không?",
-                  "en": "[2P Pronoun] + khỏe không?"
+                  "vi": "[{{2P Pronoun::pink}}] + khỏe không?",
+                  "en": "[{{2P Pronoun::pink}}] + khỏe không?",
+                  "white": true
                 },
                 {
                   "type": "paragraph",
@@ -1038,8 +1040,9 @@
                 },
                 {
                   "type": "structure",
-                  "vi": "[Your Pronoun] + khỏe.",
-                  "en": "[Your Pronoun] + khỏe."
+                  "vi": "[{{Your Pronoun::pink}}] + khỏe.",
+                  "en": "[{{Your Pronoun::pink}}] + khỏe.",
+                  "white": true
                 },
                 {
                   "type": "note",
