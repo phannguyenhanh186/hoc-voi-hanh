@@ -2039,3 +2039,4 @@ a.lesson-row:hover { background: #FAFAF7; }
 
 /* photoSentenceFill: dòng không hình (How to say…) chiếm cả hàng */
 .bai-photos-sent .bai-photo.is-textonly { grid-column: 1 / -1; }
+.bai-grammar-bullets { margin: 6px 0 12px; }
