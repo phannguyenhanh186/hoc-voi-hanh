@@ -2018,3 +2018,11 @@ a.lesson-row:hover { background: #FAFAF7; }
 /* Ngân hàng từ: chip có viền đen, cách xa dòng yêu cầu */
 .bai-wordbank { margin-top: 18px; }
 .bai-wordbank .bai-chip { border: 1.5px solid var(--stroke); padding: 0 18px; }
+
+/* Ghi chú văn hoá (block 'note') và đoạn in nghiêng (paragraph.italic) */
+.bai-grammar-structure-vi { white-space: pre-line; }
+.bai-grammar-p.is-italic .bai-grammar-p-vi { font-style: italic; }
+.bai-grammar-note { margin: 8px 0; padding: 12px 18px; border: 1.5px solid var(--stroke); border-radius: 14px; background: #fff; display: grid; gap: 6px; }
+.bai-grammar-note-title { font-weight: 700; color: var(--ink); }
+.bai-grammar-note-text { color: var(--ink); line-height: 1.6; }
+.bai-grammar-note-list { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; color: var(--ink); line-height: 1.6; }
