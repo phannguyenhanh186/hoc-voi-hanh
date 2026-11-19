@@ -157,7 +157,8 @@
                 }
               ],
               "noteTitleEn": "Đi + Verb",
-              "noteEn": "When “Đi” is placed before a verb, it means that you move (or go somewhere) to perform that action."
+              "noteEn": "When “Đi” is placed before a verb, it means that you move (or go somewhere) to perform that action.",
+              "colWidth": 300
             },
             {
               "type": "photoSentenceFill",
@@ -221,7 +222,8 @@
                   "caption": "Đi ăn",
                   "audio": "audio/b2/{voice}/vocab_di_an.mp3"
                 }
-              ]
+              ],
+              "colWidth": 300
             },
             {
               "type": "photoSentenceFill",
@@ -285,7 +287,8 @@
                   "caption": "Đi du lịch",
                   "audio": "audio/b2/{voice}/vocab_di_du_lich.mp3"
                 }
-              ]
+              ],
+              "colWidth": 300
             },
             {
               "type": "photoSentenceFill",
@@ -349,7 +352,9 @@
                   "caption": "Đi cà phê",
                   "audio": "audio/b2/{voice}/vocab_di_ca_phe.mp3"
                 }
-              ]
+              ],
+              "colWidth": 300,
+              "noteEn": "In Vietnamese, đi and về are both verbs indicating movement, but they express different directions and perspectives. Nhà (home) is generally considered a place you return to, rather than just another destination."
             },
             {
               "type": "photoSentenceFill",
@@ -526,7 +531,8 @@
                   "caption": "Buổi trưa",
                   "audio": "audio/b2/{voice}/vocab_buoi_trua.mp3"
                 }
-              ]
+              ],
+              "colWidth": 300
             },
             {
               "type": "photoSentenceFill",
@@ -590,7 +596,8 @@
                   "caption": "Buổi tối",
                   "audio": "audio/b2/{voice}/vocab_buoi_toi.mp3"
                 }
-              ]
+              ],
+              "colWidth": 300
             },
             {
               "type": "photoSentenceFill",
@@ -635,133 +642,6 @@
               ],
               "blankMin": 22,
               "columns": 2
-            },
-            {
-              "type": "calendarFill",
-              "num": 6,
-              "instructionVi": "Hoàn thành các câu sau dựa theo thời khoá biểu của Trân.",
-              "instructionEn": "Complete the sentences based on Trân’s schedule.",
-              "matrix": {
-                "columns": [
-                  {
-                    "title": "Trân",
-                    "tone": "pink"
-                  }
-                ],
-                "rows": [
-                  {
-                    "name": "8:00",
-                    "tone": "yellow",
-                    "cells": [
-                      {
-                        "text": "đi làm"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "12:00",
-                    "tone": "yellow",
-                    "cells": [
-                      {
-                        "text": "đi ăn"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "15:00",
-                    "tone": "yellow",
-                    "cells": [
-                      {
-                        "text": "đi cà phê"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "18:00",
-                    "tone": "yellow",
-                    "cells": [
-                      {
-                        "text": "về nhà"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "20:00",
-                    "tone": "yellow",
-                    "cells": [
-                      {
-                        "text": "đi chơi"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "23:00",
-                    "tone": "yellow",
-                    "cells": [
-                      {
-                        "text": "đi ngủ"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "words": [
-                "Buổi sáng",
-                "Buổi trưa",
-                "Buổi chiều",
-                "Buổi tối"
-              ],
-              "items": [
-                {
-                  "template": "{0} Trân đi ăn.",
-                  "answers": [
-                    [
-                      "Buổi trưa"
-                    ]
-                  ],
-                  "example": true
-                },
-                {
-                  "template": "{0} Trân đi làm.",
-                  "answers": [
-                    [
-                      "Buổi sáng"
-                    ]
-                  ]
-                },
-                {
-                  "template": "{0} Trân đi cà phê.",
-                  "answers": [
-                    [
-                      "Buổi chiều"
-                    ]
-                  ]
-                },
-                {
-                  "template": "{0} Trân về nhà.",
-                  "answers": [
-                    [
-                      "Buổi tối"
-                    ]
-                  ]
-                },
-                {
-                  "template": "{0} Trân đi chơi.",
-                  "answers": [
-                    [
-                      "Buổi tối"
-                    ]
-                  ]
-                },
-                {
-                  "template": "{0} Trân đi ngủ.",
-                  "answers": [
-                    [
-                      "Buổi tối"
-                    ]
-                  ]
-                }
-              ]
             },
             {
               "type": "calendarFill",
