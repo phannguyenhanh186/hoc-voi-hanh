@@ -1998,3 +1998,9 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-photos-sent .bai-fill-line { line-height: 1.7; }
 .bai-photos-sent .bai-blank { margin: 0 2px; padding: 2px 3px; max-width: 100%; }
 .bai-photos-sent .bai-mark { margin-left: 2px; }
+
+/* Từ vựng Bài 1: hình phóng to (ex.big) — bỏ giới hạn chiều rộng để 3 hình choán hết khung */
+.bai-photos.bai-photos-xl { max-width: none; gap: 24px; }
+.bai-photos-xl .bai-photo { width: 100%; }
+.bai-photos-xl .bai-photo-media { width: 100%; }
+.bai-photos-xl .bai-photo-cap { align-self: center; font-size: 1.25rem; font-weight: 600; }
