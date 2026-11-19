@@ -606,7 +606,13 @@
     function buildPairCell(items) {
       const cell = el('div', 'bai-pairs-cell');
       (items || []).forEach(function (it) {
-        cell.appendChild(el('div', 'bai-pairs-sub bai-tone-' + (it.tone || 'yellow'), it.text));
+        const chip = el('div', 'bai-pairs-sub bai-tone-' + (it.tone || 'yellow'));
+        const m = /^(.*?)\s*\((.+)\)\s*$/.exec(it.text || '');   // "anh (older brother)" -> từ + chú thích nhỏ
+        if (m) {
+          chip.appendChild(el('span', 'bai-pairs-word', m[1]));
+          chip.appendChild(el('span', 'bai-pairs-gloss', '(' + m[2] + ')'));
+        } else chip.textContent = it.text || '';
+        cell.appendChild(chip);
       });
       return cell;
     }
