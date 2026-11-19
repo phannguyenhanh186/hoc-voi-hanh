@@ -2032,3 +2032,7 @@ a.lesson-row:hover { background: #FAFAF7; }
 /* Chào hỏi (Bài 1): ghi chú nền vàng, khung cấu trúc nền trắng (block.white) */
 .bai-grammar-note { background: #FFEEC9; }
 .bai-grammar-structure.is-white { background: #fff; }
+
+/* photoSentenceFill: dòng điền cả câu (→ ________) */
+.bai-fill-line.is-wide { display: flex; align-items: baseline; gap: 6px; }
+.bai-fill-line.is-wide .bai-blank { flex: 1; min-width: 0; width: auto; }
