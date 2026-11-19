@@ -482,7 +482,7 @@
           }
           wrap.appendChild(h);
         } else if (b.type === 'structure') {
-          const s = el('div', 'grammar-callout bai-grammar-structure');
+          const s = el('div', 'grammar-callout bai-grammar-structure' + (b.white ? ' is-white' : ''));
           if (enOnly && b.en) s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.en, b.tone));
           else {
             s.appendChild(hlText(el('div', 'bai-grammar-structure-vi'), b.vi, b.tone));
