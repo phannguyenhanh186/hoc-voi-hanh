@@ -1006,13 +1006,13 @@
                 },
                 {
                   "type": "structure",
-                  "vi": "Chào + [{{2P Pronoun::pink}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::pink}}] – Thank you\nXin lỗi + [{{2P Pronoun::pink}}] – Sorry",
-                  "en": "Chào + [{{2P Pronoun::pink}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::pink}}] – Thank you\nXin lỗi + [{{2P Pronoun::pink}}] – Sorry",
+                  "vi": "Chào + [{{2P Pronoun::blue}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::blue}}] – Thank you\nXin lỗi + [{{2P Pronoun::blue}}] – Sorry",
+                  "en": "Chào + [{{2P Pronoun::blue}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::blue}}] – Thank you\nXin lỗi + [{{2P Pronoun::blue}}] – Sorry",
                   "white": true
                 },
                 {
                   "type": "paragraph",
-                  "text": "[{{2P Pronoun::pink}}] refers to the person you are talking to.",
+                  "text": "[{{2P Pronoun::blue}}] refers to the person you are talking to.",
                   "italic": true
                 },
                 {
@@ -1026,8 +1026,8 @@
                 },
                 {
                   "type": "structure",
-                  "vi": "[{{2P Pronoun::pink}}] + khỏe không?",
-                  "en": "[{{2P Pronoun::pink}}] + khỏe không?",
+                  "vi": "[{{2P Pronoun::blue}}] + khỏe không?",
+                  "en": "[{{2P Pronoun::blue}}] + khỏe không?",
                   "white": true
                 },
                 {
