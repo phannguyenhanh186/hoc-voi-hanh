@@ -1093,9 +1093,15 @@
         const fig = el('figure', 'bai-photo bai-photo-wide');
         fig.appendChild(makePhoto(it.img, it.name));
         if (it.example) {
+          // Câu ví dụ tách theo câu (mỗi câu 1 dòng) để không bị xuống dòng giữa chừng
           const cap = el('div', 'bai-fill-line');
-          cap.appendChild(document.createTextNode((i + 1) + '\u00A0\u00A0'));
-          cap.appendChild(el('span', 'bai-example', it.example));
+          const parts = String(it.example).split(/(?<=[.!?])\s+/);
+          parts.forEach(function (part, k) {
+            const row = el('div');
+            row.appendChild(document.createTextNode(k === 0 ? (i + 1) + '\u00A0\u00A0' : '\u00A0\u00A0\u00A0\u00A0'));
+            row.appendChild(el('span', 'bai-example', part));
+            cap.appendChild(row);
+          });
           fig.appendChild(cap);
         } else {
           // Dòng 1: "Đây là ___ Name." — dòng 2: "___ Name làm ___."
