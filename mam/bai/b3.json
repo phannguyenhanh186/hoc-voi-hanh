@@ -787,24 +787,6 @@
          "type": "paragraph",
          "vi": "Thích không thay đổi theo chủ ngữ.",
          "en": "The word thích does not change according to the subject."
-        },
-        {
-         "type": "examples",
-         "items": [
-          {
-           "vi": "Mình {{thích::pink}} phở."
-          },
-          {
-           "vi": "Chị {{thích::pink}} bún bò."
-          },
-          {
-           "vi": "Mẹ của em {{thích::pink}} trà."
-          },
-          {
-           "vi": "Chú Bình {{thích::pink}} cà phê."
-          }
-         ],
-         "toggle": false
         }
        ]
       },
@@ -1562,6 +1544,161 @@
           "Use the pronoun of the person you are talking to in the question, and your own pronoun in the answer.",
           "In everyday conversations, Vietnamese speakers may omit có in some questions and simply say Bạn thích cà phê không? Both forms are natural."
          ]
+        }
+       ]
+      },
+      {
+       "type": "writeAnswer",
+       "num": 10,
+       "questionMark": true,
+       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
+       "instructionEn": "Translate the following sentences into Vietnamese.",
+       "items": [
+        {
+         "question": "Do you like beef?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích thịt bò không",
+          "{p} thích thịt bò không",
+          "{p} có thích ăn thịt bò không",
+          "{p} thích ăn thịt bò không"
+         ],
+         "model": "{p} có thích thịt bò không"
+        },
+        {
+         "question": "Do you like tea?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích trà không",
+          "{p} thích trà không",
+          "{p} có thích uống trà không",
+          "{p} thích uống trà không"
+         ],
+         "model": "{p} có thích trà không"
+        },
+        {
+         "question": "Do you like chicken rice?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích cơm gà không",
+          "{p} thích cơm gà không",
+          "{p} có thích ăn cơm gà không",
+          "{p} thích ăn cơm gà không",
+          "{p} có thích cơm thịt gà không",
+          "{p} thích cơm thịt gà không"
+         ],
+         "model": "{p} có thích cơm gà không"
+        },
+        {
+         "question": "Do you like eating beef phở?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích ăn phở bò không",
+          "{p} thích ăn phở bò không",
+          "{p} có thích phở bò không",
+          "{p} thích phở bò không"
+         ],
+         "model": "{p} có thích ăn phở bò không"
+        },
+        {
+         "question": "Do you like eating vegetable soup?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích ăn canh rau không",
+          "{p} thích ăn canh rau không",
+          "{p} có thích canh rau không",
+          "{p} thích canh rau không"
+         ],
+         "model": "{p} có thích ăn canh rau không"
+        },
+        {
+         "question": "Do you like drinking black coffee?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích uống cà phê đen không",
+          "{p} thích uống cà phê đen không",
+          "{p} có thích cà phê đen không",
+          "{p} thích cà phê đen không"
+         ],
+         "model": "{p} có thích uống cà phê đen không"
+        },
+        {
+         "question": "Do you like drinking milk coffee?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích uống cà phê sữa không",
+          "{p} thích uống cà phê sữa không",
+          "{p} có thích cà phê sữa không",
+          "{p} thích cà phê sữa không"
+         ],
+         "model": "{p} có thích uống cà phê sữa không"
+        },
+        {
+         "question": "Do you like drinking fruit juice?",
+         "pronouns": [
+          "bạn",
+          "anh",
+          "chị",
+          "em",
+          "cô",
+          "chú"
+         ],
+         "answers": [
+          "{p} có thích uống nước trái cây không",
+          "{p} thích uống nước trái cây không",
+          "{p} có thích nước trái cây không",
+          "{p} thích nước trái cây không"
+         ],
+         "model": "{p} có thích uống nước trái cây không"
         }
        ]
       }
