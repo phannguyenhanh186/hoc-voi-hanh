@@ -1,7 +1,7 @@
 {
  "_guide": {
   "doc": "Bai hoc kieu 'slide day hoc': sidebar trai = cac section, noi dung ben phai. Trang: bai.html?id=b2&level=mam. App bo qua key bat dau bang '_'.",
-  "status": "Thu tu section: phat-am (Bai 1-4), tu-vung (Bai 5-8: 4 nhom hinh; Bai 9: photoFill), ngu-phap (muc Thich: 4 trang ghi chu xen 4 trang viet = Bai 10 [Thich + noun, Thich an, Thich uong, Khong thich]; Bai 11: hoan thanh cau hoi; Bai 12: bang; muc Gi: ghi chu), nghe (Bai 13-14), doc (Bai 15), viet (Bai 16-17), noi (Bai 18).",
+  "status": "Thu tu section: phat-am (Bai 1-4), tu-vung (Bai 5-8: 4 nhom hinh; Bai 9: photoFill), ngu-phap (muc Thich: 4 trang ghi chu xen 4 trang viet = Bai 10 [Thich + noun, Thich an, Thich uong, Khong thich]; Bai 11: hoan thanh cau hoi; Bai 12: bang; muc Co thich...khong?: 1 trang ghi chu; muc Gi: ghi chu), nghe (Bai 13-14), doc (Bai 15), viet (Bai 16-17), noi (Bai 18).",
   "exercise.grammarNote": "Ghi chu ngu phap song ngu, khong tuong tac (khong co dap an/audio). 'title' = tieu de lon. 'blocks' la mang cac khoi, moi khoi co 'type': 'paragraph' (doan van vi/en), 'heading' (tieu de nho vi/en), 'structure' (cong thuc vi/en, hien khung vang giong .grammar-callout co san), 'examples' (danh sach vi du dang an/hien - bam nut de mo, giong makeToggleSection cua grammar.html; moi item la {vi, en} - 'en' co the bo trong).",
   "exercise.sounds": "Cac van. 'columns' = danh sach cot; moi cot gom cac 'groups' (tone = yellow|pink|blue|violet); moi group gom cac 'rows'; o dau moi hang la nguyen am, cac o sau la am tiet. Hang ngan hon 3 o thi de trong (null).",
   "exercise.repeatSentences": "Nghe va lap lai ca cau (khong co cho trong). Moi item: 'text' (cau hien thi) + 'audio' (rieng, hoac dung chung ex.audio).",
@@ -803,7 +803,8 @@
           {
            "vi": "Chú Bình {{thích::pink}} cà phê."
           }
-         ]
+         ],
+         "toggle": false
         }
        ]
       },
@@ -1386,6 +1387,181 @@
          "num": 8,
          "q": "Ai không thích thịt gà?",
          "a": "Lan và Vân không thích thịt gà."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "co-thich-khong",
+     "label": "Có thích…không?",
+     "exercises": [
+      {
+       "type": "grammarNote",
+       "blocks": [
+        {
+         "type": "heading",
+         "vi": "Câu hỏi Có/Không với có thích…không?",
+         "en": "Yes/No Questions with Có thích...không?",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "text": "In Vietnamese, có thích...không? is used to ask whether someone likes something or someone. It is similar to “Do you like...?” in English."
+        },
+        {
+         "type": "structure",
+         "vi": "Subject + {{có::lav}} + {{thích::pink}} + ... + {{không::blue}}?",
+         "en": "Subject + {{có::lav}} + {{thích::pink}} + ... + {{không::blue}}?"
+        },
+        {
+         "type": "bullets",
+         "items": [
+          "{{Có::lav}} comes before the verb {{thích::pink}} (to like).",
+          "{{Thích::pink}} means “to like”.",
+          "{{Không::blue}} comes at the end of the question to form a yes/no question."
+         ]
+        },
+        {
+         "type": "examples",
+         "items": [
+          {
+           "vi": "Bạn {{có::lav}} {{thích::pink}} cà phê {{không::blue}}?",
+           "en": "Do you like coffee?"
+          },
+          {
+           "vi": "Anh {{có::lav}} {{thích::pink}} bóng đá {{không::blue}}?",
+           "en": "Do you like football?"
+          },
+          {
+           "vi": "Chị {{có::lav}} {{thích::pink}} nấu ăn {{không::blue}}?",
+           "en": "Do you like cooking?"
+          },
+          {
+           "vi": "Em {{có::lav}} {{thích::pink}} xem phim {{không::blue}}?",
+           "en": "Do you like watching movies?"
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Trả lời ngắn",
+         "en": "Short answers",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "text": "A short answer usually repeats the subject and uses có or không."
+        },
+        {
+         "type": "structure",
+         "vi": "[Pronoun] + {{có::lav}}. → Yes, [I do].\n[Pronoun] + {{không::blue}}. → No, [I don't].",
+         "en": "[Pronoun] + {{có::lav}}. → Yes, [I do].\n[Pronoun] + {{không::blue}}. → No, [I don't]."
+        },
+        {
+         "type": "paragraph",
+         "text": "Examples:"
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "blue",
+         "groups": [
+          {
+           "lines": [
+            {
+             "vi": "Bạn {{có::lav}} {{thích::pink}} cà phê {{không::blue}}?"
+            },
+            {
+             "vi": "Mình {{có::lav}}.",
+             "en": "Yes, I do."
+            },
+            {
+             "vi": "Mình {{không::blue}}.",
+             "en": "No, I don't."
+            }
+           ]
+          },
+          {
+           "lines": [
+            {
+             "vi": "Anh {{có::lav}} {{thích::pink}} bóng đá {{không::blue}}?"
+            },
+            {
+             "vi": "Tôi {{có::lav}}.",
+             "en": "Yes, I do."
+            },
+            {
+             "vi": "Tôi {{không::blue}}.",
+             "en": "No, I don't."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "vi": "Trả lời đầy đủ",
+         "en": "Full answers",
+         "tone": "purple"
+        },
+        {
+         "type": "paragraph",
+         "text": "You can also give a full answer by repeating the verb or phrase from the question."
+        },
+        {
+         "type": "structure",
+         "vi": "[Pronoun] + {{thích::pink}} + ... → Yes, [I] like...\n[Pronoun] + {{không::blue}} {{thích::pink}} + ... → No, [I] don't like...",
+         "en": "[Pronoun] + {{thích::pink}} + ... → Yes, [I] like...\n[Pronoun] + {{không::blue}} {{thích::pink}} + ... → No, [I] don't like..."
+        },
+        {
+         "type": "paragraph",
+         "text": "Examples:"
+        },
+        {
+         "type": "exampleGroup",
+         "tone": "blue",
+         "groups": [
+          {
+           "lines": [
+            {
+             "vi": "Bạn {{có::lav}} {{thích::pink}} cà phê {{không::blue}}?"
+            },
+            {
+             "vi": "Mình {{thích::pink}} cà phê.",
+             "en": "I like coffee."
+            },
+            {
+             "vi": "Mình {{không::blue}} {{thích::pink}} cà phê.",
+             "en": "I don't like coffee."
+            }
+           ]
+          },
+          {
+           "lines": [
+            {
+             "vi": "Chị {{có::lav}} {{thích::pink}} nấu ăn {{không::blue}}?"
+            },
+            {
+             "vi": "Tôi {{thích::pink}} nấu ăn.",
+             "en": "I like cooking."
+            },
+            {
+             "vi": "Tôi {{không::blue}} {{thích::pink}} nấu ăn.",
+             "en": "I don't like cooking."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "note",
+         "title": "Cultural Note:",
+         "bullets": [
+          "Có...không? is a question structure. The word có in this structure does not need to be translated separately into English.",
+          "At the end of a question, không marks a yes/no question; as an answer, không means “no”.",
+          "Use the pronoun of the person you are talking to in the question, and your own pronoun in the answer.",
+          "In everyday conversations, Vietnamese speakers may omit có in some questions and simply say Bạn thích cà phê không? Both forms are natural."
+         ]
         }
        ]
       }
