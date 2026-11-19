@@ -588,7 +588,8 @@
         {
          "type": "heading",
          "vi": "Câu hỏi ...chưa?",
-         "en": "Questions with ...chưa?"
+         "en": "Questions with ...chưa?",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -615,7 +616,8 @@
         {
          "type": "heading",
          "vi": "Trả lời: Rồi (already)",
-         "en": "Answer: Rồi (already)"
+         "en": "Answer: Rồi (already)",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -643,7 +645,8 @@
         {
          "type": "heading",
          "vi": "Trả lời: Chưa (yet, not yet)",
-         "en": "Answer: Chưa (yet, not yet)"
+         "en": "Answer: Chưa (yet, not yet)",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -671,7 +674,8 @@
         {
          "type": "heading",
          "vi": "Ghi chú / Note",
-         "en": "Ghi chú / Note"
+         "en": "Ghi chú / Note",
+         "tone": "purple"
         },
         {
          "type": "paragraph",

@@ -1090,6 +1090,7 @@
         {
          "type": "heading",
          "vi": "Hôm nay / hôm qua / ngày mai + là ngày mấy?",
+         "en": "Today / yesterday / tomorrow + là ngày mấy?",
          "tone": "purple"
         },
         {
@@ -1121,7 +1122,8 @@
         {
          "type": "heading",
          "vi": "Cách trả lời",
-         "en": "How to answer"
+         "en": "How to answer",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -1215,7 +1217,8 @@
         },
         {
          "type": "structure",
-         "vi": "[{{thứ::lav}}] + {{mấy::pink}}?"
+         "vi": "[{{thứ::lav}}] + {{mấy::pink}}?",
+         "en": "[{{thứ::lav}}] + {{mấy::pink}}?"
         },
         {
          "type": "paragraph",
@@ -1238,7 +1241,8 @@
         {
          "type": "heading",
          "vi": "Cách trả lời",
-         "en": "How to answer"
+         "en": "How to answer",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -1258,7 +1262,8 @@
         },
         {
          "type": "structure",
-         "vi": "{{ngày::lav}} + {{mấy::pink}}?"
+         "vi": "{{ngày::lav}} + {{mấy::pink}}?",
+         "en": "{{ngày::lav}} + {{mấy::pink}}?"
         },
         {
          "type": "paragraph",
@@ -1286,7 +1291,8 @@
         },
         {
          "type": "structure",
-         "vi": "{{tháng::lav}} + {{mấy::pink}}?"
+         "vi": "{{tháng::lav}} + {{mấy::pink}}?",
+         "en": "{{tháng::lav}} + {{mấy::pink}}?"
         },
         {
          "type": "paragraph",
@@ -1322,7 +1328,8 @@
         },
         {
          "type": "structure",
-         "vi": "{{năm::lav}} + {{mấy::pink}}?"
+         "vi": "{{năm::lav}} + {{mấy::pink}}?",
+         "en": "{{năm::lav}} + {{mấy::pink}}?"
         },
         {
          "type": "paragraph",
@@ -1348,7 +1355,9 @@
         },
         {
          "type": "heading",
-         "vi": "Note"
+         "vi": "Ghi chú",
+         "en": "Note",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -1357,7 +1366,8 @@
         },
         {
          "type": "paragraph",
-         "vi": "Ví dụ:"
+         "vi": "Ví dụ:",
+         "en": "Example:"
         },
         {
          "type": "paragraph",
@@ -1376,7 +1386,8 @@
         },
         {
          "type": "paragraph",
-         "vi": "Similarly:"
+         "vi": "Tương tự:",
+         "en": "Similarly:"
         },
         {
          "type": "paragraph",

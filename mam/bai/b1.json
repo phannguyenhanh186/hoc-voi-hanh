@@ -1001,14 +1001,14 @@
               "blocks": [
                 {
                   "type": "heading",
-                  "text": "Basic Vietnamese Greetings",
+                  "vi": "Chào hỏi cơ bản",
+                  "en": "Basic Vietnamese Greetings",
                   "tone": "purple"
                 },
                 {
                   "type": "structure",
                   "vi": "Chào + [{{2P Pronoun::blue}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::blue}}] – Thank you\nXin lỗi + [{{2P Pronoun::blue}}] – Sorry",
-                  "en": "Chào + [{{2P Pronoun::blue}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::blue}}] – Thank you\nXin lỗi + [{{2P Pronoun::blue}}] – Sorry",
-                  "white": true
+                  "en": "Chào + [{{2P Pronoun::blue}}] – Hello / Goodbye\nCám ơn + [{{2P Pronoun::blue}}] – Thank you\nXin lỗi + [{{2P Pronoun::blue}}] – Sorry"
                 },
                 {
                   "type": "paragraph",
@@ -1027,8 +1027,7 @@
                 {
                   "type": "structure",
                   "vi": "[{{2P Pronoun::blue}}] + khỏe không?",
-                  "en": "[{{2P Pronoun::blue}}] + khỏe không?",
-                  "white": true
+                  "en": "[{{2P Pronoun::blue}}] + khỏe không?"
                 },
                 {
                   "type": "paragraph",
@@ -1041,8 +1040,7 @@
                 {
                   "type": "structure",
                   "vi": "[{{Your Pronoun::pink}}] + khỏe.",
-                  "en": "[{{Your Pronoun::pink}}] + khỏe.",
-                  "white": true
+                  "en": "[{{Your Pronoun::pink}}] + khỏe."
                 },
                 {
                   "type": "note",

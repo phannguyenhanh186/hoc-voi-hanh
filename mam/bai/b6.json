@@ -802,7 +802,8 @@
         {
          "type": "heading",
          "vi": "Cách trả lời",
-         "en": "How to answer"
+         "en": "How to answer",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -1003,7 +1004,7 @@
        "type": "grammarNote",
        "noNum": true,
        "instructionVi": "",
-       "title": "Thời gian: Buổi + Thứ",
+       "title": "THỜI GIAN: BUỔI + THỨ – TIME: BUỔI + THỨ",
        "blocks": [
         {
          "type": "paragraph",

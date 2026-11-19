@@ -780,7 +780,8 @@
         {
          "type": "heading",
          "vi": "So sánh nhanh",
-         "en": "Quick comparison"
+         "en": "Quick comparison",
+         "tone": "purple"
         },
         {
          "type": "table",
@@ -802,7 +803,8 @@
         {
          "type": "heading",
          "vi": "Lưu ý",
-         "en": "Note"
+         "en": "Note",
+         "tone": "purple"
         },
         {
          "type": "paragraph",

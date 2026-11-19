@@ -956,7 +956,8 @@
               "blocks": [
                 {
                   "type": "heading",
-                  "text": "Yes/No Questions with Có...không?",
+                  "vi": "Câu hỏi Có/Không với có…không?",
+                  "en": "Yes/No Questions with Có...không?",
                   "tone": "purple"
                 },
                 {
@@ -966,8 +967,7 @@
                 {
                   "type": "structure",
                   "vi": "Subject + {{có::lav}} + ... + {{không::pink}}?",
-                  "en": "Subject + {{có::lav}} + ... + {{không::pink}}?",
-                  "white": true
+                  "en": "Subject + {{có::lav}} + ... + {{không::pink}}?"
                 },
                 {
                   "type": "paragraph",
@@ -992,7 +992,8 @@
                 },
                 {
                   "type": "heading",
-                  "text": "2. Short answers",
+                  "vi": "2. Trả lời ngắn",
+                  "en": "Short answers",
                   "tone": "purple"
                 },
                 {
@@ -1002,8 +1003,7 @@
                 {
                   "type": "structure",
                   "vi": "[Pronoun] + {{có::lav}}. → Yes.\n[Pronoun] + {{không::pink}}. → No.",
-                  "en": "[Pronoun] + {{có::lav}}. → Yes.\n[Pronoun] + {{không::pink}}. → No.",
-                  "white": true
+                  "en": "[Pronoun] + {{có::lav}}. → Yes.\n[Pronoun] + {{không::pink}}. → No."
                 },
                 {
                   "type": "examples",
@@ -1025,7 +1025,8 @@
                 },
                 {
                   "type": "heading",
-                  "text": "3. Full answers",
+                  "vi": "3. Trả lời đầy đủ",
+                  "en": "Full answers",
                   "tone": "purple"
                 },
                 {

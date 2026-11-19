@@ -657,11 +657,13 @@
         },
         {
          "type": "structure",
-         "vi": "Bây giờ là {{mấy giờ::pink}}?"
+         "vi": "Bây giờ là {{mấy giờ::pink}}?",
+         "en": "Bây giờ là {{mấy giờ::pink}}?"
         },
         {
          "type": "structure",
-         "vi": "→ Bây giờ là + [X] giờ (+ [Y] phút)"
+         "vi": "→ Bây giờ là + [X] giờ (+ [Y] phút)",
+         "en": "→ Bây giờ là + [X] giờ (+ [Y] phút)"
         },
         {
          "type": "examples",
@@ -684,11 +686,13 @@
         },
         {
          "type": "structure",
-         "vi": "[Chủ ngữ] + [hành động] + {{lúc::lav}} {{mấy giờ::pink}}?"
+         "vi": "[Chủ ngữ] + [hành động] + {{lúc::lav}} {{mấy giờ::pink}}?",
+         "en": "[Subject] + [action] + {{lúc::lav}} {{mấy giờ::pink}}?"
         },
         {
          "type": "structure",
-         "vi": "→ [Chủ ngữ] + [hành động] + {{lúc::lav}} + [X] giờ (+ [Y] phút)"
+         "vi": "→ [Chủ ngữ] + [hành động] + {{lúc::lav}} + [X] giờ (+ [Y] phút)",
+         "en": "→ [Subject] + [action] + {{lúc::lav}} + [X] giờ (+ [Y] phút)"
         },
         {
          "type": "examples",

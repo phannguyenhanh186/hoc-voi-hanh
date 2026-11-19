@@ -640,7 +640,8 @@
         {
          "type": "heading",
          "vi": "1. Ở đâu? – Where are you?",
-         "en": "1. Ở đâu? – Where are you?"
+         "en": "Ở đâu? – Where are you?",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -691,7 +692,8 @@
         {
          "type": "heading",
          "vi": "2. Đi đâu? – Where are you going?",
-         "en": "2. Đi đâu? – Where are you going?"
+         "en": "Đi đâu? – Where are you going?",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -746,7 +748,8 @@
         {
          "type": "heading",
          "vi": "3. Tới đâu? – Where are you going to?",
-         "en": "3. Tới đâu? – Where are you going to?"
+         "en": "Tới đâu? – Where are you going to?",
+         "tone": "purple"
         },
         {
          "type": "paragraph",
@@ -797,7 +800,8 @@
         {
          "type": "heading",
          "vi": "4. So sánh “ở đâu?”, “đi đâu?” và “tới đâu?”",
-         "en": "4. Comparing “ở đâu?”, “đi đâu?” and “tới đâu?”"
+         "en": "Comparing “ở đâu?”, “đi đâu?” and “tới đâu?”",
+         "tone": "purple"
         },
         {
          "type": "table",
