@@ -571,12 +571,11 @@
                   "audio": "audio/b1/{voice}/vocab_ky-su.mp3"
                 }
               ],
-              "noNum": true,
-              "big": true
+              "big": true,
+              "num": 6
             },
             {
               "type": "photoSentenceFill",
-              "noNum": true,
               "instructionVi": "Hoàn thành các câu.",
               "instructionEn": "Complete the sentences.",
               "items": [
@@ -613,7 +612,8 @@
                     ]
                   ]
                 }
-              ]
+              ],
+              "num": 6
             },
             {
               "type": "photoVocab",
@@ -636,12 +636,11 @@
                   "audio": "audio/b1/{voice}/vocab_ca-si.mp3"
                 }
               ],
-              "noNum": true,
-              "big": true
+              "big": true,
+              "num": 6
             },
             {
               "type": "photoSentenceFill",
-              "noNum": true,
               "instructionVi": "Hoàn thành các câu.",
               "instructionEn": "Complete the sentences.",
               "items": [
@@ -678,7 +677,8 @@
                     ]
                   ]
                 }
-              ]
+              ],
+              "num": 6
             },
             {
               "type": "photoOrder",
@@ -947,8 +947,8 @@
                   ]
                 }
               ],
-              "noNum": true,
-              "framed": true
+              "framed": true,
+              "num": 10
             },
             {
               "type": "wordBankFill",
@@ -986,7 +986,7 @@
                   "answers": "cô"
                 }
               ],
-              "noNum": true
+              "num": 11
             }
           ]
         },
