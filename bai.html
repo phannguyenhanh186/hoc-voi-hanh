@@ -665,7 +665,7 @@
     // Vocab (Bài 1): ảnh + câu tiếng Anh + câu tiếng Việt cần điền (→ Cô Hà là ____.)
     function renderPhotoSentenceFill(ex) {
       const box = el('div');
-      const grid = el('div', 'bai-photos bai-photos-sent');
+      const grid = el('div', 'bai-photos bai-photos-xl bai-photos-sent');
       const allCells = [];
       (ex.items || []).forEach(function (it) {
         const fig = el('figure', 'bai-photo');
@@ -889,6 +889,7 @@
       if (ex.audio) box.appendChild(makeListenBtn(ex, n));
       const wrap = el('div', 'bai-dialog');
       const allCells = [];
+      let group = null;   // ex.framed: mỗi câu (bắt đầu bằng số thứ tự ở dòng đầu) nằm trong 1 khung
       (ex.lines || []).forEach(function (ln) {
         const row = el('div', 'bai-dialog-row');
         row.appendChild(el('span', 'bai-dialog-speaker', ln.speaker));
@@ -896,7 +897,10 @@
         const mark = el('span', 'bai-mark');
         built.line.appendChild(mark);
         row.appendChild(built.line);
-        wrap.appendChild(row);
+        if (ex.framed) {
+          if (!group || /^\s*\d/.test(ln.speaker)) { group = el('div', 'bai-dialog-group'); wrap.appendChild(group); }
+          group.appendChild(row);
+        } else wrap.appendChild(row);
         built.cells.forEach(function (c) { allCells.push({ input: c.input, answers: c.answers, mark: mark, multi: built.cells.length > 1 }); });
       });
       box.appendChild(wrap);
