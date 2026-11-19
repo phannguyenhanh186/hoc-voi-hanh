@@ -1681,6 +1681,11 @@ button.cta-btn { font: inherit; font-family: var(--font-display); font-weight: 7
 .bai-pairs-sub { flex: 1; display: flex; align-items: center; justify-content: center; padding: 18px 10px; border-radius: 14px; font-weight: 700; font-size: 1.05rem; color: var(--ink); background: var(--chip-bg, #FFFDC6); }
 .bai-pairs-example { flex-direction: column; gap: 10px; }
 .bai-pairs-ex-line { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 14px 16px; border-radius: 14px; color: var(--ink); font-weight: 600; line-height: 1.4; background: var(--chip-bg, #C6C9FF); }
+/* Bảng danh xưng: các ô (nút) có viền đen; vàng -> trắng; phần ví dụ nền trắng */
+.bai-pairs-sub { border: 1.5px solid var(--stroke); }
+.bai-pairs-sub.bai-tone-yellow { --chip-bg: #fff; }
+.bai-pairs-intro { background: #fff; }
+.bai-pairs-ex-line, .bai-pairs-example.bai-tone-lav .bai-pairs-ex-line { background: #fff; }
 
 /* Bài 8/9 (b3): sắp xếp từ + viết câu trả lời */
 .bai-order-list, .bai-write-list { display: flex; flex-direction: column; gap: 22px; }
