@@ -1380,6 +1380,8 @@
      "exercises": [
       {
        "type": "grammarNote",
+       "noNum": true,
+       "instructionVi": "",
        "blocks": [
         {
          "type": "heading",
