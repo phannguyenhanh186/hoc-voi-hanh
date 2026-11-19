@@ -490,13 +490,24 @@
           }
           wrap.appendChild(s);
         } else if (b.type === 'paragraph') {
-          const p = el('div', 'bai-grammar-p');
+          const p = el('div', 'bai-grammar-p' + (b.italic ? ' is-italic' : ''));
           if (enOnly && b.en) p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.en, b.tone));
           else {
             p.appendChild(hlText(el('div', 'bai-grammar-p-vi'), b.vi != null ? b.vi : b.text, b.tone));
             if (b.en && b.vi != null) p.appendChild(hlText(el('div', 'bai-grammar-p-en'), b.en, b.tone));
           }
           wrap.appendChild(p);
+        } else if (b.type === 'note') {
+          // Ghi chú văn hoá: khung viền đen, tiêu đề đậm, có thể có danh sách gạch đầu dòng
+          const n = el('div', 'bai-grammar-note');
+          if (b.title) n.appendChild(el('div', 'bai-grammar-note-title', b.title));
+          if (b.text) n.appendChild(hlText(el('div', 'bai-grammar-note-text'), b.text, b.tone));
+          if ((b.bullets || []).length) {
+            const ul = el('ul', 'bai-grammar-note-list');
+            b.bullets.forEach(function (t) { ul.appendChild(hlText(el('li'), t, b.tone)); });
+            n.appendChild(ul);
+          }
+          wrap.appendChild(n);
         } else if (b.type === 'wordChips') {
           // danh sách từ ví dụ: mỗi từ là một nút riêng (chỉ để nhìn, không phát audio)
           const row = el('div', 'bai-wordchips');
