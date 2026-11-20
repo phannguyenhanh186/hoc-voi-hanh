@@ -213,6 +213,8 @@
        "num": 5,
        "instructionVi": "Nhìn vào hình và nghe từ vựng.",
        "instructionEn": "Look at the photos and listen to the words.",
+       "big": true,
+       "columns": 3,
        "items": [
         {
          "img": "images/b4/bai5/an_sang.jpg",
@@ -228,7 +230,60 @@
          "img": "images/b4/bai5/an_toi.jpg",
          "caption": "Ăn tối",
          "audio": "audio/b4/{voice}/vocab_an_toi.mp3"
+        }
+       ],
+       "colWidth": 260
+      },
+      {
+       "type": "photoSentenceFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu.",
+       "instructionEn": "Complete the sentences.",
+       "columns": 3,
+       "items": [
+        {
+         "img": "images/b4/bai5/an_sang.jpg",
+         "name": "Ăn sáng",
+         "en": "I eat breakfast.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "ăn sáng"
+          ]
+         ]
         },
+        {
+         "img": "images/b4/bai5/ngu_trua.jpg",
+         "name": "Ngủ trưa",
+         "en": "I take a nap.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "ngủ trưa"
+          ]
+         ]
+        },
+        {
+         "img": "images/b4/bai5/an_toi.jpg",
+         "name": "Ăn tối",
+         "en": "I eat dinner.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "ăn tối"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "type": "photoVocab",
+       "num": 5,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "big": true,
+       "columns": 3,
+       "items": [
         {
          "img": "images/b4/bai5/nau_com.jpg",
          "caption": "Nấu cơm",
@@ -243,7 +298,60 @@
          "img": "images/b4/bai5/tam.jpg",
          "caption": "Tắm",
          "audio": "audio/b4/{voice}/vocab_tam.mp3"
+        }
+       ],
+       "colWidth": 260
+      },
+      {
+       "type": "photoSentenceFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu.",
+       "instructionEn": "Complete the sentences.",
+       "columns": 3,
+       "items": [
+        {
+         "img": "images/b4/bai5/nau_com.jpg",
+         "name": "Nấu cơm",
+         "en": "I cook rice.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "nấu cơm"
+          ]
+         ]
         },
+        {
+         "img": "images/b4/bai5/tap_the_duc.jpg",
+         "name": "Tập thể dục",
+         "en": "I exercise.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "tập thể dục"
+          ]
+         ]
+        },
+        {
+         "img": "images/b4/bai5/tam.jpg",
+         "name": "Tắm",
+         "en": "I take a shower.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "tắm"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "type": "photoVocab",
+       "num": 5,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "big": true,
+       "columns": 3,
+       "items": [
         {
          "img": "images/b4/bai5/danh_rang.jpg",
          "caption": "Đánh răng",
@@ -258,7 +366,60 @@
          "img": "images/b4/bai5/don_nha.jpg",
          "caption": "Dọn nhà",
          "audio": "audio/b4/{voice}/vocab_don_nha.mp3"
+        }
+       ],
+       "colWidth": 260
+      },
+      {
+       "type": "photoSentenceFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu.",
+       "instructionEn": "Complete the sentences.",
+       "columns": 3,
+       "items": [
+        {
+         "img": "images/b4/bai5/danh_rang.jpg",
+         "name": "Đánh răng",
+         "en": "I brush my teeth.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "đánh răng"
+          ]
+         ]
         },
+        {
+         "img": "images/b4/bai5/goi_dau.jpg",
+         "name": "Gội đầu",
+         "en": "I wash my hair.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "gội đầu"
+          ]
+         ]
+        },
+        {
+         "img": "images/b4/bai5/don_nha.jpg",
+         "name": "Dọn nhà",
+         "en": "I clean the house.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "dọn nhà"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "type": "photoVocab",
+       "num": 5,
+       "instructionVi": "Nhìn vào hình và nghe từ vựng.",
+       "instructionEn": "Look at the photos and listen to the words.",
+       "big": true,
+       "columns": 3,
+       "items": [
         {
          "img": "images/b4/bai5/di_cho.jpg",
          "caption": "Đi chợ",
@@ -275,7 +436,49 @@
          "audio": "audio/b4/{voice}/vocab_ngu_day.mp3"
         }
        ],
-       "columns": 3
+       "colWidth": 260
+      },
+      {
+       "type": "photoSentenceFill",
+       "num": 5,
+       "instructionVi": "Hoàn thành các câu.",
+       "instructionEn": "Complete the sentences.",
+       "columns": 3,
+       "items": [
+        {
+         "img": "images/b4/bai5/di_cho.jpg",
+         "name": "Đi chợ",
+         "en": "I go to the market.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "đi chợ"
+          ]
+         ]
+        },
+        {
+         "img": "images/b4/bai5/uong_thuoc.jpg",
+         "name": "Uống thuốc",
+         "en": "I take medicine.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "uống thuốc"
+          ]
+         ]
+        },
+        {
+         "img": "images/b4/bai5/ngu_day.jpg",
+         "name": "Ngủ dậy",
+         "en": "I wake up.",
+         "template": "→ {0}",
+         "answers": [
+          [
+           "ngủ dậy"
+          ]
+         ]
+        }
+       ]
       },
       {
        "type": "photoFill",
