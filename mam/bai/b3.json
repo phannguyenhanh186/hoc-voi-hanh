@@ -1234,139 +1234,6 @@
          "model": "{p} không thích uống trà sữa"
         }
        ]
-      },
-      {
-       "type": "readingQA",
-       "num": 11,
-       "blankFirst": true,
-       "instructionVi": "Hoàn thành câu hỏi cho những câu trả lời sau.",
-       "instructionEn": "Complete the question for each answer below.",
-       "questions": [
-        {
-         "q": "→ Mình thích ăn cơm bò.",
-         "a": "Bạn thích ăn gì?"
-        },
-        {
-         "q": "→ Chị thích uống cà phê đen.",
-         "a": "Chị thích uống gì?"
-        },
-        {
-         "q": "→ Cô thích ăn phở gà.",
-         "a": "Cô thích ăn gì?"
-        },
-        {
-         "q": "→ Mẹ của em thích uống trà.",
-         "a": "Mẹ của em thích uống gì?"
-        }
-       ]
-      },
-      {
-       "type": "readingQA",
-       "num": 12,
-       "instructionVi": "Dựa vào bảng sau và hoàn thành câu.",
-       "instructionEn": "Use the table below to complete the sentences.",
-       "table": {
-        "rows": [
-         "Tâm",
-         "Lan",
-         "Kiên",
-         "Vân"
-        ],
-        "cols": [
-         "cà phê đen",
-         "cà phê sữa",
-         "trà",
-         "trái cây",
-         "bún bò",
-         "phở gà",
-         "canh",
-         "rau",
-         "cơm",
-         "thịt gà",
-         "thịt bò"
-        ],
-        "marks": {
-         "Tâm": {
-          "cà phê đen": "x",
-          "cà phê sữa": "✓",
-          "trà": "✓",
-          "phở gà": "✓",
-          "thịt gà": "✓",
-          "thịt bò": "x"
-         },
-         "Lan": {
-          "cà phê đen": "x",
-          "trà": "✓",
-          "trái cây": "✓",
-          "cơm": "✓",
-          "rau": "✓",
-          "thịt bò": "✓",
-          "thịt gà": "x",
-          "canh": "x"
-         },
-         "Kiên": {
-          "cà phê đen": "✓",
-          "bún bò": "✓",
-          "phở gà": "✓",
-          "trà": "x",
-          "trái cây": "x",
-          "cơm": "x"
-         },
-         "Vân": {
-          "cà phê đen": "x",
-          "cà phê sữa": "✓",
-          "cơm": "✓",
-          "thịt bò": "✓",
-          "canh": "✓",
-          "thịt gà": "x",
-          "phở gà": "x",
-          "trà": "x"
-         }
-        }
-       },
-       "questions": [
-        {
-         "num": 1,
-         "q": "Tâm có thích cà phê đen không?",
-         "a": "Tâm không thích cà phê đen.",
-         "example": true
-        },
-        {
-         "num": 2,
-         "q": "Lan có thích rau không?",
-         "a": "Lan thích rau."
-        },
-        {
-         "num": 3,
-         "q": "Kiên có thích cơm không?",
-         "a": "Kiên không thích cơm."
-        },
-        {
-         "num": 4,
-         "q": "Vân có thích trà không?",
-         "a": "Vân không thích trà."
-        },
-        {
-         "num": 5,
-         "q": "Ai thích cà phê đen?",
-         "a": "Kiên thích cà phê đen."
-        },
-        {
-         "num": 6,
-         "q": "Ai thích thịt bò?",
-         "a": "Lan và Vân thích thịt bò."
-        },
-        {
-         "num": 7,
-         "q": "Ai không thích trái cây?",
-         "a": "Kiên không thích trái cây."
-        },
-        {
-         "num": 8,
-         "q": "Ai không thích thịt gà?",
-         "a": "Lan và Vân không thích thịt gà."
-        }
-       ]
       }
      ]
     },
@@ -1872,6 +1739,139 @@
            "What do you like to drink?"
           ]
          ]
+        }
+       ]
+      },
+      {
+       "type": "readingQA",
+       "num": 11,
+       "blankFirst": true,
+       "instructionVi": "Hoàn thành câu hỏi cho những câu trả lời sau.",
+       "instructionEn": "Complete the question for each answer below.",
+       "questions": [
+        {
+         "q": "→ Mình thích ăn cơm bò.",
+         "a": "Bạn thích ăn gì?"
+        },
+        {
+         "q": "→ Chị thích uống cà phê đen.",
+         "a": "Chị thích uống gì?"
+        },
+        {
+         "q": "→ Cô thích ăn phở gà.",
+         "a": "Cô thích ăn gì?"
+        },
+        {
+         "q": "→ Mẹ của em thích uống trà.",
+         "a": "Mẹ của em thích uống gì?"
+        }
+       ]
+      },
+      {
+       "type": "readingQA",
+       "num": 12,
+       "instructionVi": "Dựa vào bảng sau và hoàn thành câu.",
+       "instructionEn": "Use the table below to complete the sentences.",
+       "table": {
+        "rows": [
+         "Tâm",
+         "Lan",
+         "Kiên",
+         "Vân"
+        ],
+        "cols": [
+         "cà phê đen",
+         "cà phê sữa",
+         "trà",
+         "trái cây",
+         "bún bò",
+         "phở gà",
+         "canh",
+         "rau",
+         "cơm",
+         "thịt gà",
+         "thịt bò"
+        ],
+        "marks": {
+         "Tâm": {
+          "cà phê đen": "x",
+          "cà phê sữa": "✓",
+          "trà": "✓",
+          "phở gà": "✓",
+          "thịt gà": "✓",
+          "thịt bò": "x"
+         },
+         "Lan": {
+          "cà phê đen": "x",
+          "trà": "✓",
+          "trái cây": "✓",
+          "cơm": "✓",
+          "rau": "✓",
+          "thịt bò": "✓",
+          "thịt gà": "x",
+          "canh": "x"
+         },
+         "Kiên": {
+          "cà phê đen": "✓",
+          "bún bò": "✓",
+          "phở gà": "✓",
+          "trà": "x",
+          "trái cây": "x",
+          "cơm": "x"
+         },
+         "Vân": {
+          "cà phê đen": "x",
+          "cà phê sữa": "✓",
+          "cơm": "✓",
+          "thịt bò": "✓",
+          "canh": "✓",
+          "thịt gà": "x",
+          "phở gà": "x",
+          "trà": "x"
+         }
+        }
+       },
+       "questions": [
+        {
+         "num": 1,
+         "q": "Tâm có thích cà phê đen không?",
+         "a": "Tâm không thích cà phê đen.",
+         "example": true
+        },
+        {
+         "num": 2,
+         "q": "Lan có thích rau không?",
+         "a": "Lan thích rau."
+        },
+        {
+         "num": 3,
+         "q": "Kiên có thích cơm không?",
+         "a": "Kiên không thích cơm."
+        },
+        {
+         "num": 4,
+         "q": "Vân có thích trà không?",
+         "a": "Vân không thích trà."
+        },
+        {
+         "num": 5,
+         "q": "Ai thích cà phê đen?",
+         "a": "Kiên thích cà phê đen."
+        },
+        {
+         "num": 6,
+         "q": "Ai thích thịt bò?",
+         "a": "Lan và Vân thích thịt bò."
+        },
+        {
+         "num": 7,
+         "q": "Ai không thích trái cây?",
+         "a": "Kiên không thích trái cây."
+        },
+        {
+         "num": 8,
+         "q": "Ai không thích thịt gà?",
+         "a": "Lan và Vân không thích thịt gà."
         }
        ]
       }
