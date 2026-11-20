@@ -608,12 +608,12 @@
         {
          "type": "paragraph",
          "vi": "Đâu là từ để hỏi về địa điểm.",
-         "en": "“Đâu” is a question word used to ask about a place or location."
+         "en": "“{{Đâu::pink}}” is a question word used to ask about a place or location."
         },
         {
          "type": "paragraph",
          "vi": "Trong tiếng Việt, đâu thường đứng ở cuối câu hỏi.",
-         "en": "In Vietnamese, “đâu” usually comes at the end of the question."
+         "en": "In Vietnamese, “{{đâu::pink}}” usually comes at the end of the question."
         },
         {
          "type": "examples",
@@ -635,7 +635,7 @@
         {
          "type": "paragraph",
          "vi": "Tùy vào động từ đi với đâu, câu hỏi có ý nghĩa khác nhau.",
-         "en": "The meaning changes depending on the verb used with “đâu.”"
+         "en": "The meaning changes depending on the verb used with “{{đâu::pink}}.”"
         },
         {
          "type": "heading",
@@ -646,7 +646,7 @@
         {
          "type": "paragraph",
          "vi": "Ở đâu? dùng để hỏi một người hoặc một vật đang ở vị trí nào.",
-         "en": "“Ở đâu?” is used to ask where a person or thing is located."
+         "en": "“{{Ở::lav}} {{đâu::pink}}?” is used to ask where a person or thing is located."
         },
         {
          "type": "structure",
@@ -669,7 +669,7 @@
         {
          "type": "paragraph",
          "vi": "Câu trả lời thường dùng ở + địa điểm.",
-         "en": "The answer usually uses “ở + place.”"
+         "en": "The answer usually uses “{{ở::lav}} + place.”"
         },
         {
          "type": "examples",
@@ -687,7 +687,7 @@
         {
          "type": "paragraph",
          "vi": "Ở → nói về vị trí.",
-         "en": "“Ở” indicates a location or position."
+         "en": "“{{Ở::lav}}” indicates a location or position."
         },
         {
          "type": "heading",
@@ -698,7 +698,7 @@
         {
          "type": "paragraph",
          "vi": "Đi đâu? dùng để hỏi một người đang đi đâu.",
-         "en": "“Đi đâu?” is used to ask where someone is going."
+         "en": "“{{Đi::lav}} {{đâu::pink}}?” is used to ask where someone is going."
         },
         {
          "type": "structure",
@@ -721,7 +721,7 @@
         {
          "type": "paragraph",
          "vi": "Câu trả lời thường dùng đi + địa điểm / hoạt động.",
-         "en": "The answer usually uses “đi + place / activity.”"
+         "en": "The answer usually uses “{{đi::lav}} + place / activity.”"
         },
         {
          "type": "examples",
@@ -743,7 +743,7 @@
         {
          "type": "paragraph",
          "vi": "Đi → nói về việc di chuyển / đi đâu đó.",
-         "en": "“Đi” indicates going or traveling somewhere."
+         "en": "“{{Đi::lav}}” indicates going or traveling somewhere."
         },
         {
          "type": "heading",
@@ -754,7 +754,7 @@
         {
          "type": "paragraph",
          "vi": "Tới đâu? dùng để hỏi điểm đến của một người.",
-         "en": "“Tới đâu?” is used to ask about someone’s destination."
+         "en": "“{{Tới::lav}} {{đâu::pink}}?” is used to ask about someone’s destination."
         },
         {
          "type": "structure",
@@ -777,7 +777,7 @@
         {
          "type": "paragraph",
          "vi": "Câu trả lời thường dùng tới + địa điểm.",
-         "en": "The answer usually uses “tới + place.”"
+         "en": "The answer usually uses “{{tới::lav}} + place.”"
         },
         {
          "type": "examples",
@@ -795,7 +795,7 @@
         {
          "type": "paragraph",
          "vi": "Tới → nhấn mạnh điểm đến.",
-         "en": "“Tới” emphasizes the destination or the place someone is going to."
+         "en": "“{{Tới::lav}}” emphasizes the destination or the place someone is going to."
         },
         {
          "type": "heading",

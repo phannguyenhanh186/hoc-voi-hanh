@@ -753,7 +753,7 @@
         {
          "type": "paragraph",
          "vi": "Thích có nghĩa là “like” trong tiếng Anh. Dùng thích để nói về người, đồ vật, món ăn, đồ uống hoặc hoạt động mà bạn yêu thích.",
-         "en": "Thích means “to like.” It is used to talk about things, food, drinks, or activities that you like."
+         "en": "{{Thích::pink}} means “to like.” It is used to talk about things, food, drinks, or activities that you like."
         },
         {
          "type": "heading",
@@ -785,7 +785,7 @@
         {
          "type": "paragraph",
          "vi": "Thích không thay đổi theo chủ ngữ.",
-         "en": "The word thích does not change according to the subject."
+         "en": "The word {{thích::pink}} does not change according to the subject."
         }
        ]
       },
@@ -881,7 +881,7 @@
         {
          "type": "paragraph",
          "vi": "Cả “Mình thích phở” và “Mình thích ăn phở” đều tự nhiên. Câu đầu tập trung vào món ăn; câu sau nhấn mạnh việc ăn món đó.",
-         "en": "Both “Mình thích phở” and “Mình thích ăn phở” are natural. The first focuses on the food; the second focuses on the activity of eating."
+         "en": "Both “Mình {{thích::pink}} phở” and “Mình {{thích::pink}} ăn phở” are natural. The first focuses on the food; the second focuses on the activity of eating."
         }
        ]
       },
@@ -1120,7 +1120,7 @@
         {
          "type": "paragraph",
          "vi": "Đặt không trước thích để tạo câu phủ định.",
-         "en": "Put không before thích to make a negative sentence."
+         "en": "Put {{không::blue}} before {{thích::pink}} to make a negative sentence."
         },
         {
          "type": "structure",
@@ -1387,7 +1387,7 @@
         },
         {
          "type": "paragraph",
-         "text": "In Vietnamese, có thích...không? is used to ask whether someone likes something or someone. It is similar to “Do you like...?” in English."
+         "text": "In Vietnamese, {{có::lav}} {{thích::pink}}...{{không::blue}}? is used to ask whether someone likes something or someone. It is similar to “Do you like...?” in English."
         },
         {
          "type": "structure",
@@ -1430,7 +1430,7 @@
         },
         {
          "type": "paragraph",
-         "text": "A short answer usually repeats the subject and uses có or không."
+         "text": "A short answer usually repeats the subject and uses {{có::lav}} or {{không::blue}}."
         },
         {
          "type": "structure",
@@ -1534,10 +1534,10 @@
          "type": "note",
          "title": "Cultural Note:",
          "bullets": [
-          "Có...không? is a question structure. The word có in this structure does not need to be translated separately into English.",
-          "At the end of a question, không marks a yes/no question; as an answer, không means “no”.",
+          "{{Có::lav}}...{{không::blue}}? is a question structure. The word {{có::lav}} in this structure does not need to be translated separately into English.",
+          "At the end of a question, {{không::blue}} marks a yes/no question; as an answer, {{không::blue}} means “no”.",
           "Use the pronoun of the person you are talking to in the question, and your own pronoun in the answer.",
-          "In everyday conversations, Vietnamese speakers may omit có in some questions and simply say Bạn thích cà phê không? Both forms are natural."
+          "In everyday conversations, Vietnamese speakers may omit {{có::lav}} in some questions and simply say Bạn {{thích::pink}} cà phê {{không::blue}}? Both forms are natural."
          ]
         }
        ]
@@ -1718,12 +1718,12 @@
         {
          "type": "paragraph",
          "vi": "Trong tiếng Việt, gì là từ dùng để hỏi về một sự vật, sự việc hoặc thông tin mà chúng ta chưa biết.",
-         "en": "In Vietnamese, “gì” means “what.” It is used to ask about something we do not know."
+         "en": "In Vietnamese, “{{gì::pink}}” means “what.” It is used to ask about something we do not know."
         },
         {
          "type": "paragraph",
          "vi": "Khi muốn hỏi về sở thích của một người, chúng ta có thể sử dụng từ gì để hỏi người đó thích ăn gì, thích uống gì hoặc thích làm gì.",
-         "en": "When asking about someone's preferences, we can use gì to ask what they like to eat, drink, or do."
+         "en": "When asking about someone's preferences, we can use {{gì::pink}} to ask what they like to eat, drink, or do."
         },
         {
          "type": "heading",
@@ -1814,7 +1814,7 @@
         {
          "type": "paragraph",
          "vi": "Chúng ta cũng có thể sử dụng gì để hỏi về những hoạt động mà một người thích làm.",
-         "en": "We can also use gì to ask about activities someone enjoys doing."
+         "en": "We can also use {{gì::pink}} to ask about activities someone enjoys doing."
         },
         {
          "type": "structure",
@@ -1854,7 +1854,7 @@
         {
          "type": "paragraph",
          "vi": "Trong những câu hỏi trên, từ gì thường đứng ở cuối câu, sau động từ hoặc cụm động từ.",
-         "en": "In these questions, gì usually comes at the end of the sentence, after the verb or verb phrase."
+         "en": "In these questions, {{gì::pink}} usually comes at the end of the sentence, after the verb or verb phrase."
         },
         {
          "type": "table",

@@ -1096,7 +1096,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng để hỏi ngày cụ thể trong tháng.",
-         "en": "Use “hôm nay / hôm qua / ngày mai + là ngày mấy?” to ask for the specific date."
+         "en": "Use “hôm nay / hôm qua / ngày mai + là {{ngày::lav}} {{mấy::pink}}?” to ask for the specific date."
         },
         {
          "type": "examples",
@@ -1207,7 +1207,7 @@
         {
          "type": "paragraph",
          "vi": "“Mấy” là từ dùng để hỏi về một số hoặc thứ tự không xác định.",
-         "en": "“Mấy” is used to ask about an unknown number or ordinal number."
+         "en": "“{{Mấy::pink}}” is used to ask about an unknown number or ordinal number."
         },
         {
          "type": "heading",
@@ -1223,7 +1223,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng để hỏi một ngày trong tuần là thứ mấy.",
-         "en": "Use “thứ mấy?” to ask which day of the week it is."
+         "en": "Use “{{thứ::lav}} {{mấy::pink}}?” to ask which day of the week it is."
         },
         {
          "type": "examples",
@@ -1268,7 +1268,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng để hỏi ngày trong tháng.",
-         "en": "Use “ngày + number?” to ask for the date of the month."
+         "en": "Use “{{ngày::lav}} + number?” to ask for the date of the month."
         },
         {
          "type": "examples",
@@ -1297,7 +1297,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng để hỏi tháng nào trong năm.",
-         "en": "Use “tháng + number?” to ask which month it is."
+         "en": "Use “{{tháng::lav}} + number?” to ask which month it is."
         },
         {
          "type": "examples",
@@ -1334,7 +1334,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng để hỏi năm nào.",
-         "en": "Use “năm + number?” to ask which year."
+         "en": "Use “{{năm::lav}} + number?” to ask which year."
         },
         {
          "type": "examples",

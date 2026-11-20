@@ -679,7 +679,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng “khi nào” để hỏi về thời gian một hành động xảy ra.",
-         "en": "Use “khi nào” to ask when an action happens."
+         "en": "Use “{{khi nào::pink}}” to ask when an action happens."
         },
         {
          "type": "examples",
@@ -707,7 +707,7 @@
         {
          "type": "paragraph",
          "vi": "Vị trí của “khi nào” có thể giúp chúng ta hiểu người nói đang hỏi về thời gian của sự việc như thế nào.",
-         "en": "The position of “khi nào” can help us understand what kind of timing the speaker is asking about."
+         "en": "The position of “{{khi nào::pink}}” can help us understand what kind of timing the speaker is asking about."
         },
         {
          "type": "heading",

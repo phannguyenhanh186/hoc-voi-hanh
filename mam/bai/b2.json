@@ -962,7 +962,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "text": "In Vietnamese, có...không? is used to ask a yes/no question. It is similar to questions beginning with “Do/Does...?” in English."
+                  "text": "In Vietnamese, {{có::lav}}...{{không::pink}}? is used to ask a yes/no question. It is similar to questions beginning with “Do/Does...?” in English."
                 },
                 {
                   "type": "structure",
@@ -971,7 +971,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "text": "The word có comes before the main information, and không comes at the end of the question."
+                  "text": "The word {{có::lav}} comes before the main information, and {{không::pink}} comes at the end of the question."
                 },
                 {
                   "type": "examples",
@@ -998,7 +998,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "text": "A short answer usually repeats the subject and uses có or không."
+                  "text": "A short answer usually repeats the subject and uses {{có::lav}} or {{không::pink}}."
                 },
                 {
                   "type": "structure",
@@ -1050,7 +1050,7 @@
                   "type": "note",
                   "title": "Cultural Note:",
                   "bullets": [
-                    "At the end of a question, không marks a yes/no question; as an answer, không means “no”.",
+                    "At the end of a question, {{không::pink}} marks a yes/no question; as an answer, {{không::pink}} means “no”.",
                     "Use the pronoun of the person you are talking to in the question, and your own pronoun in the answer."
                   ]
                 }

@@ -1046,9 +1046,9 @@
                   "type": "note",
                   "title": "Cultural Note:",
                   "bullets": [
-                    "Khỏe means healthy or well.",
-                    "Không is used at the end a question to form a yes/no question.",
-                    "You can add cảm ơn (thank you) to make your answer more polite: Mình khỏe, cảm ơn!"
+                    "{{Khỏe::lav}} means healthy or well.",
+                    "{{Không::green}} is used at the end a question to form a yes/no question.",
+                    "You can add {{cảm ơn::lav}} (thank you) to make your answer more polite: Mình {{khỏe::lav}}, {{cảm ơn::lav}}!"
                   ]
                 }
               ]

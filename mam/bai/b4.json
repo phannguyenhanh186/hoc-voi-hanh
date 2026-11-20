@@ -594,7 +594,7 @@
         {
          "type": "paragraph",
          "vi": "Trong tiếng Việt, chưa? được dùng ở cuối câu để hỏi một hành động đã xảy ra hay chưa.",
-         "en": "In Vietnamese, chưa? is used at the end of a question to ask whether an action has happened yet."
+         "en": "In Vietnamese, {{chưa::pink}}? is used at the end of a question to ask whether an action has happened yet."
         },
         {
          "type": "examples",
@@ -622,7 +622,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng rồi khi hành động đã xảy ra.",
-         "en": "Use rồi when the action has already happened."
+         "en": "Use {{rồi::lav}} when the action has already happened."
         },
         {
          "type": "structure",
@@ -651,7 +651,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng chưa khi hành động chưa xảy ra.",
-         "en": "Use chưa when the action has not happened yet."
+         "en": "Use {{chưa::pink}} when the action has not happened yet."
         },
         {
          "type": "structure",
@@ -680,7 +680,7 @@
         {
          "type": "paragraph",
          "vi": "Nếu chỉ trả lời “Rồi.” hoặc “Chưa.”, câu trả lời có thể nghe hơi cụt hoặc thiếu tự nhiên. Vì vậy, khi nói chuyện, bạn nên trả lời đầy đủ hơn bằng cách thêm đại từ và hành động.",
-         "en": "If you answer with only Rồi or Chưa, your response may sound a little abrupt or unnatural. So, when speaking, it is better to give a fuller answer by adding a pronoun and the action."
+         "en": "If you answer with only {{Rồi::lav}} or {{Chưa::pink}}, your response may sound a little abrupt or unnatural. So, when speaking, it is better to give a fuller answer by adding a pronoun and the action."
         }
        ]
       },

@@ -868,7 +868,7 @@
         {
          "type": "paragraph",
          "vi": "“Không phải là” được dùng để phủ định danh tính, nghề nghiệp, quốc tịch hoặc đặc điểm nhận dạng của một người hay một sự vật. Cấu trúc này thường được sử dụng khi muốn nói ai đó hoặc cái gì đó không phải là người hoặc vật được nhắc đến.",
-         "en": "“Không phải là” is used to deny the identity, occupation, nationality, or classification of a person or thing. It is commonly used to say that someone or something is not the person or thing being referred to."
+         "en": "“{{Không phải là::pink}}” is used to deny the identity, occupation, nationality, or classification of a person or thing. It is commonly used to say that someone or something is not the person or thing being referred to."
         },
         {
          "type": "heading",
@@ -977,7 +977,7 @@
         {
          "type": "paragraph",
          "vi": "“Phải không?” và “Đúng không?” được dùng ở cuối câu để hỏi và xác nhận một thông tin mà người nói đã biết hoặc đang dự đoán. Người nói sử dụng hai cấu trúc này khi muốn biết thông tin mình nói có chính xác hay không.",
-         "en": "“Phải không?” and “Đúng không?” are placed at the end of a sentence to ask for confirmation of information that the speaker already knows or assumes to be true. They are used when the speaker wants to check whether the information is correct."
+         "en": "“{{Phải không::pink}}?” and “{{Đúng không::pink}}?” are placed at the end of a sentence to ask for confirmation of information that the speaker already knows or assumes to be true. They are used when the speaker wants to check whether the information is correct."
         },
         {
          "type": "heading",
@@ -1020,7 +1020,7 @@
         {
          "type": "paragraph",
          "vi": "Khi trả lời câu hỏi với “Phải không?” hoặc “Đúng không?”, chúng ta có thể trả lời bằng cách xác nhận hoặc phủ nhận thông tin.",
-         "en": "When answering questions with “Phải không?” or “Đúng không?”, we can either confirm or deny the information."
+         "en": "When answering questions with “{{Phải không::pink}}?” or “{{Đúng không::pink}}?”, we can either confirm or deny the information."
         },
         {
          "type": "heading",
@@ -1031,7 +1031,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng “Đúng rồi” khi thông tin trong câu hỏi chính xác.",
-         "en": "Use “Đúng rồi” when the information in the question is correct."
+         "en": "Use “{{Đúng rồi::blue}}” when the information in the question is correct."
         },
         {
          "type": "examples",
@@ -1063,7 +1063,7 @@
         {
          "type": "paragraph",
          "vi": "Dùng “Không” khi thông tin trong câu hỏi không chính xác. Sau đó, có thể đưa ra thông tin chính xác.",
-         "en": "Use “Không” when the information in the question is incorrect. You can then provide the correct information."
+         "en": "Use “{{Không::blue}}” when the information in the question is incorrect. You can then provide the correct information."
         },
         {
          "type": "examples",

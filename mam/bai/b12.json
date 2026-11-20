@@ -515,7 +515,7 @@
         {
          "type": "paragraph",
          "vi": "“Bao lâu” được dùng để hỏi về khoảng thời gian cần thiết để thực hiện một hành động, hoặc khoảng thời gian một sự việc diễn ra. Câu hỏi với “bao lâu” thường muốn biết một hoạt động kéo dài trong bao nhiêu thời gian.",
-         "en": "“Bao lâu” is used to ask about the amount of time needed to complete an action or how long an event or activity lasts. Questions with “bao lâu” usually ask about the duration of an activity or event."
+         "en": "“{{Bao lâu::pink}}” is used to ask about the amount of time needed to complete an action or how long an event or activity lasts. Questions with “{{bao lâu::pink}}” usually ask about the duration of an activity or event."
         },
         {
          "type": "structure",
@@ -525,7 +525,7 @@
         {
          "type": "paragraph",
          "vi": "“Rồi” được dùng ở cuối câu để diễn tả một hành động hoặc trạng thái đã bắt đầu trong quá khứ và vẫn tiếp tục đến hiện tại. Khi kết hợp với khoảng thời gian, “rồi” nhấn mạnh rằng sự việc đã diễn ra được một khoảng thời gian tính đến thời điểm nói.",
-         "en": "“Rồi” is used at the end of a sentence to indicate that an action or state started in the past and continues up to the present. When used with a duration, “rồi” emphasizes how long the action or state has continued until now."
+         "en": "“{{Rồi::pink}}” is used at the end of a sentence to indicate that an action or state started in the past and continues up to the present. When used with a duration, “{{rồi::pink}}” emphasizes how long the action or state has continued until now."
         },
         {
          "type": "examples",
@@ -549,7 +549,7 @@
         {
          "type": "paragraph",
          "vi": "Khi trả lời câu hỏi với “bao lâu”, chúng ta thường sử dụng các đơn vị thời gian như: phút, giờ, ngày, tuần, tháng, năm.",
-         "en": "When answering questions with “bao lâu”, we usually use units of time such as minutes, hours, days, weeks, months, and years."
+         "en": "When answering questions with “{{bao lâu::pink}}”, we usually use units of time such as minutes, hours, days, weeks, months, and years."
         },
         {
          "type": "structure",

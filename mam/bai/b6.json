@@ -701,7 +701,7 @@
         {
          "type": "paragraph",
          "vi": "Thường được dùng để nói về một hành động hoặc thói quen xảy ra nhiều lần hoặc thường xuyên.",
-         "en": "Thường is used to talk about an action or habit that happens regularly or frequently."
+         "en": "{{Thường::blue}} is used to talk about an action or habit that happens regularly or frequently."
         },
         {
          "type": "structure",
@@ -738,7 +738,7 @@
         {
          "type": "paragraph",
          "vi": "Để nói một hành động không thường xuyên xảy ra, dùng không thường trước hành động.",
-         "en": "To say that an action does not happen regularly, use không thường before the action."
+         "en": "To say that an action does not happen regularly, use {{không::pink}} {{thường::blue}} before the action."
         },
         {
          "type": "structure",
@@ -775,7 +775,7 @@
         {
          "type": "paragraph",
          "vi": "“… có thường + hành động + không?” dùng để hỏi một người có thường xuyên làm một việc gì đó hay không.",
-         "en": "“… có thường + action + không?” is used to ask whether someone usually does something."
+         "en": "“… {{có::lav}} {{thường::blue}} + action + {{không::pink}}?” is used to ask whether someone usually does something."
         },
         {
          "type": "structure",
@@ -1009,7 +1009,7 @@
         {
          "type": "paragraph",
          "vi": "Trong tiếng Việt, khi nói một thời điểm cụ thể trong ngày, “buổi” đứng trước “thứ”.",
-         "en": "In Vietnamese, when talking about a specific time of day on a particular day, “buổi” comes before the day of the week."
+         "en": "In Vietnamese, when talking about a specific time of day on a particular day, “{{buổi::lav}}” comes before the day of the week."
         },
         {
          "type": "structure",
@@ -1046,7 +1046,7 @@
         {
          "type": "paragraph",
          "vi": "Khi thời gian đứng ở cuối câu, có thể dùng “vào” trước cụm thời gian để nói một hành động xảy ra vào thời điểm hoặc khoảng thời gian đó.",
-         "en": "When the time expression comes at the end of the sentence, “vào” can be used before the time expression to say when an action happens."
+         "en": "When the time expression comes at the end of the sentence, “{{vào::blue}}” can be used before the time expression to say when an action happens."
         },
         {
          "type": "structure",
@@ -1079,7 +1079,7 @@
         {
          "type": "paragraph",
          "vi": "Khi thời gian đứng ở đầu câu, thường không dùng “vào”.",
-         "en": "When the time expression comes at the beginning of the sentence, “vào” is usually not used."
+         "en": "When the time expression comes at the beginning of the sentence, “{{vào::blue}}” is usually not used."
         },
         {
          "type": "structure",
