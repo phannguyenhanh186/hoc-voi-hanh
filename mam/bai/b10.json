@@ -186,71 +186,369 @@
    "titleEn": "Vocabulary",
    "subtopics": [
     {
+     "id": "tuan",
+     "label": "Tuần – Week",
+     "exercises": [
+      {
+       "type": "teach",
+       "noNum": true,
+       "diagram": {
+        "kind": "timeline",
+        "title": {
+         "vi": "Tuần",
+         "en": "Week"
+        },
+        "cols": [
+         {
+          "vi": "tuần trước",
+          "en": "last week",
+          "tone": "pink"
+         },
+         {
+          "vi": "tuần này",
+          "en": "this week",
+          "tone": "lav"
+         },
+         {
+          "vi": "tuần sau",
+          "en": "next week",
+          "tone": "blue"
+         }
+        ]
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "Last week, I went home.",
+       "vi": "{{Tuần trước::pink}} mình về nhà."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "This week, I don't go to work.",
+       "vi": "{{Tuần này::lav}} mình {{không::blue}} đi làm."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "sẽ",
+        "en": "modal verb for future tense",
+        "tone": "lav"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "Next week, I will go traveling.",
+       "vi": "{{Tuần sau::blue}} mình {{sẽ::lav}} đi du lịch."
+      }
+     ]
+    },
+    {
+     "id": "thang",
+     "label": "Tháng – Month",
+     "exercises": [
+      {
+       "type": "teach",
+       "noNum": true,
+       "diagram": {
+        "kind": "timeline",
+        "title": {
+         "vi": "Tháng",
+         "en": "Month"
+        },
+        "cols": [
+         {
+          "vi": "tháng trước",
+          "en": "last month",
+          "tone": "pink"
+         },
+         {
+          "vi": "tháng này",
+          "en": "this month",
+          "tone": "lav"
+         },
+         {
+          "vi": "tháng sau",
+          "en": "next month",
+          "tone": "blue"
+         }
+        ]
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "Last month, I went to the hospital.",
+       "vi": "{{Tháng trước::pink}} mình đi bệnh viện."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "Về quê",
+        "en": "Go back to the hometown",
+        "tone": "lav"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "This month, I go back to the hometown.",
+       "vi": "{{Tháng này::lav}} mình về quê."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "Next month, I will stay at home.",
+       "vi": "{{Tháng sau::blue}} mình {{sẽ::lav}} ở nhà."
+      }
+     ]
+    },
+    {
+     "id": "nam",
+     "label": "Năm – Year",
+     "exercises": [
+      {
+       "type": "teach",
+       "noNum": true,
+       "diagram": {
+        "kind": "timeline",
+        "title": {
+         "vi": "Năm",
+         "en": "Year"
+        },
+        "cols": [
+         {
+          "vi": "năm trước",
+          "en": "last year",
+          "tone": "pink"
+         },
+         {
+          "vi": "năm nay",
+          "en": "this year",
+          "tone": "lav"
+         },
+         {
+          "vi": "năm sau",
+          "en": "next year",
+          "tone": "blue"
+         }
+        ],
+        "note": "With “năm” (year), we say {{năm nay::lav}} instead of “năm này”."
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "Đi công tác",
+        "en": "Go on a business trip",
+        "tone": "lav"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "Last year, I went on a business trip.",
+       "vi": "{{Năm trước::pink}} mình đi công tác."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "This year, I don't go traveling.",
+       "vi": "{{Năm nay::lav}} mình {{không::blue}} đi du lịch."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "Tiếng Việt",
+        "en": "Vietnamese language",
+        "tone": "lav"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "Next year, I will study Vietnamese.",
+       "vi": "{{Năm sau::blue}} mình {{sẽ::lav}} học tiếng Việt."
+      }
+     ]
+    },
+    {
      "id": "dau-cuoi",
      "label": "Đầu – cuối",
      "exercises": [
       {
-       "type": "grammarNote",
+       "type": "teach",
        "noNum": true,
-       "instructionVi": "",
-       "title": "ĐẦU – CUỐI · BEGINNING – END",
-       "blocks": [
-        {
-         "type": "heading",
-         "vi": "Đầu – cuối",
-         "en": "Beginning – end",
-         "tone": "purple"
+       "diagram": {
+        "kind": "formula",
+        "title": {
+         "vi": "Đầu – Cuối",
+         "en": "Beginning – End"
         },
-        {
-         "type": "paragraph",
-         "vi": "Dùng đầu / cuối + tuần / tháng / năm, rồi thêm trước, này hoặc sau.",
-         "en": "Use đầu / cuối + week / month / year, then add trước (last), này/nay (this) or sau (next)."
-        },
-        {
-         "type": "image",
-         "src": "images/b10/dau_cuoi.svg",
-         "alt": "Sơ đồ đầu – cuối với trước, này, sau",
-         "maxWidth": 1000
-        },
-        {
-         "type": "paragraph",
-         "vi": "Với “năm”, mình dùng “năm nay” thay vì “năm này”.",
-         "en": "With “năm” (year), we use “năm nay” instead of “năm này”."
-        },
-        {
-         "type": "examples",
-         "items": [
+        "rows": [
+         [
           {
-           "vi": "đầu tuần",
-           "en": "the beginning of the week"
+           "vi": "đầu",
+           "en": "the beginning of",
+           "tone": "pink"
           },
           {
-           "vi": "cuối tuần",
-           "en": "the end of the week; the weekend"
+           "vi": "cuối",
+           "en": "the end of",
+           "tone": "blue"
+          }
+         ],
+         [
+          {
+           "vi": "tuần",
+           "en": "week",
+           "tone": "lav"
           },
           {
-           "vi": "đầu tháng trước",
-           "en": "the beginning of last month"
+           "vi": "tháng",
+           "en": "month",
+           "tone": "lav"
           },
           {
-           "vi": "cuối tháng sau",
-           "en": "the end of next month"
+           "vi": "năm",
+           "en": "year",
+           "tone": "lav"
+          }
+         ],
+         [
+          {
+           "vi": "trước",
+           "en": "last",
+           "tone": "green"
           },
           {
-           "vi": "đầu năm sau",
-           "en": "the beginning of next year"
+           "vi": "này / nay",
+           "en": "this",
+           "tone": "green"
           },
           {
-           "vi": "cuối tuần này",
-           "en": "this weekend"
-          },
-          {
-           "vi": "đầu năm nay",
-           "en": "the beginning of this year"
+           "vi": "sau",
+           "en": "next",
+           "tone": "green"
           }
          ]
-        }
-       ]
+        ],
+        "note": "With “năm” (year), we say năm nay instead of “năm này”."
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of this week",
+       "vi": "{{Đầu::pink}} tuần này"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "Đầu",
+        "en": "The beginning of",
+        "tone": "pink"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "Đồng nghiệp",
+        "en": "Colleagues",
+        "tone": "lav"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of this week, I ate with the colleagues.",
+       "vi": "{{Đầu::pink}} tuần này, mình ăn với đồng nghiệp."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "Ăn Tết",
+        "en": "Celebrate Tet holiday",
+        "tone": "lav"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of next year",
+       "vi": "{{Đầu::pink}} năm sau"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of next year, I will celebrate Tet holiday with my family.",
+       "vi": "{{Đầu::pink}} năm sau, mình {{sẽ::lav}} ăn Tết với gia đình."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of last month",
+       "vi": "{{Đầu::pink}} tháng trước"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of last month, I went on a business trip.",
+       "vi": "{{Đầu::pink}} tháng trước, mình đi công tác."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "term": {
+        "vi": "Cuối",
+        "en": "The end of",
+        "tone": "blue"
+       }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The end of last week",
+       "vi": "{{Cuối::blue}} tuần trước"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The end of last week, I had dinner with friends.",
+       "vi": "{{Cuối::blue}} tuần trước, mình ăn tối với bạn."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The end of this year",
+       "vi": "{{Cuối::blue}} năm nay"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The end of this year, I will go back to the hometown.",
+       "vi": "{{Cuối::blue}} năm nay, mình {{sẽ::lav}} về quê."
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The end of next month",
+       "vi": "{{Cuối::blue}} tháng sau"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The end of next month, I will celebrate Tet at home.",
+       "vi": "{{Cuối::blue}} tháng sau, mình {{sẽ::lav}} ăn Tết ở nhà."
       },
       {
        "type": "matchDrag",
@@ -538,6 +836,7 @@
        "num": 7,
        "instructionVi": "Nghe và chọn đáp án chính xác.",
        "instructionEn": "Listen and choose the correct answer.",
+       "startAt": 0,
        "items": [
         {
          "audio": "audio/b10/{voice}/listen_ex7_01.mp3",
@@ -547,7 +846,16 @@
           "cuối tháng sau"
          ],
          "answer": "a"
-        },
+        }
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 7,
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "startAt": 1,
+       "items": [
         {
          "audio": "audio/b10/{voice}/listen_ex7_02.mp3",
          "text": "Chị Luyến về quê ___.",
@@ -556,7 +864,16 @@
           "tuần trước"
          ],
          "answer": "b"
-        },
+        }
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 7,
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "startAt": 2,
+       "items": [
         {
          "audio": "audio/b10/{voice}/listen_ex7_03.mp3",
          "text": "___, ông của Phú đi khám bệnh.",
@@ -565,7 +882,16 @@
           "Đầu năm sau"
          ],
          "answer": "b"
-        },
+        }
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 7,
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "startAt": 3,
+       "items": [
         {
          "audio": "audio/b10/{voice}/listen_ex7_04.mp3",
          "text": "Em trai của Uyên đi du lịch ___.",
@@ -574,7 +900,16 @@
           "đầu tháng trước"
          ],
          "answer": "a"
-        },
+        }
+       ]
+      },
+      {
+       "type": "audioChoice",
+       "num": 7,
+       "instructionVi": "Nghe và chọn đáp án chính xác.",
+       "instructionEn": "Listen and choose the correct answer.",
+       "startAt": 4,
+       "items": [
         {
          "audio": "audio/b10/{voice}/listen_ex7_05.mp3",
          "text": "Chú của Vy nghỉ làm ___.",
@@ -598,6 +933,7 @@
         "tháng sau",
         "đầu năm sau"
        ],
+       "startAt": 0,
        "items": [
         {
          "template": "{0} Mai về nhà.",
@@ -607,7 +943,23 @@
           ]
          ],
          "audio": "audio/b10/{voice}/listen_ex8_01.mp3"
-        },
+        }
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 8,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "tuần trước",
+        "đầu tuần sau",
+        "cuối tháng này",
+        "tháng sau",
+        "đầu năm sau"
+       ],
+       "startAt": 1,
+       "items": [
         {
          "template": "Anh Nam tới bệnh viện {0}.",
          "answers": [
@@ -616,7 +968,23 @@
           ]
          ],
          "audio": "audio/b10/{voice}/listen_ex8_02.mp3"
-        },
+        }
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 8,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "tuần trước",
+        "đầu tuần sau",
+        "cuối tháng này",
+        "tháng sau",
+        "đầu năm sau"
+       ],
+       "startAt": 2,
+       "items": [
         {
          "template": "{0}, chú Sáu về Việt Nam.",
          "answers": [
@@ -625,7 +993,23 @@
           ]
          ],
          "audio": "audio/b10/{voice}/listen_ex8_03.mp3"
-        },
+        }
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 8,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "tuần trước",
+        "đầu tuần sau",
+        "cuối tháng này",
+        "tháng sau",
+        "đầu năm sau"
+       ],
+       "startAt": 3,
+       "items": [
         {
          "template": "{0}, cô Huyền đi chợ.",
          "answers": [
@@ -634,7 +1018,23 @@
           ]
          ],
          "audio": "audio/b10/{voice}/listen_ex8_04.mp3"
-        },
+        }
+       ]
+      },
+      {
+       "type": "bankSentences",
+       "num": 8,
+       "instructionVi": "Nghe và hoàn thành các câu sau.",
+       "instructionEn": "Listen and complete the following sentences.",
+       "words": [
+        "tuần trước",
+        "đầu tuần sau",
+        "cuối tháng này",
+        "tháng sau",
+        "đầu năm sau"
+       ],
+       "startAt": 4,
+       "items": [
         {
          "template": "{0} em gái của Phong đi du lịch.",
          "answers": [
@@ -666,190 +1066,9 @@
        "title": "KHI NÀO? · WHEN?",
        "blocks": [
         {
-         "type": "heading",
-         "vi": "1. Cách dùng",
-         "en": "Usage",
-         "tone": "purple"
-        },
-        {
-         "type": "structure",
-         "vi": "Khi nào?",
-         "en": "When?"
-        },
-        {
          "type": "paragraph",
-         "vi": "Dùng “khi nào” để hỏi về thời gian một hành động xảy ra.",
-         "en": "Use “{{khi nào::pink}}” to ask when an action happens."
-        },
-        {
-         "type": "examples",
-         "items": [
-          {
-           "vi": "Bạn đi làm {{khi nào::blue}}?",
-           "en": "When do you go to work?"
-          },
-          {
-           "vi": "{{Khi nào::pink}} bạn đi du lịch?",
-           "en": "When are you going on vacation?"
-          },
-          {
-           "vi": "{{Khi nào::pink}} bạn về Việt Nam?",
-           "en": "When are you coming back to Vietnam?"
-          }
-         ]
-        },
-        {
-         "type": "heading",
-         "vi": "2. Vị trí của “khi nào”",
-         "en": "Word order",
-         "tone": "purple"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Vị trí của “khi nào” có thể giúp chúng ta hiểu người nói đang hỏi về thời gian của sự việc như thế nào.",
-         "en": "The position of “{{khi nào::pink}}” can help us understand what kind of timing the speaker is asking about."
-        },
-        {
-         "type": "heading",
-         "vi": "A. KHI NÀO ở cuối câu",
-         "en": "WHEN at the end of a question"
-        },
-        {
-         "type": "structure",
-         "vi": "Chủ ngữ + hành động + {{KHI NÀO}}?",
-         "en": "Subject + action + WHEN?",
-         "tone": "blue"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Dùng để hỏi về thời gian một sự việc xảy ra, chẳng hạn như thói quen, lịch trình hoặc một sự việc đã xảy ra.",
-         "en": "Use this structure to ask when something happens, such as a routine, schedule, or an event that has already happened."
-        },
-        {
-         "type": "exampleGroup",
-         "tone": "blue",
-         "groups": [
-          {
-           "label": "THÓI QUEN — ROUTINES",
-           "vi": "Bạn đi làm {{khi nào}}?",
-           "en": "When do you go to work?",
-           "note": "→ Hỏi về lịch trình thường ngày. / Asking about a regular schedule."
-          },
-          {
-           "label": "SỰ VIỆC ĐÃ XẢY RA — PAST EVENTS",
-           "vi": "Hôm qua bạn về nhà {{khi nào}}?",
-           "en": "When did you get home yesterday?",
-           "note": "→ Hỏi về thời gian một sự việc đã xảy ra. / Asking about the time of a past event."
-          }
-         ]
-        },
-        {
-         "type": "heading",
-         "vi": "B. KHI NÀO ở đầu câu",
-         "en": "WHEN at the beginning of a question"
-        },
-        {
-         "type": "structure",
-         "vi": "{{KHI NÀO}} + chủ ngữ + hành động?",
-         "en": "WHEN + subject + action?",
-         "tone": "pink"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Dùng để hỏi về thời điểm một sự việc sẽ xảy ra, đặc biệt khi muốn biết kế hoạch hoặc sự việc sắp tới.",
-         "en": "Use this structure to ask when something will happen, especially when asking about plans or upcoming events."
-        },
-        {
-         "type": "exampleGroup",
-         "tone": "pink",
-         "groups": [
-          {
-           "label": "KẾ HOẠCH — PLANS",
-           "vi": "{{Khi nào}} bạn đi du lịch?",
-           "en": "When are you going on vacation?",
-           "note": "→ Hỏi về kế hoạch sắp tới. / Asking about an upcoming plan."
-          },
-          {
-           "label": "SỰ VIỆC SẮP XẢY RA — UPCOMING EVENTS",
-           "vi": "{{Khi nào}} lớp học bắt đầu?",
-           "en": "When does the class start?",
-           "note": "→ Hỏi về thời điểm một sự việc sẽ diễn ra. / Asking when an event will take place."
-          }
-         ]
-        },
-        {
-         "type": "heading",
-         "vi": "So sánh nhanh",
-         "en": "Quick comparison",
-         "tone": "purple"
-        },
-        {
-         "type": "table",
-         "columns": [
-          "Vị trí — Position",
-          "Thường dùng để hỏi — Common use"
-         ],
-         "rows": [
-          [
-           "Cuối câu\nAt the end",
-           "Thói quen, lịch trình hoặc sự việc đã xảy ra.\nRoutines, schedules, or past events."
-          ],
-          [
-           "Đầu câu\nAt the beginning",
-           "Kế hoạch hoặc sự việc sẽ xảy ra.\nPlans or future events."
-          ]
-         ]
-        },
-        {
-         "type": "heading",
-         "vi": "Lưu ý",
-         "en": "Note",
-         "tone": "purple"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Đây là cách dùng thường gặp, không phải quy tắc tuyệt đối. Cả hai vị trí đều có thể hỏi về tương lai hoặc thời gian nói chung, tùy ngữ cảnh.",
-         "en": "This is a common pattern, not an absolute rule. Both positions can ask about the future or timing in general, depending on the context."
-        },
-        {
-         "type": "heading",
-         "vi": "3. Cách trả lời",
-         "en": "How to answer",
-         "tone": "purple"
-        },
-        {
-         "type": "paragraph",
-         "vi": "Trả lời bằng một từ hoặc cụm từ chỉ thời gian.",
-         "en": "Answer with a word or phrase that tells us when."
-        },
-        {
-         "type": "table",
-         "columns": [
-          "Câu hỏi — Question",
-          "Câu trả lời — Answer"
-         ],
-         "rows": [
-          [
-           "Bạn đi làm khi nào?\nWhen do you go to work?",
-           "Thứ Hai.\nOn Monday."
-          ],
-          [
-           "Khi nào bạn đi du lịch?\nWhen are you going on vacation?",
-           "Tháng sau.\nNext month."
-          ],
-          [
-           "Bạn về quê khi nào?\nWhen are you going back to your hometown?",
-           "Cuối tuần này.\nThis weekend."
-          ],
-          [
-           "Khi nào bạn học tiếng Việt?\nWhen do you study Vietnamese?",
-           "Buổi tối.\nIn the evening."
-          ],
-          [
-           "Khi nào bạn tốt nghiệp?\nWhen will you graduate?",
-           "Năm sau.\nNext year."
-          ]
-         ]
+         "vi": "Trong tiếng Việt, “khi nào” nghĩa là “when” và dùng để hỏi về thời gian.",
+         "en": "In Vietnamese, “{{khi nào::pink}}” means “when” and is used to ask about time."
         }
        ]
       },
@@ -858,6 +1077,7 @@
        "num": 9,
        "instructionVi": "Chọn đáp án chính xác.",
        "instructionEn": "Choose the correct question.",
+       "startAt": 0,
        "items": [
         {
          "prompt": "You want to ask when your friend studies Vietnamese.",
@@ -866,7 +1086,16 @@
           "Bạn học tiếng Việt khi nào?"
          ],
          "answer": "b"
-        },
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 9,
+       "instructionVi": "Chọn đáp án chính xác.",
+       "instructionEn": "Choose the correct question.",
+       "startAt": 1,
+       "items": [
         {
          "prompt": "You want to ask when your friend will travel.",
          "options": [
@@ -874,7 +1103,16 @@
           "Bạn đi du lịch khi nào?"
          ],
          "answer": "a"
-        },
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 9,
+       "instructionVi": "Chọn đáp án chính xác.",
+       "instructionEn": "Choose the correct question.",
+       "startAt": 2,
+       "items": [
         {
          "prompt": "You want to ask when someone got home yesterday.",
          "options": [
@@ -882,7 +1120,16 @@
           "Hôm qua bạn về nhà khi nào?"
          ],
          "answer": "b"
-        },
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 9,
+       "instructionVi": "Chọn đáp án chính xác.",
+       "instructionEn": "Choose the correct question.",
+       "startAt": 3,
+       "items": [
         {
          "prompt": "You want to ask when the class starts.",
          "options": [
@@ -890,7 +1137,16 @@
           "Lớp học bắt đầu khi nào?"
          ],
          "answer": "b"
-        },
+        }
+       ]
+      },
+      {
+       "type": "chooseSentence",
+       "num": 9,
+       "instructionVi": "Chọn đáp án chính xác.",
+       "instructionEn": "Choose the correct question.",
+       "startAt": 4,
+       "items": [
         {
          "prompt": "You want to ask when Mr. Tân will travel to Korea next week.",
          "options": [
@@ -1035,5 +1291,6 @@
     }
    ]
   }
- ]
+ ],
+ "flow": true
 }
