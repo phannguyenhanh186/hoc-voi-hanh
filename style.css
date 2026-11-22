@@ -2086,3 +2086,12 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-teach:has(.bai-teach-formula) { padding: 0; }
 .bai-teach-formula { gap: 6px; }
 .bai-teach-formula .bai-teach-row { gap: 10px; }
+
+/* số câu chữ thường + nút ▶ riêng (plainNum) */
+.bai-qnum { font-weight: 700; font-size: 1.1rem; min-width: 1.2em; }
+.bai-qlead { display: flex; align-items: center; gap: 10px; }
+.bai-qplay { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--stroke); background: #FDFCC4; color: var(--ink); font-size: .8rem; line-height: 1; padding: 0 0 0 2px; cursor: pointer; flex: none; }
+.bai-qplay:hover { background: #F7F5A8; }
+.bai-qplay.playing { background: var(--ch, #C6C9FF); }
+.bai-achoice-head .bai-qnum { order: 0; }
+.bai-fill-row.bai-fill-row-plain { grid-template-columns: auto 1fr; }
