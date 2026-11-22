@@ -109,7 +109,7 @@
        "type": "teach",
        "noNum": true,
        "en": "Last month, I went to the hospital.",
-       "vi": "{{Tháng trước::pink}} mình đi bệnh viện."
+       "vi": "{{Tháng trước::pink}} mình tới bệnh viện."
       },
       {
        "type": "teach",
@@ -272,17 +272,17 @@
       {
        "type": "teach",
        "noNum": true,
-       "en": "The beginning of this week",
-       "vi": "{{Đầu::pink}} tuần này"
-      },
-      {
-       "type": "teach",
-       "noNum": true,
        "term": {
         "vi": "Đầu",
         "en": "The beginning of",
         "tone": "pink"
        }
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of this week",
+       "vi": "{{Đầu::pink}} tuần này"
       },
       {
        "type": "teach",
@@ -946,14 +946,14 @@
       {
        "type": "teach",
        "noNum": true,
-       "en": "When does the class start?",
-       "vi": "{{Khi nào::pink}} lớp học bắt đầu?"
+       "en": "When does your colleague go back home?",
+       "vi": "{{Khi nào::pink}} đồng nghiệp của bạn về nhà?"
       },
       {
        "type": "teach",
        "noNum": true,
-       "en": "When will Mr. Tân go to Korea?",
-       "vi": "{{Khi nào::pink}} chú Tân đi Hàn?"
+       "en": "When will uncle Tân go on a business trip?",
+       "vi": "{{Khi nào::pink}} chú Tân {{sẽ::lav}} đi công tác?"
       }
      ]
     }
