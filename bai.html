@@ -1990,7 +1990,7 @@
         exercises.forEach(function (ex, i) { container.appendChild(buildExercise(ex, i + 1)); });
         return;
       }
-      const stage = el('div', 'bai-stage');
+      const stage = el('div', 'bai-stage' + (flow ? ' bai-stage-flow' : ''));   // bài flow: mọi trang cao bằng nhau để nút Next đứng yên
       const pager = el('div', 'bai-pager');
       const prev = el('button', 'bai-arrow', '←'); prev.type = 'button'; prev.setAttribute('aria-label', 'Bài trước');
       const next = el('button', 'bai-arrow', '→'); next.type = 'button'; next.setAttribute('aria-label', 'Bài tiếp theo');
