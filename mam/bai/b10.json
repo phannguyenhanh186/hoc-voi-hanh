@@ -489,7 +489,8 @@
          "key": "m",
          "text": "The end of this year"
         }
-       ]
+       ],
+       "noNum": true
       },
       {
        "type": "chooseWord",
@@ -643,7 +644,8 @@
           }
          ]
         }
-       ]
+       ],
+       "noNum": true
       }
      ]
     }
@@ -674,7 +676,9 @@
          ],
          "answer": "a"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "audioChoice",
@@ -692,7 +696,9 @@
          ],
          "answer": "b"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "audioChoice",
@@ -710,7 +716,9 @@
          ],
          "answer": "b"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "audioChoice",
@@ -728,7 +736,9 @@
          ],
          "answer": "a"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "audioChoice",
@@ -746,7 +756,9 @@
          ],
          "answer": "b"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "bankSentences",
@@ -771,7 +783,9 @@
          ],
          "audio": "audio/b10/{voice}/listen_ex8_01.mp3"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "bankSentences",
@@ -796,7 +810,9 @@
          ],
          "audio": "audio/b10/{voice}/listen_ex8_02.mp3"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "bankSentences",
@@ -821,7 +837,9 @@
          ],
          "audio": "audio/b10/{voice}/listen_ex8_03.mp3"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "bankSentences",
@@ -846,7 +864,9 @@
          ],
          "audio": "audio/b10/{voice}/listen_ex8_04.mp3"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       },
       {
        "type": "bankSentences",
@@ -871,7 +891,9 @@
          ],
          "audio": "audio/b10/{voice}/listen_ex8_05.mp3"
         }
-       ]
+       ],
+       "noNum": true,
+       "plainNum": true
       }
      ]
     }
@@ -914,7 +936,8 @@
          ],
          "answer": "b"
         }
-       ]
+       ],
+       "noNum": true
       },
       {
        "type": "chooseSentence",
@@ -931,7 +954,8 @@
          ],
          "answer": "a"
         }
-       ]
+       ],
+       "noNum": true
       },
       {
        "type": "chooseSentence",
@@ -948,7 +972,8 @@
          ],
          "answer": "b"
         }
-       ]
+       ],
+       "noNum": true
       },
       {
        "type": "chooseSentence",
@@ -965,7 +990,8 @@
          ],
          "answer": "b"
         }
-       ]
+       ],
+       "noNum": true
       },
       {
        "type": "chooseSentence",
@@ -982,7 +1008,8 @@
          ],
          "answer": "a"
         }
-       ]
+       ],
+       "noNum": true
       }
      ]
     }
@@ -1024,7 +1051,8 @@
          "q": "Khi nào Nhật đi Hà Nội?",
          "a": "Nhật đi Hà Nội vào đầu năm sau."
         }
-       ]
+       ],
+       "noNum": true
       }
      ]
     }
@@ -1076,7 +1104,8 @@
          "a": "Hôm qua bạn về nhà khi nào?",
          "num": 5
         }
-       ]
+       ],
+       "noNum": true
       }
      ]
     }
@@ -1112,7 +1141,8 @@
         {
          "question": "Khi nào bạn đi Việt Nam?"
         }
-       ]
+       ],
+       "noNum": true
       }
      ]
     }
