@@ -918,98 +918,128 @@
          "type": "paragraph",
          "vi": "Trong tiếng Việt, “khi nào” nghĩa là “when” và dùng để hỏi về thời gian.",
          "en": "In Vietnamese, “{{khi nào::pink}}” means “when” and is used to ask about time."
+        },
+        {
+         "type": "structure",
+         "vi": "{{Khi nào::pink}} + [Subject] + [Verb]"
         }
        ]
       },
       {
-       "type": "chooseSentence",
+       "type": "photoSentenceFill",
        "num": 9,
-       "instructionVi": "Chọn đáp án chính xác.",
-       "instructionEn": "Choose the correct question.",
-       "startAt": 0,
+       "noNum": true,
+       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
+       "instructionEn": "Translate the following sentences into Vietnamese.",
+       "blankMin": true,
        "items": [
         {
-         "prompt": "You want to ask when your friend studies Vietnamese.",
-         "options": [
-          "Khi nào bạn học tiếng Việt?",
-          "Bạn học tiếng Việt khi nào?"
-         ],
-         "answer": "b"
+         "name": "Câu 1",
+         "en": "When do you study Vietnamese?",
+         "template": "→ {0}?",
+         "answers": [
+          [
+           "Khi nào bạn học tiếng Việt",
+           "Khi nào anh học tiếng Việt",
+           "Khi nào chị học tiếng Việt",
+           "Khi nào em học tiếng Việt",
+           "Khi nào cô học tiếng Việt",
+           "Khi nào chú học tiếng Việt"
+          ]
+         ]
         }
-       ],
-       "noNum": true
+       ]
       },
       {
-       "type": "chooseSentence",
+       "type": "photoSentenceFill",
        "num": 9,
-       "instructionVi": "Chọn đáp án chính xác.",
-       "instructionEn": "Choose the correct question.",
-       "startAt": 1,
+       "noNum": true,
+       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
+       "instructionEn": "Translate the following sentences into Vietnamese.",
+       "blankMin": true,
        "items": [
         {
-         "prompt": "You want to ask when your friend will travel.",
-         "options": [
-          "Khi nào bạn đi du lịch?",
-          "Bạn đi du lịch khi nào?"
-         ],
-         "answer": "a"
+         "name": "Câu 2",
+         "en": "When will you go traveling?",
+         "template": "→ {0}?",
+         "answers": [
+          [
+           "Khi nào bạn đi du lịch",
+           "Khi nào anh đi du lịch",
+           "Khi nào chị đi du lịch",
+           "Khi nào em đi du lịch",
+           "Khi nào cô đi du lịch",
+           "Khi nào chú đi du lịch"
+          ]
+         ]
         }
-       ],
-       "noNum": true
+       ]
       },
       {
-       "type": "chooseSentence",
+       "type": "photoSentenceFill",
        "num": 9,
-       "instructionVi": "Chọn đáp án chính xác.",
-       "instructionEn": "Choose the correct question.",
-       "startAt": 2,
+       "noNum": true,
+       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
+       "instructionEn": "Translate the following sentences into Vietnamese.",
+       "blankMin": true,
        "items": [
         {
-         "prompt": "You want to ask when someone got home yesterday.",
-         "options": [
-          "Khi nào bạn về nhà hôm qua?",
-          "Hôm qua bạn về nhà khi nào?"
-         ],
-         "answer": "b"
+         "name": "Câu 3",
+         "en": "When did you get home?",
+         "template": "→ {0}?",
+         "answers": [
+          [
+           "Khi nào bạn về nhà",
+           "Khi nào anh về nhà",
+           "Khi nào chị về nhà",
+           "Khi nào em về nhà",
+           "Khi nào cô về nhà",
+           "Khi nào chú về nhà"
+          ]
+         ]
         }
-       ],
-       "noNum": true
+       ]
       },
       {
-       "type": "chooseSentence",
+       "type": "photoSentenceFill",
        "num": 9,
-       "instructionVi": "Chọn đáp án chính xác.",
-       "instructionEn": "Choose the correct question.",
-       "startAt": 3,
+       "noNum": true,
+       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
+       "instructionEn": "Translate the following sentences into Vietnamese.",
+       "blankMin": true,
        "items": [
         {
-         "prompt": "You want to ask when the class starts.",
-         "options": [
-          "Khi nào lớp học bắt đầu?",
-          "Lớp học bắt đầu khi nào?"
-         ],
-         "answer": "b"
+         "name": "Câu 4",
+         "en": "When does the class start?",
+         "template": "→ {0}?",
+         "answers": [
+          [
+           "Khi nào lớp học bắt đầu"
+          ]
+         ]
         }
-       ],
-       "noNum": true
+       ]
       },
       {
-       "type": "chooseSentence",
+       "type": "photoSentenceFill",
        "num": 9,
-       "instructionVi": "Chọn đáp án chính xác.",
-       "instructionEn": "Choose the correct question.",
-       "startAt": 4,
+       "noNum": true,
+       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
+       "instructionEn": "Translate the following sentences into Vietnamese.",
+       "blankMin": true,
        "items": [
         {
-         "prompt": "You want to ask when Mr. Tân will travel to Korea next week.",
-         "options": [
-          "Tuần sau khi nào chú Tân đi Hàn?",
-          "Tuần sau Chú Tân đi Hàn khi nào?"
-         ],
-         "answer": "a"
+         "name": "Câu 5",
+         "en": "When will Mr. Tân go to Korea?",
+         "template": "→ {0}?",
+         "answers": [
+          [
+           "Khi nào chú Tân đi Hàn",
+           "Khi nào chú Tân đi Hàn Quốc"
+          ]
+         ]
         }
-       ],
-       "noNum": true
+       ]
       }
      ]
     }
