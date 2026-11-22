@@ -926,120 +926,34 @@
        ]
       },
       {
-       "type": "photoSentenceFill",
-       "num": 9,
+       "type": "teach",
        "noNum": true,
-       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
-       "instructionEn": "Translate the following sentences into Vietnamese.",
-       "blankMin": true,
-       "items": [
-        {
-         "name": "Câu 1",
-         "en": "When do you study Vietnamese?",
-         "template": "→ {0}?",
-         "answers": [
-          [
-           "Khi nào bạn học tiếng Việt",
-           "Khi nào anh học tiếng Việt",
-           "Khi nào chị học tiếng Việt",
-           "Khi nào em học tiếng Việt",
-           "Khi nào cô học tiếng Việt",
-           "Khi nào chú học tiếng Việt"
-          ]
-         ]
-        }
-       ]
+       "en": "When do you study Vietnamese?",
+       "vi": "{{Khi nào::pink}} bạn học tiếng Việt?"
       },
       {
-       "type": "photoSentenceFill",
-       "num": 9,
+       "type": "teach",
        "noNum": true,
-       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
-       "instructionEn": "Translate the following sentences into Vietnamese.",
-       "blankMin": true,
-       "items": [
-        {
-         "name": "Câu 2",
-         "en": "When will you go traveling?",
-         "template": "→ {0}?",
-         "answers": [
-          [
-           "Khi nào bạn đi du lịch",
-           "Khi nào anh đi du lịch",
-           "Khi nào chị đi du lịch",
-           "Khi nào em đi du lịch",
-           "Khi nào cô đi du lịch",
-           "Khi nào chú đi du lịch"
-          ]
-         ]
-        }
-       ]
+       "en": "When will you go traveling?",
+       "vi": "{{Khi nào::pink}} bạn đi du lịch?"
       },
       {
-       "type": "photoSentenceFill",
-       "num": 9,
+       "type": "teach",
        "noNum": true,
-       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
-       "instructionEn": "Translate the following sentences into Vietnamese.",
-       "blankMin": true,
-       "items": [
-        {
-         "name": "Câu 3",
-         "en": "When did you get home?",
-         "template": "→ {0}?",
-         "answers": [
-          [
-           "Khi nào bạn về nhà",
-           "Khi nào anh về nhà",
-           "Khi nào chị về nhà",
-           "Khi nào em về nhà",
-           "Khi nào cô về nhà",
-           "Khi nào chú về nhà"
-          ]
-         ]
-        }
-       ]
+       "en": "When did you get home?",
+       "vi": "{{Khi nào::pink}} bạn về nhà?"
       },
       {
-       "type": "photoSentenceFill",
-       "num": 9,
+       "type": "teach",
        "noNum": true,
-       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
-       "instructionEn": "Translate the following sentences into Vietnamese.",
-       "blankMin": true,
-       "items": [
-        {
-         "name": "Câu 4",
-         "en": "When does the class start?",
-         "template": "→ {0}?",
-         "answers": [
-          [
-           "Khi nào lớp học bắt đầu"
-          ]
-         ]
-        }
-       ]
+       "en": "When does the class start?",
+       "vi": "{{Khi nào::pink}} lớp học bắt đầu?"
       },
       {
-       "type": "photoSentenceFill",
-       "num": 9,
+       "type": "teach",
        "noNum": true,
-       "instructionVi": "Dịch các câu sau sang tiếng Việt.",
-       "instructionEn": "Translate the following sentences into Vietnamese.",
-       "blankMin": true,
-       "items": [
-        {
-         "name": "Câu 5",
-         "en": "When will Mr. Tân go to Korea?",
-         "template": "→ {0}?",
-         "answers": [
-          [
-           "Khi nào chú Tân đi Hàn",
-           "Khi nào chú Tân đi Hàn Quốc"
-          ]
-         ]
-        }
-       ]
+       "en": "When will Mr. Tân go to Korea?",
+       "vi": "{{Khi nào::pink}} chú Tân đi Hàn?"
       }
      ]
     }
