@@ -792,11 +792,15 @@
         if (hasAudio) {
           // Có audio: số câu là nút nghe (giống dạng "nghe và hoàn thành câu")
           const row = el('div', 'bai-fill-row');
-          const num = el('button', 'bai-chip bai-tone-lav bai-num', String(seq));
+          const num = ex.plainNum ? el('button', 'bai-qplay', '▶') : el('button', 'bai-chip bai-tone-lav bai-num', String(seq));
           num.type = 'button'; num.dataset.text = 'câu ' + seq;
           num.setAttribute('aria-label', 'Nghe câu ' + seq);
           num.addEventListener('click', function () { play(resolveAudio(it.audio), num); });
-          row.appendChild(num);
+          if (ex.plainNum) {   // số câu chữ thường + nút ▶ bên cạnh
+            row.classList.add('bai-fill-row-plain');
+            const lead = el('div', 'bai-qlead'); lead.appendChild(el('span', 'bai-qnum', String(seq))); lead.appendChild(num);
+            row.appendChild(lead);
+          } else row.appendChild(num);
           row.appendChild(built.line);
           list.appendChild(row);
         } else {
@@ -972,8 +976,10 @@
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-achoice-row');
         const head = el('div', 'bai-achoice-head');
-        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1 + off));
+        // plainNum: số câu là chữ thường (không nền tím) + nút ▶ riêng bên cạnh
+        const num = ex.plainNum ? el('button', 'bai-qplay', '▶') : el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1 + off));
         num.type = 'button'; num.dataset.text = 'câu ' + (i + 1 + off); num.setAttribute('aria-label', 'Nghe câu ' + (i + 1 + off));
+        if (ex.plainNum) head.appendChild(el('span', 'bai-qnum', String(i + 1 + off)));
         num.addEventListener('click', function () {
           // bấm lại khi đang phát -> tạm dừng
           if (num.classList.contains('playing') && !player.paused) { player.pause(); num.classList.remove('playing'); return; }
