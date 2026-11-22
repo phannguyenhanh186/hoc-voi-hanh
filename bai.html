@@ -765,7 +765,7 @@
       right.appendChild(bank);
       const list = el('div', 'bai-fill');
       const cells = [];
-      let seq = 0;
+      let seq = ex.startAt || 0;
       (ex.items || []).forEach(function (it) {
         if (it.example) {
           const line = el('div', 'bai-fill-line');
@@ -968,11 +968,12 @@
     function renderAudioChoice(ex, n) {
       const wrap = el('div', 'bai-achoice');
       if (ex.audio) wrap.appendChild(renderAudioPlayer(ex.audio));   // thanh nghe cả bài: tạm dừng + tua
+      const off = ex.startAt || 0;   // "startAt": số câu đã qua (khi mỗi trang chỉ có 1 câu)
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-achoice-row');
         const head = el('div', 'bai-achoice-head');
-        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1));
-        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1); num.setAttribute('aria-label', 'Nghe câu ' + (i + 1));
+        const num = el('button', 'bai-chip bai-tone-lav bai-num', String(i + 1 + off));
+        num.type = 'button'; num.dataset.text = 'câu ' + (i + 1 + off); num.setAttribute('aria-label', 'Nghe câu ' + (i + 1 + off));
         num.addEventListener('click', function () {
           // bấm lại khi đang phát -> tạm dừng
           if (num.classList.contains('playing') && !player.paused) { player.pause(); num.classList.remove('playing'); return; }
@@ -1008,7 +1009,7 @@
       (ex.items || []).forEach(function (item, i) {
         const row = el('div', 'bai-achoice-row');
         const head = el('div', 'bai-achoice-head');
-        head.appendChild(el('div', 'bai-achoice-text', String(i + 1) + '.' + (item.prompt ? '\u00A0\u00A0' + item.prompt : '')));
+        head.appendChild(el('div', 'bai-achoice-text', String((ex.startAt || 0) + i + 1) + '.' + (item.prompt ? '\u00A0\u00A0' + item.prompt : '')));
         row.appendChild(head);
         const opts = el('div', 'bai-achoice-opts');
         (item.options || []).forEach(function (opt, oi) {
@@ -1874,7 +1875,77 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, photoSentenceFill: renderPhotoSentenceFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, wordList: renderWordList, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill };
+
+    // ---------- Trang dạy từng bước (teach) ----------
+    // Mỗi trang là 1 thẻ: sơ đồ (diagram) | từ mới (term) | câu tiếng Anh (en) + đáp án tiếng Việt (vi).
+    // Có "vi" cùng "en": đáp án ẩn, bấm Next (→) để hiện; bấm ← để ẩn lại. Hết bước thì Next sang trang sau.
+    let teachRevealAll = false;
+    function teachTile(it, cls) {
+      const t = el('div', 'bai-teach-tile bai-teach-' + (it.tone || 'lav') + (cls ? ' ' + cls : ''));
+      hlText(t.appendChild(el('div', 'bai-teach-tile-vi')), it.vi);
+      if (it.en) t.appendChild(el('div', 'bai-teach-tile-en', it.en));
+      return t;
+    }
+    function buildTeachDiagram(dg) {
+      const box = el('div', 'bai-teach-diagram');
+      if (dg.title) {
+        const h = el('div', 'bai-teach-dhead');
+        h.appendChild(el('span', 'bai-teach-dhead-vi', dg.title.vi));
+        if (dg.title.en) h.appendChild(el('span', 'bai-teach-dhead-en', dg.title.en));
+        box.appendChild(h);
+      }
+      if (dg.kind === 'formula') {   // Đầu/Cuối + tuần/tháng/năm + trước/này/sau
+        box.classList.add('bai-teach-formula');
+        (dg.rows || []).forEach(function (row, ri) {
+          if (ri) box.appendChild(el('div', 'bai-teach-plus', '+'));
+          const r = el('div', 'bai-teach-row');
+          row.forEach(function (it) { r.appendChild(teachTile(it)); });
+          box.appendChild(r);
+        });
+      } else {   // timeline: trước → này → sau
+        const r = el('div', 'bai-teach-row bai-teach-timeline');
+        (dg.cols || []).forEach(function (it, i) {
+          if (i) r.appendChild(el('div', 'bai-teach-arrow', '→'));
+          r.appendChild(teachTile(it));
+        });
+        box.appendChild(r);
+      }
+      if (dg.note) box.appendChild(hlText(el('div', 'bai-teach-dnote'), dg.note));
+      return box;
+    }
+    function renderTeach(ex) {
+      const wrap = el('div', 'bai-teach');
+      if (ex.diagram) wrap.appendChild(buildTeachDiagram(ex.diagram));
+      if (ex.term) {   // từ mới: Về quê = Go back to the hometown
+        const t = el('div', 'bai-teach-term');
+        const v = el('div', 'bai-teach-term-vi'); hlText(v, '{{' + ex.term.vi + '::' + (ex.term.tone || 'lav') + '}}');
+        t.appendChild(v);
+        t.appendChild(el('div', 'bai-teach-eq', '='));
+        t.appendChild(el('div', 'bai-teach-term-en', ex.term.en));
+        wrap.appendChild(t);
+      }
+      let vi = null;
+      if (ex.en) {
+        wrap.appendChild(el('div', 'bai-teach-en', ex.en));
+        if (ex.vi) {
+          wrap.appendChild(el('div', 'bai-teach-down', '↓'));
+          vi = hlText(el('div', 'bai-teach-vi'), ex.vi);
+          if (!teachRevealAll) vi.classList.add('is-hidden');
+          wrap.appendChild(vi);
+        }
+      }
+      wrap.__adv = function () {
+        if (vi && vi.classList.contains('is-hidden')) { vi.classList.remove('is-hidden'); return true; }
+        return false;
+      };
+      wrap.__back = function () {
+        if (vi && !vi.classList.contains('is-hidden')) { vi.classList.add('is-hidden'); return true; }
+        return false;
+      };
+      return wrap;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, photoSentenceFill: renderPhotoSentenceFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, wordList: renderWordList, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill, teach: renderTeach };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
@@ -1883,7 +1954,9 @@
       // Bài đọc nhiều phần: bài sau (vd. Đúng/Sai) vẫn hiện đoạn văn ở trên (readingQA tự vẽ passage nên bỏ qua)
       if (ex.passage && ex.type !== 'readingQA') { const ps = el('p', 'bai-passage', ex.passage); ps.style.whiteSpace = 'pre-line'; box.appendChild(ps); }
       const fn = RENDERERS[ex.type];
-      box.appendChild(fn ? fn(ex, n) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.'));
+      const node = fn ? fn(ex, n) : emptyNote('Dạng bài “' + ex.type + '” chưa được hỗ trợ.');
+      box.appendChild(node);
+      if (node && node.__adv) { box.__adv = node.__adv; box.__back = node.__back; }   // trang dạy từng bước (teach)
       if (ex.noteVi) {
         const note = el('div', 'grammar-callout');
         if (ex.noteTitleVi) { const t = el('div', '', ex.noteTitleVi); t.style.fontWeight = '700'; note.appendChild(t); }
@@ -1908,10 +1981,12 @@
       customAudios.forEach(function (a) { try { a.pause(); } catch (e) {} });
       if (currentEl) currentEl.classList.remove('playing');
     }
-    function renderExercises(container, exercises) {
+    function renderExercises(container, exercises, opts) {
       exercises = exercises || [];
+      opts = opts || {};
+      const flow = !!opts.flow && !!(opts.goNext || opts.goPrev);   // bài có "flow": Next ở trang cuối sẽ sang mục / phần kế tiếp
       if (pagerKeyHandler) { document.removeEventListener('keydown', pagerKeyHandler); pagerKeyHandler = null; }
-      if (exercises.length <= 1) {
+      if (exercises.length <= 1 && !flow) {
         exercises.forEach(function (ex, i) { container.appendChild(buildExercise(ex, i + 1)); });
         return;
       }
@@ -1925,25 +2000,41 @@
       container.appendChild(pager);
 
       let idx = 0;
-      function show(i) {
-        idx = Math.max(0, Math.min(exercises.length - 1, i));
+      const last = exercises.length - 1;
+      function show(i, revealAll) {
+        idx = Math.max(0, Math.min(last, i));
         stopAudio();
         stage.innerHTML = '';
+        teachRevealAll = !!revealAll;   // quay lại trang cũ thì hiện sẵn hết các bước
         stage.appendChild(buildExercise(exercises[idx], idx + 1));
+        teachRevealAll = false;
         count.textContent = (idx + 1) + ' / ' + exercises.length;
-        prev.disabled = idx === 0;
-        next.disabled = idx === exercises.length - 1;
+        prev.disabled = idx === 0 && !(flow && opts.goPrev);
+        next.disabled = idx === last && !(flow && opts.goNext);
       }
-      prev.addEventListener('click', function () { show(idx - 1); });
-      next.addEventListener('click', function () { show(idx + 1); });
+      // Next: hiện bước tiếp theo của trang hiện tại; hết bước thì sang trang sau; hết trang thì sang mục sau (flow).
+      function forward() {
+        const cur = stage.firstChild;
+        if (cur && cur.__adv && cur.__adv()) return;
+        if (idx < last) show(idx + 1);
+        else if (flow && opts.goNext) opts.goNext();
+      }
+      function backward() {
+        const cur = stage.firstChild;
+        if (cur && cur.__back && cur.__back()) return;
+        if (idx > 0) show(idx - 1, true);
+        else if (flow && opts.goPrev) opts.goPrev();
+      }
+      prev.addEventListener('click', backward);
+      next.addEventListener('click', forward);
       pagerKeyHandler = function (e) {
         const t = e.target && e.target.tagName;
         if (t === 'INPUT' || t === 'TEXTAREA') return;
-        if (e.key === 'ArrowLeft') show(idx - 1);
-        else if (e.key === 'ArrowRight') show(idx + 1);
+        if (e.key === 'ArrowLeft') backward();
+        else if (e.key === 'ArrowRight') forward();
       };
       document.addEventListener('keydown', pagerKeyHandler);
-      show(0);
+      if (opts.startLast) show(last, true); else show(0);
     }
 
     // ---------- Khung: sidebar (section → mục con) + nội dung ----------
@@ -2011,7 +2102,16 @@
         content.appendChild(head);
         if (entry.sub) {
           content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));
-          if (entry.sub.exercises && entry.sub.exercises.length) renderExercises(content, entry.sub.exercises);
+          if (entry.sub.exercises && entry.sub.exercises.length) {
+            const ei = entries.indexOf(entry);
+            const nextE = entries[ei + 1], prevE = entries[ei - 1];
+            renderExercises(content, entry.sub.exercises, {
+              flow: !!item.flow,
+              startLast: !!(opts && opts.last),
+              goNext: nextE ? function () { select(nextE, { scroll: true }); } : null,
+              goPrev: prevE ? function () { select(prevE, { scroll: true, last: true }); } : null
+            });
+          }
           else content.appendChild(emptyNote('Mục này đang được soạn.'));
         } else {
           content.appendChild(el('h2', 'gram2-content-title', entry.section.titleVi));
