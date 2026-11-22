@@ -934,14 +934,32 @@
       {
        "type": "teach",
        "noNum": true,
+       "en": "The beginning of last month",
+       "vi": "{{Đầu::pink}} tháng trước"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
        "en": "When will you go traveling?",
        "vi": "{{Khi nào::pink}} bạn đi du lịch?"
       },
       {
        "type": "teach",
        "noNum": true,
-       "en": "When did you get home?",
-       "vi": "{{Khi nào::pink}} bạn về nhà?"
+       "en": "The beginning of next year",
+       "vi": "{{Đầu::pink}} năm sau"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "When do you go back to the hometown?",
+       "vi": "{{Khi nào::pink}} bạn về quê?"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The end of this week",
+       "vi": "{{Cuối::blue}} tuần này"
       },
       {
        "type": "teach",
@@ -952,8 +970,20 @@
       {
        "type": "teach",
        "noNum": true,
+       "en": "The end of today",
+       "vi": "{{Cuối::blue}} hôm nay"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
        "en": "When will uncle Tân go on a business trip?",
        "vi": "{{Khi nào::pink}} chú Tân {{sẽ::lav}} đi công tác?"
+      },
+      {
+       "type": "teach",
+       "noNum": true,
+       "en": "The beginning of next week",
+       "vi": "{{Đầu::pink}} tuần sau"
       }
      ]
     }
