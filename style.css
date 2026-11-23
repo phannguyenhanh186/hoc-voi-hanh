@@ -2115,10 +2115,10 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-sum-l { background: var(--l-sky); padding: 9px 16px; display: flex; align-items: center; gap: 12px; font-size: 1.15rem; font-weight: 700; border-right: 2px solid var(--stroke); }
 .bai-sum-struct .bai-sum-l { background: var(--l-yellow); }
 .bai-sum-r { padding: 9px 18px; display: flex; align-items: center; color: var(--ink); font-size: 1rem; }
-.bai-sum-play { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--stroke); background: #FDFCC4; color: var(--stroke); font-size: .7rem; line-height: 1; padding: 0 0 0 2px; cursor: pointer; box-shadow: 2px 2px 0 var(--stroke); }
-.bai-sum-play:hover { background: #F7F5A8; }
+.bai-sum-play { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--stroke); background: var(--accent); color: #fff; font-size: .7rem; line-height: 1; padding: 0 0 0 2px; cursor: pointer; box-shadow: 2px 2px 0 var(--stroke); }
+.bai-sum-play:hover { background: var(--accent-deep); }
 .bai-sum-play:active { box-shadow: none; transform: translate(2px, 2px); }
-.bai-sum-play.playing { background: var(--l-periwinkle); }
+.bai-sum-play.playing { background: var(--accent-deep); box-shadow: 0 0 0 3px var(--l-periwinkle); }
 .bai-sum-ex { display: flex; gap: 12px; align-items: flex-start; background: var(--l-yellow); border: 2px solid var(--stroke); border-radius: 14px; padding: 10px 16px; margin-bottom: 8px; }
 .bai-sum-ex .bai-sum-play { margin-top: 2px; }
 .bai-sum-ex-vi { font-weight: 700; font-size: 1.1rem; line-height: 1.45; }
@@ -2134,3 +2134,9 @@ a.lesson-row:hover { background: #FAFAF7; }
   .bai-sum-l { border-right: 0; padding: 9px 14px 4px; }
   .bai-sum-r { padding: 0 14px 10px 58px; }
 }
+
+.bai-sum-dlwrap { margin-top: 26px; display: flex; justify-content: center; }
+.bai-sum-dl { display: inline-flex; align-items: center; gap: 8px; padding: 10px 26px; border: 2px solid var(--stroke); border-radius: 999px; background: var(--accent); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; box-shadow: 3px 3px 0 var(--stroke); }
+.bai-sum-dl:hover { background: var(--accent-deep); }
+.bai-sum-dl:active { box-shadow: none; transform: translate(3px, 3px); }
+.bai-sum-dl-icon { font-size: 1.2rem; line-height: 1; }
