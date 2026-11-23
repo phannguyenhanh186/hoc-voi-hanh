@@ -2097,7 +2097,7 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-fill-row.bai-fill-row-plain { grid-template-columns: auto 1fr; }
 
 /* ---------- Trang tổng hợp (summary) ---------- */
-.bai-sum { max-width: 860px; margin: 0 auto; text-align: left; }
+.bai-sum { max-width: 960px; margin: 0; text-align: left; }   /* sát lề trái, thẳng hàng với số 04 */
 .bai-sum-head { margin-bottom: 6px; }
 .bai-sum-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; }
 .bai-sum-pill { background: var(--l-periwinkle); color: var(--stroke); border: 2px solid var(--stroke); padding: 2px 12px; border-radius: 999px; }
