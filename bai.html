@@ -1986,12 +1986,12 @@
       if (ex.titleEm) { h.appendChild(document.createTextNode(' ')); h.appendChild(el('em', null, ex.titleEm)); }
       head.appendChild(h);
       if (ex.desc) head.appendChild(el('p', 'bai-sum-desc', ex.desc));
-      head.appendChild(el('span', 'bai-sum-swirl'));
       wrap.appendChild(head);
       (ex.blocks || []).forEach(function (b) {
         const sec = el('section', 'bai-sum-sec');
         if (b.label) sec.appendChild(el('div', 'bai-sum-label', b.label));
         if (b.kind === 'table') {
+          if (b.tone === 'yellow') sec.classList.add('bai-sum-struct');
           (b.rows || []).forEach(function (r) {
             if (r.group) { sec.appendChild(el('div', 'bai-sum-group', r.group)); return; }
             const row = el('div', 'bai-sum-row');
