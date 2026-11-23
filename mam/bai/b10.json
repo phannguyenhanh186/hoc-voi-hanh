@@ -4,7 +4,7 @@
  "title": "Khi nào bạn đi Việt Nam?",
  "_guide": {
   "doc": "App bo qua key bat dau bang '_'.",
-  "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am. Them (phan Nghe): listen_ex7_01..05.mp3 (chon dap an), listen_ex8_01..05.mp3 (hoan thanh cau) - chua thu am. TODO: dien 'answer' (a/b) cho 5 cau bai 7 (hien de null = khong cham)."
+  "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am. Them (phan Nghe): listen_ex7_01..05.mp3 (chon dap an), listen_ex8_01..05.mp3 (hoan thanh cau) - chua thu am. TODO: dien 'answer' (a/b) cho 5 cau bai 7 (hien de null = khong cham). Phan Tong hop: audio/b10/<voice>/sum_<slug>.mp3 (slug = chu khong dau, noi bang _), gom: sum_tuan_truoc, sum_tuan_nay, sum_tuan_sau, sum_thang_truoc, sum_thang_nay, sum_thang_sau, sum_nam_truoc, sum_nam_nay, sum_nam_sau, sum_hom_nay, sum_dau, sum_cuoi, sum_dau_tuan_nay, sum_cuoi_nam_nay, sum_se, sum_khi_nao, sum_ve_que, sum_di_cong_tac, sum_di_du_lich, sum_tieng_viet, sum_dong_nghiep, sum_an_tet, sum_toi_benh_vien, sum_tuan_truoc_minh_ve_nha, sum_nam_sau_minh_se_hoc_tieng_viet, sum_dau_tuan_nay_minh_an_voi_dong_nghiep, sum_khi_nao_ban_ve_que_cuoi_nam_nay_minh_se_ve_que."
  },
  "sections": [
   {
@@ -984,6 +984,198 @@
        "noNum": true,
        "en": "The beginning of next week",
        "vi": "{{Đầu::pink}} tuần sau"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tong-hop",
+   "titleVi": "Tổng hợp",
+   "titleEn": "Summary",
+   "subtopics": [
+    {
+     "id": "tong-hop",
+     "label": "Từ vựng & ngữ pháp",
+     "exercises": [
+      {
+       "type": "summary",
+       "noNum": true,
+       "eyebrow": [
+        "VOCABULARY & GRAMMAR",
+        "LESSON 10"
+       ],
+       "title": "Khi nào bạn đi Việt Nam?",
+       "titleEm": "tổng hợp",
+       "desc": "Talk about last, this and next week, month and year, say the beginning or the end of a period, and ask “when”.",
+       "audio": "audio/b10/{voice}/sum_{slug}.mp3",
+       "blocks": [
+        {
+         "kind": "table",
+         "label": "WORDS & PHRASES",
+         "rows": [
+          {
+           "group": "Thời gian · Time"
+          },
+          {
+           "vi": "tuần trước",
+           "en": "last week"
+          },
+          {
+           "vi": "tuần này",
+           "en": "this week"
+          },
+          {
+           "vi": "tuần sau",
+           "en": "next week"
+          },
+          {
+           "vi": "tháng trước",
+           "en": "last month"
+          },
+          {
+           "vi": "tháng này",
+           "en": "this month"
+          },
+          {
+           "vi": "tháng sau",
+           "en": "next month"
+          },
+          {
+           "vi": "năm trước",
+           "en": "last year"
+          },
+          {
+           "vi": "năm nay",
+           "en": "this year"
+          },
+          {
+           "vi": "năm sau",
+           "en": "next year"
+          },
+          {
+           "vi": "hôm nay",
+           "en": "today"
+          },
+          {
+           "group": "Đầu – Cuối · Beginning – End"
+          },
+          {
+           "vi": "đầu",
+           "en": "the beginning of"
+          },
+          {
+           "vi": "cuối",
+           "en": "the end of"
+          },
+          {
+           "vi": "đầu tuần này",
+           "en": "the beginning of this week"
+          },
+          {
+           "vi": "cuối năm nay",
+           "en": "the end of this year"
+          },
+          {
+           "group": "Từ mới · New words"
+          },
+          {
+           "vi": "sẽ",
+           "en": "will (modal verb for future tense)"
+          },
+          {
+           "vi": "khi nào",
+           "en": "when"
+          },
+          {
+           "vi": "về quê",
+           "en": "go back to the hometown"
+          },
+          {
+           "vi": "đi công tác",
+           "en": "go on a business trip"
+          },
+          {
+           "vi": "đi du lịch",
+           "en": "go traveling"
+          },
+          {
+           "vi": "tiếng Việt",
+           "en": "Vietnamese language"
+          },
+          {
+           "vi": "đồng nghiệp",
+           "en": "colleagues"
+          },
+          {
+           "vi": "ăn Tết",
+           "en": "celebrate Tet holiday"
+          },
+          {
+           "vi": "tới bệnh viện",
+           "en": "go to the hospital"
+          }
+         ]
+        },
+        {
+         "kind": "table",
+         "label": "GRAMMAR",
+         "rows": [
+          {
+           "vi": "[Time] + [Subject] + [Verb]",
+           "en": "Put the time first, then the sentence. “Last week, I went home.”",
+           "play": false
+          },
+          {
+           "vi": "[Time] + [Subject] + {{không::blue}} + [Verb]",
+           "en": "Negative: add không before the verb. “This week, I don't go to work.”",
+           "play": false
+          },
+          {
+           "vi": "[Time] + [Subject] + {{sẽ::lav}} + [Verb]",
+           "en": "Future: add sẽ before the verb. “Next week, I will go traveling.”",
+           "play": false
+          },
+          {
+           "vi": "{{Đầu::pink}} / {{Cuối::blue}} + tuần / tháng / năm + trước / này / sau",
+           "en": "The beginning / the end of a week, a month or a year.",
+           "play": false
+          },
+          {
+           "vi": "{{Khi nào::pink}} + [Subject] + [Verb]?",
+           "en": "Ask “when”: khi nào goes at the start of the question.",
+           "play": false
+          }
+         ]
+        },
+        {
+         "kind": "examples",
+         "label": "EXAMPLES",
+         "items": [
+          {
+           "vi": "Tuần trước mình về nhà.",
+           "en": "Last week, I went home."
+          },
+          {
+           "vi": "Năm sau mình sẽ học tiếng Việt.",
+           "en": "Next year, I will study Vietnamese."
+          },
+          {
+           "vi": "Đầu tuần này, mình ăn với đồng nghiệp.",
+           "en": "The beginning of this week, I ate with the colleagues."
+          },
+          {
+           "vi": "Khi nào bạn về quê? — Cuối năm nay, mình sẽ về quê.",
+           "en": "When do you go back to the hometown? — The end of this year, I will go back to the hometown."
+          }
+         ]
+        },
+        {
+         "kind": "tip",
+         "title": "TIP",
+         "text": "Say {{năm nay}}, not “năm này”. The word {{sẽ}} marks the future, and {{khi nào}} always starts the question."
+        }
+       ]
       }
      ]
     }
