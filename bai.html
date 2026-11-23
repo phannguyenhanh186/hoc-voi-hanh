@@ -2024,6 +2024,13 @@
         }
         wrap.appendChild(sec);
       });
+      if (ex.pdf) {   // nút tải tài liệu PDF cho học sinh
+        const a = el('a', 'bai-sum-dl');
+        a.href = ex.pdf; a.setAttribute('download', '');
+        a.appendChild(el('span', 'bai-sum-dl-icon', '↓'));
+        a.appendChild(document.createTextNode(' ' + (ex.pdfLabel || 'Tải PDF · Download PDF')));
+        const dl = el('div', 'bai-sum-dlwrap'); dl.appendChild(a); wrap.appendChild(dl);
+      }
       return wrap;
     }
 
@@ -2183,7 +2190,7 @@
         head.appendChild(hrow);
         content.appendChild(head);
         if (entry.sub) {
-          content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));
+          if (!entry.sub.hideLabel) content.appendChild(el('h2', 'gram2-content-title', entry.sub.label));   // hideLabel: bỏ dòng nhãn mục (vd: trang Tổng hợp)
           if (entry.sub.exercises && entry.sub.exercises.length) {
             const ei = entries.indexOf(entry);
             const nextE = entries[ei + 1], prevE = entries[ei - 1];
