@@ -1883,7 +1883,7 @@
 
 
     // ---------- Trang dạy từng bước (teach) ----------
-    // Mỗi trang là 1 thẻ: sơ đồ (diagram) | từ mới (term) | câu tiếng Anh (en) + đáp án tiếng Việt (vi).
+    // Mỗi trang là 1 thẻ: sơ đồ (diagram) | từ mới (term, hoặc terms = nhiều từ) | câu tiếng Anh (en) + đáp án tiếng Việt (vi).
     // Có "vi" cùng "en": đáp án ẩn, bấm Next (→) để hiện; bấm ← để ẩn lại. Hết bước thì Next sang trang sau.
     let teachRevealAll = false;
     function teachTile(it, cls) {
@@ -1922,13 +1922,18 @@
     function renderTeach(ex) {
       const wrap = el('div', 'bai-teach');
       if (ex.diagram) wrap.appendChild(buildTeachDiagram(ex.diagram));
-      if (ex.term) {   // từ mới: Về quê = Go back to the hometown
-        const t = el('div', 'bai-teach-term');
-        const v = el('div', 'bai-teach-term-vi'); hlText(v, '{{' + ex.term.vi + '::' + (ex.term.tone || 'lav') + '}}');
-        t.appendChild(v);
-        t.appendChild(el('div', 'bai-teach-eq', '='));
-        t.appendChild(el('div', 'bai-teach-term-en', ex.term.en));
-        wrap.appendChild(t);
+      const termList = ex.terms || (ex.term ? [ex.term] : []);   // từ mới: Về quê = Go back to the hometown (terms = nhiều từ trên 1 trang: Ba = Father, Mẹ = Mother)
+      if (termList.length) {
+        const box = el('div', 'bai-teach-terms');
+        termList.forEach(function (tm) {
+          const t = el('div', 'bai-teach-term');
+          const v = el('div', 'bai-teach-term-vi'); hlText(v, '{{' + tm.vi + '::' + (tm.tone || 'lav') + '}}');
+          t.appendChild(v);
+          t.appendChild(el('div', 'bai-teach-eq', '='));
+          t.appendChild(el('div', 'bai-teach-term-en', tm.en));
+          box.appendChild(t);
+        });
+        wrap.appendChild(box);
       }
       let vi = null;
       if (ex.en) {
