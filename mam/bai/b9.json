@@ -573,6 +573,9 @@
                 "em họ",
                 "vợ"
               ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 0,
               "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
@@ -597,7 +600,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_01.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 1,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -609,7 +635,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_02.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 2,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -621,7 +670,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_03.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 3,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -633,7 +705,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_04.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 4,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -645,7 +740,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_05.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 5,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -657,7 +775,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_06.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 6,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -669,7 +810,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_07.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 7,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -681,7 +845,30 @@
                     ]
                   ],
                   "audio": "audio/b9/{voice}/ex7_08.mp3"
-                },
+                }
+              ]
+            },
+            {
+              "type": "bankSentences",
+              "num": 1,
+              "instructionVi": "Hoàn thành các câu sau.",
+              "instructionEn": "Complete the following sentences.",
+              "words": [
+                "chú",
+                "cô",
+                "ông",
+                "bà",
+                "ba",
+                "mẹ",
+                "anh",
+                "chị",
+                "em họ",
+                "vợ"
+              ],
+              "noNum": true,
+              "plainNum": true,
+              "startAt": 8,
+              "items": [
                 {
                   "template": "{0} của mình {1} tuổi.",
                   "answers": [
@@ -694,9 +881,7 @@
                   ],
                   "audio": "audio/b9/{voice}/ex7_09.mp3"
                 }
-              ],
-              "noNum": true,
-              "plainNum": true
+              ]
             }
           ]
         }
