@@ -1001,10 +1001,6 @@
       {
        "type": "summary",
        "noNum": true,
-       "eyebrow": [
-        "VOCABULARY & GRAMMAR",
-        "LESSON 10"
-       ],
        "title": "Khi nào bạn đi Việt Nam?",
        "titleEm": "tổng hợp",
        "desc": "Talk about last, this and next week, month and year, say the beginning or the end of a period, and ask “when”.",
@@ -1175,9 +1171,11 @@
          "text": "Say {{năm nay}}, not “năm này”. The word {{sẽ}} marks the future, and {{khi nào}} always starts the question.",
          "label": "Mẹo · Tip"
         }
-       ]
+       ],
+       "pdf": "pdf/b10-tong-hop.pdf"
       }
-     ]
+     ],
+     "hideLabel": true
     }
    ]
   },
