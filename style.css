@@ -2098,38 +2098,39 @@ a.lesson-row:hover { background: #FAFAF7; }
 
 /* ---------- Trang tổng hợp (summary) ---------- */
 .bai-sum { max-width: 860px; margin: 0 auto; text-align: left; }
-.bai-sum-head { position: relative; overflow: hidden; background: var(--stroke); color: #fff; border-radius: 22px; padding: 26px 30px 28px; }
-.bai-sum-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; }
-.bai-sum-pill { background: var(--l-periwinkle); color: var(--stroke); padding: 4px 12px; border-radius: 999px; }
-.bai-sum-pill-muted { color: #B9BAC9; }
-.bai-sum-title { margin: 14px 0 8px; font-family: var(--font-display); font-size: 2.5rem; line-height: 1.15; font-weight: 700; position: relative; z-index: 1; }
-.bai-sum-title em { font-style: italic; font-weight: 400; color: var(--c-lime); }
-.bai-sum-desc { margin: 0; max-width: 520px; color: #D5D6E2; font-size: 1rem; line-height: 1.5; position: relative; z-index: 1; }
-.bai-sum-swirl { position: absolute; right: -50px; top: -60px; width: 230px; height: 230px; border: 38px solid var(--c-lime); border-left-color: transparent; border-bottom-color: transparent; border-radius: 50%; transform: rotate(18deg); opacity: .95; }
-.bai-sum-sec { margin-top: 22px; }
-.bai-sum-label { display: flex; align-items: center; gap: 8px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--muted); margin-bottom: 10px; }
-.bai-sum-label::before { content: ""; width: 11px; height: 11px; border: 2px solid var(--stroke); border-radius: 50%; }
-.bai-sum-group { margin: 16px 0 8px; font-size: .95rem; font-weight: 700; color: var(--accent-deep); }
-.bai-sum-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin-bottom: 8px; }
-.bai-sum-l { background: var(--l-sky); padding: 10px 16px; display: flex; align-items: center; gap: 10px; font-size: 1.15rem; font-weight: 700; }
-.bai-sum-r { padding: 10px 18px; display: flex; align-items: center; color: #3b3a46; font-size: 1rem; }
-.bai-sum-play { flex: none; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--stroke); background: #fff; color: var(--stroke); font-size: .7rem; line-height: 1; padding: 0 0 0 2px; cursor: pointer; }
-.bai-sum-play:hover { background: var(--l-yellow); }
+.bai-sum-head { margin-bottom: 6px; }
+.bai-sum-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; }
+.bai-sum-pill { background: var(--l-periwinkle); color: var(--stroke); border: 2px solid var(--stroke); padding: 2px 12px; border-radius: 999px; }
+.bai-sum-pill-muted { color: var(--muted); }
+.bai-sum-title { margin: 12px 0 6px; font-family: var(--font-display); font-size: 2rem; line-height: 1.3; font-weight: 700; }
+.bai-sum-title em { font-style: italic; font-weight: 400; background: var(--primary); padding: 0 10px; }
+.bai-sum-desc { margin: 0; max-width: 620px; color: var(--muted); font-size: 1rem; line-height: 1.5; }
+.bai-sum-swirl { display: none; }
+.bai-sum-sec { margin-top: 20px; }
+/* tiêu đề nhóm: giống nhau cho Thời gian / Từ mới / Ngữ pháp / Ví dụ / Mẹo */
+.bai-sum-label, .bai-sum-group { display: inline-block; margin: 0 0 10px; padding: 2px 14px; background: var(--l-periwinkle); border: 2px solid var(--stroke); border-radius: 999px; font-family: var(--font-display); font-size: 1rem; font-weight: 700; }
+.bai-sum-group { margin-top: 18px; }
+.bai-sum-sec > .bai-sum-group:first-child { margin-top: 0; }
+.bai-sum-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); border: 2px solid var(--stroke); border-radius: 14px; overflow: hidden; background: #fff; margin-bottom: 8px; }
+.bai-sum-l { background: var(--l-sky); padding: 9px 16px; display: flex; align-items: center; gap: 12px; font-size: 1.15rem; font-weight: 700; border-right: 2px solid var(--stroke); }
+.bai-sum-struct .bai-sum-l { background: var(--l-yellow); }
+.bai-sum-r { padding: 9px 18px; display: flex; align-items: center; color: var(--ink); font-size: 1rem; }
+.bai-sum-play { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--stroke); background: #FDFCC4; color: var(--stroke); font-size: .7rem; line-height: 1; padding: 0 0 0 2px; cursor: pointer; box-shadow: 2px 2px 0 var(--stroke); }
+.bai-sum-play:hover { background: #F7F5A8; }
+.bai-sum-play:active { box-shadow: none; transform: translate(2px, 2px); }
 .bai-sum-play.playing { background: var(--l-periwinkle); }
-.bai-sum-ex { display: flex; gap: 12px; align-items: flex-start; background: #FBF8EE; border: 1px solid #EFEAD7; border-radius: 12px; padding: 12px 16px; margin-bottom: 8px; }
+.bai-sum-ex { display: flex; gap: 12px; align-items: flex-start; background: var(--l-yellow); border: 2px solid var(--stroke); border-radius: 14px; padding: 10px 16px; margin-bottom: 8px; }
 .bai-sum-ex .bai-sum-play { margin-top: 2px; }
 .bai-sum-ex-vi { font-weight: 700; font-size: 1.1rem; line-height: 1.45; }
-.bai-sum-ex-en { color: #6b6a75; font-size: .95rem; line-height: 1.45; }
-.bai-sum-tip { display: flex; gap: 14px; background: var(--stroke); color: #fff; border-radius: 16px; padding: 18px 20px; }
-.bai-sum-tip-icon { flex: none; width: 32px; height: 32px; border-radius: 9px; background: var(--c-lime); color: var(--stroke); font-weight: 700; display: grid; place-items: center; }
-.bai-sum-tip-title { font-size: .72rem; letter-spacing: .12em; font-weight: 700; color: var(--c-lime); margin-bottom: 4px; }
-.bai-sum-tip-text { font-size: 1.05rem; line-height: 1.55; }
-.bai-sum-key { color: var(--c-lime); font-weight: 700; }
+.bai-sum-ex-en { color: var(--muted); font-size: .95rem; line-height: 1.45; }
+.bai-sum-tip { display: flex; gap: 14px; background: var(--l-lime); border: 2px solid var(--stroke); border-radius: 14px; padding: 12px 18px; }
+.bai-sum-tip-icon { flex: none; width: 30px; height: 30px; border: 2px solid var(--stroke); border-radius: 9px; background: var(--c-lime); font-weight: 700; display: grid; place-items: center; }
+.bai-sum-tip-title { display: none; }
+.bai-sum-tip-text { font-size: 1.05rem; line-height: 1.55; align-self: center; }
+.bai-sum-key { background: var(--l-pink); padding: 0 6px; border-radius: 4px; font-weight: 700; }
 @media (max-width: 560px) {
-  .bai-sum-head { padding: 20px 20px 22px; }
-  .bai-sum-title { font-size: 1.8rem; }
-  .bai-sum-swirl { width: 150px; height: 150px; border-width: 26px; right: -40px; top: -45px; }
+  .bai-sum-title { font-size: 1.5rem; }
   .bai-sum-row { grid-template-columns: 1fr; }
-  .bai-sum-l { padding: 10px 14px 4px; }
-  .bai-sum-r { padding: 0 14px 12px 54px; background: #fff; }
+  .bai-sum-l { border-right: 0; padding: 9px 14px 4px; }
+  .bai-sum-r { padding: 0 14px 10px 58px; }
 }
