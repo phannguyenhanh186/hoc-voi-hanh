@@ -1951,7 +1951,83 @@
       return wrap;
     }
 
-    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, photoSentenceFill: renderPhotoSentenceFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, wordList: renderWordList, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill, teach: renderTeach };
+
+    // ---------- Trang tổng hợp từ vựng + ngữ pháp (summary) ----------
+    // Giống bảng tổng hợp bài học: header tối, bảng 2 cột (tiếng Việt ▶ | nghĩa), cấu trúc, ví dụ, ô mẹo.
+    // Audio mỗi dòng: row.audio (đường dẫn riêng) hoặc ex.audio với {slug} = chữ không dấu, nối bằng "_" (vd: "tuần trước" → tuan_truoc).
+    function sumPlain(t) { return String(t).replace(/\{\{(.*?)(::\w+)?\}\}/g, '$1'); }
+    function sumSlug(t) { return plainSound(sumPlain(t)).replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, ''); }
+    function sumPlayBtn(ex, text, audio) {
+      const b = el('button', 'bai-sum-play', '▶');
+      b.type = 'button';
+      b.dataset.text = sumPlain(text);
+      b.setAttribute('aria-label', 'Nghe “' + sumPlain(text) + '”');
+      b.addEventListener('click', function () {
+        const src = audio || (ex.audio ? ex.audio.replace('{slug}', sumSlug(text)) : '');
+        if (src) play(resolveAudio(src), b);
+      });
+      return b;
+    }
+    function sumKeyText(node, text) {   // {{từ::x}} → chữ màu lime (dùng trong ô mẹo)
+      String(text).split(/(\{\{.*?\}\})/).forEach(function (part) {
+        const m = /^\{\{(.*?)(?:::\w+)?\}\}$/.exec(part);
+        if (m) node.appendChild(el('span', 'bai-sum-key', m[1]));
+        else if (part) node.appendChild(document.createTextNode(part));
+      });
+      return node;
+    }
+    function renderSummary(ex) {
+      const wrap = el('div', 'bai-sum');
+      const head = el('div', 'bai-sum-head');
+      const pills = el('div', 'bai-sum-pills');
+      (ex.eyebrow || []).forEach(function (t, i) { pills.appendChild(el('span', i ? 'bai-sum-pill-muted' : 'bai-sum-pill', t)); });
+      head.appendChild(pills);
+      const h = el('h3', 'bai-sum-title', ex.title || '');
+      if (ex.titleEm) { h.appendChild(document.createTextNode(' ')); h.appendChild(el('em', null, ex.titleEm)); }
+      head.appendChild(h);
+      if (ex.desc) head.appendChild(el('p', 'bai-sum-desc', ex.desc));
+      head.appendChild(el('span', 'bai-sum-swirl'));
+      wrap.appendChild(head);
+      (ex.blocks || []).forEach(function (b) {
+        const sec = el('section', 'bai-sum-sec');
+        if (b.label) sec.appendChild(el('div', 'bai-sum-label', b.label));
+        if (b.kind === 'table') {
+          (b.rows || []).forEach(function (r) {
+            if (r.group) { sec.appendChild(el('div', 'bai-sum-group', r.group)); return; }
+            const row = el('div', 'bai-sum-row');
+            const l = el('div', 'bai-sum-l');
+            if (r.play !== false && b.play !== false) l.appendChild(sumPlayBtn(ex, r.vi, r.audio));
+            l.appendChild(hlText(el('span', 'bai-sum-vi'), r.vi));
+            row.appendChild(l);
+            row.appendChild(hlText(el('div', 'bai-sum-r'), r.en));
+            sec.appendChild(row);
+          });
+        } else if (b.kind === 'examples') {
+          (b.items || []).forEach(function (it) {
+            const box = el('div', 'bai-sum-ex');
+            box.appendChild(sumPlayBtn(ex, it.vi, it.audio));
+            const t = el('div', 'bai-sum-ex-t');
+            t.appendChild(hlText(el('div', 'bai-sum-ex-vi'), it.vi));
+            t.appendChild(el('div', 'bai-sum-ex-en', it.en));
+            box.appendChild(t);
+            sec.appendChild(box);
+          });
+        } else if (b.kind === 'tip') {
+          sec.className = 'bai-sum-sec';
+          const tip = el('div', 'bai-sum-tip');
+          tip.appendChild(el('div', 'bai-sum-tip-icon', '!'));
+          const t = el('div', 'bai-sum-tip-t');
+          t.appendChild(el('div', 'bai-sum-tip-title', b.title || 'TIP'));
+          t.appendChild(sumKeyText(el('div', 'bai-sum-tip-text'), b.text));
+          tip.appendChild(t);
+          sec.appendChild(tip);
+        }
+        wrap.appendChild(sec);
+      });
+      return wrap;
+    }
+
+    const RENDERERS = { letters: renderLetters, sounds: renderSounds, listenPick: renderListenPick, tones: renderTones, fillNames: renderFillNames, fillWords: renderFillNames, repeatSentences: renderRepeatSentences, photoVocab: renderPhotoVocab, bankSentences: renderBankSentences, photoOrder: renderPhotoOrder, photoFill: renderPhotoFill, photoSentenceFill: renderPhotoSentenceFill, grammarNote: renderGrammarNote, pronounPairs: renderPronounPairs, dialogueFill: renderDialogueFill, audioChoice: renderAudioChoice, chooseSentence: renderChooseSentence, wordBankFill: renderWordBankFill, openIntro: renderOpenIntro, photoSpeak: renderPhotoSpeak, readingQA: renderReadingQA, chooseWord: renderChooseWord, calendarFill: renderCalendarFill, wordOrder: renderWordOrder, writeAnswer: renderWriteAnswer, openAnswer: renderOpenAnswer, writeParagraph: renderWriteParagraph, wordList: renderWordList, matchPairs: renderMatchPairs, matchDrag: renderMatchDrag, audioFill: renderAudioFill, teach: renderTeach, summary: renderSummary };
 
     function buildExercise(ex, n) {
       const box = el('div', 'bai-exercise');
