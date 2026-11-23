@@ -4,7 +4,7 @@
   "title": "Mẹ của bạn bao nhiêu tuổi?",
   "_guide": {
     "doc": "App bo qua key bat dau bang '_'.",
-    "todo_audio": "audio/b9/nam: ex7_01..09.mp3 (phan Nghe) - da co, giu nguyen. Phan Tong hop: audio/b9/<voice>/sum_<slug>.mp3 (slug = chu khong dau, noi bang _), gom: sum_nha, sum_ba, sum_ba_grandmother, sum_me, sum_a_cua_b, sum_anh, sum_chi, sum_em, sum_em_trai, sum_em_gai, sum_anh_chi_em, sum_ong, sum_ong_ba, sum_chu, sum_co, sum_anh_ho, sum_chi_ho, sum_em_ho, sum_con, sum_con_trai, sum_con_gai, sum_vo, sum_chong, sum_o_voi, sum_tuoi, sum_may_nguoi, sum_bao_nhieu_tuoi, sum_nha_minh_co_bon_nguoi_ba_me_em_trai_va_minh, sum_co_mai_la_em_gai_cua_me_minh, sum_me_cua_minh_61_tuoi, sum_nha_cua_ban_co_may_nguoi_nha_minh_co_ba_nguoi, sum_co_linh_bao_nhieu_tuoi_co_linh_45_tuoi. Cac trang 'teach' (Ngu phap / Tu vung) khong dung audio.",
+    "todo_audio": "audio/b9/nam: ex7_01..09.mp3 (phan Nghe) - da co, giu nguyen. Phan Tong hop: audio/b9/<voice>/sum_<slug>.mp3 (slug = chu khong dau, noi bang _), gom: sum_nha, sum_ba, sum_me, sum_a_cua_b, sum_anh, sum_chi, sum_em, sum_em_trai, sum_em_gai, sum_anh_chi_em, sum_ong, sum_ba_grandmother, sum_ong_ba, sum_chu, sum_co, sum_anh_ho, sum_chi_ho, sum_em_ho, sum_con, sum_con_trai, sum_con_gai, sum_vo, sum_chong, sum_o_voi, sum_tuoi, sum_may_nguoi, sum_bao_nhieu_tuoi, sum_nha_cua_minh_co_bon_nguoi_ba_me_em_trai_va_minh, sum_co_mai_la_em_gai_cua_me_minh, sum_me_cua_minh_61_tuoi, sum_nha_cua_ban_co_may_nguoi_nha_cua_minh_co_ba_nguoi, sum_co_linh_bao_nhieu_tuoi_co_linh_45_tuoi. Cac trang 'teach' (Ngu phap / Tu vung) khong dung audio.",
     "removed": "Bai 9 doi theo kieu bai 10 (flow + teach). Phat am, Doc, Viet, bai 5/6 (Tu vung), bai 8/9 (Ngu phap) da bo khoi bai, noi dung cu luu o _archive."
   },
   "flow": true,
@@ -97,7 +97,7 @@
               "type": "teach",
               "noNum": true,
               "en": "My house has three people, father, mother, and me.",
-              "vi": "Nhà mình có ba người, {{ba::pink}}, {{mẹ::blue}}, và mình."
+              "vi": "Nhà của mình có ba người, {{ba::pink}}, {{mẹ::blue}}, và mình."
             },
             {
               "type": "teach",
@@ -445,7 +445,7 @@
               "type": "teach",
               "noNum": true,
               "en": "My house has four people: father, mother, my younger brother and me.",
-              "vi": "Nhà mình có {{bốn người::pink}}: ba, mẹ, em trai và mình."
+              "vi": "Nhà của mình có {{bốn người::pink}}: ba, mẹ, em trai và mình."
             },
             {
               "type": "teach",
@@ -1062,7 +1062,7 @@
                   "label": "Ví dụ · Examples",
                   "items": [
                     {
-                      "vi": "Nhà mình có bốn người: ba, mẹ, em trai và mình.",
+                      "vi": "Nhà của mình có bốn người: ba, mẹ, em trai và mình.",
                       "en": "My house has four people: father, mother, my younger brother and me."
                     },
                     {
@@ -1074,7 +1074,7 @@
                       "en": "My mother is 61 years old."
                     },
                     {
-                      "vi": "Nhà của bạn có mấy người? — Nhà mình có ba người.",
+                      "vi": "Nhà của bạn có mấy người? — Nhà của mình có ba người.",
                       "en": "How many people are there in your house? — My house has three people."
                     },
                     {
