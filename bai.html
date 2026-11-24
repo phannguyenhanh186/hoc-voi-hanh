@@ -2178,7 +2178,7 @@
 
         pill.textContent = entry.section.titleVi;
         content.innerHTML = '';
-        enOnly = entry.section.id === 'ngu-phap';
+        enOnly = entry.section.id === 'ngu-phap' || !!entry.section.enOnly;   // enOnly: section chỉ có phần giải thích tiếng Anh (ngữ pháp)
         entries.forEach(function (e) { if (e.secBox) e.secBox.classList.toggle('is-current', e.section === entry.section); });
         content.style.setProperty('--ch', SEC_SQ[entry.si % SEC_SQ.length]);
         content.style.setProperty('--ch-l', SEC_PALE[entry.si % SEC_PALE.length]);
@@ -2230,7 +2230,14 @@
         secBox.appendChild(header);
 
         const subs = section.subtopics || [];
-        if (!subs.length) {
+        if (item.flat && subs.length === 1) {
+          // Sidebar phẳng ("flat": true ở cấp bài): mỗi chủ đề là 1 nút, không có toggle / mục con.
+          header.classList.add('is-static');
+          const sub = subs[0];
+          const entry = { key: section.id + '/' + sub.id, section: section, sub: sub, btn: header, secBox: secBox, si: si };
+          entries.push(entry);
+          header.addEventListener('click', function () { select(entry, { scroll: true }); });
+        } else if (!subs.length) {
           // Section chưa có mục con: bấm vào tiêu đề là chọn luôn section.
           header.classList.add('is-static');
           const entry = { key: section.id, section: section, sub: null, header: header, isStatic: true, secBox: secBox, si: si };
