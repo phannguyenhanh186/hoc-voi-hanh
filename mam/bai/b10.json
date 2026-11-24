@@ -6,15 +6,18 @@
     "doc": "App bo qua key bat dau bang '_'.",
     "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am. Them (phan Nghe): listen_ex7_01..05.mp3 (chon dap an), listen_ex8_01..05.mp3 (hoan thanh cau) - chua thu am. TODO: dien 'answer' (a/b) cho 5 cau bai 7 (hien de null = khong cham). Phan Tong hop: audio/b10/<voice>/sum_<slug>.mp3 (slug = chu khong dau, noi bang _), gom: sum_tuan_truoc, sum_tuan_nay, sum_tuan_sau, sum_thang_truoc, sum_thang_nay, sum_thang_sau, sum_nam_truoc, sum_nam_nay, sum_nam_sau, sum_hom_nay, sum_dau, sum_cuoi, sum_dau_tuan_nay, sum_cuoi_nam_nay, sum_se, sum_khi_nao, sum_ve_que, sum_di_cong_tac, sum_tieng_viet, sum_dong_nghiep, sum_an_tet, sum_di_kham_benh, sum_nghi_lam, sum_tuan_truoc_minh_ve_nha, sum_nam_sau_minh_se_hoc_tieng_viet, sum_dau_tuan_nay_minh_an_voi_dong_nghiep, sum_khi_nao_ban_ve_que_cuoi_nam_nay_minh_se_ve_que."
   },
+  "flow": true,
+  "flat": true,
   "sections": [
     {
-      "id": "tu-vung",
-      "titleVi": "Từ vựng",
-      "titleEn": "Vocabulary",
+      "id": "truoc-sau",
+      "titleVi": "Trước - Sau",
+      "titleEn": "Before - After",
       "subtopics": [
         {
-          "id": "tuan",
-          "label": "Tuần – Week",
+          "id": "truoc-sau",
+          "label": "Trước - Sau",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "teach",
@@ -70,13 +73,7 @@
               "noNum": true,
               "en": "Next week, I will go traveling.",
               "vi": "{{Tuần sau::blue}} mình {{sẽ::lav}} đi du lịch."
-            }
-          ]
-        },
-        {
-          "id": "thang",
-          "label": "Tháng – Month",
-          "exercises": [
+            },
             {
               "type": "teach",
               "noNum": true,
@@ -131,13 +128,7 @@
               "noNum": true,
               "en": "Next month, I will stay at home.",
               "vi": "{{Tháng sau::blue}} mình {{sẽ::lav}} ở nhà."
-            }
-          ]
-        },
-        {
-          "id": "nam",
-          "label": "Năm – Year",
-          "exercises": [
+            },
             {
               "type": "teach",
               "noNum": true,
@@ -204,10 +195,18 @@
               "vi": "{{Năm sau::blue}} mình {{sẽ::lav}} học tiếng Việt."
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "dau-cuoi",
+      "titleVi": "Đầu - Cuối",
+      "titleEn": "Beginning - End",
+      "subtopics": [
         {
           "id": "dau-cuoi",
-          "label": "Đầu – cuối",
+          "label": "Đầu - Cuối",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "teach",
@@ -657,8 +656,9 @@
       "titleEn": "Listening",
       "subtopics": [
         {
-          "id": "nghe-dau-cuoi",
-          "label": "Đầu – cuối",
+          "id": "nghe",
+          "label": "Nghe",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "audioChoice",
@@ -900,13 +900,15 @@
       ]
     },
     {
-      "id": "ngu-phap",
-      "titleVi": "Ngữ pháp",
-      "titleEn": "Grammar",
+      "id": "khi-nao",
+      "titleVi": "Khi nào...?",
+      "titleEn": "When...?",
+      "enOnly": true,
       "subtopics": [
         {
           "id": "khi-nao",
-          "label": "Khi nào?",
+          "label": "Khi nào...?",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
@@ -1185,8 +1187,9 @@
       "titleEn": "Practice",
       "subtopics": [
         {
-          "id": "khi-nao",
+          "id": "noi",
           "label": "Luyện tập",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "openAnswer",
@@ -1219,11 +1222,9 @@
                 "answer": "Cuối tuần trước, mình ăn tối với bạn."
               }
             }
-          ],
-          "hideLabel": true
+          ]
         }
       ]
     }
-  ],
-  "flow": true
+  ]
 }
