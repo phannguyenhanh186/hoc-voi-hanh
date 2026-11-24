@@ -2141,3 +2141,25 @@ a.lesson-row:hover { background: #FAFAF7; }
 .bai-sum-dl:hover { background: var(--accent-deep); }
 .bai-sum-dl:active { box-shadow: none; transform: translate(3px, 3px); }
 .bai-sum-dl-icon { font-size: 1.2rem; line-height: 1; }
+
+/* Trang ngữ pháp trong bài kiểu flow (b9, b10, ...): chữ to, canh giữa, cùng cỡ với trang teach */
+.gram2-content.is-flow-grammar .bai-grammar { max-width: none; justify-items: center; text-align: center; gap: 14px; padding: 24px 0 8px; }
+.gram2-content.is-flow-grammar .bai-grammar-title { font-size: 2rem; line-height: 1.2; margin: 0 0 6px; }
+.gram2-content.is-flow-grammar .bai-grammar-heading-vi { font-size: 1.7rem; }
+.gram2-content.is-flow-grammar .bai-grammar-heading.is-purple .bai-grammar-heading-vi { font-size: 2.2rem; }
+.gram2-content.is-flow-grammar .bai-grammar-heading-en { font-size: 1.3rem; }
+.gram2-content.is-flow-grammar .bai-grammar-structure { padding: 18px 32px; max-width: 820px; }
+.gram2-content.is-flow-grammar .bai-grammar-structure-vi { font-size: 2rem; line-height: 1.5; }
+.gram2-content.is-flow-grammar .bai-grammar-structure-en { font-size: 1.3rem; }
+.gram2-content.is-flow-grammar .bai-grammar-p { max-width: 760px; }
+.gram2-content.is-flow-grammar .bai-grammar-p-vi { font-size: 1.6rem; line-height: 1.5; }
+.gram2-content.is-flow-grammar .bai-grammar-p-en { font-size: 1.3rem; }
+.gram2-content.is-flow-grammar .bai-grammar-note { text-align: left; }
+.gram2-content.is-flow-grammar .bai-exgroup-vi { font-size: 1.5rem; }
+.gram2-content.is-flow-grammar .bai-exgroup-en { font-size: 1.2rem; }
+@media (max-width: 720px) {
+  .gram2-content.is-flow-grammar .bai-grammar-title { font-size: 1.8rem; }
+  .gram2-content.is-flow-grammar .bai-grammar-structure { padding: 14px 18px; }
+  .gram2-content.is-flow-grammar .bai-grammar-structure-vi { font-size: 1.5rem; }
+  .gram2-content.is-flow-grammar .bai-grammar-p-vi { font-size: 1.3rem; }
+}
