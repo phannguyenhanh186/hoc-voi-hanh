@@ -4,19 +4,21 @@
   "title": "Anh ấy là người Pháp đúng không?",
   "_guide": {
     "doc": "App bo qua key bat dau bang '_'.",
-    "removed": "Bai 11: bo Phat am; Tu vung 'Ten nuoc' doi sang kieu teach (flow). Noi dung cu luu o _archive. Audio pron_*, ex2_*, ex4_*, vocab_nuoc_* khong con dung.",
-    "todo_nghe": "audio/b11/nam: listen_ex7_01..12.mp3 (12 cau 'X la nguoi ...', xem template trong muc nghe) - chua thu am. Dap an chap nhan ca ten ngan va ten day du (Viet/Viet Nam, Trung/Trung Quoc, Nhat/Nhat Ban, Thai/Thai Lan, Han/Han Quoc). Bai 9 (chon dap an): audio/b11/nam/listen_ex8_01..05.mp3 - chua thu am."
+    "removed": "Bai 11 doi sang kieu bai 9/10 (flow + flat sidebar). Bo Phat am, Nghe, Doc, Noi, bai tap sau Ngu phap; noi dung cu luu o _archive.",
+    "todo_audio": "audio/b11/nam: Tong hop = sum_<slug>.mp3 (slug = chu khong dau, noi bang _), gom: sum_anh, sum_phap, sum_duc, sum_my, sum_tay_ban_nha, sum_uc, sum_thai_lan, sum_trung_quoc, sum_han_quoc, sum_nhat_ban, sum_lao, sum_viet_nam, sum_toi_tu, sum_ca_si, sum_dien_vien, sum_noi_tieng, sum_truoc, sum_dung_roi, sum_minh_la_nguoi_my, sum_adele_la_ca_si_nguoi_anh, sum_minh_di_du_lich_duc_5_thang_truoc, sum_nam_khong_phai_la_nguoi_han, sum_brian_la_nguoi_anh_dung_khong_khong_brian_la_nguoi_uc. Cac trang 'teach' khong dung audio. Audio cu pron_*, ex2_*, ex4_*, vocab_nuoc_*, listen_ex7_*, listen_ex8_* khong con dung."
   },
   "flow": true,
+  "flat": true,
   "sections": [
     {
-      "id": "tu-vung",
-      "titleVi": "Từ vựng",
-      "titleEn": "Vocabulary",
+      "id": "ten-nuoc",
+      "titleVi": "Tên nước",
+      "titleEn": "Country",
       "subtopics": [
         {
           "id": "ten-nuoc",
           "label": "Tên nước",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "teach",
@@ -166,13 +168,15 @@
       ]
     },
     {
-      "id": "ngu-phap",
-      "titleVi": "Ngữ pháp",
-      "titleEn": "Grammar",
+      "id": "truoc",
+      "titleVi": "... trước",
+      "titleEn": "... ago",
+      "enOnly": true,
       "subtopics": [
         {
           "id": "truoc",
-          "label": "Cách đây bao lâu",
+          "label": "... trước",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
@@ -222,356 +226,123 @@
       ]
     },
     {
-      "id": "tu-vung",
-      "titleVi": "Từ vựng",
-      "titleEn": "Vocabulary",
+      "id": "quoc-tich",
+      "titleVi": "Quốc tịch",
+      "titleEn": "Nationality",
+      "enOnly": true,
       "subtopics": [
         {
           "id": "quoc-tich",
           "label": "Quốc tịch",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "title": "",
               "blocks": [
                 {
-                  "type": "heading",
-                  "vi": "Quốc tịch",
-                  "en": "Nationality",
-                  "tone": "purple"
-                },
-                {
-                  "type": "paragraph",
-                  "vi": "Dùng để nói một người đến từ đâu hoặc thuộc quốc gia nào.",
-                  "en": "Used to say where a person is from or which country they belong to."
-                },
-                {
                   "type": "structure",
-                  "vi": "{{Người::pink}} + {{tên nước::blue}}",
-                  "en": "{{Người::pink}} + {{country name::blue}}"
-                },
-                {
-                  "type": "exampleGroup",
-                  "tone": "blue",
-                  "groups": [
-                    {
-                      "vi": "Phúc là {{người::pink}} {{Việt Nam::blue}}."
-                    },
-                    {
-                      "vi": "Mike là {{người::pink}} {{Anh::blue}}."
-                    },
-                    {
-                      "vi": "Lee là {{người::pink}} {{Hàn::blue}}."
-                    },
-                    {
-                      "vi": "Mẹ của anh Lộc là {{người::pink}} {{Trung::blue}}."
-                    }
-                  ]
+                  "vi": "{{Người::pink}} + {{[Country name]::blue}}"
                 }
-              ],
+              ]
+            },
+            {
+              "type": "teach",
               "noNum": true,
-              "instructionVi": ""
+              "en": "I am American",
+              "vi": "Mình là {{người::pink}} {{Mỹ::blue}}."
             },
             {
-              "type": "photoSpeak",
-              "num": 7,
-              "instructionVi": "Luyện nói về tên, nghề nghiệp và quốc tịch của những người sau.",
-              "instructionEn": "Practice introducing names, jobs, and nationalities of the following people.",
-              "items": [
+              "type": "teach",
+              "noNum": true,
+              "en": "My aunt's husband is a Chinese person",
+              "vi": "Chồng của cô của mình là {{người::pink}} {{Trung Quốc::blue}}."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "terms": [
                 {
-                  "img": "images/b11/quoc-tich/adele.jpg",
-                  "name": "Adele",
-                  "job": "ca sĩ",
-                  "pronoun": "Cô ấy",
-                  "country": "Anh",
-                  "example": true
-                },
-                {
-                  "img": "images/b11/quoc-tich/michael.jpg",
-                  "name": "Michael",
-                  "job": "cầu thủ bóng rổ",
-                  "pronoun": "Anh ấy",
-                  "country": "Mỹ"
-                },
-                {
-                  "img": "images/b11/quoc-tich/my-linh.jpg",
-                  "name": "Mỹ Linh",
-                  "job": "ca sĩ",
-                  "pronoun": "Cô ấy",
-                  "country": "Việt Nam"
-                },
-                {
-                  "img": "images/b11/quoc-tich/kommasith.jpg",
-                  "name": "Kommasith",
-                  "job": "thủ tướng",
-                  "pronoun": "Ông ấy",
-                  "country": "Lào"
-                },
-                {
-                  "img": "images/b11/quoc-tich/akina.jpg",
-                  "name": "Akina",
-                  "job": "diễn viên",
-                  "pronoun": "Cô ấy",
-                  "country": "Nhật"
-                },
-                {
-                  "img": "images/b11/quoc-tich/jae-suk.jpg",
-                  "name": "Jae-suk",
-                  "job": "MC",
-                  "pronoun": "Anh ấy",
-                  "country": "Hàn"
-                },
-                {
-                  "img": "images/b11/quoc-tich/ton-van.jpg",
-                  "name": "Tôn Văn",
-                  "job": "cầu thủ bóng đá",
-                  "pronoun": "Chị ấy",
-                  "country": "Trung"
-                },
-                {
-                  "img": "images/b11/quoc-tich/kanchai.jpg",
-                  "name": "Kanchai",
-                  "job": "MC",
-                  "pronoun": "Anh ấy",
-                  "country": "Thái"
-                },
-                {
-                  "img": "images/b11/quoc-tich/nicole.jpg",
-                  "name": "Nicole",
-                  "job": "diễn viên",
-                  "pronoun": "Cô ấy",
-                  "country": "Úc"
-                },
-                {
-                  "img": "images/b11/quoc-tich/xavi.jpg",
-                  "name": "Xavi",
-                  "job": "cầu thủ bóng đá",
-                  "pronoun": "Anh ấy",
-                  "country": "Tây Ban Nha"
-                },
-                {
-                  "img": "images/b11/quoc-tich/merz.jpg",
-                  "name": "Merz",
-                  "job": "thủ tướng",
-                  "pronoun": "Ông ấy",
-                  "country": "Đức"
-                },
-                {
-                  "img": "images/b11/quoc-tich/camille.jpg",
-                  "name": "Camille",
-                  "job": "ca sĩ",
-                  "pronoun": "Cô ấy",
-                  "country": "Pháp"
+                  "vi": "ca sĩ",
+                  "en": "Singer",
+                  "tone": "pink"
                 }
-              ],
-              "dialogue": {
-                "q": "Bạn có biết {name} là ai không?",
-                "a": "{name} là {job}. {pronoun} là người {country}."
-              }
+              ]
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "Adele is an English singer",
+              "vi": "Adele là {{ca sĩ::pink}} {{người::lav}} {{Anh::blue}}."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "She is a French singer",
+              "vi": "Cô ấy là {{ca sĩ::pink}} {{người::lav}} {{Pháp::blue}}. / Chị ấy là {{ca sĩ::pink}} {{người::lav}} {{Pháp::blue}}."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "terms": [
+                {
+                  "vi": "diễn viên",
+                  "en": "Actor / Actress",
+                  "tone": "pink"
+                }
+              ]
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "He is a Japanese actor.",
+              "vi": "Anh ấy là {{diễn viên::pink}} {{người::lav}} {{Nhật Bản::blue}}."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "terms": [
+                {
+                  "vi": "nổi tiếng",
+                  "en": "Famous",
+                  "tone": "pink"
+                }
+              ]
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "She is famous",
+              "vi": "Cô ấy {{nổi tiếng::pink}}. / Chị ấy {{nổi tiếng::pink}}."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "Lan Ngọc is a famous Vietnamese actress.",
+              "vi": "Lan Ngọc là diễn viên {{người::lav}} {{Việt Nam::blue}} {{nổi tiếng::pink}}."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "This is a famous Australian actor",
+              "vi": "Đây là diễn viên {{người::lav}} {{Úc::blue}} {{nổi tiếng::pink}}."
             }
           ]
         }
       ]
     },
     {
-      "id": "nghe",
-      "titleVi": "Nghe",
-      "titleEn": "Listening",
-      "subtopics": [
-        {
-          "id": "quoc-tich",
-          "label": "Quốc tịch",
-          "exercises": [
-            {
-              "type": "audioFill",
-              "num": 8,
-              "instructionVi": "Nghe và hoàn thành các câu sau.",
-              "instructionEn": "Listen and complete the following sentences.",
-              "items": [
-                {
-                  "template": "Anh Phong là người {0}.",
-                  "answers": [
-                    [
-                      "Việt Nam",
-                      "Việt"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_01.mp3"
-                },
-                {
-                  "template": "Chị ấy là người {0}.",
-                  "answers": [
-                    [
-                      "Anh"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_02.mp3"
-                },
-                {
-                  "template": "Cô ấy là người {0}.",
-                  "answers": [
-                    [
-                      "Pháp"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_03.mp3"
-                },
-                {
-                  "template": "Chú ấy là người {0}.",
-                  "answers": [
-                    [
-                      "Nhật",
-                      "Nhật Bản"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_04.mp3"
-                },
-                {
-                  "template": "Bạn ấy là người {0}.",
-                  "answers": [
-                    [
-                      "Trung",
-                      "Trung Quốc"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_05.mp3"
-                },
-                {
-                  "template": "Ông ấy là người {0}.",
-                  "answers": [
-                    [
-                      "Tây Ban Nha"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_06.mp3"
-                },
-                {
-                  "template": "Bà ấy là người {0}.",
-                  "answers": [
-                    [
-                      "Úc"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_07.mp3"
-                },
-                {
-                  "template": "Em ấy là người {0}.",
-                  "answers": [
-                    [
-                      "Mỹ"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_08.mp3"
-                },
-                {
-                  "template": "Diễn viên đó là người {0}.",
-                  "answers": [
-                    [
-                      "Thái",
-                      "Thái Lan"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_09.mp3"
-                },
-                {
-                  "template": "Mấy người đó là người {0}.",
-                  "answers": [
-                    [
-                      "Đức"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_10.mp3"
-                },
-                {
-                  "template": "Bố của Mai là người {0}.",
-                  "answers": [
-                    [
-                      "Lào"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_11.mp3"
-                },
-                {
-                  "template": "Ca sĩ đó là người {0}.",
-                  "answers": [
-                    [
-                      "Hàn",
-                      "Hàn Quốc"
-                    ]
-                  ],
-                  "audio": "audio/b11/{voice}/listen_ex7_12.mp3"
-                }
-              ]
-            },
-            {
-              "type": "audioChoice",
-              "num": 9,
-              "instructionVi": "Nghe và chọn câu trả lời đúng.",
-              "instructionEn": "Listen and choose the correct answer.",
-              "items": [
-                {
-                  "text": "Anh ấy là người ____.",
-                  "options": [
-                    "Pháp",
-                    "Đức",
-                    "Anh"
-                  ],
-                  "answer": "a",
-                  "audio": "audio/b11/{voice}/listen_ex8_01.mp3"
-                },
-                {
-                  "text": "Cô ấy là người ____.",
-                  "options": [
-                    "Trung",
-                    "Hàn",
-                    "Nhật"
-                  ],
-                  "answer": "c",
-                  "audio": "audio/b11/{voice}/listen_ex8_02.mp3"
-                },
-                {
-                  "text": "Chị ấy là người ____.",
-                  "options": [
-                    "Úc",
-                    "Đức",
-                    "Thái"
-                  ],
-                  "answer": "a",
-                  "audio": "audio/b11/{voice}/listen_ex8_03.mp3"
-                },
-                {
-                  "text": "Diễn viên đó là người ____.",
-                  "options": [
-                    "Lào",
-                    "Mỹ",
-                    "Nhật"
-                  ],
-                  "answer": "b",
-                  "audio": "audio/b11/{voice}/listen_ex8_04.mp3"
-                },
-                {
-                  "text": "Mẹ của Linh là người ____.",
-                  "options": [
-                    "Anh",
-                    "Trung",
-                    "Hàn"
-                  ],
-                  "answer": "b",
-                  "audio": "audio/b11/{voice}/listen_ex8_05.mp3"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ngu-phap",
-      "titleVi": "Ngữ pháp",
-      "titleEn": "Grammar",
+      "id": "khong-phai-la",
+      "titleVi": "Không phải là",
+      "titleEn": "Not to be",
+      "enOnly": true,
       "subtopics": [
         {
           "id": "khong-phai-la",
           "label": "Không phải là",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
@@ -674,13 +445,59 @@
                     ]
                   ]
                 }
-              ]
+              ],
+              "explain": true
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "Nam is not Korean.",
+              "vi": "Nam {{không phải là::pink}} người Hàn."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "He doesn't come from Spain",
+              "vi": "Anh ấy {{không::pink}} tới từ Tây Ban Nha."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "Phương is not an actress.",
+              "vi": "Phương {{không phải là::pink}} diễn viên."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "Trấn Thành is not a singer",
+              "vi": "Trấn Thành {{không phải là::pink}} ca sĩ."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "This year I won't go to Laos",
+              "vi": "Năm nay mình sẽ {{không::pink}} đi Lào."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "She is not a French actor.",
+              "vi": "Cô ấy {{không phải là::pink}} diễn viên người Pháp. / Chị ấy {{không phải là::pink}} diễn viên người Pháp."
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "dung-khong",
+      "titleVi": "Phải không? / Đúng không?",
+      "titleEn": "Asking for confirmation",
+      "enOnly": true,
+      "subtopics": [
         {
           "id": "dung-khong",
-          "label": "Đúng không?/Phải không?",
+          "label": "Phải không? / Đúng không?",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
@@ -735,7 +552,22 @@
                   "type": "paragraph",
                   "vi": "Khi trả lời câu hỏi với “Phải không?” hoặc “Đúng không?”, chúng ta có thể trả lời bằng cách xác nhận hoặc phủ nhận thông tin.",
                   "en": "When answering questions with “{{Phải không::pink}}?” or “{{Đúng không::pink}}?”, we can either confirm or deny the information."
-                },
+                }
+              ],
+              "explain": true
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "Ann is American, right?",
+              "vi": "Ann là người Mỹ {{đúng không::pink}}? / Ann là người Mỹ {{phải không::pink}}?"
+            },
+            {
+              "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "title": "",
+              "blocks": [
                 {
                   "type": "heading",
                   "vi": "1. Xác nhận thông tin",
@@ -746,28 +578,34 @@
                   "type": "paragraph",
                   "vi": "Dùng “Đúng rồi” khi thông tin trong câu hỏi chính xác.",
                   "en": "Use “{{Đúng rồi::blue}}” when the information in the question is correct."
-                },
-                {
-                  "type": "examples",
-                  "items": [
-                    {
-                      "vi": "A: Bạn là giáo viên {{phải không::pink}}?",
-                      "en": "A: You're a teacher, right?"
-                    },
-                    {
-                      "vi": "B: {{Đúng rồi::blue}}. Mình là giáo viên.",
-                      "en": "B: That's right. I am a teacher."
-                    },
-                    {
-                      "vi": "A: Phong thích cà phê {{đúng không::pink}}?",
-                      "en": "A: Phong likes coffee, right?"
-                    },
-                    {
-                      "vi": "B: {{Đúng rồi::blue}}.",
-                      "en": "B: That's right."
-                    }
-                  ]
-                },
+                }
+              ],
+              "explain": true
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "That's right. Millie is an American teacher.",
+              "vi": "{{Đúng rồi::blue}}. Millie là giáo viên người Mỹ."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "Yang is Chinese, right?",
+              "vi": "Yang là người Trung Quốc {{đúng không::pink}}? / Yang là người Trung Quốc {{phải không::pink}}?"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "That's right. Yang is a doctor.",
+              "vi": "{{Đúng rồi::blue}}. Yang là bác sĩ."
+            },
+            {
+              "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "title": "",
+              "blocks": [
                 {
                   "type": "heading",
                   "vi": "2. Phủ nhận thông tin",
@@ -778,251 +616,218 @@
                   "type": "paragraph",
                   "vi": "Dùng “Không” khi thông tin trong câu hỏi không chính xác. Sau đó, có thể đưa ra thông tin chính xác.",
                   "en": "Use “{{Không::blue}}” when the information in the question is incorrect. You can then provide the correct information."
-                },
-                {
-                  "type": "examples",
-                  "items": [
-                    {
-                      "vi": "A: Bây giờ là 7 giờ {{đúng không::pink}}?",
-                      "en": "A: It's 7 o'clock now, right?"
-                    },
-                    {
-                      "vi": "B: {{Không::blue}}. Bây giờ là 7 rưỡi.",
-                      "en": "B: No. It's half past 7."
-                    },
-                    {
-                      "vi": "A: Hôm qua anh ở nhà {{phải không::pink}}?",
-                      "en": "A: You were at home yesterday, right?"
-                    },
-                    {
-                      "vi": "B: {{Không::blue}}. Hôm qua anh tới văn phòng.",
-                      "en": "B: No. I went to the office yesterday."
-                    }
-                  ]
                 }
-              ]
+              ],
+              "explain": true
             },
             {
-              "type": "wordOrder",
-              "num": 10,
-              "instructionVi": "Sắp xếp từ thành câu hoàn chỉnh.",
-              "instructionEn": "Put the words in the correct order to make complete sentences.",
-              "items": [
-                {
-                  "words": [
-                    "đúng không",
-                    "là",
-                    "Bạn",
-                    "người Mỹ"
-                  ],
-                  "answers": [
-                    "Bạn là người Mỹ, đúng không?"
-                  ]
-                },
-                {
-                  "words": [
-                    "người Nhật Bản",
-                    "Anh ấy",
-                    "đúng không",
-                    "là"
-                  ],
-                  "answers": [
-                    "Anh ấy là người Nhật Bản, đúng không?"
-                  ]
-                },
-                {
-                  "words": [
-                    "đúng không",
-                    "Cô ấy",
-                    "người Pháp",
-                    "là"
-                  ],
-                  "answers": [
-                    "Cô ấy là người Pháp, đúng không?"
-                  ]
-                },
-                {
-                  "words": [
-                    "người Tây Ban Nha",
-                    "Họ",
-                    "đúng không",
-                    "là"
-                  ],
-                  "answers": [
-                    "Họ là người Tây Ban Nha, đúng không?"
-                  ]
-                },
-                {
-                  "words": [
-                    "người Anh",
-                    "Bạn",
-                    "đúng không",
-                    "là"
-                  ],
-                  "answers": [
-                    "Bạn là người Anh, đúng không?"
-                  ]
-                }
-              ]
+              "type": "teach",
+              "noNum": true,
+              "en": "Brian is English, right?",
+              "vi": "Brian là người Anh {{đúng không::pink}}? / Brian là người Anh {{phải không::pink}}?"
             },
             {
-              "type": "writeAnswer",
-              "num": 11,
-              "instructionVi": "Đặt câu hỏi với “Đúng không?”",
-              "instructionEn": "Make confirmation questions using “Đúng không?”",
-              "items": [
-                {
-                  "example": true,
-                  "question": "Thông tin: Bạn – người Hàn Quốc",
-                  "model": "Bạn là người Hàn Quốc, đúng không?",
-                  "answers": [
-                    "Bạn là người Hàn Quốc, đúng không?"
-                  ]
-                },
-                {
-                  "question": "Anh ấy – người Trung Quốc",
-                  "answers": [
-                    "Anh ấy là người Trung Quốc, đúng không?"
-                  ],
-                  "model": "Anh ấy là người Trung Quốc, đúng không?"
-                },
-                {
-                  "question": "Cô ấy – người Pháp",
-                  "answers": [
-                    "Cô ấy là người Pháp, đúng không?"
-                  ],
-                  "model": "Cô ấy là người Pháp, đúng không?"
-                },
-                {
-                  "question": "Bạn – người Canada",
-                  "answers": [
-                    "Bạn là người Canada, đúng không?"
-                  ],
-                  "model": "Bạn là người Canada, đúng không?"
-                },
-                {
-                  "question": "Chú ấy – người Mỹ",
-                  "answers": [
-                    "Chú ấy là người Mỹ, đúng không?"
-                  ],
-                  "model": "Chú ấy là người Mỹ, đúng không?"
-                },
-                {
-                  "question": "Chị ấy – người Anh",
-                  "answers": [
-                    "Chị ấy là người Anh, đúng không?"
-                  ],
-                  "model": "Chị ấy là người Anh, đúng không?"
-                }
-              ]
+              "type": "teach",
+              "noNum": true,
+              "en": "No. Brian is Australian.",
+              "vi": "{{Không::blue}}. Brian là người Úc."
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "He is Thai, right?",
+              "vi": "Anh ấy là người Thái {{đúng không::pink}}? / Anh ấy là người Thái {{phải không::pink}}?"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "No. He comes from Laos",
+              "vi": "{{Không::blue}}. Anh ấy tới từ Lào."
             }
           ]
         }
       ]
     },
     {
-      "id": "doc",
-      "titleVi": "Đọc",
-      "titleEn": "Reading",
+      "id": "tong-hop",
+      "titleVi": "Tổng hợp",
+      "titleEn": "Summary",
       "subtopics": [
         {
-          "id": "quoc-tich",
-          "label": "Quốc tịch",
+          "id": "tong-hop",
+          "label": "Từ vựng & ngữ pháp",
+          "hideLabel": true,
           "exercises": [
             {
-              "type": "readingQA",
-              "num": 12,
-              "instructionVi": "Đọc nhật ký của Phương và trả lời câu hỏi.",
-              "instructionEn": "Read Phương's diary and answer the questions.",
-              "passage": "Lớp học tiếng Việt của mình có nhiều học sinh tới từ nhiều nước khác nhau. Anna là người Mỹ và làm ở bệnh viện. David là người Anh. Anh ấy tới từ Luân Đôn và bây giờ đang là giáo viên tiếng Anh ở Sài Gòn. Minji là người Hàn Quốc. Minji là sinh viên đại học và thích học tiếng Việt. Còn Ken là người Nhật Bản. Anh ấy ở Tokyo và làm việc ở nhà hàng.\nMình chơi thân với Lisa. Lisa tới từ Úc. Lisa biết nói tiếng Anh và tiếng Pháp. Cô ấy rất thích Việt Nam và muốn đi Hà Nội vào năm sau.",
-              "questions": [
+              "type": "summary",
+              "noNum": true,
+              "title": "Anh ấy là người Pháp đúng không?",
+              "titleEm": "tổng hợp",
+              "desc": "Name countries and nationalities, say how long ago something happened, deny an identity, and check information.",
+              "audio": "audio/b11/{voice}/sum_{slug}.mp3",
+              "blocks": [
                 {
-                  "q": "Anna là người nước nào?",
-                  "a": "Anna là người Mỹ."
+                  "kind": "table",
+                  "rows": [
+                    {
+                      "group": "Tên nước · Countries"
+                    },
+                    {
+                      "vi": "Anh",
+                      "en": "England"
+                    },
+                    {
+                      "vi": "Pháp",
+                      "en": "France"
+                    },
+                    {
+                      "vi": "Đức",
+                      "en": "Germany"
+                    },
+                    {
+                      "vi": "Mỹ",
+                      "en": "America"
+                    },
+                    {
+                      "vi": "Tây Ban Nha",
+                      "en": "Spain"
+                    },
+                    {
+                      "vi": "Úc",
+                      "en": "Australia"
+                    },
+                    {
+                      "vi": "Thái Lan",
+                      "en": "Thailand"
+                    },
+                    {
+                      "vi": "Trung Quốc",
+                      "en": "China"
+                    },
+                    {
+                      "vi": "Hàn Quốc",
+                      "en": "Korea"
+                    },
+                    {
+                      "vi": "Nhật Bản",
+                      "en": "Japan"
+                    },
+                    {
+                      "vi": "Lào",
+                      "en": "Laos"
+                    },
+                    {
+                      "vi": "Việt Nam",
+                      "en": "Vietnam"
+                    },
+                    {
+                      "group": "Từ mới · New words"
+                    },
+                    {
+                      "vi": "tới từ",
+                      "en": "come from"
+                    },
+                    {
+                      "vi": "ca sĩ",
+                      "en": "singer"
+                    },
+                    {
+                      "vi": "diễn viên",
+                      "en": "actor / actress"
+                    },
+                    {
+                      "vi": "nổi tiếng",
+                      "en": "famous"
+                    },
+                    {
+                      "vi": "trước",
+                      "en": "ago"
+                    },
+                    {
+                      "vi": "Đúng rồi",
+                      "en": "That's right"
+                    }
+                  ]
                 },
                 {
-                  "q": "David đang làm nghề gì?",
-                  "a": "David đang là giáo viên tiếng Anh."
+                  "kind": "table",
+                  "label": "Ngữ pháp · Grammar",
+                  "rows": [
+                    {
+                      "vi": "{{Người::pink}} + [Country name]",
+                      "en": "Nationality. “I am American.”",
+                      "play": false
+                    },
+                    {
+                      "vi": "[X] + [Time unit] + {{trước::pink}}",
+                      "en": "A period of time ago. “2 days ago.”",
+                      "play": false
+                    },
+                    {
+                      "vi": "S + {{không phải là::pink}} + [noun]",
+                      "en": "Deny an identity, occupation, or nationality. “Nam is not Korean.”",
+                      "play": false
+                    },
+                    {
+                      "vi": "Statement + {{đúng không::pink}} / {{phải không::pink}}?",
+                      "en": "Ask for confirmation. “Ann is American, right?”",
+                      "play": false
+                    },
+                    {
+                      "vi": "{{Đúng rồi::blue}}. / {{Không::blue}}.",
+                      "en": "Confirm or deny the answer. “That's right.” / “No.”",
+                      "play": false
+                    }
+                  ],
+                  "tone": "yellow"
                 },
                 {
-                  "q": "Minji là người nước nào?",
-                  "a": "Minji là người Hàn Quốc."
+                  "kind": "examples",
+                  "label": "Ví dụ · Examples",
+                  "items": [
+                    {
+                      "vi": "Mình là người Mỹ.",
+                      "en": "I am American."
+                    },
+                    {
+                      "vi": "Adele là ca sĩ người Anh.",
+                      "en": "Adele is an English singer."
+                    },
+                    {
+                      "vi": "Mình đi du lịch Đức 5 tháng trước.",
+                      "en": "I went traveling to Germany 5 months ago."
+                    },
+                    {
+                      "vi": "Nam không phải là người Hàn.",
+                      "en": "Nam is not Korean."
+                    },
+                    {
+                      "vi": "Brian là người Anh đúng không? — Không. Brian là người Úc.",
+                      "en": "Brian is English, right? — No. Brian is Australian."
+                    }
+                  ]
                 },
                 {
-                  "q": "Ken làm việc ở đâu?",
-                  "a": "Ken làm việc ở nhà hàng."
-                },
-                {
-                  "q": "Lisa nói những ngôn ngữ nào?",
-                  "a": "Lisa nói tiếng Anh và tiếng Pháp."
-                },
-                {
-                  "q": "Lisa muốn đi đâu vào năm sau?",
-                  "a": "Lisa muốn đi Hà Nội vào năm sau."
+                  "kind": "tip",
+                  "label": "Mẹo · Tip",
+                  "text": "Put {{đúng không}} or {{phải không}} at the end of a statement to check it. Answer {{Đúng rồi}} if it is right, or {{Không}} and then give the correct information."
                 }
-              ]
-            },
-            {
-              "type": "chooseSentence",
-              "num": 13,
-              "instructionVi": "Đúng hay sai?",
-              "instructionEn": "True or false?",
-              "passage": "Lớp học tiếng Việt của mình có nhiều học sinh tới từ nhiều nước khác nhau. Anna là người Mỹ và làm ở bệnh viện. David là người Anh. Anh ấy tới từ Luân Đôn và bây giờ đang là giáo viên tiếng Anh ở Sài Gòn. Minji là người Hàn Quốc. Minji là sinh viên đại học và thích học tiếng Việt. Còn Ken là người Nhật Bản. Anh ấy ở Tokyo và làm việc ở nhà hàng.\nMình chơi thân với Lisa. Lisa tới từ Úc. Lisa biết nói tiếng Anh và tiếng Pháp. Cô ấy rất thích Việt Nam và muốn đi Hà Nội vào năm sau.",
-              "items": [
-                {
-                  "prompt": "Anna làm việc ở siêu thị.",
-                  "options": [
-                    "Đúng",
-                    "Sai"
-                  ],
-                  "answer": "b"
-                },
-                {
-                  "prompt": "David bây giờ đang ở Luân Đôn.",
-                  "options": [
-                    "Đúng",
-                    "Sai"
-                  ],
-                  "answer": "b"
-                },
-                {
-                  "prompt": "Minji là giáo viên đại học.",
-                  "options": [
-                    "Đúng",
-                    "Sai"
-                  ],
-                  "answer": "b"
-                },
-                {
-                  "prompt": "Ken không phải là người Nhật Bản.",
-                  "options": [
-                    "Đúng",
-                    "Sai"
-                  ],
-                  "answer": "b"
-                },
-                {
-                  "prompt": "Lisa là bạn thân của Phương.",
-                  "options": [
-                    "Đúng",
-                    "Sai"
-                  ],
-                  "answer": "a"
-                }
-              ]
+              ],
+              "pdf": "pdf/b11-tong-hop.pdf"
             }
           ]
         }
       ]
     },
     {
-      "id": "viet",
-      "titleVi": "Viết",
-      "titleEn": "Writing",
+      "id": "noi",
+      "titleVi": "Luyện tập",
+      "titleEn": "Practice",
       "subtopics": [
         {
-          "id": "quoc-tich",
-          "label": "Quốc tịch",
+          "id": "noi",
+          "label": "Luyện tập",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "writeParagraph",
@@ -1038,40 +843,8 @@
                 "label": "Mẫu",
                 "text": "Mình là người Việt Nam. Mình bây giờ đang làm giáo viên ở Sài Gòn. Mình nói tiếng Việt và tiếng Anh."
               },
-              "rows": 6
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noi",
-      "titleVi": "Nói",
-      "titleEn": "Speaking",
-      "subtopics": [
-        {
-          "id": "quoc-tich",
-          "label": "Quốc tịch",
-          "exercises": [
-            {
-              "type": "openAnswer",
-              "num": 15,
-              "instructionVi": "Trả lời câu hỏi về bản thân.",
-              "instructionEn": "Answer the questions about yourself.",
-              "items": [
-                {
-                  "question": "Bạn đang ở nước nào?"
-                },
-                {
-                  "question": "Bạn thích những nước nào?"
-                },
-                {
-                  "question": "Bạn thích những ngôn ngữ nào?"
-                },
-                {
-                  "question": "Bạn có người thân hay bạn bè là người nước ngoài không? Họ là người Việt Nam đúng không?"
-                }
-              ]
+              "rows": 6,
+              "noNum": true
             }
           ]
         }
@@ -1572,6 +1345,833 @@
                 [
                   "Anh"
                 ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "quoc-tich-cu": {
+      "id": "tu-vung",
+      "titleVi": "Từ vựng",
+      "titleEn": "Vocabulary",
+      "subtopics": [
+        {
+          "id": "quoc-tich",
+          "label": "Quốc tịch",
+          "exercises": [
+            {
+              "type": "grammarNote",
+              "blocks": [
+                {
+                  "type": "heading",
+                  "vi": "Quốc tịch",
+                  "en": "Nationality",
+                  "tone": "purple"
+                },
+                {
+                  "type": "paragraph",
+                  "vi": "Dùng để nói một người đến từ đâu hoặc thuộc quốc gia nào.",
+                  "en": "Used to say where a person is from or which country they belong to."
+                },
+                {
+                  "type": "structure",
+                  "vi": "{{Người::pink}} + {{tên nước::blue}}",
+                  "en": "{{Người::pink}} + {{country name::blue}}"
+                },
+                {
+                  "type": "exampleGroup",
+                  "tone": "blue",
+                  "groups": [
+                    {
+                      "vi": "Phúc là {{người::pink}} {{Việt Nam::blue}}."
+                    },
+                    {
+                      "vi": "Mike là {{người::pink}} {{Anh::blue}}."
+                    },
+                    {
+                      "vi": "Lee là {{người::pink}} {{Hàn::blue}}."
+                    },
+                    {
+                      "vi": "Mẹ của anh Lộc là {{người::pink}} {{Trung::blue}}."
+                    }
+                  ]
+                }
+              ],
+              "noNum": true,
+              "instructionVi": ""
+            },
+            {
+              "type": "photoSpeak",
+              "num": 7,
+              "instructionVi": "Luyện nói về tên, nghề nghiệp và quốc tịch của những người sau.",
+              "instructionEn": "Practice introducing names, jobs, and nationalities of the following people.",
+              "items": [
+                {
+                  "img": "images/b11/quoc-tich/adele.jpg",
+                  "name": "Adele",
+                  "job": "ca sĩ",
+                  "pronoun": "Cô ấy",
+                  "country": "Anh",
+                  "example": true
+                },
+                {
+                  "img": "images/b11/quoc-tich/michael.jpg",
+                  "name": "Michael",
+                  "job": "cầu thủ bóng rổ",
+                  "pronoun": "Anh ấy",
+                  "country": "Mỹ"
+                },
+                {
+                  "img": "images/b11/quoc-tich/my-linh.jpg",
+                  "name": "Mỹ Linh",
+                  "job": "ca sĩ",
+                  "pronoun": "Cô ấy",
+                  "country": "Việt Nam"
+                },
+                {
+                  "img": "images/b11/quoc-tich/kommasith.jpg",
+                  "name": "Kommasith",
+                  "job": "thủ tướng",
+                  "pronoun": "Ông ấy",
+                  "country": "Lào"
+                },
+                {
+                  "img": "images/b11/quoc-tich/akina.jpg",
+                  "name": "Akina",
+                  "job": "diễn viên",
+                  "pronoun": "Cô ấy",
+                  "country": "Nhật"
+                },
+                {
+                  "img": "images/b11/quoc-tich/jae-suk.jpg",
+                  "name": "Jae-suk",
+                  "job": "MC",
+                  "pronoun": "Anh ấy",
+                  "country": "Hàn"
+                },
+                {
+                  "img": "images/b11/quoc-tich/ton-van.jpg",
+                  "name": "Tôn Văn",
+                  "job": "cầu thủ bóng đá",
+                  "pronoun": "Chị ấy",
+                  "country": "Trung"
+                },
+                {
+                  "img": "images/b11/quoc-tich/kanchai.jpg",
+                  "name": "Kanchai",
+                  "job": "MC",
+                  "pronoun": "Anh ấy",
+                  "country": "Thái"
+                },
+                {
+                  "img": "images/b11/quoc-tich/nicole.jpg",
+                  "name": "Nicole",
+                  "job": "diễn viên",
+                  "pronoun": "Cô ấy",
+                  "country": "Úc"
+                },
+                {
+                  "img": "images/b11/quoc-tich/xavi.jpg",
+                  "name": "Xavi",
+                  "job": "cầu thủ bóng đá",
+                  "pronoun": "Anh ấy",
+                  "country": "Tây Ban Nha"
+                },
+                {
+                  "img": "images/b11/quoc-tich/merz.jpg",
+                  "name": "Merz",
+                  "job": "thủ tướng",
+                  "pronoun": "Ông ấy",
+                  "country": "Đức"
+                },
+                {
+                  "img": "images/b11/quoc-tich/camille.jpg",
+                  "name": "Camille",
+                  "job": "ca sĩ",
+                  "pronoun": "Cô ấy",
+                  "country": "Pháp"
+                }
+              ],
+              "dialogue": {
+                "q": "Bạn có biết {name} là ai không?",
+                "a": "{name} là {job}. {pronoun} là người {country}."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "nghe-cu": {
+      "id": "nghe",
+      "titleVi": "Nghe",
+      "titleEn": "Listening",
+      "subtopics": [
+        {
+          "id": "quoc-tich",
+          "label": "Quốc tịch",
+          "exercises": [
+            {
+              "type": "audioFill",
+              "num": 8,
+              "instructionVi": "Nghe và hoàn thành các câu sau.",
+              "instructionEn": "Listen and complete the following sentences.",
+              "items": [
+                {
+                  "template": "Anh Phong là người {0}.",
+                  "answers": [
+                    [
+                      "Việt Nam",
+                      "Việt"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_01.mp3"
+                },
+                {
+                  "template": "Chị ấy là người {0}.",
+                  "answers": [
+                    [
+                      "Anh"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_02.mp3"
+                },
+                {
+                  "template": "Cô ấy là người {0}.",
+                  "answers": [
+                    [
+                      "Pháp"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_03.mp3"
+                },
+                {
+                  "template": "Chú ấy là người {0}.",
+                  "answers": [
+                    [
+                      "Nhật",
+                      "Nhật Bản"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_04.mp3"
+                },
+                {
+                  "template": "Bạn ấy là người {0}.",
+                  "answers": [
+                    [
+                      "Trung",
+                      "Trung Quốc"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_05.mp3"
+                },
+                {
+                  "template": "Ông ấy là người {0}.",
+                  "answers": [
+                    [
+                      "Tây Ban Nha"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_06.mp3"
+                },
+                {
+                  "template": "Bà ấy là người {0}.",
+                  "answers": [
+                    [
+                      "Úc"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_07.mp3"
+                },
+                {
+                  "template": "Em ấy là người {0}.",
+                  "answers": [
+                    [
+                      "Mỹ"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_08.mp3"
+                },
+                {
+                  "template": "Diễn viên đó là người {0}.",
+                  "answers": [
+                    [
+                      "Thái",
+                      "Thái Lan"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_09.mp3"
+                },
+                {
+                  "template": "Mấy người đó là người {0}.",
+                  "answers": [
+                    [
+                      "Đức"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_10.mp3"
+                },
+                {
+                  "template": "Bố của Mai là người {0}.",
+                  "answers": [
+                    [
+                      "Lào"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_11.mp3"
+                },
+                {
+                  "template": "Ca sĩ đó là người {0}.",
+                  "answers": [
+                    [
+                      "Hàn",
+                      "Hàn Quốc"
+                    ]
+                  ],
+                  "audio": "audio/b11/{voice}/listen_ex7_12.mp3"
+                }
+              ]
+            },
+            {
+              "type": "audioChoice",
+              "num": 9,
+              "instructionVi": "Nghe và chọn câu trả lời đúng.",
+              "instructionEn": "Listen and choose the correct answer.",
+              "items": [
+                {
+                  "text": "Anh ấy là người ____.",
+                  "options": [
+                    "Pháp",
+                    "Đức",
+                    "Anh"
+                  ],
+                  "answer": "a",
+                  "audio": "audio/b11/{voice}/listen_ex8_01.mp3"
+                },
+                {
+                  "text": "Cô ấy là người ____.",
+                  "options": [
+                    "Trung",
+                    "Hàn",
+                    "Nhật"
+                  ],
+                  "answer": "c",
+                  "audio": "audio/b11/{voice}/listen_ex8_02.mp3"
+                },
+                {
+                  "text": "Chị ấy là người ____.",
+                  "options": [
+                    "Úc",
+                    "Đức",
+                    "Thái"
+                  ],
+                  "answer": "a",
+                  "audio": "audio/b11/{voice}/listen_ex8_03.mp3"
+                },
+                {
+                  "text": "Diễn viên đó là người ____.",
+                  "options": [
+                    "Lào",
+                    "Mỹ",
+                    "Nhật"
+                  ],
+                  "answer": "b",
+                  "audio": "audio/b11/{voice}/listen_ex8_04.mp3"
+                },
+                {
+                  "text": "Mẹ của Linh là người ____.",
+                  "options": [
+                    "Anh",
+                    "Trung",
+                    "Hàn"
+                  ],
+                  "answer": "b",
+                  "audio": "audio/b11/{voice}/listen_ex8_05.mp3"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "ngu-phap-cu": {
+      "id": "ngu-phap",
+      "titleVi": "Ngữ pháp",
+      "titleEn": "Grammar",
+      "subtopics": [
+        {
+          "id": "khong-phai-la",
+          "label": "Không phải là",
+          "exercises": [
+            {
+              "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "title": "PHỦ ĐỊNH DANH TÍNH – NEGATING IDENTITY",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "vi": "“Không phải là” được dùng để phủ định danh tính, nghề nghiệp, quốc tịch hoặc đặc điểm nhận dạng của một người hay một sự vật. Cấu trúc này thường được sử dụng khi muốn nói ai đó hoặc cái gì đó không phải là người hoặc vật được nhắc đến.",
+                  "en": "“{{Không phải là::pink}}” is used to deny the identity, occupation, nationality, or classification of a person or thing. It is commonly used to say that someone or something is not the person or thing being referred to."
+                },
+                {
+                  "type": "heading",
+                  "vi": "Cấu trúc",
+                  "en": "Structure",
+                  "tone": "purple"
+                },
+                {
+                  "type": "structure",
+                  "vi": "S + {{không phải là::pink}} + [danh từ].",
+                  "en": "Subject + {{không phải là::pink}} + [noun]."
+                },
+                {
+                  "type": "heading",
+                  "vi": "Ví dụ",
+                  "en": "Examples",
+                  "tone": "purple"
+                },
+                {
+                  "type": "examplePairs",
+                  "tone": "blue",
+                  "pairs": [
+                    [
+                      {
+                        "label": "Khẳng định – Positive sentence",
+                        "vi": "Mình {{là::green}} giáo viên.",
+                        "en": "I am a teacher."
+                      },
+                      {
+                        "label": "Phủ định – Negative sentence",
+                        "vi": "Mình {{không phải là::pink}} giáo viên.",
+                        "en": "I am not a teacher."
+                      }
+                    ],
+                    [
+                      {
+                        "label": "Khẳng định – Positive sentence",
+                        "vi": "Chị ấy {{là::green}} người Hàn Quốc.",
+                        "en": "She is a Korean."
+                      },
+                      {
+                        "label": "Phủ định – Negative sentence",
+                        "vi": "Chị ấy {{không phải là::pink}} người Hàn Quốc.",
+                        "en": "She is not a Korean."
+                      }
+                    ],
+                    [
+                      {
+                        "label": "Khẳng định – Positive sentence",
+                        "vi": "Đây {{là::green}} sách của Mai.",
+                        "en": "This is Mai's book."
+                      },
+                      {
+                        "label": "Phủ định – Negative sentence",
+                        "vi": "Đây {{không phải là::pink}} sách của Mai.",
+                        "en": "This is not Mai's book."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "vi": "Phân biệt KHÔNG và KHÔNG PHẢI",
+                  "en": "Difference between KHÔNG and KHÔNG PHẢI",
+                  "tone": "purple"
+                },
+                {
+                  "type": "table",
+                  "columns": [
+                    "KHÔNG",
+                    "KHÔNG PHẢI"
+                  ],
+                  "rows": [
+                    [
+                      "Dùng để phủ định một hành động, trạng thái, tính chất hoặc đặc điểm.\nUsed to negate an action, state, quality, or characteristic.",
+                      "Dùng để phủ định hoặc đính chính danh tính, nghề nghiệp, sự vật hoặc thông tin được xác định bằng danh từ.\nUsed to deny or correct an identity, profession, object, or information expressed by a noun."
+                    ],
+                    [
+                      "Ví dụ: Mình không thích cá.\nI don't like fish.",
+                      "Ví dụ: Mình không phải là giáo viên.\nI'm not a teacher."
+                    ],
+                    [
+                      "Ví dụ: Chị Hương không thường dậy sớm.\nHương doesn't usually wake up early.",
+                      "Ví dụ: Chị ấy không phải là người Nhật.\nShe's not Japanese."
+                    ],
+                    [
+                      "Ví dụ: Hải không mệt.\nHải isn't tired.",
+                      "Ví dụ: Hôm nay không phải là Chủ Nhật.\nToday isn't Sunday."
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dung-khong",
+          "label": "Đúng không?/Phải không?",
+          "exercises": [
+            {
+              "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "title": "ĐÚNG KHÔNG? / PHẢI KHÔNG? – ASKING FOR CONFIRMATION",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "vi": "“Phải không?” và “Đúng không?” được dùng ở cuối câu để hỏi và xác nhận một thông tin mà người nói đã biết hoặc đang dự đoán. Người nói sử dụng hai cấu trúc này khi muốn biết thông tin mình nói có chính xác hay không.",
+                  "en": "“{{Phải không::pink}}?” and “{{Đúng không::pink}}?” are placed at the end of a sentence to ask for confirmation of information that the speaker already knows or assumes to be true. They are used when the speaker wants to check whether the information is correct."
+                },
+                {
+                  "type": "heading",
+                  "vi": "Cấu trúc",
+                  "en": "Structure",
+                  "tone": "purple"
+                },
+                {
+                  "type": "structure",
+                  "vi": "Câu trần thuật + {{phải không::pink}}/{{đúng không::pink}}?",
+                  "en": "Statement + {{phải không::pink}}/{{đúng không::pink}}?"
+                },
+                {
+                  "type": "examples",
+                  "items": [
+                    {
+                      "vi": "Bạn là sinh viên {{phải không::pink}}?",
+                      "en": "You are a student, right?"
+                    },
+                    {
+                      "vi": "Anh ấy là người Việt Nam, {{đúng không::pink}}?",
+                      "en": "He is Vietnamese, right?"
+                    },
+                    {
+                      "vi": "Bạn thích cà phê {{phải không::pink}}?",
+                      "en": "You like coffee, right?"
+                    },
+                    {
+                      "vi": "Hôm nay là thứ Hai {{đúng không::pink}}?",
+                      "en": "Today is Monday, right?"
+                    }
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "vi": "Cách dùng",
+                  "en": "Usage",
+                  "tone": "purple"
+                },
+                {
+                  "type": "paragraph",
+                  "vi": "Khi trả lời câu hỏi với “Phải không?” hoặc “Đúng không?”, chúng ta có thể trả lời bằng cách xác nhận hoặc phủ nhận thông tin.",
+                  "en": "When answering questions with “{{Phải không::pink}}?” or “{{Đúng không::pink}}?”, we can either confirm or deny the information."
+                },
+                {
+                  "type": "heading",
+                  "vi": "1. Xác nhận thông tin",
+                  "en": "Confirming information",
+                  "tone": "purple"
+                },
+                {
+                  "type": "paragraph",
+                  "vi": "Dùng “Đúng rồi” khi thông tin trong câu hỏi chính xác.",
+                  "en": "Use “{{Đúng rồi::blue}}” when the information in the question is correct."
+                },
+                {
+                  "type": "examples",
+                  "items": [
+                    {
+                      "vi": "A: Bạn là giáo viên {{phải không::pink}}?",
+                      "en": "A: You're a teacher, right?"
+                    },
+                    {
+                      "vi": "B: {{Đúng rồi::blue}}. Mình là giáo viên.",
+                      "en": "B: That's right. I am a teacher."
+                    },
+                    {
+                      "vi": "A: Phong thích cà phê {{đúng không::pink}}?",
+                      "en": "A: Phong likes coffee, right?"
+                    },
+                    {
+                      "vi": "B: {{Đúng rồi::blue}}.",
+                      "en": "B: That's right."
+                    }
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "vi": "2. Phủ nhận thông tin",
+                  "en": "Denying information",
+                  "tone": "purple"
+                },
+                {
+                  "type": "paragraph",
+                  "vi": "Dùng “Không” khi thông tin trong câu hỏi không chính xác. Sau đó, có thể đưa ra thông tin chính xác.",
+                  "en": "Use “{{Không::blue}}” when the information in the question is incorrect. You can then provide the correct information."
+                },
+                {
+                  "type": "examples",
+                  "items": [
+                    {
+                      "vi": "A: Bây giờ là 7 giờ {{đúng không::pink}}?",
+                      "en": "A: It's 7 o'clock now, right?"
+                    },
+                    {
+                      "vi": "B: {{Không::blue}}. Bây giờ là 7 rưỡi.",
+                      "en": "B: No. It's half past 7."
+                    },
+                    {
+                      "vi": "A: Hôm qua anh ở nhà {{phải không::pink}}?",
+                      "en": "A: You were at home yesterday, right?"
+                    },
+                    {
+                      "vi": "B: {{Không::blue}}. Hôm qua anh tới văn phòng.",
+                      "en": "B: No. I went to the office yesterday."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "wordOrder",
+              "num": 10,
+              "instructionVi": "Sắp xếp từ thành câu hoàn chỉnh.",
+              "instructionEn": "Put the words in the correct order to make complete sentences.",
+              "items": [
+                {
+                  "words": [
+                    "đúng không",
+                    "là",
+                    "Bạn",
+                    "người Mỹ"
+                  ],
+                  "answers": [
+                    "Bạn là người Mỹ, đúng không?"
+                  ]
+                },
+                {
+                  "words": [
+                    "người Nhật Bản",
+                    "Anh ấy",
+                    "đúng không",
+                    "là"
+                  ],
+                  "answers": [
+                    "Anh ấy là người Nhật Bản, đúng không?"
+                  ]
+                },
+                {
+                  "words": [
+                    "đúng không",
+                    "Cô ấy",
+                    "người Pháp",
+                    "là"
+                  ],
+                  "answers": [
+                    "Cô ấy là người Pháp, đúng không?"
+                  ]
+                },
+                {
+                  "words": [
+                    "người Tây Ban Nha",
+                    "Họ",
+                    "đúng không",
+                    "là"
+                  ],
+                  "answers": [
+                    "Họ là người Tây Ban Nha, đúng không?"
+                  ]
+                },
+                {
+                  "words": [
+                    "người Anh",
+                    "Bạn",
+                    "đúng không",
+                    "là"
+                  ],
+                  "answers": [
+                    "Bạn là người Anh, đúng không?"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "writeAnswer",
+              "num": 11,
+              "instructionVi": "Đặt câu hỏi với “Đúng không?”",
+              "instructionEn": "Make confirmation questions using “Đúng không?”",
+              "items": [
+                {
+                  "example": true,
+                  "question": "Thông tin: Bạn – người Hàn Quốc",
+                  "model": "Bạn là người Hàn Quốc, đúng không?",
+                  "answers": [
+                    "Bạn là người Hàn Quốc, đúng không?"
+                  ]
+                },
+                {
+                  "question": "Anh ấy – người Trung Quốc",
+                  "answers": [
+                    "Anh ấy là người Trung Quốc, đúng không?"
+                  ],
+                  "model": "Anh ấy là người Trung Quốc, đúng không?"
+                },
+                {
+                  "question": "Cô ấy – người Pháp",
+                  "answers": [
+                    "Cô ấy là người Pháp, đúng không?"
+                  ],
+                  "model": "Cô ấy là người Pháp, đúng không?"
+                },
+                {
+                  "question": "Bạn – người Canada",
+                  "answers": [
+                    "Bạn là người Canada, đúng không?"
+                  ],
+                  "model": "Bạn là người Canada, đúng không?"
+                },
+                {
+                  "question": "Chú ấy – người Mỹ",
+                  "answers": [
+                    "Chú ấy là người Mỹ, đúng không?"
+                  ],
+                  "model": "Chú ấy là người Mỹ, đúng không?"
+                },
+                {
+                  "question": "Chị ấy – người Anh",
+                  "answers": [
+                    "Chị ấy là người Anh, đúng không?"
+                  ],
+                  "model": "Chị ấy là người Anh, đúng không?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "doc-cu": {
+      "id": "doc",
+      "titleVi": "Đọc",
+      "titleEn": "Reading",
+      "subtopics": [
+        {
+          "id": "quoc-tich",
+          "label": "Quốc tịch",
+          "exercises": [
+            {
+              "type": "readingQA",
+              "num": 12,
+              "instructionVi": "Đọc nhật ký của Phương và trả lời câu hỏi.",
+              "instructionEn": "Read Phương's diary and answer the questions.",
+              "passage": "Lớp học tiếng Việt của mình có nhiều học sinh tới từ nhiều nước khác nhau. Anna là người Mỹ và làm ở bệnh viện. David là người Anh. Anh ấy tới từ Luân Đôn và bây giờ đang là giáo viên tiếng Anh ở Sài Gòn. Minji là người Hàn Quốc. Minji là sinh viên đại học và thích học tiếng Việt. Còn Ken là người Nhật Bản. Anh ấy ở Tokyo và làm việc ở nhà hàng.\nMình chơi thân với Lisa. Lisa tới từ Úc. Lisa biết nói tiếng Anh và tiếng Pháp. Cô ấy rất thích Việt Nam và muốn đi Hà Nội vào năm sau.",
+              "questions": [
+                {
+                  "q": "Anna là người nước nào?",
+                  "a": "Anna là người Mỹ."
+                },
+                {
+                  "q": "David đang làm nghề gì?",
+                  "a": "David đang là giáo viên tiếng Anh."
+                },
+                {
+                  "q": "Minji là người nước nào?",
+                  "a": "Minji là người Hàn Quốc."
+                },
+                {
+                  "q": "Ken làm việc ở đâu?",
+                  "a": "Ken làm việc ở nhà hàng."
+                },
+                {
+                  "q": "Lisa nói những ngôn ngữ nào?",
+                  "a": "Lisa nói tiếng Anh và tiếng Pháp."
+                },
+                {
+                  "q": "Lisa muốn đi đâu vào năm sau?",
+                  "a": "Lisa muốn đi Hà Nội vào năm sau."
+                }
+              ]
+            },
+            {
+              "type": "chooseSentence",
+              "num": 13,
+              "instructionVi": "Đúng hay sai?",
+              "instructionEn": "True or false?",
+              "passage": "Lớp học tiếng Việt của mình có nhiều học sinh tới từ nhiều nước khác nhau. Anna là người Mỹ và làm ở bệnh viện. David là người Anh. Anh ấy tới từ Luân Đôn và bây giờ đang là giáo viên tiếng Anh ở Sài Gòn. Minji là người Hàn Quốc. Minji là sinh viên đại học và thích học tiếng Việt. Còn Ken là người Nhật Bản. Anh ấy ở Tokyo và làm việc ở nhà hàng.\nMình chơi thân với Lisa. Lisa tới từ Úc. Lisa biết nói tiếng Anh và tiếng Pháp. Cô ấy rất thích Việt Nam và muốn đi Hà Nội vào năm sau.",
+              "items": [
+                {
+                  "prompt": "Anna làm việc ở siêu thị.",
+                  "options": [
+                    "Đúng",
+                    "Sai"
+                  ],
+                  "answer": "b"
+                },
+                {
+                  "prompt": "David bây giờ đang ở Luân Đôn.",
+                  "options": [
+                    "Đúng",
+                    "Sai"
+                  ],
+                  "answer": "b"
+                },
+                {
+                  "prompt": "Minji là giáo viên đại học.",
+                  "options": [
+                    "Đúng",
+                    "Sai"
+                  ],
+                  "answer": "b"
+                },
+                {
+                  "prompt": "Ken không phải là người Nhật Bản.",
+                  "options": [
+                    "Đúng",
+                    "Sai"
+                  ],
+                  "answer": "b"
+                },
+                {
+                  "prompt": "Lisa là bạn thân của Phương.",
+                  "options": [
+                    "Đúng",
+                    "Sai"
+                  ],
+                  "answer": "a"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "noi-cu": {
+      "id": "noi",
+      "titleVi": "Nói",
+      "titleEn": "Speaking",
+      "subtopics": [
+        {
+          "id": "quoc-tich",
+          "label": "Quốc tịch",
+          "exercises": [
+            {
+              "type": "openAnswer",
+              "num": 15,
+              "instructionVi": "Trả lời câu hỏi về bản thân.",
+              "instructionEn": "Answer the questions about yourself.",
+              "items": [
+                {
+                  "question": "Bạn đang ở nước nào?"
+                },
+                {
+                  "question": "Bạn thích những nước nào?"
+                },
+                {
+                  "question": "Bạn thích những ngôn ngữ nào?"
+                },
+                {
+                  "question": "Bạn có người thân hay bạn bè là người nước ngoài không? Họ là người Việt Nam đúng không?"
+                }
               ]
             }
           ]
