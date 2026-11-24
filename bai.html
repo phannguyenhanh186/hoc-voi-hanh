@@ -2178,7 +2178,8 @@
 
         pill.textContent = entry.section.titleVi;
         content.innerHTML = '';
-        enOnly = entry.section.id === 'ngu-phap' || !!entry.section.enOnly;   // enOnly: section chỉ có phần giải thích tiếng Anh (ngữ pháp)
+        enOnly = entry.section.id === 'ngu-phap' || !!entry.section.enOnly;
+        content.classList.toggle('is-flow-grammar', !!item.flow && enOnly);   // bài kiểu flow: trang ngữ pháp chữ to, canh giữa   // enOnly: section chỉ có phần giải thích tiếng Anh (ngữ pháp)
         entries.forEach(function (e) { if (e.secBox) e.secBox.classList.toggle('is-current', e.section === entry.section); });
         content.style.setProperty('--ch', SEC_SQ[entry.si % SEC_SQ.length]);
         content.style.setProperty('--ch-l', SEC_PALE[entry.si % SEC_PALE.length]);
