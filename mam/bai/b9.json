@@ -8,15 +8,18 @@
     "removed": "Bai 9 doi theo kieu bai 10 (flow + teach). Phat am, Doc, Viet, bai 5/6 (Tu vung), bai 8/9 (Ngu phap) da bo khoi bai, noi dung cu luu o _archive."
   },
   "flow": true,
+  "flat": true,
   "sections": [
     {
-      "id": "ngu-phap",
-      "titleVi": "Ngữ pháp",
-      "titleEn": "Grammar",
+      "id": "so-nguoi",
+      "titleVi": "Nói về số người trong gia đình",
+      "titleEn": "Talking about the number of family members",
+      "enOnly": true,
       "subtopics": [
         {
           "id": "so-nguoi",
-          "label": "Số người trong gia đình",
+          "label": "Nói về số người trong gia đình",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "teach",
@@ -46,13 +49,14 @@
       ]
     },
     {
-      "id": "tu-vung",
-      "titleVi": "Từ vựng",
-      "titleEn": "Vocabulary",
+      "id": "gia-dinh",
+      "titleVi": "Thành viên trong gia đình",
+      "titleEn": "Family members",
       "subtopics": [
         {
           "id": "gia-dinh",
-          "label": "Gia đình",
+          "label": "Thành viên trong gia đình",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "teach",
@@ -342,13 +346,15 @@
       ]
     },
     {
-      "id": "ngu-phap",
-      "titleVi": "Ngữ pháp",
-      "titleEn": "Grammar",
+      "id": "tuoi",
+      "titleVi": "Nói về số tuổi",
+      "titleEn": "Telling the age",
+      "enOnly": true,
       "subtopics": [
         {
           "id": "tuoi",
           "label": "Nói về số tuổi",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
@@ -418,10 +424,19 @@
               "vi": "Con trai của em họ mình 10 {{tuổi::pink}}."
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "hoi-so-nguoi",
+      "titleVi": "Hỏi về số người trong gia đình",
+      "titleEn": "Asking about the number of family members",
+      "enOnly": true,
+      "subtopics": [
         {
           "id": "hoi-so-nguoi",
-          "label": "Hỏi số người trong gia đình",
+          "label": "Hỏi về số người trong gia đình",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
@@ -472,10 +487,19 @@
               "vi": "Mình có một anh trai và một em gái. Anh trai của mình 27 tuổi và em gái của mình 19 tuổi."
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "hoi-tuoi",
+      "titleVi": "Hỏi về số tuổi",
+      "titleEn": "Asking about age",
+      "enOnly": true,
+      "subtopics": [
         {
           "id": "hoi-tuoi",
-          "label": "Hỏi về tuổi",
+          "label": "Hỏi về số tuổi",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "grammarNote",
@@ -553,8 +577,9 @@
       "titleEn": "Listening",
       "subtopics": [
         {
-          "id": "nghe-tuoi",
-          "label": "Nghe và hoàn thành câu",
+          "id": "nghe",
+          "label": "Nghe",
+          "hideLabel": true,
           "exercises": [
             {
               "type": "bankSentences",
@@ -894,7 +919,7 @@
       "subtopics": [
         {
           "id": "tong-hop",
-          "label": "Từ vựng & ngữ pháp",
+          "label": "Tổng hợp",
           "hideLabel": true,
           "exercises": [
             {
@@ -1101,7 +1126,7 @@
       "titleEn": "Practice",
       "subtopics": [
         {
-          "id": "gia-dinh",
+          "id": "noi",
           "label": "Luyện tập",
           "hideLabel": true,
           "exercises": [
