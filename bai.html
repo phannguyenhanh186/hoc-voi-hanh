@@ -468,7 +468,7 @@
     // Phần Ngữ pháp (section id 'ngu-phap'): chỉ hiện tiếng Anh cho phần giải thích; câu ví dụ tiếng Việt giữ nguyên.
     let enOnly = false;
     function renderGrammarNote(ex) {
-      const wrap = el('div', 'bai-grammar');
+      const wrap = el('div', 'bai-grammar' + (ex.explain ? ' is-explain' : ''));   // explain: trang giải thích (chữ thường, canh trái), chỉ khung cấu trúc to + canh giữa
       // Tiêu đề dạng "TIẾNG VIỆT – ENGLISH" (hoặc dùng "·"): ngữ pháp chỉ giữ phần tiếng Anh
       const gTitle = enOnly && ex.title ? String(ex.title).split(/\s+[–·]\s+/).pop() : ex.title;
       if (gTitle) wrap.appendChild(el('h3', 'bai-grammar-title', gTitle));
