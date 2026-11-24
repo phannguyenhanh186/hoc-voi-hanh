@@ -43,21 +43,7 @@
               "noNum": true,
               "en": "My house has four people.",
               "vi": "{{Nhà::pink}} của mình {{có::lav}} {{bốn::green}} {{người::blue}}."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gia-dinh",
-      "titleVi": "Thành viên trong gia đình",
-      "titleEn": "Family members",
-      "subtopics": [
-        {
-          "id": "gia-dinh",
-          "label": "Thành viên trong gia đình",
-          "hideLabel": true,
-          "exercises": [
+            },
             {
               "type": "teach",
               "noNum": true,
@@ -73,7 +59,21 @@
                   "tone": "blue"
                 }
               ]
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cua",
+      "titleVi": "Của",
+      "titleEn": "Of",
+      "subtopics": [
+        {
+          "id": "cua",
+          "label": "Của",
+          "hideLabel": true,
+          "exercises": [
             {
               "type": "teach",
               "noNum": true,
