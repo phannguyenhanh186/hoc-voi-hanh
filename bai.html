@@ -1935,6 +1935,13 @@
         });
         wrap.appendChild(box);
       }
+      if (ex.note) {   // trang ghi chú: tiêu đề nổi bật như từ vựng + dòng giải thích đóng khung, hiện sẵn (không ẩn)
+        const nt = el('div', 'bai-teach-terms');
+        const h = el('div', 'bai-teach-term-vi'); hlText(h, '{{' + ex.note.title + '::' + (ex.note.tone || 'lav') + '}}');
+        nt.appendChild(h);
+        nt.appendChild(hlText(el('div', 'bai-teach-vi bai-teach-note'), ex.note.text));
+        wrap.appendChild(nt);
+      }
       let vi = null;
       if (ex.en) {
         wrap.appendChild(el('div', 'bai-teach-en', ex.en));
