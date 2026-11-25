@@ -2180,3 +2180,6 @@ a.lesson-row:hover { background: #FAFAF7; }
   .gram2-content.is-flow-grammar .bai-grammar.is-explain .bai-grammar-title { font-size: 1.2rem; }
   .gram2-content.is-flow-grammar .bai-grammar.is-explain .bai-grammar-p-vi { font-size: 1rem; }
 }
+
+/* Trang ghi chú (teach có "note"): tiêu đề to + dòng giải thích đóng khung, hiện sẵn */
+.bai-teach-note { margin-top: 6px; }
