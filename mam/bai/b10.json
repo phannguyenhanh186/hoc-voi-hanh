@@ -4,7 +4,7 @@
   "title": "Khi nào bạn đi Việt Nam?",
   "_guide": {
     "doc": "App bo qua key bat dau bang '_'.",
-    "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am. Them (phan Nghe): listen_ex7_01..05.mp3 (chon dap an), listen_ex8_01..05.mp3 (hoan thanh cau) - chua thu am. TODO: dien 'answer' (a/b) cho 5 cau bai 7 (hien de null = khong cham). Phan Tong hop: audio/b10/<voice>/sum_<slug>.mp3 (slug = chu khong dau, noi bang _), gom: sum_tuan_truoc, sum_tuan_nay, sum_tuan_sau, sum_thang_truoc, sum_thang_nay, sum_thang_sau, sum_nam_truoc, sum_nam_nay, sum_nam_sau, sum_hom_nay, sum_dau, sum_cuoi, sum_dau_tuan_nay, sum_cuoi_nam_nay, sum_se, sum_khi_nao, sum_ve_que, sum_di_cong_tac, sum_tieng_viet, sum_dong_nghiep, sum_an_tet, sum_di_kham_benh, sum_nghi_lam, sum_tuan_truoc_minh_ve_nha, sum_nam_sau_minh_se_hoc_tieng_viet, sum_dau_tuan_nay_minh_an_voi_dong_nghiep, sum_khi_nao_ban_ve_que_cuoi_nam_nay_minh_se_ve_que."
+    "todo_audio": "audio/b10/nam: pron_<van/tu>.mp3 (uâ, uê, uy, qu va cac tu trong bang; ten file theo Telex, xem audioKey trong bai.html), listen_ex2_01..04.mp3, ex4_01..05.mp3 - chua thu am. Them (phan Nghe): listen_ex7_01..05.mp3 (chon dap an), listen_ex8_01..05.mp3 (hoan thanh cau) - chua thu am. TODO: dien 'answer' (a/b) cho 5 cau bai 7 (hien de null = khong cham). Phan Tong hop: audio/b10/<voice>/sum_<slug>.mp3 (slug = chu khong dau, noi bang _), gom: sum_tuan_truoc, sum_tuan_nay, sum_tuan_sau, sum_thang_truoc, sum_thang_nay, sum_thang_sau, sum_nam_truoc, sum_nam_nay, sum_nam_sau, sum_dau, sum_cuoi, sum_dau_tuan_nay, sum_cuoi_nam_nay, sum_se, sum_khi_nao, sum_ve_que, sum_di_cong_tac, sum_tieng_viet, sum_dong_nghiep, sum_an_tet, sum_di_kham_benh, sum_nghi_lam, sum_tuan_truoc_minh_ve_nha, sum_nam_sau_minh_se_hoc_tieng_viet, sum_dau_tuan_nay_minh_an_voi_dong_nghiep, sum_khi_nao_ban_ve_que_cuoi_nam_nay_minh_se_ve_que."
   },
   "flow": true,
   "flat": true,
@@ -1049,10 +1049,6 @@
                     {
                       "vi": "năm sau",
                       "en": "next year"
-                    },
-                    {
-                      "vi": "hôm nay",
-                      "en": "today"
                     },
                     {
                       "group": "Đầu – Cuối · Beginning – End"
