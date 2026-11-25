@@ -563,24 +563,13 @@
               "vi": "Ann là người Mỹ {{đúng không::pink}}? / Ann là người Mỹ {{phải không::pink}}?"
             },
             {
-              "type": "grammarNote",
+              "type": "teach",
               "noNum": true,
-              "instructionVi": "",
-              "title": "",
-              "blocks": [
-                {
-                  "type": "heading",
-                  "vi": "1. Xác nhận thông tin",
-                  "en": "Confirming information",
-                  "tone": "purple"
-                },
-                {
-                  "type": "paragraph",
-                  "vi": "Dùng “Đúng rồi” khi thông tin trong câu hỏi chính xác.",
-                  "en": "Use “{{Đúng rồi::blue}}” when the information in the question is correct."
-                }
-              ],
-              "explain": true
+              "note": {
+                "title": "Confirming information",
+                "tone": "green",
+                "text": "Use “{{Đúng rồi::blue}}” when the information in the question is correct."
+              }
             },
             {
               "type": "teach",
@@ -601,24 +590,13 @@
               "vi": "{{Đúng rồi::blue}}. Yang là bác sĩ."
             },
             {
-              "type": "grammarNote",
+              "type": "teach",
               "noNum": true,
-              "instructionVi": "",
-              "title": "",
-              "blocks": [
-                {
-                  "type": "heading",
-                  "vi": "2. Phủ nhận thông tin",
-                  "en": "Denying information",
-                  "tone": "purple"
-                },
-                {
-                  "type": "paragraph",
-                  "vi": "Dùng “Không” khi thông tin trong câu hỏi không chính xác. Sau đó, có thể đưa ra thông tin chính xác.",
-                  "en": "Use “{{Không::blue}}” when the information in the question is incorrect. You can then provide the correct information."
-                }
-              ],
-              "explain": true
+              "note": {
+                "title": "Denying information",
+                "tone": "pink",
+                "text": "Use “{{Không::blue}}” when the information in the question is incorrect. You can then provide the correct information."
+              }
             },
             {
               "type": "teach",
