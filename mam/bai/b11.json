@@ -815,11 +815,11 @@
               "questions": [
                 "Bạn là người nước nào?",
                 "Bạn bây giờ đang làm nghề gì? Bạn đang ở thành phố nào?",
-                "Bạn nói những ngôn ngữ nào?"
+                "Bạn thích đi nước nào?"
               ],
               "example": {
                 "label": "Mẫu",
-                "text": "Mình là người Việt Nam. Mình bây giờ đang làm giáo viên ở Sài Gòn. Mình nói tiếng Việt và tiếng Anh."
+                "text": "Mình là người Việt Nam. Mình bây giờ đang làm giáo viên ở Sài Gòn. Mình thích đi Anh và Nhật Bản."
               },
               "rows": 6,
               "noNum": true
