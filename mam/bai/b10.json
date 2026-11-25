@@ -651,6 +651,98 @@
       ]
     },
     {
+      "id": "khi-nao",
+      "titleVi": "Khi nào...?",
+      "titleEn": "When...?",
+      "enOnly": true,
+      "subtopics": [
+        {
+          "id": "khi-nao",
+          "label": "Khi nào...?",
+          "hideLabel": true,
+          "exercises": [
+            {
+              "type": "grammarNote",
+              "noNum": true,
+              "instructionVi": "",
+              "title": "KHI NÀO? · WHEN?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "vi": "Trong tiếng Việt, “khi nào” nghĩa là “when” và dùng để hỏi về thời gian.",
+                  "en": "In Vietnamese, “{{khi nào::pink}}” means “when” and is used to ask about time."
+                },
+                {
+                  "type": "structure",
+                  "vi": "{{Khi nào::pink}} + [Subject] + [Verb]"
+                }
+              ]
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "When do you study Vietnamese?",
+              "vi": "{{Khi nào::pink}} bạn học tiếng Việt?"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "The beginning of last month",
+              "vi": "{{Đầu::pink}} tháng trước"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "When will you go traveling?",
+              "vi": "{{Khi nào::pink}} bạn đi du lịch?"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "The beginning of next year",
+              "vi": "{{Đầu::pink}} năm sau"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "When do you go back to the hometown?",
+              "vi": "{{Khi nào::pink}} bạn về quê?"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "The end of this week",
+              "vi": "{{Cuối::blue}} tuần này"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "When does your colleague go back home?",
+              "vi": "{{Khi nào::pink}} đồng nghiệp của bạn về nhà?"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "The end of today",
+              "vi": "{{Cuối::blue}} hôm nay"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "When will uncle Tân go on a business trip?",
+              "vi": "{{Khi nào::pink}} chú Tân {{sẽ::lav}} đi công tác?"
+            },
+            {
+              "type": "teach",
+              "noNum": true,
+              "en": "The beginning of next week",
+              "vi": "{{Đầu::pink}} tuần sau"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "nghe",
       "titleVi": "Nghe",
       "titleEn": "Listening",
@@ -894,98 +986,6 @@
               ],
               "noNum": true,
               "plainNum": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "khi-nao",
-      "titleVi": "Khi nào...?",
-      "titleEn": "When...?",
-      "enOnly": true,
-      "subtopics": [
-        {
-          "id": "khi-nao",
-          "label": "Khi nào...?",
-          "hideLabel": true,
-          "exercises": [
-            {
-              "type": "grammarNote",
-              "noNum": true,
-              "instructionVi": "",
-              "title": "KHI NÀO? · WHEN?",
-              "blocks": [
-                {
-                  "type": "paragraph",
-                  "vi": "Trong tiếng Việt, “khi nào” nghĩa là “when” và dùng để hỏi về thời gian.",
-                  "en": "In Vietnamese, “{{khi nào::pink}}” means “when” and is used to ask about time."
-                },
-                {
-                  "type": "structure",
-                  "vi": "{{Khi nào::pink}} + [Subject] + [Verb]"
-                }
-              ]
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "When do you study Vietnamese?",
-              "vi": "{{Khi nào::pink}} bạn học tiếng Việt?"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "The beginning of last month",
-              "vi": "{{Đầu::pink}} tháng trước"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "When will you go traveling?",
-              "vi": "{{Khi nào::pink}} bạn đi du lịch?"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "The beginning of next year",
-              "vi": "{{Đầu::pink}} năm sau"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "When do you go back to the hometown?",
-              "vi": "{{Khi nào::pink}} bạn về quê?"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "The end of this week",
-              "vi": "{{Cuối::blue}} tuần này"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "When does your colleague go back home?",
-              "vi": "{{Khi nào::pink}} đồng nghiệp của bạn về nhà?"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "The end of today",
-              "vi": "{{Cuối::blue}} hôm nay"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "When will uncle Tân go on a business trip?",
-              "vi": "{{Khi nào::pink}} chú Tân {{sẽ::lav}} đi công tác?"
-            },
-            {
-              "type": "teach",
-              "noNum": true,
-              "en": "The beginning of next week",
-              "vi": "{{Đầu::pink}} tuần sau"
             }
           ]
         }
